@@ -564,14 +564,85 @@ body {
     line-height: 1.75;
 }
 
-/* 수업 자료 플레이스홀더 */
-.content-placeholder {
-    padding: 2rem;
+/* 본문 2-col 그리드: 좌 2/3 이미지 | 우 1/3 설명 */
+.session-body {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* 좌측 2/3 — 이미지 슬라이더 영역 */
+.body-image {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* 이미지 슬라이더 — translateX 전환 */
+.image-slider {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--secondary);
+    min-height: 0;
+}
+
+/* 개별 이미지 슬라이드 */
+.image-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform var(--slide-transition);
+    will-change: transform;
+}
+
+.image-slide.is-prev   { transform: translateX(-100%); }
+.image-slide.is-active { transform: translateX(0); }
+
+.image-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* 이미지 없을 때 플레이스홀더 */
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     border: 2px dashed var(--border);
     border-radius: var(--radius);
-    text-align: center;
-    color: var(--muted-fg);
-    font-size: var(--font-sm);
+}
+
+.image-placeholder-icon  { opacity: 0.35; }
+.image-placeholder-label { font-weight: 600; font-size: var(--font-sm); color: var(--muted-fg); }
+.image-placeholder-sub   { font-size: var(--font-xs); color: var(--muted-fg); opacity: 0.7; }
+
+/* 우측 1/3 — 설명 영역 */
+.body-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.content-block.fill {
+    flex: 1;
+    min-height: 0;
 }
 
 
