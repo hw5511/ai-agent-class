@@ -21,18 +21,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Build HTML
-        run: python build.py --standalone
-
       - name: Prepare deployment
         run: |
           mkdir -p _site
-          cp _build/ai_agent_class_standalone.html _site/index.html
+          cp index.html _site/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
