@@ -1,0 +1,31 @@
+{
+  "manifest_version": "2.0",
+  "project": {
+    "name": "ai_agent_class",
+    "title": "AI Agent Class",
+    "author": "Woohee",
+    "date": "2026-03-02",
+    "version": "1.0.0"
+  },
+  "presentation": {
+    "type": "lecture",
+    "orientation": "portrait",
+    "page_size": "1400x1980"
+  },
+  "sections": [
+    {
+      "id": "cover",
+      "file": "sections/01_cover.html",
+      "title": "Cover",
+      "order": 1,
+      "enabled": true,
+      "metadata": { "created": "2026-03-02T00:00:00", "modified": "2026-03-02T00:00:00" }
+    }
+  ],
+  "build_config": {
+    "output_dir": "_build",
+    "output_filename": "ai_agent_class.html",
+    "standalone_filename": "ai_agent_class_standalone.html",
+    "embed_images": true
+  }
+}
