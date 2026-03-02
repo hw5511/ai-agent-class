@@ -7,42 +7,72 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
     <style>
+        /*
+         * Lecture App Style
+         * Source: lecture/css/style_lecture.css
+         *
+         * Sections:
+         *   1. Design Tokens
+         *   2. Reset & Base
+         *   3. App Header
+         *   4. Course Tabs
+         *   5. App Layout
+         *   6. Sidebar
+         *   7. Slide Area
+         *   8. Slide Navigation
+         *   9. Session Content
+         *  10. Badge Variants
+         */
+
         /* ============================================
-           Design Tokens (consultation 동일)
+           1. Design Tokens
            ============================================ */
         :root {
-            --bg: #fff;
-            --fg: #0a0a0a;
-            --card: #fff;
-            --primary: #171717;
-            --primary-fg: #fafafa;
-            --secondary: #f5f5f5;
-            --secondary-fg: #171717;
-            --muted: #f5f5f5;
-            --muted-fg: #737373;
-            --border: #e5e5e5;
-            --accent: #2563eb;
-            --accent-fg: #fff;
-            --accent-muted: #eff6ff;
+            /* Base — consultation/components/base.css 와 동일 */
+            --bg:           #fff;
+            --fg:           #0a0a0a;
+            --card:         #fff;
+            --primary:      #171717;
+            --primary-fg:   #fafafa;
+            --secondary:    #f5f5f5;
+            --muted:        #f5f5f5;
+            --muted-fg:     #737373;
+            --border:       #e5e5e5;
+
+            /* Accent */
+            --accent:        #2563eb;
+            --accent-muted:  #eff6ff;
             --accent-border: #bfdbfe;
-            --success: #16a34a;
-            --success-muted: #f0fdf4;
-            --radius: 0.5rem;
-            --radius-lg: 1rem;
+
+            /* Advanced */
+            --advanced:       #7c3aed;
+            --advanced-muted: #fdf4ff;
+
+            /* Success */
+            --success:        #16a34a;
+            --success-muted:  #f0fdf4;
+            --success-border: #bbf7d0;
+
+            /* Border Radius */
+            --radius:      0.5rem;
             --radius-full: 9999px;
-            --font-xs: 0.75rem;
-            --font-sm: 0.875rem;
+
+            /* Typography */
+            --font-xs:   0.75rem;
+            --font-sm:   0.875rem;
             --font-base: 1rem;
-            --font-lg: 1.125rem;
-            --font-xl: 1.25rem;
-            --font-2xl: 1.5rem;
-            --font-3xl: 2rem;
-            --sidebar-width: 260px;
-            --header-height: 56px;
+            --font-3xl:  2rem;
+
+            /* App Layout */
+            --header-height:    56px;
+            --sidebar-width:    260px;
+            --slide-nav-height: 52px;
+            --sidebar-transition: 0.22s ease;
+            --slide-transition:   0.28s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         /* ============================================
-           Reset & Base
+           2. Reset & Base
            ============================================ */
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -58,19 +88,36 @@
         }
 
         /* ============================================
-           Header
+           3. App Header
            ============================================ */
         .app-header {
             height: var(--header-height);
             border-bottom: 1px solid var(--border);
             display: flex;
             align-items: center;
-            padding: 0 1.5rem;
-            gap: 1.5rem;
+            padding: 0 1.25rem 0 0.75rem;
+            gap: 0.75rem;
             flex-shrink: 0;
             background: var(--bg);
             z-index: 100;
         }
+
+        .sidebar-toggle {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius);
+            border: none;
+            background: transparent;
+            color: var(--muted-fg);
+            cursor: pointer;
+            transition: background 0.14s, color 0.14s;
+            flex-shrink: 0;
+        }
+
+        .sidebar-toggle:hover { background: var(--secondary); color: var(--fg); }
 
         .header-logo {
             font-size: var(--font-base);
@@ -82,21 +129,40 @@
 
         .header-divider {
             width: 1px;
-            height: 20px;
+            height: 18px;
             background: var(--border);
+            flex-shrink: 0;
         }
 
-        /* Course Tabs */
+        .header-right {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .header-course-label {
+            font-size: var(--font-xs);
+            font-weight: 600;
+            color: var(--muted-fg);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        /* ============================================
+           4. Course Tabs
+           ============================================ */
         .course-tabs {
             display: flex;
-            gap: 0.25rem;
+            gap: 0.2rem;
             background: var(--secondary);
-            padding: 0.25rem;
+            padding: 0.2rem;
             border-radius: var(--radius-full);
         }
 
         .course-tab {
-            padding: 0.375rem 1.125rem;
+            padding: 0.35rem 1rem;
             border-radius: var(--radius-full);
             font-size: var(--font-sm);
             font-weight: 600;
@@ -104,26 +170,14 @@
             border: none;
             background: transparent;
             color: var(--muted-fg);
-            transition: all 0.18s ease;
-            letter-spacing: 0.01em;
+            transition: background 0.18s, color 0.18s;
+            white-space: nowrap;
         }
 
-        .course-tab.active {
-            background: var(--primary);
-            color: var(--primary-fg);
-        }
-
-        .header-course-label {
-            margin-left: auto;
-            font-size: var(--font-xs);
-            font-weight: 600;
-            color: var(--muted-fg);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
+        .course-tab.active { background: var(--primary); color: var(--primary-fg); }
 
         /* ============================================
-           App Layout
+           5. App Layout
            ============================================ */
         .app-body {
             display: flex;
@@ -132,7 +186,7 @@
         }
 
         /* ============================================
-           Sidebar
+           6. Sidebar
            ============================================ */
         .sidebar {
             width: var(--sidebar-width);
@@ -142,38 +196,47 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
+            transition:
+                width var(--sidebar-transition),
+                border-color var(--sidebar-transition);
+        }
+
+        .sidebar.collapsed {
+            width: 0;
+            border-right-color: transparent;
+        }
+
+        /* inner wrapper — sidebar 너비가 줄어도 내용물 크기 유지 */
+        .sidebar-inner {
+            width: var(--sidebar-width);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
         }
 
         .sidebar-header {
-            padding: 1.25rem 1.25rem 0.75rem;
+            padding: 1.25rem 1.25rem 0.625rem;
             flex-shrink: 0;
         }
 
         .sidebar-course-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.375rem;
-            padding: 0.25rem 0.75rem;
+            padding: 0.2rem 0.625rem;
             border-radius: var(--radius-full);
             font-size: var(--font-xs);
             font-weight: 700;
             letter-spacing: 0.06em;
             text-transform: uppercase;
-            margin-bottom: 0.625rem;
+            margin-bottom: 0.5rem;
         }
 
-        .sidebar-course-badge.basic {
-            background: var(--accent-muted);
-            color: var(--accent);
-        }
-
-        .sidebar-course-badge.advanced {
-            background: #fdf4ff;
-            color: #7c3aed;
-        }
+        .sidebar-course-badge.basic    { background: var(--accent-muted);   color: var(--accent); }
+        .sidebar-course-badge.advanced { background: var(--advanced-muted); color: var(--advanced); }
 
         .sidebar-course-title {
-            font-size: var(--font-base);
+            font-size: 0.9375rem;
             font-weight: 700;
             color: var(--fg);
             line-height: 1.4;
@@ -182,10 +245,12 @@
         .sidebar-nav {
             flex: 1;
             overflow-y: auto;
-            padding: 0.5rem 0.75rem 1rem;
+            padding: 0.375rem 0.75rem 1rem;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border) transparent;
         }
 
-        .sidebar-nav::-webkit-scrollbar { width: 4px; }
+        .sidebar-nav::-webkit-scrollbar       { width: 4px; }
         .sidebar-nav::-webkit-scrollbar-track { background: transparent; }
         .sidebar-nav::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
@@ -193,10 +258,10 @@
             display: flex;
             align-items: flex-start;
             gap: 0.625rem;
-            padding: 0.625rem 0.75rem;
+            padding: 0.5rem 0.625rem;
             border-radius: var(--radius);
             cursor: pointer;
-            transition: background 0.14s ease;
+            transition: background 0.13s;
             margin-bottom: 0.125rem;
             border: none;
             background: transparent;
@@ -204,77 +269,158 @@
             text-align: left;
         }
 
-        .nav-item:hover {
-            background: var(--border);
-        }
-
-        .nav-item.active {
-            background: var(--primary);
-        }
+        .nav-item:hover          { background: var(--border); }
+        .nav-item.active         { background: var(--primary); }
 
         .nav-num {
             font-size: var(--font-xs);
             font-weight: 700;
             color: var(--muted-fg);
-            min-width: 20px;
-            padding-top: 0.1rem;
+            min-width: 18px;
+            padding-top: 0.15rem;
             letter-spacing: 0.04em;
             flex-shrink: 0;
         }
 
-        .nav-item.active .nav-num {
-            color: rgba(255,255,255,0.5);
-        }
+        .nav-item.active .nav-num { color: rgba(255,255,255,0.45); }
 
-        .nav-info { display: flex; flex-direction: column; gap: 0.1rem; }
+        .nav-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem;
+            min-width: 0;
+        }
 
         .nav-title {
             font-size: var(--font-sm);
             font-weight: 600;
             color: var(--fg);
             line-height: 1.4;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-        .nav-item.active .nav-title {
-            color: var(--primary-fg);
-        }
+        .nav-item.active .nav-title { color: var(--primary-fg); }
 
         .nav-hours {
             font-size: var(--font-xs);
             color: var(--muted-fg);
         }
 
-        .nav-item.active .nav-hours {
-            color: rgba(255,255,255,0.45);
-        }
+        .nav-item.active .nav-hours { color: rgba(255,255,255,0.4); }
 
         /* ============================================
-           Main Content
+           7. Slide Area
            ============================================ */
-        .main-content {
+        .slide-area {
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides-container {
+            position: relative;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            padding: 2rem 2.5rem 1.5rem;
             overflow-y: auto;
-            padding: 2rem 2.5rem;
+            /* 기본값: 오른쪽 대기 */
+            transform: translateX(100%);
+            transition: transform var(--slide-transition);
+            will-change: transform;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border) transparent;
+        }
+
+        .slide::-webkit-scrollbar       { width: 6px; }
+        .slide::-webkit-scrollbar-track { background: transparent; }
+        .slide::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+        .slide.is-prev   { transform: translateX(-100%); }
+        .slide.is-active { transform: translateX(0); }
+        /* is-next (default) = translateX(100%) */
+
+        /* ============================================
+           8. Slide Navigation
+           ============================================ */
+        .slide-nav {
+            height: var(--slide-nav-height);
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.5rem;
+            flex-shrink: 0;
             background: var(--bg);
+            gap: 1rem;
         }
 
-        .main-content::-webkit-scrollbar { width: 6px; }
-        .main-content::-webkit-scrollbar-track { background: transparent; }
-        .main-content::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-
-        /* Session Panel */
-        .session-panel {
-            display: none;
-            max-width: 860px;
+        .slide-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.35rem 0.875rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            background: var(--bg);
+            color: var(--fg);
+            font-size: var(--font-sm);
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.13s, border-color 0.13s, opacity 0.13s;
+            white-space: nowrap;
         }
 
-        .session-panel.active {
-            display: block;
+        .slide-btn:hover:not(:disabled) { background: var(--secondary); border-color: #d4d4d4; }
+        .slide-btn:disabled             { opacity: 0.3; cursor: not-allowed; }
+
+        .slide-indicator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.375rem;
         }
 
-        /* Session Header */
+        .slide-counter {
+            font-size: var(--font-xs);
+            font-weight: 700;
+            color: var(--muted-fg);
+            letter-spacing: 0.06em;
+        }
+
+        .slide-dots {
+            display: flex;
+            gap: 0.3rem;
+        }
+
+        .slide-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 3px;
+            background: var(--border);
+            transition: background 0.18s, width 0.18s;
+            cursor: pointer;
+            border: none;
+            padding: 0;
+        }
+
+        .slide-dot.active { background: var(--primary); width: 16px; }
+
+        /* ============================================
+           9. Session Content
+           ============================================ */
+        .session-inner { max-width: 800px; }
+
         .session-header {
-            margin-bottom: 1.75rem;
+            margin-bottom: 1.625rem;
             padding-bottom: 1.25rem;
             border-bottom: 1px solid var(--border);
         }
@@ -282,38 +428,8 @@
         .session-meta {
             display: flex;
             align-items: center;
-            gap: 0.625rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .session-badge {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.25rem 0.75rem;
-            border-radius: var(--radius-full);
-            font-size: var(--font-xs);
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-        }
-
-        .session-badge.basic {
-            background: var(--accent-muted);
-            color: var(--accent);
-        }
-
-        .session-badge.advanced {
-            background: #fdf4ff;
-            color: #7c3aed;
-        }
-
-        .session-hours {
-            font-size: var(--font-xs);
-            font-weight: 600;
-            color: var(--muted-fg);
-            padding: 0.25rem 0.625rem;
-            background: var(--secondary);
-            border-radius: var(--radius-full);
+            gap: 0.5rem;
+            margin-bottom: 0.625rem;
         }
 
         .session-title {
@@ -322,18 +438,9 @@
             letter-spacing: -0.02em;
             color: var(--fg);
             line-height: 1.3;
-            margin-bottom: 0.5rem;
         }
 
-        .session-subtitle {
-            font-size: var(--font-base);
-            color: var(--muted-fg);
-        }
-
-        /* Content Blocks */
-        .content-block {
-            margin-bottom: 1.5rem;
-        }
+        .content-block  { margin-bottom: 1.375rem; }
 
         .block-label {
             font-size: var(--font-xs);
@@ -341,12 +448,11 @@
             letter-spacing: 0.08em;
             text-transform: uppercase;
             color: var(--muted-fg);
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.625rem;
         }
 
-        /* Goal Card */
         .goal-card {
-            padding: 1.25rem 1.5rem;
+            padding: 1rem 1.25rem;
             background: var(--accent-muted);
             border: 1px solid var(--accent-border);
             border-radius: var(--radius);
@@ -356,22 +462,21 @@
             font-size: var(--font-base);
             color: var(--accent);
             font-weight: 500;
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
-        /* Topic List */
         .topic-list {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 0.375rem;
         }
 
         .topic-item {
             display: flex;
             align-items: flex-start;
             gap: 0.75rem;
-            padding: 0.875rem 1.125rem;
+            padding: 0.75rem 1rem;
             background: var(--card);
             border: 1px solid var(--border);
             border-radius: var(--radius);
@@ -383,19 +488,18 @@
         .topic-item::before {
             content: '';
             display: block;
-            width: 6px;
-            height: 6px;
+            width: 5px;
+            height: 5px;
             border-radius: 50%;
             background: var(--muted-fg);
-            margin-top: 0.5rem;
+            margin-top: 0.55rem;
             flex-shrink: 0;
         }
 
-        /* Practice Card */
         .practice-card {
-            padding: 1.25rem 1.5rem;
+            padding: 1rem 1.25rem;
             background: var(--success-muted);
-            border: 1px solid #bbf7d0;
+            border: 1px solid var(--success-border);
             border-radius: var(--radius);
         }
 
@@ -403,12 +507,11 @@
             font-size: var(--font-base);
             color: var(--success);
             font-weight: 500;
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
-        /* Placeholder */
         .content-placeholder {
-            padding: 2.5rem;
+            padding: 2rem;
             border: 2px dashed var(--border);
             border-radius: var(--radius);
             text-align: center;
@@ -417,49 +520,108 @@
         }
 
         /* ============================================
-           Responsive
+           10. Badge Variants
            ============================================ */
-        @media (max-width: 768px) {
-            :root { --sidebar-width: 220px; }
-            .main-content { padding: 1.25rem 1.25rem; }
-            .session-title { font-size: var(--font-2xl); }
+        .badge-basic {
+            background: var(--accent-muted);
+            color: var(--accent);
+            padding: 0.2rem 0.625rem;
+            border-radius: var(--radius-full);
+            font-size: var(--font-xs);
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .badge-advanced {
+            background: var(--advanced-muted);
+            color: var(--advanced);
+            padding: 0.2rem 0.625rem;
+            border-radius: var(--radius-full);
+            font-size: var(--font-xs);
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .badge-hours {
+            background: var(--secondary);
+            color: var(--muted-fg);
+            padding: 0.2rem 0.625rem;
+            border-radius: var(--radius-full);
+            font-size: var(--font-xs);
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- 3. App Header -->
     <header class="app-header">
+        <button class="sidebar-toggle" id="sidebar-toggle" title="사이드바 접기/펼치기">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <rect x="1" y="3.5" width="14" height="1.5" rx="0.75" fill="currentColor"/>
+                <rect x="1" y="7.25" width="14" height="1.5" rx="0.75" fill="currentColor"/>
+                <rect x="1" y="11" width="14" height="1.5" rx="0.75" fill="currentColor"/>
+            </svg>
+        </button>
         <span class="header-logo">AI 에이전트 수업자료</span>
         <div class="header-divider"></div>
+        <!-- 4. Course Tabs -->
         <div class="course-tabs">
             <button class="course-tab active" data-course="basic">기초 과정</button>
             <button class="course-tab" data-course="advanced">심화 과정</button>
         </div>
-        <span class="header-course-label" id="header-course-label">Basic · 8 Sessions</span>
+        <div class="header-right">
+            <span class="header-course-label" id="header-course-label">Basic · 8 Sessions</span>
+        </div>
     </header>
 
+    <!-- 5. App Layout -->
     <div class="app-body">
 
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <div class="sidebar-course-badge basic" id="sidebar-badge">BASIC</div>
-                <div class="sidebar-course-title" id="sidebar-title">AI 에이전트 기초 과정</div>
+        <!-- 6. Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-inner">
+                <div class="sidebar-header">
+                    <div class="sidebar-course-badge basic" id="sidebar-badge">BASIC</div>
+                    <div class="sidebar-course-title" id="sidebar-title">AI 에이전트 기초 과정</div>
+                </div>
+                <nav class="sidebar-nav" id="sidebar-nav"></nav>
             </div>
-            <nav class="sidebar-nav" id="sidebar-nav">
-                <!-- JS로 렌더링 -->
-            </nav>
         </aside>
 
-        <!-- Main Content -->
-        <main class="main-content" id="main-content">
-            <!-- JS로 렌더링 -->
-        </main>
+        <!-- 7. Slide Area -->
+        <div class="slide-area">
+            <div class="slides-container" id="slides-container"></div>
+
+            <!-- 8. Slide Navigation -->
+            <div class="slide-nav">
+                <button class="slide-btn" id="btn-prev">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M9 11L5 7l4-4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    이전
+                </button>
+                <div class="slide-indicator">
+                    <span class="slide-counter" id="slide-counter">01 / 08</span>
+                    <div class="slide-dots" id="slide-dots"></div>
+                </div>
+                <button class="slide-btn" id="btn-next">
+                    다음
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
 
     </div>
 
     <script>
+        /* ============================================
+           Course Data
+           ============================================ */
         const COURSES = {
             basic: {
                 label: 'Basic · 8 Sessions',
@@ -468,117 +630,51 @@
                 title: 'AI 에이전트 기초 과정',
                 sessions: [
                     {
-                        num: 1,
-                        title: 'AI 에이전트 이해와 CLI 환경 구축',
-                        hours: '2시간',
+                        num: 1, title: 'AI 에이전트 이해와 CLI 환경 구축', hours: '2시간',
                         goal: 'AI 에이전트의 개념을 이해하고, 3종 CLI 에이전트(Gemini, GPT Codex, Claude Code)를 직접 설치하여 동작을 확인한다.',
-                        topics: [
-                            'AI 에이전트란? / 설치형 AI란?',
-                            'Gemini CLI 설치 및 로그인',
-                            'GPT CLI(Codex) 설치 및 로그인',
-                            'Claude Code 설치 및 로그인',
-                            '각 에이전트 기본 동작 테스트'
-                        ],
+                        topics: ['AI 에이전트란? / 설치형 AI란?', 'Gemini CLI 설치 및 로그인', 'GPT CLI(Codex) 설치 및 로그인', 'Claude Code 설치 및 로그인', '각 에이전트 기본 동작 테스트'],
                         practice: '3종 에이전트를 모두 설치하고 동일한 질문을 입력해 응답 차이를 비교한다.'
                     },
                     {
-                        num: 2,
-                        title: 'Claude 에이전트 메모리와 파일/폴더 제어',
-                        hours: '2시간',
+                        num: 2, title: 'Claude 에이전트 메모리와 파일/폴더 제어', hours: '2시간',
                         goal: '에이전트에 메모리를 설정하고 이름을 부여하는 방법을 익히며, 파일과 폴더를 에이전트로 직접 제어한다.',
-                        topics: [
-                            '에이전트 메모리 (/init, /memory, Auto Memory)',
-                            '에이전트 이름 지어주기 - CLAUDE.md 프롬프팅',
-                            '파일/폴더 생성, 이동, 이름 변경',
-                            '파일/폴더 삭제, 복사, 목록 조회',
-                            '파일 내용 수정 및 실행(start)'
-                        ],
+                        topics: ['에이전트 메모리 (/init, /memory, Auto Memory)', '에이전트 이름 지어주기 - CLAUDE.md 프롬프팅', '파일/폴더 생성, 이동, 이름 변경', '파일/폴더 삭제, 복사, 목록 조회', '파일 내용 수정 및 실행(start)'],
                         practice: '나만의 에이전트에 이름을 부여하고, 지정한 폴더 구조를 자동으로 만들어보는 실습을 진행한다.'
                     },
                     {
-                        num: 3,
-                        title: 'Claude Code 환경 설정과 기본 명령어',
-                        hours: '2시간',
+                        num: 3, title: 'Claude Code 환경 설정과 기본 명령어', hours: '2시간',
                         goal: 'Claude Code의 구독 플랜과 보안 설정을 이해하고, 핵심 CLI 명령어를 실습을 통해 익힌다.',
-                        topics: [
-                            '구독 플랜 가격 비교 / 모델 비교',
-                            '세션 한도 초과 비용 (/extra-usage)',
-                            'Claude 개인정보 보안 설정 체크하기',
-                            'Claude 설정 세팅하기 (파일 삭제 금지 세팅)',
-                            'Bypass 모드 / esc / 사전 입력',
-                            '/clear, /login, /logout, /exit, /color',
-                            '웹 Search 툴 사용하기',
-                            'Todos 기능 / /todos 명령어'
-                        ],
+                        topics: ['구독 플랜 가격 비교 / 모델 비교', '세션 한도 초과 비용 (/extra-usage)', 'Claude 개인정보 보안 설정 체크하기', 'Claude 설정 세팅하기 (파일 삭제 금지 세팅)', 'Bypass 모드 / esc / 사전 입력', '/clear, /login, /logout, /exit, /color', '웹 Search 툴 사용하기', 'Todos 기능 / /todos 명령어'],
                         practice: '개인 환경에 맞는 보안 설정을 직접 구성하고, 주요 명령어를 순서대로 실행해본다.'
                     },
                     {
-                        num: 4,
-                        title: '세션 관리와 Node.js 백그라운드 작업',
-                        hours: '2시간',
+                        num: 4, title: '세션 관리와 Node.js 백그라운드 작업', hours: '2시간',
                         goal: '세션을 효율적으로 관리하는 방법을 익히고, Node.js 프로그램을 만들어 백그라운드에서 실행하는 방법을 실습한다.',
-                        topics: [
-                            '/resume, /context 명령어',
-                            '/compact & auto compact',
-                            '/rename 명령어',
-                            'Node.js 프로그램 만들기',
-                            '백그라운드 프로세스 / 명령',
-                            '/tasks 명령어'
-                        ],
+                        topics: ['/resume, /context 명령어', '/compact & auto compact', '/rename 명령어', 'Node.js 프로그램 만들기', '백그라운드 프로세스 / 명령', '/tasks 명령어'],
                         practice: '간단한 Node.js 스크립트를 작성하고 백그라운드에서 실행한 뒤 /tasks로 상태를 확인한다.'
                     },
                     {
-                        num: 5,
-                        title: 'Sub Agent와 Hooks',
-                        hours: '2시간',
+                        num: 5, title: 'Sub Agent와 Hooks', hours: '2시간',
                         goal: 'Sub Agent의 개념과 작동 원리를 이해하고, Claude를 활용해 PowerPoint와 Excel 파일을 제어하는 실습을 진행한다.',
-                        topics: [
-                            'Sub Agent란? 개념 이해',
-                            'Sub Agent의 작동 원리',
-                            'Hooks 개념 및 설정 방법',
-                            'Claude in PowerPoint 실습',
-                            'Claude in Excel 실습'
-                        ],
+                        topics: ['Sub Agent란? 개념 이해', 'Sub Agent의 작동 원리', 'Hooks 개념 및 설정 방법', 'Claude in PowerPoint 실습', 'Claude in Excel 실습'],
                         practice: 'Sub Agent를 호출하여 특정 작업을 분산 처리하고, PowerPoint 파일을 자동으로 생성해본다.'
                     },
                     {
-                        num: 6,
-                        title: 'MCP 개념 이해와 Notion 연동',
-                        hours: '2시간',
+                        num: 6, title: 'MCP 개념 이해와 Notion 연동', hours: '2시간',
                         goal: 'MCP(Model Context Protocol)의 개념을 이해하고, Notion MCP를 설치하여 에이전트로 Notion 페이지를 제어한다.',
-                        topics: [
-                            'MCP란? 개념과 구조',
-                            'MCP 설치 및 세팅 방법',
-                            'Notion MCP 설치하기',
-                            'Notion 에이전트 제어 실습'
-                        ],
+                        topics: ['MCP란? 개념과 구조', 'MCP 설치 및 세팅 방법', 'Notion MCP 설치하기', 'Notion 에이전트 제어 실습'],
                         practice: 'Notion MCP를 연결하고 에이전트 명령어 하나로 Notion 페이지를 자동 생성한다.'
                     },
                     {
-                        num: 7,
-                        title: 'Skills 활용과 Telegram 연동 실습',
-                        hours: '2시간',
+                        num: 7, title: 'Skills 활용과 Telegram 연동 실습', hours: '2시간',
                         goal: 'Skills의 개념과 사용법을 익히고, Telegram 알림 Skill을 직접 제작하여 작업 완료 알림을 받는 자동화를 구현한다.',
-                        topics: [
-                            'Skills란? 개념 이해',
-                            'Skill 사용하기',
-                            'Telegram 봇 토큰 발급 및 설정',
-                            'Telegram 연동 Skill 제작 실습',
-                            '작업 완료 알림 받기'
-                        ],
+                        topics: ['Skills란? 개념 이해', 'Skill 사용하기', 'Telegram 봇 토큰 발급 및 설정', 'Telegram 연동 Skill 제작 실습', '작업 완료 알림 받기'],
                         practice: 'Telegram 알림 Skill을 처음부터 직접 제작하고, 에이전트 작업 완료 시 메시지를 수신하는 흐름을 완성한다.'
                     },
                     {
-                        num: 8,
-                        title: 'Claude Desktop 사용법',
-                        hours: '2시간',
+                        num: 8, title: 'Claude Desktop 사용법', hours: '2시간',
                         goal: 'Claude Desktop의 다양한 사용 형태를 이해하고, CLI 방식과의 차이를 체험하며 각 환경의 활용 용도를 파악한다.',
-                        topics: [
-                            '일반 Claude Desktop 사용법',
-                            'Desktop Claude Code 활용',
-                            'Claude Cowork 기능',
-                            'Claude Code CLI와 비교 정리'
-                        ],
+                        topics: ['일반 Claude Desktop 사용법', 'Desktop Claude Code 활용', 'Claude Cowork 기능', 'Claude Code CLI와 비교 정리'],
                         practice: 'Desktop 환경과 CLI 환경을 동일한 작업으로 비교 체험하고, 각자의 업무 스타일에 맞는 환경을 선택한다.'
                     }
                 ]
@@ -590,200 +686,230 @@
                 title: 'AI 에이전트 심화 과정',
                 sessions: [
                     {
-                        num: 1,
-                        title: 'AI로 이미지 자동 생성하기',
-                        hours: '2시간 · Tool & Automation',
+                        num: 1, title: 'AI로 이미지 자동 생성하기', hours: '2시간 · Tool & Automation',
                         goal: '외부 이미지 생성 API를 활용하는 Skill을 직접 제작하고, 에이전트 명령어로 이미지를 자동 생성하는 파이프라인을 구현한다.',
-                        topics: [
-                            '외부 API를 활용한 Skill 제작 방법',
-                            '나노바나나 API 연동',
-                            'AI 이미지 생성 Skill 실습',
-                            '생성된 이미지 자동 저장 처리'
-                        ],
+                        topics: ['외부 API를 활용한 Skill 제작 방법', '나노바나나 API 연동', 'AI 이미지 생성 Skill 실습', '생성된 이미지 자동 저장 처리'],
                         practice: '프롬프트 입력 한 번으로 이미지가 자동 생성되어 지정 폴더에 저장되는 흐름을 완성한다.'
                     },
                     {
-                        num: 2,
-                        title: '엑셀 & 워드 문서 자동 작성',
-                        hours: '2시간 · Tool & Automation',
+                        num: 2, title: '엑셀 & 워드 문서 자동 작성', hours: '2시간 · Tool & Automation',
                         goal: '에이전트를 활용해 엑셀 데이터를 분석하고, 워드 형식의 보고서를 자동으로 생성하는 Skill을 구현한다.',
-                        topics: [
-                            '엑셀 데이터 분석 Skill 만들기',
-                            '워드 보고서 자동 생성 Skill 만들기',
-                            '데이터 → 문서 자동화 파이프라인'
-                        ],
+                        topics: ['엑셀 데이터 분석 Skill 만들기', '워드 보고서 자동 생성 Skill 만들기', '데이터 → 문서 자동화 파이프라인'],
                         practice: '샘플 엑셀 데이터를 읽어 분석 결과를 워드 보고서로 자동 출력하는 흐름을 완성한다.'
                     },
                     {
-                        num: 3,
-                        title: '웹 브라우저 자동 조작하기',
-                        hours: '2시간 · Web Automation',
+                        num: 3, title: '웹 브라우저 자동 조작하기', hours: '2시간 · Web Automation',
                         goal: '웹 자동화의 원리를 이해하고, 에이전트로 브라우저를 직접 제어하여 반복 웹 작업을 자동화한다.',
-                        topics: [
-                            '웹 자동화의 원리와 활용법',
-                            '브라우저 자동 제어 환경 구성',
-                            '페이지 이동 / 클릭 / 입력 자동화 실습',
-                            '스크린샷 및 데이터 수집'
-                        ],
+                        topics: ['웹 자동화의 원리와 활용법', '브라우저 자동 제어 환경 구성', '페이지 이동 / 클릭 / 입력 자동화 실습', '스크린샷 및 데이터 수집'],
                         practice: '지정한 웹페이지에 자동으로 접속하여 데이터를 수집하고 결과를 파일로 저장하는 흐름을 구현한다.'
                     },
                     {
-                        num: 4,
-                        title: 'Gmail 메일 자동 처리',
-                        hours: '2시간 · Web Automation',
+                        num: 4, title: 'Gmail 메일 자동 처리', hours: '2시간 · Web Automation',
                         goal: 'Gmail 연동을 통해 받은 메일을 자동으로 조회하고, 내용을 분석하여 자동 회신 메일을 발송하는 자동화를 구현한다.',
-                        topics: [
-                            'Gmail API / 웹 자동화 방식 비교',
-                            '받은 메일 자동 조회 구현',
-                            '메일 내용 요약 및 분류 자동화',
-                            '메일 자동 작성 및 발송 구현'
-                        ],
+                        topics: ['Gmail API / 웹 자동화 방식 비교', '받은 메일 자동 조회 구현', '메일 내용 요약 및 분류 자동화', '메일 자동 작성 및 발송 구현'],
                         practice: '특정 조건의 수신 메일을 자동 감지하고 분류하여 적절한 답장을 자동 발송하는 흐름을 완성한다.'
                     },
                     {
-                        num: 5,
-                        title: '자료조사 & 카드뉴스 자동화',
-                        hours: '2시간 · Workflow Automation',
+                        num: 5, title: '자료조사 & 카드뉴스 자동화', hours: '2시간 · Workflow Automation',
                         goal: 'N8N 자동화 도구를 설치하고, 웹 자료조사부터 카드뉴스 제작까지 이어지는 자동화 워크플로우를 구축한다.',
-                        topics: [
-                            'N8N 자동화 도구 설치 및 환경 구축',
-                            '웹 자료조사 노드 구성',
-                            '콘텐츠 요약 및 정리 자동화',
-                            '카드뉴스 이미지 자동 생성 연동'
-                        ],
+                        topics: ['N8N 자동화 도구 설치 및 환경 구축', '웹 자료조사 노드 구성', '콘텐츠 요약 및 정리 자동화', '카드뉴스 이미지 자동 생성 연동'],
                         practice: '키워드 하나를 입력하면 자료조사부터 카드뉴스 완성본까지 자동으로 만들어지는 워크플로우를 완성한다.'
                     },
                     {
-                        num: 6,
-                        title: '워크플로우로 PPT 자동 생성',
-                        hours: '2시간 · Workflow Automation',
+                        num: 6, title: '워크플로우로 PPT 자동 생성', hours: '2시간 · Workflow Automation',
                         goal: 'N8N 워크플로우를 활용하여 자료 조사부터 정리, PPT 슬라이드 자동 생성까지 이어지는 전체 파이프라인을 구축한다.',
-                        topics: [
-                            '자료 조사 → 내용 정리 자동화',
-                            'PPT 슬라이드 구성 설계 자동화',
-                            'PPT 파일 자동 생성 실습',
-                            '완성본 알림 전송 연동'
-                        ],
+                        topics: ['자료 조사 → 내용 정리 자동화', 'PPT 슬라이드 구성 설계 자동화', 'PPT 파일 자동 생성 실습', '완성본 알림 전송 연동'],
                         practice: '주제를 입력하면 조사, 정리, PPT 생성까지 자동으로 완성되고 Telegram으로 결과물이 전달되는 흐름을 완성한다.'
                     },
                     {
-                        num: 7,
-                        title: '매일 아침 뉴스 자동 요약 알림',
-                        hours: '2시간 · Workflow Automation',
+                        num: 7, title: '매일 아침 뉴스 자동 요약 알림', hours: '2시간 · Workflow Automation',
                         goal: '뉴스/데이터를 자동으로 수집하고 요약하여 매일 아침 정해진 시간에 알림을 보내는 개인 데이터 수집 파이프라인을 구축한다.',
-                        topics: [
-                            '뉴스 자동 수집 노드 구성',
-                            'AI 요약 처리 자동화',
-                            '스케줄 트리거 설정 (매일 아침 자동 실행)',
-                            '나만의 데이터 수집 파이프라인 구축'
-                        ],
+                        topics: ['뉴스 자동 수집 노드 구성', 'AI 요약 처리 자동화', '스케줄 트리거 설정 (매일 아침 자동 실행)', '나만의 데이터 수집 파이프라인 구축'],
                         practice: '관심 키워드의 뉴스를 매일 아침 자동 수집·요약하여 Telegram으로 수신하는 파이프라인을 완성한다.'
                     },
                     {
-                        num: 8,
-                        title: 'Notion 자동화 & Agent Teams',
-                        hours: '2시간 · Workflow Automation',
+                        num: 8, title: 'Notion 자동화 & Agent Teams', hours: '2시간 · Workflow Automation',
                         goal: 'Notion 페이지 자동 생성/관리 워크플로우를 구축하고, 여러 에이전트가 역할을 분담하여 협업하는 Teams 기능을 실습한다.',
-                        topics: [
-                            'Notion 페이지 자동 생성 / 관리',
-                            'Notion 데이터베이스 자동 업데이트',
-                            'Agent Teams 개념과 구조',
-                            '여러 에이전트 협업 실습'
-                        ],
+                        topics: ['Notion 페이지 자동 생성 / 관리', 'Notion 데이터베이스 자동 업데이트', 'Agent Teams 개념과 구조', '여러 에이전트 협업 실습'],
                         practice: 'Agent Teams로 팀장 에이전트와 역할별 에이전트를 구성하고, 분산 작업 후 Notion에 결과를 자동 정리하는 흐름을 완성한다.'
                     }
                 ]
             }
         };
 
-        let currentCourse = 'basic';
-        let currentSession = 1;
+        /* ============================================
+           State
+           ============================================ */
+        let currentCourse  = 'basic';
+        let currentSession = 0; // 0-based index
+        let sidebarOpen    = true;
 
+        /* ============================================
+           Sidebar Toggle
+           ============================================ */
+        document.getElementById('sidebar-toggle').addEventListener('click', () => {
+            sidebarOpen = !sidebarOpen;
+            document.getElementById('sidebar').classList.toggle('collapsed', !sidebarOpen);
+        });
+
+        /* ============================================
+           Slide Rendering
+           ============================================ */
+        function renderSlides(course) {
+            const container = document.getElementById('slides-container');
+            const sessions  = COURSES[course].sessions;
+
+            container.innerHTML = sessions.map((s, i) => {
+                const badgeClass = COURSES[course].badgeClass;
+                const num = String(s.num).padStart(2, '0');
+                return `
+                <div class="slide${i === currentSession ? ' is-active' : ''}" data-index="${i}">
+                    <div class="session-inner">
+                        <div class="session-header">
+                            <div class="session-meta">
+                                <span class="badge-${badgeClass}">${COURSES[course].badgeText} ${num}</span>
+                                <span class="badge-hours">${s.hours}</span>
+                            </div>
+                            <h1 class="session-title">${s.title}</h1>
+                        </div>
+                        <div class="content-block">
+                            <div class="block-label">학습 목표</div>
+                            <div class="goal-card"><p>${s.goal}</p></div>
+                        </div>
+                        <div class="content-block">
+                            <div class="block-label">주요 내용</div>
+                            <ul class="topic-list">
+                                ${s.topics.map(t => `<li class="topic-item">${t}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="content-block">
+                            <div class="block-label">실습</div>
+                            <div class="practice-card"><p>${s.practice}</p></div>
+                        </div>
+                        <div class="content-block">
+                            <div class="block-label">수업 자료</div>
+                            <div class="content-placeholder">수업 자료가 추가될 예정입니다.</div>
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        function applySlidePositions() {
+            document.querySelectorAll('.slide').forEach((el, i) => {
+                el.classList.remove('is-prev', 'is-active');
+                if (i < currentSession)      el.classList.add('is-prev');
+                else if (i === currentSession) el.classList.add('is-active');
+                // i > currentSession → default translateX(100%)
+            });
+        }
+
+        /* ============================================
+           Navigation Indicator
+           ============================================ */
+        function renderDots(count) {
+            const dots = document.getElementById('slide-dots');
+            dots.innerHTML = Array.from({ length: count }, (_, i) =>
+                `<button class="slide-dot${i === currentSession ? ' active' : ''}" data-index="${i}"></button>`
+            ).join('');
+            dots.querySelectorAll('.slide-dot').forEach(dot => {
+                dot.addEventListener('click', () => goToSession(parseInt(dot.dataset.index)));
+            });
+        }
+
+        function updateIndicator() {
+            const count = COURSES[currentCourse].sessions.length;
+            document.getElementById('slide-counter').textContent =
+                `${String(currentSession + 1).padStart(2, '0')} / ${String(count).padStart(2, '0')}`;
+            document.querySelectorAll('.slide-dot').forEach((d, i) =>
+                d.classList.toggle('active', i === currentSession)
+            );
+            document.getElementById('btn-prev').disabled = currentSession === 0;
+            document.getElementById('btn-next').disabled = currentSession === count - 1;
+        }
+
+        /* ============================================
+           Sidebar
+           ============================================ */
         function renderSidebar(course) {
             const data = COURSES[course];
-            const badge = document.getElementById('sidebar-badge');
-            const title = document.getElementById('sidebar-title');
+            document.getElementById('sidebar-badge').className = `sidebar-course-badge ${data.badgeClass}`;
+            document.getElementById('sidebar-badge').textContent = data.badgeText;
+            document.getElementById('sidebar-title').textContent = data.title;
+            document.getElementById('header-course-label').textContent = data.label;
+
             const nav = document.getElementById('sidebar-nav');
-            const headerLabel = document.getElementById('header-course-label');
-
-            badge.className = 'sidebar-course-badge ' + data.badgeClass;
-            badge.textContent = data.badgeText;
-            title.textContent = data.title;
-            headerLabel.textContent = data.label;
-
-            nav.innerHTML = data.sessions.map(s => `
-                <button class="nav-item${s.num === currentSession ? ' active' : ''}" data-session="${s.num}">
-                    <span class="nav-num">0${s.num}</span>
+            nav.innerHTML = data.sessions.map((s, i) => `
+                <button class="nav-item${i === currentSession ? ' active' : ''}" data-index="${i}">
+                    <span class="nav-num">${String(s.num).padStart(2, '0')}</span>
                     <span class="nav-info">
                         <span class="nav-title">${s.title}</span>
                         <span class="nav-hours">${s.hours}</span>
                     </span>
-                </button>
-            `).join('');
+                </button>`
+            ).join('');
 
             nav.querySelectorAll('.nav-item').forEach(item => {
-                item.addEventListener('click', () => {
-                    currentSession = parseInt(item.dataset.session);
-                    renderSidebar(currentCourse);
-                    renderMain(currentCourse);
-                });
+                item.addEventListener('click', () => goToSession(parseInt(item.dataset.index)));
             });
         }
 
-        function renderMain(course) {
-            const data = COURSES[course];
-            const s = data.sessions.find(x => x.num === currentSession);
-            const main = document.getElementById('main-content');
-
-            main.innerHTML = `
-                <div class="session-panel active">
-                    <div class="session-header">
-                        <div class="session-meta">
-                            <span class="session-badge ${data.badgeClass}">${data.badgeText} ${s.num < 10 ? '0' + s.num : s.num}</span>
-                            <span class="session-hours">${s.hours}</span>
-                        </div>
-                        <h1 class="session-title">${s.title}</h1>
-                    </div>
-
-                    <div class="content-block">
-                        <div class="block-label">학습 목표</div>
-                        <div class="goal-card"><p>${s.goal}</p></div>
-                    </div>
-
-                    <div class="content-block">
-                        <div class="block-label">주요 내용</div>
-                        <ul class="topic-list">
-                            ${s.topics.map(t => `<li class="topic-item">${t}</li>`).join('')}
-                        </ul>
-                    </div>
-
-                    <div class="content-block">
-                        <div class="block-label">실습</div>
-                        <div class="practice-card"><p>${s.practice}</p></div>
-                    </div>
-
-                    <div class="content-block">
-                        <div class="block-label">수업 자료</div>
-                        <div class="content-placeholder">수업 자료가 추가될 예정입니다.</div>
-                    </div>
-                </div>
-            `;
+        function updateSidebarActive() {
+            document.querySelectorAll('.nav-item').forEach((item, i) =>
+                item.classList.toggle('active', i === currentSession)
+            );
         }
 
+        /* ============================================
+           Navigation Logic
+           ============================================ */
+        function goToSession(index) {
+            const count = COURSES[currentCourse].sessions.length;
+            if (index < 0 || index >= count) return;
+
+            // 슬라이드 스크롤 위치 초기화
+            const activeSlide = document.querySelector('.slide.is-active');
+            if (activeSlide) activeSlide.scrollTop = 0;
+
+            currentSession = index;
+            applySlidePositions();
+            updateIndicator();
+            updateSidebarActive();
+        }
+
+        document.getElementById('btn-prev').addEventListener('click', () => goToSession(currentSession - 1));
+        document.getElementById('btn-next').addEventListener('click', () => goToSession(currentSession + 1));
+
+        // 키보드 좌우 방향키
+        document.addEventListener('keydown', e => {
+            if (e.key === 'ArrowLeft')  goToSession(currentSession - 1);
+            if (e.key === 'ArrowRight') goToSession(currentSession + 1);
+        });
+
+        /* ============================================
+           Course Tab Switch
+           ============================================ */
+        document.querySelectorAll('.course-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.course-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                currentCourse  = tab.dataset.course;
+                currentSession = 0;
+                renderSlides(currentCourse);
+                renderDots(COURSES[currentCourse].sessions.length);
+                renderSidebar(currentCourse);
+                updateIndicator();
+            });
+        });
+
+        /* ============================================
+           Init
+           ============================================ */
         function init() {
-            document.querySelectorAll('.course-tab').forEach(tab => {
-                tab.addEventListener('click', () => {
-                    document.querySelectorAll('.course-tab').forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-                    currentCourse = tab.dataset.course;
-                    currentSession = 1;
-                    renderSidebar(currentCourse);
-                    renderMain(currentCourse);
-                });
-            });
-
+            renderSlides(currentCourse);
+            renderDots(COURSES[currentCourse].sessions.length);
             renderSidebar(currentCourse);
-            renderMain(currentCourse);
+            updateIndicator();
         }
 
         document.addEventListener('DOMContentLoaded', init);
