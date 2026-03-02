@@ -727,7 +727,7 @@
                         goal: 'AI 에이전트의 개념을 이해하고, 3종 CLI 에이전트(Gemini, GPT Codex, Claude Code)를 직접 설치하여 동작을 확인한다.',
                         topics: ['AI 에이전트란? / 설치형 AI란?', 'Gemini CLI 설치 및 로그인', 'GPT CLI(Codex) 설치 및 로그인', 'Claude Code 설치 및 로그인', '각 에이전트 기본 동작 테스트'],
                         practice: '3종 에이전트를 모두 설치하고 동일한 질문을 입력해 응답 차이를 비교한다.',
-                        slides: []
+                        slides: ['01.svg', '02.svg']
                     },
                     {
                         num: 2, title: 'Claude 에이전트 메모리와 파일/폴더 제어', hours: '2시간',
@@ -997,7 +997,7 @@
             const stepNum    = String(currentSession + 1).padStart(2, '0');
 
             document.getElementById('slide-counter').textContent =
-                `STEP ${stepNum}  ·  ${String(currentSlide + 1).padStart(2, '0')} / ${String(slideCount).padStart(2, '0')}`;
+                `${String(currentSlide + 1).padStart(2, '0')} / ${String(slideCount).padStart(2, '0')}`;
 
             document.querySelectorAll('.slide-dot').forEach((d, i) =>
                 d.classList.toggle('active', i === currentSlide)
