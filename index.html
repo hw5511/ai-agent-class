@@ -414,7 +414,8 @@
 
         /* ============================================
            9. Session Content
-           — 2-col grid: 좌(목표+실습+자료) / 우(주요내용)
+           — 상단: 제목 헤더
+           — 하단: 좌 2/3 이미지 영역 + 우 1/3 설명 영역
            — 세로 스크롤 없이 뷰포트 내 완전 수용
            ============================================ */
 
@@ -427,7 +428,7 @@
             overflow: hidden;
         }
 
-        /* 세션 헤더 — 고정 높이, 컴팩트 */
+        /* 세션 헤더 — 고정, 컴팩트 */
         .session-header {
             flex-shrink: 0;
             margin-bottom: 0.875rem;
@@ -450,29 +451,65 @@
             line-height: 1.3;
         }
 
-        /* 본문 2-col 그리드 — 남은 높이 모두 사용 */
+        /* 본문 2-col 그리드: 좌 2/3 이미지 | 우 1/3 설명 */
         .session-body {
             flex: 1;
             display: grid;
-            grid-template-columns: 2fr 3fr;
+            grid-template-columns: 2fr 1fr;
             gap: 1rem;
             min-height: 0;
             overflow: hidden;
         }
 
-        /* 좌측 컬럼: 학습 목표 + 실습 + 수업 자료 */
-        .body-left {
+        /* 좌측 2/3 — 이미지 영역 */
+        .body-image {
             display: flex;
             flex-direction: column;
-            gap: 0.625rem;
             min-height: 0;
             overflow: hidden;
         }
 
-        /* 우측 컬럼: 주요 내용 */
-        .body-right {
+        .image-area {
+            flex: 1;
+            border: 2px dashed var(--border);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--secondary);
+            color: var(--muted-fg);
+            font-size: var(--font-sm);
+            min-height: 0;
+        }
+
+        .image-area-inner {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .image-area-icon {
+            opacity: 0.35;
+        }
+
+        .image-area-label {
+            font-weight: 600;
+            font-size: var(--font-sm);
+            color: var(--muted-fg);
+        }
+
+        .image-area-sub {
+            font-size: var(--font-xs);
+            color: var(--muted-fg);
+            opacity: 0.7;
+        }
+
+        /* 우측 1/3 — 설명 영역 */
+        .body-desc {
+            display: flex;
+            flex-direction: column;
+            gap: 0.625rem;
             min-height: 0;
             overflow: hidden;
         }
@@ -482,11 +519,13 @@
             display: flex;
             flex-direction: column;
             min-height: 0;
+            flex-shrink: 0;
         }
 
-        /* 수업 자료 블록만 남은 공간 채움 */
+        /* 주요 내용 블록만 남은 공간 채움 */
         .content-block.fill {
             flex: 1;
+            min-height: 0;
         }
 
         .block-label {
@@ -505,7 +544,6 @@
             background: var(--accent-muted);
             border: 1px solid var(--accent-border);
             border-radius: var(--radius);
-            flex-shrink: 0;
         }
 
         .goal-card p {
@@ -515,28 +553,29 @@
             line-height: 1.65;
         }
 
-        /* 주요 내용 — 2열 그리드로 8개 항목 수용 */
-        .topic-grid {
+        /* 주요 내용 — 단일 열, 우측 설명 컬럼 내 수용 */
+        .topic-list {
             flex: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.375rem;
-            align-content: start;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
             list-style: none;
             min-height: 0;
+            overflow: hidden;
         }
 
         .topic-item {
             display: flex;
             align-items: flex-start;
             gap: 0.5rem;
-            padding: 0.5rem 0.75rem;
+            padding: 0.4rem 0.75rem;
             background: var(--card);
             border: 1px solid var(--border);
             border-radius: var(--radius);
             font-size: var(--font-sm);
             color: var(--fg);
-            line-height: 1.45;
+            line-height: 1.4;
+            flex-shrink: 0;
         }
 
         .topic-item::before {
@@ -546,7 +585,7 @@
             height: 4px;
             border-radius: 50%;
             background: var(--muted-fg);
-            margin-top: 0.45rem;
+            margin-top: 0.42rem;
             flex-shrink: 0;
         }
 
@@ -556,7 +595,6 @@
             background: var(--success-muted);
             border: 1px solid var(--success-border);
             border-radius: var(--radius);
-            flex-shrink: 0;
         }
 
         .practice-card p {
@@ -836,26 +874,35 @@
 
                         <div class="session-body">
 
-                            <div class="body-left">
+                            <div class="body-image">
+                                <div class="image-area">
+                                    <div class="image-area-inner">
+                                        <svg class="image-area-icon" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                            <rect x="4" y="8" width="32" height="24" rx="3" stroke="#a3a3a3" stroke-width="2"/>
+                                            <circle cx="14" cy="17" r="3" stroke="#a3a3a3" stroke-width="1.5"/>
+                                            <path d="M4 26l8-6 6 5 6-4 12 8" stroke="#a3a3a3" stroke-width="1.5" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="image-area-label">이미지 / 실습 화면</span>
+                                        <span class="image-area-sub">${s.title}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="body-desc">
                                 <div class="content-block">
                                     <div class="block-label">학습 목표</div>
                                     <div class="goal-card"><p>${s.goal}</p></div>
+                                </div>
+                                <div class="content-block fill">
+                                    <div class="block-label">주요 내용</div>
+                                    <ul class="topic-list">
+                                        ${s.topics.map(t => `<li class="topic-item">${t}</li>`).join('')}
+                                    </ul>
                                 </div>
                                 <div class="content-block">
                                     <div class="block-label">실습</div>
                                     <div class="practice-card"><p>${s.practice}</p></div>
                                 </div>
-                                <div class="content-block fill">
-                                    <div class="block-label">수업 자료</div>
-                                    <div class="content-placeholder">수업 자료가 추가될 예정입니다.</div>
-                                </div>
-                            </div>
-
-                            <div class="body-right">
-                                <div class="block-label">주요 내용</div>
-                                <ul class="topic-grid">
-                                    ${s.topics.map(t => `<li class="topic-item">${t}</li>`).join('')}
-                                </ul>
                             </div>
 
                         </div>
