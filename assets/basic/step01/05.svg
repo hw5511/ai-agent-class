@@ -18,35 +18,36 @@
   <!-- 에이전트 프로그램 래핑 박스 (y=155 ~ y=695) -->
   <rect x="60" y="155" width="1160" height="540" rx="12" fill="#f0f5ff" stroke="#4263eb" stroke-width="2.5"/>
 
-  <!-- [1] 시스템 프롬프트 마크다운 UI (y=168, h=108) -->
-  <rect x="80" y="168" width="1120" height="108" rx="8" fill="#1e2030"/>
+  <!-- [1] 시스템 프롬프트 마크다운 UI (y=168, h=108) - 라이트모드 -->
+  <rect x="80" y="168" width="1120" height="108" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
 
   <!-- 탭 헤더 바 -->
-  <rect x="80" y="168" width="1120" height="30" rx="8" fill="#161b22"/>
-  <rect x="80" y="188" width="1120" height="10" fill="#161b22"/>
+  <rect x="80" y="168" width="1120" height="30" rx="8" fill="#f1f5f9"/>
+  <rect x="80" y="188" width="1120" height="10" fill="#f1f5f9"/>
+  <line x1="80" y1="198" x2="1200" y2="198" stroke="#e2e8f0" stroke-width="1"/>
 
   <!-- 활성 탭 -->
-  <rect x="92" y="172" width="136" height="26" rx="4" fill="#1e2030" stroke="#3b4cca" stroke-width="1"/>
-  <circle cx="108" cy="185" r="5" fill="#364fc7"/>
-  <text x="118" y="189" font-family="'Consolas','Courier New',monospace" font-size="12" fill="#8b9dc3">system.md</text>
+  <rect x="92" y="171" width="136" height="27" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="108" cy="185" r="5" fill="#4263eb"/>
+  <text x="118" y="189" font-family="'Consolas','Courier New',monospace" font-size="12" fill="#374151">system.md</text>
 
   <!-- 비활성 탭 -->
-  <rect x="234" y="174" width="100" height="22" rx="4" fill="#161b22"/>
-  <text x="284" y="188" text-anchor="middle" font-family="'Consolas','Courier New',monospace" font-size="11" fill="#4a5568">CLAUDE.md</text>
+  <rect x="234" y="174" width="100" height="22" rx="4" fill="#f1f5f9"/>
+  <text x="284" y="188" text-anchor="middle" font-family="'Consolas','Courier New',monospace" font-size="11" fill="#94a3b8">CLAUDE.md</text>
 
   <!-- 마크다운 내용 영역 -->
   <!-- ## 헤더 -->
-  <text x="100" y="222" font-family="'Consolas','Courier New',monospace" font-size="14" fill="#6272a4">##</text>
-  <text x="126" y="222" font-family="'Consolas','Courier New',monospace" font-size="14" font-weight="700" fill="#a5d8ff">출력 규칙</text>
+  <text x="100" y="222" font-family="'Consolas','Courier New',monospace" font-size="14" fill="#7c3aed">##</text>
+  <text x="126" y="222" font-family="'Consolas','Courier New',monospace" font-size="14" font-weight="700" fill="#1e293b">출력 규칙</text>
 
   <!-- 규칙 텍스트 + 인라인 코드 -->
-  <text x="100" y="248" font-family="'Consolas','Courier New',monospace" font-size="13" fill="#8b9dc3">명령어를 실행할 때는 반드시</text>
+  <text x="100" y="248" font-family="'Consolas','Courier New',monospace" font-size="13" fill="#374151">명령어를 실행할 때는 반드시</text>
 
   <!-- 인라인 코드 강조 -->
-  <rect x="358" y="236" width="198" height="20" rx="3" fill="#2b3575"/>
-  <text x="368" y="250" font-family="'Consolas','Courier New',monospace" font-size="13" font-weight="700" fill="#ffd43b">command{명령어}</text>
+  <rect x="358" y="236" width="198" height="20" rx="3" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="368" y="250" font-family="'Consolas','Courier New',monospace" font-size="13" font-weight="700" fill="#d97706">command{명령어}</text>
 
-  <text x="564" y="248" font-family="'Consolas','Courier New',monospace" font-size="13" fill="#8b9dc3">형식으로만 출력하시오.</text>
+  <text x="564" y="248" font-family="'Consolas','Courier New',monospace" font-size="13" fill="#374151">형식으로만 출력하시오.</text>
 
   <!-- [2] ChatGPT 창 (y=290, h=300) -->
   <rect x="80" y="290" width="1120" height="300" rx="10" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.5"/>
