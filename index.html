@@ -886,7 +886,44 @@
                         goal: 'AI 에이전트의 개념을 이해하고, 3종 CLI 에이전트(Gemini, GPT Codex, Claude Code)를 직접 설치하여 동작을 확인한다.',
                         topics: ['AI 에이전트란? / 설치형 AI란?', 'Gemini CLI 설치 및 로그인', 'GPT CLI(Codex) 설치 및 로그인', 'Claude Code 설치 및 로그인', '각 에이전트 기본 동작 테스트'],
                         practice: '3종 에이전트를 모두 설치하고 동일한 질문을 입력해 응답 차이를 비교한다.',
-                        slides: ['01.svg', '02.svg', '03.svg', '04.svg', '05.svg', '06.svg', '07.svg']
+                        slides: ['01.svg', '02.svg', '03.svg', '04.svg', '05.svg', '06.svg', '07.svg'],
+                        slideDescs: [
+                            {
+                                goal: 'AI 에이전트의 개념과 SEE-THINK-PLAN-DO-FIX 동작 루프를 이해한다.',
+                                topics: ['에이전트(Agent)란 무엇인가?', 'SEE-THINK-PLAN-DO-FIX 루프', '도구(Tools) 활용 방식', '설치형 CLI 에이전트의 특징'],
+                                practice: null
+                            },
+                            {
+                                goal: '글로벌 AI 기업 3종의 CLI 에이전트 특징을 파악한다.',
+                                topics: ['GPT CLI (Codex) - OpenAI', 'Claude Code - Anthropic', 'Gemini CLI - Google', '각 에이전트의 특화 기능 비교'],
+                                practice: null
+                            },
+                            {
+                                goal: 'Git 설치 및 초기 설정을 완료한다.',
+                                topics: ['winget install git 명령어', 'Git 설치 확인 (git --version)', 'Git 사용자 정보 초기 설정', 'CLI 환경 준비 완료'],
+                                practice: 'winget으로 Git을 설치하고 git --version으로 정상 설치를 확인한다.'
+                            },
+                            {
+                                goal: 'Node.js 설치 및 npm 환경을 준비한다.',
+                                topics: ['winget install node.js 명령어', 'Node.js 설치 확인 (node --version)', 'npm 설치 확인 (npm --version)', '이후 CLI 에이전트 설치 환경 준비'],
+                                practice: 'winget으로 Node.js를 설치하고 node/npm 버전을 확인한다.'
+                            },
+                            {
+                                goal: 'Gemini CLI를 설치하고 Google 계정으로 로그인한다.',
+                                topics: ['npm install -g @google/gemini-cli', 'gemini 명령어 확인', 'Google 계정 인증 (gemini auth)', '첫 번째 응답 테스트'],
+                                practice: 'Gemini CLI를 설치하고 간단한 질문으로 첫 응답을 확인한다.'
+                            },
+                            {
+                                goal: 'GPT CLI(Codex)를 설치하고 OpenAI 계정으로 로그인한다.',
+                                topics: ['npm install -g @openai/codex', 'codex 명령어 확인', 'OpenAI API 키 설정', '첫 번째 응답 테스트'],
+                                practice: 'GPT CLI를 설치하고 동일한 질문으로 응답을 확인한다.'
+                            },
+                            {
+                                goal: 'Claude Code를 설치하고 Anthropic 계정으로 로그인한다.',
+                                topics: ['npm install -g @anthropic-ai/claude-code', 'claude 명령어 확인', 'Anthropic 계정 인증', '3종 에이전트 비교 테스트'],
+                                practice: '3종 에이전트에 동일한 질문을 입력하고 응답 방식의 차이를 비교한다.'
+                            }
+                        ]
                     },
                     {
                         num: 2, title: 'Claude 에이전트 메모리와 파일/폴더 제어', hours: '2시간',
@@ -1087,17 +1124,17 @@
                             <div class="body-desc">
                                 <div class="content-block">
                                     <div class="block-label">학습 목표</div>
-                                    <div class="goal-card"><p>${s.goal}</p></div>
+                                    <div class="goal-card"><p class="desc-goal">${s.goal}</p></div>
                                 </div>
                                 <div class="content-block fill">
                                     <div class="block-label">주요 내용</div>
-                                    <ul class="topic-list">
+                                    <ul class="topic-list desc-topics">
                                         ${s.topics.map(t => `<li class="topic-item">${t}</li>`).join('')}
                                     </ul>
                                 </div>
                                 <div class="content-block">
                                     <div class="block-label">실습</div>
-                                    <div class="practice-card"><p>${s.practice}</p></div>
+                                    <div class="practice-card"><p class="desc-practice">${s.practice}</p></div>
                                 </div>
                             </div>
 
@@ -1295,6 +1332,7 @@
                 currentSlide = next;
                 applyImageSlidePositions();
                 updateIndicator();
+                updateDescPanel();
             }
         }
 
@@ -1309,6 +1347,28 @@
             renderDots(getSlideCount(COURSES[currentCourse].sessions[currentSession]));
             updateIndicator();
             updateSidebarActive();
+            updateDescPanel();
+        }
+
+        /* ============================================
+           Desc Panel Update (슬라이드별 우측 패널 갱신)
+           ============================================ */
+        function updateDescPanel() {
+            const activeEl = document.querySelector('.slide.is-active');
+            if (!activeEl) return;
+
+            const session = COURSES[currentCourse].sessions[currentSession];
+            const sd      = session.slideDescs && session.slideDescs[currentSlide];
+
+            const goalEl   = activeEl.querySelector('.desc-goal');
+            const topicsEl = activeEl.querySelector('.desc-topics');
+            const pracEl   = activeEl.querySelector('.desc-practice');
+
+            if (goalEl)   goalEl.textContent   = (sd && sd.goal)     ? sd.goal     : session.goal;
+            if (pracEl)   pracEl.textContent   = (sd && sd.practice) ? sd.practice : session.practice;
+
+            const items = (sd && sd.topics) ? sd.topics : session.topics;
+            if (topicsEl) topicsEl.innerHTML = items.map(t => `<li class="topic-item">${t}</li>`).join('');
         }
 
         /* ============================================
