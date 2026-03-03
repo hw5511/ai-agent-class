@@ -64,11 +64,10 @@
   <text x="1159" y="313" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#6b7280">+ 새 채팅</text>
 
   <!-- 사용자 메시지 -->
-  <rect x="726" y="342" width="356" height="58" rx="16" fill="#10a37f"/>
-  <text x="904" y="368" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#ffffff">컴퓨터 30분 뒤에</text>
-  <text x="904" y="387" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#ffffff">예약종료하는 명령어 알려줄래?</text>
-  <circle cx="1158" cy="371" r="15" fill="#e5e7eb"/>
-  <text x="1158" y="376" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#374151">나</text>
+  <rect x="726" y="342" width="356" height="40" rx="16" fill="#10a37f"/>
+  <text x="904" y="367" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#ffffff">30분 뒤에 컴퓨터 종료 예약해줘</text>
+  <circle cx="1158" cy="362" r="15" fill="#e5e7eb"/>
+  <text x="1158" y="367" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#374151">나</text>
 
   <!-- AI 아바타 -->
   <circle cx="104" cy="448" r="15" fill="#10a37f"/>
