@@ -1,173 +1,189 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
 
-  <!-- 배경 -->
   <rect width="1280" height="720" fill="#ffffff"/>
 
   <!-- ── 헤더 ── -->
-  <rect x="60" y="44" width="84" height="24" rx="12" fill="#eff6ff"/>
-  <text x="102" y="60" text-anchor="middle"
+  <rect x="60" y="44" width="68" height="24" rx="12" fill="#171717"/>
+  <text x="94" y="60" text-anchor="middle"
     font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="11" font-weight="700" fill="#2563eb" letter-spacing="0.8">BASIC 01</text>
-
-  <text x="60" y="104"
+    font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">STATUS</text>
+  <text x="60" y="100"
     font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="26" font-weight="800" fill="#0a0a0a">3종 CLI 에이전트 비교</text>
-
-  <line x1="60" y1="122" x2="1220" y2="122" stroke="#e5e5e5" stroke-width="1.5"/>
-
-  <!-- ── 3열 비교 카드 ── -->
-
-  <!-- 카드1: Gemini CLI -->
-  <!-- 컬러 헤더 -->
-  <rect x="60" y="142" width="366" height="88" rx="8" fill="#4285F4"/>
-  <rect x="60" y="198" width="366" height="32" fill="#4285F4"/>
-  <rect x="60" y="210" width="366" height="20" rx="0" fill="#3367d6"/>
-  <text x="243" y="180" text-anchor="middle"
+    font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">AI 에이전트 현황</text>
+  <text x="60" y="120"
     font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="20" font-weight="800" fill="#ffffff">Gemini CLI</text>
-  <text x="243" y="204" text-anchor="middle"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="12" font-weight="600" fill="rgba(255,255,255,0.75)">by Google</text>
-  <!-- 카드 본문 -->
-  <rect x="60" y="222" width="366" height="356" rx="0" fill="#ffffff" stroke="#e0e0e0" stroke-width="0"/>
-  <rect x="60" y="222" width="366" height="356" fill="#f8faff" stroke="#dbeafe" stroke-width="1.5"/>
-  <rect x="60" y="142" width="366" height="436" rx="8" fill="none" stroke="#dbeafe" stroke-width="1.5"/>
+    font-size="14" fill="#737373">글로벌 AI 기업들이 앞다퉈 출시한 설치형 CLI 에이전트</text>
+  <line x1="60" y1="136" x2="1220" y2="136" stroke="#e5e5e5" stroke-width="1.5"/>
 
-  <!-- Gemini 특징 불릿 -->
-  <circle cx="88" cy="266" r="4" fill="#4285F4"/>
-  <text x="104" y="271"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="14" font-weight="600" fill="#1e3a8a">Gemini 2.0 Flash 모델 기반</text>
+  <!-- ── 카드1: OpenAI Codex ── -->
+  <!-- 카드 외곽 -->
+  <rect x="60" y="156" width="366" height="480" rx="8" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.5"/>
 
-  <circle cx="88" cy="308" r="4" fill="#4285F4"/>
-  <text x="104" y="313"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="14" font-weight="600" fill="#1e3a8a">무료 티어 제공 (1M 토큰/분)</text>
+  <!-- 터미널 이미지 영역 -->
+  <rect x="60" y="156" width="366" height="290" rx="8" fill="#1e1e1e"/>
+  <rect x="60" y="404" width="366" height="12" fill="#1e1e1e"/>
+  <!-- 상단 제목바 -->
+  <rect x="60" y="156" width="366" height="34" rx="0" fill="#2d2d2d"/>
+  <rect x="60" y="175" width="366" height="15" fill="#2d2d2d"/>
+  <circle cx="84" cy="173" r="6" fill="#ff5f56"/>
+  <circle cx="104" cy="173" r="6" fill="#ffbd2e"/>
+  <circle cx="124" cy="173" r="6" fill="#27c93f"/>
+  <text x="243" y="178" text-anchor="middle"
+    font-family="'Courier New',Courier,monospace"
+    font-size="11" fill="#737373">codex</text>
+  <!-- 터미널 내용 -->
+  <text x="84" y="218"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#27c93f">$ codex</text>
+  <text x="112" y="218"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#f8fafc">"보고서 초안 작성해줘"</text>
+  <text x="84" y="242"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#61afef">● 파일 분석 중...</text>
+  <text x="84" y="264"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#61afef">● report_data.xlsx 확인</text>
+  <text x="84" y="286"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#abb2bf">→ 3분기 매출 15% 증가</text>
+  <text x="84" y="308"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#abb2bf">→ 보고서 초안 생성 완료</text>
+  <text x="84" y="330"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#27c93f">✓ report_draft.docx 저장됨</text>
+  <text x="84" y="358"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#27c93f">$</text>
+  <rect x="84" y="346" width="8" height="14" fill="#27c93f" opacity="0.7"/>
 
-  <circle cx="88" cy="350" r="4" fill="#4285F4"/>
-  <text x="104" y="355"
+  <!-- 하단 정보 -->
+  <rect x="60" y="446" width="366" height="4" fill="#10a37f"/>
+  <text x="243" y="484" text-anchor="middle"
     font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="14" font-weight="600" fill="#1e3a8a">Google 생태계 연동 강점</text>
-
-  <circle cx="88" cy="392" r="4" fill="#4285F4"/>
-  <text x="104" y="397"
+    font-size="18" font-weight="800" fill="#0a0a0a">GPT CLI (Codex)</text>
+  <text x="243" y="508" text-anchor="middle"
     font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="14" font-weight="600" fill="#1e3a8a">한국어 지원 우수</text>
-
-  <line x1="80" y1="444" x2="406" y2="444" stroke="#dbeafe" stroke-width="1"/>
-  <text x="243" y="464" text-anchor="middle"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="11" font-weight="600" fill="#737373">설치 명령어</text>
-  <rect x="80" y="474" width="326" height="34" rx="6" fill="#f1f5f9"/>
-  <text x="243" y="496" text-anchor="middle"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="12" font-weight="600" fill="#334155">npm install -g @google/gemini-cli</text>
-
+    font-size="13" fill="#737373">by OpenAI</text>
   <text x="243" y="548" text-anchor="middle"
     font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="11" fill="#4285F4" font-weight="700">구글 계정 로그인 필요</text>
+    font-size="12" fill="#10a37f" font-weight="600">코드 생성 · 파일 편집 특화</text>
+  <text x="243" y="570" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="11" fill="#a3a3a3">npm install -g @openai/codex</text>
 
-  <!-- 카드2: GPT CLI (Codex) -->
-  <rect x="457" y="142" width="366" height="88" rx="8" fill="#10a37f"/>
-  <rect x="457" y="198" width="366" height="32" fill="#10a37f"/>
-  <rect x="457" y="210" width="366" height="20" fill="#0d8a6a"/>
-  <text x="640" y="180" text-anchor="middle"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="20" font-weight="800" fill="#ffffff">GPT CLI (Codex)</text>
-  <text x="640" y="204" text-anchor="middle"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="12" font-weight="600" fill="rgba(255,255,255,0.75)">by OpenAI</text>
-  <rect x="457" y="222" width="366" height="356" fill="#f0fdf8" stroke="#a7f3d0" stroke-width="1.5"/>
-  <rect x="457" y="142" width="366" height="436" rx="8" fill="none" stroke="#a7f3d0" stroke-width="1.5"/>
+  <!-- ── 카드2: Anthropic Claude Code ── -->
+  <rect x="457" y="156" width="366" height="480" rx="8" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.5"/>
 
-  <!-- GPT 특징 불릿 -->
-  <circle cx="485" cy="266" r="4" fill="#10a37f"/>
-  <text x="501" y="271"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="14" font-weight="600" fill="#065f46">OpenAI o3 / GPT-4o 모델 기반</text>
+  <rect x="457" y="156" width="366" height="290" rx="8" fill="#1e1e1e"/>
+  <rect x="457" y="404" width="366" height="12" fill="#1e1e1e"/>
+  <rect x="457" y="156" width="366" height="34" rx="0" fill="#2d2d2d"/>
+  <rect x="457" y="175" width="366" height="15" fill="#2d2d2d"/>
+  <circle cx="481" cy="173" r="6" fill="#ff5f56"/>
+  <circle cx="501" cy="173" r="6" fill="#ffbd2e"/>
+  <circle cx="521" cy="173" r="6" fill="#27c93f"/>
+  <text x="640" y="178" text-anchor="middle"
+    font-family="'Courier New',Courier,monospace"
+    font-size="11" fill="#737373">claude-code</text>
 
-  <circle cx="485" cy="308" r="4" fill="#10a37f"/>
-  <text x="501" y="313"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="14" font-weight="600" fill="#065f46">코드 생성 특화 설계</text>
+  <text x="481" y="218"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#27c93f">$ claude</text>
+  <text x="535" y="218"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#f8fafc">"폴더 구조 만들어줘"</text>
+  <text x="481" y="242"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#d97706">◆ CLAUDE.md 메모리 로드</text>
+  <text x="481" y="264"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#d97706">◆ 작업 계획 수립 중...</text>
+  <text x="481" y="286"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#abb2bf">→ /src 생성</text>
+  <text x="481" y="308"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#abb2bf">→ /docs 생성</text>
+  <text x="481" y="330"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#27c93f">✓ 폴더 구조 완성 (0.8s)</text>
+  <text x="481" y="358"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#27c93f">$</text>
+  <rect x="481" y="346" width="8" height="14" fill="#27c93f" opacity="0.7"/>
 
-  <circle cx="485" cy="350" r="4" fill="#10a37f"/>
-  <text x="501" y="355"
+  <rect x="457" y="446" width="366" height="4" fill="#d97706"/>
+  <text x="640" y="484" text-anchor="middle"
     font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="14" font-weight="600" fill="#065f46">GitHub Copilot과 연계 가능</text>
-
-  <circle cx="485" cy="392" r="4" fill="#10a37f"/>
-  <text x="501" y="397"
+    font-size="18" font-weight="800" fill="#0a0a0a">Claude Code</text>
+  <text x="640" y="508" text-anchor="middle"
     font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="14" font-weight="600" fill="#065f46">OpenAI API 키 필요</text>
-
-  <line x1="477" y1="444" x2="803" y2="444" stroke="#a7f3d0" stroke-width="1"/>
-  <text x="640" y="464" text-anchor="middle"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="11" font-weight="600" fill="#737373">설치 명령어</text>
-  <rect x="477" y="474" width="326" height="34" rx="6" fill="#f1f5f9"/>
-  <text x="640" y="496" text-anchor="middle"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="12" font-weight="600" fill="#334155">npm install -g @openai/codex</text>
-
+    font-size="13" fill="#737373">by Anthropic</text>
   <text x="640" y="548" text-anchor="middle"
     font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="11" fill="#10a37f" font-weight="700">OpenAI API 키 발급 필요</text>
+    font-size="12" fill="#d97706" font-weight="600">파일 편집 · CLAUDE.md 메모리 특화</text>
+  <text x="640" y="570" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="11" fill="#a3a3a3">npm install -g @anthropic-ai/claude-code</text>
 
-  <!-- 카드3: Claude Code -->
-  <rect x="854" y="142" width="366" height="88" rx="8" fill="#d97706"/>
-  <rect x="854" y="198" width="366" height="32" fill="#d97706"/>
-  <rect x="854" y="210" width="366" height="20" fill="#b45309"/>
-  <text x="1037" y="180" text-anchor="middle"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="20" font-weight="800" fill="#ffffff">Claude Code</text>
-  <text x="1037" y="204" text-anchor="middle"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="12" font-weight="600" fill="rgba(255,255,255,0.75)">by Anthropic</text>
-  <rect x="854" y="222" width="366" height="356" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
-  <rect x="854" y="142" width="366" height="436" rx="8" fill="none" stroke="#fde68a" stroke-width="1.5"/>
+  <!-- ── 카드3: Google Gemini CLI ── -->
+  <rect x="854" y="156" width="366" height="480" rx="8" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.5"/>
 
-  <!-- Claude 특징 불릿 -->
-  <circle cx="882" cy="266" r="4" fill="#d97706"/>
-  <text x="898" y="271"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="14" font-weight="600" fill="#78350f">Claude Sonnet 4.5 모델 기반</text>
+  <rect x="854" y="156" width="366" height="290" rx="8" fill="#1e1e1e"/>
+  <rect x="854" y="404" width="366" height="12" fill="#1e1e1e"/>
+  <rect x="854" y="156" width="366" height="34" rx="0" fill="#2d2d2d"/>
+  <rect x="854" y="175" width="366" height="15" fill="#2d2d2d"/>
+  <circle cx="878" cy="173" r="6" fill="#ff5f56"/>
+  <circle cx="898" cy="173" r="6" fill="#ffbd2e"/>
+  <circle cx="918" cy="173" r="6" fill="#27c93f"/>
+  <text x="1037" y="178" text-anchor="middle"
+    font-family="'Courier New',Courier,monospace"
+    font-size="11" fill="#737373">gemini</text>
 
-  <circle cx="882" cy="308" r="4" fill="#d97706"/>
-  <text x="898" y="313"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="14" font-weight="600" fill="#78350f">파일 · 코드 편집 특화</text>
+  <text x="878" y="218"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#27c93f">$ gemini</text>
+  <text x="934" y="218"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#f8fafc">"최신 AI 트렌드 요약해줘"</text>
+  <text x="878" y="242"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#4285F4">◈ 웹 검색 중...</text>
+  <text x="878" y="264"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#4285F4">◈ Gemini 2.0 Flash 처리</text>
+  <text x="878" y="286"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#abb2bf">→ 2025 AI Agent 급부상</text>
+  <text x="878" y="308"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#abb2bf">→ 멀티모달 기능 확대</text>
+  <text x="878" y="330"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#27c93f">✓ 요약 완료 (1.2s)</text>
+  <text x="878" y="358"
+    font-family="'Courier New',Courier,monospace"
+    font-size="12" fill="#27c93f">$</text>
+  <rect x="878" y="346" width="8" height="14" fill="#27c93f" opacity="0.7"/>
 
-  <circle cx="882" cy="350" r="4" fill="#d97706"/>
-  <text x="898" y="355"
+  <rect x="854" y="446" width="366" height="4" fill="#4285F4"/>
+  <text x="1037" y="484" text-anchor="middle"
     font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="14" font-weight="600" fill="#78350f">CLAUDE.md 메모리 시스템</text>
-
-  <circle cx="882" cy="392" r="4" fill="#d97706"/>
-  <text x="898" y="397"
+    font-size="18" font-weight="800" fill="#0a0a0a">Gemini CLI</text>
+  <text x="1037" y="508" text-anchor="middle"
     font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="14" font-weight="600" fill="#78350f">Pro / Max 구독 포함 사용</text>
-
-  <line x1="874" y1="444" x2="1200" y2="444" stroke="#fde68a" stroke-width="1"/>
-  <text x="1037" y="464" text-anchor="middle"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="11" font-weight="600" fill="#737373">설치 명령어</text>
-  <rect x="874" y="474" width="326" height="34" rx="6" fill="#f1f5f9"/>
-  <text x="1037" y="496" text-anchor="middle"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="12" font-weight="600" fill="#334155">npm install -g @anthropic-ai/claude-code</text>
-
+    font-size="13" fill="#737373">by Google</text>
   <text x="1037" y="548" text-anchor="middle"
     font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="11" fill="#d97706" font-weight="700">Claude Pro / Max 구독 필요</text>
+    font-size="12" fill="#4285F4" font-weight="600">웹 검색 · Google 생태계 연동</text>
+  <text x="1037" y="570" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="11" fill="#a3a3a3">npm install -g @google/gemini-cli</text>
 
-  <!-- ── 하단 요약 ── -->
-  <line x1="60" y1="604" x2="1220" y2="604" stroke="#f0f0f0" stroke-width="1"/>
-  <text x="640" y="640" text-anchor="middle"
+  <!-- ── 하단 메시지 ── -->
+  <text x="640" y="666" text-anchor="middle"
     font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="13" fill="#737373">세 에이전트 모두 설치 후, 동일한 명령을 입력해 응답 방식의 차이를 비교합니다</text>
-  <text x="640" y="664" text-anchor="middle"
-    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
-    font-size="12" fill="#a3a3a3">이번 강의에서는 Claude Code를 주력으로 활용합니다</text>
+    font-size="13" fill="#a3a3a3">이번 강의에서 세 에이전트를 모두 설치하고, 동일한 명령어로 응답 방식의 차이를 직접 비교합니다</text>
 
 </svg>
