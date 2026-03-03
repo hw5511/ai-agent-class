@@ -1,10 +1,99 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
-  <rect width="1280" height="720" fill="#fafafa"/>
-  <rect x="60" y="60" width="1160" height="600" rx="12" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.5" stroke-dasharray="8,4"/>
-  <rect x="60" y="44" width="84" height="24" rx="12" fill="#eff6ff"/>
-  <text x="102" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#2563eb" letter-spacing="0.8">BASIC 01</text>
-  <text x="640" y="320" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" font-weight="700" fill="#a3a3a3">winget install git</text>
-  <text x="640" y="360" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#c4c4c4">스크린샷 교체 예정 — 03.png 또는 03.svg</text>
-  <rect x="560" y="390" width="160" height="2" rx="1" fill="#e5e5e5"/>
-  <text x="640" y="420" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#d4d4d4">assets/basic/step01/03.svg</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- 헤더 배지 -->
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+
+  <!-- 단계 번호 pill -->
+  <rect x="150" y="44" width="54" height="24" rx="12" fill="#f0f4ff" stroke="#c7d7ff" stroke-width="1"/>
+  <text x="177" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#3b5bdb">STEP 1</text>
+
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">에이전트 동작 방식 ①</text>
+  <text x="60" y="122" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#737373">사람이 직접 웹을 검색해서 명령어를 찾고 복사·붙여넣기 하는 방식</text>
+  <line x1="60" y1="138" x2="1220" y2="138" stroke="#e5e5e5" stroke-width="1.5"/>
+
+  <!-- 검색바 영역 -->
+  <rect x="120" y="158" width="880" height="50" rx="25" fill="#f8f8f8" stroke="#e0e0e0" stroke-width="1.5"/>
+  <!-- 돋보기 아이콘 -->
+  <circle cx="160" cy="183" r="9" fill="none" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="167" y1="190" x2="174" y2="197" stroke="#9ca3af" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- 검색 텍스트 -->
+  <text x="186" y="189" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#111111">컴퓨터 예약종료 명령어</text>
+  <!-- 커서 -->
+  <rect x="402" y="174" width="2" height="18" fill="#555" opacity="0.7"/>
+  <!-- 검색 버튼 -->
+  <rect x="928" y="166" width="60" height="34" rx="17" fill="#4285F4"/>
+  <text x="958" y="187" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#ffffff">검색</text>
+
+  <!-- 검색결과 카운트 -->
+  <text x="120" y="228" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#70757a">검색결과 약 2,840,000개 (0.38초)</text>
+
+  <!-- 검색결과 1 -->
+  <rect x="120" y="242" width="760" height="96" rx="6" fill="#ffffff" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="140" y="266" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#188038">blog.naver.com › TechTip › 윈도우</text>
+  <text x="140" y="286" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#1a0dab">윈도우 예약종료 명령어 shutdown 사용법 완벽 정리</text>
+  <text x="140" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4d5156">Windows에서 예약 종료 명령어 shutdown -s -t [초]를 사용하는 방법을 알아봅니다. cmd를 관리자 권한으로 실행 후...</text>
+  <text x="140" y="328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4d5156">30분 예약은 shutdown -s -t 1800 을 입력하세요.</text>
+
+  <!-- 검색결과 2 -->
+  <rect x="120" y="350" width="760" height="96" rx="6" fill="#ffffff" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="140" y="374" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#188038">itbeginner.tistory.com › windows › shutdown</text>
+  <text x="140" y="394" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#1a0dab">컴퓨터 자동 종료 예약하는 방법 (cmd 명령어) - 티스토리</text>
+  <text x="140" y="416" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4d5156">cmd 창을 열고 shutdown /s /t 초를 입력합니다. 예를 들어 30분 후 종료는 shutdown /s /t 1800</text>
+  <text x="140" y="436" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4d5156">을 입력하면 됩니다. 취소하려면 shutdown /a 를 입력합니다.</text>
+
+  <!-- 검색결과 3 -->
+  <rect x="120" y="458" width="760" height="96" rx="6" fill="#ffffff" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="140" y="482" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#188038">devblog.example.com › cmd-tips › shutdown</text>
+  <text x="140" y="502" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#1a0dab">shutdown 명령어 옵션 정리 (/s /t /a /r) - 개발자 블로그</text>
+  <text x="140" y="524" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4d5156">shutdown 명령어의 각 옵션: /s 종료, /r 재시작, /t 시간(초), /a 예약 취소. 예약 종료를 설정하고</text>
+  <text x="140" y="544" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4d5156">취소하는 방법을 예시와 함께 알아봅니다.</text>
+
+  <!-- 검색결과 4 -->
+  <rect x="120" y="566" width="760" height="96" rx="6" fill="#ffffff" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="140" y="590" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#188038">ko.wikihow.com › 컴퓨터-종료-예약</text>
+  <text x="140" y="610" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#1a0dab">컴퓨터 종료 예약 설정하는 4가지 방법 - wikiHow</text>
+  <text x="140" y="632" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4d5156">명령 프롬프트, 작업 스케줄러, 배치 파일, 단축키 등 다양한 방법으로 컴퓨터 자동 종료를 예약</text>
+  <text x="140" y="652" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4d5156">할 수 있습니다. 각 방법의 장단점을 비교해 봅니다.</text>
+
+  <!-- 우측 사이드 패널 -->
+  <rect x="910" y="242" width="310" height="420" rx="10" fill="#fafafa" stroke="#e5e5e5" stroke-width="1.5"/>
+
+  <!-- 사이드 제목 -->
+  <text x="1065" y="272" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#171717">이 방식의 한계</text>
+  <line x1="930" y1="282" x2="1200" y2="282" stroke="#e5e5e5" stroke-width="1"/>
+
+  <!-- 한계 항목들 -->
+  <rect x="930" y="298" width="4" height="14" rx="2" fill="#ef4444"/>
+  <text x="944" y="310" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">검색을 사람이 직접 해야 함</text>
+
+  <rect x="930" y="330" width="4" height="14" rx="2" fill="#ef4444"/>
+  <text x="944" y="342" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">원하는 결과를 판단해야 함</text>
+
+  <rect x="930" y="362" width="4" height="14" rx="2" fill="#ef4444"/>
+  <text x="944" y="374" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">명령어를 직접 복사해야 함</text>
+
+  <rect x="930" y="394" width="4" height="14" rx="2" fill="#ef4444"/>
+  <text x="944" y="406" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">cmd에 직접 붙여넣어야 함</text>
+
+  <rect x="930" y="426" width="4" height="14" rx="2" fill="#ef4444"/>
+  <text x="944" y="438" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">매번 반복 작업이 필요</text>
+
+  <line x1="930" y1="460" x2="1200" y2="460" stroke="#e5e5e5" stroke-width="1"/>
+
+  <!-- 흐름 요약 -->
+  <text x="1065" y="486" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#6b7280">전체 흐름</text>
+
+  <rect x="940" y="498" width="250" height="28" rx="14" fill="#f3f4f6" stroke="#e5e5e5" stroke-width="1"/>
+  <text x="1065" y="516" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">검색 → 사이트 클릭 → 명령어 확인</text>
+
+  <!-- 화살표 -->
+  <text x="1065" y="544" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#9ca3af">↓</text>
+
+  <rect x="940" y="552" width="250" height="28" rx="14" fill="#f3f4f6" stroke="#e5e5e5" stroke-width="1"/>
+  <text x="1065" y="570" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">복사 → cmd 열기 → 붙여넣기 → 실행</text>
+
+  <!-- 하단 -->
+  <text x="640" y="680" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#a3a3a3">모든 단계를 사람이 수동으로 수행 — 시간이 걸리고 반복이 필요합니다</text>
 </svg>
