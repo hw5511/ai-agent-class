@@ -1227,9 +1227,11 @@
                 const isActive = i === currentSession;
                 const slideCount = getSlideCount(s);
                 const subItems = Array.from({ length: slideCount }, (_, j) => {
-                    const label = (s.slides && s.slides[j])
-                        ? s.slides[j].replace(/\.[^.]+$/, '')
-                        : String(j + 1).padStart(2, '0');
+                    const label = (s.slideDescs && s.slideDescs[j] && s.slideDescs[j].goal)
+                        ? s.slideDescs[j].goal
+                        : (s.slides && s.slides[j])
+                            ? s.slides[j].replace(/\.[^.]+$/, '')
+                            : String(j + 1).padStart(2, '0');
                     return `<button class="nav-sub-item${isActive && j === currentSlide ? ' active' : ''}" data-step="${i}" data-slide="${j}">
                         <span class="nav-sub-num">${String(j + 1).padStart(2, '0')}</span>
                         <span class="nav-sub-label">${label}</span>
@@ -1332,6 +1334,7 @@
                 currentSlide = next;
                 applyImageSlidePositions();
                 updateIndicator();
+                updateSidebarActive();
                 updateDescPanel();
             }
         }
