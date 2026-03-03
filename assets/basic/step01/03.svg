@@ -9,57 +9,45 @@
   <text x="177" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#3b5bdb">STEP 1</text>
 
   <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">에이전트 동작 방식 ①</text>
-  <text x="60" y="122" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#737373">웹 검색으로 명령어를 찾아 직접 실행하는 방식</text>
+  <text x="60" y="122" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#737373">사람이 직접 웹을 검색해서 명령어를 찾고 복사·붙여넣기 하는 방식</text>
   <line x1="60" y1="138" x2="1220" y2="138" stroke="#e5e5e5" stroke-width="1.5"/>
 
   <!-- 검색바 -->
-  <rect x="120" y="158" width="860" height="50" rx="25" fill="#f8f8f8" stroke="#e0e0e0" stroke-width="1.5"/>
-  <circle cx="160" cy="183" r="9" fill="none" stroke="#9ca3af" stroke-width="2"/>
-  <line x1="167" y1="190" x2="174" y2="197" stroke="#9ca3af" stroke-width="2.2" stroke-linecap="round"/>
-  <text x="186" y="189" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#111111">컴퓨터 예약종료 명령어</text>
-  <rect x="908" y="166" width="60" height="34" rx="17" fill="#4285F4"/>
-  <text x="938" y="187" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#ffffff">검색</text>
+  <rect x="80" y="158" width="1100" height="50" rx="25" fill="#f8f8f8" stroke="#e0e0e0" stroke-width="1.5"/>
+  <circle cx="120" cy="183" r="9" fill="none" stroke="#9ca3af" stroke-width="2"/>
+  <line x1="127" y1="190" x2="134" y2="197" stroke="#9ca3af" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="150" y="189" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#111111">컴퓨터 예약종료 명령어</text>
+  <rect x="1110" y="166" width="60" height="34" rx="17" fill="#4285F4"/>
+  <text x="1140" y="187" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#ffffff">검색</text>
 
   <!-- 검색결과 카운트 -->
-  <text x="120" y="228" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#70757a">검색결과 약 2,840,000개 (0.38초)</text>
+  <text x="80" y="228" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#70757a">검색결과 약 2,840,000개 (0.38초)</text>
 
   <!-- 검색결과 1 -->
-  <rect x="120" y="242" width="760" height="64" rx="6" fill="#ffffff" stroke="#f0f0f0" stroke-width="1"/>
-  <text x="140" y="263" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#188038">blog.naver.com › TechTip › 윈도우</text>
-  <text x="140" y="285" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#1a0dab">윈도우 예약종료 명령어 shutdown 사용법 완벽 정리</text>
+  <rect x="80" y="242" width="1100" height="96" rx="6" fill="#ffffff" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="100" y="266" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#188038">blog.naver.com › TechTip › 윈도우</text>
+  <text x="100" y="286" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#1a0dab">윈도우 예약종료 명령어 shutdown 사용법 완벽 정리</text>
+  <text x="100" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4d5156">Windows에서 예약 종료 명령어 shutdown -s -t [초]를 사용하는 방법을 알아봅니다. cmd를 관리자 권한으로 실행 후...</text>
+  <text x="100" y="328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4d5156">30분 예약은 shutdown -s -t 1800 을 입력하세요.</text>
 
   <!-- 검색결과 2 -->
-  <rect x="120" y="318" width="760" height="64" rx="6" fill="#ffffff" stroke="#f0f0f0" stroke-width="1"/>
-  <text x="140" y="339" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#188038">itbeginner.tistory.com › windows › shutdown</text>
-  <text x="140" y="361" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#1a0dab">컴퓨터 자동 종료 예약하는 방법 (cmd 명령어) - 티스토리</text>
+  <rect x="80" y="350" width="1100" height="96" rx="6" fill="#ffffff" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="100" y="374" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#188038">itbeginner.tistory.com › windows › shutdown</text>
+  <text x="100" y="394" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#1a0dab">컴퓨터 자동 종료 예약하는 방법 (cmd 명령어) - 티스토리</text>
+  <text x="100" y="416" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4d5156">cmd 창을 열고 shutdown /s /t 초를 입력합니다. 예를 들어 30분 후 종료는 shutdown /s /t 1800</text>
+  <text x="100" y="436" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4d5156">을 입력하면 됩니다. 취소하려면 shutdown /a 를 입력합니다.</text>
 
   <!-- 검색결과 3 -->
-  <rect x="120" y="394" width="760" height="64" rx="6" fill="#ffffff" stroke="#f0f0f0" stroke-width="1"/>
-  <text x="140" y="415" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#188038">devblog.example.com › cmd-tips › shutdown</text>
-  <text x="140" y="437" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#1a0dab">shutdown 명령어 옵션 정리 (/s /t /a /r) - 개발자 블로그</text>
+  <rect x="80" y="458" width="1100" height="96" rx="6" fill="#ffffff" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="100" y="482" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#188038">devblog.example.com › cmd-tips › shutdown</text>
+  <text x="100" y="502" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#1a0dab">shutdown 명령어 옵션 정리 (/s /t /a /r) - 개발자 블로그</text>
+  <text x="100" y="524" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4d5156">shutdown 명령어의 각 옵션: /s 종료, /r 재시작, /t 시간(초), /a 예약 취소. 예약 종료를 설정하고</text>
+  <text x="100" y="544" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4d5156">취소하는 방법을 예시와 함께 알아봅니다.</text>
 
   <!-- 검색결과 4 -->
-  <rect x="120" y="470" width="760" height="64" rx="6" fill="#ffffff" stroke="#f0f0f0" stroke-width="1"/>
-  <text x="140" y="491" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#188038">ko.wikihow.com › 컴퓨터-종료-예약</text>
-  <text x="140" y="513" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#1a0dab">컴퓨터 종료 예약 설정하는 4가지 방법 - wikiHow</text>
-
-  <!-- 우측 패널 -->
-  <rect x="910" y="242" width="310" height="292" rx="10" fill="#fafafa" stroke="#e5e5e5" stroke-width="1.5"/>
-  <text x="1065" y="272" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#171717">이 방식의 한계</text>
-  <line x1="930" y1="282" x2="1200" y2="282" stroke="#e5e5e5" stroke-width="1"/>
-
-  <rect x="930" y="300" width="4" height="14" rx="2" fill="#ef4444"/>
-  <text x="944" y="312" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">검색을 사람이 직접 해야 함</text>
-
-  <rect x="930" y="334" width="4" height="14" rx="2" fill="#ef4444"/>
-  <text x="944" y="346" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">원하는 결과를 판단해야 함</text>
-
-  <rect x="930" y="368" width="4" height="14" rx="2" fill="#ef4444"/>
-  <text x="944" y="380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">명령어를 직접 복사해야 함</text>
-
-  <rect x="930" y="402" width="4" height="14" rx="2" fill="#ef4444"/>
-  <text x="944" y="414" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">cmd에 직접 붙여넣어야 함</text>
-
-  <rect x="930" y="436" width="4" height="14" rx="2" fill="#ef4444"/>
-  <text x="944" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">매번 반복 작업이 필요</text>
+  <rect x="80" y="566" width="1100" height="96" rx="6" fill="#ffffff" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="100" y="590" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#188038">ko.wikihow.com › 컴퓨터-종료-예약</text>
+  <text x="100" y="610" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#1a0dab">컴퓨터 종료 예약 설정하는 4가지 방법 - wikiHow</text>
+  <text x="100" y="632" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4d5156">명령 프롬프트, 작업 스케줄러, 배치 파일, 단축키 등 다양한 방법으로 컴퓨터 자동 종료를 예약</text>
+  <text x="100" y="652" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4d5156">할 수 있습니다. 각 방법의 장단점을 비교해 봅니다.</text>
 </svg>

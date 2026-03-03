@@ -12,102 +12,92 @@
   <text x="60" y="122" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#737373">AI 응답에서 명령어를 자동 감지하여 직접 실행하는 방식</text>
   <line x1="60" y1="138" x2="1220" y2="138" stroke="#e5e5e5" stroke-width="1.5"/>
 
-  <!-- 에이전트 프로그램 큰 박스 -->
-  <rect x="60" y="155" width="850" height="520" rx="12" fill="#f0f5ff" stroke="#4263eb" stroke-width="2"/>
+  <!-- ===== 에이전트 프로그램 래핑 박스 ===== -->
+  <rect x="60" y="155" width="1160" height="538" rx="12" fill="#f0f5ff" stroke="#4263eb" stroke-width="2.5"/>
 
   <!-- 에이전트 프로그램 라벨 -->
-  <rect x="60" y="148" width="180" height="26" rx="6" fill="#4263eb"/>
-  <text x="150" y="165" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">에이전트 프로그램</text>
+  <rect x="60" y="148" width="190" height="26" rx="6" fill="#4263eb"/>
+  <text x="155" y="165" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">에이전트 프로그램</text>
 
-  <!-- 시스템 프롬프트 영역 -->
-  <rect x="84" y="172" width="802" height="68" rx="8" fill="#1e2030"/>
-  <rect x="92" y="180" width="120" height="20" rx="4" fill="#364fc7"/>
-  <text x="152" y="194" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#ffffff">시스템 프롬프트</text>
-  <text x="228" y="194" font-family="'Consolas','Courier New',monospace" font-size="13" fill="#a5d8ff">명령어를 실행할 때는 반드시</text>
-  <text x="92" y="222" font-family="'Consolas','Courier New',monospace" font-size="14" fill="#ffd43b">command{명령어}</text>
-  <text x="270" y="222" font-family="'Consolas','Courier New',monospace" font-size="14" fill="#c3fae8">형식으로만 출력</text>
+  <!-- ---- 시스템 프롬프트 바 ---- -->
+  <rect x="80" y="168" width="1120" height="36" rx="6" fill="#1e2030"/>
+  <rect x="88" y="175" width="120" height="20" rx="4" fill="#364fc7"/>
+  <text x="148" y="189" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#ffffff">시스템 프롬프트</text>
+  <text x="222" y="191" font-family="'Consolas','Courier New',monospace" font-size="13" fill="#a5d8ff">명령어를 실행할 때는 반드시 </text>
+  <text x="488" y="191" font-family="'Consolas','Courier New',monospace" font-size="13" font-weight="700" fill="#ffd43b">command{명령어}</text>
+  <text x="654" y="191" font-family="'Consolas','Courier New',monospace" font-size="13" fill="#a5d8ff">형식으로만 출력</text>
 
-  <!-- 사용자 입력 -->
-  <rect x="84" y="256" width="802" height="58" rx="8" fill="#ffffff" stroke="#dce4ff" stroke-width="1.5"/>
-  <circle cx="110" cy="285" r="14" fill="#e9ecef"/>
-  <text x="110" y="290" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#495057">사용자</text>
-  <text x="138" y="289" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#212529">30분 뒤에 컴퓨터 종료 예약해줘</text>
+  <!-- ---- ChatGPT 창 (04.svg 동일 UI) ---- -->
+  <rect x="80" y="214" width="1120" height="288" rx="10" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.5"/>
 
-  <!-- 화살표 -->
-  <line x1="485" y1="314" x2="485" y2="334" stroke="#4263eb" stroke-width="2" stroke-dasharray="4,3"/>
-  <polygon points="485,340 479,328 491,328" fill="#4263eb"/>
+  <!-- 창 헤더 -->
+  <rect x="80" y="214" width="1120" height="42" rx="10" fill="#f9f9f9" stroke="#e5e5e5" stroke-width="1.5"/>
+  <rect x="80" y="238" width="1120" height="18" fill="#f9f9f9"/>
+  <circle cx="110" cy="235" r="6" fill="#ff5f57"/>
+  <circle cx="130" cy="235" r="6" fill="#ffbd2e"/>
+  <circle cx="150" cy="235" r="6" fill="#28c840"/>
 
-  <!-- AI 응답 -->
-  <rect x="84" y="344" width="802" height="70" rx="8" fill="#ffffff" stroke="#dce4ff" stroke-width="1.5"/>
-  <circle cx="110" cy="379" r="14" fill="#4263eb"/>
-  <text x="110" y="384" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">AI</text>
-  <text x="138" y="372" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#212529">네, 예약 종료를 설정하겠습니다.</text>
+  <circle cx="638" cy="235" r="13" fill="#10a37f"/>
+  <text x="638" y="240" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">G</text>
+  <text x="657" y="240" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#171717">ChatGPT</text>
 
-  <!-- command{} 하이라이트 박스 -->
-  <rect x="138" y="382" width="310" height="26" rx="4" fill="#fff3bf" stroke="#ffd43b" stroke-width="1.5"/>
-  <text x="148" y="399" font-family="'Consolas','Courier New',monospace" font-size="14" font-weight="600" fill="#e67700">command{shutdown -s -t 1800}</text>
+  <rect x="1132" y="223" width="54" height="22" rx="11" fill="#f3f4f6"/>
+  <text x="1159" y="237" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#6b7280">+ 새 채팅</text>
 
-  <!-- 감지 표시 -->
-  <line x1="293" y1="430" x2="293" y2="450" stroke="#e67700" stroke-width="2.5"/>
-  <polygon points="293,458 286,445 300,445" fill="#e67700"/>
+  <!-- 사용자 메시지 (우측) -->
+  <rect x="726" y="266" width="356" height="58" rx="14" fill="#10a37f"/>
+  <text x="904" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#ffffff">컴퓨터 30분 뒤에</text>
+  <text x="904" y="311" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#ffffff">예약종료하는 명령어 알려줄래?</text>
 
-  <!-- 감지 레이블 -->
-  <rect x="330" y="412" width="178" height="28" rx="6" fill="#fff8f0" stroke="#fd7e14" stroke-width="1"/>
-  <text x="419" y="430" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#c2410c">command{} 패턴 감지!</text>
+  <!-- 사용자 아바타 -->
+  <circle cx="1158" cy="295" r="14" fill="#e5e7eb"/>
+  <text x="1158" y="300" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#374151">나</text>
 
-  <!-- 터미널 -->
-  <rect x="84" y="468" width="802" height="188" rx="8" fill="#0d1117"/>
-  <rect x="84" y="468" width="802" height="30" rx="8" fill="#161b22"/>
-  <rect x="84" y="486" width="802" height="12" fill="#161b22"/>
-  <circle cx="104" cy="483" r="5" fill="#ff5f57"/>
-  <circle cx="120" cy="483" r="5" fill="#ffbd2e"/>
-  <circle cx="136" cy="483" r="5" fill="#28c840"/>
-  <text x="485" y="487" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6e7681">터미널 — 자동 실행</text>
+  <!-- AI 아바타 -->
+  <circle cx="104" cy="368" r="14" fill="#10a37f"/>
+  <text x="104" y="373" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">G</text>
 
-  <text x="104" y="524" font-family="'Consolas','Courier New',monospace" font-size="16" fill="#4ade80">C:\Users\woohee&gt;</text>
-  <text x="290" y="524" font-family="'Consolas','Courier New',monospace" font-size="16" fill="#e2e8f0">shutdown -s -t 1800</text>
+  <!-- AI 응답 박스 -->
+  <rect x="128" y="342" width="600" height="146" rx="10" fill="#f9f9f9" stroke="#e5e5e5" stroke-width="1"/>
+  <text x="148" y="366" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#171717">물론이죠! 아래 명령어를 실행하겠습니다.</text>
 
-  <text x="104" y="560" font-family="'Consolas','Courier New',monospace" font-size="13" fill="#94a3b8">예약 종료가 설정되었습니다. (30분 후 종료)</text>
+  <!-- 코드 블록 -->
+  <rect x="148" y="374" width="340" height="42" rx="6" fill="#1e1e1e"/>
+  <text x="164" y="395" font-family="'Consolas','Courier New',monospace" font-size="15" font-weight="600" fill="#9cdcfe">shutdown</text>
+  <text x="264" y="395" font-family="'Consolas','Courier New',monospace" font-size="15" fill="#d4d4d4">-s -t</text>
+  <text x="316" y="395" font-family="'Consolas','Courier New',monospace" font-size="15" fill="#b5cea8">1800</text>
+  <text x="164" y="409" font-family="'Consolas','Courier New',monospace" font-size="10" fill="#6a9955">// 1800초 = 30분</text>
 
-  <text x="104" y="598" font-family="'Consolas','Courier New',monospace" font-size="16" fill="#4ade80">C:\Users\woohee&gt;</text>
-  <rect x="290" y="586" width="8" height="16" rx="1" fill="#4ade80" opacity="0.8"/>
+  <!-- command{} 하이라이트 감지 박스 -->
+  <rect x="148" y="426" width="336" height="26" rx="4" fill="#fff3bf" stroke="#ffd43b" stroke-width="2"/>
+  <text x="158" y="443" font-family="'Consolas','Courier New',monospace" font-size="13" font-weight="600" fill="#e67700">command{shutdown -s -t 1800}</text>
 
-  <!-- 우측 패널 -->
-  <rect x="940" y="155" width="300" height="520" rx="12" fill="#f8f9fa" stroke="#e5e5e5" stroke-width="1.5"/>
+  <!-- 감지 레이블 (우측) -->
+  <rect x="500" y="428" width="180" height="22" rx="6" fill="#fff8f0" stroke="#fd7e14" stroke-width="1.5"/>
+  <text x="590" y="443" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#c2410c">command{} 패턴 자동 감지!</text>
 
-  <text x="1090" y="188" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#171717">에이전트의 핵심 원리</text>
-  <line x1="960" y1="200" x2="1220" y2="200" stroke="#e5e5e5" stroke-width="1"/>
+  <!-- 입력창 (창 하단) -->
+  <rect x="100" y="468" width="1080" height="26" rx="13" fill="#f3f4f6" stroke="#e5e5e5" stroke-width="1"/>
+  <text x="130" y="484" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">메시지 ChatGPT...</text>
 
-  <!-- 단계 1 -->
-  <circle cx="980" cy="238" r="14" fill="#4263eb"/>
-  <text x="980" y="243" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">1</text>
-  <text x="1004" y="243" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#212529">자연어로 지시</text>
+  <!-- ---- 감지 → 터미널 화살표 ---- -->
+  <line x1="316" y1="508" x2="316" y2="530" stroke="#e67700" stroke-width="2.5" stroke-dasharray="4,3"/>
+  <polygon points="316,538 309,526 323,526" fill="#e67700"/>
 
-  <line x1="980" y1="258" x2="980" y2="284" stroke="#dce4ff" stroke-width="2" stroke-dasharray="3,2"/>
+  <!-- ---- 터미널 (자동 실행) ---- -->
+  <rect x="80" y="540" width="1120" height="140" rx="8" fill="#0d1117"/>
+  <rect x="80" y="540" width="1120" height="28" rx="8" fill="#161b22"/>
+  <rect x="80" y="558" width="1120" height="10" fill="#161b22"/>
+  <circle cx="100" cy="554" r="5" fill="#ff5f57"/>
+  <circle cx="116" cy="554" r="5" fill="#ffbd2e"/>
+  <circle cx="132" cy="554" r="5" fill="#28c840"/>
+  <text x="640" y="558" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6e7681">터미널 — command{} 자동 실행</text>
 
-  <!-- 단계 2 -->
-  <circle cx="980" cy="298" r="14" fill="#4263eb"/>
-  <text x="980" y="303" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">2</text>
-  <text x="1004" y="303" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#212529">AI가 command{} 형식 응답</text>
+  <text x="100" y="592" font-family="'Consolas','Courier New',monospace" font-size="15" fill="#4ade80">C:\Users\woohee&gt;</text>
+  <text x="296" y="592" font-family="'Consolas','Courier New',monospace" font-size="15" fill="#e2e8f0">shutdown -s -t 1800</text>
 
-  <line x1="980" y1="318" x2="980" y2="344" stroke="#dce4ff" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="100" y="622" font-family="'Consolas','Courier New',monospace" font-size="13" fill="#94a3b8">예약 종료가 설정되었습니다. (30분 후 자동 종료)</text>
 
-  <!-- 단계 3 -->
-  <circle cx="980" cy="358" r="14" fill="#e67700"/>
-  <text x="980" y="363" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">3</text>
-  <text x="1004" y="363" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#212529">패턴 자동 감지</text>
-
-  <line x1="980" y1="378" x2="980" y2="404" stroke="#dce4ff" stroke-width="2" stroke-dasharray="3,2"/>
-
-  <!-- 단계 4 -->
-  <circle cx="980" cy="418" r="14" fill="#2f9e44"/>
-  <text x="980" y="423" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">4</text>
-  <text x="1004" y="418" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#212529">터미널 자동 실행</text>
-
-  <line x1="960" y1="450" x2="1220" y2="450" stroke="#e5e5e5" stroke-width="1"/>
-
-  <!-- 이것이 AI 에이전트 -->
-  <rect x="962" y="466" width="256" height="70" rx="8" fill="#f0f5ff" stroke="#4263eb" stroke-width="1.5"/>
-  <text x="1090" y="496" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#364fc7">이것이 AI 에이전트입니다</text>
-  <text x="1090" y="520" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4263eb">지시 → 판단 → 행동</text>
+  <text x="100" y="654" font-family="'Consolas','Courier New',monospace" font-size="15" fill="#4ade80">C:\Users\woohee&gt;</text>
+  <rect x="296" y="642" width="8" height="15" rx="1" fill="#4ade80" opacity="0.8"/>
 </svg>
