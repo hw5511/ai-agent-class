@@ -309,6 +309,61 @@
 
         .nav-item.active .nav-hours { color: rgba(255,255,255,0.4); }
 
+        /* 아코디언 토글 아이콘 */
+        .nav-toggle {
+            margin-left: auto;
+            flex-shrink: 0;
+            width: 14px;
+            height: 14px;
+            opacity: 0.35;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+        .nav-item.is-open .nav-toggle { transform: rotate(90deg); opacity: 0.6; }
+        .nav-item.active .nav-toggle  { opacity: 0.5; }
+
+        /* 서브 슬라이드 목록 */
+        .nav-sub-list {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.25s ease;
+        }
+        .nav-sub-list.is-open { max-height: 600px; }
+
+        .nav-sub-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.3rem 0.625rem 0.3rem 2.25rem;
+            border-radius: var(--radius);
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            width: 100%;
+            text-align: left;
+            transition: background 0.13s;
+            margin-bottom: 0.0625rem;
+        }
+        .nav-sub-item:hover { background: var(--border); }
+        .nav-sub-item.active { background: var(--accent-muted); }
+
+        .nav-sub-num {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--muted-fg);
+            min-width: 16px;
+            flex-shrink: 0;
+            letter-spacing: 0.04em;
+        }
+        .nav-sub-label {
+            font-size: var(--font-xs);
+            color: var(--muted-fg);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .nav-sub-item.active .nav-sub-num   { color: var(--accent); }
+        .nav-sub-item.active .nav-sub-label { color: var(--accent); font-weight: 600; }
+
         /* ============================================
            7. Slide Area
            — 스텝 전환: overflow:hidden, translateX
@@ -1023,25 +1078,86 @@
             document.getElementById('header-course-label').textContent = data.label;
 
             const nav = document.getElementById('sidebar-nav');
-            nav.innerHTML = data.sessions.map((s, i) => `
-                <button class="nav-item${i === currentSession ? ' active' : ''}" data-index="${i}">
-                    <span class="nav-num">${String(s.num).padStart(2, '0')}</span>
-                    <span class="nav-info">
-                        <span class="nav-title">${s.title}</span>
-                        <span class="nav-hours">${s.hours}</span>
-                    </span>
-                </button>`
-            ).join('');
+            nav.innerHTML = data.sessions.map((s, i) => {
+                const isActive = i === currentSession;
+                const slideCount = getSlideCount(s);
+                const subItems = Array.from({ length: slideCount }, (_, j) => {
+                    const label = (s.slides && s.slides[j])
+                        ? s.slides[j].replace(/\.[^.]+$/, '')
+                        : String(j + 1).padStart(2, '0');
+                    return `<button class="nav-sub-item${isActive && j === currentSlide ? ' active' : ''}" data-step="${i}" data-slide="${j}">
+                        <span class="nav-sub-num">${String(j + 1).padStart(2, '0')}</span>
+                        <span class="nav-sub-label">${label}</span>
+                    </button>`;
+                }).join('');
+
+                return `<div class="nav-group" data-group="${i}">
+                    <button class="nav-item${isActive ? ' active is-open' : ''}" data-index="${i}">
+                        <span class="nav-num">${String(s.num).padStart(2, '0')}</span>
+                        <span class="nav-info">
+                            <span class="nav-title">${s.title}</span>
+                            <span class="nav-hours">${s.hours}</span>
+                        </span>
+                        <svg class="nav-toggle" viewBox="0 0 14 14" fill="none">
+                            <path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="nav-sub-list${isActive ? ' is-open' : ''}" data-sub="${i}">
+                        ${subItems}
+                    </div>
+                </div>`;
+            }).join('');
 
             nav.querySelectorAll('.nav-item').forEach(item => {
-                item.addEventListener('click', () => goToSession(parseInt(item.dataset.index)));
+                item.addEventListener('click', () => {
+                    const idx   = parseInt(item.dataset.index);
+                    const group = item.closest('.nav-group');
+                    const sub   = group.querySelector('.nav-sub-list');
+
+                    if (idx === currentSession) {
+                        // 이미 선택된 step: 펼치기/접기 토글
+                        const open = group.classList.toggle('is-open');
+                        item.classList.toggle('is-open', open);
+                        sub.classList.toggle('is-open', open);
+                    } else {
+                        // 다른 step: 모두 닫고 해당 step 열기 + 이동
+                        nav.querySelectorAll('.nav-group').forEach(g => {
+                            g.classList.remove('is-open');
+                            g.querySelector('.nav-item').classList.remove('is-open');
+                            g.querySelector('.nav-sub-list').classList.remove('is-open');
+                        });
+                        group.classList.add('is-open');
+                        item.classList.add('is-open');
+                        sub.classList.add('is-open');
+                        goToSession(idx);
+                    }
+                });
+            });
+
+            nav.querySelectorAll('.nav-sub-item').forEach(subItem => {
+                subItem.addEventListener('click', () => {
+                    goToSession(parseInt(subItem.dataset.step), parseInt(subItem.dataset.slide));
+                });
             });
         }
 
         function updateSidebarActive() {
-            document.querySelectorAll('.nav-item').forEach((item, i) =>
-                item.classList.toggle('active', i === currentSession)
-            );
+            document.querySelectorAll('.nav-item').forEach((item, i) => {
+                item.classList.toggle('active', i === currentSession);
+                if (i === currentSession) item.classList.add('is-open');
+            });
+            document.querySelectorAll('.nav-group').forEach((group, i) => {
+                const sub = group.querySelector('.nav-sub-list');
+                if (i === currentSession) {
+                    group.classList.add('is-open');
+                    sub.classList.add('is-open');
+                }
+            });
+            document.querySelectorAll('.nav-sub-item').forEach(subItem => {
+                const match = parseInt(subItem.dataset.step) === currentSession
+                           && parseInt(subItem.dataset.slide) === currentSlide;
+                subItem.classList.toggle('active', match);
+            });
         }
 
         /* ============================================
