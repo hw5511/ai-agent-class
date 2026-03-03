@@ -515,11 +515,114 @@
 
         /* 좌측 2/3 — 이미지 슬라이더 영역 */
         .body-image {
+            position: relative;
             display: flex;
             flex-direction: column;
             min-height: 0;
             overflow: hidden;
         }
+
+        /* 이미지 슬라이더 우측 하단 전체화면 진입 버튼 */
+        .image-expand-btn {
+            position: absolute;
+            bottom: 0.5rem;
+            right: 0.5rem;
+            z-index: 10;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 6px;
+            background: rgba(0,0,0,0.35);
+            color: #fff;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.18s, background 0.18s;
+        }
+        .body-image:hover .image-expand-btn { opacity: 1; }
+        .image-expand-btn:hover { background: rgba(0,0,0,0.6); }
+
+        /* 전체화면 오버레이 */
+        .fs-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fs-overlay[hidden] { display: none; }
+
+        .fs-image-wrap {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 5rem;
+        }
+        .fs-image-wrap img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .fs-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.12);
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .fs-nav:hover    { background: rgba(255,255,255,0.25); }
+        .fs-nav:disabled { opacity: 0.2; cursor: default; }
+        .fs-nav.prev     { left: 1.25rem; }
+        .fs-nav.next     { right: 1.25rem; }
+
+        .fs-ui {
+            position: absolute;
+            bottom: 1.25rem;
+            right: 1.25rem;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .fs-counter {
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 0.04em;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        }
+        .fs-close {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.12);
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .fs-close:hover { background: rgba(255,255,255,0.25); }
 
         /* 이미지 슬라이더 — translateX 전환 */
         .image-slider {
@@ -974,6 +1077,11 @@
                                 <div class="image-slider" data-step="${i}">
                                     ${imageSlidesHtml}
                                 </div>
+                                <button class="image-expand-btn" title="전체화면 (슬라이드 모드)">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                        <path d="M1 5V1h4M9 1h4v4M13 9v4H9M5 13H1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
                             </div>
 
                             <div class="body-desc">
@@ -1215,8 +1323,9 @@
         document.getElementById('btn-next').addEventListener('click', () => goToSlide(1));
 
         document.addEventListener('keydown', e => {
-            if (e.key === 'ArrowLeft')  goToSlide(-1);
-            if (e.key === 'ArrowRight') goToSlide(1);
+            const fsOpen = !document.getElementById('fs-overlay').hidden;
+            if (e.key === 'ArrowLeft')  { goToSlide(-1); if (fsOpen) fsUpdateImage(); }
+            if (e.key === 'ArrowRight') { goToSlide(1);  if (fsOpen) fsUpdateImage(); }
         });
 
         /* ============================================
@@ -1237,6 +1346,42 @@
         });
 
         /* ============================================
+           Fullscreen Mode
+           ============================================ */
+        function fsUpdateImage() {
+            const session    = COURSES[currentCourse].sessions[currentSession];
+            const slideCount = getSlideCount(session);
+            const img        = document.getElementById('fs-img');
+
+            if (session.slides && session.slides.length > 0) {
+                img.src = getImagePath(currentCourse, session.num, session.slides[currentSlide]);
+                img.alt = session.title + ' - ' + (currentSlide + 1);
+            } else {
+                img.src = '';
+                img.alt = '';
+            }
+
+            document.getElementById('fs-counter').textContent =
+                String(currentSlide + 1).padStart(2, '0') + ' / ' + String(slideCount).padStart(2, '0');
+
+            const totalSessions = COURSES[currentCourse].sessions.length;
+            document.getElementById('fs-prev').disabled = currentSession === 0 && currentSlide === 0;
+            document.getElementById('fs-next').disabled =
+                currentSession === totalSessions - 1 && currentSlide === slideCount - 1;
+        }
+
+        function openFullscreen() {
+            document.getElementById('fs-overlay').removeAttribute('hidden');
+            document.body.style.overflow = 'hidden';
+            fsUpdateImage();
+        }
+
+        function closeFullscreen() {
+            document.getElementById('fs-overlay').setAttribute('hidden', '');
+            document.body.style.overflow = '';
+        }
+
+        /* ============================================
            Init
            ============================================ */
         document.addEventListener('DOMContentLoaded', () => {
@@ -1244,7 +1389,55 @@
             renderDots(getSlideCount(COURSES[currentCourse].sessions[0]));
             renderSidebar(currentCourse);
             updateIndicator();
+
+            // 전체화면 진입 버튼 이벤트 (renderSlides 후 등록)
+            document.getElementById('slides-container').addEventListener('click', e => {
+                if (e.target.closest('.image-expand-btn')) openFullscreen();
+            });
+
+            // 전체화면 오버레이 버튼
+            document.getElementById('fs-prev').addEventListener('click', () => {
+                goToSlide(-1);
+                fsUpdateImage();
+            });
+            document.getElementById('fs-next').addEventListener('click', () => {
+                goToSlide(1);
+                fsUpdateImage();
+            });
+            document.getElementById('fs-close').addEventListener('click', closeFullscreen);
+
+            // ESC로 종료
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape' && !document.getElementById('fs-overlay').hidden) {
+                    closeFullscreen();
+                }
+            });
         });
     </script>
+
+    <!-- 전체화면 슬라이드 오버레이 -->
+    <div class="fs-overlay" id="fs-overlay" hidden>
+        <button class="fs-nav prev" id="fs-prev">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div class="fs-image-wrap">
+            <img id="fs-img" src="" alt="">
+        </div>
+        <button class="fs-nav next" id="fs-next">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div class="fs-ui">
+            <span class="fs-counter" id="fs-counter"></span>
+            <button class="fs-close" id="fs-close" title="닫기 (ESC)">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
 </body>
 </html>
