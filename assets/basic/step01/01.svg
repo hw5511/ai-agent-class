@@ -1,9 +1,146 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
-  <rect width="1280" height="720" fill="#eff6ff"/>
-  <rect x="40" y="40" width="1200" height="640" rx="12" fill="#fff" stroke="#bfdbfe" stroke-width="2"/>
-  <text x="640" y="200" text-anchor="middle" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#2563eb">BASIC 01 · Slide 1</text>
-  <text x="640" y="260" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" fill="#374151">AI 에이전트 이해와 CLI 환경 구축</text>
-  <rect x="200" y="320" width="880" height="2" fill="#e5e5e5"/>
-  <text x="640" y="400" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" fill="#6b7280">샘플 슬라이드 1 / 2</text>
-  <text x="640" y="440" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#9ca3af">assets/basic/step01/01.svg</text>
+
+  <!-- 배경 -->
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- ── 헤더 ── -->
+  <rect x="60" y="44" width="84" height="24" rx="12" fill="#eff6ff"/>
+  <text x="102" y="60" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="11" font-weight="700" fill="#2563eb" letter-spacing="0.8">BASIC 01</text>
+
+  <text x="60" y="104"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="26" font-weight="800" fill="#0a0a0a">AI 에이전트란?  /  설치형 AI란?</text>
+
+  <line x1="60" y1="122" x2="1220" y2="122" stroke="#e5e5e5" stroke-width="1.5"/>
+
+  <!-- ── 정의 카드 2열 ── -->
+
+  <!-- 좌: AI 에이전트 카드 -->
+  <rect x="60" y="142" width="556" height="192" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="84" y="172"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="10" font-weight="700" fill="#2563eb" letter-spacing="1">AI 에이전트란?</text>
+  <line x1="84" y1="180" x2="244" y2="180" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="84" y="208"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="17" font-weight="700" fill="#1e3a8a">AI가 사람의 명령을 이해하고</text>
+  <text x="84" y="232"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="17" font-weight="700" fill="#1e3a8a">스스로 판단하며 도구를 활용해</text>
+  <text x="84" y="256"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="17" font-weight="700" fill="#1e3a8a">작업을 완료하는 자동화 시스템</text>
+  <text x="84" y="296"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="13" fill="#3b82f6">단순 답변만 하는 챗봇과 달리, 실제로 행동합니다</text>
+
+  <!-- 우: 설치형 AI 카드 -->
+  <rect x="664" y="142" width="556" height="192" rx="8" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="1.5"/>
+  <text x="688" y="172"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="10" font-weight="700" fill="#7c3aed" letter-spacing="1">설치형 AI (CLI 에이전트)란?</text>
+  <line x1="688" y1="180" x2="912" y2="180" stroke="#e9d5ff" stroke-width="1"/>
+  <text x="688" y="208"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="17" font-weight="700" fill="#4c1d95">브라우저 대신 터미널(CLI)에서</text>
+  <text x="688" y="232"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="17" font-weight="700" fill="#4c1d95">명령어로 직접 제어하는 AI 에이전트</text>
+  <text x="688" y="256"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="17" font-weight="700" fill="#4c1d95">파일  ·  코드  ·  시스템을 자유롭게 조작</text>
+  <text x="688" y="296"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="13" fill="#7c3aed">오늘 설치할 3가지: Gemini CLI, GPT Codex, Claude Code</text>
+
+  <!-- ── 명령 흐름 다이어그램 ── -->
+  <text x="60" y="362"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="10" font-weight="700" fill="#a3a3a3" letter-spacing="1">명령 흐름</text>
+  <line x1="60" y1="370" x2="1220" y2="370" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- 박스1: 사용자 입력 -->
+  <rect x="60" y="392" width="220" height="116" rx="8" fill="#f5f5f5" stroke="#e5e5e5" stroke-width="1.5"/>
+  <text x="170" y="426" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="11" font-weight="600" fill="#737373">사용자</text>
+  <text x="170" y="450" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="14" font-weight="700" fill="#0a0a0a">자연어 명령 입력</text>
+  <text x="170" y="472" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="12" fill="#737373">"보고서 만들어줘"</text>
+  <text x="170" y="492" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="12" fill="#737373">"폴더 정리해줘"</text>
+
+  <!-- 화살표: 사용자 → 에이전트 -->
+  <line x1="280" y1="450" x2="392" y2="450" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="392,444 406,450 392,456" fill="#2563eb"/>
+
+  <!-- 박스2: AI 에이전트 (CLI) -->
+  <rect x="406" y="392" width="236" height="116" rx="8" fill="#2563eb"/>
+  <text x="524" y="424" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="11" font-weight="600" fill="rgba(255,255,255,0.6)">AI 에이전트 (CLI)</text>
+  <text x="524" y="449" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="15" font-weight="800" fill="#ffffff">명령 이해</text>
+  <text x="524" y="469" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="15" font-weight="800" fill="#ffffff">계획 수립</text>
+  <text x="524" y="489" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="15" font-weight="800" fill="#ffffff">도구 실행</text>
+
+  <!-- 분기: 에이전트 → 분기점 수평선 -->
+  <line x1="642" y1="450" x2="710" y2="450" stroke="#2563eb" stroke-width="2"/>
+  <!-- 수직 분기선 -->
+  <line x1="710" y1="415" x2="710" y2="485" stroke="#2563eb" stroke-width="1.5"/>
+  <!-- 분기 가로선 + 화살표 3개 -->
+  <line x1="710" y1="415" x2="770" y2="415" stroke="#2563eb" stroke-width="1.5"/>
+  <polygon points="770,409 784,415 770,421" fill="#2563eb"/>
+  <line x1="710" y1="450" x2="770" y2="450" stroke="#2563eb" stroke-width="1.5"/>
+  <polygon points="770,444 784,450 770,456" fill="#2563eb"/>
+  <line x1="710" y1="485" x2="770" y2="485" stroke="#2563eb" stroke-width="1.5"/>
+  <polygon points="770,479 784,485 770,491" fill="#2563eb"/>
+
+  <!-- 결과 박스 1: 파일/폴더 -->
+  <rect x="784" y="392" width="300" height="46" rx="6" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="934" y="411" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="13" font-weight="700" fill="#166534">파일 / 폴더 생성 · 수정</text>
+  <text x="934" y="429" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="11" fill="#16a34a">문서, 코드, 폴더 구조 자동 생성</text>
+
+  <!-- 결과 박스 2: 코드 실행 -->
+  <rect x="784" y="427" width="300" height="46" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="934" y="446" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="13" font-weight="700" fill="#1e40af">코드 작성 · 실행</text>
+  <text x="934" y="464" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="11" fill="#2563eb">스크립트 실행, 프로그램 개발</text>
+
+  <!-- 결과 박스 3: 웹 검색 -->
+  <rect x="784" y="462" width="300" height="46" rx="6" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="1.5"/>
+  <text x="934" y="481" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="13" font-weight="700" fill="#6b21a8">웹 검색 · 정보 수집</text>
+  <text x="934" y="499" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="11" fill="#7c3aed">최신 정보 검색, 데이터 수집</text>
+
+  <!-- ── 하단 요약 메시지 ── -->
+  <line x1="60" y1="572" x2="1220" y2="572" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="640" y="610" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="15" font-weight="600" fill="#525252">기존 챗봇은 텍스트만 생성합니다. AI 에이전트는 실제로 행동합니다.</text>
+  <text x="640" y="638" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="13" fill="#a3a3a3">이번 강의에서는 터미널(CLI)로 동작하는 설치형 AI 에이전트 3종을 설치합니다</text>
+
 </svg>

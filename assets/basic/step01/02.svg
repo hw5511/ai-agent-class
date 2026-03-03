@@ -1,9 +1,173 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
-  <rect width="1280" height="720" fill="#f0fdf4"/>
-  <rect x="40" y="40" width="1200" height="640" rx="12" fill="#fff" stroke="#bbf7d0" stroke-width="2"/>
-  <text x="640" y="200" text-anchor="middle" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#16a34a">BASIC 01 · Slide 2</text>
-  <text x="640" y="260" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" fill="#374151">AI 에이전트 이해와 CLI 환경 구축</text>
-  <rect x="200" y="320" width="880" height="2" fill="#e5e5e5"/>
-  <text x="640" y="400" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" fill="#6b7280">샘플 슬라이드 2 / 2</text>
-  <text x="640" y="440" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#9ca3af">assets/basic/step01/02.svg</text>
+
+  <!-- 배경 -->
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- ── 헤더 ── -->
+  <rect x="60" y="44" width="84" height="24" rx="12" fill="#eff6ff"/>
+  <text x="102" y="60" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="11" font-weight="700" fill="#2563eb" letter-spacing="0.8">BASIC 01</text>
+
+  <text x="60" y="104"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="26" font-weight="800" fill="#0a0a0a">3종 CLI 에이전트 비교</text>
+
+  <line x1="60" y1="122" x2="1220" y2="122" stroke="#e5e5e5" stroke-width="1.5"/>
+
+  <!-- ── 3열 비교 카드 ── -->
+
+  <!-- 카드1: Gemini CLI -->
+  <!-- 컬러 헤더 -->
+  <rect x="60" y="142" width="366" height="88" rx="8" fill="#4285F4"/>
+  <rect x="60" y="198" width="366" height="32" fill="#4285F4"/>
+  <rect x="60" y="210" width="366" height="20" rx="0" fill="#3367d6"/>
+  <text x="243" y="180" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="20" font-weight="800" fill="#ffffff">Gemini CLI</text>
+  <text x="243" y="204" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="12" font-weight="600" fill="rgba(255,255,255,0.75)">by Google</text>
+  <!-- 카드 본문 -->
+  <rect x="60" y="222" width="366" height="356" rx="0" fill="#ffffff" stroke="#e0e0e0" stroke-width="0"/>
+  <rect x="60" y="222" width="366" height="356" fill="#f8faff" stroke="#dbeafe" stroke-width="1.5"/>
+  <rect x="60" y="142" width="366" height="436" rx="8" fill="none" stroke="#dbeafe" stroke-width="1.5"/>
+
+  <!-- Gemini 특징 불릿 -->
+  <circle cx="88" cy="266" r="4" fill="#4285F4"/>
+  <text x="104" y="271"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="14" font-weight="600" fill="#1e3a8a">Gemini 2.0 Flash 모델 기반</text>
+
+  <circle cx="88" cy="308" r="4" fill="#4285F4"/>
+  <text x="104" y="313"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="14" font-weight="600" fill="#1e3a8a">무료 티어 제공 (1M 토큰/분)</text>
+
+  <circle cx="88" cy="350" r="4" fill="#4285F4"/>
+  <text x="104" y="355"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="14" font-weight="600" fill="#1e3a8a">Google 생태계 연동 강점</text>
+
+  <circle cx="88" cy="392" r="4" fill="#4285F4"/>
+  <text x="104" y="397"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="14" font-weight="600" fill="#1e3a8a">한국어 지원 우수</text>
+
+  <line x1="80" y1="444" x2="406" y2="444" stroke="#dbeafe" stroke-width="1"/>
+  <text x="243" y="464" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="11" font-weight="600" fill="#737373">설치 명령어</text>
+  <rect x="80" y="474" width="326" height="34" rx="6" fill="#f1f5f9"/>
+  <text x="243" y="496" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="12" font-weight="600" fill="#334155">npm install -g @google/gemini-cli</text>
+
+  <text x="243" y="548" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="11" fill="#4285F4" font-weight="700">구글 계정 로그인 필요</text>
+
+  <!-- 카드2: GPT CLI (Codex) -->
+  <rect x="457" y="142" width="366" height="88" rx="8" fill="#10a37f"/>
+  <rect x="457" y="198" width="366" height="32" fill="#10a37f"/>
+  <rect x="457" y="210" width="366" height="20" fill="#0d8a6a"/>
+  <text x="640" y="180" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="20" font-weight="800" fill="#ffffff">GPT CLI (Codex)</text>
+  <text x="640" y="204" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="12" font-weight="600" fill="rgba(255,255,255,0.75)">by OpenAI</text>
+  <rect x="457" y="222" width="366" height="356" fill="#f0fdf8" stroke="#a7f3d0" stroke-width="1.5"/>
+  <rect x="457" y="142" width="366" height="436" rx="8" fill="none" stroke="#a7f3d0" stroke-width="1.5"/>
+
+  <!-- GPT 특징 불릿 -->
+  <circle cx="485" cy="266" r="4" fill="#10a37f"/>
+  <text x="501" y="271"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="14" font-weight="600" fill="#065f46">OpenAI o3 / GPT-4o 모델 기반</text>
+
+  <circle cx="485" cy="308" r="4" fill="#10a37f"/>
+  <text x="501" y="313"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="14" font-weight="600" fill="#065f46">코드 생성 특화 설계</text>
+
+  <circle cx="485" cy="350" r="4" fill="#10a37f"/>
+  <text x="501" y="355"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="14" font-weight="600" fill="#065f46">GitHub Copilot과 연계 가능</text>
+
+  <circle cx="485" cy="392" r="4" fill="#10a37f"/>
+  <text x="501" y="397"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="14" font-weight="600" fill="#065f46">OpenAI API 키 필요</text>
+
+  <line x1="477" y1="444" x2="803" y2="444" stroke="#a7f3d0" stroke-width="1"/>
+  <text x="640" y="464" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="11" font-weight="600" fill="#737373">설치 명령어</text>
+  <rect x="477" y="474" width="326" height="34" rx="6" fill="#f1f5f9"/>
+  <text x="640" y="496" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="12" font-weight="600" fill="#334155">npm install -g @openai/codex</text>
+
+  <text x="640" y="548" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="11" fill="#10a37f" font-weight="700">OpenAI API 키 발급 필요</text>
+
+  <!-- 카드3: Claude Code -->
+  <rect x="854" y="142" width="366" height="88" rx="8" fill="#d97706"/>
+  <rect x="854" y="198" width="366" height="32" fill="#d97706"/>
+  <rect x="854" y="210" width="366" height="20" fill="#b45309"/>
+  <text x="1037" y="180" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="20" font-weight="800" fill="#ffffff">Claude Code</text>
+  <text x="1037" y="204" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="12" font-weight="600" fill="rgba(255,255,255,0.75)">by Anthropic</text>
+  <rect x="854" y="222" width="366" height="356" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+  <rect x="854" y="142" width="366" height="436" rx="8" fill="none" stroke="#fde68a" stroke-width="1.5"/>
+
+  <!-- Claude 특징 불릿 -->
+  <circle cx="882" cy="266" r="4" fill="#d97706"/>
+  <text x="898" y="271"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="14" font-weight="600" fill="#78350f">Claude Sonnet 4.5 모델 기반</text>
+
+  <circle cx="882" cy="308" r="4" fill="#d97706"/>
+  <text x="898" y="313"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="14" font-weight="600" fill="#78350f">파일 · 코드 편집 특화</text>
+
+  <circle cx="882" cy="350" r="4" fill="#d97706"/>
+  <text x="898" y="355"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="14" font-weight="600" fill="#78350f">CLAUDE.md 메모리 시스템</text>
+
+  <circle cx="882" cy="392" r="4" fill="#d97706"/>
+  <text x="898" y="397"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="14" font-weight="600" fill="#78350f">Pro / Max 구독 포함 사용</text>
+
+  <line x1="874" y1="444" x2="1200" y2="444" stroke="#fde68a" stroke-width="1"/>
+  <text x="1037" y="464" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="11" font-weight="600" fill="#737373">설치 명령어</text>
+  <rect x="874" y="474" width="326" height="34" rx="6" fill="#f1f5f9"/>
+  <text x="1037" y="496" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="12" font-weight="600" fill="#334155">npm install -g @anthropic-ai/claude-code</text>
+
+  <text x="1037" y="548" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="11" fill="#d97706" font-weight="700">Claude Pro / Max 구독 필요</text>
+
+  <!-- ── 하단 요약 ── -->
+  <line x1="60" y1="604" x2="1220" y2="604" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="640" y="640" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="13" fill="#737373">세 에이전트 모두 설치 후, 동일한 명령을 입력해 응답 방식의 차이를 비교합니다</text>
+  <text x="640" y="664" text-anchor="middle"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    font-size="12" fill="#a3a3a3">이번 강의에서는 Claude Code를 주력으로 활용합니다</text>
+
 </svg>
