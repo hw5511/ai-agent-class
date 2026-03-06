@@ -256,18 +256,18 @@
         /* 비활성 그룹 흐리게 */
         .nav-group {
             opacity: 0.38;
-            transition: opacity 0.18s, filter 0.18s;
+            transition: opacity 0.18s;
         }
         .nav-group:has(.nav-item.active) {
             opacity: 1;
         }
-        /* 비활성 그룹 호버: 흑백 반전 */
+        /* 비활성 그룹 호버: 검은색 테두리 */
         .nav-group:not(:has(.nav-item.active)):hover {
             opacity: 1;
-            filter: invert(1);
         }
         .nav-group:not(:has(.nav-item.active)):hover .nav-item:hover {
             background: transparent;
+            outline: 1.5px solid var(--fg);
         }
 
         .nav-item:hover          { background: var(--border); }
