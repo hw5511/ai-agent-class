@@ -268,6 +268,23 @@
             text-align: left;
         }
 
+        /* 비활성 그룹 흐리게 */
+        .nav-group {
+            opacity: 0.38;
+            transition: opacity 0.18s, filter 0.18s;
+        }
+        .nav-group:has(.nav-item.active) {
+            opacity: 1;
+        }
+        /* 비활성 그룹 호버: 흑백 반전 */
+        .nav-group:not(:has(.nav-item.active)):hover {
+            opacity: 1;
+            filter: invert(1);
+        }
+        .nav-group:not(:has(.nav-item.active)):hover .nav-item:hover {
+            background: transparent;
+        }
+
         .nav-item:hover          { background: var(--border); }
         .nav-item.active         { background: var(--primary); }
 
@@ -503,11 +520,11 @@
             line-height: 1.3;
         }
 
-        /* 본문 2-col 그리드: 좌 3/4 이미지 | 우 1/4 설명 */
+        /* 본문 — 이미지 슬라이더 단독 */
         .session-body {
             flex: 1;
             display: grid;
-            grid-template-columns: 3fr 1fr;
+            grid-template-columns: 1fr;
             gap: 1rem;
             min-height: 0;
             overflow: hidden;
@@ -675,11 +692,7 @@
 
         /* 우측 1/3 — 설명 영역 */
         .body-desc {
-            display: flex;
-            flex-direction: column;
-            gap: 0.625rem;
-            min-height: 0;
-            overflow: hidden;
+            display: none;
         }
 
         .content-block {
