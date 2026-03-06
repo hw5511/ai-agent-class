@@ -1,10 +1,107 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
-  <rect width="1280" height="720" fill="#fafafa"/>
-  <rect x="60" y="60" width="1160" height="600" rx="12" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.5" stroke-dasharray="8,4"/>
-  <rect x="60" y="44" width="84" height="24" rx="12" fill="#eff6ff"/>
-  <text x="102" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#2563eb" letter-spacing="0.8">BASIC 01</text>
-  <text x="640" y="320" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" font-weight="700" fill="#a3a3a3">winget install git</text>
-  <text x="640" y="360" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#c4c4c4">스크린샷 교체 예정 — 03.png 또는 03.svg</text>
-  <rect x="560" y="390" width="160" height="2" rx="1" fill="#e5e5e5"/>
-  <text x="640" y="420" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#d4d4d4">assets/basic/step01/03.svg</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- 헤더 배지 -->
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="54" height="24" rx="12" fill="#f0f4ff" stroke="#c7d7ff" stroke-width="1"/>
+  <text x="177" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#3b5bdb">STEP 4</text>
+
+  <!-- 제목 -->
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">CLI 에이전트 설치 — 단계별 로드맵</text>
+
+  <!-- 중앙 구분선 -->
+  <line x1="640" y1="120" x2="640" y2="486" stroke="#e5e5e5" stroke-width="1" stroke-dasharray="5,4"/>
+
+  <!-- Windows 섹션 레이블 -->
+  <rect x="80" y="116" width="108" height="22" rx="6" fill="#dbeafe"/>
+  <text x="134" y="131" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1d4ed8">Windows</text>
+
+  <!-- Mac 섹션 레이블 -->
+  <rect x="680" y="116" width="92" height="22" rx="6" fill="#f3f4f6"/>
+  <text x="726" y="131" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#6b7280">macOS</text>
+
+  <!-- Windows Step 1 -->
+  <rect x="80" y="150" width="520" height="56" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="100" y="175" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1d4ed8">1. PowerShell 실행</text>
+  <text x="100" y="195" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">시작 메뉴 검색 후 실행 (관리자 권한 X)</text>
+
+  <!-- Windows 화살표 1 -->
+  <line x1="340" y1="206" x2="340" y2="226" stroke="#6b7280" stroke-width="2"/>
+  <polygon points="340,234 333,220 347,220" fill="#6b7280"/>
+
+  <!-- Windows Step 2 -->
+  <rect x="80" y="238" width="520" height="56" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="100" y="263" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1d4ed8">2. Git 설치</text>
+  <text x="100" y="282" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">winget install Git.Git</text>
+
+  <!-- Windows 화살표 2 -->
+  <line x1="340" y1="294" x2="340" y2="314" stroke="#6b7280" stroke-width="2"/>
+  <polygon points="340,322 333,308 347,308" fill="#6b7280"/>
+
+  <!-- Windows Step 3 -->
+  <rect x="80" y="326" width="520" height="56" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="100" y="351" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1d4ed8">3. Node.js 설치</text>
+  <text x="100" y="370" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">winget install OpenJS.NodeJS</text>
+
+  <!-- Windows 화살표 3 (오류시 점선) -->
+  <line x1="340" y1="382" x2="340" y2="400" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="340,408 333,394 347,394" fill="#f59e0b"/>
+
+  <!-- Windows Step 4 (오류시) -->
+  <rect x="80" y="412" width="520" height="56" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="100" y="437" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#d97706">4. npm 오류 해결 (오류 발생 시만)</text>
+  <text x="100" y="456" font-family="'Courier New',Courier,monospace" font-size="11" fill="#374151">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</text>
+
+  <!-- Mac Step 1 -->
+  <rect x="680" y="150" width="520" height="56" rx="10" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="700" y="175" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">1. Terminal 실행</text>
+  <text x="700" y="195" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">Spotlight (Cmd+Space) → Terminal 검색 → 실행</text>
+
+  <!-- Mac 화살표 1 -->
+  <line x1="940" y1="206" x2="940" y2="226" stroke="#6b7280" stroke-width="2"/>
+  <polygon points="940,234 933,220 947,220" fill="#6b7280"/>
+
+  <!-- Mac Step 2 -->
+  <rect x="680" y="238" width="520" height="66" rx="10" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="700" y="263" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">2. Homebrew 설치</text>
+  <text x="700" y="281" font-family="'Courier New',Courier,monospace" font-size="11" fill="#374151">/bin/bash -c "$(curl -fsSL</text>
+  <text x="700" y="296" font-family="'Courier New',Courier,monospace" font-size="11" fill="#374151">  .../Homebrew/install/HEAD/install.sh)"</text>
+
+  <!-- Mac 화살표 2 -->
+  <line x1="940" y1="304" x2="940" y2="322" stroke="#6b7280" stroke-width="2"/>
+  <polygon points="940,330 933,316 947,316" fill="#6b7280"/>
+
+  <!-- Mac Step 3 -->
+  <rect x="680" y="334" width="520" height="56" rx="10" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="700" y="359" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">3. Node.js 설치</text>
+  <text x="700" y="378" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">brew install node</text>
+
+  <!-- 공통 수렴 화살표 -->
+  <line x1="340" y1="468" x2="340" y2="482" stroke="#16a34a" stroke-width="2"/>
+  <line x1="340" y1="482" x2="640" y2="482" stroke="#16a34a" stroke-width="2"/>
+  <line x1="940" y1="390" x2="940" y2="482" stroke="#16a34a" stroke-width="2"/>
+  <line x1="640" y1="482" x2="940" y2="482" stroke="#16a34a" stroke-width="2"/>
+  <line x1="640" y1="482" x2="640" y2="496" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="640,504 633,490 647,490" fill="#16a34a"/>
+
+  <!-- 공통 레이블 -->
+  <rect x="548" y="493" width="184" height="22" rx="6" fill="#dcfce7"/>
+  <text x="640" y="508" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#16a34a">공통 — CLI 에이전트 설치</text>
+
+  <!-- 공통 박스 3개 -->
+  <rect x="60" y="524" width="350" height="54" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="235" y="548" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">Claude Code</text>
+  <text x="235" y="566" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#374151">npm install -g @anthropic-ai/claude-code</text>
+
+  <rect x="465" y="524" width="350" height="54" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="640" y="548" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">Gemini CLI</text>
+  <text x="640" y="566" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#374151">npm install -g @google/gemini-cli</text>
+
+  <rect x="870" y="524" width="350" height="54" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="1045" y="548" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">GPT Codex</text>
+  <text x="1045" y="566" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#374151">npm install -g @openai/codex</text>
+
+  <!-- 하단 안내 -->
+  <text x="640" y="614" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">설치 완료 후 버전 확인: claude --version / gemini --version / codex --version</text>
 </svg>

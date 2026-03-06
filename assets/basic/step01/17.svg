@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- 헤더 배지 -->
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">macOS</text>
+
+  <!-- 제목 -->
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">Mac 설치 — Node.js 설치 후 공통 진행</text>
+
+  <!-- Step 1: Node.js 설치 -->
+  <rect x="60" y="134" width="1160" height="80" rx="12" fill="#1c1c1e"/>
+  <text x="88" y="162" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#a3e635">1. Node.js 설치</text>
+  <text x="88" y="190" font-family="'Courier New',Courier,monospace" font-size="16" fill="#e5e7eb">brew install node</text>
+
+  <!-- Step 2: 버전 확인 -->
+  <rect x="60" y="232" width="1160" height="80" rx="12" fill="#1c1c1e"/>
+  <text x="88" y="260" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#a3e635">2. 설치 확인</text>
+  <text x="88" y="295" font-family="'Courier New',Courier,monospace" font-size="15" fill="#e5e7eb">node --version    npm --version</text>
+
+  <!-- 구분선 -->
+  <line x1="60" y1="336" x2="1220" y2="336" stroke="#e5e5e5" stroke-width="1.5"/>
+  <rect x="530" y="326" width="220" height="22" rx="8" fill="#dcfce7"/>
+  <text x="640" y="341" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#16a34a">이후는 Windows와 동일</text>
+
+  <!-- 공통 설치 박스 3개 -->
+  <rect x="60" y="358" width="350" height="66" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="235" y="383" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">Claude Code</text>
+  <text x="235" y="404" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#374151">npm install -g @anthropic-ai/claude-code</text>
+  <text x="235" y="418" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#6b7280">claude --version</text>
+
+  <rect x="465" y="358" width="350" height="66" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="640" y="383" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">Gemini CLI</text>
+  <text x="640" y="404" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#374151">npm install -g @google/gemini-cli</text>
+  <text x="640" y="418" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#6b7280">gemini --version</text>
+
+  <rect x="870" y="358" width="350" height="66" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="1045" y="383" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">GPT Codex</text>
+  <text x="1045" y="404" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#374151">npm install -g @openai/codex</text>
+  <text x="1045" y="418" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#6b7280">codex --version</text>
+
+  <!-- 설치 후 안내 -->
+  <rect x="60" y="444" width="1160" height="64" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="88" y="472" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">claude install 실행</text>
+  <text x="88" y="494" font-family="'Courier New',Courier,monospace" font-size="13" fill="#6b7280">claude install  →  네이티브 바이너리 업데이트 완료</text>
+
+  <!-- 하단 안내 -->
+  <text x="640" y="600" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">Mac npm 오류는 거의 발생하지 않습니다. Windows의 Set-ExecutionPolicy 과정은 Mac에 해당 없음.</text>
+</svg>

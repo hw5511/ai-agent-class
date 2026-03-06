@@ -6,9 +6,9 @@
   <rect x="150" y="44" width="54" height="24" rx="12" fill="#f0f4ff" stroke="#c7d7ff" stroke-width="1"/>
   <text x="177" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#3b5bdb">STEP 4</text>
 
-  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">(권장) 창 색상 변경 — 속성 진입</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">Claude Code 설치</text>
 
-  <image href="03_1파워쉘창속성.png" x="140" y="118" width="1000" height="520" preserveAspectRatio="xMidYMid meet"/>
+  <image href="07_1npm클로드설치및버전확인.png" x="140" y="118" width="1000" height="520" preserveAspectRatio="xMidYMid meet"/>
 
-  <text x="640" y="668" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="500" fill="#374151">상단 바 우클릭 → 속성 클릭</text>
+  <text x="640" y="668" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="500" fill="#374151">npm install -g @anthropic-ai/claude-code → claude --version 확인</text>
 </svg>
