@@ -1017,12 +1017,12 @@
                         goal: '에이전트를 활용해 엑셀 데이터를 분석하고, 워드 형식의 보고서를 자동으로 생성하는 Skill을 구현한다.',
                         topics: ['엑셀 데이터 분석 Skill 만들기', '워드 보고서 자동 생성 Skill 만들기', '데이터 → 문서 자동화 파이프라인'],
                         practice: '샘플 엑셀 데이터를 읽어 분석 결과를 워드 보고서로 자동 출력하는 흐름을 완성한다.',
-                        slides: ['01.png','02.png','03.png','04.png'],
+                        slides: ['01.svg','02.svg','03.svg','04.svg'],
                         slideDescs: [
-            { goal: '문서 자동화의 개요와 활용 방향을 이해한다.', topics: ['문서 자동화가 필요한 상황', 'openpyxl / python-docx 라이브러리', '에이전트 + 문서 자동화 흐름', '실습 시나리오 설명'], practice: null },
-            { goal: '엑셀 데이터 분석 Skill을 제작한다.', topics: ['openpyxl로 엑셀 읽기', '데이터 요약 처리 코드', 'Skill로 래핑하기', '실행 결과 확인'], practice: null },
-            { goal: '워드 보고서 자동 생성 Skill을 제작한다.', topics: ['python-docx로 문서 생성', '분석 결과 자동 삽입', '표 추가 방법', 'Skill 실행 및 확인'], practice: null },
-            { goal: '엑셀 분석 → 워드 보고서 파이프라인을 완성한다.', topics: ['두 Skill 연결 흐름', '에이전트 명령 한 줄로 실행', '최종 결과물 확인', '응용 시나리오 논의'], practice: '샘플 엑셀 데이터를 읽어 분석 결과를 워드 보고서로 자동 출력하는 흐름을 완성한다.' }
+            { goal: 'ADV 2 목표와 오늘 배울 내용을 안내한다.', topics: ['문서 자동화 개요', '엑셀 분석 Skill (openpyxl)', '워드 보고서 Skill (python-docx)', '파이프라인 연결'], practice: null },
+            { goal: 'openpyxl로 엑셀 데이터를 읽는 Skill을 제작한다.', topics: ['pip install openpyxl', 'load_workbook() + ws.active', 'iter_rows(values_only=True) 행 반복', 'Skill 스크립트로 래핑'], practice: null },
+            { goal: 'python-docx로 워드 보고서를 생성하는 Skill을 제작한다.', topics: ['pip install python-docx', 'from docx import Document (import 주의)', 'add_heading · add_paragraph · add_table', 'doc.save()로 .docx 출력'], practice: null },
+            { goal: '두 Skill을 파이프라인으로 연결해 자동화를 완성한다.', topics: ['엑셀 읽기 → 데이터 추출 → 워드 생성 흐름', '에이전트 명령 하나로 전체 실행', 'Claude가 두 Skill 순서 자동 조율', '최종 결과물 확인'], practice: '샘플 엑셀 데이터를 읽어 분석 결과를 워드 보고서로 자동 출력하는 흐름을 완성한다.' }
                         ]
                     },
                     {
