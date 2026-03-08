@@ -179,26 +179,6 @@ slides = {
         body(512, "Bash            시스템 명령어 실행", size=21, color="#171717") + "\n" +
         footer("에이전트는 파일을 읽고 · 쓰고 · 고치고 · 실행합니다")
     ),
-    # 12: 다음 단계 (구 20)
-    "12": lambda: wrap(
-        badge(12) + "\n" +
-        title("다음 단계") + "\n" +
-        sub("Basic 03 — 이미지 생성과 문서 자동화") + "\n" +
-        divider(212) + "\n" +
-        label(264, "NEXT") + "\n" +
-        body(308, "에이전트로 이미지 생성하기") + "\n" +
-        body(354, "Markdown 문서를 PDF로 변환하기") + "\n" +
-        body(400, "반복 작업을 자동화하기") + "\n" +
-        footer_light("오늘 실습한 파일 툴이 자동화의 기반이 됩니다")
-    ),
-    # 13: 마무리 (구 21)
-    "13": lambda: wrap(
-        badge(13) + "\n" +
-        f'  <text x="640" y="340" text-anchor="middle" font-family="{FONT}" '
-        f'font-size="48" font-weight="700" fill="#171717">수고하셨습니다</text>\n'
-        f'  <text x="640" y="400" text-anchor="middle" font-family="{FONT}" '
-        f'font-size="20" fill="#6b7280">BASIC 02 완료</text>'
-    ),
 }
 
 for num, gen in slides.items():
