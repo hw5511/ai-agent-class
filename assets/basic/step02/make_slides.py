@@ -68,7 +68,7 @@ slides = {
         body(308, "현재 폴더를 분석해 CLAUDE.md 초안을 자동 생성") + "\n" +
         label(374, "차이점") + "\n" +
         body(418, "직접 작성  vs  /init 자동 생성  +  직접 보완") + "\n" +
-        footer("기존 CLAUDE.md가 있으면 덮어씌우므로 백업 권장")
+        footer_light("기존 파일이 있으면 덮어쓰지 않고 개선 제안만 합니다")
     ),
     # 04: /memory 개념 (구 06)
     "04": lambda: wrap(
@@ -90,12 +90,12 @@ slides = {
         sub("대화 중 중요한 내용을 에이전트가 자동 저장합니다") + "\n" +
         divider(212) + "\n" +
         label(264, "작동 방식") + "\n" +
-        body(308, "Claude가 기억할 가치가 있다고 판단하면 저장 제안") + "\n" +
-        body(354, "사용자가 승인하면 CLAUDE.md에 자동 추가") + "\n" +
+        body(308, "Claude가 스스로 판단해  MEMORY.md  에 자동 기록") + "\n" +
+        body(354, "기본값 ON  —  /memory 에서 on/off 설정 가능") + "\n" +
         divider(410) + "\n" +
-        label(450, "수동 저장") + "\n" +
-        body(490, "Shift + Tab  →  Auto-accept mode  (자동 승인)") + "\n" +
-        footer("기억시키고 싶은 내용은 직접 요청해도 됩니다")
+        label(450, "직접 요청") + "\n" +
+        body(490, '"이걸 기억해줘" 라고 말하면 즉시 저장') + "\n" +
+        footer_light("세션 시작 시 MEMORY.md 내용이 자동으로 컨텍스트에 로드됩니다")
     ),
     # 06: Read 툴 (구 09)
     "06": lambda: wrap(
