@@ -967,13 +967,13 @@
                         goal: 'Skills의 개념과 사용법을 익히고, Telegram 알림 Skill을 직접 제작하여 작업 완료 알림을 받는 자동화를 구현한다.',
                         topics: ['Skills란? 개념 이해', 'Skill 사용하기', 'Telegram 봇 토큰 발급 및 설정', 'Telegram 연동 Skill 제작 실습', '작업 완료 알림 받기'],
                         practice: 'Telegram 알림 Skill을 처음부터 직접 제작하고, 에이전트 작업 완료 시 메시지를 수신하는 흐름을 완성한다.',
-                        slides: ['01.png','02.png','03.png','04.png','05.png'],
+                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
                         slideDescs: [
-            { goal: 'Skills의 개념과 구조를 이해한다.', topics: ['Skills란?', 'Skill 파일 구조 (.md + script)', 'CLAUDE.md에 Skill 등록 방법', '기존 Skill 호출 방법'], practice: null },
-            { goal: '기존 Skill을 불러와서 실행한다.', topics: ['Skill 호출 명령 형식', '실행 결과 확인 화면', 'Skill 파라미터 전달', '커스텀 Skill 아이디어'], practice: null },
-            { goal: 'Telegram 봇 토큰을 발급하고 설정한다.', topics: ['BotFather로 봇 생성', '토큰 발급 화면', 'Chat ID 확인 방법', '환경변수로 토큰 관리'], practice: null },
-            { goal: 'Telegram 알림 Skill을 직접 제작한다.', topics: ['Skill 스크립트 작성 (Python)', 'Skill .md 파일 작성', 'CLAUDE.md에 등록', '전송 테스트 실행'], practice: null },
-            { goal: '작업 완료 시 자동으로 알림을 받는다.', topics: ['Hooks에 Skill 연결', '작업 완료 트리거 설정', 'Telegram 메시지 수신 확인', '실전 활용 시나리오'], practice: 'Telegram 알림 Skill을 처음부터 직접 제작하고, 에이전트 작업 완료 시 메시지를 수신하는 흐름을 완성한다.' }
+            { goal: 'Step 7 목표와 오늘 배울 내용을 안내한다.', topics: ['Skills 개념 · 사용법', 'Telegram 봇 토큰 발급', 'Telegram Skill 제작', '완료 알림 자동화'], practice: null },
+            { goal: 'Skills의 개념과 파일 구조를 이해한다.', topics: ['.claude/skills/<이름>/SKILL.md (프로젝트)', '~/.claude/skills/<이름>/SKILL.md (전체)', '/skill-name 슬래시 명령어로 호출', '인수 전달 가능 · Claude 자동 로드'], practice: null },
+            { goal: 'SKILL.md 파일 구조와 기본 제공 Skill을 파악한다.', topics: ['YAML frontmatter + Markdown 지시사항', 'description 필드 · Claude 지침 본문', '/simplify · /batch · /debug · /loop', '커스텀 Skill 아이디어'], practice: null },
+            { goal: 'BotFather로 Telegram 봇을 생성하고 토큰을 발급한다.', topics: ['@BotFather 검색 후 Start', '/newbot 명령어로 봇 생성', '사용자명 규칙 (bot으로 끝남)', '토큰 환경변수로 안전하게 관리'], practice: null },
+            { goal: 'Telegram 알림 Skill을 제작하고 Hooks에 연결한다.', topics: ['Python requests로 sendMessage API 호출', 'SKILL.md 파일 작성 및 등록', 'PostToolUse · Stop 이벤트에 스크립트 등록', '작업 완료 시 Telegram 자동 알림'], practice: 'Telegram 알림 Skill을 처음부터 직접 제작하고, 에이전트 작업 완료 시 메시지를 수신하는 흐름을 완성한다.' }
                         ]
                     },
                     {
