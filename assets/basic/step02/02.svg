@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 02</text>
+
+  <!-- 파일명 강조 -->
+  <text x="60" y="140" font-family="'Courier New',Courier,monospace" font-size="52" font-weight="700" fill="#171717">CLAUDE.md</text>
+  <text x="60" y="192" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#6b7280">에이전트의 정체성을 정의하는 파일</text>
+
+  <line x1="60" y1="224" x2="1220" y2="224" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- 3가지 핵심 -->
+  <!-- 위치 -->
+  <text x="60" y="282" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">위치</text>
+  <text x="60" y="316" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">프로젝트 폴더 루트  /  홈 디렉토리 (~/.claude/)</text>
+
+  <!-- 역할 -->
+  <text x="60" y="374" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">역할</text>
+  <text x="60" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">에이전트가 대화를 시작할 때마다 자동으로 읽는 지시서</text>
+
+  <!-- 적용 범위 -->
+  <text x="60" y="466" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">적용 범위</text>
+  <text x="60" y="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">해당 폴더에서 실행되는 모든 Claude 세션에 적용</text>
+
+  <!-- 핵심 문장 -->
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#171717"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">이름 · 역할 · 규칙을 여기에 적으면 에이전트가 그대로 따릅니다</text>
+</svg>
