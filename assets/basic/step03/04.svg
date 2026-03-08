@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 03</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">권한 모드  /  단축키</text>
+  <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="230" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Shift + Tab</text>
+  <text x="60" y="268" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">권한 모드를 순환 전환</text>
+  <text x="60" y="306" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">일반 모드  →  편집 자동 승인  →  플랜 모드  →  일반 모드</text>
+  <line x1="60" y1="350" x2="1220" y2="350" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="396" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Esc</text>
+  <text x="60" y="432" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">실행 중인 응답 중단  /  프롬프트 종료</text>
+  <line x1="60" y1="476" x2="1220" y2="476" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="516" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">위험 플래그</text>
+  <text x="60" y="550" font-family="'Courier New',Courier,monospace" font-size="19" fill="#dc2626">--dangerously-skip-permissions    권한 확인 없이 실행  (격리 환경 전용)</text>
+
+</svg>
