@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 03</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">이동  /  클릭  /  입력  /  수집</text>
+  <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">핵심 API</text>
+  <text x="60" y="262" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">page.goto('https://...')          URL 이동</text>
+  <text x="60" y="298" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">page.click('.btn')                 요소 클릭 (자동 대기)</text>
+  <text x="60" y="334" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">page.fill('#input', '텍스트')     입력 필드 채우기</text>
+  <text x="60" y="370" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">page.screenshot(path='out.png')  스크린샷 저장</text>
+  <line x1="60" y1="410" x2="1220" y2="410" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">데이터 수집</text>
+  <text x="60" y="488" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">items = page.locator('.item').all()</text>
+  <text x="60" y="524" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">texts = [i.text_content() for i in items]</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">full_page=True 옵션으로 스크롤 영역까지 전체 캡처 가능</text>
+</svg>

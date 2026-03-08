@@ -1030,13 +1030,13 @@
                         goal: '웹 자동화의 원리를 이해하고, 에이전트로 브라우저를 직접 제어하여 반복 웹 작업을 자동화한다.',
                         topics: ['웹 자동화의 원리와 활용법', '브라우저 자동 제어 환경 구성', '페이지 이동 / 클릭 / 입력 자동화', '스크린샷 및 데이터 수집'],
                         practice: '지정한 웹페이지에 자동으로 접속하여 데이터를 수집하고 결과를 파일로 저장하는 흐름을 구현한다.',
-                        slides: ['01.png','02.png','03.png','04.png','05.png'],
+                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
                         slideDescs: [
-            { goal: '웹 자동화의 원리와 도구를 이해한다.', topics: ['웹 자동화란?', 'Playwright / Selenium 비교', 'Claude Code에서 웹 자동화 방식', '활용 시나리오 개요'], practice: null },
-            { goal: '웹 자동화 환경을 구성한다.', topics: ['Playwright 설치', '브라우저 드라이버 설정', '첫 번째 자동화 스크립트 실행', '환경 확인 화면'], practice: null },
-            { goal: '페이지 이동·클릭·입력을 자동화한다.', topics: ['URL 이동 코드', '버튼/링크 클릭 자동화', '폼 입력 자동화', '실행 화면 확인'], practice: null },
-            { goal: '데이터 수집과 스크린샷 자동화를 실습한다.', topics: ['텍스트 데이터 추출', '이미지 수집', '스크린샷 자동 저장', '수집 결과 확인'], practice: null },
-            { goal: '수집 결과를 파일로 저장하는 흐름을 완성한다.', topics: ['CSV/JSON으로 저장', '자동 파일명 생성', '전체 흐름 연결', '최종 결과물 확인'], practice: '지정한 웹페이지에 자동으로 접속하여 데이터를 수집하고 결과를 파일로 저장하는 흐름을 구현한다.' }
+            { goal: 'ADV 3 목표와 오늘 배울 내용을 안내한다.', topics: ['웹 자동화 원리', 'Playwright vs Selenium', '환경 구성', '이동·클릭·입력·수집·저장'], practice: null },
+            { goal: '웹 자동화 원리와 Playwright vs Selenium을 비교한다.', topics: ['코드 → 브라우저 제어 → 클릭·입력·추출', 'Playwright — 빠름·자동 대기·설치 간단 (권장)', 'Selenium — 레거시 지원·명시적 대기 필요', '새 프로젝트는 Playwright 권장'], practice: null },
+            { goal: 'Playwright 설치와 기본 구조를 파악한다.', topics: ['pip install playwright', 'playwright install (브라우저 바이너리 필수)', 'sync_playwright() 컨텍스트 매니저', 'chromium.launch() → browser → page'], practice: null },
+            { goal: 'page 핵심 API로 이동·클릭·입력·수집을 자동화한다.', topics: ['page.goto() URL 이동', 'page.click() 자동 대기 포함', 'page.fill() 입력 필드', 'page.locator().all() 수집 · screenshot()'], practice: null },
+            { goal: '수집 데이터를 CSV와 JSON으로 저장한다.', topics: ['csv.DictWriter — writeheader + writerows', 'json.dump — ensure_ascii=False indent=2', '에이전트 명령 하나로 수집 + 저장 자동화', '전체 파이프라인 완성'], practice: '지정한 웹페이지에 자동으로 접속하여 데이터를 수집하고 결과를 파일로 저장하는 흐름을 구현한다.' }
                         ]
                     },
                     {
