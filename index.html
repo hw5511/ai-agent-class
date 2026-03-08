@@ -1003,13 +1003,13 @@
                         goal: '외부 이미지 생성 API를 활용하는 Skill을 직접 제작하고, 에이전트 명령어로 이미지를 자동 생성하는 파이프라인을 구현한다.',
                         topics: ['외부 API를 활용한 Skill 제작 방법', '나노바나나 API 연동', 'AI 이미지 생성 Skill 실습', '생성된 이미지 자동 저장 처리'],
                         practice: '프롬프트 입력 한 번으로 이미지가 자동 생성되어 지정 폴더에 저장되는 흐름을 완성한다.',
-                        slides: ['01.png','02.png','03.png','04.png','05.png'],
+                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
                         slideDescs: [
-            { goal: '외부 API를 호출하는 Skill 구조를 이해한다.', topics: ['외부 API 연동 Skill 아키텍처', 'requests 라이브러리 활용', 'API 키 환경변수 관리', 'Skill 입력/출력 설계'], practice: null },
-            { goal: '나노바나나 API를 연동한다.', topics: ['나노바나나 API 키 발급', '엔드포인트 확인', '테스트 요청 실행', '응답 JSON 파싱'], practice: null },
-            { goal: '이미지 생성 Skill 스크립트를 작성한다.', topics: ['Skill 스크립트 전체 구조', '프롬프트 파라미터 처리', 'API 호출 코드', '오류 처리 추가'], practice: null },
-            { goal: 'Skill을 실행하여 이미지를 생성한다.', topics: ['Skill 등록 및 호출', '이미지 생성 실행 화면', '생성 결과 확인', '프롬프트 변경 테스트'], practice: null },
-            { goal: '생성된 이미지를 자동으로 저장한다.', topics: ['지정 폴더 자동 저장 구현', '파일명 자동 생성 (타임스탬프)', '저장 결과 확인', '전체 파이프라인 완성'], practice: '프롬프트 입력 한 번으로 이미지가 자동 생성되어 지정 폴더에 저장되는 흐름을 완성한다.' }
+            { goal: 'ADV 1 목표와 오늘 배울 내용을 안내한다.', topics: ['외부 API Skill 아키텍처', '나노바나나 API 연동', 'Skill 스크립트 작성', '실행과 폴더 자동 저장'], practice: null },
+            { goal: '외부 API를 호출하는 Skill 구조를 이해한다.', topics: ['SKILL.md + Python 스크립트 조합', 'API 키는 환경변수로 관리 (코드 직접 입력 금지)', 'requests 라이브러리로 어떤 API든 연결 가능', 'SKILL.md가 Claude에게 실행 방법 지시'], practice: null },
+            { goal: '나노바나나 API 키를 발급받고 연결 구조를 파악한다.', topics: ['nanobanana.im 회원가입 후 API 키 발급', 'NANOBANANA_API_KEY 환경변수 등록', 'POST 요청 + 프롬프트 + API 키 헤더 구조', '응답: 이미지 URL 또는 base64 데이터'], practice: null },
+            { goal: 'requests로 API를 호출하고 이미지를 저장하는 스크립트를 작성한다.', topics: ['os.getenv()로 API 키 로드', 'requests.post()로 API 호출', 'base64.b64decode() 디코딩 후 파일 저장', 'SKILL.md description + 스크립트 실행 지시'], practice: null },
+            { goal: 'Skill을 실행하고 이미지를 지정 폴더에 자동 저장한다.', topics: ['/image-gen "프롬프트" 로 Skill 호출', '폴더 없으면 자동 생성 (os.makedirs)', '파일명 타임스탬프 자동 부여 — 덮어쓰기 방지', '전체 파이프라인 완성'], practice: '프롬프트 입력 한 번으로 이미지가 자동 생성되어 지정 폴더에 저장되는 흐름을 완성한다.' }
                         ]
                     },
                     {
