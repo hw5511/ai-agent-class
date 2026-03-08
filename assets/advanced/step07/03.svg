@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">뉴스 수집 노드</text>
+  <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">RSS Feed Read 노드 (N8N 내장)</text>
+  <text x="60" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Feed URL 입력  —  구글 뉴스, 네이버 뉴스 RSS 등</text>
+  <text x="60" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">결과: title / link / pubDate / content 필드 자동 파싱</text>
+  <line x1="60" y1="344" x2="1220" y2="344" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="388" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">NewsAPI (HTTP Request 노드)</text>
+  <text x="60" y="426" font-family="'Courier New',Courier,monospace" font-size="17" fill="#374151">GET https://newsapi.org/v2/everything</text>
+  <text x="60" y="462" font-family="'Courier New',Courier,monospace" font-size="17" fill="#374151">params: q=키워드, language=ko, apiKey=YOUR_KEY</text>
+  <line x1="60" y1="504" x2="1220" y2="504" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="544" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">키워드 필터링</text>
+  <text x="60" y="578" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">IF 노드  —  title에 키워드 포함 여부로 분기 처리</text>
+
+</svg>
