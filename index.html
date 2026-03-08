@@ -924,14 +924,14 @@
                         goal: '세션을 효율적으로 관리하는 방법을 익히고, Node.js 프로그램을 만들어 백그라운드에서 실행하는 방법을 실습한다.',
                         topics: ['/resume, /context 명령어', '/compact & auto compact', '/rename 세션', '/task - 백그라운드 프로세스 개념', '백그라운드 프로세스 만들기'],
                         practice: '간단한 Node.js 스크립트를 작성하고 백그라운드에서 실행한 뒤 /tasks로 상태를 확인한다.',
-                        slides: ['01.png','02.png','03.png','04.png','05.png','06.png'],
+                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg'],
                         slideDescs: [
-            { goal: '세션 관리의 개념과 필요성을 이해한다.', topics: ['세션이란?', '세션 히스토리와 컨텍스트', '/resume로 이전 세션 복원', '/context로 현재 상태 확인'], practice: null },
-            { goal: '/resume · /context · /compact 명령어를 실습한다.', topics: ['/resume 실행 화면', '/context 실행 화면', '/compact 실행 화면', 'auto compact 설정'], practice: null },
-            { goal: '/rename 명령어로 세션을 관리한다.', topics: ['/rename 명령어 사용법', '세션 이름 부여 실습', '이름 기반 재접속', '세션 목록 확인'], practice: null },
-            { goal: 'Node.js 프로그램을 작성한다.', topics: ['간단한 Node.js 스크립트 구조', '에이전트로 파일 작성 실습', 'node 명령어로 실행', '결과 확인'], practice: null },
-            { goal: '백그라운드 프로세스를 실행한다.', topics: ['백그라운드 실행 명령', 'nohup / & 활용', '프로세스 상태 확인', '프로세스 종료 방법'], practice: null },
-            { goal: '/tasks 명령어로 작업 상태를 확인한다.', topics: ['/tasks 실행 화면', '작업 목록 확인', '작업 상태 업데이트', '백그라운드 + /tasks 통합 실습'], practice: '간단한 Node.js 스크립트를 작성하고 백그라운드에서 실행한 뒤 /tasks로 상태를 확인한다.' }
+            { goal: 'Step 4 목표와 오늘 배울 내용을 안내한다.', topics: ['세션 재개 · 이름 변경', '컨텍스트 관리', '백그라운드 프로세스', 'Node.js 스크립트 · Tasks'], practice: null },
+            { goal: 'claude --resume와 /rename 명령어를 이해한다.', topics: ['claude --resume (대화형 선택기 · 이름 지정)', 'claude --continue (최근 대화 이어서)', '/rename으로 세션에 이름 부여'], practice: null },
+            { goal: '/context · /compact 명령어로 컨텍스트를 관리한다.', topics: ['/context — 컨텍스트 사용량 시각화', '/compact — 대화 압축 (초점 지정 가능)', '/clear — 컨텍스트 완전 초기화 차이'], practice: null },
+            { goal: '백그라운드 프로세스와 Node.js 실행을 이해한다.', topics: ['Ctrl+B — 실행 중인 명령 백그라운드 전환', 'node server.js & 백그라운드 실행', 'node script.js 후 Ctrl+B 전환'], practice: null },
+            { goal: '/tasks 명령어와 Ctrl+T로 작업 목록을 관리한다.', topics: ['/tasks — 백그라운드 작업 목록 조회', 'Ctrl+T — 작업 목록 뷰 토글', '작업 상태: 실행 중 · 완료 · 보류'], practice: null },
+            { goal: 'Step 4 전체 내용을 정리한다.', topics: ['/resume · /rename — 세션 관리', '/context · /compact — 컨텍스트 관리', 'Ctrl+B · /tasks — 백그라운드 작업'], practice: '간단한 Node.js 스크립트를 작성하고 백그라운드에서 실행한 뒤 /tasks로 상태를 확인한다.' }
                         ]
                     },
                     {
