@@ -73,8 +73,7 @@ slides = {
         label(264, "순서") + "\n" +
         body(308, "1   프로젝트 폴더에 CLAUDE.md 파일 생성") + "\n" +
         body(354, "2   이름 · 역할 · 규칙을 자유롭게 작성") + "\n" +
-        body(400, "3   claude 실행 후 에이전트가 지시를 따르는지 확인") + "\n" +
-        action_box(520, "touch CLAUDE.md")
+        body(400, "3   claude 실행 후 에이전트가 지시를 따르는지 확인")
     ),
     "04": lambda: wrap(
         badge(4) + "\n" +
@@ -96,8 +95,7 @@ slides = {
         body(308, "1   새 폴더 생성 후 VSCode로 열기") + "\n" +
         body(354, "2   터미널에서  claude  실행") + "\n" +
         body(400, "3   /init  입력  →  CLAUDE.md 자동 생성 확인") + "\n" +
-        body(446, "4   파일 내용 확인 및 필요 항목 추가") + "\n" +
-        action_box(520, "/init")
+        body(446, "4   파일 내용 확인 및 필요 항목 추가")
     ),
     "06": lambda: wrap(
         badge(6) + "\n" +
@@ -133,8 +131,7 @@ slides = {
         body(308, "1   에이전트에게 자신의 이름 알려주기") + "\n" +
         body(354, '2   "이걸 기억해줘" 라고 요청') + "\n" +
         body(400, "3   새 대화 시작 후 기억 여부 확인") + "\n" +
-        body(446, "4   /memory 로 저장된 내용 확인") + "\n" +
-        action_box(520, "내 이름은 [이름]이야. 기억해줘.")
+        body(446, "4   /memory 로 저장된 내용 확인")
     ),
     "09": lambda: wrap(
         badge(9) + "\n" +
@@ -158,8 +155,7 @@ slides = {
         body(308, "1   텍스트 파일 하나 준비  (메모, 코드, 문서 등)") + "\n" +
         body(354, '2   "이 파일 읽어줘" 또는 파일 경로 직접 입력') + "\n" +
         body(400, "3   내용 요약 또는 분석 요청") + "\n" +
-        body(446, "4   이미지 파일로도 동일하게 시도") + "\n" +
-        action_box(520, "이 파일 내용을 요약해줘: README.md")
+        body(446, "4   이미지 파일로도 동일하게 시도")
     ),
     "11": lambda: wrap(
         badge(11) + "\n" +
@@ -182,8 +178,7 @@ slides = {
         body(308, "1   파일 이름과 내용을 에이전트에게 설명") + "\n" +
         body(354, "2   에이전트가 Write 툴로 파일 생성") + "\n" +
         body(400, "3   생성된 파일을 VSCode 탐색기에서 확인") + "\n" +
-        body(446, "4   내용 수정 요청 후 Edit 툴 동작 비교") + "\n" +
-        action_box(520, "hello.txt 파일을 만들고 안에 '안녕하세요'라고 써줘")
+        body(446, "4   내용 수정 요청 후 Edit 툴 동작 비교")
     ),
     "13": lambda: wrap(
         badge(13) + "\n" +
@@ -206,8 +201,7 @@ slides = {
         body(308, "1   이전에 만든 hello.txt 열기") + "\n" +
         body(354, '2   "\'안녕하세요\' 를 \'Hello World\' 로 바꿔줘" 요청') + "\n" +
         body(400, "3   에이전트가 Read 후 Edit 수행하는 과정 관찰") + "\n" +
-        body(446, "4   변경된 내용 확인") + "\n" +
-        action_box(520, "hello.txt의 내용을 Hello World로 바꿔줘")
+        body(446, "4   변경된 내용 확인")
     ),
     "15": lambda: wrap(
         badge(15) + "\n" +
@@ -244,8 +238,7 @@ slides = {
         body(308, "1   새 폴더를 만들어달라고 요청") + "\n" +
         body(354, "2   파일을 해당 폴더로 복사해달라고 요청") + "\n" +
         body(400, "3   폴더 이름을 변경해달라고 요청") + "\n" +
-        body(446, "4   VSCode 탐색기에서 결과 확인") + "\n" +
-        action_box(520, "practice라는 폴더를 만들고 hello.txt를 그 안에 복사해줘")
+        body(446, "4   VSCode 탐색기에서 결과 확인")
     ),
     "18": lambda: wrap(
         badge(18) + "\n" +
