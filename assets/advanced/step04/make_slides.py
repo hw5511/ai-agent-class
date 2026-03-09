@@ -73,58 +73,78 @@ slides = {
     # 01: 오프닝
     "01": lambda: wrap(
         badge() + "\n" +
-        title("Gmail 메일 자동 처리") + "\n" +
-        sub("받은 메일을 읽고 자동으로 회신합니다") + "\n" +
+        title("외부 API 연동 2  —  AI이미지 + Gemini + CLI") + "\n" +
+        sub("이미지 생성 API와 Gemini를 CLI 파이프라인으로 연결합니다") + "\n" +
         divider(212) + "\n" +
         label(264, "TODAY") + "\n" +
-        body(308, "Gmail API vs 웹 자동화 비교  /  OAuth 인증 설정") + "\n" +
-        body(354, "받은 메일 조회  /  내용 요약·분류  /  자동 회신 발송") + "\n" +
+        body(308, "이미지 생성 API Skill  /  Gemini API 연동") + "\n" +
+        body(354, "CLI 파이프라인 통합  /  복합 실습 (Gemini -> 이미지 자동 생성)") + "\n" +
         footer_light("VSCode 터미널 환경에서 진행합니다")
     ),
-    # 02: Gmail API vs 웹자동화 + 환경 설정
+    # 02: 이미지 생성 API Skill
     "02": lambda: wrap(
         badge() + "\n" +
-        title("Gmail API vs 웹 자동화") + "\n" +
-        divider(180) + "\n" +
-        label(224, "Gmail API  (권장)") + "\n" +
-        body(262, "공식 RESTful API  —  안정적·빠름·모든 기능 지원") + "\n" +
-        body(302, "OAuth 2.0 인증  —  credentials.json 발급 필요") + "\n" +
-        divider(346) + "\n" +
-        label(390, "웹 자동화 (Playwright)  — 비권장") + "\n" +
-        body(428, "Gmail UI 변경에 취약  /  Google 감지 시 차단 위험") + "\n" +
-        divider(472) + "\n" +
-        label(512, "패키지 설치") + "\n" +
-        body(550, "pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib", mono=True, color="#374151") + "\n"
+        title("이미지 생성 API  Skill") + "\n" +
+        sub("SKILL.md + Python 스크립트로 이미지 생성 API를 연결합니다") + "\n" +
+        divider(212) + "\n" +
+        label(264, "Skill 구조") + "\n" +
+        body(308, ".claude/skills/image-gen/SKILL.md      진입점 정의", mono=True, color="#374151") + "\n" +
+        body(348, ".claude/skills/image-gen/scripts/run.py  실제 API 호출", mono=True, color="#374151") + "\n" +
+        divider(394) + "\n" +
+        label(434, "핵심 코드 흐름") + "\n" +
+        body(474, "1.  os.getenv()  로 API 키 로드", mono=True, color="#374151") + "\n" +
+        body(510, "2.  requests.post(url, headers=..., json={prompt})  호출", mono=True, color="#374151") + "\n" +
+        body(546, "3.  base64.b64decode()  디코딩  ->  타임스탬프 파일명으로 저장", mono=True, color="#374151") + "\n" +
+        footer_light("API 키는 환경변수로 관리 — 코드에 직접 입력 금지")
     ),
-    # 03: 받은 메일 조회 + 요약·분류
+    # 03: Gemini API 연동
     "03": lambda: wrap(
         badge() + "\n" +
-        title("받은 메일 조회  /  요약·분류") + "\n" +
-        sub("OAuth 인증 후 API로 메일을 가져옵니다") + "\n" +
+        title("Gemini API 연동") + "\n" +
+        sub("Google의 Gemini 모델을 Python에서 직접 호출합니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "메일 목록 조회") + "\n" +
-        body(304, "service.users().messages().list(userId='me', q='is:unread')", mono=True, color="#374151") + "\n" +
-        body(340, "# list()는 ID만 반환  →  get()으로 본문 로드 필요", mono=True, color="#6b7280") + "\n" +
-        divider(378) + "\n" +
-        label(418, "본문 추출") + "\n" +
-        body(454, "msg = service.users().messages().get(userId='me', id=id).execute()", mono=True, color="#374151") + "\n" +
-        body(490, "data = base64.urlsafe_b64decode(payload['body']['data'])", mono=True, color="#374151") + "\n" +
-        footer_light("Claude에게 추출된 본문을 넘기면 요약·분류 자동 수행")
+        label(264, "설치 + API 키") + "\n" +
+        body(308, "pip install google-generativeai", mono=True, color="#374151") + "\n" +
+        body(348, "Google AI Studio  ->  API 키 발급  ->  환경변수 GEMINI_API_KEY 등록") + "\n" +
+        divider(394) + "\n" +
+        label(434, "기본 호출") + "\n" +
+        body(474, "import google.generativeai as genai", mono=True, color="#374151") + "\n" +
+        body(510, "genai.configure(api_key=os.getenv('GEMINI_API_KEY'))", mono=True, color="#374151") + "\n" +
+        body(546, "model = genai.GenerativeModel('gemini-2.0-flash')", mono=True, color="#374151") + "\n" +
+        body(582, "resp = model.generate_content('프롬프트')  # resp.text 로 결과 추출", mono=True, size=16, color="#374151") + "\n"
     ),
-    # 04: 자동 회신 발송
+    # 04: CLI 파이프라인 통합
     "04": lambda: wrap(
         badge() + "\n" +
-        title("자동 회신 발송") + "\n" +
-        sub("MIMEText로 메일을 작성하고 API로 전송합니다") + "\n" +
+        title("CLI 파이프라인 통합") + "\n" +
+        sub("여러 API 호출을 하나의 스크립트로 연결합니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "메일 작성") + "\n" +
-        body(304, "msg = MIMEText(body_text)", mono=True, color="#374151") + "\n" +
-        body(340, "msg['to'] = to  /  msg['subject'] = subject", mono=True, color="#374151") + "\n" +
-        divider(382) + "\n" +
-        label(422, "인코딩 + 발송") + "\n" +
-        body(458, "raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()", mono=True, color="#374151") + "\n" +
-        body(494, "service.users().messages().send(userId='me', body={'raw': raw})", mono=True, color="#374151") + "\n" +
-        footer("수신 확인 → 내용 요약 → 회신 작성 → 발송까지 자동화됩니다")
+        label(264, "통합 흐름") + "\n" +
+        body(308, "Claude (claude -p)  ->  Gemini  ->  이미지 생성 API  ->  저장") + "\n" +
+        body(354, "각 단계 결과를 다음 단계의 입력으로 전달하는 파이프라인 구성") + "\n" +
+        divider(400) + "\n" +
+        label(440, "실용 패턴") + "\n" +
+        body(478, "Claude로 아이디어 구체화  ->  Gemini로 이미지 프롬프트 최적화") + "\n" +
+        body(518, "이미지 생성 API로 최종 이미지 생성  ->  폴더에 자동 저장") + "\n" +
+        divider(554) + "\n" +
+        footer_light("모델마다 강점이 다름  —  용도에 맞게 선택적으로 활용")
+    ),
+    # 05: 복합 실습
+    "05": lambda: wrap(
+        badge() + "\n" +
+        title("복합 실습") + "\n" +
+        divider(180) + "\n" +
+        label(224, "실습 목표") + "\n" +
+        body(262, "주제 입력  ->  Gemini로 이미지 프롬프트 생성  ->  이미지 API로 생성") + "\n" +
+        body(302, "결과 폴더에 자동 저장  ->  Discord Webhook으로 이미지 전송") + "\n" +
+        divider(346) + "\n" +
+        label(390, "실습 프롬프트") + "\n" +
+        body(428, "'SNS용 AI 아트 이미지를 자동으로 만들어줘.", color="#1d4ed8") + "\n" +
+        body(464, " Gemini로 프롬프트를 먼저 최적화하고, 이미지 생성 Skill로", color="#1d4ed8") + "\n" +
+        body(500, " 이미지를 생성한 뒤 저장해줘'", color="#1d4ed8") + "\n" +
+        divider(536) + "\n" +
+        body(566, "심화 Skills 4강  —  문서·웹·GCP·AI이미지+Gemini 연동 완성") + "\n" +
+        footer("여러 외부 API를 하나의 파이프라인으로 연결하면 강력해집니다")
     ),
 }
 

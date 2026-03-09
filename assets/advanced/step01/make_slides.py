@@ -73,73 +73,60 @@ slides = {
     # 01: 오프닝
     "01": lambda: wrap(
         badge() + "\n" +
-        title("AI로 이미지 자동 생성하기") + "\n" +
-        sub("외부 이미지 생성 API를 Skill로 연결합니다") + "\n" +
+        title("엑셀 & 워드 문서 자동 작성") + "\n" +
+        sub("로컬 Python Skills로 데이터를 읽어 보고서를 자동 생성합니다") + "\n" +
         divider(212) + "\n" +
         label(264, "TODAY") + "\n" +
-        body(308, "외부 API Skill 아키텍처  /  나노바나나 API 연동") + "\n" +
-        body(354, "Skill 스크립트 작성  /  실행과 생성  /  폴더 자동 저장") + "\n" +
+        body(308, "문서 자동화 개요  /  엑셀 분석 Skill (openpyxl)") + "\n" +
+        body(354, "워드 보고서 Skill (python-docx)  /  파이프라인 연결") + "\n" +
         footer_light("VSCode 터미널 환경에서 진행합니다")
     ),
-    # 02: 외부 API Skill 아키텍처
+    # 02: 엑셀 분석 Skill
     "02": lambda: wrap(
         badge() + "\n" +
-        title("외부 API Skill 아키텍처") + "\n" +
-        sub("SKILL.md + Python 스크립트로 외부 API를 연결합니다") + "\n" +
+        title("엑셀 분석 Skill  —  openpyxl") + "\n" +
+        sub("엑셀 파일을 읽어 데이터를 추출합니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "구조") + "\n" +
-        body(308, ".claude/skills/image-gen/SKILL.md      진입점 정의", mono=True, color="#374151") + "\n" +
-        body(348, ".claude/skills/image-gen/scripts/run.py  실제 API 호출", mono=True, color="#374151") + "\n" +
-        divider(394) + "\n" +
-        label(434, "핵심 원칙") + "\n" +
-        body(474, "API 키는 환경변수로 관리  —  코드에 직접 입력 금지") + "\n" +
-        body(518, "SKILL.md가 Claude에게 스크립트 실행 방법을 지시") + "\n" +
-        footer_light("requests 라이브러리로 어떤 외부 API든 연결 가능합니다")
+        label(264, "설치") + "\n" +
+        body(308, "pip install openpyxl", mono=True, color="#374151") + "\n" +
+        divider(350) + "\n" +
+        label(390, "핵심 코드") + "\n" +
+        body(430, "wb = load_workbook('data.xlsx')", mono=True, color="#374151") + "\n" +
+        body(466, "ws = wb.active", mono=True, color="#374151") + "\n" +
+        body(502, "for row in ws.iter_rows(values_only=True):", mono=True, color="#374151") + "\n" +
+        body(538, "    print(row)  # 각 행 데이터 처리", mono=True, color="#374151") + "\n" +
+        footer_light("import: from openpyxl import load_workbook")
     ),
-    # 03: 나노바나나 API 연동
+    # 03: 워드 보고서 Skill
     "03": lambda: wrap(
         badge() + "\n" +
-        title("나노바나나 API 연동") + "\n" +
-        sub("이미지 생성 API 키를 발급받아 연결합니다") + "\n" +
+        title("워드 보고서 Skill  —  python-docx") + "\n" +
+        sub("분석 결과를 워드 문서로 자동 출력합니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "API 키 발급") + "\n" +
-        body(308, "nanobanana.im 에서 회원가입 후 API 키 발급") + "\n" +
-        body(354, "환경변수로 등록: NANOBANANA_API_KEY=...", mono=True, color="#374151") + "\n" +
-        divider(400) + "\n" +
-        label(440, "요청 구조") + "\n" +
-        body(480, "POST 요청  +  프롬프트 파라미터  +  API 키 헤더") + "\n" +
-        body(524, "응답: JSON 내 이미지 URL 또는 base64 데이터") + "\n" +
-        footer_light("응답 형식은 API 문서에서 확인 — URL 방식과 base64 방식이 있습니다")
+        label(264, "설치") + "\n" +
+        body(308, "pip install python-docx", mono=True, color="#374151") + "\n" +
+        divider(350) + "\n" +
+        label(390, "핵심 코드") + "\n" +
+        body(430, "doc = Document()", mono=True, color="#374151") + "\n" +
+        body(466, "doc.add_heading('분석 보고서', level=0)", mono=True, color="#374151") + "\n" +
+        body(502, "doc.add_paragraph('내용')", mono=True, color="#374151") + "\n" +
+        body(538, "doc.add_table(rows=3, cols=3)  /  doc.save('out.docx')", mono=True, color="#374151") + "\n" +
+        footer_light("주의: import는 from docx import Document  (python-docx X)")
     ),
-    # 04: Skill 스크립트 작성
+    # 04: 파이프라인 연결
     "04": lambda: wrap(
         badge() + "\n" +
-        title("Skill 스크립트 작성") + "\n" +
-        sub("requests 라이브러리로 API를 호출하고 이미지를 저장합니다") + "\n" +
+        title("파이프라인 연결") + "\n" +
+        sub("두 Skill을 연결해 에이전트 명령 하나로 실행합니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "핵심 코드 흐름") + "\n" +
-        body(308, "1.  os.getenv()  로 API 키 로드", mono=True, color="#374151") + "\n" +
-        body(348, "2.  requests.post(url, headers=..., json={prompt})  호출", mono=True, color="#374151") + "\n" +
-        body(388, "3.  응답 JSON에서 이미지 데이터 추출", mono=True, color="#374151") + "\n" +
-        body(428, "4.  base64.b64decode()  디코딩 후 파일 저장", mono=True, color="#374151") + "\n" +
-        divider(470) + "\n" +
-        label(510, "SKILL.md") + "\n" +
-        body(548, "description + 스크립트 실행 지시사항 작성 후 /image-gen 으로 호출", mono=True, color="#374151") + "\n"
-    ),
-    # 05: 실행과 폴더 자동 저장
-    "05": lambda: wrap(
-        badge() + "\n" +
-        title("실행과 폴더 자동 저장") + "\n" +
-        sub("프롬프트 입력 한 번으로 이미지가 생성되어 저장됩니다") + "\n" +
-        divider(212) + "\n" +
-        label(264, "실행") + "\n" +
-        body(308, '/image-gen "노을 지는 도시 풍경"', mono=True, color="#374151") + "\n" +
-        divider(356) + "\n" +
-        label(396, "폴더 자동 저장") + "\n" +
-        body(440, "지정 폴더가 없으면 자동 생성  (os.makedirs)") + "\n" +
-        body(484, "파일명: 타임스탬프 자동 부여  —  덮어쓰기 방지") + "\n" +
-        body(528, "예: generated/20260309_143022.png", mono=True, color="#374151") + "\n" +
-        footer("프롬프트 입력만으로 이미지 생성 + 저장이 자동 완료됩니다")
+        label(264, "흐름") + "\n" +
+        body(308, "1.  엑셀 Skill  :  data.xlsx 읽기  ->  데이터 추출") + "\n" +
+        body(354, "2.  워드 Skill  :  추출 데이터  ->  report.docx 생성") + "\n" +
+        divider(400) + "\n" +
+        label(440, "에이전트 명령") + "\n" +
+        body(484, '"data.xlsx 를 읽어서 분석 결과를 워드 보고서로 만들어줘"') + "\n" +
+        body(528, "Claude가 두 Skill을 순서대로 조율해 실행") + "\n" +
+        footer("데이터 입력 - 분석 - 문서 출력이 하나의 명령으로 완성됩니다")
     ),
 }
 

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 04</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">복합 실습</text>
+  <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 목표</text>
+  <text x="60" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">주제 입력  -&gt;  Gemini로 이미지 프롬프트 생성  -&gt;  이미지 API로 생성</text>
+  <text x="60" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">결과 폴더에 자동 저장  -&gt;  Discord Webhook으로 이미지 전송</text>
+  <line x1="60" y1="346" x2="1220" y2="346" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="390" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 프롬프트</text>
+  <text x="60" y="428" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8">'SNS용 AI 아트 이미지를 자동으로 만들어줘.</text>
+  <text x="60" y="464" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8"> Gemini로 프롬프트를 먼저 최적화하고, 이미지 생성 Skill로</text>
+  <text x="60" y="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8"> 이미지를 생성한 뒤 저장해줘'</text>
+  <line x1="60" y1="536" x2="1220" y2="536" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="566" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">심화 Skills 4강  —  문서·웹·GCP·AI이미지+Gemini 연동 완성</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">여러 외부 API를 하나의 파이프라인으로 연결하면 강력해집니다</text>
+</svg>

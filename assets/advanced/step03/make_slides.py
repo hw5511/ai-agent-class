@@ -73,75 +73,77 @@ slides = {
     # 01: 오프닝
     "01": lambda: wrap(
         badge() + "\n" +
-        title("웹 브라우저 자동 조작하기") + "\n" +
-        sub("브라우저를 코드로 직접 제어합니다") + "\n" +
+        title("외부 API 연동 1  —  Google Cloud Platform") + "\n" +
+        sub("GCP 서비스를 에이전트와 연결합니다") + "\n" +
         divider(212) + "\n" +
         label(264, "TODAY") + "\n" +
-        body(308, "웹 자동화 원리  /  Playwright vs Selenium") + "\n" +
-        body(354, "환경 구성  /  이동·클릭·입력  /  데이터 수집·스크린샷  /  저장") + "\n" +
+        body(308, "GCP 프로젝트 생성  /  OAuth 2.0 · 서비스 계정 설정") + "\n" +
+        body(354, "Google Sheets API 연동  /  Google Drive API 연동  /  실습") + "\n" +
         footer_light("VSCode 터미널 환경에서 진행합니다")
     ),
-    # 02: 웹 자동화 원리 + Playwright vs Selenium
+    # 02: GCP 프로젝트 설정 + API 활성화
     "02": lambda: wrap(
         badge() + "\n" +
-        title("웹 자동화 원리") + "\n" +
-        sub("코드가 브라우저를 직접 조종합니다") + "\n" +
+        title("GCP 프로젝트 설정  /  API 활성화") + "\n" +
+        sub("cloud.google.com/console에서 시작합니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "원리") + "\n" +
-        body(308, "코드 → 브라우저 제어 → 클릭·입력·데이터 추출 자동 수행") + "\n" +
-        divider(354) + "\n" +
-        label(394, "Playwright vs Selenium") + "\n" +
-        body(434, "Playwright   빠름 · 자동 대기 내장 · 설치 간단  (권장)") + "\n" +
-        body(474, "Selenium      오래된 생태계 · 레거시 지원 · 명시적 대기 필요") + "\n" +
-        footer_light("새로운 프로젝트는 Playwright 권장")
+        label(264, "프로젝트 생성") + "\n" +
+        body(308, "Google Cloud Console  ->  새 프로젝트 생성  ->  이름 입력") + "\n" +
+        body(354, "청구 계정 연결  (무료 크레딧 $300 제공, 90일)") + "\n" +
+        divider(400) + "\n" +
+        label(440, "API 활성화") + "\n" +
+        body(478, "API 및 서비스  ->  라이브러리  ->  사용할 API 검색") + "\n" +
+        body(518, "Gmail API  /  Google Sheets API  /  Google Drive API") + "\n" +
+        body(554, "각 API 페이지에서 '사용' 버튼 클릭  ->  활성화 완료", color="#6b7280", size=17) + "\n" +
+        footer_light("API 활성화 후에도 자격증명(Credentials) 설정 필요")
     ),
-    # 03: 환경 구성
+    # 03: OAuth 2.0 / 서비스 계정 설정
     "03": lambda: wrap(
         badge() + "\n" +
-        title("환경 구성") + "\n" +
-        sub("Playwright 설치는 두 단계로 진행합니다") + "\n" +
-        divider(212) + "\n" +
-        label(264, "설치") + "\n" +
-        body(308, "pip install playwright", mono=True, color="#374151") + "\n" +
-        body(348, "playwright install        # 브라우저 바이너리 다운로드 (필수)", mono=True, color="#374151") + "\n" +
-        divider(394) + "\n" +
-        label(434, "기본 구조") + "\n" +
-        body(474, "from playwright.sync_api import sync_playwright", mono=True, color="#374151") + "\n" +
-        body(514, "with sync_playwright() as p:", mono=True, color="#374151") + "\n" +
-        body(550, "    browser = p.chromium.launch()", mono=True, color="#374151") + "\n" +
-        footer_light("pip install 만으로는 부족 — playwright install 반드시 실행")
+        title("OAuth 2.0  /  서비스 계정") + "\n" +
+        divider(180) + "\n" +
+        label(224, "OAuth 2.0  —  사용자 계정 접근") + "\n" +
+        body(262, "사용자 동의 화면 설정  ->  OAuth 클라이언트 ID 생성") + "\n" +
+        body(302, "credentials.json 다운로드  ->  첫 실행 시 브라우저 인증  ->  token.json 자동 생성") + "\n" +
+        divider(346) + "\n" +
+        label(390, "서비스 계정  —  서버 간 접근 (자동화 권장)") + "\n" +
+        body(428, "서비스 계정 생성  ->  키 생성 (JSON)  ->  환경변수로 경로 관리") + "\n" +
+        body(468, "Google Sheets: 대상 시트에 서비스 계정 이메일 공유 필요") + "\n" +
+        divider(508) + "\n" +
+        label(548, "패키지 설치") + "\n" +
+        body(578, "pip install google-api-python-client google-auth google-auth-oauthlib", mono=True, size=16, color="#374151") + "\n"
     ),
-    # 04: 이동/클릭/입력 + 데이터 수집/스크린샷
+    # 04: Google Sheets API 연동
     "04": lambda: wrap(
         badge() + "\n" +
-        title("이동  /  클릭  /  입력  /  수집") + "\n" +
-        divider(180) + "\n" +
-        label(224, "핵심 API") + "\n" +
-        body(262, "page.goto('https://...')          URL 이동", mono=True, color="#374151") + "\n" +
-        body(298, "page.click('.btn')                 요소 클릭 (자동 대기)", mono=True, color="#374151") + "\n" +
-        body(334, "page.fill('#input', '텍스트')     입력 필드 채우기", mono=True, color="#374151") + "\n" +
-        body(370, "page.screenshot(path='out.png')  스크린샷 저장", mono=True, color="#374151") + "\n" +
-        divider(410) + "\n" +
-        label(450, "데이터 수집") + "\n" +
-        body(488, "items = page.locator('.item').all()", mono=True, color="#374151") + "\n" +
-        body(524, "texts = [i.text_content() for i in items]", mono=True, color="#374151") + "\n" +
-        footer_light("full_page=True 옵션으로 스크롤 영역까지 전체 캡처 가능")
+        title("Google Sheets API 연동") + "\n" +
+        sub("스프레드시트를 Python으로 읽고 씁니다") + "\n" +
+        divider(212) + "\n" +
+        label(264, "서비스 계정으로 인증") + "\n" +
+        body(308, "creds = service_account.Credentials.from_service_account_file(key_path)", mono=True, size=16, color="#374151") + "\n" +
+        body(344, "service = build('sheets', 'v4', credentials=creds)", mono=True, size=16, color="#374151") + "\n" +
+        divider(386) + "\n" +
+        label(426, "데이터 읽기  /  쓰기") + "\n" +
+        body(464, "result = service.spreadsheets().values().get(", mono=True, size=16, color="#374151") + "\n" +
+        body(500, "    spreadsheetId=SHEET_ID, range='Sheet1!A1:C10').execute()", mono=True, size=16, color="#374151") + "\n" +
+        body(536, "service.spreadsheets().values().update(..., body={'values': data})", mono=True, size=16, color="#374151") + "\n" +
+        footer_light("SHEET_ID: 스프레드시트 URL에서 /d/ 이후 부분")
     ),
-    # 05: CSV/JSON 저장
+    # 05: Google Drive API + 실습
     "05": lambda: wrap(
         badge() + "\n" +
-        title("CSV  /  JSON 저장") + "\n" +
-        sub("수집한 데이터를 파일로 저장합니다") + "\n" +
-        divider(212) + "\n" +
-        label(264, "CSV 저장") + "\n" +
-        body(308, "with open('data.csv', 'w', newline='', encoding='utf-8') as f:", mono=True, color="#374151") + "\n" +
-        body(344, "    writer = csv.DictWriter(f, fieldnames=['이름', '가격'])", mono=True, color="#374151") + "\n" +
-        body(380, "    writer.writeheader()  /  writer.writerows(data)", mono=True, color="#374151") + "\n" +
-        divider(416) + "\n" +
-        label(456, "JSON 저장") + "\n" +
-        body(496, "with open('data.json', 'w', encoding='utf-8') as f:", mono=True, color="#374151") + "\n" +
-        body(532, "    json.dump(data, f, ensure_ascii=False, indent=2)", mono=True, color="#374151") + "\n" +
-        footer("수집 → 저장까지 에이전트 명령 하나로 자동 완성됩니다")
+        title("Google Drive API  /  실습") + "\n" +
+        divider(180) + "\n" +
+        label(224, "Drive API — 파일 업로드") + "\n" +
+        body(262, "service = build('drive', 'v3', credentials=creds)", mono=True, size=16, color="#374151") + "\n" +
+        body(298, "media = MediaFileUpload('report.pdf', mimetype='application/pdf')", mono=True, size=16, color="#374151") + "\n" +
+        body(334, "service.files().create(body={'name': 'report'}, media_body=media).execute()", mono=True, size=16, color="#374151") + "\n" +
+        divider(374) + "\n" +
+        label(414, "실습 목표") + "\n" +
+        body(452, "GCP 프로젝트 생성  ->  Sheets API 활성화  ->  서비스 계정 키 발급") + "\n" +
+        body(492, "Python으로 스프레드시트 읽기  ->  데이터 분석  ->  결과 쓰기") + "\n" +
+        body(532, "에이전트 명령: 'Google Sheets의 판매 데이터를 읽고 분석해줘'", color="#1d4ed8", size=17) + "\n" +
+        footer("GCP 한 번 설정하면 Gmail · Sheets · Drive 모두 연결됩니다")
     ),
 }
 

@@ -2,16 +2,17 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 04</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">받은 메일 조회  /  요약·분류</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">OAuth 인증 후 API로 메일을 가져옵니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Gemini API 연동</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Google의 Gemini 모델을 Python에서 직접 호출합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">메일 목록 조회</text>
-  <text x="60" y="304" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">service.users().messages().list(userId='me', q='is:unread')</text>
-  <text x="60" y="340" font-family="'Courier New',Courier,monospace" font-size="19" fill="#6b7280"># list()는 ID만 반환  →  get()으로 본문 로드 필요</text>
-  <line x1="60" y1="378" x2="1220" y2="378" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="418" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">본문 추출</text>
-  <text x="60" y="454" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">msg = service.users().messages().get(userId='me', id=id).execute()</text>
-  <text x="60" y="490" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">data = base64.urlsafe_b64decode(payload['body']['data'])</text>
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">Claude에게 추출된 본문을 넘기면 요약·분류 자동 수행</text>
+  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">설치 + API 키</text>
+  <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">pip install google-generativeai</text>
+  <text x="60" y="348" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Google AI Studio  -&gt;  API 키 발급  -&gt;  환경변수 GEMINI_API_KEY 등록</text>
+  <line x1="60" y1="394" x2="1220" y2="394" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="434" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">기본 호출</text>
+  <text x="60" y="474" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">import google.generativeai as genai</text>
+  <text x="60" y="510" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">genai.configure(api_key=os.getenv('GEMINI_API_KEY'))</text>
+  <text x="60" y="546" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">model = genai.GenerativeModel('gemini-2.0-flash')</text>
+  <text x="60" y="582" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">resp = model.generate_content('프롬프트')  # resp.text 로 결과 추출</text>
+
 </svg>

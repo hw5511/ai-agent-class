@@ -1002,57 +1002,58 @@
                 title: 'AI 에이전트 심화 과정',
                 sessions: [
                     {
-                        num: 1, title: 'AI로 이미지 자동 생성하기', hours: '2시간 · Tool & Automation',
-                        goal: '외부 이미지 생성 API를 활용하는 Skill을 직접 제작하고, 에이전트 명령어로 이미지를 자동 생성하는 파이프라인을 구현한다.',
-                        topics: ['외부 API를 활용한 Skill 제작 방법', '나노바나나 API 연동', 'AI 이미지 생성 Skill 실습', '생성된 이미지 자동 저장 처리'],
-                        practice: '프롬프트 입력 한 번으로 이미지가 자동 생성되어 지정 폴더에 저장되는 흐름을 완성한다.',
-                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
-                        slideDescs: [
-            { goal: 'ADV 1 목표와 오늘 배울 내용을 안내한다.', topics: ['외부 API Skill 아키텍처', '나노바나나 API 연동', 'Skill 스크립트 작성', '실행과 폴더 자동 저장'], practice: null },
-            { goal: '외부 API를 호출하는 Skill 구조를 이해한다.', topics: ['SKILL.md + Python 스크립트 조합', 'API 키는 환경변수로 관리 (코드 직접 입력 금지)', 'requests 라이브러리로 어떤 API든 연결 가능', 'SKILL.md가 Claude에게 실행 방법 지시'], practice: null },
-            { goal: '나노바나나 API 키를 발급받고 연결 구조를 파악한다.', topics: ['nanobanana.im 회원가입 후 API 키 발급', 'NANOBANANA_API_KEY 환경변수 등록', 'POST 요청 + 프롬프트 + API 키 헤더 구조', '응답: 이미지 URL 또는 base64 데이터'], practice: null },
-            { goal: 'requests로 API를 호출하고 이미지를 저장하는 스크립트를 작성한다.', topics: ['os.getenv()로 API 키 로드', 'requests.post()로 API 호출', 'base64.b64decode() 디코딩 후 파일 저장', 'SKILL.md description + 스크립트 실행 지시'], practice: null },
-            { goal: 'Skill을 실행하고 이미지를 지정 폴더에 자동 저장한다.', topics: ['/image-gen "프롬프트" 로 Skill 호출', '폴더 없으면 자동 생성 (os.makedirs)', '파일명 타임스탬프 자동 부여 — 덮어쓰기 방지', '전체 파이프라인 완성'], practice: '프롬프트 입력 한 번으로 이미지가 자동 생성되어 지정 폴더에 저장되는 흐름을 완성한다.' }
-                        ]
-                    },
-                    {
-                        num: 2, title: '엑셀 & 워드 문서 자동 작성', hours: '2시간 · Tool & Automation',
-                        goal: '에이전트를 활용해 엑셀 데이터를 분석하고, 워드 형식의 보고서를 자동으로 생성하는 Skill을 구현한다.',
-                        topics: ['엑셀 데이터 분석 Skill 만들기', '워드 보고서 자동 생성 Skill 만들기', '데이터 → 문서 자동화 파이프라인'],
+                        num: 1, title: '엑셀 & 워드 문서 자동 작성', hours: '2시간 · Tool & Automation',
+                        goal: '에이전트를 활용해 엑셀 데이터를 분석하고, 워드 형식의 보고서를 자동으로 생성하는 로컬 Python Skill을 구현한다.',
+                        topics: ['엑셀 데이터 분석 Skill (openpyxl)', '워드 보고서 자동 생성 Skill (python-docx)', '데이터 -> 문서 자동화 파이프라인 연결'],
                         practice: '샘플 엑셀 데이터를 읽어 분석 결과를 워드 보고서로 자동 출력하는 흐름을 완성한다.',
                         slides: ['01.svg','02.svg','03.svg','04.svg'],
                         slideDescs: [
-            { goal: 'ADV 2 목표와 오늘 배울 내용을 안내한다.', topics: ['문서 자동화 개요', '엑셀 분석 Skill (openpyxl)', '워드 보고서 Skill (python-docx)', '파이프라인 연결'], practice: null },
+            { goal: 'ADV 1 목표와 오늘 배울 내용을 안내한다.', topics: ['문서 자동화 개요', '엑셀 분석 Skill (openpyxl)', '워드 보고서 Skill (python-docx)', '파이프라인 연결'], practice: null },
             { goal: 'openpyxl로 엑셀 데이터를 읽는 Skill을 제작한다.', topics: ['pip install openpyxl', 'load_workbook() + ws.active', 'iter_rows(values_only=True) 행 반복', 'Skill 스크립트로 래핑'], practice: null },
             { goal: 'python-docx로 워드 보고서를 생성하는 Skill을 제작한다.', topics: ['pip install python-docx', 'from docx import Document (import 주의)', 'add_heading · add_paragraph · add_table', 'doc.save()로 .docx 출력'], practice: null },
-            { goal: '두 Skill을 파이프라인으로 연결해 자동화를 완성한다.', topics: ['엑셀 읽기 → 데이터 추출 → 워드 생성 흐름', '에이전트 명령 하나로 전체 실행', 'Claude가 두 Skill 순서 자동 조율', '최종 결과물 확인'], practice: '샘플 엑셀 데이터를 읽어 분석 결과를 워드 보고서로 자동 출력하는 흐름을 완성한다.' }
+            { goal: '두 Skill을 파이프라인으로 연결해 자동화를 완성한다.', topics: ['엑셀 읽기 -> 데이터 추출 -> 워드 생성 흐름', '에이전트 명령 하나로 전체 실행', 'Claude가 두 Skill 순서 자동 조율', '최종 결과물 확인'], practice: '샘플 엑셀 데이터를 읽어 분석 결과를 워드 보고서로 자동 출력하는 흐름을 완성한다.' }
                         ]
                     },
                     {
-                        num: 3, title: '웹 브라우저 자동 조작하기', hours: '2시간 · Web Automation',
+                        num: 2, title: '웹 브라우저 자동 조작하기', hours: '2시간 · Web Automation',
                         goal: '웹 자동화의 원리를 이해하고, 에이전트로 브라우저를 직접 제어하여 반복 웹 작업을 자동화한다.',
-                        topics: ['웹 자동화의 원리와 활용법', '브라우저 자동 제어 환경 구성', '페이지 이동 / 클릭 / 입력 자동화', '스크린샷 및 데이터 수집'],
+                        topics: ['웹 자동화의 원리와 활용법', '브라우저 자동 제어 환경 구성 (Playwright)', '페이지 이동 / 클릭 / 입력 자동화', '스크린샷 및 데이터 수집·저장'],
                         practice: '지정한 웹페이지에 자동으로 접속하여 데이터를 수집하고 결과를 파일로 저장하는 흐름을 구현한다.',
                         slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
                         slideDescs: [
-            { goal: 'ADV 3 목표와 오늘 배울 내용을 안내한다.', topics: ['웹 자동화 원리', 'Playwright vs Selenium', '환경 구성', '이동·클릭·입력·수집·저장'], practice: null },
-            { goal: '웹 자동화 원리와 Playwright vs Selenium을 비교한다.', topics: ['코드 → 브라우저 제어 → 클릭·입력·추출', 'Playwright — 빠름·자동 대기·설치 간단 (권장)', 'Selenium — 레거시 지원·명시적 대기 필요', '새 프로젝트는 Playwright 권장'], practice: null },
-            { goal: 'Playwright 설치와 기본 구조를 파악한다.', topics: ['pip install playwright', 'playwright install (브라우저 바이너리 필수)', 'sync_playwright() 컨텍스트 매니저', 'chromium.launch() → browser → page'], practice: null },
+            { goal: 'ADV 2 목표와 오늘 배울 내용을 안내한다.', topics: ['웹 자동화 원리', 'Playwright vs Selenium', '환경 구성', '이동·클릭·입력·수집·저장'], practice: null },
+            { goal: '웹 자동화 원리와 Playwright vs Selenium을 비교한다.', topics: ['코드 -> 브라우저 제어 -> 클릭·입력·추출', 'Playwright — 빠름·자동 대기·설치 간단 (권장)', 'Selenium — 레거시 지원·명시적 대기 필요', '새 프로젝트는 Playwright 권장'], practice: null },
+            { goal: 'Playwright 설치와 기본 구조를 파악한다.', topics: ['pip install playwright', 'playwright install (브라우저 바이너리 필수)', 'sync_playwright() 컨텍스트 매니저', 'chromium.launch() -> browser -> page'], practice: null },
             { goal: 'page 핵심 API로 이동·클릭·입력·수집을 자동화한다.', topics: ['page.goto() URL 이동', 'page.click() 자동 대기 포함', 'page.fill() 입력 필드', 'page.locator().all() 수집 · screenshot()'], practice: null },
             { goal: '수집 데이터를 CSV와 JSON으로 저장한다.', topics: ['csv.DictWriter — writeheader + writerows', 'json.dump — ensure_ascii=False indent=2', '에이전트 명령 하나로 수집 + 저장 자동화', '전체 파이프라인 완성'], practice: '지정한 웹페이지에 자동으로 접속하여 데이터를 수집하고 결과를 파일로 저장하는 흐름을 구현한다.' }
                         ]
                     },
                     {
-                        num: 4, title: 'Gmail 메일 자동 처리', hours: '2시간 · Web Automation',
-                        goal: 'Gmail 연동을 통해 받은 메일을 자동으로 조회하고, 내용을 분석하여 자동 회신 메일을 발송하는 자동화를 구현한다.',
-                        topics: ['Gmail API / 웹 자동화 방식 비교', '받은 메일 자동 조회 구현', '메일 내용 요약 및 분류 자동화', '메일 자동 작성 및 발송 구현'],
-                        practice: '특정 조건의 수신 메일을 자동 감지하고 분류하여 적절한 답장을 자동 발송하는 흐름을 완성한다.',
-                        slides: ['01.svg','02.svg','03.svg','04.svg'],
+                        num: 3, title: '외부 API 연동 1: Google Cloud Platform', hours: '2시간 · Tool & Automation',
+                        goal: 'GCP 프로젝트를 설정하고 OAuth 2.0 / 서비스 계정 인증을 익혀, Google Sheets와 Drive API를 에이전트와 연결한다.',
+                        topics: ['GCP 프로젝트 생성 및 API 활성화', 'OAuth 2.0 / 서비스 계정 설정', 'Google Sheets API 읽기·쓰기', 'Google Drive API 파일 업로드'],
+                        practice: 'GCP 서비스 계정을 발급받아 Google Sheets 데이터를 Python으로 읽고, 분석 결과를 시트에 자동으로 기록하는 흐름을 완성한다.',
+                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
                         slideDescs: [
-            { goal: 'ADV 4 목표와 오늘 배울 내용을 안내한다.', topics: ['Gmail API vs 웹 자동화 비교', 'OAuth 인증 설정', '받은 메일 조회·요약·분류', '자동 회신 발송'], practice: null },
-            { goal: 'Gmail API 방식과 환경 설정을 이해한다.', topics: ['Gmail API — 공식 RESTful, 안정적·빠름 (권장)', '웹 자동화 — UI 변경 취약, 감지 차단 위험', 'pip install 3개 패키지', 'credentials.json 발급 → token.json 자동 생성'], practice: null },
-            { goal: 'Gmail API로 받은 메일을 조회하고 본문을 추출한다.', topics: ['messages.list(q="is:unread") — ID 목록만 반환', 'messages.get(id=...) — 본문 로드', 'base64.urlsafe_b64decode() 본문 추출', 'Claude에게 본문 전달 → 요약·분류 자동 수행'], practice: null },
-            { goal: 'MIMEText와 messages.send()로 자동 회신을 발송한다.', topics: ['MIMEText + to + subject 작성', 'base64.urlsafe_b64encode(msg.as_bytes())', "messages.send(body={'raw': raw})", '수신 확인 → 요약 → 회신 작성 → 발송 자동화'], practice: '특정 조건의 수신 메일을 자동 감지하고 분류하여 적절한 답장을 자동 발송하는 흐름을 완성한다.' }
+            { goal: 'ADV 3 목표와 오늘 배울 내용을 안내한다.', topics: ['GCP 프로젝트 생성', 'OAuth 2.0 · 서비스 계정 설정', 'Google Sheets API', 'Google Drive API + 실습'], practice: null },
+            { goal: 'GCP 프로젝트를 생성하고 필요한 API를 활성화한다.', topics: ['Google Cloud Console 프로젝트 생성', '청구 계정 연결 (무료 크레딧)', 'API 라이브러리에서 API 활성화', 'Gmail / Sheets / Drive API 선택'], practice: null },
+            { goal: 'OAuth 2.0과 서비스 계정 인증 방식을 설정한다.', topics: ['OAuth 2.0 — credentials.json 발급', '서비스 계정 — JSON 키 발급 (자동화 권장)', 'pip install google-api-python-client google-auth', 'Sheets 시트에 서비스 계정 이메일 공유'], practice: null },
+            { goal: 'Google Sheets API로 데이터를 읽고 쓴다.', topics: ['service_account.Credentials 인증', 'build("sheets", "v4") 서비스 생성', 'spreadsheets().values().get() 읽기', 'spreadsheets().values().update() 쓰기'], practice: null },
+            { goal: 'Google Drive API 파일 업로드와 실습을 완성한다.', topics: ['build("drive", "v3") 서비스 생성', 'MediaFileUpload + files().create()', '에이전트 명령으로 Sheets 데이터 분석', '전체 GCP 연동 파이프라인 완성'], practice: 'GCP 서비스 계정을 발급받아 Google Sheets 데이터를 Python으로 읽고, 분석 결과를 시트에 자동으로 기록하는 흐름을 완성한다.' }
+                        ]
+                    },
+                    {
+                        num: 4, title: '외부 API 연동 2: AI이미지 + Gemini + CLI', hours: '2시간 · Tool & Automation',
+                        goal: '이미지 생성 API Skill을 제작하고, Gemini API와 연결하여 CLI 파이프라인으로 복합 자동화를 구현한다.',
+                        topics: ['이미지 생성 API Skill 제작', 'Gemini API 연동 (google-generativeai)', 'CLI 파이프라인 통합', '복합 실습: Gemini -> 이미지 자동 생성'],
+                        practice: '주제 입력만으로 Gemini가 이미지 프롬프트를 최적화하고, 이미지 생성 API로 결과물을 자동 생성하여 저장하는 파이프라인을 완성한다.',
+                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
+                        slideDescs: [
+            { goal: 'ADV 4 목표와 오늘 배울 내용을 안내한다.', topics: ['이미지 생성 API Skill', 'Gemini API 연동', 'CLI 파이프라인 통합', '복합 실습'], practice: null },
+            { goal: '이미지 생성 API Skill을 제작한다.', topics: ['SKILL.md + Python 스크립트 구조', 'os.getenv()로 API 키 로드', 'requests.post() API 호출', 'base64 디코딩 + 타임스탬프 파일 저장'], practice: null },
+            { goal: 'Gemini API를 Python에서 직접 호출한다.', topics: ['pip install google-generativeai', 'Google AI Studio API 키 발급', 'genai.GenerativeModel 초기화', 'generate_content() 호출 + resp.text 추출'], practice: null },
+            { goal: '여러 API를 하나의 CLI 파이프라인으로 통합한다.', topics: ['Claude -> Gemini -> 이미지 API 흐름', '단계별 결과를 다음 입력으로 전달', '모델별 강점 활용 패턴', '파이프라인 스크립트 구성'], practice: null },
+            { goal: '복합 실습으로 전체 파이프라인을 완성한다.', topics: ['주제 -> Gemini 프롬프트 최적화', '이미지 생성 API 호출', 'Discord Webhook 전송', '심화 Skills 4강 전체 복습'], practice: '주제 입력만으로 Gemini가 이미지 프롬프트를 최적화하고, 이미지 생성 API로 결과물을 자동 생성하여 저장하는 파이프라인을 완성한다.' }
                         ]
                     },
                     {

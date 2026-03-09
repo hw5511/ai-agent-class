@@ -2,17 +2,15 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 02</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">엑셀 분석 Skill  —  openpyxl</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">엑셀 파일을 읽어 데이터를 추출합니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">웹 자동화 원리</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">코드가 브라우저를 직접 조종합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">설치</text>
-  <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">pip install openpyxl</text>
-  <line x1="60" y1="350" x2="1220" y2="350" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="390" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">핵심 코드</text>
-  <text x="60" y="430" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">wb = load_workbook('data.xlsx')</text>
-  <text x="60" y="466" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">ws = wb.active</text>
-  <text x="60" y="502" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">for row in ws.iter_rows(values_only=True):</text>
-  <text x="60" y="538" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">    print(row)  # 각 행 데이터 처리</text>
+  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">원리</text>
+  <text x="60" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">코드  -&gt;  브라우저 제어  -&gt;  클릭·입력·데이터 추출 자동 수행</text>
+  <line x1="60" y1="354" x2="1220" y2="354" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="394" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Playwright vs Selenium</text>
+  <text x="60" y="434" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Playwright   빠름 · 자동 대기 내장 · 설치 간단  (권장)</text>
+  <text x="60" y="474" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Selenium      오래된 생태계 · 레거시 지원 · 명시적 대기 필요</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">import: from openpyxl import load_workbook</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">새로운 프로젝트는 Playwright 권장</text>
 </svg>

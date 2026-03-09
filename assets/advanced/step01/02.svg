@@ -2,16 +2,17 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 01</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">외부 API Skill 아키텍처</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">SKILL.md + Python 스크립트로 외부 API를 연결합니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">엑셀 분석 Skill  —  openpyxl</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">엑셀 파일을 읽어 데이터를 추출합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">구조</text>
-  <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">.claude/skills/image-gen/SKILL.md      진입점 정의</text>
-  <text x="60" y="348" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">.claude/skills/image-gen/scripts/run.py  실제 API 호출</text>
-  <line x1="60" y1="394" x2="1220" y2="394" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="434" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">핵심 원칙</text>
-  <text x="60" y="474" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">API 키는 환경변수로 관리  —  코드에 직접 입력 금지</text>
-  <text x="60" y="518" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">SKILL.md가 Claude에게 스크립트 실행 방법을 지시</text>
+  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">설치</text>
+  <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">pip install openpyxl</text>
+  <line x1="60" y1="350" x2="1220" y2="350" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="390" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">핵심 코드</text>
+  <text x="60" y="430" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">wb = load_workbook('data.xlsx')</text>
+  <text x="60" y="466" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">ws = wb.active</text>
+  <text x="60" y="502" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">for row in ws.iter_rows(values_only=True):</text>
+  <text x="60" y="538" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">    print(row)  # 각 행 데이터 처리</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">requests 라이브러리로 어떤 외부 API든 연결 가능합니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">import: from openpyxl import load_workbook</text>
 </svg>

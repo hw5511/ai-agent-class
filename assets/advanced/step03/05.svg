@@ -2,17 +2,17 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 03</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">CSV  /  JSON 저장</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">수집한 데이터를 파일로 저장합니다</text>
-  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">CSV 저장</text>
-  <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">with open('data.csv', 'w', newline='', encoding='utf-8') as f:</text>
-  <text x="60" y="344" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">    writer = csv.DictWriter(f, fieldnames=['이름', '가격'])</text>
-  <text x="60" y="380" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">    writer.writeheader()  /  writer.writerows(data)</text>
-  <line x1="60" y1="416" x2="1220" y2="416" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="456" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">JSON 저장</text>
-  <text x="60" y="496" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">with open('data.json', 'w', encoding='utf-8') as f:</text>
-  <text x="60" y="532" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">    json.dump(data, f, ensure_ascii=False, indent=2)</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Google Drive API  /  실습</text>
+  <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Drive API — 파일 업로드</text>
+  <text x="60" y="262" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">service = build('drive', 'v3', credentials=creds)</text>
+  <text x="60" y="298" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">media = MediaFileUpload('report.pdf', mimetype='application/pdf')</text>
+  <text x="60" y="334" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">service.files().create(body={'name': 'report'}, media_body=media).execute()</text>
+  <line x1="60" y1="374" x2="1220" y2="374" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="414" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 목표</text>
+  <text x="60" y="452" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">GCP 프로젝트 생성  -&gt;  Sheets API 활성화  -&gt;  서비스 계정 키 발급</text>
+  <text x="60" y="492" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Python으로 스프레드시트 읽기  -&gt;  데이터 분석  -&gt;  결과 쓰기</text>
+  <text x="60" y="532" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#1d4ed8">에이전트 명령: 'Google Sheets의 판매 데이터를 읽고 분석해줘'</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">수집 → 저장까지 에이전트 명령 하나로 자동 완성됩니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">GCP 한 번 설정하면 Gmail · Sheets · Drive 모두 연결됩니다</text>
 </svg>
