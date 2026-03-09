@@ -2,17 +2,17 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Agent Teams 개념</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">여러 AI 에이전트가 역할을 나눠 협업하는 구조입니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">구조 소개  /  Notion DB 연동</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Notion DB가 에이전트의 작업 큐 역할을 합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">구조</text>
-  <text x="60" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Supervisor (팀장)  —  전체 지시를 받아 역할별 에이전트에 분배</text>
-  <text x="60" y="354" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Worker (작업자)  —  조사·정리·생성 등 특정 역할만 수행</text>
-  <line x1="60" y1="400" x2="1220" y2="400" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="440" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">N8N 구현 방법</text>
-  <text x="60" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">AI Agent 노드  —  Supervisor 역할 수행, Tools로 서브 에이전트 호출</text>
-  <text x="60" y="516" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Execute Workflow Tool  —  별도 워크플로우를 Worker로 실행</text>
-  <text x="60" y="554" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">각 Worker 워크플로우는 독립된 역할(조사 / 정리 / 작성)을 담당</text>
+  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">자동화 구조</text>
+  <text x="60" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">1  주기 체크  —  cron으로 Notion DB를 n분마다 폴링</text>
+  <text x="60" y="354" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">2  감지  —  새 항목 / 상태 변경 감지</text>
+  <text x="60" y="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">3  실행  —  claude -p 로 항목별 작업 자동 수행</text>
+  <text x="60" y="446" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">4  보고  —  결과를 Notion 항목에 자동 기록</text>
+  <line x1="60" y1="490" x2="1220" y2="490" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="530" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Notion API 연동 준비</text>
+  <text x="60" y="560" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Integration 생성  -&gt;  DB에 Integration 연결  -&gt;  API 토큰 환경변수 저장</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">단일 에이전트보다 복잡한 작업을 병렬·분산 처리할 수 있습니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">Notion DB가 작업 대기열(Queue) 역할을 합니다</text>
 </svg>

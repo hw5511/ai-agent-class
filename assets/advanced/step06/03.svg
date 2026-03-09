@@ -2,17 +2,17 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 06</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">조사 / 정리 노드</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">수집 단계  —  웹 크롤링  /  API</text>
   <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">웹 조사</text>
-  <text x="60" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Jina AI 노드  —  URL 콘텐츠 추출 · 웹 검색 (LLM 친화적 텍스트)</text>
-  <text x="60" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">HTTP Request 노드  —  검색 API 호출, 원시 데이터 수집</text>
-  <line x1="60" y1="344" x2="1220" y2="344" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="388" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">AI 정리</text>
-  <text x="60" y="426" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Anthropic Chat Model 노드  —  Claude로 내용 요약 + 슬라이드 텍스트 작성</text>
-  <text x="60" y="466" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">프롬프트: '다음 내용을 5장 슬라이드 구조로 정리해줘'</text>
-  <line x1="60" y1="508" x2="1220" y2="508" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="548" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Code 노드 출력 형식</text>
-  <text x="60" y="580" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">return [{ json: { slides: [{title, content}, ...] } }];</text>
+  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">방법 1  —  RSS 피드 수집</text>
+  <text x="60" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">feedparser  —  뉴스·블로그 RSS를 구조화된 데이터로 파싱</text>
+  <text x="60" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">키워드 필터로 관심 분야만 추출  -&gt;  JSON 파일로 저장</text>
+  <line x1="60" y1="346" x2="1220" y2="346" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="390" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">방법 2  —  공개 API 활용</text>
+  <text x="60" y="428" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">NewsAPI · GitHub Trending API · Reddit API 등</text>
+  <text x="60" y="468" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">requests 라이브러리로 데이터 수집  -&gt;  pandas로 정리</text>
+  <line x1="60" y1="510" x2="1220" y2="510" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="550" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">방법 3  —  웹 크롤링</text>
+  <text x="60" y="582" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">BeautifulSoup  /  Playwright  —  공개 페이지 데이터 수집</text>
 
 </svg>

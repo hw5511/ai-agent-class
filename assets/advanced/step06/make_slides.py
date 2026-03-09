@@ -73,78 +73,77 @@ slides = {
     # 01: 오프닝
     "01": lambda: wrap(
         badge() + "\n" +
-        title("워크플로우로 PPT 자동 생성") + "\n" +
-        sub("N8N으로 조사부터 PPT 완성 및 Telegram 전송까지 자동화합니다") + "\n" +
+        title("자동 트렌드 리서치 보고서 파이프라인") + "\n" +
+        sub("수집 -> 분석 -> 보고까지 전 과정을 자동화합니다") + "\n" +
         divider(212) + "\n" +
         label(264, "TODAY") + "\n" +
-        body(308, "파이프라인 설계  /  조사·정리 노드  /  PPT 구성 자동화") + "\n" +
-        body(354, "PPT 파일 생성 (python-pptx)  /  Telegram 전송") + "\n" +
+        body(308, "파이프라인 전체 구조  /  수집 단계 (웹 크롤링 · API)") + "\n" +
+        body(354, "claude -p headless 분석  /  Discord 보고서 자동 전송") + "\n" +
         footer_light("VSCode 터미널 환경에서 진행합니다")
     ),
-    # 02: 파이프라인 설계
+    # 02: 파이프라인 전체 구조
     "02": lambda: wrap(
         badge() + "\n" +
-        title("파이프라인 설계") + "\n" +
-        sub("전체 워크플로우 노드 구조를 설계합니다") + "\n" +
+        title("파이프라인 전체 구조") + "\n" +
+        sub("4단계로 이어지는 완전 자동화 흐름") + "\n" +
         divider(212) + "\n" +
-        label(264, "전체 흐름") + "\n" +
-        body(308, "Manual Trigger  →  Jina AI (웹 조사)  →  Claude AI (내용 정리)") + "\n" +
-        body(354, "Code 노드 (슬라이드 JSON 구성)  →  Execute Command (PPT 생성)  →  Telegram") + "\n" +
-        divider(400) + "\n" +
-        label(440, "노드 역할") + "\n" +
-        body(478, "Manual Trigger  —  주제 키워드 입력") + "\n" +
-        body(516, "Code 노드  —  슬라이드 데이터를 JSON 배열로 구조화") + "\n" +
-        body(554, "Execute Command  —  python make_ppt.py 실행") + "\n" +
-        footer_light("각 노드 실행 결과를 즉시 확인하며 디버깅합니다")
+        label(264, "단계별 흐름") + "\n" +
+        body(308, "1  수집  —  웹 크롤링 / RSS / 공개 API로 트렌드 데이터 수집") + "\n" +
+        body(354, "2  정리  —  중복 제거, 날짜 필터, 카테고리 분류") + "\n" +
+        body(400, "3  분석  —  claude -p headless 모드로 요약·인사이트 추출") + "\n" +
+        body(446, "4  보고  —  Discord 채널에 마크다운 보고서 자동 전송") + "\n" +
+        divider(490) + "\n" +
+        label(530, "자동화 방식") + "\n" +
+        body(560, "Python 스크립트  +  cron / Task Scheduler 로 주기 실행") + "\n" +
+        footer_light("한 번 구축하면 매일 자동으로 트렌드 보고서가 생성됩니다")
     ),
-    # 03: 조사/정리 노드
+    # 03: 수집 단계 — 웹 크롤링 / API
     "03": lambda: wrap(
         badge() + "\n" +
-        title("조사 / 정리 노드") + "\n" +
+        title("수집 단계  —  웹 크롤링  /  API") + "\n" +
         divider(180) + "\n" +
-        label(224, "웹 조사") + "\n" +
-        body(262, "Jina AI 노드  —  URL 콘텐츠 추출 · 웹 검색 (LLM 친화적 텍스트)") + "\n" +
-        body(302, "HTTP Request 노드  —  검색 API 호출, 원시 데이터 수집") + "\n" +
-        divider(344) + "\n" +
-        label(388, "AI 정리") + "\n" +
-        body(426, "Anthropic Chat Model 노드  —  Claude로 내용 요약 + 슬라이드 텍스트 작성") + "\n" +
-        body(466, "프롬프트: '다음 내용을 5장 슬라이드 구조로 정리해줘'") + "\n" +
-        divider(508) + "\n" +
-        label(548, "Code 노드 출력 형식") + "\n" +
-        body(580, "return [{ json: { slides: [{title, content}, ...] } }];", mono=True, size=16, color="#374151") + "\n"
+        label(224, "방법 1  —  RSS 피드 수집") + "\n" +
+        body(262, "feedparser  —  뉴스·블로그 RSS를 구조화된 데이터로 파싱") + "\n" +
+        body(302, "키워드 필터로 관심 분야만 추출  ->  JSON 파일로 저장") + "\n" +
+        divider(346) + "\n" +
+        label(390, "방법 2  —  공개 API 활용") + "\n" +
+        body(428, "NewsAPI · GitHub Trending API · Reddit API 등") + "\n" +
+        body(468, "requests 라이브러리로 데이터 수집  ->  pandas로 정리") + "\n" +
+        divider(510) + "\n" +
+        label(550, "방법 3  —  웹 크롤링") + "\n" +
+        body(582, "BeautifulSoup  /  Playwright  —  공개 페이지 데이터 수집") + "\n"
     ),
-    # 04: PPT 슬라이드 구성 자동화 + 파일 생성
+    # 04: claude -p headless 분석
     "04": lambda: wrap(
         badge() + "\n" +
-        title("PPT 파일 생성") + "\n" +
-        sub("python-pptx로 슬라이드를 자동 생성합니다") + "\n" +
+        title("claude -p  headless 분석") + "\n" +
+        sub("스크립트에서 Claude를 직접 호출해 분석을 자동화합니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "설치") + "\n" +
-        body(302, "pip install python-pptx", mono=True, color="#374151") + "\n" +
-        divider(336) + "\n" +
-        label(376, "핵심 코드") + "\n" +
-        body(414, "from pptx import Presentation", mono=True, size=17, color="#374151") + "\n" +
-        body(448, "prs = Presentation()", mono=True, size=17, color="#374151") + "\n" +
-        body(482, "slide = prs.slides.add_slide(prs.slide_layouts[1])", mono=True, size=17, color="#374151") + "\n" +
-        body(516, "slide.shapes.title.text = '제목'", mono=True, size=17, color="#374151") + "\n" +
-        body(550, "slide.placeholders[1].text = '내용'", mono=True, size=17, color="#374151") + "\n" +
-        body(584, "prs.save('output.pptx')", mono=True, size=17, color="#374151") + "\n"
+        label(264, "headless 호출 방식") + "\n" +
+        body(308, "claude -p '프롬프트'  —  대화 없이 즉시 결과 반환", mono=True, color="#374151") + "\n" +
+        body(354, "수집 데이터를 프롬프트에 삽입  ->  분석 결과를 변수로 받기") + "\n" +
+        divider(400) + "\n" +
+        label(440, "Python 연동") + "\n" +
+        body(478, "result = subprocess.run(['claude', '-p', prompt],", mono=True, color="#374151") + "\n" +
+        body(514, "    capture_output=True, text=True, encoding='utf-8')", mono=True, color="#374151") + "\n" +
+        body(550, "analysis = result.stdout   # 분석 결과 문자열", mono=True, color="#374151") + "\n" +
+        footer_light("claude -p 는 cron 등 자동화 환경에서도 정상 동작")
     ),
-    # 05: Telegram 전송
+    # 05: Discord 보고서 전송 + 실습
     "05": lambda: wrap(
         badge() + "\n" +
-        title("Telegram 전송") + "\n" +
-        sub("N8N Telegram 노드로 완성된 PPT를 자동 전송합니다") + "\n" +
-        divider(212) + "\n" +
-        label(264, "Telegram 노드 설정") + "\n" +
-        body(308, "작업(Operation): Send Document") + "\n" +
-        body(354, "Bot Token  —  BotFather에서 발급 후 Credentials 등록") + "\n" +
-        body(400, "Chat ID  —  수신자 채팅 ID 또는 @채널명") + "\n" +
-        divider(440) + "\n" +
-        label(480, "파일 전달 방법") + "\n" +
-        body(518, "Read/Write Files 노드  —  생성된 .pptx 파일을 Binary Data로 로드") + "\n" +
-        body(556, "Telegram 노드  —  Binary Data를 sendDocument로 전송") + "\n" +
-        footer("주제 입력 → 조사 → 정리 → PPT 생성 → Telegram 자동 전송 완료")
+        title("Discord  보고서 자동 전송  /  실습") + "\n" +
+        divider(180) + "\n" +
+        label(224, "Discord Webhook 전송") + "\n" +
+        body(262, "Discord 채널  ->  연동  ->  Webhook URL 복사") + "\n" +
+        body(302, "requests.post(webhook_url, json={'content': report})", mono=True, color="#374151") + "\n" +
+        divider(346) + "\n" +
+        label(390, "실습 목표") + "\n" +
+        body(428, "관심 분야 키워드 선정  ->  RSS / API 수집 스크립트 작성") + "\n" +
+        body(468, "claude -p 분석 연결  ->  Discord 보고서 전송 완성") + "\n" +
+        body(508, "cron 등록  ->  매일 자동 실행 확인", color="#6b7280", size=17) + "\n" +
+        divider(548) + "\n" +
+        footer("키워드 하나로 매일 아침 트렌드 보고서를 자동 수신합니다")
     ),
 }
 

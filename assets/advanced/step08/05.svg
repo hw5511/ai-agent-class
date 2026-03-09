@@ -2,17 +2,18 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">팀 협업 구현</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Supervisor가 Workers에게 분배하고 결과를 Notion에 정리합니다</text>
-  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">전체 파이프라인</text>
-  <text x="60" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Webhook (주제 입력)  →  Supervisor AI Agent (작업 분배)</text>
-  <text x="60" y="354" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">→  Worker A (웹 조사)  +  Worker B (내용 정리)  [병렬]</text>
-  <text x="60" y="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">→  Merge 노드 (결과 수집)  →  Notion DB 자동 정리</text>
-  <line x1="60" y1="440" x2="1220" y2="440" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">핵심 노드</text>
-  <text x="60" y="518" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Execute Workflow Tool  —  Worker 워크플로우 병렬 실행</text>
-  <text x="60" y="554" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Merge 노드  —  복수 브랜치 결과를 하나로 합산</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">칸반보드 실습  /  심화 과정 정리</text>
+  <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습: Notion 칸반보드 자동화</text>
+  <text x="60" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Notion에 칸반보드 DB 생성 (대기 / 처리 중 / 완료 컬럼)</text>
+  <text x="60" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">'대기' 카드를 추가  -&gt;  에이전트가 감지  -&gt;  작업 수행  -&gt;  '완료'로 이동</text>
+  <line x1="60" y1="346" x2="1220" y2="346" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="390" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 프롬프트</text>
+  <text x="60" y="428" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8">'Notion 칸반보드 DB를 주기적으로 체크해서</text>
+  <text x="60" y="464" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8"> 대기 상태 항목을 자동 처리하고 결과를 Notion에 기록하는</text>
+  <text x="60" y="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8"> 에이전트 스크립트를 만들어줘'</text>
+  <line x1="60" y1="536" x2="1220" y2="536" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="566" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">심화 8강  —  CLAUDE.md / 리서치 / 블로그 / Notion 자동화 완성</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">심화 전 과정 완성 — 기초 8강 + 심화 8강 총 16강 수료</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Notion DB 하나로 팀 전체의 에이전트 작업을 관리합니다</text>
 </svg>

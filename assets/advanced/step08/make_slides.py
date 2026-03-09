@@ -73,77 +73,79 @@ slides = {
     # 01: 오프닝
     "01": lambda: wrap(
         badge() + "\n" +
-        title("Notion 자동화 & Agent Teams") + "\n" +
-        sub("N8N으로 Notion을 자동화하고 에이전트 팀 협업을 구현합니다") + "\n" +
+        title("Notion DB 기반 자동 에이전트") + "\n" +
+        sub("Notion DB를 감지하고 작업 후 결과를 자동으로 보고합니다") + "\n" +
         divider(212) + "\n" +
         label(264, "TODAY") + "\n" +
-        body(308, "Agent Teams 개념  /  Notion 페이지 자동 생성  /  DB 자동 업데이트") + "\n" +
-        body(354, "팀 협업 구현  —  심화 과정 최종 완성") + "\n" +
+        body(308, "구조 소개  /  Notion DB 주기적 체크") + "\n" +
+        body(354, "변경사항 감지 + 자동 작업  /  결과 Notion 보고  /  칸반보드 실습") + "\n" +
         footer_light("VSCode 터미널 환경에서 진행합니다")
     ),
-    # 02: Agent Teams 개념
+    # 02: 구조 소개 + Notion DB 연동
     "02": lambda: wrap(
         badge() + "\n" +
-        title("Agent Teams 개념") + "\n" +
-        sub("여러 AI 에이전트가 역할을 나눠 협업하는 구조입니다") + "\n" +
+        title("구조 소개  /  Notion DB 연동") + "\n" +
+        sub("Notion DB가 에이전트의 작업 큐 역할을 합니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "구조") + "\n" +
-        body(308, "Supervisor (팀장)  —  전체 지시를 받아 역할별 에이전트에 분배") + "\n" +
-        body(354, "Worker (작업자)  —  조사·정리·생성 등 특정 역할만 수행") + "\n" +
-        divider(400) + "\n" +
-        label(440, "N8N 구현 방법") + "\n" +
-        body(478, "AI Agent 노드  —  Supervisor 역할 수행, Tools로 서브 에이전트 호출") + "\n" +
-        body(516, "Execute Workflow Tool  —  별도 워크플로우를 Worker로 실행") + "\n" +
-        body(554, "각 Worker 워크플로우는 독립된 역할(조사 / 정리 / 작성)을 담당") + "\n" +
-        footer_light("단일 에이전트보다 복잡한 작업을 병렬·분산 처리할 수 있습니다")
+        label(264, "자동화 구조") + "\n" +
+        body(308, "1  주기 체크  —  cron으로 Notion DB를 n분마다 폴링") + "\n" +
+        body(354, "2  감지  —  새 항목 / 상태 변경 감지") + "\n" +
+        body(400, "3  실행  —  claude -p 로 항목별 작업 자동 수행") + "\n" +
+        body(446, "4  보고  —  결과를 Notion 항목에 자동 기록") + "\n" +
+        divider(490) + "\n" +
+        label(530, "Notion API 연동 준비") + "\n" +
+        body(560, "Integration 생성  ->  DB에 Integration 연결  ->  API 토큰 환경변수 저장") + "\n" +
+        footer_light("Notion DB가 작업 대기열(Queue) 역할을 합니다")
     ),
-    # 03: Notion 페이지 자동 생성
+    # 03: 변경사항 감지 + 자동 작업 실행
     "03": lambda: wrap(
         badge() + "\n" +
-        title("Notion 페이지 자동 생성") + "\n" +
+        title("변경사항 감지  +  자동 작업 실행") + "\n" +
         divider(180) + "\n" +
-        label(224, "사전 준비") + "\n" +
-        body(262, "Notion Integration 생성  —  notion.so/my-integrations") + "\n" +
-        body(302, "N8N Credentials: Notion API  —  Integration Token 입력") + "\n" +
-        body(342, "대상 데이터베이스에 Integration 연결 (Share → Invite)") + "\n" +
-        divider(384) + "\n" +
-        label(424, "Notion 노드 설정") + "\n" +
-        body(462, "Resource: Database Page  /  Operation: Create") + "\n" +
-        body(502, "Database ID: 대상 DB URL에서 추출") + "\n" +
-        body(542, "Properties: 제목·날짜·상태 등 DB 속성 자동 입력") + "\n" +
-        footer_light("N8N Notion 노드 — Create / Get / Update / Delete 지원")
+        label(224, "새 항목 감지") + "\n" +
+        body(262, "DB 조회: filter = {Status: '대기'}  ->  처리 안 된 항목 추출") + "\n" +
+        body(302, "항목 ID + 내용을 claude -p 프롬프트에 삽입") + "\n" +
+        divider(346) + "\n" +
+        label(390, "자동 작업 예시") + "\n" +
+        body(428, "블로그 포스팅 대기  ->  Claude가 초안 작성 후 결과 저장") + "\n" +
+        body(468, "조사 요청  ->  웹 검색 + 요약 후 Notion 페이지에 기록") + "\n" +
+        body(508, "번역 요청  ->  번역 완료 후 해당 항목에 결과 첨부") + "\n" +
+        divider(548) + "\n" +
+        body(578, "작업 중 상태를 '처리 중'으로 업데이트  ->  완료 시 '완료'로 변경") + "\n"
     ),
-    # 04: Notion DB 자동 업데이트
+    # 04: 결과 Notion 보고
     "04": lambda: wrap(
         badge() + "\n" +
-        title("Notion DB 자동 업데이트") + "\n" +
-        divider(180) + "\n" +
-        label(224, "항목 조회") + "\n" +
-        body(262, "Operation: Get Many  —  Filter 조건으로 특정 항목 검색") + "\n" +
-        body(302, "Filter 예시: Status = '진행 중'  /  Date = 오늘") + "\n" +
-        divider(344) + "\n" +
-        label(388, "항목 업데이트") + "\n" +
-        body(426, "Operation: Update  —  Page ID로 기존 항목 속성 수정") + "\n" +
-        body(466, "Status 변경, 내용 추가, 날짜 갱신 등 자동 처리 가능") + "\n" +
-        divider(508) + "\n" +
-        label(548, "활용 패턴") + "\n" +
-        body(580, "에이전트 작업 완료 시 자동으로 상태를 '완료'로 갱신") + "\n"
+        title("결과  Notion 보고") + "\n" +
+        sub("작업 결과를 자동으로 Notion 항목에 기록합니다") + "\n" +
+        divider(212) + "\n" +
+        label(264, "Python 보고 흐름") + "\n" +
+        body(308, "result = run_claude(task_content)   # claude -p 실행", mono=True, size=17, color="#374151") + "\n" +
+        body(344, "notion.pages.update(page_id, {", mono=True, size=17, color="#374151") + "\n" +
+        body(380, "    'Status': {'select': {'name': '완료'}},", mono=True, size=17, color="#374151") + "\n" +
+        body(416, "    'Result': {'rich_text': [{'text': {'content': result}}]}", mono=True, size=17, color="#374151") + "\n" +
+        body(452, "})", mono=True, size=17, color="#374151") + "\n" +
+        divider(492) + "\n" +
+        label(532, "Discord 알림 연동") + "\n" +
+        body(562, "작업 완료 후 Discord Webhook으로 담당자에게 자동 알림 전송") + "\n" +
+        footer_light("Notion이 작업 이력과 결과의 단일 저장소가 됩니다")
     ),
-    # 05: 팀 협업 구현
+    # 05: 칸반보드 실습 + 정리
     "05": lambda: wrap(
         badge() + "\n" +
-        title("팀 협업 구현") + "\n" +
-        sub("Supervisor가 Workers에게 분배하고 결과를 Notion에 정리합니다") + "\n" +
-        divider(212) + "\n" +
-        label(264, "전체 파이프라인") + "\n" +
-        body(308, "Webhook (주제 입력)  →  Supervisor AI Agent (작업 분배)") + "\n" +
-        body(354, "→  Worker A (웹 조사)  +  Worker B (내용 정리)  [병렬]") + "\n" +
-        body(400, "→  Merge 노드 (결과 수집)  →  Notion DB 자동 정리") + "\n" +
-        divider(440) + "\n" +
-        label(480, "핵심 노드") + "\n" +
-        body(518, "Execute Workflow Tool  —  Worker 워크플로우 병렬 실행") + "\n" +
-        body(554, "Merge 노드  —  복수 브랜치 결과를 하나로 합산") + "\n" +
-        footer("심화 전 과정 완성 — 기초 8강 + 심화 8강 총 16강 수료")
+        title("칸반보드 실습  /  심화 과정 정리") + "\n" +
+        divider(180) + "\n" +
+        label(224, "실습: Notion 칸반보드 자동화") + "\n" +
+        body(262, "Notion에 칸반보드 DB 생성 (대기 / 처리 중 / 완료 컬럼)") + "\n" +
+        body(302, "'대기' 카드를 추가  ->  에이전트가 감지  ->  작업 수행  ->  '완료'로 이동") + "\n" +
+        divider(346) + "\n" +
+        label(390, "실습 프롬프트") + "\n" +
+        body(428, "'Notion 칸반보드 DB를 주기적으로 체크해서", color="#1d4ed8") + "\n" +
+        body(464, " 대기 상태 항목을 자동 처리하고 결과를 Notion에 기록하는", color="#1d4ed8") + "\n" +
+        body(500, " 에이전트 스크립트를 만들어줘'", color="#1d4ed8") + "\n" +
+        divider(536) + "\n" +
+        body(566, "심화 8강  —  CLAUDE.md / 리서치 / 블로그 / Notion 자동화 완성") + "\n" +
+        footer("Notion DB 하나로 팀 전체의 에이전트 작업을 관리합니다")
     ),
 }
 

@@ -2,17 +2,17 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">AI 요약  /  스케줄 트리거</text>
-  <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">AI 요약</text>
-  <text x="60" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Anthropic Chat Model 노드  —  수집된 뉴스 헤드라인 일괄 요약</text>
-  <text x="60" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">프롬프트: '다음 뉴스 목록을 3줄로 요약해줘. 핵심만'</text>
-  <text x="60" y="342" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Item Lists 노드  —  여러 뉴스를 하나의 텍스트로 병합 후 전달</text>
-  <line x1="60" y1="384" x2="1220" y2="384" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="424" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Schedule Trigger 노드</text>
-  <text x="60" y="462" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Trigger Interval: Days  —  Trigger at Hour: 8</text>
-  <text x="60" y="502" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Cron 직접 입력: 0 8 * * *  (매일 오전 8시)</text>
-  <line x1="60" y1="544" x2="1220" y2="544" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="578" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Test workflow 버튼으로 즉시 실행 가능  —  스케줄 대기 불필요</text>
-
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">네이버 블로그 API 연동</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">네이버 Open API로 이미지 업로드 후 글을 자동 발행합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">사전 준비</text>
+  <text x="60" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">네이버 개발자 센터  -&gt;  애플리케이션 등록  -&gt;  Client ID / Secret 발급</text>
+  <text x="60" y="354" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">블로그 글쓰기 권한 설정  -&gt;  OAuth 2.0 액세스 토큰 획득</text>
+  <line x1="60" y1="400" x2="1220" y2="400" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="440" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">이미지 업로드</text>
+  <text x="60" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">POST  /blog/v1/image-upload  —  multipart/form-data 방식</text>
+  <text x="60" y="514" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">응답에서 imageUrl 추출  -&gt;  본문 HTML에 img 태그로 삽입</text>
+  <line x1="60" y1="554" x2="1220" y2="554" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">POST  /blog/v1/post  —  title + content(HTML) + tags 로 발행</text>
 </svg>

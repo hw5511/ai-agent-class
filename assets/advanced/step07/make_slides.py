@@ -73,77 +73,78 @@ slides = {
     # 01: 오프닝
     "01": lambda: wrap(
         badge() + "\n" +
-        title("매일 아침 뉴스 자동 요약 알림") + "\n" +
-        sub("N8N으로 뉴스 수집·요약부터 Telegram 알림까지 자동화합니다") + "\n" +
+        title("네이버 블로그 자동 포스팅") + "\n" +
+        sub("리서치부터 이미지·콘텐츠 작성, 업로드까지 자동화합니다") + "\n" +
         divider(212) + "\n" +
         label(264, "TODAY") + "\n" +
-        body(308, "파이프라인 구조  /  뉴스 수집 노드 (RSS / API)  /  AI 요약") + "\n" +
-        body(354, "스케줄 트리거 (매일 아침)  /  Telegram 전송") + "\n" +
+        body(308, "전체 흐름  /  주제 리서치  /  비주얼 소재 생성") + "\n" +
+        body(354, "콘텐츠 작성  /  네이버 블로그 API 연동  /  자동 업로드") + "\n" +
         footer_light("VSCode 터미널 환경에서 진행합니다")
     ),
-    # 02: 파이프라인 구조
+    # 02: 전체 흐름 + 주제 리서치
     "02": lambda: wrap(
         badge() + "\n" +
-        title("파이프라인 구조") + "\n" +
-        sub("자동 수집 → 요약 → 알림으로 이어지는 흐름을 설계합니다") + "\n" +
+        title("전체 흐름  /  주제 리서치") + "\n" +
+        sub("주제 선정부터 포스팅까지 5단계 자동화") + "\n" +
         divider(212) + "\n" +
-        label(264, "전체 흐름") + "\n" +
-        body(308, "Schedule Trigger  →  RSS / API 수집  →  키워드 필터") + "\n" +
-        body(354, "→  Claude AI 요약  →  메시지 포맷  →  Telegram 전송") + "\n" +
-        divider(400) + "\n" +
-        label(440, "노드 역할") + "\n" +
-        body(478, "Schedule Trigger  —  매일 아침 지정 시간에 워크플로우 자동 실행") + "\n" +
-        body(516, "Item Lists 노드  —  복수 뉴스 항목을 하나로 병합") + "\n" +
-        body(554, "Set 노드  —  요약 결과를 메시지 형식으로 가공") + "\n" +
-        footer_light("각 노드 실행 결과를 즉시 확인하며 단계별로 구성합니다")
+        label(264, "자동화 파이프라인") + "\n" +
+        body(308, "1  주제 리서치  —  웹 조사로 키워드·트렌드 수집") + "\n" +
+        body(354, "2  비주얼 소재  —  이미지 생성 API로 썸네일 자동 제작") + "\n" +
+        body(400, "3  콘텐츠 작성  —  claude -p 로 본문·태그 자동 생성") + "\n" +
+        body(446, "4  이미지 업로드  —  네이버 블로그 이미지 API") + "\n" +
+        body(492, "5  포스팅 발행  —  네이버 블로그 글쓰기 API") + "\n" +
+        divider(530) + "\n" +
+        label(562, "리서치 방법") + "\n" +
+        body(590, "Playwright로 네이버 트렌드 수집  /  Claude로 키워드 분석") + "\n"
     ),
-    # 03: 뉴스 수집 노드 (RSS / API)
+    # 03: 비주얼 소재 생성
     "03": lambda: wrap(
         badge() + "\n" +
-        title("뉴스 수집 노드") + "\n" +
-        divider(180) + "\n" +
-        label(224, "RSS Feed Read 노드 (N8N 내장)") + "\n" +
-        body(262, "Feed URL 입력  —  구글 뉴스, 네이버 뉴스 RSS 등") + "\n" +
-        body(302, "결과: title / link / pubDate / content 필드 자동 파싱") + "\n" +
-        divider(344) + "\n" +
-        label(388, "NewsAPI (HTTP Request 노드)") + "\n" +
-        body(426, "GET https://newsapi.org/v2/everything", mono=True, size=17, color="#374151") + "\n" +
-        body(462, "params: q=키워드, language=ko, apiKey=YOUR_KEY", mono=True, size=17, color="#374151") + "\n" +
-        divider(504) + "\n" +
-        label(544, "키워드 필터링") + "\n" +
-        body(578, "IF 노드  —  title에 키워드 포함 여부로 분기 처리") + "\n"
+        title("비주얼 소재 생성") + "\n" +
+        sub("이미지 생성 API로 블로그 썸네일·삽화를 자동 제작합니다") + "\n" +
+        divider(212) + "\n" +
+        label(264, "이미지 생성 흐름") + "\n" +
+        body(308, "Claude로 주제에 맞는 이미지 프롬프트 자동 생성") + "\n" +
+        body(354, "이미지 생성 API 호출  ->  PNG 파일 로컬 저장") + "\n" +
+        divider(400) + "\n" +
+        label(440, "Python 연동 예시") + "\n" +
+        body(478, "resp = requests.post(IMAGE_API_URL,", mono=True, size=17, color="#374151") + "\n" +
+        body(514, "    json={'prompt': img_prompt, 'size': '1024x1024'})", mono=True, size=17, color="#374151") + "\n" +
+        body(550, "with open('thumb.png', 'wb') as f:", mono=True, size=17, color="#374151") + "\n" +
+        body(582, "    f.write(resp.content)", mono=True, size=17, color="#374151") + "\n"
     ),
-    # 04: AI 요약 + 스케줄 트리거
+    # 04: 네이버 블로그 API 연동
     "04": lambda: wrap(
         badge() + "\n" +
-        title("AI 요약  /  스케줄 트리거") + "\n" +
-        divider(180) + "\n" +
-        label(224, "AI 요약") + "\n" +
-        body(262, "Anthropic Chat Model 노드  —  수집된 뉴스 헤드라인 일괄 요약") + "\n" +
-        body(302, "프롬프트: '다음 뉴스 목록을 3줄로 요약해줘. 핵심만'") + "\n" +
-        body(342, "Item Lists 노드  —  여러 뉴스를 하나의 텍스트로 병합 후 전달") + "\n" +
-        divider(384) + "\n" +
-        label(424, "Schedule Trigger 노드") + "\n" +
-        body(462, "Trigger Interval: Days  —  Trigger at Hour: 8") + "\n" +
-        body(502, "Cron 직접 입력: 0 8 * * *  (매일 오전 8시)") + "\n" +
-        divider(544) + "\n" +
-        body(578, "Test workflow 버튼으로 즉시 실행 가능  —  스케줄 대기 불필요") + "\n"
+        title("네이버 블로그 API 연동") + "\n" +
+        sub("네이버 Open API로 이미지 업로드 후 글을 자동 발행합니다") + "\n" +
+        divider(212) + "\n" +
+        label(264, "사전 준비") + "\n" +
+        body(308, "네이버 개발자 센터  ->  애플리케이션 등록  ->  Client ID / Secret 발급") + "\n" +
+        body(354, "블로그 글쓰기 권한 설정  ->  OAuth 2.0 액세스 토큰 획득") + "\n" +
+        divider(400) + "\n" +
+        label(440, "이미지 업로드") + "\n" +
+        body(478, "POST  /blog/v1/image-upload  —  multipart/form-data 방식") + "\n" +
+        body(514, "응답에서 imageUrl 추출  ->  본문 HTML에 img 태그로 삽입") + "\n" +
+        divider(554) + "\n" +
+        footer("POST  /blog/v1/post  —  title + content(HTML) + tags 로 발행")
     ),
-    # 05: Telegram 전송
+    # 05: 전체 자동화 실습
     "05": lambda: wrap(
         badge() + "\n" +
-        title("Telegram 전송") + "\n" +
-        sub("요약된 뉴스를 매일 아침 Telegram으로 자동 수신합니다") + "\n" +
-        divider(212) + "\n" +
-        label(264, "Telegram 노드 설정") + "\n" +
-        body(308, "작업(Operation): Send Message") + "\n" +
-        body(354, "Credentials: Bot Token  —  BotFather에서 발급") + "\n" +
-        body(400, "Chat ID: 개인 채팅 ID 또는 그룹 / 채널 ID") + "\n" +
-        divider(440) + "\n" +
-        label(480, "메시지 포맷 예시") + "\n" +
-        body(518, "오늘의 뉴스 요약 ({{ $now.format('MM/DD') }})", mono=True, size=17, color="#374151") + "\n" +
-        body(554, "{{ $json.summary }}", mono=True, size=17, color="#374151") + "\n" +
-        footer("Schedule Trigger → 수집 → 요약 → Telegram — 매일 아침 자동 완성")
+        title("전체 자동화 실습") + "\n" +
+        divider(180) + "\n" +
+        label(224, "실습 목표") + "\n" +
+        body(262, "주제 키워드 입력  ->  리서치  ->  이미지 생성  ->  본문 작성") + "\n" +
+        body(302, "->  이미지 업로드  ->  네이버 블로그 자동 발행 완성") + "\n" +
+        divider(346) + "\n" +
+        label(390, "실습 프롬프트") + "\n" +
+        body(428, "'AI 생산성 도구 관련 블로그 포스팅을 자동으로 작성하고", color="#1d4ed8") + "\n" +
+        body(464, " 네이버 블로그에 발행해줘. 썸네일 이미지도 생성해서", color="#1d4ed8") + "\n" +
+        body(500, " 삽입해줘'", color="#1d4ed8") + "\n" +
+        divider(536) + "\n" +
+        body(566, "Claude가 리서치 → 이미지 → 글 작성 → 업로드를 순서대로 실행") + "\n" +
+        footer("주제 하나로 블로그 포스팅 전 과정이 자동 완성됩니다")
     ),
 }
 

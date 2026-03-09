@@ -73,76 +73,78 @@ slides = {
     # 01: 오프닝
     "01": lambda: wrap(
         badge() + "\n" +
-        title("자료조사 & 카드뉴스 자동화") + "\n" +
-        sub("N8N으로 조사부터 이미지 생성까지 자동화합니다") + "\n" +
+        title("CLAUDE.md 트리거  +  문서 자동화") + "\n" +
+        sub("키워드로 동작을 제어하고 문서·가이드를 자동 생성합니다") + "\n" +
         divider(212) + "\n" +
         label(264, "TODAY") + "\n" +
-        body(308, "N8N 개념  /  설치 환경 구성") + "\n" +
-        body(354, "웹 조사 노드  /  AI 요약 노드  /  카드뉴스 이미지 생성 연동") + "\n" +
+        body(308, "CLAUDE.md 트리거 키워드 설정  /  문서 라우팅 패턴") + "\n" +
+        body(354, "매뉴얼·가이드 자동 생성 방법론  /  PPT 자동화 예시") + "\n" +
         footer_light("VSCode 터미널 환경에서 진행합니다")
     ),
-    # 02: N8N 개념
+    # 02: CLAUDE.md 트리거 키워드 설정
     "02": lambda: wrap(
         badge() + "\n" +
-        title("N8N") + "\n" +
-        sub("노드를 연결해 워크플로우를 자동화하는 도구") + "\n" +
+        title("CLAUDE.md  —  트리거 키워드 설정") + "\n" +
+        sub("특정 단어를 보면 Claude가 정해진 행동을 자동으로 수행합니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "개념") + "\n" +
-        body(308, "노드(블록)를 드래그·연결해 자동화 흐름을 구성") + "\n" +
-        body(354, "400+ 외부 서비스 통합  —  코드 없이 또는 코드와 함께") + "\n" +
-        body(400, "AI 노드 내장  —  Claude · OpenAI · Jina AI 연결 가능") + "\n" +
-        divider(440) + "\n" +
-        label(480, "특징") + "\n" +
-        body(518, "각 노드 실행 결과를 즉시 확인  —  빠른 디버깅") + "\n" +
-        footer_light("Fair-Code 라이선스 — 로컬 설치 무료")
+        label(264, "트리거 설정 방법") + "\n" +
+        body(308, "CLAUDE.md에 '사용자가 [키워드]를 입력하면 [동작]을 수행한다' 규칙 기술") + "\n" +
+        body(354, "예: '분석 요청 시 먼저 데이터 구조를 파악하고 요약표를 만든다'") + "\n" +
+        divider(400) + "\n" +
+        label(440, "트리거 활용 예시") + "\n" +
+        body(478, "보고서  →  Markdown 형식으로 섹션별 자동 구성") + "\n" +
+        body(518, "점검  →  코드 품질·보안·성능 항목 순서대로 검토") + "\n" +
+        body(554, "배포  →  체크리스트 실행 후 Git push 까지 진행", color="#6b7280", size=17) + "\n" +
+        footer_light("프로젝트별 CLAUDE.md를 두면 맥락에 맞는 트리거 분리 가능")
     ),
-    # 03: N8N 설치 환경 구성
+    # 03: 문서 라우팅 패턴
     "03": lambda: wrap(
         badge() + "\n" +
-        title("N8N 설치 환경 구성") + "\n" +
-        divider(180) + "\n" +
-        label(224, "빠른 시작 (권장)") + "\n" +
-        body(262, "npx n8n", mono=True, color="#374151") + "\n" +
-        body(300, "설치 없이 즉시 실행  →  http://localhost:5678 접속", mono=True, color="#374151") + "\n" +
-        divider(344) + "\n" +
-        label(388, "전역 설치") + "\n" +
-        body(424, "npm install n8n -g", mono=True, color="#374151") + "\n" +
-        body(460, "n8n start", mono=True, color="#374151") + "\n" +
-        divider(500) + "\n" +
-        label(540, "프로덕션") + "\n" +
-        body(572, "Docker  —  데이터 영속성·환경 관리에 적합", mono=False, color="#374151") + "\n" +
-        footer_light("Node.js 20.19 이상 필요")
+        title("문서 라우팅 패턴") + "\n" +
+        sub("키워드를 담당 문서·모듈에 자동으로 연결합니다") + "\n" +
+        divider(212) + "\n" +
+        label(264, "라우팅 구조") + "\n" +
+        body(308, "CLAUDE.md에 키워드 → 참조 파일 매핑 테이블 작성") + "\n" +
+        body(354, "Claude가 키워드를 감지하면 해당 문서를 Read 후 작업 수행") + "\n" +
+        divider(400) + "\n" +
+        label(440, "매핑 예시") + "\n" +
+        body(478, "결제 관련  →  docs/payment_spec.md  참조") + "\n" +
+        body(518, "DB 쿼리   →  docs/db_schema.md  참조") + "\n" +
+        body(554, "API 작성   →  docs/api_convention.md  참조", color="#6b7280", size=17) + "\n" +
+        footer("키워드 하나로 올바른 문서를 자동으로 읽고 작업합니다")
     ),
-    # 04: 웹 조사 노드 + AI 요약 노드
+    # 04: 매뉴얼/가이드 자동 생성 방법론
     "04": lambda: wrap(
         badge() + "\n" +
-        title("웹 조사 노드  /  AI 요약 노드") + "\n" +
-        divider(180) + "\n" +
-        label(224, "웹 조사") + "\n" +
-        body(262, "HTTP Request 노드  —  공개 API 호출, 웹 데이터 수집") + "\n" +
-        body(302, "Jina AI 노드  —  URL 콘텐츠 추출 · 웹 검색 (LLM 친화적)") + "\n" +
-        divider(346) + "\n" +
-        label(390, "AI 요약") + "\n" +
-        body(428, "Anthropic Chat Model 노드  —  Claude로 내용 요약·정리") + "\n" +
-        body(468, "OpenAI 노드  —  GPT 모델 요약 활용") + "\n" +
-        divider(510) + "\n" +
-        label(550, "연결 흐름") + "\n" +
-        body(582, "Jina AI (수집)  →  Anthropic (요약)  →  다음 노드", color="#374151") + "\n"
+        title("매뉴얼  /  가이드 자동 생성") + "\n" +
+        sub("코드·데이터를 입력하면 문서를 자동으로 작성합니다") + "\n" +
+        divider(212) + "\n" +
+        label(264, "생성 흐름") + "\n" +
+        body(308, "소스 파일 분석  →  구조 파악  →  섹션별 문서 초안 작성") + "\n" +
+        body(354, "Claude -p headless 모드로 스크립트에서 자동 호출 가능") + "\n" +
+        divider(400) + "\n" +
+        label(440, "실습 프롬프트") + "\n" +
+        body(478, "'이 프로젝트 폴더를 분석해서 신규 팀원용 온보딩", color="#1d4ed8") + "\n" +
+        body(514, " 가이드를 Markdown으로 작성해줘. 설치 → 구조 → 주요", color="#1d4ed8") + "\n" +
+        body(550, " 명령어 순서로 구성해줘'", color="#1d4ed8") + "\n" +
+        footer_light("CLAUDE.md에 출력 형식·섹션 구조를 미리 지정하면 일관성 향상")
     ),
-    # 05: 카드뉴스 이미지 생성 연동
+    # 05: PPT 자동화 예시 + 정리
     "05": lambda: wrap(
         badge() + "\n" +
-        title("카드뉴스 이미지 생성 연동") + "\n" +
-        sub("요약 결과로 이미지를 자동 생성하고 저장합니다") + "\n" +
-        divider(212) + "\n" +
-        label(264, "이미지 생성 연동") + "\n" +
-        body(308, "HTTP Request 노드  —  외부 이미지 생성 API 호출") + "\n" +
-        body(354, "요약된 텍스트를 프롬프트로 자동 변환해 전달") + "\n" +
-        divider(400) + "\n" +
-        label(440, "전체 워크플로우") + "\n" +
-        body(480, "키워드 입력") + "\n" +
-        body(516, "→  Jina AI 웹 조사  →  Claude 요약  →  이미지 생성  →  저장") + "\n" +
-        footer("키워드 하나로 자료조사부터 카드뉴스까지 자동 완성됩니다")
+        title("PPT 자동화  —  데이터  →  프레젠테이션") + "\n" +
+        divider(180) + "\n" +
+        label(224, "자동화 흐름") + "\n" +
+        body(262, "데이터 파일(CSV/JSON)  →  Claude 분석  →  슬라이드 구성 설계") + "\n" +
+        body(302, "python-pptx  →  템플릿 기반 슬라이드 자동 삽입  →  파일 저장") + "\n" +
+        divider(346) + "\n" +
+        label(390, "실습 프롬프트") + "\n" +
+        body(428, "'sales_data.csv를 읽고 월별 실적을 분석해서", color="#1d4ed8") + "\n" +
+        body(464, " 임원 보고용 PPT를 자동으로 만들어줘'", color="#1d4ed8") + "\n" +
+        divider(504) + "\n" +
+        label(540, "오늘의 핵심") + "\n" +
+        body(572, "트리거 키워드  /  문서 라우팅  /  headless 자동화  /  PPT 생성") + "\n" +
+        footer("CLAUDE.md가 AI 에이전트의 두뇌 역할을 합니다")
     ),
 }
 

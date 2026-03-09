@@ -1056,59 +1056,59 @@
                         ]
                     },
                     {
-                        num: 5, title: '자료조사 & 카드뉴스 자동화', hours: '2시간 · Workflow Automation',
-                        goal: 'N8N 자동화 도구를 설치하고, 웹 자료조사부터 카드뉴스 제작까지 이어지는 자동화 워크플로우를 구축한다.',
-                        topics: ['N8N 설치 및 환경 구축', '웹 자료조사 노드 구성', '콘텐츠 요약 및 정리 자동화', '카드뉴스 이미지 자동 생성 연동'],
-                        practice: '키워드 하나를 입력하면 자료조사부터 카드뉴스 완성본까지 자동으로 만들어지는 워크플로우를 완성한다.',
+                        num: 5, title: 'CLAUDE.md 트리거 + 문서 자동화', hours: '2시간 · Workflow Automation',
+                        goal: 'CLAUDE.md에 트리거 키워드와 문서 라우팅을 설정하고, 매뉴얼·가이드·PPT를 자동 생성하는 방법을 익힌다.',
+                        topics: ['CLAUDE.md 트리거 키워드 설정', '문서 라우팅 패턴 (키워드 → 문서 매핑)', '매뉴얼·가이드 자동 생성 방법론', 'PPT 자동화 예시 (데이터 → 프레젠테이션)'],
+                        practice: 'CLAUDE.md에 트리거와 라우팅 규칙을 설정하고, Claude가 프로젝트 데이터를 읽어 온보딩 가이드와 PPT를 자동 생성하게 한다.',
                         slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
                         slideDescs: [
-            { goal: 'N8N 자동화 도구의 개념과 특징을 이해한다.', topics: ['N8N이란?', '노드 기반 워크플로우 구조', 'N8N vs 일반 스크립트 비교', '설치 방식 선택 (로컬/클라우드)'], practice: null },
-            { goal: 'N8N을 설치하고 환경을 구축한다.', topics: ['N8N 설치 명령', '브라우저에서 대시보드 접근', '첫 번째 워크플로우 생성', '기본 노드 연결 실습'], practice: null },
-            { goal: '웹 자료조사 노드를 구성한다.', topics: ['HTTP Request 노드 설정', '검색 결과 수집 구성', '텍스트 데이터 추출', '노드 실행 결과 확인'], practice: null },
-            { goal: '수집 내용을 자동으로 요약·정리한다.', topics: ['AI 요약 노드 연결', '내용 정제 처리', '요약 결과 확인', '카드뉴스 텍스트 구성'], practice: null },
-            { goal: '카드뉴스 이미지 자동 생성을 연동한다.', topics: ['이미지 생성 API 노드 연결', '카드뉴스 프롬프트 자동 생성', '이미지 저장 처리', '전체 워크플로우 완성'], practice: '키워드 하나를 입력하면 자료조사부터 카드뉴스 완성본까지 자동으로 만들어지는 워크플로우를 완성한다.' }
+            { goal: 'CLAUDE.md 트리거와 문서 자동화의 전체 개념을 이해한다.', topics: ['트리거 키워드란?', '문서 라우팅 개념', '매뉴얼 자동 생성 개요', 'PPT 자동화 활용 사례'], practice: null },
+            { goal: 'CLAUDE.md에 트리거 키워드를 설정한다.', topics: ['트리거 규칙 작성 방법', '프로젝트별 CLAUDE.md 분리', '트리거 동작 테스트', '활용 예시 실습'], practice: null },
+            { goal: '키워드 → 문서 라우팅 패턴을 구성한다.', topics: ['매핑 테이블 작성', '도메인별 참조 문서 연결', '라우팅 동작 확인', '복수 문서 조합 패턴'], practice: null },
+            { goal: '매뉴얼·가이드를 자동 생성한다.', topics: ['소스 분석 → 문서 초안 생성', 'headless 모드 자동 호출', '출력 형식 지정 방법', '온보딩 가이드 생성 실습'], practice: null },
+            { goal: 'PPT 자동화 파이프라인을 완성한다.', topics: ['데이터 → 슬라이드 구성 설계', 'python-pptx 연동', '전체 파이프라인 실행', '결과물 확인'], practice: 'CLAUDE.md에 트리거와 라우팅 규칙을 설정하고, Claude가 프로젝트 데이터를 읽어 온보딩 가이드와 PPT를 자동 생성하게 한다.' }
                         ]
                     },
                     {
-                        num: 6, title: '워크플로우로 PPT 자동 생성', hours: '2시간 · Workflow Automation',
-                        goal: 'N8N 워크플로우를 활용하여 자료 조사부터 정리, PPT 슬라이드 자동 생성까지 이어지는 전체 파이프라인을 구축한다.',
-                        topics: ['자료 조사 → 내용 정리 자동화', 'PPT 슬라이드 구성 설계 자동화', 'PPT 파일 자동 생성 실습', '완성본 알림 전송 연동'],
-                        practice: '주제를 입력하면 조사, 정리, PPT 생성까지 자동으로 완성되고 Telegram으로 결과물이 전달되는 흐름을 완성한다.',
+                        num: 6, title: '자동 트렌드 리서치 보고서 파이프라인', hours: '2시간 · Workflow Automation',
+                        goal: '웹 수집 → claude -p headless 분석 → Discord 보고서 전송까지 이어지는 완전 자동화 트렌드 리서치 파이프라인을 구축한다.',
+                        topics: ['수집 단계 (RSS / 공개 API / 웹 크롤링)', '데이터 정리 및 필터링', 'claude -p headless 분석 자동화', 'Discord Webhook 보고서 전송'],
+                        practice: '관심 분야 키워드를 설정하면 매일 트렌드를 자동 수집·분석하여 Discord 채널에 보고서를 전송하는 파이프라인을 완성한다.',
                         slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
                         slideDescs: [
-            { goal: 'PPT 자동화 파이프라인의 전체 구조를 설계한다.', topics: ['파이프라인 흐름 설계', '필요한 노드 목록 정리', '데이터 전달 구조', '시나리오 확인'], practice: null },
-            { goal: '자료 조사 → 내용 정리 노드를 구성한다.', topics: ['조사 노드 재활용', '내용 정리 AI 노드 연결', '슬라이드 목차 자동 생성', '중간 결과 확인'], practice: null },
-            { goal: 'PPT 슬라이드 구성을 자동으로 설계한다.', topics: ['슬라이드 수 / 제목 자동 결정', '각 슬라이드 내용 배분', '디자인 템플릿 선택', '구성 결과 확인'], practice: null },
-            { goal: 'PPT 파일을 자동으로 생성한다.', topics: ['python-pptx 노드 연동', '슬라이드 자동 삽입', 'PPT 파일 저장', '파일 확인'], practice: null },
-            { goal: '완성본을 Telegram으로 전송한다.', topics: ['Telegram 알림 노드 연결', '파일 첨부 전송 구현', '수신 확인', '전체 파이프라인 완성'], practice: '주제를 입력하면 조사, 정리, PPT 생성까지 자동으로 완성되고 Telegram으로 결과물이 전달되는 흐름을 완성한다.' }
+            { goal: '트렌드 리서치 파이프라인의 전체 구조를 이해한다.', topics: ['4단계 파이프라인 흐름', '수집 → 정리 → 분석 → 보고 구조', 'cron 자동 실행 개념', '활용 시나리오'], practice: null },
+            { goal: '파이프라인 전체 흐름을 설계한다.', topics: ['단계별 역할 정의', '데이터 전달 구조', 'Python 스크립트 구성', '스케줄 실행 방식'], practice: null },
+            { goal: '웹 크롤링 / API로 트렌드 데이터를 수집한다.', topics: ['RSS 피드 수집 (feedparser)', '공개 API 활용', 'BeautifulSoup 크롤링', '키워드 필터링'], practice: null },
+            { goal: 'claude -p headless 분석을 연동한다.', topics: ['subprocess로 claude -p 호출', '수집 데이터 프롬프트 삽입', '분석 결과 추출', 'Python 연동 코드 작성'], practice: null },
+            { goal: 'Discord Webhook으로 보고서를 자동 전송한다.', topics: ['Discord Webhook 설정', 'requests.post 전송', 'cron 등록 후 자동 실행', '전체 파이프라인 완성'], practice: '관심 분야 키워드를 설정하면 매일 트렌드를 자동 수집·분석하여 Discord 채널에 보고서를 전송하는 파이프라인을 완성한다.' }
                         ]
                     },
                     {
-                        num: 7, title: '매일 아침 뉴스 자동 요약 알림', hours: '2시간 · Workflow Automation',
-                        goal: '뉴스/데이터를 자동으로 수집하고 요약하여 매일 아침 정해진 시간에 알림을 보내는 개인 데이터 수집 파이프라인을 구축한다.',
-                        topics: ['뉴스 자동 수집 노드 구성', 'AI 요약 처리 자동화', '스케줄 트리거 설정 (매일 아침)', '나만의 데이터 수집 파이프라인 구축'],
-                        practice: '관심 키워드의 뉴스를 매일 아침 자동 수집·요약하여 Telegram으로 수신하는 파이프라인을 완성한다.',
+                        num: 7, title: '네이버 블로그 자동 포스팅', hours: '2시간 · Workflow Automation',
+                        goal: '주제 리서치부터 비주얼 소재 생성, 콘텐츠 작성, 네이버 블로그 API 업로드까지 전 과정을 자동화한다.',
+                        topics: ['주제 리서치 (웹 조사 + 키워드 분석)', '이미지 생성 API로 비주얼 소재 제작', '콘텐츠 자동 작성 (Claude)', '네이버 블로그 API 연동 및 자동 발행'],
+                        practice: '주제 키워드 하나를 입력하면 리서치 → 이미지 생성 → 본문 작성 → 네이버 블로그 자동 발행까지 전 과정이 자동 완성된다.',
                         slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
                         slideDescs: [
-            { goal: '개인 데이터 수집 파이프라인의 구조를 이해한다.', topics: ['파이프라인 전체 흐름', '수집 → 요약 → 알림 구조', '스케줄 자동화 개념', '활용 시나리오 소개'], practice: null },
-            { goal: '뉴스 자동 수집 노드를 구성한다.', topics: ['뉴스 RSS / API 선택', '수집 노드 설정', '키워드 필터링 적용', '수집 결과 확인'], practice: null },
-            { goal: 'AI 요약 처리를 자동화한다.', topics: ['요약 AI 노드 연결', '요약 포맷 설계', '복수 뉴스 일괄 요약', '요약 결과 확인'], practice: null },
-            { goal: '스케줄 트리거를 설정한다.', topics: ['Schedule Trigger 노드', '매일 아침 시간 지정', '트리거 테스트 실행', '실제 발동 확인'], practice: null },
-            { goal: '요약 결과를 Telegram으로 자동 전송한다.', topics: ['Telegram 노드 연결', '메시지 포맷 구성', '전송 결과 확인', '전체 파이프라인 완성'], practice: '관심 키워드의 뉴스를 매일 아침 자동 수집·요약하여 Telegram으로 수신하는 파이프라인을 완성한다.' }
+            { goal: '블로그 자동 포스팅의 전체 흐름을 이해한다.', topics: ['5단계 자동화 파이프라인', '각 단계별 도구 선택', '전체 흐름 설계', '활용 시나리오'], practice: null },
+            { goal: '주제 리서치와 키워드를 분석한다.', topics: ['Playwright로 트렌드 수집', 'Claude로 키워드 분석', '콘텐츠 방향 설정', '리서치 결과 정리'], practice: null },
+            { goal: '이미지 생성 API로 비주얼 소재를 제작한다.', topics: ['이미지 프롬프트 자동 생성', '이미지 생성 API 호출', 'PNG 저장 처리', '썸네일 구성'], practice: null },
+            { goal: '네이버 블로그 API를 연동한다.', topics: ['네이버 개발자 센터 앱 등록', 'OAuth 액세스 토큰 획득', '이미지 업로드 API', '글쓰기 API 발행'], practice: null },
+            { goal: '전체 자동화 파이프라인을 완성한다.', topics: ['리서치 → 이미지 → 본문 → 발행 연결', '전체 실행 테스트', '결과 확인', '응용 시나리오'], practice: '주제 키워드 하나를 입력하면 리서치 → 이미지 생성 → 본문 작성 → 네이버 블로그 자동 발행까지 전 과정이 자동 완성된다.' }
                         ]
                     },
                     {
-                        num: 8, title: 'Notion 자동화 & Agent Teams', hours: '2시간 · Workflow Automation',
-                        goal: 'Notion 페이지 자동 생성/관리 워크플로우를 구축하고, 여러 에이전트가 역할을 분담하여 협업하는 Teams 기능을 실습한다.',
-                        topics: ['Notion 페이지 자동 생성 / 관리', 'Notion 데이터베이스 자동 업데이트', 'Agent Teams 개념과 구조', '여러 에이전트 협업 실습'],
-                        practice: 'Agent Teams로 팀장 에이전트와 역할별 에이전트를 구성하고, 분산 작업 후 Notion에 결과를 자동 정리하는 흐름을 완성한다.',
+                        num: 8, title: 'Notion DB 기반 자동 에이전트', hours: '2시간 · Workflow Automation',
+                        goal: 'Notion DB를 주기적으로 감지하여 새 항목·변경사항이 생기면 자동 작업을 수행하고 결과를 Notion에 보고하는 에이전트를 구축한다.',
+                        topics: ['Notion DB 폴링 구조 설계', '새 항목·변경사항 감지 로직', '자동 작업 실행 (claude -p 연동)', '결과 Notion 자동 보고 + Discord 알림'],
+                        practice: 'Notion 칸반보드 DB의 대기 카드를 감지하면 Claude가 자동으로 작업을 수행하고 완료 상태로 업데이트하는 에이전트를 완성한다.',
                         slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
                         slideDescs: [
-            { goal: 'Agent Teams의 개념과 구조를 이해한다.', topics: ['Agent Teams란?', '팀장 에이전트 역할', '역할별 에이전트 분담', '팀 협업 흐름'], practice: null },
-            { goal: 'Notion 페이지 자동 생성을 구현한다.', topics: ['Notion MCP 재활용', '페이지 자동 생성 명령', '속성 자동 입력', '생성 결과 확인'], practice: null },
-            { goal: 'Notion 데이터베이스를 자동으로 업데이트한다.', topics: ['데이터베이스 항목 추가', '기존 항목 수정 자동화', '필터/정렬 활용', '업데이트 결과 확인'], practice: null },
-            { goal: 'Agent Teams를 설정하고 실행한다.', topics: ['Teams 설정 파일 구성', '팀장 + 역할 에이전트 설정', '작업 분배 명령', '각 에이전트 실행 확인'], practice: null },
-            { goal: '분산 작업 결과를 Notion에 자동으로 정리한다.', topics: ['에이전트별 결과 수집', 'Notion 자동 정리 구현', '최종 결과물 확인', '심화 과정 전체 복습'], practice: 'Agent Teams로 팀장 에이전트와 역할별 에이전트를 구성하고, 분산 작업 후 Notion에 결과를 자동 정리하는 흐름을 완성한다.' }
+            { goal: 'Notion DB 기반 자동 에이전트의 구조를 이해한다.', topics: ['DB 폴링 개념', '4단계 자동화 흐름', 'Notion이 작업 큐 역할', 'Notion API 연동 준비'], practice: null },
+            { goal: 'Notion DB 주기 체크와 연동 구조를 설계한다.', topics: ['cron 주기 설정', 'Notion API 토큰 관리', 'DB 조회 구조', 'Integration 연결'], practice: null },
+            { goal: '변경사항을 감지하고 자동 작업을 실행한다.', topics: ['신규 항목 필터링', 'claude -p 프롬프트 삽입', '상태를 처리 중으로 변경', '작업 유형별 분기'], practice: null },
+            { goal: '작업 결과를 Notion에 자동 보고한다.', topics: ['Notion 항목 결과 기록', '상태를 완료로 업데이트', 'Discord Webhook 알림', '보고 코드 작성'], practice: null },
+            { goal: 'Notion 칸반보드 자동화 실습을 완성한다.', topics: ['칸반보드 DB 구성', '대기 카드 감지 테스트', '자동 작업 완료 확인', '심화 과정 전체 복습'], practice: 'Notion 칸반보드 DB의 대기 카드를 감지하면 Claude가 자동으로 작업을 수행하고 완료 상태로 업데이트하는 에이전트를 완성한다.' }
                         ]
                     }
                 ]

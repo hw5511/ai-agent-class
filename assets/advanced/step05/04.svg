@@ -2,17 +2,17 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 05</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">웹 조사 노드  /  AI 요약 노드</text>
-  <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">웹 조사</text>
-  <text x="60" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">HTTP Request 노드  —  공개 API 호출, 웹 데이터 수집</text>
-  <text x="60" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Jina AI 노드  —  URL 콘텐츠 추출 · 웹 검색 (LLM 친화적)</text>
-  <line x1="60" y1="346" x2="1220" y2="346" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="390" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">AI 요약</text>
-  <text x="60" y="428" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Anthropic Chat Model 노드  —  Claude로 내용 요약·정리</text>
-  <text x="60" y="468" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">OpenAI 노드  —  GPT 모델 요약 활용</text>
-  <line x1="60" y1="510" x2="1220" y2="510" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="550" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">연결 흐름</text>
-  <text x="60" y="582" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Jina AI (수집)  →  Anthropic (요약)  →  다음 노드</text>
-
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">매뉴얼  /  가이드 자동 생성</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">코드·데이터를 입력하면 문서를 자동으로 작성합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">생성 흐름</text>
+  <text x="60" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">소스 파일 분석  →  구조 파악  →  섹션별 문서 초안 작성</text>
+  <text x="60" y="354" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Claude -p headless 모드로 스크립트에서 자동 호출 가능</text>
+  <line x1="60" y1="400" x2="1220" y2="400" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="440" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 프롬프트</text>
+  <text x="60" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8">'이 프로젝트 폴더를 분석해서 신규 팀원용 온보딩</text>
+  <text x="60" y="514" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8"> 가이드를 Markdown으로 작성해줘. 설치 → 구조 → 주요</text>
+  <text x="60" y="550" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8"> 명령어 순서로 구성해줘'</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">CLAUDE.md에 출력 형식·섹션 구조를 미리 지정하면 일관성 향상</text>
 </svg>
