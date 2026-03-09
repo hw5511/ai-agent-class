@@ -153,17 +153,17 @@ slides = {
     "06": lambda: wrap(
         badge() + "\n" +
         title("MS Office  +  Claude 연결") + "\n" +
-        sub("Power Automate 커넥터로 Excel · PowerPoint와 연동합니다") + "\n" +
+        sub("구독 계정과 추가기능으로 Word · Excel에서 바로 사용합니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "연결 방법") + "\n" +
-        body(308, "Microsoft Power Automate  ->  Anthropic 커넥터 추가") + "\n" +
-        body(354, "사전 준비: Anthropic API 키  —  console.anthropic.com 에서 발급") + "\n" +
+        label(264, "설치 방법") + "\n" +
+        body(308, "Microsoft 365 AppSource  ->  'Claude for Microsoft 365' 검색") + "\n" +
+        body(354, "추가기능 설치  ->  Claude 구독 계정(Pro / Max)으로 로그인") + "\n" +
         divider(400) + "\n" +
-        label(440, "자동화 흐름 예시") + "\n" +
-        body(478, "Excel 셀 값 읽기  ->  Anthropic: Create a message  ->  셀에 결과 쓰기") + "\n" +
-        body(518, "PowerPoint 텍스트 추출  ->  Claude 요약  ->  슬라이드에 자동 삽입") + "\n" +
-        body(554, "Zapier · Make (구 Integromat) 등 서드파티 도구로도 연동 가능", color="#6b7280", size=17) + "\n" +
-        footer("공식 Anthropic MS365 Add-in 없음 — Power Automate 커넥터가 현실적 방법")
+        label(440, "사용 방법") + "\n" +
+        body(478, "Word · Excel · PowerPoint 사이드 패널에서 Claude와 직접 대화") + "\n" +
+        body(518, "문서 내용 요약 · 번역 · 초안 작성 · 데이터 분석 지원") + "\n" +
+        body(554, "선택한 텍스트나 셀 범위를 그대로 Claude에 전달 가능", color="#6b7280", size=17) + "\n" +
+        footer("API 키 없이 구독 계정만으로 사용  —  claude.ai 에서 구독 관리")
     ),
 }
 
