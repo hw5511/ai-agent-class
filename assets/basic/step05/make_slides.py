@@ -86,18 +86,18 @@ slides = {
     "02": lambda: wrap(
         badge() + "\n" +
         title("Sub Agent") + "\n" +
-        sub("특정 역할에 특화된 독립 에이전트를 정의합니다") + "\n" +
+        sub("특정 역할에 특화된 전담 에이전트를 만듭니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "작동 원리") + "\n" +
-        body(308, "독립 컨텍스트 윈도우로 실행  ->  결과를 메인 에이전트에 반환") + "\n" +
-        body(354, "역할 설명(description)이 일치하면 Claude가 자동으로 위임") + "\n" +
+        label(264, "어떻게 작동하나요?") + "\n" +
+        body(308, "별도 대화 공간에서 독립 실행  ->  결과만 메인 에이전트에 전달") + "\n" +
+        body(354, "역할 설명이 일치하면 Claude가 알아서 해당 에이전트에 위임") + "\n" +
         divider(398) + "\n" +
-        label(438, "파일 형식  (YAML frontmatter)") + "\n" +
+        label(438, "에이전트 설정 파일 구조") + "\n" +
         body(474, "---", mono=True, size=17, color="#374151") + "\n" +
-        body(506, "name: code-reviewer", mono=True, size=17, color="#374151") + "\n" +
-        body(538, "description: '코드 품질을 검토합니다'", mono=True, size=17, color="#374151") + "\n" +
+        body(506, "name: code-reviewer           # 에이전트 이름", mono=True, size=17, color="#374151") + "\n" +
+        body(538, "description: '코드 품질을 검토합니다'   # 역할 설명", mono=True, size=17, color="#374151") + "\n" +
         body(570, "tools: Read, Glob, Grep    model: sonnet", mono=True, size=17, color="#374151") + "\n" +
-        footer_light("/agents 슬래시 명령어로 목록 조회 · 생성 · 수정 가능")
+        footer_light("/agents 명령어로 목록 조회 · 생성 · 수정 가능")
     ),
     # 03: Sub Agent 활용법 (만들기 · 공유 · 병렬)
     "03": lambda: wrap(
@@ -109,8 +109,8 @@ slides = {
         body(302, "역할 설명 입력  ->  Claude가 시스템 프롬프트 + 설정 자동 생성") + "\n" +
         divider(346) + "\n" +
         label(390, "팀 공유") + "\n" +
-        body(428, ".claude/agents/ 폴더를 Git에 커밋  ->  팀 전체 동일 에이전트 사용") + "\n" +
-        body(468, "~/.claude/agents/ 는 내 모든 프로젝트에 전역 적용") + "\n" +
+        body(428, ".claude/agents/ 폴더를 Git 저장소에 올리면  ->  팀 전체 동일 에이전트 사용") + "\n" +
+        body(468, "~/.claude/agents/ 에 저장하면  ->  내 PC의 모든 프로젝트에 적용") + "\n" +
         divider(508) + "\n" +
         label(548, "병렬 실행  (프롬프트)") + "\n" +
         body(582, "'인증 · DB · API 모듈을 별도 서브에이전트로 병렬 조사해줘'", color="#1d4ed8") + "\n"
@@ -119,35 +119,35 @@ slides = {
     "04": lambda: wrap(
         badge() + "\n" +
         title("Hooks  —  이벤트 종류") + "\n" +
-        sub("도구 실행 전후, 세션 전반에 걸쳐 자동으로 명령어를 실행합니다") + "\n" +
+        sub("Claude가 특정 행동을 하는 순간마다 자동으로 내 명령을 끼워 넣습니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "차단 가능 이벤트") + "\n" +
-        body(302, "PreToolUse          도구 실행 직전  —  exit 2 로 차단") + "\n" +
-        body(338, "UserPromptSubmit  프롬프트 처리 전  —  exit 2 로 거부") + "\n" +
-        body(374, "PermissionRequest  권한 다이얼로그 시점  —  자동 승인/거부") + "\n" +
+        label(264, "차단할 수 있는 시점") + "\n" +
+        body(302, "도구 실행 직전  —  위험한 명령어라면 이 시점에서 막기") + "\n" +
+        body(338, "프롬프트 처리 전  —  금지된 요청이라면 이 시점에서 거부") + "\n" +
+        body(374, "권한 요청 시점  —  자동으로 승인하거나 거부하도록 설정") + "\n" +
         divider(414) + "\n" +
-        label(454, "관찰 전용 이벤트") + "\n" +
-        body(490, "PostToolUse    도구 성공 후  —  자동 포맷팅 · 로깅") + "\n" +
-        body(526, "SessionStart   세션 시작/재개 시  —  컨텍스트 재주입") + "\n" +
-        body(562, "Stop               응답 완료 시  —  OS 알림 · 후처리") + "\n" +
-        footer_light("총 17+ 이벤트 지원  —  Notification · SubagentStart · PreCompact 등")
+        label(454, "관찰만 하는 시점") + "\n" +
+        body(490, "도구 성공 후  —  파일 저장되면 자동으로 포맷팅 실행") + "\n" +
+        body(526, "세션 시작 시  —  작업 규칙을 자동으로 다시 불러오기") + "\n" +
+        body(562, "응답 완료 시  —  Claude가 답변을 마치면 PC에 알림 보내기") + "\n" +
+        footer_light("총 17+ 시점 지원  —  에이전트 시작/종료, 자동 압축 전 등")
     ),
     # 05: Hooks 설정 + 활용 예시
     "05": lambda: wrap(
         badge() + "\n" +
         title("Hooks  —  설정과 활용") + "\n" +
         divider(180) + "\n" +
-        label(224, "settings.json 구조") + "\n" +
-        body(262, '"hooks": { "PreToolUse": [{', mono=True, size=16, color="#374151") + "\n" +
-        body(294, '   "matcher": "Bash", "hooks": [{ "type": "command", "command": "check.sh" }]', mono=True, size=16, color="#374151") + "\n" +
-        body(326, "}] }", mono=True, size=16, color="#374151") + "\n" +
-        divider(366) + "\n" +
-        label(406, "Exit Code") + "\n" +
-        body(442, "exit 0  —  성공. stdout JSON 파싱 (컨텍스트 추가 가능)") + "\n" +
-        body(478, "exit 2  —  차단. stderr 내용이 Claude 피드백으로 전달") + "\n" +
-        divider(518) + "\n" +
-        label(554, "활용 예시") + "\n" +
-        body(586, "rm -rf 패턴 차단  /  파일 저장 시 Prettier 자동 실행  /  OS 알림") + "\n"
+        label(224, "설정 위치: settings.json") + "\n" +
+        body(262, '"hooks" 키 안에 시점별로 실행할 명령어를 등록합니다', size=18, color="#374151") + "\n" +
+        body(298, "'도구 실행 전' 시점에 Bash 명령 조건으로 check.sh 실행 — 이런 구조", size=17, color="#6b7280") + "\n" +
+        divider(340) + "\n" +
+        label(380, "응답 방식") + "\n" +
+        body(418, "정상 처리  —  그대로 계속 진행") + "\n" +
+        body(454, "차단 신호  —  Claude에게 거부 이유를 알려주고 실행 중단") + "\n" +
+        divider(494) + "\n" +
+        label(534, "실제 활용 예시") + "\n" +
+        body(568, "rm -rf 삭제 명령 자동 차단  /  파일 저장 시 자동 정렬  /  PC 알림") + "\n" +
+        footer_light("Claude에게 '위험 명령 차단 Hook을 추가해줘'라고 요청하면 자동 작성")
     ),
     # 06: MS Office 추가기능으로 Claude 연결
     "06": lambda: wrap(

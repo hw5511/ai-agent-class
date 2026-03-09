@@ -89,15 +89,15 @@ slides = {
         title("settings.json") + "\n" +
         sub("Claude Code 동작을 세밀하게 제어하는 설정 파일") + "\n" +
         divider(212) + "\n" +
-        label(264, "3계층 설정") + "\n" +
-        body(308, "~/.claude/settings.json          전역  (모든 프로젝트)", mono=True, color="#374151") + "\n" +
-        body(348, ".claude/settings.json             프로젝트 공유  (git 커밋)", mono=True, color="#374151") + "\n" +
-        body(388, ".claude/settings.local.json    프로젝트 개인  (git 제외)", mono=True, color="#374151") + "\n" +
+        label(264, "3가지 적용 범위") + "\n" +
+        body(308, "~/.claude/settings.json          내 PC 전체 프로젝트에 적용", mono=True, color="#374151") + "\n" +
+        body(348, ".claude/settings.json             현재 프로젝트 팀원과 공유", mono=True, color="#374151") + "\n" +
+        body(388, ".claude/settings.local.json    현재 프로젝트 나만 적용", mono=True, color="#374151") + "\n" +
         divider(430) + "\n" +
-        label(468, "권한 제한 예시  (프롬프트 지시)") + "\n" +
+        label(468, "권한 제한 설정하기  (Claude에게 요청)") + "\n" +
         body(506, "'권한에서 bash rm을 제한하고,", color="#1d4ed8") + "\n" +
         body(540, " CLAUDE.md 지침에 rm 대신 archive 폴더로 이동하도록 추가해줘'", color="#1d4ed8") + "\n" +
-        footer_light("deny가 allow보다 우선 적용 — 매칭 시 무조건 차단")
+        footer_light("차단 규칙은 허용 규칙보다 항상 먼저 적용됩니다")
     ),
     # 04: 권한 모드 / esc
     "04": lambda: wrap(

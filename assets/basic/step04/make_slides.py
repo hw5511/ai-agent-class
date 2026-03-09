@@ -100,31 +100,31 @@ slides = {
     # 03: 컨텍스트 관리
     "03": lambda: wrap(
         badge() + "\n" +
-        title("컨텍스트 관리") + "\n" +
-        sub("대화가 길어질수록 컨텍스트를 관리해야 합니다") + "\n" +
+        title("대화 기억 공간 관리") + "\n" +
+        sub("대화가 길어지면 Claude의 기억 공간을 정리해야 합니다") + "\n" +
         divider(212) + "\n" +
         label(264, "/context") + "\n" +
-        body(308, "현재 컨텍스트 사용량을 컬러 그리드로 시각화") + "\n" +
+        body(308, "현재 기억 공간 사용량을 색상 그리드로 시각화") + "\n" +
         divider(360) + "\n" +
         label(404, "/compact") + "\n" +
-        body(448, "대화 히스토리를 요약 압축  —  컨텍스트 확보") + "\n" +
-        body(488, "/compact focus on auth issues  로 초점 지정 가능", mono=True, color="#374151") + "\n" +
-        footer_light("/clear 는 컨텍스트 완전 초기화  —  /compact 는 요약 압축")
+        body(448, "대화 내용을 요약 압축  —  기억 공간을 확보") + "\n" +
+        body(488, "/compact focus on auth issues  처럼 핵심 주제를 지정 가능", mono=True, color="#374151") + "\n" +
+        footer_light("/clear 는 기억 공간 완전 초기화  —  /compact 는 요약 압축")
     ),
     # 04: Auto Compact (신규)
     "04": lambda: wrap(
         badge() + "\n" +
         title("Auto Compact") + "\n" +
-        sub("컨텍스트 한도 도달 시 자동으로 대화를 압축합니다") + "\n" +
+        sub("기억 공간이 꽉 차기 전에 Claude가 자동으로 정리합니다") + "\n" +
         divider(212) + "\n" +
         label(264, "작동 원리") + "\n" +
-        body(308, "컨텍스트가 ~95% 차면 Claude가 자동으로 대화 요약 압축") + "\n" +
-        body(354, "/compact 와 달리 사용자 개입 없이 자동 발동") + "\n" +
+        body(308, "기억 공간이 약 95%% 차면 Claude가 자동으로 대화를 요약·압축") + "\n" +
+        body(354, "/compact 와 달리 내가 신경 쓰지 않아도 자동으로 작동") + "\n" +
         divider(400) + "\n" +
-        label(440, "한도 설정  (프롬프트 지시)") + "\n" +
-        body(480, "'settings.json에 CLAUDE_AUTOCOMPACT_PCT_OVERRIDE를 80으로", color="#1d4ed8") + "\n" +
-        body(516, " 설정해서 컨텍스트가 80%% 찰 때 압축이 시작되게 해줘'", color="#1d4ed8") + "\n" +
-        footer_light("CLAUDE.md에 ## Compact Instructions 추가 시 압축 시 보존 지침 적용")
+        label(440, "압축 기준점 조정하기  (프롬프트 지시)") + "\n" +
+        body(480, "'settings.json에 자동 압축 시작 기준을 80%%로 설정해줘.", color="#1d4ed8") + "\n" +
+        body(516, " 기억 공간이 80%% 찰 때 압축이 시작되도록'", color="#1d4ed8") + "\n" +
+        footer_light("CLAUDE.md에 압축 시 보존할 내용을 미리 적어두면 자동으로 지킵니다")
     ),
     # 05: 백그라운드 프로세스 (수정)
     "05": lambda: wrap(

@@ -4,16 +4,16 @@
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 05</text>
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Hooks  —  설정과 활용</text>
   <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">settings.json 구조</text>
-  <text x="60" y="262" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">"hooks": { "PreToolUse": [{</text>
-  <text x="60" y="294" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">   "matcher": "Bash", "hooks": [{ "type": "command", "command": "check.sh" }]</text>
-  <text x="60" y="326" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">}] }</text>
-  <line x1="60" y1="366" x2="1220" y2="366" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="406" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Exit Code</text>
-  <text x="60" y="442" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">exit 0  —  성공. stdout JSON 파싱 (컨텍스트 추가 가능)</text>
-  <text x="60" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">exit 2  —  차단. stderr 내용이 Claude 피드백으로 전달</text>
-  <line x1="60" y1="518" x2="1220" y2="518" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="554" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">활용 예시</text>
-  <text x="60" y="586" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">rm -rf 패턴 차단  /  파일 저장 시 Prettier 자동 실행  /  OS 알림</text>
-
+  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">설정 위치: settings.json</text>
+  <text x="60" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"hooks" 키 안에 시점별로 실행할 명령어를 등록합니다</text>
+  <text x="60" y="298" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#6b7280">'도구 실행 전' 시점에 Bash 명령 조건으로 check.sh 실행 — 이런 구조</text>
+  <line x1="60" y1="340" x2="1220" y2="340" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">응답 방식</text>
+  <text x="60" y="418" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">정상 처리  —  그대로 계속 진행</text>
+  <text x="60" y="454" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">차단 신호  —  Claude에게 거부 이유를 알려주고 실행 중단</text>
+  <line x1="60" y1="494" x2="1220" y2="494" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="534" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실제 활용 예시</text>
+  <text x="60" y="568" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">rm -rf 삭제 명령 자동 차단  /  파일 저장 시 자동 정렬  /  PC 알림</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">Claude에게 '위험 명령 차단 Hook을 추가해줘'라고 요청하면 자동 작성</text>
 </svg>
