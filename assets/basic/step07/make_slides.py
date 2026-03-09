@@ -140,7 +140,7 @@ slides = {
         body(376, ")", mono=True, color="#374151") + "\n" +
         divider(412) + "\n" +
         label(452, "Hooks 연결 — 작업 완료 알림") + "\n" +
-        body(490, "PostToolUse / Stop 이벤트에 Skill 스크립트 등록") + "\n" +
+        body(490, "작업 완료·응답 완료 시점에 Skill 스크립트 연결") + "\n" +
         body(530, "에이전트 작업 완료 시 Telegram으로 자동 알림 전송") + "\n" +
         footer("Claude Code가 작업을 마칠 때마다 알림을 받을 수 있습니다")
     ),

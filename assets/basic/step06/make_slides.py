@@ -104,7 +104,7 @@ slides = {
         label(264, "HTTP 방식 (원격 서버 — 권장)") + "\n" +
         body(308, "claude mcp add --transport http [이름] [URL]", mono=True, color="#374151") + "\n" +
         divider(354) + "\n" +
-        label(394, "stdio 방식 (로컬 프로세스)") + "\n" +
+        label(394, "직접 실행 방식 (내 PC에서 실행)") + "\n" +
         body(436, "claude mcp add --transport stdio [이름] -- npx ...", mono=True, color="#374151") + "\n" +
         divider(476) + "\n" +
         label(514, "관리 명령어") + "\n" +
