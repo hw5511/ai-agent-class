@@ -938,16 +938,17 @@
                     },
                     {
                         num: 5, title: 'Sub Agent와 Hooks', hours: '2시간',
-                        goal: 'Sub Agent의 개념과 작동 원리를 이해하고, Claude를 활용해 PowerPoint와 Excel 파일을 제어하는 실습을 진행한다.',
-                        topics: ['Sub Agent란? 개념 이해', 'Sub Agent의 작동 원리', 'Sub Agent 만들기', 'Hooks 개념 및 설정 방법', 'Claude in PowerPoint 실습', 'Claude in Excel 실습'],
-                        practice: 'Sub Agent를 호출하여 특정 작업을 분산 처리하고, PowerPoint 파일을 자동으로 생성해본다.',
-                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
+                        goal: 'Sub Agent의 개념과 활용법을 이해하고 Hooks로 도구 동작을 자동화하며, Power Automate로 MS Office와 Claude를 연동한다.',
+                        topics: ['Sub Agent 개념 · YAML 파일 형식', 'Claude와 함께 Sub Agent 만들기 · 팀 공유 · 병렬 실행', 'Hooks 이벤트 종류 (17+ 이벤트)', 'Hooks 설정 · 활용 예시', 'MS Office Power Automate 연동'],
+                        practice: 'Sub Agent를 Claude와 함께 만들고, Hooks으로 위험 명령을 차단하는 설정을 추가한다.',
+                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg'],
                         slideDescs: [
-            { goal: 'Step 5 목표와 오늘 배울 내용을 안내한다.', topics: ['Sub Agent 개념 · 작동 원리', 'Hooks 설정 · PreToolUse · PostToolUse', 'PowerPoint 자동 생성 · Excel 자동화'], practice: null },
-            { goal: 'Sub Agent의 개념과 작동 원리를 이해한다.', topics: ['독립적인 컨텍스트 윈도우로 실행', '역할 설명 기반 자동 위임', '.claude/agents/ 폴더에 markdown으로 정의', 'Sub Agent 중첩 불가'], practice: null },
-            { goal: 'Hooks의 개념과 settings.json 설정 방법을 이해한다.', topics: ['도구 실행 전후 명령어 자동 실행', '"hooks" 키에 이벤트 배열로 설정', 'PreToolUse — 실행 전 검증·차단 가능', 'PostToolUse — 도구 성공 후 자동 실행'], practice: null },
-            { goal: 'python-pptx로 PowerPoint 파일을 자동 생성한다.', topics: ['Claude Code에 슬라이드 구성 지시', 'python-pptx 코드 자동 작성 및 실행', '레이아웃·텍스트·이미지 자동 배치', '생성된 .pptx 파일 PowerPoint에서 편집'], practice: null },
-            { goal: 'openpyxl로 Excel 파일을 자동 생성·편집한다.', topics: ['셀 데이터 입력·수식·스타일·차트', '다중 시트 구성', '매크로·피벗테이블 파일은 손상 위험', '단순 데이터 파일에만 사용 권장'], practice: 'Sub Agent를 호출하여 특정 작업을 분산 처리하고, PowerPoint 파일을 자동으로 생성해본다.' }
+            { goal: 'Step 5 목표와 오늘 배울 내용을 안내한다.', topics: ['Sub Agent 개념 · 파일 형식', 'Sub Agent 활용 (만들기 · 공유 · 병렬)', 'Hooks 이벤트 종류 · 설정 · 활용', 'MS Office 추가기능 Claude 연결'], practice: null },
+            { goal: 'Sub Agent의 개념과 YAML 파일 형식을 이해한다.', topics: ['독립 컨텍스트 윈도우로 실행', '역할 설명 기반 자동 위임', 'YAML frontmatter: name · description · tools · model', '/agents 명령어로 관리'], practice: null },
+            { goal: 'Sub Agent를 만들고 공유하고 병렬 실행하는 방법을 익힌다.', topics: ['/agents → Generate with Claude로 자동 생성', '.claude/agents/ Git 커밋으로 팀 공유', '프롬프트로 여러 서브에이전트 병렬 실행'], practice: null },
+            { goal: 'Hooks 이벤트 종류와 작동 원리를 이해한다.', topics: ['PreToolUse · UserPromptSubmit · PermissionRequest (차단 가능)', 'PostToolUse · SessionStart · Stop (관찰)', '총 17+ 이벤트 — Notification · SubagentStart · PreCompact 등'], practice: null },
+            { goal: 'Hooks 설정 방법과 실제 활용 예시를 익힌다.', topics: ['settings.json hooks 구조', 'exit 0 성공 / exit 2 차단 (stderr → Claude 피드백)', 'rm -rf 차단 · Prettier 자동 실행 · OS 알림'], practice: null },
+            { goal: 'MS Office와 Claude를 Power Automate로 연동한다.', topics: ['Power Automate Anthropic 커넥터 추가', 'Anthropic API 키 발급 (console.anthropic.com)', 'Excel 셀 읽기 → Claude 처리 → 결과 쓰기 흐름'], practice: 'Sub Agent를 Claude와 함께 만들고, Hooks으로 위험 명령을 차단하는 설정을 추가한다.' }
                         ]
                     },
                     {

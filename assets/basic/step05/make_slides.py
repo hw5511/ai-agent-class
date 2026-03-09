@@ -77,69 +77,94 @@ slides = {
         sub("에이전트를 나누고, 동작을 자동화합니다") + "\n" +
         divider(212) + "\n" +
         label(264, "TODAY") + "\n" +
-        body(308, "Sub Agent 개념  /  작동 원리") + "\n" +
-        body(354, "Hooks 설정  /  PreToolUse · PostToolUse") + "\n" +
-        body(400, "PowerPoint 자동 생성  /  Excel 자동화") + "\n" +
+        body(308, "Sub Agent 개념 + 파일 형식  /  Sub Agent 활용 (만들기 · 공유 · 병렬)") + "\n" +
+        body(354, "Hooks 이벤트 종류  /  Hooks 설정 · 활용 예시") + "\n" +
+        body(400, "MS Office 추가기능으로 Claude 연결") + "\n" +
         footer_light("VSCode 터미널 환경에서 진행합니다")
     ),
-    # 02: Sub Agent 개념
+    # 02: Sub Agent 개념 + 파일 형식
     "02": lambda: wrap(
         badge() + "\n" +
         title("Sub Agent") + "\n" +
         sub("특정 역할에 특화된 독립 에이전트를 정의합니다") + "\n" +
         divider(212) + "\n" +
         label(264, "작동 원리") + "\n" +
-        body(308, "독립적인 컨텍스트 윈도우로 실행") + "\n" +
-        body(354, "역할 설명이 일치하면 Claude가 자동으로 위임") + "\n" +
-        body(400, "결과를 메인 에이전트에 반환") + "\n" +
-        divider(440) + "\n" +
-        label(480, "정의 위치") + "\n" +
-        body(518, ".claude/agents/agent-name.md   (프로젝트)", mono=True, color="#374151") + "\n" +
-        footer_light("Sub Agent는 다른 Sub Agent를 생성할 수 없습니다")
+        body(308, "독립 컨텍스트 윈도우로 실행  ->  결과를 메인 에이전트에 반환") + "\n" +
+        body(354, "역할 설명(description)이 일치하면 Claude가 자동으로 위임") + "\n" +
+        divider(398) + "\n" +
+        label(438, "파일 형식  (YAML frontmatter)") + "\n" +
+        body(474, "---", mono=True, size=17, color="#374151") + "\n" +
+        body(506, "name: code-reviewer", mono=True, size=17, color="#374151") + "\n" +
+        body(538, "description: '코드 품질을 검토합니다'", mono=True, size=17, color="#374151") + "\n" +
+        body(570, "tools: Read, Glob, Grep    model: sonnet", mono=True, size=17, color="#374151") + "\n" +
+        footer_light("/agents 슬래시 명령어로 목록 조회 · 생성 · 수정 가능")
     ),
-    # 03: Hooks
+    # 03: Sub Agent 활용법 (만들기 · 공유 · 병렬)
     "03": lambda: wrap(
         badge() + "\n" +
-        title("Hooks") + "\n" +
-        sub("도구 실행 전후에 자동으로 명령어를 실행합니다") + "\n" +
-        divider(212) + "\n" +
-        label(264, "settings.json 설정") + "\n" +
-        body(308, '"hooks": { "PreToolUse": [...], "PostToolUse": [...] }', mono=True, color="#374151") + "\n" +
-        divider(360) + "\n" +
-        label(404, "주요 이벤트") + "\n" +
-        body(448, "PreToolUse     도구 실행 전  —  exit 2 로 차단 가능") + "\n" +
-        body(494, "PostToolUse   도구 성공 후  —  자동 포맷팅 등에 활용") + "\n" +
-        footer_light("matcher 패턴으로 특정 도구만 선택 가능 (예: Bash, Edit|Write)")
+        title("Sub Agent 활용법") + "\n" +
+        divider(180) + "\n" +
+        label(224, "Claude와 함께 만들기") + "\n" +
+        body(262, "/agents  ->  Create new agent  ->  Generate with Claude") + "\n" +
+        body(302, "역할 설명 입력  ->  Claude가 시스템 프롬프트 + 설정 자동 생성") + "\n" +
+        divider(346) + "\n" +
+        label(390, "팀 공유") + "\n" +
+        body(428, ".claude/agents/ 폴더를 Git에 커밋  ->  팀 전체 동일 에이전트 사용") + "\n" +
+        body(468, "~/.claude/agents/ 는 내 모든 프로젝트에 전역 적용") + "\n" +
+        divider(508) + "\n" +
+        label(548, "병렬 실행  (프롬프트)") + "\n" +
+        body(582, "'인증 · DB · API 모듈을 별도 서브에이전트로 병렬 조사해줘'", color="#1d4ed8") + "\n"
     ),
-    # 04: PowerPoint 자동 생성
+    # 04: Hooks 이벤트 종류
     "04": lambda: wrap(
         badge() + "\n" +
-        title("PowerPoint 자동 생성") + "\n" +
-        sub("python-pptx 라이브러리로 .pptx 파일을 생성합니다") + "\n" +
+        title("Hooks  —  이벤트 종류") + "\n" +
+        sub("도구 실행 전후, 세션 전반에 걸쳐 자동으로 명령어를 실행합니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "사용 방법") + "\n" +
-        body(308, "Claude Code에 슬라이드 구성을 지시") + "\n" +
-        body(354, "에이전트가 python-pptx 코드를 작성하고 실행") + "\n" +
-        body(400, "슬라이드 레이아웃, 텍스트, 이미지 자동 배치") + "\n" +
-        divider(440) + "\n" +
-        label(480, "예시 지시") + "\n" +
-        body(518, '"3장짜리 PPT 만들어줘. 제목/내용/마무리 구조로"', mono=True, color="#374151") + "\n" +
-        footer_light("생성된 .pptx 파일은 PowerPoint에서 바로 편집 가능")
+        label(264, "차단 가능 이벤트") + "\n" +
+        body(302, "PreToolUse          도구 실행 직전  —  exit 2 로 차단") + "\n" +
+        body(338, "UserPromptSubmit  프롬프트 처리 전  —  exit 2 로 거부") + "\n" +
+        body(374, "PermissionRequest  권한 다이얼로그 시점  —  자동 승인/거부") + "\n" +
+        divider(414) + "\n" +
+        label(454, "관찰 전용 이벤트") + "\n" +
+        body(490, "PostToolUse    도구 성공 후  —  자동 포맷팅 · 로깅") + "\n" +
+        body(526, "SessionStart   세션 시작/재개 시  —  컨텍스트 재주입") + "\n" +
+        body(562, "Stop               응답 완료 시  —  OS 알림 · 후처리") + "\n" +
+        footer_light("총 17+ 이벤트 지원  —  Notification · SubagentStart · PreCompact 등")
     ),
-    # 05: Excel 자동화
+    # 05: Hooks 설정 + 활용 예시
     "05": lambda: wrap(
         badge() + "\n" +
-        title("Excel 자동화") + "\n" +
-        sub("openpyxl 라이브러리로 .xlsx 파일을 생성·편집합니다") + "\n" +
+        title("Hooks  —  설정과 활용") + "\n" +
+        divider(180) + "\n" +
+        label(224, "settings.json 구조") + "\n" +
+        body(262, '"hooks": { "PreToolUse": [{', mono=True, size=16, color="#374151") + "\n" +
+        body(294, '   "matcher": "Bash", "hooks": [{ "type": "command", "command": "check.sh" }]', mono=True, size=16, color="#374151") + "\n" +
+        body(326, "}] }", mono=True, size=16, color="#374151") + "\n" +
+        divider(366) + "\n" +
+        label(406, "Exit Code") + "\n" +
+        body(442, "exit 0  —  성공. stdout JSON 파싱 (컨텍스트 추가 가능)") + "\n" +
+        body(478, "exit 2  —  차단. stderr 내용이 Claude 피드백으로 전달") + "\n" +
+        divider(518) + "\n" +
+        label(554, "활용 예시") + "\n" +
+        body(586, "rm -rf 패턴 차단  /  파일 저장 시 Prettier 자동 실행  /  OS 알림") + "\n"
+    ),
+    # 06: MS Office 추가기능으로 Claude 연결
+    "06": lambda: wrap(
+        badge() + "\n" +
+        title("MS Office  +  Claude 연결") + "\n" +
+        sub("Power Automate 커넥터로 Excel · PowerPoint와 연동합니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "가능한 작업") + "\n" +
-        body(308, "셀 데이터 입력  /  수식 삽입  /  스타일 적용") + "\n" +
-        body(354, "차트 생성  /  다중 시트 구성") + "\n" +
+        label(264, "연결 방법") + "\n" +
+        body(308, "Microsoft Power Automate  ->  Anthropic 커넥터 추가") + "\n" +
+        body(354, "사전 준비: Anthropic API 키  —  console.anthropic.com 에서 발급") + "\n" +
         divider(400) + "\n" +
-        label(440, "주의") + "\n" +
-        body(484, "매크로·피벗테이블 포함 파일은 손상 위험") + "\n" +
-        body(528, "단순 데이터 파일에만 사용 권장") + "\n" +
-        footer("Claude Code에 목적과 구조를 설명하면 코드를 자동 작성합니다")
+        label(440, "자동화 흐름 예시") + "\n" +
+        body(478, "Excel 셀 값 읽기  ->  Anthropic: Create a message  ->  셀에 결과 쓰기") + "\n" +
+        body(518, "PowerPoint 텍스트 추출  ->  Claude 요약  ->  슬라이드에 자동 삽입") + "\n" +
+        divider(558) + "\n" +
+        body(592, "Zapier · Make (구 Integromat) 등 서드파티 도구로도 연동 가능") + "\n" +
+        footer("공식 Anthropic MS365 Add-in 없음 — Power Automate 커넥터가 현실적 방법")
     ),
 }
 
