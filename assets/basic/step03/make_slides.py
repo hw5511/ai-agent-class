@@ -120,13 +120,11 @@ slides = {
         badge() + "\n" +
         title("주요 슬래시 명령어") + "\n" +
         divider(180) + "\n" +
-        body(236, "/clear        대화 컨텍스트 초기화  (파일 삭제 아님)", size=20, color="#171717") + "\n" +
-        body(282, "/compact     대화 히스토리를 요약 압축  (컨텍스트 절약)", size=20, color="#171717") + "\n" +
-        body(328, "/context      현재 컨텍스트 사용량 시각화", size=20, color="#171717") + "\n" +
-        body(374, "/model        사용 모델 변경", size=20, color="#171717") + "\n" +
-        body(420, "/login         Anthropic 계정 전환", size=20, color="#171717") + "\n" +
-        body(466, "/logout       로그아웃", size=20, color="#171717") + "\n" +
-        body(512, "/help           사용 가능한 명령어 전체 목록", size=20, color="#171717") + "\n" +
+        body(246, "/clear        대화 기억 공간 초기화  (파일 삭제 아님)", size=20, color="#171717") + "\n" +
+        body(306, "/model        사용 모델 변경", size=20, color="#171717") + "\n" +
+        body(366, "/login         Anthropic 계정 전환", size=20, color="#171717") + "\n" +
+        body(426, "/logout       로그아웃", size=20, color="#171717") + "\n" +
+        body(486, "/help           사용 가능한 명령어 전체 목록", size=20, color="#171717") + "\n" +
         footer_light("종료: Ctrl+C  또는  빈 프롬프트에서 Esc")
     ),
     # 06: 웹 Search 툴
@@ -164,7 +162,7 @@ slides = {
         body(236, "보안 설정        파일 접근 범위 · 학습 opt-out", size=21, color="#171717") + "\n" +
         body(282, "settings.json  3계층 설정 · permissions.deny/allow", size=21, color="#171717") + "\n" +
         body(328, "권한 모드        Shift+Tab 순환 · Esc 중단", size=21, color="#171717") + "\n" +
-        body(374, "슬래시 명령어  /clear · /compact · /model · /login", size=21, color="#171717") + "\n" +
+        body(374, "슬래시 명령어  /clear · /model · /login · /help", size=21, color="#171717") + "\n" +
         body(420, "웹 Search       Claude가 자동 판단 실행", size=21, color="#171717") + "\n" +
         body(466, "Todos             TodoWrite · TodoRead 내장 툴", size=21, color="#171717") + "\n" +
         footer("설정으로 에이전트의 권한과 동작을 직접 제어합니다")
