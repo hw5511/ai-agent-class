@@ -144,9 +144,9 @@ slides = {
         label(380, "응답 방식") + "\n" +
         body(418, "정상 처리  —  그대로 계속 진행") + "\n" +
         body(454, "차단 신호  —  Claude에게 거부 이유를 알려주고 실행 중단") + "\n" +
-        divider(494) + "\n" +
-        label(534, "실제 활용 예시") + "\n" +
-        body(568, "rm -rf 삭제 명령 자동 차단  /  파일 저장 시 자동 정렬  /  PC 알림") + "\n" +
+        divider(490) + "\n" +
+        label(524, "실제 활용 예시") + "\n" +
+        body(554, "rm -rf 삭제 명령 자동 차단  /  파일 저장 시 자동 정렬  /  PC 알림") + "\n" +
         footer_light("Claude에게 '위험 명령 차단 Hook을 추가해줘'라고 요청하면 자동 작성")
     ),
     # 06: MS Office 추가기능으로 Claude 연결
@@ -162,8 +162,7 @@ slides = {
         label(440, "자동화 흐름 예시") + "\n" +
         body(478, "Excel 셀 값 읽기  ->  Anthropic: Create a message  ->  셀에 결과 쓰기") + "\n" +
         body(518, "PowerPoint 텍스트 추출  ->  Claude 요약  ->  슬라이드에 자동 삽입") + "\n" +
-        divider(558) + "\n" +
-        body(592, "Zapier · Make (구 Integromat) 등 서드파티 도구로도 연동 가능") + "\n" +
+        body(554, "Zapier · Make (구 Integromat) 등 서드파티 도구로도 연동 가능", color="#6b7280", size=17) + "\n" +
         footer("공식 Anthropic MS365 Add-in 없음 — Power Automate 커넥터가 현실적 방법")
     ),
 }
