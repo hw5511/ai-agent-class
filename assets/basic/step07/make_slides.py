@@ -73,12 +73,12 @@ slides = {
     # 01: 오프닝
     "01": lambda: wrap(
         badge() + "\n" +
-        title("Skills 활용과 Telegram 연동") + "\n" +
+        title("Skills 활용과 Discord 알림 연동") + "\n" +
         sub("나만의 기능을 만들고 알림으로 연결합니다") + "\n" +
         divider(212) + "\n" +
         label(264, "TODAY") + "\n" +
         body(308, "Skills 개념  /  Skill 사용법") + "\n" +
-        body(354, "Telegram 봇 토큰 발급  /  Skill 제작  /  완료 알림") + "\n" +
+        body(354, "알림 채널 소개  /  Discord 봇 설정  /  Skill 제작  /  완료 알림") + "\n" +
         footer_light("VSCode 터미널 환경에서 진행합니다")
     ),
     # 02: Skills 개념
@@ -112,37 +112,37 @@ slides = {
         label(530, "기본 제공 Skill 예시") + "\n" +
         body(564, "/simplify   /batch   /debug   /loop", mono=True, color="#374151") + "\n"
     ),
-    # 04: Telegram 봇 토큰 발급
+    # 04: 알림 채널 소개 + Discord 봇 설정
     "04": lambda: wrap(
         badge() + "\n" +
-        title("Telegram 봇 토큰 발급") + "\n" +
-        sub("BotFather로 봇을 생성하고 토큰을 받습니다") + "\n" +
+        title("알림 채널 소개") + "\n" +
+        sub("다양한 메신저로 Claude 완료 알림을 받을 수 있습니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "발급 절차") + "\n" +
-        body(308, "1.  Telegram에서 @BotFather 검색 후 Start") + "\n" +
-        body(354, "2.  /newbot 입력 후 봇 이름 설정") + "\n" +
-        body(400, "3.  사용자명 입력 (영문+숫자, bot으로 끝남)") + "\n" +
-        body(446, "4.  토큰 발급 완료") + "\n" +
-        divider(488) + "\n" +
-        label(526, "토큰 형식") + "\n" +
-        body(562, "123456789:ABCDefGhIJKlmNoPQRsTUVwxyZ", mono=True, color="#374151") + "\n" +
-        footer_light("토큰은 비밀번호처럼 취급 — 환경변수로 관리 권장")
+        label(264, "사용 가능한 채널") + "\n" +
+        body(308, "Discord  —  채널 분리 · 여러 봇 생성 편리  (이 강의에서 실습)") + "\n" +
+        body(354, "Telegram  —  봇 생성 간단 · 개인 알림에 적합") + "\n" +
+        body(400, "iMessage  —  macOS 전용 · 스크립트로 메시지 발송") + "\n" +
+        divider(440) + "\n" +
+        label(480, "Discord 봇 준비") + "\n" +
+        body(518, "Discord Developer Portal  ->  New Application  ->  Bot 탭  ->  토큰 발급") + "\n" +
+        body(554, "서버에 봇 초대  ->  채널 ID 확인  ->  환경변수로 관리", color="#6b7280", size=17) + "\n" +
+        footer_light("토큰·채널 ID는 비밀번호처럼 취급 — 코드에 직접 입력 금지")
     ),
-    # 05: Telegram Skill 제작 + 완료 알림
+    # 05: Discord Skill 제작 + 완료 알림
     "05": lambda: wrap(
         badge() + "\n" +
-        title("Telegram Skill 제작  /  완료 알림") + "\n" +
+        title("Discord Skill 제작  /  완료 알림") + "\n" +
         divider(180) + "\n" +
         label(230, "Skill 스크립트 (Python)") + "\n" +
         body(268, "requests.post(", mono=True, color="#374151") + "\n" +
-        body(304, '    "https://api.telegram.org/bot{TOKEN}/sendMessage",', mono=True, color="#374151") + "\n" +
-        body(340, '    json={"chat_id": CHAT_ID, "text": message}', mono=True, color="#374151") + "\n" +
-        body(376, ")", mono=True, color="#374151") + "\n" +
-        divider(412) + "\n" +
-        label(452, "Hooks 연결 — 작업 완료 알림") + "\n" +
-        body(490, "작업 완료·응답 완료 시점에 Skill 스크립트 연결") + "\n" +
-        body(530, "에이전트 작업 완료 시 Telegram으로 자동 알림 전송") + "\n" +
-        footer("Claude Code가 작업을 마칠 때마다 알림을 받을 수 있습니다")
+        body(304, '    "https://discord.com/api/v10/channels/{CHANNEL_ID}/messages",', mono=True, color="#374151") + "\n" +
+        body(340, '    headers={"Authorization": f"Bot {TOKEN}"},', mono=True, color="#374151") + "\n" +
+        body(376, '    json={"content": message}', mono=True, color="#374151") + "\n" +
+        body(412, ")", mono=True, color="#374151") + "\n" +
+        divider(448) + "\n" +
+        label(488, "Hooks 연결 — 작업 완료 알림") + "\n" +
+        body(526, "작업 완료·응답 완료 시점에 Skill 스크립트 연결") + "\n" +
+        footer("Claude Code가 작업을 마칠 때마다 Discord 알림을 받을 수 있습니다")
     ),
 }
 

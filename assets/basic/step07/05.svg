@@ -2,17 +2,17 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 07</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Telegram Skill 제작  /  완료 알림</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Discord Skill 제작  /  완료 알림</text>
   <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="230" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Skill 스크립트 (Python)</text>
   <text x="60" y="268" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">requests.post(</text>
-  <text x="60" y="304" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">    "https://api.telegram.org/bot{TOKEN}/sendMessage",</text>
-  <text x="60" y="340" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">    json={"chat_id": CHAT_ID, "text": message}</text>
-  <text x="60" y="376" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">)</text>
-  <line x1="60" y1="412" x2="1220" y2="412" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="452" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Hooks 연결 — 작업 완료 알림</text>
-  <text x="60" y="490" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">작업 완료·응답 완료 시점에 Skill 스크립트 연결</text>
-  <text x="60" y="530" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">에이전트 작업 완료 시 Telegram으로 자동 알림 전송</text>
+  <text x="60" y="304" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">    "https://discord.com/api/v10/channels/{CHANNEL_ID}/messages",</text>
+  <text x="60" y="340" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">    headers={"Authorization": f"Bot {TOKEN}"},</text>
+  <text x="60" y="376" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">    json={"content": message}</text>
+  <text x="60" y="412" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">)</text>
+  <line x1="60" y1="448" x2="1220" y2="448" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="488" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Hooks 연결 — 작업 완료 알림</text>
+  <text x="60" y="526" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">작업 완료·응답 완료 시점에 Skill 스크립트 연결</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#171717"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Claude Code가 작업을 마칠 때마다 알림을 받을 수 있습니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Claude Code가 작업을 마칠 때마다 Discord 알림을 받을 수 있습니다</text>
 </svg>
