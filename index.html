@@ -920,18 +920,20 @@
                         ]
                     },
                     {
-                        num: 4, title: '세션 관리와 Node.js 백그라운드 작업', hours: '2시간',
-                        goal: '세션을 효율적으로 관리하는 방법을 익히고, Node.js 프로그램을 만들어 백그라운드에서 실행하는 방법을 실습한다.',
-                        topics: ['/resume, /context 명령어', '/compact & auto compact', '/rename 세션', '/task - 백그라운드 프로세스 개념', '백그라운드 프로세스 만들기'],
-                        practice: '간단한 Node.js 스크립트를 작성하고 백그라운드에서 실행한 뒤 /tasks로 상태를 확인한다.',
-                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg'],
+                        num: 4, title: '세션 관리와 백그라운드 작업', hours: '2시간',
+                        goal: '세션을 효율적으로 관리하는 방법을 익히고, Auto Compact와 백그라운드 프로세스를 활용하는 방법을 실습한다.',
+                        topics: ['/resume · /rename 세션 관리', '/compact · Auto Compact 컨텍스트 관리', '백그라운드 프로세스 Ctrl+B', '/tasks 작업 목록 관리', '백그라운드 활용 패턴'],
+                        practice: 'sleep 딜레이가 있는 bash 명령을 백그라운드로 실행하고 /tasks로 상태를 확인한다.',
+                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg','07.svg','08.svg'],
                         slideDescs: [
-            { goal: 'Step 4 목표와 오늘 배울 내용을 안내한다.', topics: ['세션 재개 · 이름 변경', '컨텍스트 관리', '백그라운드 프로세스', 'Node.js 스크립트 · Tasks'], practice: null },
+            { goal: 'Step 4 목표와 오늘 배울 내용을 안내한다.', topics: ['세션 재개 · 이름 변경', '컨텍스트 관리 · Auto Compact', '백그라운드 프로세스 · Tasks', '백그라운드 활용법'], practice: null },
             { goal: 'claude --resume와 /rename 명령어를 이해한다.', topics: ['claude --resume (대화형 선택기 · 이름 지정)', 'claude --continue (최근 대화 이어서)', '/rename으로 세션에 이름 부여'], practice: null },
             { goal: '/context · /compact 명령어로 컨텍스트를 관리한다.', topics: ['/context — 컨텍스트 사용량 시각화', '/compact — 대화 압축 (초점 지정 가능)', '/clear — 컨텍스트 완전 초기화 차이'], practice: null },
-            { goal: '백그라운드 프로세스와 Node.js 실행을 이해한다.', topics: ['Ctrl+B — 실행 중인 명령 백그라운드 전환', 'node server.js & 백그라운드 실행', 'node script.js 후 Ctrl+B 전환'], practice: null },
-            { goal: '/tasks 명령어와 Ctrl+T로 작업 목록을 관리한다.', topics: ['/tasks — 백그라운드 작업 목록 조회', 'Ctrl+T — 작업 목록 뷰 토글', '작업 상태: 실행 중 · 완료 · 보류'], practice: null },
-            { goal: 'Step 4 전체 내용을 정리한다.', topics: ['/resume · /rename — 세션 관리', '/context · /compact — 컨텍스트 관리', 'Ctrl+B · /tasks — 백그라운드 작업'], practice: '간단한 Node.js 스크립트를 작성하고 백그라운드에서 실행한 뒤 /tasks로 상태를 확인한다.' }
+            { goal: 'Auto Compact 개념과 임계값 설정 방법을 이해한다.', topics: ['Auto Compact — 컨텍스트 ~95% 시 자동 압축', 'CLAUDE_AUTOCOMPACT_PCT_OVERRIDE 설정', 'CLAUDE.md Compact Instructions 활용'], practice: null },
+            { goal: '백그라운드 프로세스를 실습한다.', topics: ['Ctrl+B — 실행 중인 명령 백그라운드 전환', 'sleep 딜레이 명령 백그라운드 실행 실습', 'tmux 사용자는 Ctrl+B 두 번'], practice: null },
+            { goal: '/tasks 명령어와 Ctrl+T로 작업 목록을 관리한다.', topics: ['/tasks — 백그라운드 작업 목록 조회', 'Ctrl+T — 작업 목록 뷰 토글', 'Ctrl+F — 모든 백그라운드 에이전트 종료'], practice: null },
+            { goal: '백그라운드 활용 패턴 3가지를 이해한다.', topics: ['오래 걸리는 작업 백그라운드 전환', '개발 서버 + 코드 수정 병렬 진행', '에러 로그 감시 · 메시지 수신 대기 활용'], practice: null },
+            { goal: 'Step 4 전체 내용을 정리한다.', topics: ['/resume · /rename — 세션 관리', 'Auto Compact — 자동 압축 및 임계값 설정', 'Ctrl+B · /tasks — 백그라운드 작업 및 활용법'], practice: 'sleep 딜레이가 있는 bash 명령을 백그라운드로 실행하고 /tasks로 상태를 확인한다.' }
                         ]
                     },
                     {

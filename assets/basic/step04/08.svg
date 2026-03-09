@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 04</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">정리</text>
+  <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#171717">/resume          claude --resume 로 세션 재개</text>
+  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#171717">/rename          세션에 이름 부여 — 나중에 쉽게 찾기</text>
+  <text x="60" y="304" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#171717">/compact         대화 압축 — 컨텍스트 절약</text>
+  <text x="60" y="344" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#171717">Auto Compact   컨텍스트 ~95%% 시 자동 압축 — 임계값 조정 가능</text>
+  <text x="60" y="384" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#171717">Ctrl+B            실행 중인 명령 백그라운드 전환</text>
+  <text x="60" y="424" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#171717">/tasks             백그라운드 작업 목록 관리</text>
+  <text x="60" y="464" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#171717">활용 패턴        오래 걸리는 작업 / 병렬 실행 / 지속 대기</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#171717"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">세션을 저장하고 백그라운드를 활용하면 작업 효율이 높아집니다</text>
+</svg>
