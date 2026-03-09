@@ -6,12 +6,13 @@
   <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="230" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Shift + Tab</text>
   <text x="60" y="268" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">권한 모드를 순환 전환</text>
-  <text x="60" y="306" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">일반 모드  →  편집 자동 승인  →  플랜 모드  →  일반 모드</text>
+  <text x="60" y="306" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">일반 모드  ->  편집 자동 승인  ->  플랜 모드  ->  일반 모드</text>
   <line x1="60" y1="350" x2="1220" y2="350" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="396" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Esc</text>
   <text x="60" y="432" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">실행 중인 응답 중단  /  프롬프트 종료</text>
   <line x1="60" y1="476" x2="1220" y2="476" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="516" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">위험 플래그</text>
-  <text x="60" y="550" font-family="'Courier New',Courier,monospace" font-size="19" fill="#dc2626">--dangerously-skip-permissions    권한 확인 없이 실행  (격리 환경 전용)</text>
-
+  <text x="60" y="516" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">욜로 모드  (YOLO Mode)</text>
+  <text x="60" y="552" font-family="'Courier New',Courier,monospace" font-size="19" fill="#dc2626">--dangerously-skip-permissions  —  모든 권한 확인을 건너뜀</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">욜로 모드는 격리된 테스트 환경에서만 사용 — 실서버 절대 금지</text>
 </svg>

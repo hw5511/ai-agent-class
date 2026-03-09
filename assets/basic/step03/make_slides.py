@@ -78,9 +78,10 @@ slides = {
         body(308, "쓰기는 시작 디렉토리 이하로만 제한") + "\n" +
         body(354, "상위 폴더 쓰기는 명시적 허가 필요") + "\n" +
         divider(410) + "\n" +
-        label(450, "개인정보 학습 opt-out") + "\n" +
-        body(490, "플랜별로 설정 방법이 다름  —  프라이버시 설정에서 변경") + "\n" +
-        footer_light("Free · Pro · Max: 계정 설정에서 학습 opt-out 가능")
+        label(450, "개인정보 설정 해제") + "\n" +
+        body(492, "claude.ai/settings/data-privacy-controls  접속", mono=True, color="#374151") + "\n" +
+        body(534, "위치 메타데이터  +  Claude 개선에 도움주기  —  두 항목 모두 해제") + "\n" +
+        footer_light("Free · Pro · Max 모두 위 페이지에서 직접 설정 가능")
     ),
     # 03: settings.json
     "03": lambda: wrap(
@@ -93,8 +94,9 @@ slides = {
         body(348, ".claude/settings.json             프로젝트 공유  (git 커밋)", mono=True, color="#374151") + "\n" +
         body(388, ".claude/settings.local.json    프로젝트 개인  (git 제외)", mono=True, color="#374151") + "\n" +
         divider(430) + "\n" +
-        label(468, "권한 제한 예시") + "\n" +
-        body(506, '"permissions": { "deny": ["Bash(rm *)"] }', mono=True, color="#374151") + "\n" +
+        label(468, "권한 제한 예시  (프롬프트 지시)") + "\n" +
+        body(506, "'권한에서 bash rm을 제한하고,", color="#1d4ed8") + "\n" +
+        body(540, " CLAUDE.md 지침에 rm 대신 archive 폴더로 이동하도록 추가해줘'", color="#1d4ed8") + "\n" +
         footer_light("deny가 allow보다 우선 적용 — 매칭 시 무조건 차단")
     ),
     # 04: 권한 모드 / esc
@@ -104,13 +106,14 @@ slides = {
         divider(180) + "\n" +
         label(230, "Shift + Tab") + "\n" +
         body(268, "권한 모드를 순환 전환") + "\n" +
-        body(306, "일반 모드  →  편집 자동 승인  →  플랜 모드  →  일반 모드") + "\n" +
+        body(306, "일반 모드  ->  편집 자동 승인  ->  플랜 모드  ->  일반 모드") + "\n" +
         divider(350) + "\n" +
         label(396, "Esc") + "\n" +
         body(432, "실행 중인 응답 중단  /  프롬프트 종료") + "\n" +
         divider(476) + "\n" +
-        label(516, "위험 플래그") + "\n" +
-        body(550, "--dangerously-skip-permissions    권한 확인 없이 실행  (격리 환경 전용)", mono=True, color="#dc2626") + "\n"
+        label(516, "욜로 모드  (YOLO Mode)") + "\n" +
+        body(552, "--dangerously-skip-permissions  —  모든 권한 확인을 건너뜀", mono=True, color="#dc2626") + "\n" +
+        footer_light("욜로 모드는 격리된 테스트 환경에서만 사용 — 실서버 절대 금지")
     ),
     # 05: 핵심 슬래시 명령어
     "05": lambda: wrap(
