@@ -2,17 +2,17 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 03</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">OAuth 2.0  /  서비스 계정</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Google Sheets  /  Forms API</text>
   <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">OAuth 2.0  —  사용자 계정 접근</text>
-  <text x="60" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">사용자 동의 화면 설정  -&gt;  OAuth 클라이언트 ID 생성</text>
-  <text x="60" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">credentials.json 다운로드  -&gt;  첫 실행 시 브라우저 인증  -&gt;  token.json 자동 생성</text>
-  <line x1="60" y1="346" x2="1220" y2="346" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="390" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">서비스 계정  —  서버 간 접근 (자동화 권장)</text>
-  <text x="60" y="428" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">서비스 계정 생성  -&gt;  키 생성 (JSON)  -&gt;  환경변수로 경로 관리</text>
-  <text x="60" y="468" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Google Sheets: 대상 시트에 서비스 계정 이메일 공유 필요</text>
-  <line x1="60" y1="508" x2="1220" y2="508" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="548" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">패키지 설치</text>
-  <text x="60" y="578" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">pip install google-api-python-client google-auth google-auth-oauthlib</text>
-
+  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Sheets API — 읽기 / 쓰기</text>
+  <text x="60" y="262" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">service = build('sheets', 'v4', credentials=creds)</text>
+  <text x="60" y="298" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">result = service.spreadsheets().values().get(</text>
+  <text x="60" y="334" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">    spreadsheetId=SHEET_ID, range='Sheet1!A1:D100').execute()</text>
+  <text x="60" y="370" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">service.spreadsheets().values().update(..., body={'values': rows})</text>
+  <line x1="60" y1="410" x2="1220" y2="410" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Forms API — 설문 결과 자동 수집</text>
+  <text x="60" y="488" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">service = build('forms', 'v1', credentials=creds)</text>
+  <text x="60" y="524" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">resp = service.forms().responses().list(formId=FORM_ID).execute()</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">SHEET_ID / FORM_ID: 해당 URL에서 추출</text>
 </svg>

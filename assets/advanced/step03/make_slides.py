@@ -73,77 +73,77 @@ slides = {
     # 01: 오프닝
     "01": lambda: wrap(
         badge() + "\n" +
-        title("외부 API 연동 1  —  Google Cloud Platform") + "\n" +
-        sub("GCP 서비스를 에이전트와 연결합니다") + "\n" +
+        title("외부 API 연동 1  —  Google Cloud Platform 통합") + "\n" +
+        sub("GCP 5가지 API를 하나의 파이프라인으로 연결합니다") + "\n" +
         divider(212) + "\n" +
         label(264, "TODAY") + "\n" +
-        body(308, "GCP 프로젝트 생성  /  OAuth 2.0 · 서비스 계정 설정") + "\n" +
-        body(354, "Google Sheets API 연동  /  Google Drive API 연동  /  실습") + "\n" +
+        body(308, "OAuth 인증 공통 가이드  /  Google Sheets API  /  Google Forms API") + "\n" +
+        body(354, "Google Docs API  /  Google Drive API  /  Gmail API  /  통합 실습") + "\n" +
         footer_light("VSCode 터미널 환경에서 진행합니다")
     ),
-    # 02: GCP 프로젝트 설정 + API 활성화
+    # 02: OAuth 인증 공통 가이드
     "02": lambda: wrap(
         badge() + "\n" +
-        title("GCP 프로젝트 설정  /  API 활성화") + "\n" +
-        sub("cloud.google.com/console에서 시작합니다") + "\n" +
+        title("OAuth 인증 공통 가이드") + "\n" +
+        sub("GCP 5가지 API 모두 동일한 인증 방식을 사용합니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "프로젝트 생성") + "\n" +
-        body(308, "Google Cloud Console  ->  새 프로젝트 생성  ->  이름 입력") + "\n" +
-        body(354, "청구 계정 연결  (무료 크레딧 $300 제공, 90일)") + "\n" +
-        divider(400) + "\n" +
-        label(440, "API 활성화") + "\n" +
-        body(478, "API 및 서비스  ->  라이브러리  ->  사용할 API 검색") + "\n" +
-        body(518, "Gmail API  /  Google Sheets API  /  Google Drive API") + "\n" +
-        body(554, "각 API 페이지에서 '사용' 버튼 클릭  ->  활성화 완료", color="#6b7280", size=17) + "\n" +
-        footer_light("API 활성화 후에도 자격증명(Credentials) 설정 필요")
+        label(264, "OAuth 2.0  —  사용자 계정 접근") + "\n" +
+        body(308, "사용자 동의 화면  ->  OAuth 클라이언트 ID  ->  credentials.json 다운로드") + "\n" +
+        body(348, "첫 실행 시 브라우저 인증  ->  token.json 자동 생성  ->  이후 자동 갱신") + "\n" +
+        divider(390) + "\n" +
+        label(430, "서비스 계정  —  자동화 권장") + "\n" +
+        body(468, "서비스 계정 생성  ->  JSON 키 발급  ->  GOOGLE_APPLICATION_CREDENTIALS 환경변수") + "\n" +
+        body(508, "Sheets·Drive: 서비스 계정 이메일을 대상 리소스에 공유 필요") + "\n" +
+        divider(544) + "\n" +
+        body(560, "pip install google-api-python-client google-auth google-auth-oauthlib", mono=True, size=15, color="#374151") + "\n"
     ),
-    # 03: OAuth 2.0 / 서비스 계정 설정
+    # 03: Google Sheets / Forms API
     "03": lambda: wrap(
         badge() + "\n" +
-        title("OAuth 2.0  /  서비스 계정") + "\n" +
+        title("Google Sheets  /  Forms API") + "\n" +
         divider(180) + "\n" +
-        label(224, "OAuth 2.0  —  사용자 계정 접근") + "\n" +
-        body(262, "사용자 동의 화면 설정  ->  OAuth 클라이언트 ID 생성") + "\n" +
-        body(302, "credentials.json 다운로드  ->  첫 실행 시 브라우저 인증  ->  token.json 자동 생성") + "\n" +
-        divider(346) + "\n" +
-        label(390, "서비스 계정  —  서버 간 접근 (자동화 권장)") + "\n" +
-        body(428, "서비스 계정 생성  ->  키 생성 (JSON)  ->  환경변수로 경로 관리") + "\n" +
-        body(468, "Google Sheets: 대상 시트에 서비스 계정 이메일 공유 필요") + "\n" +
-        divider(508) + "\n" +
-        label(548, "패키지 설치") + "\n" +
-        body(578, "pip install google-api-python-client google-auth google-auth-oauthlib", mono=True, size=16, color="#374151") + "\n"
+        label(224, "Sheets API — 읽기 / 쓰기") + "\n" +
+        body(262, "service = build('sheets', 'v4', credentials=creds)", mono=True, size=16, color="#374151") + "\n" +
+        body(298, "result = service.spreadsheets().values().get(", mono=True, size=16, color="#374151") + "\n" +
+        body(334, "    spreadsheetId=SHEET_ID, range='Sheet1!A1:D100').execute()", mono=True, size=16, color="#374151") + "\n" +
+        body(370, "service.spreadsheets().values().update(..., body={'values': rows})", mono=True, size=16, color="#374151") + "\n" +
+        divider(410) + "\n" +
+        label(450, "Forms API — 설문 결과 자동 수집") + "\n" +
+        body(488, "service = build('forms', 'v1', credentials=creds)", mono=True, size=16, color="#374151") + "\n" +
+        body(524, "resp = service.forms().responses().list(formId=FORM_ID).execute()", mono=True, size=16, color="#374151") + "\n" +
+        footer_light("SHEET_ID / FORM_ID: 해당 URL에서 추출")
     ),
-    # 04: Google Sheets API 연동
+    # 04: Google Docs / Drive API
     "04": lambda: wrap(
         badge() + "\n" +
-        title("Google Sheets API 연동") + "\n" +
-        sub("스프레드시트를 Python으로 읽고 씁니다") + "\n" +
-        divider(212) + "\n" +
-        label(264, "서비스 계정으로 인증") + "\n" +
-        body(308, "creds = service_account.Credentials.from_service_account_file(key_path)", mono=True, size=16, color="#374151") + "\n" +
-        body(344, "service = build('sheets', 'v4', credentials=creds)", mono=True, size=16, color="#374151") + "\n" +
-        divider(386) + "\n" +
-        label(426, "데이터 읽기  /  쓰기") + "\n" +
-        body(464, "result = service.spreadsheets().values().get(", mono=True, size=16, color="#374151") + "\n" +
-        body(500, "    spreadsheetId=SHEET_ID, range='Sheet1!A1:C10').execute()", mono=True, size=16, color="#374151") + "\n" +
-        body(536, "service.spreadsheets().values().update(..., body={'values': data})", mono=True, size=16, color="#374151") + "\n" +
-        footer_light("SHEET_ID: 스프레드시트 URL에서 /d/ 이후 부분")
+        title("Google Docs  /  Drive API") + "\n" +
+        divider(180) + "\n" +
+        label(224, "Docs API — 문서 자동 생성") + "\n" +
+        body(262, "service = build('docs', 'v1', credentials=creds)", mono=True, size=16, color="#374151") + "\n" +
+        body(298, "doc = service.documents().create(body={'title': '리포트'}).execute()", mono=True, size=16, color="#374151") + "\n" +
+        body(334, "service.documents().batchUpdate(documentId=doc_id, body=requests)", mono=True, size=16, color="#374151") + "\n" +
+        divider(374) + "\n" +
+        label(414, "Drive API — 파일 업로드 / 공유") + "\n" +
+        body(452, "service = build('drive', 'v3', credentials=creds)", mono=True, size=16, color="#374151") + "\n" +
+        body(488, "media = MediaFileUpload('report.pdf', mimetype='application/pdf')", mono=True, size=16, color="#374151") + "\n" +
+        body(524, "service.files().create(body={'name': 'report'}, media_body=media).execute()", mono=True, size=16, color="#374151") + "\n" +
+        footer_light("Docs batchUpdate로 텍스트·표·이미지 삽입 가능")
     ),
-    # 05: Google Drive API + 실습
+    # 05: Gmail API + 통합 실습
     "05": lambda: wrap(
         badge() + "\n" +
-        title("Google Drive API  /  실습") + "\n" +
+        title("Gmail API  /  통합 실습") + "\n" +
         divider(180) + "\n" +
-        label(224, "Drive API — 파일 업로드") + "\n" +
-        body(262, "service = build('drive', 'v3', credentials=creds)", mono=True, size=16, color="#374151") + "\n" +
-        body(298, "media = MediaFileUpload('report.pdf', mimetype='application/pdf')", mono=True, size=16, color="#374151") + "\n" +
-        body(334, "service.files().create(body={'name': 'report'}, media_body=media).execute()", mono=True, size=16, color="#374151") + "\n" +
+        label(224, "Gmail API — 메일 조회 / 자동 발송") + "\n" +
+        body(262, "service = build('gmail', 'v1', credentials=creds)", mono=True, size=16, color="#374151") + "\n" +
+        body(298, "msg = MIMEText(body_text)  /  msg['to'] = recipient", mono=True, size=16, color="#374151") + "\n" +
+        body(334, "service.users().messages().send(userId='me', body=encoded).execute()", mono=True, size=16, color="#374151") + "\n" +
         divider(374) + "\n" +
-        label(414, "실습 목표") + "\n" +
-        body(452, "GCP 프로젝트 생성  ->  Sheets API 활성화  ->  서비스 계정 키 발급") + "\n" +
-        body(492, "Python으로 스프레드시트 읽기  ->  데이터 분석  ->  결과 쓰기") + "\n" +
-        body(532, "에이전트 명령: 'Google Sheets의 판매 데이터를 읽고 분석해줘'", color="#1d4ed8", size=17) + "\n" +
-        footer("GCP 한 번 설정하면 Gmail · Sheets · Drive 모두 연결됩니다")
+        label(414, "실습: Sheets 데이터  ->  Gmail 리포트 자동 발송") + "\n" +
+        body(452, "1  Sheets API로 판매 데이터 읽기") + "\n" +
+        body(488, "2  Claude로 데이터 분석  ->  리포트 텍스트 생성") + "\n" +
+        body(524, "3  Gmail API로 담당자에게 리포트 자동 발송") + "\n" +
+        footer("GCP 5가지 API로 데이터 수집부터 보고까지 완전 자동화")
     ),
 }
 

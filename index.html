@@ -1029,17 +1029,17 @@
                         ]
                     },
                     {
-                        num: 3, title: '외부 API 연동 1: Google Cloud Platform', hours: '2시간 · Tool & Automation',
-                        goal: 'GCP 프로젝트를 설정하고 OAuth 2.0 / 서비스 계정 인증을 익혀, Google Sheets와 Drive API를 에이전트와 연결한다.',
-                        topics: ['GCP 프로젝트 생성 및 API 활성화', 'OAuth 2.0 / 서비스 계정 설정', 'Google Sheets API 읽기·쓰기', 'Google Drive API 파일 업로드'],
-                        practice: 'GCP 서비스 계정을 발급받아 Google Sheets 데이터를 Python으로 읽고, 분석 결과를 시트에 자동으로 기록하는 흐름을 완성한다.',
+                        num: 3, title: '외부 API 연동 1: Google Cloud Platform 통합', hours: '2시간 · Tool & Automation',
+                        goal: 'GCP OAuth 인증을 공통 가이드로 이해하고, Sheets·Forms·Docs·Drive·Gmail 5가지 API를 에이전트와 연결한다.',
+                        topics: ['OAuth 인증 공통 가이드 (OAuth 2.0 / 서비스 계정)', 'Google Sheets·Forms API 연동', 'Google Docs·Drive API 연동', 'Gmail API + 통합 실습: Sheets 데이터 → Gmail 리포트'],
+                        practice: 'Google Sheets 데이터를 Python으로 읽어 Claude로 분석하고, Gmail API로 담당자에게 리포트를 자동 발송하는 파이프라인을 완성한다.',
                         slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
                         slideDescs: [
-            { goal: 'ADV 3 목표와 오늘 배울 내용을 안내한다.', topics: ['GCP 프로젝트 생성', 'OAuth 2.0 · 서비스 계정 설정', 'Google Sheets API', 'Google Drive API + 실습'], practice: null },
-            { goal: 'GCP 프로젝트를 생성하고 필요한 API를 활성화한다.', topics: ['Google Cloud Console 프로젝트 생성', '청구 계정 연결 (무료 크레딧)', 'API 라이브러리에서 API 활성화', 'Gmail / Sheets / Drive API 선택'], practice: null },
-            { goal: 'OAuth 2.0과 서비스 계정 인증 방식을 설정한다.', topics: ['OAuth 2.0 — credentials.json 발급', '서비스 계정 — JSON 키 발급 (자동화 권장)', 'pip install google-api-python-client google-auth', 'Sheets 시트에 서비스 계정 이메일 공유'], practice: null },
-            { goal: 'Google Sheets API로 데이터를 읽고 쓴다.', topics: ['service_account.Credentials 인증', 'build("sheets", "v4") 서비스 생성', 'spreadsheets().values().get() 읽기', 'spreadsheets().values().update() 쓰기'], practice: null },
-            { goal: 'Google Drive API 파일 업로드와 실습을 완성한다.', topics: ['build("drive", "v3") 서비스 생성', 'MediaFileUpload + files().create()', '에이전트 명령으로 Sheets 데이터 분석', '전체 GCP 연동 파이프라인 완성'], practice: 'GCP 서비스 계정을 발급받아 Google Sheets 데이터를 Python으로 읽고, 분석 결과를 시트에 자동으로 기록하는 흐름을 완성한다.' }
+            { goal: 'ADV 3 목표와 오늘 배울 5가지 GCP API를 안내한다.', topics: ['OAuth 인증 공통 가이드', 'Google Sheets / Forms API', 'Google Docs / Drive API', 'Gmail API + 통합 실습'], practice: null },
+            { goal: 'GCP 5가지 API에 공통으로 적용되는 OAuth 인증을 설정한다.', topics: ['OAuth 2.0 — credentials.json → token.json 자동 갱신', '서비스 계정 — JSON 키 + GOOGLE_APPLICATION_CREDENTIALS', 'Sheets·Drive 공유 권한 설정 필요', 'pip install google-api-python-client google-auth'], practice: null },
+            { goal: 'Google Sheets와 Forms API로 데이터를 읽고 수집한다.', topics: ['build("sheets", "v4") + spreadsheets().values().get()', 'spreadsheets().values().update() 쓰기', 'build("forms", "v1") + forms().responses().list()', 'SHEET_ID / FORM_ID URL 추출법'], practice: null },
+            { goal: 'Google Docs와 Drive API로 문서를 생성하고 파일을 관리한다.', topics: ['build("docs", "v1") + documents().create()', 'batchUpdate로 텍스트·표·이미지 삽입', 'build("drive", "v3") + MediaFileUpload', 'files().create() 업로드 + 공유 설정'], practice: null },
+            { goal: 'Gmail API로 메일을 조회·발송하고 통합 실습을 완성한다.', topics: ['build("gmail", "v1") + MIMEText 메일 구성', 'users().messages().send() 자동 발송', 'Sheets 읽기 → Claude 분석 → Gmail 발송 파이프라인', 'GCP 5가지 API 통합 완성'], practice: 'Google Sheets 데이터를 Python으로 읽어 Claude로 분석하고, Gmail API로 담당자에게 리포트를 자동 발송하는 파이프라인을 완성한다.' }
                         ]
                     },
                     {
