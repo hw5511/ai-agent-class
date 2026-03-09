@@ -113,37 +113,38 @@ slides = {
         body(530, "img = PIL.Image.open('photo.jpg')", mono=True, size=16, color="#374151") + "\n" +
         body(560, "resp = model.generate_content(['이 이미지를 설명해줘', img])  # 이미지+텍스트", mono=True, size=15, color="#374151") + "\n"
     ),
-    # 04: CLI 도구 연동 개념 — 외부 CLI를 Skill로 감싸는 패턴
+    # 04: CLI 도구 개념 — Claude Code가 터미널을 실행하는 원리
     "04": lambda: wrap(
         badge() + "\n" +
-        title("CLI 도구 연동  —  외부 CLI를 Skill로 감싸기") + "\n" +
-        sub("ffmpeg, yt-dlp, ImageMagick 등 CLI 도구를 Skill로 래핑합니다") + "\n" +
+        title("CLI 도구 개념  —  터미널 명령 실행 원리") + "\n" +
+        sub("Claude Code가 subprocess로 터미널 명령어를 직접 실행합니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "Skill 래핑 패턴") + "\n" +
-        body(308, "SKILL.md: '사용법 — 비디오 파일을 MP3로 변환해줘'  (에이전트 트리거)", mono=True, size=16, color="#374151") + "\n" +
-        body(344, "run.py:  subprocess.run(['ffmpeg', '-i', input, output])  CLI 호출", mono=True, size=16, color="#374151") + "\n" +
-        divider(386) + "\n" +
-        label(426, "활용 예시") + "\n" +
-        body(464, "ffmpeg Skill     —  동영상 변환·편집·썸네일 추출") + "\n" +
-        body(504, "yt-dlp Skill     —  YouTube 영상·음원 다운로드") + "\n" +
-        body(540, "ImageMagick Skill  —  이미지 리사이즈·포맷 변환·합성") + "\n" +
-        footer_light("CLI 도구 + Skill = 에이전트 명령 한 줄로 복잡한 처리 자동화")
+        label(264, "subprocess  /  os.system") + "\n" +
+        body(308, "import subprocess, os", mono=True, size=16, color="#374151") + "\n" +
+        body(344, "subprocess.run(['python', 'script.py', '--input', 'data.csv'])", mono=True, size=16, color="#374151") + "\n" +
+        body(380, "result = subprocess.check_output(['ls', '-la'], text=True)  # 출력 캡처", mono=True, size=16, color="#374151") + "\n" +
+        body(416, "os.system('mkdir -p output && mv *.png output/')  # 셸 명령 직접 실행", mono=True, size=16, color="#374151") + "\n" +
+        divider(452) + "\n" +
+        label(492, "실용 예제") + "\n" +
+        body(530, "파일 정리:  확장자별 자동 분류  ->  폴더 이동  ->  결과 보고") + "\n" +
+        body(560, "배치 처리:  폴더 내 이미지 전체 리사이즈  ->  완료 파일 목록 출력") + "\n" +
+        footer_light("Claude Code = 에이전트 + 터미널 — 명령 실행과 코드 작성을 동시에")
     ),
-    # 05: 실습 — API 조합 콘텐츠 자동 생성 파이프라인
+    # 05: 통합 실습 — NanoBanana 생성 -> Gemini 분석 -> 파일 저장
     "05": lambda: wrap(
         badge() + "\n" +
-        title("실습  —  콘텐츠 자동 생성 파이프라인") + "\n" +
+        title("통합 실습  —  이미지 생성 · 분석 · 저장 파이프라인") + "\n" +
         divider(180) + "\n" +
-        label(224, "실습 목표: 이미지 + 텍스트 콘텐츠 동시 생성") + "\n" +
-        body(262, "1  Gemini API로 주제에 맞는 이미지 프롬프트 + 설명 텍스트 생성") + "\n" +
-        body(302, "2  NanoBanana API Skill로 최적화된 프롬프트로 이미지 자동 생성") + "\n" +
-        body(342, "3  생성된 이미지와 텍스트를 지정 폴더에 함께 저장") + "\n" +
+        label(224, "실습 흐름") + "\n" +
+        body(262, "1  NanoBanana API Skill로 프롬프트 입력  ->  AI 이미지 PNG 저장") + "\n" +
+        body(302, "2  저장된 이미지를 Gemini 멀티모달로 분석  ->  설명 텍스트 생성") + "\n" +
+        body(342, "3  분석 결과를 result.txt로 저장  /  이미지 + 텍스트 함께 관리") + "\n" +
         divider(384) + "\n" +
         label(424, "실습 에이전트 명령") + "\n" +
-        body(462, "'SNS용 AI 아트 콘텐츠를 만들어줘. Gemini로 주제에 맞는", color="#1d4ed8") + "\n" +
-        body(498, " 이미지 프롬프트와 캡션을 생성하고, 이미지 생성 Skill로", color="#1d4ed8") + "\n" +
-        body(534, " 이미지를 만들어 결과를 함께 저장해줘'", color="#1d4ed8") + "\n" +
-        footer("여러 외부 API를 조합하면 Claude가 완성도 높은 콘텐츠를 자동 생성합니다")
+        body(462, "'노을 지는 바다 이미지를 NanoBanana로 생성하고,", color="#1d4ed8") + "\n" +
+        body(498, " 생성된 이미지를 Gemini로 분석해서 설명을 result.txt에", color="#1d4ed8") + "\n" +
+        body(534, " 저장해줘'", color="#1d4ed8") + "\n" +
+        footer("이미지 생성 + AI 분석 + 파일 저장을 에이전트 명령 하나로 완성")
     ),
 }
 

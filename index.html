@@ -1044,16 +1044,16 @@
                     },
                     {
                         num: 4, title: '외부 API 연동 2: AI이미지 + Gemini + CLI', hours: '2시간 · Tool & Automation',
-                        goal: 'NanoBanana API로 이미지 생성 Skill을 제작하고, Gemini API 멀티모달과 CLI 도구 래핑 패턴을 익혀 콘텐츠 자동 생성 파이프라인을 완성한다.',
-                        topics: ['NanoBanana API: AI 이미지 생성 Skill 제작', 'Gemini API: 텍스트 분석 + 멀티모달 (이미지 분석)', 'CLI 도구 연동: 외부 CLI 프로그램을 Skill로 래핑', '실습: API 조합으로 이미지+텍스트 콘텐츠 자동 생성'],
-                        practice: 'Gemini API로 이미지 프롬프트와 캡션을 생성하고, NanoBanana API Skill로 이미지를 자동 생성하여 결과를 함께 저장하는 콘텐츠 파이프라인을 완성한다.',
+                        goal: 'NanoBanana API로 이미지를 생성하고, Gemini API 멀티모달로 이미지를 분석하며, subprocess로 터미널 명령을 실행하는 원리를 익혀 통합 파이프라인을 완성한다.',
+                        topics: ['NanoBanana API: AI 이미지 생성 Skill 제작', 'Gemini API: gemini-2.0-flash + 멀티모달 이미지 분석', 'CLI 도구 개념: subprocess/os.system + 파일 정리·배치 처리', '통합 실습: 이미지 생성 → Gemini 분석 → 결과 파일 저장'],
+                        practice: 'NanoBanana API로 AI 이미지를 생성하고, 생성된 이미지를 Gemini 멀티모달로 분석하여 설명 텍스트를 result.txt에 저장하는 파이프라인을 완성한다.',
                         slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
                         slideDescs: [
-            { goal: 'ADV 4 목표와 오늘 배울 내용을 안내한다.', topics: ['NanoBanana API 이미지 생성 Skill', 'Gemini API 텍스트·멀티모달', 'CLI 도구 연동 개념', '실습: 콘텐츠 자동 생성 파이프라인'], practice: null },
+            { goal: 'ADV 4 목표와 오늘 배울 내용을 안내한다.', topics: ['NanoBanana API 이미지 생성 Skill', 'Gemini API 텍스트·멀티모달', 'CLI 도구 개념 (subprocess/os.system)', '통합 실습: 생성→분석→저장 파이프라인'], practice: null },
             { goal: 'NanoBanana API를 Skill로 감싸 이미지 생성 자동화를 구현한다.', topics: ['SKILL.md 진입점 + scripts/run.py 구조', 'os.getenv("NANOBANANA_API_KEY") 환경변수 관리', 'requests.post() API 호출', 'base64 디코딩 + 타임스탬프 PNG 저장'], practice: null },
-            { goal: 'Gemini API로 텍스트 분석과 멀티모달(이미지 분석)을 구현한다.', topics: ['pip install google-generativeai + GEMINI_API_KEY', 'genai.GenerativeModel("gemini-2.0-flash")', 'generate_content() 텍스트 생성', '이미지+텍스트 멀티모달 호출 패턴'], practice: null },
-            { goal: '외부 CLI 도구를 Skill로 래핑하는 패턴을 익힌다.', topics: ['SKILL.md 사용법 정의 → 에이전트 트리거', 'subprocess.run([CLI 명령어, 인자])로 CLI 호출', 'ffmpeg Skill: 동영상 변환·편집·썸네일', 'yt-dlp / ImageMagick Skill 구성 예시'], practice: null },
-            { goal: 'API를 조합하여 콘텐츠 자동 생성 파이프라인을 완성한다.', topics: ['Gemini로 이미지 프롬프트 + 캡션 생성', 'NanoBanana Skill로 이미지 자동 생성', '이미지 + 텍스트 결과 폴더 저장', '에이전트 명령 하나로 전체 파이프라인 실행'], practice: 'Gemini API로 이미지 프롬프트와 캡션을 생성하고, NanoBanana API Skill로 이미지를 자동 생성하여 결과를 함께 저장하는 콘텐츠 파이프라인을 완성한다.' }
+            { goal: 'Gemini API로 텍스트 생성과 멀티모달 이미지 분석을 구현한다.', topics: ['pip install google-generativeai + GEMINI_API_KEY', 'genai.GenerativeModel("gemini-2.0-flash")', 'generate_content() 텍스트 생성', 'PIL.Image.open() + 이미지+텍스트 멀티모달 분석'], practice: null },
+            { goal: 'Claude Code가 터미널 명령을 실행하는 원리를 이해한다.', topics: ['subprocess.run([명령어, 인자]) 터미널 실행', 'subprocess.check_output() 출력 캡처', 'os.system() 셸 명령 실행', '파일 정리·배치 처리 실용 예제'], practice: null },
+            { goal: 'NanoBanana → Gemini 분석 → 파일 저장 통합 파이프라인을 완성한다.', topics: ['NanoBanana Skill로 이미지 PNG 생성', '저장된 이미지를 Gemini 멀티모달로 분석', '분석 결과를 result.txt로 저장', '에이전트 명령 하나로 전체 흐름 실행'], practice: 'NanoBanana API로 AI 이미지를 생성하고, 생성된 이미지를 Gemini 멀티모달로 분석하여 설명 텍스트를 result.txt에 저장하는 파이프라인을 완성한다.' }
                         ]
                     },
                     {
