@@ -1044,16 +1044,16 @@
                     },
                     {
                         num: 4, title: '외부 API 연동 2: AI이미지 + Gemini + CLI', hours: '2시간 · Tool & Automation',
-                        goal: '이미지 생성 API Skill을 제작하고, Gemini API와 연결하여 CLI 파이프라인으로 복합 자동화를 구현한다.',
-                        topics: ['이미지 생성 API Skill 제작', 'Gemini API 연동 (google-generativeai)', 'CLI 파이프라인 통합', '복합 실습: Gemini -> 이미지 자동 생성'],
-                        practice: '주제 입력만으로 Gemini가 이미지 프롬프트를 최적화하고, 이미지 생성 API로 결과물을 자동 생성하여 저장하는 파이프라인을 완성한다.',
+                        goal: 'NanoBanana API로 이미지 생성 Skill을 제작하고, Gemini API 멀티모달과 CLI 도구 래핑 패턴을 익혀 콘텐츠 자동 생성 파이프라인을 완성한다.',
+                        topics: ['NanoBanana API: AI 이미지 생성 Skill 제작', 'Gemini API: 텍스트 분석 + 멀티모달 (이미지 분석)', 'CLI 도구 연동: 외부 CLI 프로그램을 Skill로 래핑', '실습: API 조합으로 이미지+텍스트 콘텐츠 자동 생성'],
+                        practice: 'Gemini API로 이미지 프롬프트와 캡션을 생성하고, NanoBanana API Skill로 이미지를 자동 생성하여 결과를 함께 저장하는 콘텐츠 파이프라인을 완성한다.',
                         slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
                         slideDescs: [
-            { goal: 'ADV 4 목표와 오늘 배울 내용을 안내한다.', topics: ['이미지 생성 API Skill', 'Gemini API 연동', 'CLI 파이프라인 통합', '복합 실습'], practice: null },
-            { goal: '이미지 생성 API Skill을 제작한다.', topics: ['SKILL.md + Python 스크립트 구조', 'os.getenv()로 API 키 로드', 'requests.post() API 호출', 'base64 디코딩 + 타임스탬프 파일 저장'], practice: null },
-            { goal: 'Gemini API를 Python에서 직접 호출한다.', topics: ['pip install google-generativeai', 'Google AI Studio API 키 발급', 'genai.GenerativeModel 초기화', 'generate_content() 호출 + resp.text 추출'], practice: null },
-            { goal: '여러 API를 하나의 CLI 파이프라인으로 통합한다.', topics: ['Claude -> Gemini -> 이미지 API 흐름', '단계별 결과를 다음 입력으로 전달', '모델별 강점 활용 패턴', '파이프라인 스크립트 구성'], practice: null },
-            { goal: '복합 실습으로 전체 파이프라인을 완성한다.', topics: ['주제 -> Gemini 프롬프트 최적화', '이미지 생성 API 호출', 'Discord Webhook 전송', '심화 Skills 4강 전체 복습'], practice: '주제 입력만으로 Gemini가 이미지 프롬프트를 최적화하고, 이미지 생성 API로 결과물을 자동 생성하여 저장하는 파이프라인을 완성한다.' }
+            { goal: 'ADV 4 목표와 오늘 배울 내용을 안내한다.', topics: ['NanoBanana API 이미지 생성 Skill', 'Gemini API 텍스트·멀티모달', 'CLI 도구 연동 개념', '실습: 콘텐츠 자동 생성 파이프라인'], practice: null },
+            { goal: 'NanoBanana API를 Skill로 감싸 이미지 생성 자동화를 구현한다.', topics: ['SKILL.md 진입점 + scripts/run.py 구조', 'os.getenv("NANOBANANA_API_KEY") 환경변수 관리', 'requests.post() API 호출', 'base64 디코딩 + 타임스탬프 PNG 저장'], practice: null },
+            { goal: 'Gemini API로 텍스트 분석과 멀티모달(이미지 분석)을 구현한다.', topics: ['pip install google-generativeai + GEMINI_API_KEY', 'genai.GenerativeModel("gemini-2.0-flash")', 'generate_content() 텍스트 생성', '이미지+텍스트 멀티모달 호출 패턴'], practice: null },
+            { goal: '외부 CLI 도구를 Skill로 래핑하는 패턴을 익힌다.', topics: ['SKILL.md 사용법 정의 → 에이전트 트리거', 'subprocess.run([CLI 명령어, 인자])로 CLI 호출', 'ffmpeg Skill: 동영상 변환·편집·썸네일', 'yt-dlp / ImageMagick Skill 구성 예시'], practice: null },
+            { goal: 'API를 조합하여 콘텐츠 자동 생성 파이프라인을 완성한다.', topics: ['Gemini로 이미지 프롬프트 + 캡션 생성', 'NanoBanana Skill로 이미지 자동 생성', '이미지 + 텍스트 결과 폴더 저장', '에이전트 명령 하나로 전체 파이프라인 실행'], practice: 'Gemini API로 이미지 프롬프트와 캡션을 생성하고, NanoBanana API Skill로 이미지를 자동 생성하여 결과를 함께 저장하는 콘텐츠 파이프라인을 완성한다.' }
                         ]
                     },
                     {

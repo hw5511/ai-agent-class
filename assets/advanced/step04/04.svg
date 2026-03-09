@@ -2,17 +2,17 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 04</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">CLI 파이프라인 통합</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">여러 API 호출을 하나의 스크립트로 연결합니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">CLI 도구 연동  —  외부 CLI를 Skill로 감싸기</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">ffmpeg, yt-dlp, ImageMagick 등 CLI 도구를 Skill로 래핑합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">통합 흐름</text>
-  <text x="60" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Claude (claude -p)  -&gt;  Gemini  -&gt;  이미지 생성 API  -&gt;  저장</text>
-  <text x="60" y="354" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">각 단계 결과를 다음 단계의 입력으로 전달하는 파이프라인 구성</text>
-  <line x1="60" y1="400" x2="1220" y2="400" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="440" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실용 패턴</text>
-  <text x="60" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Claude로 아이디어 구체화  -&gt;  Gemini로 이미지 프롬프트 최적화</text>
-  <text x="60" y="518" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">이미지 생성 API로 최종 이미지 생성  -&gt;  폴더에 자동 저장</text>
-  <line x1="60" y1="554" x2="1220" y2="554" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Skill 래핑 패턴</text>
+  <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">SKILL.md: '사용법 — 비디오 파일을 MP3로 변환해줘'  (에이전트 트리거)</text>
+  <text x="60" y="344" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">run.py:  subprocess.run(['ffmpeg', '-i', input, output])  CLI 호출</text>
+  <line x1="60" y1="386" x2="1220" y2="386" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="426" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">활용 예시</text>
+  <text x="60" y="464" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">ffmpeg Skill     —  동영상 변환·편집·썸네일 추출</text>
+  <text x="60" y="504" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">yt-dlp Skill     —  YouTube 영상·음원 다운로드</text>
+  <text x="60" y="540" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">ImageMagick Skill  —  이미지 리사이즈·포맷 변환·합성</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">모델마다 강점이 다름  —  용도에 맞게 선택적으로 활용</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">CLI 도구 + Skill = 에이전트 명령 한 줄로 복잡한 처리 자동화</text>
 </svg>

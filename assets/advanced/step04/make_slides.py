@@ -74,77 +74,76 @@ slides = {
     "01": lambda: wrap(
         badge() + "\n" +
         title("외부 API 연동 2  —  AI이미지 + Gemini + CLI") + "\n" +
-        sub("이미지 생성 API와 Gemini를 CLI 파이프라인으로 연결합니다") + "\n" +
+        sub("다양한 외부 API를 Skill로 감싸 파이프라인으로 연결합니다") + "\n" +
         divider(212) + "\n" +
         label(264, "TODAY") + "\n" +
-        body(308, "이미지 생성 API Skill  /  Gemini API 연동") + "\n" +
-        body(354, "CLI 파이프라인 통합  /  복합 실습 (Gemini -> 이미지 자동 생성)") + "\n" +
+        body(308, "NanoBanana API: AI 이미지 생성 자동화  /  Gemini API: 텍스트·멀티모달") + "\n" +
+        body(354, "CLI 도구 연동 개념  /  실습: 이미지 + 텍스트 콘텐츠 자동 생성 파이프라인") + "\n" +
         footer_light("VSCode 터미널 환경에서 진행합니다")
     ),
-    # 02: 이미지 생성 API Skill
+    # 02: NanoBanana API — AI 이미지 생성 Skill
     "02": lambda: wrap(
         badge() + "\n" +
-        title("이미지 생성 API  Skill") + "\n" +
-        sub("SKILL.md + Python 스크립트로 이미지 생성 API를 연결합니다") + "\n" +
+        title("NanoBanana API  —  AI 이미지 생성 Skill") + "\n" +
+        sub("SKILL.md + Python 스크립트로 이미지 생성 API를 Skill로 감쌉니다") + "\n" +
         divider(212) + "\n" +
         label(264, "Skill 구조") + "\n" +
-        body(308, ".claude/skills/image-gen/SKILL.md      진입점 정의", mono=True, color="#374151") + "\n" +
-        body(348, ".claude/skills/image-gen/scripts/run.py  실제 API 호출", mono=True, color="#374151") + "\n" +
-        divider(394) + "\n" +
-        label(434, "핵심 코드 흐름") + "\n" +
-        body(474, "1.  os.getenv()  로 API 키 로드", mono=True, color="#374151") + "\n" +
-        body(510, "2.  requests.post(url, headers=..., json={prompt})  호출", mono=True, color="#374151") + "\n" +
-        body(546, "3.  base64.b64decode()  디코딩  ->  타임스탬프 파일명으로 저장", mono=True, color="#374151") + "\n" +
+        body(308, ".claude/skills/image-gen/SKILL.md      진입점 · 사용법 정의", mono=True, size=16, color="#374151") + "\n" +
+        body(344, ".claude/skills/image-gen/scripts/run.py  NanoBanana API 호출", mono=True, size=16, color="#374151") + "\n" +
+        divider(386) + "\n" +
+        label(426, "핵심 코드 흐름") + "\n" +
+        body(464, "1.  os.getenv('NANOBANANA_API_KEY')  로 API 키 로드", mono=True, size=16, color="#374151") + "\n" +
+        body(500, "2.  requests.post(endpoint, headers=..., json={'prompt': prompt})", mono=True, size=16, color="#374151") + "\n" +
+        body(536, "3.  base64.b64decode(data)  ->  타임스탬프 파일명으로 PNG 저장", mono=True, size=16, color="#374151") + "\n" +
         footer_light("API 키는 환경변수로 관리 — 코드에 직접 입력 금지")
     ),
-    # 03: Gemini API 연동
+    # 03: Gemini API — 텍스트 분석 + 멀티모달
     "03": lambda: wrap(
         badge() + "\n" +
-        title("Gemini API 연동") + "\n" +
-        sub("Google의 Gemini 모델을 Python에서 직접 호출합니다") + "\n" +
+        title("Gemini API  —  텍스트 분석 + 멀티모달") + "\n" +
+        sub("Google AI Studio에서 API 키를 발급받아 Python에서 직접 호출합니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "설치 + API 키") + "\n" +
-        body(308, "pip install google-generativeai", mono=True, color="#374151") + "\n" +
-        body(348, "Google AI Studio  ->  API 키 발급  ->  환경변수 GEMINI_API_KEY 등록") + "\n" +
-        divider(394) + "\n" +
-        label(434, "기본 호출") + "\n" +
-        body(474, "import google.generativeai as genai", mono=True, color="#374151") + "\n" +
-        body(510, "genai.configure(api_key=os.getenv('GEMINI_API_KEY'))", mono=True, color="#374151") + "\n" +
-        body(546, "model = genai.GenerativeModel('gemini-2.0-flash')", mono=True, color="#374151") + "\n" +
-        body(582, "resp = model.generate_content('프롬프트')  # resp.text 로 결과 추출", mono=True, size=16, color="#374151") + "\n"
+        label(264, "설치 + 기본 텍스트 호출") + "\n" +
+        body(308, "pip install google-generativeai", mono=True, size=16, color="#374151") + "\n" +
+        body(344, "genai.configure(api_key=os.getenv('GEMINI_API_KEY'))", mono=True, size=16, color="#374151") + "\n" +
+        body(380, "model = genai.GenerativeModel('gemini-2.0-flash')", mono=True, size=16, color="#374151") + "\n" +
+        body(416, "resp = model.generate_content('프롬프트')  # resp.text 추출", mono=True, size=16, color="#374151") + "\n" +
+        divider(452) + "\n" +
+        label(492, "멀티모달  —  이미지 분석") + "\n" +
+        body(530, "img = PIL.Image.open('photo.jpg')", mono=True, size=16, color="#374151") + "\n" +
+        body(560, "resp = model.generate_content(['이 이미지를 설명해줘', img])  # 이미지+텍스트", mono=True, size=15, color="#374151") + "\n"
     ),
-    # 04: CLI 파이프라인 통합
+    # 04: CLI 도구 연동 개념 — 외부 CLI를 Skill로 감싸는 패턴
     "04": lambda: wrap(
         badge() + "\n" +
-        title("CLI 파이프라인 통합") + "\n" +
-        sub("여러 API 호출을 하나의 스크립트로 연결합니다") + "\n" +
+        title("CLI 도구 연동  —  외부 CLI를 Skill로 감싸기") + "\n" +
+        sub("ffmpeg, yt-dlp, ImageMagick 등 CLI 도구를 Skill로 래핑합니다") + "\n" +
         divider(212) + "\n" +
-        label(264, "통합 흐름") + "\n" +
-        body(308, "Claude (claude -p)  ->  Gemini  ->  이미지 생성 API  ->  저장") + "\n" +
-        body(354, "각 단계 결과를 다음 단계의 입력으로 전달하는 파이프라인 구성") + "\n" +
-        divider(400) + "\n" +
-        label(440, "실용 패턴") + "\n" +
-        body(478, "Claude로 아이디어 구체화  ->  Gemini로 이미지 프롬프트 최적화") + "\n" +
-        body(518, "이미지 생성 API로 최종 이미지 생성  ->  폴더에 자동 저장") + "\n" +
-        divider(554) + "\n" +
-        footer_light("모델마다 강점이 다름  —  용도에 맞게 선택적으로 활용")
+        label(264, "Skill 래핑 패턴") + "\n" +
+        body(308, "SKILL.md: '사용법 — 비디오 파일을 MP3로 변환해줘'  (에이전트 트리거)", mono=True, size=16, color="#374151") + "\n" +
+        body(344, "run.py:  subprocess.run(['ffmpeg', '-i', input, output])  CLI 호출", mono=True, size=16, color="#374151") + "\n" +
+        divider(386) + "\n" +
+        label(426, "활용 예시") + "\n" +
+        body(464, "ffmpeg Skill     —  동영상 변환·편집·썸네일 추출") + "\n" +
+        body(504, "yt-dlp Skill     —  YouTube 영상·음원 다운로드") + "\n" +
+        body(540, "ImageMagick Skill  —  이미지 리사이즈·포맷 변환·합성") + "\n" +
+        footer_light("CLI 도구 + Skill = 에이전트 명령 한 줄로 복잡한 처리 자동화")
     ),
-    # 05: 복합 실습
+    # 05: 실습 — API 조합 콘텐츠 자동 생성 파이프라인
     "05": lambda: wrap(
         badge() + "\n" +
-        title("복합 실습") + "\n" +
+        title("실습  —  콘텐츠 자동 생성 파이프라인") + "\n" +
         divider(180) + "\n" +
-        label(224, "실습 목표") + "\n" +
-        body(262, "주제 입력  ->  Gemini로 이미지 프롬프트 생성  ->  이미지 API로 생성") + "\n" +
-        body(302, "결과 폴더에 자동 저장  ->  Discord Webhook으로 이미지 전송") + "\n" +
-        divider(346) + "\n" +
-        label(390, "실습 프롬프트") + "\n" +
-        body(428, "'SNS용 AI 아트 이미지를 자동으로 만들어줘.", color="#1d4ed8") + "\n" +
-        body(464, " Gemini로 프롬프트를 먼저 최적화하고, 이미지 생성 Skill로", color="#1d4ed8") + "\n" +
-        body(500, " 이미지를 생성한 뒤 저장해줘'", color="#1d4ed8") + "\n" +
-        divider(536) + "\n" +
-        body(566, "심화 Skills 4강  —  문서·웹·GCP·AI이미지+Gemini 연동 완성") + "\n" +
-        footer("여러 외부 API를 하나의 파이프라인으로 연결하면 강력해집니다")
+        label(224, "실습 목표: 이미지 + 텍스트 콘텐츠 동시 생성") + "\n" +
+        body(262, "1  Gemini API로 주제에 맞는 이미지 프롬프트 + 설명 텍스트 생성") + "\n" +
+        body(302, "2  NanoBanana API Skill로 최적화된 프롬프트로 이미지 자동 생성") + "\n" +
+        body(342, "3  생성된 이미지와 텍스트를 지정 폴더에 함께 저장") + "\n" +
+        divider(384) + "\n" +
+        label(424, "실습 에이전트 명령") + "\n" +
+        body(462, "'SNS용 AI 아트 콘텐츠를 만들어줘. Gemini로 주제에 맞는", color="#1d4ed8") + "\n" +
+        body(498, " 이미지 프롬프트와 캡션을 생성하고, 이미지 생성 Skill로", color="#1d4ed8") + "\n" +
+        body(534, " 이미지를 만들어 결과를 함께 저장해줘'", color="#1d4ed8") + "\n" +
+        footer("여러 외부 API를 조합하면 Claude가 완성도 높은 콘텐츠를 자동 생성합니다")
     ),
 }
 
