@@ -107,8 +107,8 @@ slides = {
         body(308, ".txt  .md  .py  .js  .html  .css  .json  .csv  ...") + "\n" +
         label(374, "이미지 파일") + "\n" +
         body(418, ".jpg  .png  .gif  .webp  —  내용을 보고 분석 가능") + "\n" +
-        label(484, "기타") + "\n" +
-        body(524, ".pdf  (텍스트 추출)  /  .ipynb  (Jupyter 노트북)") + "\n" +
+        label(484, "PDF") + "\n" +
+        body(524, ".pdf  —  실제 내용 분석 가능  (최대 100페이지  /  20MB)") + "\n" +
         footer("확장자 제한 없이 대부분의 텍스트 기반 파일 지원")
     ),
     # 07: Write 툴 (구 11)

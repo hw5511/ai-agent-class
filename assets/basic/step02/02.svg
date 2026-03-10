@@ -23,6 +23,18 @@
   <text x="60" y="466" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">적용 범위</text>
   <text x="60" y="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">해당 폴더에서 실행되는 모든 Claude 세션에 적용</text>
 
+  <!-- 문서 아이콘 (우측 상단) -->
+  <path d="M 860 44 L 1020 44 L 1070 94 L 1070 310 Q 1070 322 1058 322 L 872 322 Q 860 322 860 310 Z" fill="#f9fafb" stroke="#d1d5db" stroke-width="2"/>
+  <polygon points="1020,44 1070,94 1020,94" fill="#e5e7eb"/>
+  <path d="M 1020 44 L 1020 94 L 1070 94" fill="none" stroke="#d1d5db" stroke-width="2"/>
+  <rect x="892" y="118" width="120" height="8" rx="4" fill="#d1d5db"/>
+  <rect x="892" y="142" width="148" height="8" rx="4" fill="#d1d5db"/>
+  <rect x="892" y="166" width="132" height="8" rx="4" fill="#d1d5db"/>
+  <rect x="892" y="190" width="106" height="8" rx="4" fill="#d1d5db"/>
+  <rect x="892" y="214" width="138" height="8" rx="4" fill="#d1d5db"/>
+  <rect x="892" y="238" width="116" height="8" rx="4" fill="#d1d5db"/>
+  <text x="965" y="358" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" fill="#374151">CLAUDE.md</text>
+
   <!-- 핵심 문장 -->
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#171717"/>
   <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">이름 · 역할 · 규칙을 여기에 적으면 에이전트가 그대로 따릅니다</text>

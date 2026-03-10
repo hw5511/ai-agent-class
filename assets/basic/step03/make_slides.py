@@ -14,6 +14,9 @@ def badge():
 def divider(y):
     return f'  <line x1="60" y1="{y}" x2="1220" y2="{y}" stroke="#e5e7eb" stroke-width="1"/>'
 
+def vdivider(x, y1=224, y2=554):
+    return f'  <line x1="{x}" y1="{y1}" x2="{x}" y2="{y2}" stroke="#e5e7eb" stroke-width="1"/>'
+
 def wrap(inner):
     return (
         '<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">\n'
@@ -22,15 +25,15 @@ def wrap(inner):
         '\n</svg>\n'
     )
 
-def label(y, text):
+def label(y, text, x=60):
     return (
-        f'  <text x="60" y="{y}" font-family="{FONT}" font-size="14" font-weight="600" '
+        f'  <text x="{x}" y="{y}" font-family="{FONT}" font-size="14" font-weight="600" '
         f'fill="#9ca3af" letter-spacing="0.08em">{text}</text>'
     )
 
-def body(y, text, mono=False, size=19, color="#374151"):
+def body(y, text, mono=False, size=19, color="#374151", x=60):
     ff = MONO if mono else FONT
-    return f'  <text x="60" y="{y}" font-family="{ff}" font-size="{size}" fill="{color}">{text}</text>'
+    return f'  <text x="{x}" y="{y}" font-family="{ff}" font-size="{size}" fill="{color}">{text}</text>'
 
 def title(text, y=130, size=40):
     return (
@@ -55,6 +58,7 @@ def footer_light(text):
         f'font-size="15" fill="#6b7280">{text}</text>'
     )
 
+
 slides = {
     # 01: 오프닝
     "01": lambda: wrap(
@@ -64,8 +68,8 @@ slides = {
         divider(212) + "\n" +
         label(264, "TODAY") + "\n" +
         body(308, "보안 설정    /    settings.json") + "\n" +
-        body(354, "권한 모드    /    주요 슬래시 명령어") + "\n" +
-        body(400, "웹 Search 툴    /    Todos · Tasks") + "\n" +
+        body(354, "권한 모드  (일반 · 편집자동승인 · 플랜)    /    욜로 모드") + "\n" +
+        body(400, "/model  (Haiku · Sonnet · Opus)    /    웹 Search    /    Todos") + "\n" +
         footer_light("VSCode 터미널 환경에서 진행합니다")
     ),
     # 02: 보안 설정
@@ -79,8 +83,8 @@ slides = {
         body(354, "상위 폴더 쓰기는 명시적 허가 필요") + "\n" +
         divider(410) + "\n" +
         label(450, "개인정보 설정 해제") + "\n" +
-        body(492, "claude.ai/settings/data-privacy-controls  접속", mono=True, color="#374151") + "\n" +
-        body(534, "위치 메타데이터  +  Claude 개선에 도움주기  —  두 항목 모두 해제") + "\n" +
+        body(492, "https://claude.ai/settings/data-privacy-controls", mono=True, size=16, color="#1d4ed8") + "\n" +
+        body(532, "위치 메타데이터  +  Claude 개선에 도움주기  —  두 항목 모두 해제") + "\n" +
         footer_light("Free · Pro · Max 모두 위 페이지에서 직접 설정 가능")
     ),
     # 03: settings.json
@@ -99,24 +103,40 @@ slides = {
         body(540, " CLAUDE.md 지침에 rm 대신 archive 폴더로 이동하도록 추가해줘'", color="#1d4ed8") + "\n" +
         footer_light("차단 규칙은 허용 규칙보다 항상 먼저 적용됩니다")
     ),
-    # 04: 권한 모드 / esc
+    # 04: 권한 모드 (일반 / 편집자동승인 / 플랜)
     "04": lambda: wrap(
         badge() + "\n" +
-        title("권한 모드  /  단축키") + "\n" +
-        divider(180) + "\n" +
-        label(230, "Shift + Tab") + "\n" +
-        body(268, "권한 모드를 순환 전환") + "\n" +
-        body(306, "일반 모드  ->  편집 자동 승인  ->  플랜 모드  ->  일반 모드") + "\n" +
+        title("권한 모드  (Shift+Tab 순환)") + "\n" +
+        sub("세 가지 모드를 상황에 맞게 선택합니다") + "\n" +
+        divider(212) + "\n" +
+        label(264, "일반 모드  (기본값)") + "\n" +
+        body(308, "파일 편집 · 터미널 명령 실행 전 매번 승인 요청") + "\n" +
         divider(350) + "\n" +
-        label(396, "Esc") + "\n" +
-        body(432, "실행 중인 응답 중단  /  프롬프트 종료") + "\n" +
-        divider(476) + "\n" +
-        label(516, "욜로 모드  (YOLO Mode)") + "\n" +
-        body(552, "--dangerously-skip-permissions  —  모든 권한 확인을 건너뜀", mono=True, color="#dc2626") + "\n" +
-        footer_light("욜로 모드는 격리된 테스트 환경에서만 사용 — 실서버 절대 금지")
+        label(390, "편집 자동 승인 모드") + "\n" +
+        body(430, "파일 편집은 자동 승인  /  터미널 명령은 여전히 확인 요청") + "\n" +
+        divider(470) + "\n" +
+        label(510, "플랜 모드") + "\n" +
+        body(548, "'추천 선택지 중 선택할 수 있게 해줘'  →  선택지를 제공해 줌", color="#1d4ed8") + "\n" +
+        footer_light("Shift+Tab으로 순환  /  Esc — 현재 응답 중단")
     ),
-    # 05: 핵심 슬래시 명령어
+    # 05: 욜로 모드
     "05": lambda: wrap(
+        badge() + "\n" +
+        title("욜로 모드  (YOLO Mode)") + "\n" +
+        sub("모든 권한 확인을 건너뛰고 자동 실행  —  격리 환경에서만 사용") + "\n" +
+        divider(212) + "\n" +
+        label(264, "실행 방법  (일반 모드 진입 후 변경 불가 — 처음부터 이 인자로 실행)") + "\n" +
+        body(308, "claude --dangerously-skip-permissions", mono=True, size=22, color="#dc2626") + "\n" +
+        divider(354) + "\n" +
+        label(394, "종료 방법") + "\n" +
+        body(434, "1.  /exit  입력  (Claude 대화 안에서 종료)") + "\n" +
+        body(474, "2.  Ctrl+C  연타  (강제 종료)") + "\n" +
+        divider(514) + "\n" +
+        body(548, "종료 후 터미널에서  위쪽 방향키  →  이전 명령어 바로 재실행", color="#6b7280", size=17) + "\n" +
+        footer_light("욜로 모드는 실서버 · 실제 파일 환경에서 절대 사용 금지")
+    ),
+    # 06: 주요 슬래시 명령어 (기존 05)
+    "06": lambda: wrap(
         badge() + "\n" +
         title("주요 슬래시 명령어") + "\n" +
         divider(180) + "\n" +
@@ -127,8 +147,36 @@ slides = {
         body(486, "/help           사용 가능한 명령어 전체 목록", size=20, color="#171717") + "\n" +
         footer_light("종료: Ctrl+C  또는  빈 프롬프트에서 Esc")
     ),
-    # 06: 웹 Search 툴
-    "06": lambda: wrap(
+    # 07: /model — Haiku / Sonnet / Opus (가로 3단)
+    "07": lambda: wrap(
+        badge() + "\n" +
+        title("/model  —  Claude 모델 선택") + "\n" +
+        sub("Haiku · Sonnet · Opus  —  상황에 맞는 모델을 선택합니다") + "\n" +
+        divider(212) + "\n" +
+        vdivider(447) + "\n" +
+        vdivider(834) + "\n" +
+        # 칼럼 1: Haiku
+        f'  <text x="254" y="268" text-anchor="middle" font-family="{FONT}" font-size="24" font-weight="700" fill="#171717">Haiku 4.5</text>\n' +
+        f'  <text x="254" y="302" text-anchor="middle" font-family="{FONT}" font-size="15" fill="#6b7280">가장 빠름</text>\n' +
+        body(360, "간단한 질문 · 요약", x=100) + "\n" +
+        body(396, "반복 · 대량 작업", x=100) + "\n" +
+        body(432, "빠른 응답 필요", x=100) + "\n" +
+        # 칼럼 2: Sonnet
+        f'  <text x="640" y="268" text-anchor="middle" font-family="{FONT}" font-size="24" font-weight="700" fill="#171717">Sonnet 4.6</text>\n' +
+        f'  <text x="640" y="302" text-anchor="middle" font-family="{FONT}" font-size="15" fill="#6b7280">빠르고 강력 · 기본 모델</text>\n' +
+        body(360, "일상적인 코딩", x=487) + "\n" +
+        body(396, "일반 업무 자동화", x=487) + "\n" +
+        body(432, "대부분의 작업에 추천", x=487) + "\n" +
+        # 칼럼 3: Opus
+        f'  <text x="1027" y="268" text-anchor="middle" font-family="{FONT}" font-size="24" font-weight="700" fill="#171717">Opus 4.5</text>\n' +
+        f'  <text x="1027" y="302" text-anchor="middle" font-family="{FONT}" font-size="15" fill="#6b7280">최고 성능</text>\n' +
+        body(360, "복잡한 추론 · 분석", x=874) + "\n" +
+        body(396, "심화 코딩 · 아키텍처", x=874) + "\n" +
+        body(432, "장기 계획 · 의사결정", x=874) + "\n" +
+        footer_light("/model 입력 후 원하는 모델 선택  /  Ctrl+C로 취소")
+    ),
+    # 08: 웹 Search 툴 (기존 06) — 회색블록 문구 변경
+    "08": lambda: wrap(
         badge() + "\n" +
         title("웹 Search 툴") + "\n" +
         sub("Claude가 스스로 판단해 웹을 검색합니다") + "\n" +
@@ -138,10 +186,10 @@ slides = {
         label(390, "작동 방식") + "\n" +
         body(430, "질문에 최신 정보가 필요하면 Claude가 자동으로 검색") + "\n" +
         body(476, "검색 결과를 읽고 답변에 반영") + "\n" +
-        footer_light("Hooks에서 WebSearch 툴을 허용/차단 설정 가능")
+        footer_light("'ㅇㅇㅇ 주제에 대해 웹조사해줘'  라고 입력하면 자동으로 검색")
     ),
-    # 07: Todos / Tasks
-    "07": lambda: wrap(
+    # 09: Todos / Tasks (기존 07) — 회색블록 문구 변경
+    "09": lambda: wrap(
         badge() + "\n" +
         title("Todos  /  Tasks") + "\n" +
         sub("에이전트가 작업 목록을 스스로 관리합니다") + "\n" +
@@ -152,19 +200,20 @@ slides = {
         divider(410) + "\n" +
         label(450, "상태") + "\n" +
         body(490, "pending  →  in_progress  →  completed") + "\n" +
-        footer_light("~/.claude/tasks/ 에 저장 — 세션 종료 후에도 유지")
+        footer_light("'ㅇㅇㅇ 작업을 todo 리스트를 세워서 순차적으로 진행해줘'")
     ),
-    # 08: 정리
-    "08": lambda: wrap(
+    # 10: 정리 (기존 08)
+    "10": lambda: wrap(
         badge() + "\n" +
         title("정리") + "\n" +
         divider(180) + "\n" +
-        body(236, "보안 설정        파일 접근 범위 · 학습 opt-out", size=21, color="#171717") + "\n" +
-        body(282, "settings.json  3계층 설정 · permissions.deny/allow", size=21, color="#171717") + "\n" +
-        body(328, "권한 모드        Shift+Tab 순환 · Esc 중단", size=21, color="#171717") + "\n" +
-        body(374, "슬래시 명령어  /clear · /model · /login · /help", size=21, color="#171717") + "\n" +
-        body(420, "웹 Search       Claude가 자동 판단 실행", size=21, color="#171717") + "\n" +
-        body(466, "Todos             TodoWrite · TodoRead 내장 툴", size=21, color="#171717") + "\n" +
+        body(232, "보안 설정        파일 접근 범위 · 개인정보 opt-out", size=19, color="#171717") + "\n" +
+        body(270, "settings.json  3계층 설정 · permissions 제어", size=19, color="#171717") + "\n" +
+        body(308, "권한 모드        일반 · 편집자동승인 · 플랜  (Shift+Tab 순환)", size=19, color="#171717") + "\n" +
+        body(346, "욜로 모드        --dangerously-skip-permissions  (격리 환경 전용)", size=19, color="#171717") + "\n" +
+        body(384, "/model          Haiku · Sonnet · Opus 모델 선택", size=19, color="#171717") + "\n" +
+        body(422, "웹 Search       Claude가 자동 판단 실행", size=19, color="#171717") + "\n" +
+        body(460, "Todos             todo 리스트로 순차 작업 관리", size=19, color="#171717") + "\n" +
         footer("설정으로 에이전트의 권한과 동작을 직접 제어합니다")
     ),
 }

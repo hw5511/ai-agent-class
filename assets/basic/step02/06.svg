@@ -9,8 +9,8 @@
   <text x="60" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">.txt  .md  .py  .js  .html  .css  .json  .csv  ...</text>
   <text x="60" y="374" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">이미지 파일</text>
   <text x="60" y="418" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">.jpg  .png  .gif  .webp  —  내용을 보고 분석 가능</text>
-  <text x="60" y="484" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">기타</text>
-  <text x="60" y="524" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">.pdf  (텍스트 추출)  /  .ipynb  (Jupyter 노트북)</text>
+  <text x="60" y="484" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">PDF</text>
+  <text x="60" y="524" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">.pdf  —  실제 내용 분석 가능  (최대 100페이지  /  20MB)</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#171717"/>
   <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">확장자 제한 없이 대부분의 텍스트 기반 파일 지원</text>
 </svg>

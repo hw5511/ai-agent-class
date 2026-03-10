@@ -432,10 +432,88 @@
 
         .session-header {
             flex-shrink: 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
             margin-bottom: 0.875rem;
             padding-bottom: 0.875rem;
             border-bottom: 1px solid var(--border);
         }
+
+        .session-header-left {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .slide-action-box {
+            flex-shrink: 0;
+            min-width: 200px;
+            max-width: 260px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 0.625rem 0.875rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.375rem;
+        }
+
+        .slide-action-box:empty {
+            display: none;
+        }
+
+        .action-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--muted-fg);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .action-copy-row {
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 0.35rem 0.5rem;
+            cursor: pointer;
+        }
+
+        .action-copy-row:hover { background: #f0f4ff; }
+
+        .action-copy-code {
+            flex: 1;
+            font-family: var(--mono, monospace);
+            font-size: 12px;
+            color: #374151;
+            word-break: break-all;
+            line-height: 1.4;
+        }
+
+        .action-copy-btn {
+            flex-shrink: 0;
+            font-size: 11px;
+            color: #9ca3af;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .action-download-link {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 13px;
+            color: #1d4ed8;
+            text-decoration: none;
+            padding: 0.3rem 0;
+        }
+
+        .action-download-link:hover { text-decoration: underline; }
 
         .session-meta {
             display: flex;
@@ -894,7 +972,7 @@
             { goal: '/init 명령어의 역할을 이해한다.', topics: ['/init이란?', 'CLAUDE.md 자동 생성 흐름', '직접 작성 vs 자동 생성'], practice: null },
             { goal: '에이전트 메모리를 직접 확인하고 편집한다.', topics: ['/memory 명령어', 'Project Memory vs User Memory', '목록에서 파일 선택 편집'], practice: null },
             { goal: 'Auto Memory의 작동 원리를 이해한다.', topics: ['자동 메모리 저장 원리', 'Shift+Tab Auto-accept mode', '직접 기억 요청 방법'], practice: null },
-            { goal: 'Read 툴이 읽을 수 있는 파일 종류를 이해한다.', topics: ['텍스트 파일: txt·md·py·html 등', '이미지 파일: jpg·png·gif·webp', 'PDF·Jupyter 노트북'], practice: null },
+            { goal: 'Read 툴이 읽을 수 있는 파일 종류를 이해한다.', topics: ['텍스트 파일: txt·md·py·html 등', '이미지 파일: jpg·png·gif·webp', 'PDF — 실제 내용 분석 (최대 100페이지/20MB)'], practice: null },
             { goal: 'Write 툴의 역할을 이해한다.', topics: ['새 파일 생성·작성', '기존 파일 덮어쓰기 주의', 'Write vs Edit 차이'], practice: null },
             { goal: 'Edit 툴의 역할을 이해한다.', topics: ['기존 파일 일부 수정', '수정 전 내용 → 수정 후 내용', 'Read 후 Edit 순서'], practice: null },
             { goal: 'Bash 툴의 역할을 이해한다.', topics: ['컴퓨터 명령어 직접 실행', '폴더 생성·이름변경·복사·삭제', '프로그램 실행·패키지 설치'], practice: null },
@@ -904,19 +982,21 @@
                     },
                     {
                         num: 3, title: 'Claude Code 환경 설정과 기본 명령어', hours: '2시간',
-                        goal: 'Claude Code의 구독 플랜과 보안 설정을 이해하고, 핵심 CLI 명령어를 실습을 통해 익힌다.',
-                        topics: ['Claude 개인정보 보안 설정', 'Claude 설정 세팅 (파일 삭제 금지)', 'Bypass 모드 / esc / 사전 입력', '/clear, /login, /logout, /exit', '웹 Search 툴 사용하기', 'Todos 기능 / /todos 명령어'],
-                        practice: '개인 환경에 맞는 보안 설정을 직접 구성하고, 주요 명령어를 순서대로 실행해본다.',
-                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg','07.svg','08.svg'],
+                        goal: 'Claude Code의 보안 설정을 이해하고, 권한 모드·욜로 모드·모델 선택·주요 명령어를 실습을 통해 익힌다.',
+                        topics: ['Claude 개인정보 보안 설정', 'settings.json (파일 삭제 금지)', '권한 모드 (일반·편집자동승인·플랜)', '욜로 모드 / /model 모델 선택', '주요 슬래시 명령어', '웹 Search 툴 / Todos'],
+                        practice: '개인 환경에 맞는 보안 설정을 직접 구성하고, 권한 모드와 주요 명령어를 순서대로 실행해본다.',
+                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg','07.svg','08.svg','09.svg','10.svg'],
                         slideDescs: [
-            { goal: 'Step 3 목표와 오늘 배울 내용을 안내한다.', topics: ['보안 설정', 'settings.json', '권한 모드 · 단축키', '슬래시 명령어 · 웹 Search · Todos'], practice: null },
-            { goal: 'Claude Code의 파일 접근 범위와 개인정보 설정을 이해한다.', topics: ['파일 쓰기 범위 제한', '상위 폴더 접근 허가 방식', '학습 opt-out 설정 (플랜별)'], practice: null },
+            { goal: 'Step 3 목표와 오늘 배울 내용을 안내한다.', topics: ['보안 설정', 'settings.json', '권한 모드 · 욜로 모드', '/model · 슬래시 명령어 · 웹 Search · Todos'], practice: null },
+            { goal: 'Claude Code의 파일 접근 범위와 개인정보 설정을 이해한다.', topics: ['파일 쓰기 범위 제한', '상위 폴더 접근 허가 방식', '개인정보 opt-out 설정'], practice: null, action: { label: '설정 페이지', download: { href: 'https://claude.ai/settings/data-privacy-controls', text: 'claude.ai 설정 바로가기' } } },
             { goal: 'settings.json의 구조와 권한 설정 방법을 이해한다.', topics: ['3계층 설정 파일 (전역/프로젝트/로컬)', 'permissions.deny / permissions.allow', '파일 삭제 금지 설정 예시'], practice: null },
-            { goal: '권한 모드 전환과 주요 단축키를 이해한다.', topics: ['Shift+Tab 권한 모드 순환', 'Esc 실행 중단', '--dangerously-skip-permissions 플래그 (격리 환경 전용)'], practice: null },
-            { goal: '주요 슬래시 명령어의 역할을 파악한다.', topics: ['/clear · /compact (컨텍스트 관리)', '/context · /model', '/login · /logout · /help'], practice: null },
-            { goal: '웹 Search 툴의 동작 원리를 이해한다.', topics: ['사용자 명령 불필요 — Claude 자동 판단', '최신 정보 필요 시 자동 검색', 'Hooks에서 허용/차단 설정 가능'], practice: null },
-            { goal: 'Todos · Tasks 내장 툴을 이해한다.', topics: ['TodoWrite · TodoRead 내장 툴', 'pending → in_progress → completed', '~/.claude/tasks/ 영구 저장'], practice: null },
-            { goal: 'Step 3 전체 내용을 정리한다.', topics: ['보안 설정 · settings.json', '권한 모드 · 슬래시 명령어', '웹 Search · Todos'], practice: null }
+            { goal: '3가지 권한 모드의 차이를 이해하고 전환 방법을 익힌다.', topics: ['일반 모드 — 편집·명령 매번 승인', '편집 자동 승인 모드 — 파일 편집 자동', '플랜 모드 — 추천 선택지 중 선택'], practice: null },
+            { goal: '욜로 모드의 개념과 안전한 사용법을 이해한다.', topics: ['claude --dangerously-skip-permissions', '/exit 또는 Ctrl+C로 종료', '위쪽 방향키로 이전 명령 재실행'], practice: null, action: { label: '실행 명령어', copy: 'claude --dangerously-skip-permissions' } },
+            { goal: '주요 슬래시 명령어의 역할을 파악한다.', topics: ['/clear · /model · /login · /logout', '/help — 전체 명령어 목록', 'Ctrl+C 또는 Esc로 종료'], practice: null },
+            { goal: '상황에 맞는 Claude 모델을 선택하는 방법을 익힌다.', topics: ['Haiku 4.5 — 가장 빠름 (간단한 작업)', 'Sonnet 4.6 — 빠르고 강력 (기본 추천)', 'Opus 4.5 — 최고 성능 (복잡한 추론)'], practice: null },
+            { goal: '웹 Search 툴의 동작 원리를 이해한다.', topics: ['사용자 명령 불필요 — Claude 자동 판단', '최신 정보 필요 시 자동 검색', '"ㅇㅇㅇ 주제에 대해 웹조사해줘" 활용'], practice: null },
+            { goal: 'Todos · Tasks 내장 툴을 이해한다.', topics: ['TodoWrite · TodoRead 내장 툴', 'pending → in_progress → completed', '"ㅇㅇㅇ 작업을 todo 리스트를 세워서 순차적으로 진행해줘"'], practice: null },
+            { goal: 'Step 3 전체 내용을 정리한다.', topics: ['보안 설정 · settings.json', '권한 모드 · 욜로 모드 · /model', '웹 Search · Todos'], practice: null }
                         ]
                     },
                     {
@@ -1185,11 +1265,14 @@
                     <div class="session-inner">
 
                         <div class="session-header">
-                            <div class="session-meta">
-                                <span class="badge-${bc}">${data.badgeText} ${num}</span>
-                                <span class="badge-hours">${s.hours}</span>
+                            <div class="session-header-left">
+                                <div class="session-meta">
+                                    <span class="badge-${bc}">${data.badgeText} ${num}</span>
+                                    <span class="badge-hours">${s.hours}</span>
+                                </div>
+                                <h1 class="session-title">${s.title}</h1>
                             </div>
-                            <h1 class="session-title">${s.title}</h1>
+                            <div class="slide-action-box"></div>
                         </div>
 
                         <div class="session-body">
@@ -1397,6 +1480,30 @@
 
             const items = (sd && sd.topics) ? sd.topics : session.topics;
             if (topicsEl) topicsEl.innerHTML = items.map(t => `<li class="topic-item">${t}</li>`).join('');
+
+            const actionBox = activeEl.querySelector('.slide-action-box');
+            if (actionBox) {
+                const act = sd && sd.action;
+                if (act) {
+                    let html = '';
+                    if (act.label) html += `<div class="action-label">${act.label}</div>`;
+                    if (act.copy) {
+                        const escaped = act.copy.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+                        html += `<div class="action-copy-row" onclick="copyToClipboard('${escaped}', this)"><code class="action-copy-code">${act.copy}</code><span class="action-copy-btn">복사</span></div>`;
+                    }
+                    if (act.download) html += `<a class="action-download-link" href="${act.download.href}" target="_blank" rel="noopener">↓ ${act.download.text}</a>`;
+                    actionBox.innerHTML = html;
+                } else {
+                    actionBox.innerHTML = '';
+                }
+            }
+        }
+
+        function copyToClipboard(text, el) {
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = el.querySelector('.action-copy-btn');
+                if (btn) { btn.textContent = '완료'; setTimeout(() => { btn.textContent = '복사'; }, 1500); }
+            });
         }
 
         /* ============================================
