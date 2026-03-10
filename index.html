@@ -484,6 +484,13 @@
 
         .action-copy-row:hover { background: #f0f4ff; }
 
+        .action-item-desc {
+            font-size: 11px;
+            color: var(--muted-fg);
+            min-width: 36px;
+            flex-shrink: 0;
+        }
+
         .action-copy-code {
             flex: 1;
             font-family: var(--mono, monospace);
@@ -491,6 +498,9 @@
             color: #374151;
             word-break: break-all;
             line-height: 1.4;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .action-copy-btn {
@@ -906,7 +916,7 @@
                         goal: 'AI 에이전트의 개념을 이해하고, 3종 CLI 에이전트(Gemini, GPT Codex, Claude Code)를 직접 설치하여 동작을 확인한다.',
                         topics: ['AI 에이전트란? / 설치형 AI란?', 'Gemini CLI 설치 및 로그인', 'GPT CLI(Codex) 설치 및 로그인', 'Claude Code 설치 및 로그인', '세션 사용량 및 extra-usage'],
                         practice: '3종 에이전트를 모두 설치하고 동일한 질문을 입력해 응답 차이를 비교한다.',
-                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg','07.svg','08.svg','09.svg','10.svg','11.svg','12.svg','13.svg','14.svg','15.svg','16.svg','17.svg','18.svg','19.svg','20.svg','21.svg','22.svg','24.svg','25.svg','23.svg','26.svg'],
+                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg','07.svg','08.svg','09.svg','10.svg','11.svg','12.svg','13.svg','14.svg','15.svg','16.svg','17.svg','18.svg','19.svg','20.svg','21.svg','22.svg','24.svg','25.svg','23.svg'],
                         slideDescs: [
                             {
                                 goal: 'AI 에이전트의 개념과 SEE-THINK-PLAN-DO-FIX 동작 루프를 이해한다.',
@@ -957,7 +967,45 @@
                                 goal: 'Claude Code를 설치하고 Anthropic 계정으로 로그인한다.',
                                 topics: ['npm install -g @anthropic-ai/claude-code', 'claude 명령어 확인', 'Anthropic 계정 인증', '3종 에이전트 비교 테스트'],
                                 practice: '3종 에이전트에 동일한 질문을 입력하고 응답 방식의 차이를 비교한다.'
-                            }
+                            },
+                            { goal: null, topics: null, practice: null, action: { label: '설치 명령어', copy: 'winget install Git.Git' } },
+                            null,
+                            null,
+                            { goal: null, topics: null, practice: null, action: { label: '설치 명령어', copy: 'winget install OpenJS.NodeJS' } },
+                            null,
+                            { goal: null, topics: null, practice: null, action: { label: '명령어', items: [
+                                { desc: 'Homebrew 설치', copy: '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"' },
+                                { desc: '버전 확인', copy: 'brew --version' }
+                            ] } },
+                            { goal: null, topics: null, practice: null, action: { label: '명령어', items: [
+                                { desc: 'Node.js 설치', copy: 'brew install node' },
+                                { desc: '버전 확인', copy: 'node --version' }
+                            ] } },
+                            { goal: null, topics: null, practice: null, action: { label: '버전 확인', items: [
+                                { desc: 'Git', copy: 'git --version' },
+                                { desc: 'Node.js', copy: 'node --version' },
+                                { desc: 'npm', copy: 'npm --version' }
+                            ] } },
+                            null,
+                            { goal: null, topics: null, practice: null, action: { label: '실행 정책 변경', copy: 'Set-ExecutionPolicy RemoteSigned -Scope CurrentUser' } },
+                            null,
+                            { goal: null, topics: null, practice: null, action: { label: '버전 확인', items: [
+                                { desc: 'Git', copy: 'git --version' },
+                                { desc: 'Node.js', copy: 'node --version' },
+                                { desc: 'npm', copy: 'npm --version' }
+                            ] } },
+                            { goal: null, topics: null, practice: null, action: { label: '명령어', items: [
+                                { desc: '설치', copy: 'npm install -g @google/gemini-cli' },
+                                { desc: '확인', copy: 'gemini --version' }
+                            ] } },
+                            { goal: null, topics: null, practice: null, action: { label: '명령어', items: [
+                                { desc: '설치', copy: 'npm install -g @openai/codex' },
+                                { desc: '확인', copy: 'codex --version' }
+                            ] } },
+                            { goal: null, topics: null, practice: null, action: { label: '명령어', items: [
+                                { desc: '설치', copy: 'npm install -g @anthropic-ai/claude-code' },
+                                { desc: '확인', copy: 'claude --version' }
+                            ] } }
                         ]
                     },
                     {
@@ -1485,13 +1533,20 @@
             if (actionBox) {
                 const act = sd && sd.action;
                 if (act) {
+                    const enc = s => s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
                     let html = '';
                     if (act.label) html += `<div class="action-label">${act.label}</div>`;
                     if (act.copy) {
-                        const escaped = act.copy.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
-                        html += `<div class="action-copy-row" onclick="copyToClipboard('${escaped}', this)"><code class="action-copy-code">${act.copy}</code><span class="action-copy-btn">복사</span></div>`;
+                        html += `<div class="action-copy-row" data-copy="${enc(act.copy)}" onclick="copyToClipboard(this.dataset.copy,this)"><code class="action-copy-code">${enc(act.copy)}</code><span class="action-copy-btn">복사</span></div>`;
                     }
-                    if (act.download) html += `<a class="action-download-link" href="${act.download.href}" target="_blank" rel="noopener">↓ ${act.download.text}</a>`;
+                    if (act.items) {
+                        act.items.forEach(item => {
+                            html += `<div class="action-copy-row" data-copy="${enc(item.copy)}" onclick="copyToClipboard(this.dataset.copy,this)">`;
+                            if (item.desc) html += `<span class="action-item-desc">${item.desc}</span>`;
+                            html += `<code class="action-copy-code">${enc(item.copy)}</code><span class="action-copy-btn">복사</span></div>`;
+                        });
+                    }
+                    if (act.download) html += `<a class="action-download-link" href="${enc(act.download.href)}" target="_blank" rel="noopener">↓ ${act.download.text}</a>`;
                     actionBox.innerHTML = html;
                 } else {
                     actionBox.innerHTML = '';
