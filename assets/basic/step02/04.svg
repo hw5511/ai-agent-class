@@ -10,6 +10,7 @@
   <text x="60" y="390" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">메모리 종류</text>
   <text x="60" y="430" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Project Memory   CLAUDE.md  (현재 폴더)</text>
   <text x="60" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">User Memory      ~/.claude/CLAUDE.md  (전체 적용)</text>
+  <text x="60" y="522" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Auto Memory      ~/.claude/projects/&lt;project&gt;/memory/</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
   <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">목록에서 파일을 선택하면 바로 편집 가능</text>
 </svg>

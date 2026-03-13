@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 02</text>
+  <rect x="150" y="44" width="52" height="24" rx="12" fill="#fef3c7" stroke="#d1d5db" stroke-width="1"/>
+  <text x="176" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#d97706">실습</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="36" font-weight="700" fill="#171717">Read 실습</text>
+  <line x1="60" y1="160" x2="1220" y2="160" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="60" y="175" width="1160" height="60" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="88" y="201" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">1  파일 읽기</text>
+  <text x="88" y="223" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">'CLAUDE.md 파일 내용을 읽어서 요약해줘'</text>
+  <rect x="60" y="248" width="1160" height="60" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="88" y="274" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">2  이미지 분석</text>
+  <text x="88" y="296" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">이미지 파일을 드래그 후 '이 이미지를 설명해줘'</text>
+  <rect x="60" y="321" width="1160" height="60" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="88" y="347" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">3  PDF 읽기 (선택)</text>
+  <text x="88" y="369" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">PDF 파일 드래그 후 '이 PDF 핵심 내용 3가지 정리해줘'</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">Read 툴은 에이전트가 자동 판단 — 파일 이름이나 경로를 말하면 됩니다</text>
+</svg>
