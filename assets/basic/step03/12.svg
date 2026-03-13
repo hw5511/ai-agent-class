@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 03</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">settings.json — 주요 설정 항목</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">자주 쓰는 항목만 알아도 충분합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="264" font-family="'Courier New',Courier,monospace" font-size="19" fill="#171717">model          <tspan font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fill="#374151">기본 모델 지정   (예: claude-sonnet-4-6)</tspan></text>
+  <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="19" fill="#171717">language      <tspan font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fill="#374151">응답 언어 설정   (예: "ko")</tspan></text>
+  <text x="60" y="352" font-family="'Courier New',Courier,monospace" font-size="19" fill="#171717">env              <tspan font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fill="#374151">환경 변수 주입   (API 키 등)</tspan></text>
+  <text x="60" y="396" font-family="'Courier New',Courier,monospace" font-size="19" fill="#171717">defaultMode  <tspan font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fill="#374151">기본 권한 모드   (default · acceptEdits · plan)</tspan></text>
+  <text x="60" y="440" font-family="'Courier New',Courier,monospace" font-size="19" fill="#171717">permissions  <tspan font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fill="#374151">도구 허용 · 차단 규칙 목록</tspan></text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">Claude에게 "settings.json에 ㅇㅇ 설정 추가해줘"라고 요청해도 됩니다</text>
+</svg>

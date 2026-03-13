@@ -1044,18 +1044,21 @@
                         goal: 'Claude Code의 보안 설정을 이해하고, 권한 모드·욜로 모드·모델 선택·주요 명령어를 실습을 통해 익힌다.',
                         topics: ['Claude 개인정보 보안 설정', 'settings.json (파일 삭제 금지)', '권한 모드 (일반·편집자동승인·플랜)', '욜로 모드 / /model 모델 선택', '주요 슬래시 명령어', '웹 Search 툴 / Todos'],
                         practice: '개인 환경에 맞는 보안 설정을 직접 구성하고, 권한 모드와 주요 명령어를 순서대로 실행해본다.',
-                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg','07.svg','08.svg','09.svg','10.svg'],
+                        slides: ['01.svg','02.svg','03.svg','11.svg','12.svg','04.svg','05.svg','06.svg','07.svg','08.svg','13.svg','09.svg','14.svg'],
                         slideDescs: [
-            { goal: 'Step 3 목표와 오늘 배울 내용을 안내한다.', topics: ['보안 설정', 'settings.json', '권한 모드 · 욜로 모드', '/model · 슬래시 명령어 · 웹 Search · Todos'], practice: null },
+            { goal: 'Step 3 목표와 오늘 배울 내용을 안내한다.', topics: ['보안 설정', 'settings.json · 권한 규칙', '권한 모드 · 욜로 모드', '/model · 슬래시 명령어 · 웹 Search · Todos'], practice: null },
             { goal: 'Claude Code의 파일 접근 범위와 개인정보 설정을 이해한다.', topics: ['파일 쓰기 범위 제한', '상위 폴더 접근 허가 방식', '개인정보 opt-out 설정'], practice: null, action: { label: '설정 페이지', download: { href: 'https://claude.ai/settings/data-privacy-controls', text: 'claude.ai 설정 바로가기' } } },
             { goal: 'settings.json의 구조와 권한 설정 방법을 이해한다.', topics: ['3계층 설정 파일 (전역/프로젝트/로컬)', 'permissions.deny / permissions.allow', '파일 삭제 금지 설정 예시'], practice: null },
+            { goal: 'permissions 허용·차단 규칙 구문을 이해한다.', topics: ['Tool 또는 Tool(specifier) 형식', 'Bash(npm run *) / Read(./.env) / Bash(rm -rf *)', '평가 순서: deny → ask → allow'], practice: null },
+            { goal: 'settings.json 주요 설정 항목을 파악한다.', topics: ['model — 기본 모델 지정', 'language — 응답 언어 / env — 환경 변수', 'defaultMode — 기본 권한 모드'], practice: null },
             { goal: '3가지 권한 모드의 차이를 이해하고 전환 방법을 익힌다.', topics: ['일반 모드 — 편집·명령 매번 승인', '편집 자동 승인 모드 — 파일 편집 자동', '플랜 모드 — 추천 선택지 중 선택'], practice: null },
             { goal: '욜로 모드의 개념과 안전한 사용법을 이해한다.', topics: ['claude --dangerously-skip-permissions', '/exit 또는 Ctrl+C로 종료', '위쪽 방향키로 이전 명령 재실행'], practice: null, action: { label: '실행 명령어', copy: 'claude --dangerously-skip-permissions' } },
             { goal: '주요 슬래시 명령어의 역할을 파악한다.', topics: ['/clear · /model · /login · /logout', '/help — 전체 명령어 목록', 'Ctrl+C 또는 Esc로 종료'], practice: null },
             { goal: '상황에 맞는 Claude 모델을 선택하는 방법을 익힌다.', topics: ['Haiku 4.5 — 가장 빠름 (간단한 작업)', 'Sonnet 4.6 — 빠르고 강력 (기본 추천)', 'Opus 4.5 — 최고 성능 (복잡한 추론)'], practice: null },
             { goal: '웹 Search 툴의 동작 원리를 이해한다.', topics: ['사용자 명령 불필요 — Claude 자동 판단', '최신 정보 필요 시 자동 검색', '"ㅇㅇㅇ 주제에 대해 웹조사해줘" 활용'], practice: null },
-            { goal: 'Todos · Tasks 내장 툴을 이해한다.', topics: ['TodoWrite · TodoRead 내장 툴', 'pending → in_progress → completed', '"ㅇㅇㅇ 작업을 todo 리스트를 세워서 순차적으로 진행해줘"'], practice: null },
-            { goal: 'Step 3 전체 내용을 정리한다.', topics: ['보안 설정 · settings.json', '권한 모드 · 욜로 모드 · /model', '웹 Search · Todos'], practice: null }
+            { goal: '웹 Search 실습을 진행한다.', topics: ['claude 실행', '"요즘 AI 에이전트 트렌드를 웹조사해줘" 입력', 'WebSearch 도구 자동 실행 확인'], practice: '"요즘 AI 에이전트 트렌드를 웹조사해줘" 프롬프트로 실습' },
+            { goal: 'Todos 내장 툴을 이해한다.', topics: ['TodoWrite · TodoRead 내장 툴', 'pending → in_progress → completed', '"ㅇㅇㅇ 작업을 todo 리스트를 세워서 순차적으로 진행해줘"'], practice: null },
+            { goal: 'Todos 실습을 진행한다.', topics: ['claude 실행', '"폴더 3개를 todo 리스트를 세워서 순서대로 만들어줘" 입력', 'TodoWrite 도구 실행 → 순차 완료 확인'], practice: '"폴더 3개를 todo 리스트를 세워서 순서대로 만들어줘" 프롬프트로 실습' }
                         ]
                     },
                     {
