@@ -1082,17 +1082,23 @@
                     },
                     {
                         num: 5, title: 'Sub Agent와 Hooks', hours: '2시간',
-                        goal: 'Sub Agent의 개념과 활용법을 이해하고 Hooks로 도구 동작을 자동화하며, Power Automate로 MS Office와 Claude를 연동한다.',
-                        topics: ['Sub Agent 개념 · YAML 파일 형식', 'Claude와 함께 Sub Agent 만들기 · 팀 공유 · 병렬 실행', 'Hooks 이벤트 종류 (17+ 이벤트)', 'Hooks 설정 · 활용 예시', 'MS Office Power Automate 연동'],
+                        goal: 'Sub Agent와 Agent Teams 개념을 이해하고, Hooks로 도구 동작을 자동화하며, MS Office 추가기능으로 Claude를 연동한다.',
+                        topics: ['Sub Agent 개념 · YAML 파일 형식', 'Agent Teams — 에이전트 협업', 'Sub Agent 활용 (만들기 · 병렬 실행) · 실습', 'Hooks 이벤트 18종 · 동작 구조 · 실습', 'MS Office 365 추가기능 Claude 설치'],
                         practice: 'Sub Agent를 Claude와 함께 만들고, Hooks으로 위험 명령을 차단하는 설정을 추가한다.',
-                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg'],
+                        slides: ['01.svg','02.svg','11.svg','03.svg','12.svg','04.svg','05.svg','13.svg','06.svg','07.svg','08.svg','09.svg'],
                         slideDescs: [
-            { goal: 'Step 5 목표와 오늘 배울 내용을 안내한다.', topics: ['Sub Agent 개념 · 파일 형식', 'Sub Agent 활용 (만들기 · 공유 · 병렬)', 'Hooks 이벤트 종류 · 설정 · 활용', 'MS Office 추가기능 Claude 연결'], practice: null },
-            { goal: 'Sub Agent의 개념과 YAML 파일 형식을 이해한다.', topics: ['독립 컨텍스트 윈도우로 실행', '역할 설명 기반 자동 위임', 'YAML frontmatter: name · description · tools · model', '/agents 명령어로 관리'], practice: null },
-            { goal: 'Sub Agent를 만들고 공유하고 병렬 실행하는 방법을 익힌다.', topics: ['/agents → Generate with Claude로 자동 생성', '.claude/agents/ Git 커밋으로 팀 공유', '프롬프트로 여러 서브에이전트 병렬 실행'], practice: null },
-            { goal: 'Hooks 이벤트 종류와 작동 원리를 이해한다.', topics: ['PreToolUse · UserPromptSubmit · PermissionRequest (차단 가능)', 'PostToolUse · SessionStart · Stop (관찰)', '총 17+ 이벤트 — Notification · SubagentStart · PreCompact 등'], practice: null },
-            { goal: 'Hooks 설정 방법과 실제 활용 예시를 익힌다.', topics: ['settings.json hooks 구조', 'exit 0 성공 / exit 2 차단 (stderr → Claude 피드백)', 'rm -rf 차단 · Prettier 자동 실행 · OS 알림'], practice: null },
-            { goal: 'MS Office와 Claude를 Power Automate로 연동한다.', topics: ['Power Automate Anthropic 커넥터 추가', 'Anthropic API 키 발급 (console.anthropic.com)', 'Excel 셀 읽기 → Claude 처리 → 결과 쓰기 흐름'], practice: 'Sub Agent를 Claude와 함께 만들고, Hooks으로 위험 명령을 차단하는 설정을 추가한다.' }
+            { goal: 'Step 5 목표와 오늘 배울 내용을 안내한다.', topics: ['Sub Agent 개념 · 파일 형식', 'Agent Teams — 에이전트 협업', 'Sub Agent 활용 · 실습', 'Hooks 이벤트 18종 · 동작 구조 · 실습', 'MS Office 추가기능 Claude 설치'], practice: null },
+            { goal: 'Sub Agent의 개념과 설정 파일 구조를 이해한다.', topics: ['독립 컨텍스트 윈도우로 실행', '역할 설명 기반 자동 위임', 'name · description · tools · model 필드', '/agents 명령어로 관리'], practice: null },
+            { goal: 'Agent Teams의 개념과 Sub Agent와의 차이를 이해한다.', topics: ['Sub Agent: 메인 → 결과 단방향', 'Agent Teams: 팀원끼리 직접 대화 다방향', '실무 예시: 조사·분석·보고서 팀 협업', '프롬프트로 팀 구성 요청'], practice: null },
+            { goal: 'Sub Agent를 만들고 병렬 실행하는 방법을 익힌다.', topics: ['/agents → Generate with Claude로 자동 생성', '실무 예시: 보고서 작성·데이터 정리·번역 에이전트', '프롬프트로 여러 에이전트 병렬 실행'], practice: null },
+            { goal: 'Sub Agent 실습을 진행한다.', topics: ['/agents로 에이전트 만들기', '역할 설명 입력 후 자동 생성', '병렬 실행 프롬프트 실습'], practice: '/agents → Generate with Claude → 병렬 실행 프롬프트 실습' },
+            { goal: 'Hooks 이벤트 18종과 차단/관찰 구분을 이해한다.', topics: ['차단 가능: PreToolUse · UserPromptSubmit · Stop 등 9종', '관찰만: SessionStart · PostToolUse · PreCompact 등 9종', 'exit 2로 차단, exit 0으로 계속 진행'], practice: null },
+            { goal: 'Hooks 동작 구조를 다이어그램으로 이해한다.', topics: ['프롬프트 → PreToolUse → 도구실행 → PostToolUse → Stop', 'exit 2: 차단 + stderr → Claude 피드백', '활용 예시: 삭제 차단 · 자동 정렬 · PC 알림'], practice: null },
+            { goal: 'Hooks 실습을 진행한다.', topics: ['Claude에게 위험 명령 차단 Hook 요청', 'settings.json hooks 키 추가 확인', 'rm -rf 차단 동작 확인'], practice: '"rm -rf 차단 Hook + 작업 완료 알림 Hook 추가해줘" 실습' },
+            { goal: 'MS Office 추가기능 Claude 설치 준비를 안내한다.', topics: ['Microsoft 365 구독 필요 (2026 최신버전)', 'Claude Pro/Max 계정 필요', 'PowerPoint/Excel 실행 → 홈 메뉴 → 추가기능'], practice: null },
+            { goal: '홈 메뉴에서 추가기능 버튼을 클릭한다.', topics: ['PowerPoint/Excel 홈 탭 우측에 추가기능 위치', '최신버전(2026) 기준 UI 안내'], practice: null },
+            { goal: '추가기능에서 Claude를 검색하고 추가한다.', topics: ['검색창에 Claude 입력', 'Claude for Microsoft 365 선택', '추가 버튼 클릭'], practice: null },
+            { goal: '설치 후 로그인하여 Claude를 사용한다.', topics: ['우측 패널에 Claude 창 열림', '로그인 버튼 클릭', 'claude.ai 계정으로 로그인 후 바로 사용'], practice: 'Sub Agent를 Claude와 함께 만들고, Hooks으로 위험 명령을 차단하는 설정을 추가한다.' }
                         ]
                     },
                     {

@@ -3,16 +3,17 @@
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 05</text>
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Sub Agent 활용법</text>
-  <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Claude와 함께 만들기</text>
-  <text x="60" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">/agents  -&gt;  Create new agent  -&gt;  Generate with Claude</text>
-  <text x="60" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">역할 설명 입력  -&gt;  Claude가 시스템 프롬프트 + 설정 자동 생성</text>
-  <line x1="60" y1="346" x2="1220" y2="346" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="390" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">팀 공유</text>
-  <text x="60" y="428" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">.claude/agents/ 폴더를 Git 저장소에 올리면  -&gt;  팀 전체 동일 에이전트 사용</text>
-  <text x="60" y="468" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">~/.claude/agents/ 에 저장하면  -&gt;  내 PC의 모든 프로젝트에 적용</text>
-  <line x1="60" y1="508" x2="1220" y2="508" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="548" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">병렬 실행  (프롬프트)</text>
-  <text x="60" y="582" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8">'인증 · DB · API 모듈을 별도 서브에이전트로 병렬 조사해줘'</text>
-
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Claude와 함께 만들고, 프롬프트로 바로 활용합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">만들기</text>
+  <text x="60" y="298" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">/agents  →  Create new agent  →  Generate with Claude</text>
+  <text x="60" y="334" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">역할 설명 입력  →  Claude가 설정 + 시스템 프롬프트 자동 생성</text>
+  <line x1="60" y1="374" x2="1220" y2="374" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="414" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실무 활용 예시  (비개발자)</text>
+  <text x="60" y="454" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">보고서 작성 에이전트  /  데이터 정리 에이전트  /  번역 전담 에이전트</text>
+  <line x1="60" y1="494" x2="1220" y2="494" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="534" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">병렬 실행  (프롬프트)</text>
+  <text x="60" y="570" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8">'시장 조사 · 데이터 정리 · 보고서 초안을 별도 에이전트로 동시에 진행해줘'</text>
+  <rect x="60" y="608" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="639" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">~/.claude/agents/ 에 저장하면 내 PC의 모든 프로젝트에서 사용 가능</text>
 </svg>
