@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 07</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">check_my_mention 스킬</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">나를 멘션한 메시지가 있는지 1회성으로 확인합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">SKILL.md 작성 위치</text>
+  <rect x="60" y="272" width="700" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="390" y="300" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="16" fill="#1d4ed8">.claude/skills/check-mention/SKILL.md</text>
+  <text x="60" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">SKILL.md 내용 (Claude 지침)</text>
+  <rect x="60" y="354" width="1160" height="130" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="80" y="382" font-family="'Courier New',Courier,monospace" font-size="15" fill="#374151">---</text>
+  <text x="80" y="406" font-family="'Courier New',Courier,monospace" font-size="15" fill="#374151">description: 디스코드 채널에서 나를 멘션한 메시지를 확인합니다</text>
+  <text x="80" y="430" font-family="'Courier New',Courier,monospace" font-size="15" fill="#374151">---</text>
+  <text x="80" y="454" font-family="'Courier New',Courier,monospace" font-size="15" fill="#374151">Discord MCP의 read-messages로 최근 50개 메시지를 가져와서,</text>
+  <text x="80" y="474" font-family="'Courier New',Courier,monospace" font-size="15" fill="#374151">$USER_ID가 멘션된 항목만 필터링해 보고합니다. 백그라운드 리스닝 없음.</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">/check-mention 입력 시 Claude가 read-messages 툴 호출 후 멘션 필터링 수행</text>
+</svg>

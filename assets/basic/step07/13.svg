@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 07</text>
+  <rect x="152" y="44" width="52" height="24" rx="12" fill="#2563eb"/>
+  <text x="178" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">실습</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">send_with_mention 스킬  /  실습</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">특정 보을 @멘션하여 메시지를 보냅니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">SKILL.md 지침 핵심</text>
+  <rect x="60" y="268" width="1160" height="86" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="80" y="296" font-family="'Courier New',Courier,monospace" font-size="15" fill="#374151">Discord API로 $CHANNEL_ID에 메시지를 전송합니다.</text>
+  <text x="80" y="320" font-family="'Courier New',Courier,monospace" font-size="15" fill="#374151">메시지 앞에 &lt;@$MENTION_USER_ID&gt; 형식으로 멘션을 첨부합니다.</text>
+  <text x="80" y="344" font-family="'Courier New',Courier,monospace" font-size="15" fill="#374151">BOT_TOKEN, CHANNEL_ID, MENTION_USER_ID는 환경변수로 관리합니다.</text>
+  <text x="60" y="390" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습  —  봇끼리 멘션 대화</text>
+  <text x="60" y="430" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af" font-weight="600">1</text>
+  <text x="90" y="430" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">수강생 A: /send-mention 입력  →  수강생 B 봇을 @멘션해서 메시지 전송</text>
+  <text x="60" y="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af" font-weight="600">2</text>
+  <text x="90" y="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">수강생 B: /check-mention 입력  →  멘션 있는지 확인</text>
+  <text x="60" y="530" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af" font-weight="600">3</text>
+  <text x="90" y="530" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">답장 후 A가 다시 /check-mention →  MCP만으로는 모든 것이 되지 않는다는 것 체감</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">MCP = 기반 연결  /  스킬 = 직접 구현한 로직  —  둘의 역할이 다릅니다</text>
+</svg>

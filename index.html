@@ -1105,13 +1105,13 @@
                         ]
                     },
                     {
-                        num: 6, title: 'MCP 개념 이해와 Notion · Canva · GitHub 연동', hours: '2시간',
-                        goal: 'MCP(Model Context Protocol)의 개념을 이해하고, Notion·Canva·GitHub MCP를 설치하여 문서·디자인·백업을 자동화한다.',
-                        topics: ['MCP란? 개념과 구조', 'MCP 설치 및 세팅 방법', 'Notion MCP 설치·실습', 'Canva MCP 설치·실습', 'GitHub MCP — 폴더 백업 실습'],
-                        practice: 'Notion 페이지 생성, Canva 프레젠테이션 내보내기, GitHub 폴더 백업을 에이전트 명령 하나로 처리한다.',
+                        num: 6, title: 'MCP 개념 이해와 Notion · Canva · Discord 연동', hours: '2시간',
+                        goal: 'MCP(Model Context Protocol)의 개념을 이해하고, Notion·Canva·Discord MCP를 설치하여 문서·디자인·메시지 자동화를 구현한다.',
+                        topics: ['MCP란? 개념과 구조', 'MCP 설치 및 세팅 방법', 'Notion MCP 설치·실습', 'Canva MCP 설치·실습', 'Discord MCP — Bot Token 발급·실습'],
+                        practice: 'Notion 페이지 생성, Canva 프레젠테이션 내보내기, Discord 메시지 전송을 에이전트 명령 하나로 처리한다.',
                         slides: ['01.svg','02.svg','03.svg','04.svg','11.svg','12.svg','13.svg','05.svg','14.svg','15.svg','16.svg','17.svg','18.svg','19.svg'],
                         slideDescs: [
-            { goal: 'Step 6 목표와 오늘 배울 내용을 안내한다.', topics: ['MCP란 무엇인가', 'MCP 설치와 세팅', 'Notion MCP 설치', 'Canva MCP 설치·실습', 'GitHub MCP — 폴더 백업'], practice: null },
+            { goal: 'Step 6 목표와 오늘 배울 내용을 안내한다.', topics: ['MCP란 무엇인가', 'MCP 설치와 세팅', 'Notion MCP 설치', 'Canva MCP 설치·실습', 'Discord MCP — Bot Token 발급'], practice: null },
             { goal: 'MCP(Model Context Protocol)의 개념을 이해한다.', topics: ['AI와 외부 시스템 연결 개방형 표준', 'USB-C 비유 — 한 번 구축으로 어디서든 연결', '데이터베이스·SaaS·API 확장', 'Claude·ChatGPT·Cursor 모두 지원'], practice: null },
             { goal: 'claude mcp add 명령어로 MCP 서버를 등록한다.', topics: ['HTTP 방식 — 원격 서버 (권장)', 'stdio 방식 — 로컬 프로세스', 'claude mcp list · mcp remove', 'scope: local · project · user'], practice: null, action: { label: '명령어', items: [{ desc: 'mcp add', copy: 'claude mcp add --transport http notion https://mcp.notion.com/mcp' }, { desc: 'mcp 확인', copy: 'claude mcp list' }] } },
             { goal: 'Notion MCP를 OAuth 방식으로 등록한다.', topics: ['토큰 발급 불필요 — OAuth 방식', 'claude mcp add --transport http notion https://mcp.notion.com/mcp', 'claude mcp list로 등록 확인', 'Notion Integration 없이 바로 인증 진행'], practice: null, action: { label: '명령어', items: [{ desc: 'mcp 등록', copy: 'claude mcp add --transport http notion https://mcp.notion.com/mcp' }, { desc: '등록 확인', copy: 'claude mcp list' }] } },
@@ -1122,23 +1122,26 @@
             { goal: 'Canva MCP의 기능과 활용 방법을 이해한다.', topics: ['Search — 기존 디자인·템플릿 검색', 'Create — 새 디자인 자동 생성', 'Autofill — 텍스트·이미지 자동 채우기', 'Export — PNG·PDF 내보내기'], practice: null },
             { goal: 'Canva MCP를 등록하고 인증한다.', topics: ['claude mcp add --transport http canva https://mcp.canva.com/mcp', '/mcp → canva → Authenticate → 브라우저 로그인', '/mcp로 connected 상태 확인'], practice: null, action: { label: '명령어', items: [{ desc: 'mcp 등록', copy: 'claude mcp add --transport http canva https://mcp.canva.com/mcp' }, { desc: '등록 확인', copy: 'claude mcp list' }] } },
             { goal: 'Canva MCP 실습 — 자연어로 프레젠테이션을 만들고 내보낸다.', topics: ['프레젠테이션 생성 프롬프트', 'PDF 내보내기 링크 확인', 'Autofill로 슬라이드 제목 수정'], practice: 'AI 에이전트 소개 프레젠테이션을 Canva로 만들고 PDF로 내보낸다.' },
-            { goal: 'GitHub MCP — 작업 폴더를 클라우드에 백업하는 도구로 이해한다.', topics: ['언제든 인터넷에서 접근 가능', '모든 변경 이력 자동 저장 — 실수도 복원 가능', '링크 하나로 공유', 'Claude가 레포 생성·업로드까지 자동 처리'], practice: null },
-            { goal: 'GitHub MCP를 등록하고 인증한다.', topics: ['claude mcp add --transport http github https://api.githubcopilot.com/mcp/', '/mcp → github → Authenticate → 공식 GitHub 로그인', '/mcp로 connected 상태 확인'], practice: null, action: { label: '명령어', items: [{ desc: 'mcp 등록', copy: 'claude mcp add --transport http github https://api.githubcopilot.com/mcp/' }, { desc: '등록 확인', copy: 'claude mcp list' }] } },
-            { goal: 'GitHub MCP 실습 — 현재 폴더를 GitHub에 백업한다.', topics: ['practice 폴더로 이동 후 claude 실행', '"현재 폴더를 GitHub 새 레포지터리에 백업해줘" 요청', 'Claude가 레포 생성 → 파일 업로드 → URL 제공', '브라우저에서 백업 확인'], practice: '현재 폴더를 Claude에게 맡겨 GitHub 백업까지 한 번에 처리한다.' }
+            { goal: 'Discord Bot 토큰을 발급하고 MCP 연결 준비를 한다.', topics: ['discord.com/developers 접속 → New Application', 'Bot 탭 → Reset Token → 토큰 복사', 'Message Content Intent 활성화', 'OAuth2 → URL Generator → 서버 초대'], practice: null },
+            { goal: 'Discord MCP를 설치하고 등록한다.', topics: ['git clone v-3/discordmcp && npm install && npm run build', 'DISCORD_TOKEN 환경변수 설정', 'claude mcp add --transport stdio discord — node .../index.js', 'claude mcp list로 등록 확인'], practice: null, action: { label: '명령어', items: [{ desc: 'mcp 등록', copy: 'claude mcp add --transport stdio discord -- node /경로/discordmcp/build/index.js' }, { desc: '등록 확인', copy: 'claude mcp list' }] } },
+            { goal: 'Discord MCP 실습 — 메시지를 읽고 보낸다.', topics: ['나에게 멘션된 메시지가 있는지 읽어줘', '#일반 채널에 "테스트 메시지" 보내줘', 'MCP만으로는 멘션 필터링 불가 확인', '다음 step에서 스킬로 확장 예고'], practice: '디스코드 채널 메시지를 읽고, Claude로 메시지를 전송한다.' }
                         ]
                     },
                     {
-                        num: 7, title: 'Skills 활용과 Discord 알림 연동 실습', hours: '2시간',
-                        goal: 'Skills의 개념과 사용법을 익히고, Discord 알림 Skill을 직접 제작하여 작업 완료 알림을 받는 자동화를 구현한다.',
-                        topics: ['Skills란? 개념 이해', 'Skill 사용하기', 'Discord Webhook 설정', 'Discord 연동 Skill 제작 실습', '작업 완료 알림 받기'],
-                        practice: 'Discord 알림 Skill을 처음부터 직접 제작하고, 에이전트 작업 완료 시 메시지를 수신하는 흐름을 완성한다.',
-                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
+                        num: 7, title: 'Skills 활용과 Discord MCP 스킬 확장 실습', hours: '2시간',
+                        goal: 'Skills의 개념과 사용법을 익히고, MCP로 불가한 Discord 기능(멘션 필터링·Bot @멘션)을 스킬로 직접 확장한다.',
+                        topics: ['Skills란? 개념 이해', 'Skill 사용하기', 'MCP vs 스킬 차이', 'check_my_mention 스킬 제작', 'send_with_mention 스킬 제작 · 실습'],
+                        practice: 'Discord MCP를 기반으로 check_my_mention 스킬과 send_with_mention 스킬을 직접 제작하고 봇끼리 멘션 대화를 완성한다.',
+                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','11.svg','12.svg','13.svg'],
                         slideDescs: [
             { goal: 'Step 7 목표와 오늘 배울 내용을 안내한다.', topics: ['Skills 개념 · 사용법', 'Discord Webhook 설정', 'Discord Skill 제작', '완료 알림 자동화'], practice: null },
             { goal: 'Skills의 개념과 파일 구조를 이해한다.', topics: ['.claude/skills/<이름>/SKILL.md (프로젝트)', '~/.claude/skills/<이름>/SKILL.md (전체)', '/skill-name 슬래시 명령어로 호출', '인수 전달 가능 · Claude 자동 로드'], practice: null },
             { goal: 'SKILL.md 파일 구조와 기본 제공 Skill을 파악한다.', topics: ['YAML frontmatter + Markdown 지시사항', 'description 필드 · Claude 지침 본문', '/simplify · /batch · /debug · /loop', '커스텀 Skill 아이디어'], practice: null },
             { goal: 'Discord 서버에서 Webhook URL을 생성하고 설정한다.', topics: ['Discord 서버 설정 → 연동 → 웹후크', 'Webhook URL 발급 및 환경변수 관리', 'requests.post()로 Discord 메시지 전송', 'embed 형식으로 알림 꾸미기'], practice: null },
-            { goal: 'Discord 알림 Skill을 제작하고 Hooks에 연결한다.', topics: ['Python requests로 Discord Webhook 호출', 'SKILL.md 파일 작성 및 등록', 'PostToolUse · Stop 이벤트에 스크립트 등록', '작업 완료 시 Discord 자동 알림'], practice: 'Discord 알림 Skill을 처음부터 직접 제작하고, 에이전트 작업 완료 시 메시지를 수신하는 흐름을 완성한다.' }
+            { goal: 'Discord 알림 Skill을 제작하고 Hooks에 연결한다.', topics: ['Python requests로 Discord Webhook 호출', 'SKILL.md 파일 작성 및 등록', 'PostToolUse · Stop 이벤트에 스크립트 등록', '작업 완료 시 Discord 자동 알림'], practice: null },
+            { goal: 'MCP와 스킬의 차이를 이해하고 Discord에 적용한다.', topics: ['MCP — send-message·read-messages 기본 제공', 'MCP 한계 — 멘션 필터링·특정 Bot @멘션 불가', '스킬 = MCP + Python 로직 추가', 'MCP와 스킬의 역할 분담'], practice: null },
+            { goal: 'check_my_mention 스킬을 제작한다.', topics: ['SKILL.md 위치: .claude/skills/check-mention/', 'read-messages로 최근 50개 메시지 조회', '$USER_ID 멘션 항목만 필터링하여 보고', '1회성 조회 — 무한루프 없음'], practice: null },
+            { goal: 'send_with_mention 스킬을 제작하고 봇끼리 멘션 대화를 실습한다.', topics: ['Discord API로 <@$MENTION_USER_ID> 형식 전송', 'BOT_TOKEN·CHANNEL_ID·MENTION_USER_ID 환경변수 관리', '수강생 A → B 봇 @멘션 → B가 /check-mention으로 확인', 'MCP만으로는 불가한 흐름을 스킬로 완성'], practice: 'Discord MCP를 기반으로 check_my_mention 스킬과 send_with_mention 스킬을 직접 제작하고 봇끼리 멘션 대화를 완성한다.' }
                         ]
                     },
                     {
