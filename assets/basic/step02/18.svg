@@ -6,15 +6,18 @@
   <text x="176" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#d97706">실습</text>
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="36" font-weight="700" fill="#171717">Bash 실습</text>
   <line x1="60" y1="160" x2="1220" y2="160" stroke="#e5e7eb" stroke-width="1"/>
-  <rect x="60" y="175" width="1160" height="60" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
-  <text x="88" y="201" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">1  폴더 생성 + 파일 생성</text>
-  <text x="88" y="223" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">'practice 폴더를 만들고 그 안에 note.txt 파일을 생성해줘'</text>
-  <rect x="60" y="248" width="1160" height="60" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
-  <text x="88" y="274" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">2  파일 복사</text>
-  <text x="88" y="296" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">'note.txt 를 복사해서 backup.txt 로 저장해줘'</text>
-  <rect x="60" y="321" width="1160" height="60" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
-  <text x="88" y="347" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">3  파일 실행 (선택)</text>
-  <text x="88" y="369" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">'start hello.txt 명령어를 실행해서 파일을 열어줘'</text>
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">Bash 명령어를 몰라도 됩니다 &#8212; 원하는 동작을 말로 설명하면 됩니다</text>
+  <rect x="60" y="178" width="1160" height="68" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="88" y="204" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">1  폴더 생성</text>
+  <text x="88" y="228" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">'work 폴더를 만들고 그 안에 docs 폴더도 만들어줘'</text>
+  <rect x="60" y="260" width="1160" height="68" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="88" y="286" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">2  이동 · 복사 · 제거</text>
+  <text x="88" y="310" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">'note.txt를 docs 폴더로 이동해줘' / 'note.txt를 복사해서 backup.txt로' / 'backup.txt를 삭제해줘'</text>
+  <rect x="60" y="342" width="1160" height="68" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="88" y="368" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">3  크롬 실행 &#8212; 특정 페이지 열기</text>
+  <text x="88" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">'크롬으로 https://news.naver.com/ 열어줘'</text>
+  <rect x="60" y="424" width="1160" height="68" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="88" y="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">4  특정 폴더 열기</text>
+  <text x="88" y="474" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">'C:\i-agent 폴더를 탐색기로 열어줘'</text>
+  <rect x="60" y="570" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="601" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">Bash 명령어를 몰라도 됩니다 &#8212; 원하는 동작을 말로 설명하면 됩니다</text>
 </svg>

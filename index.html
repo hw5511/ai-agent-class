@@ -1027,15 +1027,15 @@
             { goal: '/init 실습 — 폴더 분석 후 CLAUDE.md 자동 생성을 체험한다.', topics: ['실습 자료 다운로드 후 작업 폴더에 배치', '기존 CLAUDE.md 삭제', '/init 실행 후 생성 결과 확인'], practice: '/init으로 자동 생성된 CLAUDE.md를 열어 내용을 확인한다.', action: { label: '실습 자료', download: { href: 'assets/basic/step02/practice/init_practice.zip', text: 'init_practice.zip 다운로드' } } },
             { goal: '에이전트 메모리를 직접 확인하고 편집한다.', topics: ['/memory — 로드된 CLAUDE.md·rules 파일 목록', 'Project / User / Auto Memory 세 종류', '~/.claude/projects/<project>/memory/ 경로'], practice: null },
             { goal: 'Auto Memory의 작동 원리를 이해한다.', topics: ['Claude가 스스로 MEMORY.md에 자동 기록', '기본값 ON — /memory에서 on/off 설정', '직접 요청: 이걸 기억해줘'], practice: null },
-            { goal: 'Read 툴이 읽을 수 있는 파일 종류를 이해한다.', topics: ['텍스트 파일: txt·md·py·html 등', '이미지 파일: jpg·png·gif·webp', 'PDF — 실제 내용 분석 (최대 100페이지/20MB)'], practice: null },
-            { goal: 'Read 실습 — 파일·이미지·PDF를 읽어본다.', topics: ['실습 자료 다운로드 후 압축 해제', '"이 폴더의 파일들을 내용에 맞게 파일명을 정리해줘" 입력', 'Claude가 파일 하나씩 읽고 파일명 제안 확인'], practice: '실습 파일을 다운로드 후 Claude에게 파일명 정리를 요청한다.', action: { label: '실습 자료', download: { href: 'assets/basic/step02/practice/read_practice.zip', text: 'read_practice.zip 다운로드' } } },
             { goal: 'Write 툴의 역할을 이해한다.', topics: ['새 파일 생성·작성', '기존 파일 덮어쓰기 주의', 'Write vs Edit 차이'], practice: null },
             { goal: 'Write 실습 — 새 파일을 만들어본다.', topics: ['자기소개 txt 파일 생성 요청', 'VS Code에서 파일 생성 확인', 'Read로 내용 검증'], practice: '에이전트에게 자기소개 파일을 만들어달라고 요청한다.' },
             { goal: 'Edit 툴의 역할을 이해한다.', topics: ['기존 파일 일부 수정', '수정 전 내용 → 수정 후 내용', 'Read 후 Edit 순서'], practice: null },
             { goal: 'Edit 실습 — 기존 파일의 일부를 수정해본다.', topics: ['파일 특정 줄 수정 요청', '수정 결과 Read로 확인', 'CLAUDE.md에 규칙 추가'], practice: '파일의 특정 내용을 변경해달라고 요청한다.' },
+            { goal: 'Read 툴이 읽을 수 있는 파일 종류를 이해한다.', topics: ['텍스트 파일: txt·md·py·html 등', '이미지 파일: jpg·png·gif·webp', 'PDF — 실제 내용 분석 (최대 100페이지/20MB)'], practice: null },
+            { goal: 'Read 실습 — 파일·이미지·PDF를 읽어본다.', topics: ['실습 자료 다운로드 후 압축 해제', '"이 폴더의 파일들을 내용에 맞게 파일명을 정리해줘" 입력', 'Claude가 파일 하나씩 읽고 파일명 제안 확인'], practice: '실습 파일을 다운로드 후 Claude에게 파일명 정리를 요청한다.', action: { label: '실습 자료', download: { href: 'assets/basic/step02/practice/read_practice.zip', text: 'read_practice.zip 다운로드' } } },
             { goal: 'Bash 툴의 역할을 이해한다.', topics: ['컴퓨터 명령어 직접 실행', '폴더 생성·이름변경·복사·삭제', '프로그램 실행·패키지 설치'], practice: null },
-            { goal: 'Bash 실습 — 폴더 생성·파일 복사를 실습한다.', topics: ['폴더 생성 + 파일 생성 요청', '파일 복사 요청', '파일 실행 (start 명령)'], practice: '폴더를 만들고 그 안에 파일을 생성해달라고 요청한다.' },
             { goal: 'Bash 주요 명령어를 파악한다.', topics: ['mkdir · cp · mv · rm', 'start 명령으로 파일 실행', 'python · node 스크립트 실행'], practice: null }
+            { goal: 'Bash 실습 — 폴더 생성·이동·복사·제거·프로그램 실행을 실습한다.', topics: ['폴더 생성: work + docs 서브폴더', '이동·복사·제거: note.txt 조작', '크롬 실행 — 네이버 뉴스 열기', '탐색기로 특정 폴더 열기'], practice: '폴더 만들기 → 파일 이동 → 크롬 실행 순서로 실습' }
                         ]
                     },
                     {
