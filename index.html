@@ -1010,7 +1010,7 @@
                             { goal: 'VS Code를 설치하고 에이전트 작업 환경을 구성한다.', topics: ['VS Code — 생성 파일 확인·수정에 활용', 'code.visualstudio.com 에서 다운로드', '비개발자도 파일 관리에 편리'], practice: null, action: { label: '다운로드', download: { href: 'https://code.visualstudio.com/', text: 'VS Code 다운로드 페이지' } } },
                             { goal: 'VS Code에서 작업 폴더를 설정하는 방법을 익힌다.', topics: ['작업 폴더 생성 (예: C:\\ai-agent\\)', 'VS Code 실행 후 File > Open Folder', '폴더를 열면 에이전트 작업 기준 디렉토리 설정'], practice: null },
                             { goal: 'VS Code 터미널에서 claude를 실행하는 방법을 익힌다.', topics: ['Terminal > New Terminal 또는 Ctrl+`', 'claude 입력 후 엔터', '종료: /exit 또는 Ctrl+C'], practice: null, action: { label: '실행 명령어', copy: 'claude' } },
-                            { goal: 'VS Code에서 claude 명령어 오류 시 PATH를 설정한다.', topics: ["'claude is not recognized' 오류 발생 시", 'PowerShell에서 npm 경로를 PATH에 추가', 'VS Code 재시작 후 정상 실행'], practice: null, action: { label: 'PATH 설정', copy: '$env:PATH += ";$env:APPDATA\\npm"' } }
+                            { goal: 'VS Code에서 claude 명령어 오류 시 PATH를 자동 설정한다.', topics: ["'claude is not recognized' 오류 발생 시", 'path_setup.ps1 — PowerShell에서 실행', 'Node.js · Git · Claude 경로 자동 탐색 및 영구 등록', 'VS Code 재시작 후 정상 실행'], practice: null, action: { label: 'PATH 자동 설정 스크립트', download: { href: 'assets/basic/step01/path_setup.ps1', text: 'path_setup.ps1 다운로드' } } }
                         ]
                     },
                     {
