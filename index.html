@@ -1040,7 +1040,7 @@
             { goal: 'Read 툴이 읽을 수 있는 파일 종류를 이해한다.', topics: ['텍스트 파일: txt·md·py·html 등', '이미지 파일: jpg·png·gif·webp', 'PDF — 실제 내용 분석 (최대 100페이지/20MB)'], practice: null },
             { goal: 'Read 실습 — 파일·이미지·PDF를 읽어본다.', topics: ['실습 자료 다운로드 후 압축 해제', '"이 폴더의 파일들을 내용에 맞게 파일명을 정리해줘" 입력', 'Claude가 파일 하나씩 읽고 파일명 제안 확인'], practice: '실습 파일을 다운로드 후 Claude에게 파일명 정리를 요청한다.', action: { label: '실습 자료', download: { href: 'assets/basic/step02/practice/read_practice.zip', text: 'read_practice.zip 다운로드' } } },
             { goal: 'Bash 툴의 역할을 이해한다.', topics: ['컴퓨터 명령어 직접 실행', '폴더 생성·이름변경·복사·삭제', '프로그램 실행·패키지 설치'], practice: null },
-            { goal: 'Bash 주요 명령어를 파악한다.', topics: ['mkdir · cp · mv · rm', 'start 명령으로 파일 실행', 'python · node 스크립트 실행'], practice: null }
+            { goal: 'Bash 주요 명령어를 파악한다.', topics: ['mkdir · cp · mv · rm', 'start 명령으로 파일 실행', 'python · node 스크립트 실행'], practice: null },
             { goal: 'Bash 실습 — 폴더 생성·이동·복사·제거·프로그램 실행을 실습한다.', topics: ['폴더 생성: work + docs 서브폴더', '이동·복사·제거: note.txt 조작', '크롬 실행 — 네이버 뉴스 열기', '탐색기로 특정 폴더 열기'], practice: '폴더 만들기 → 파일 이동 → 크롬 실행 순서로 실습' }
                         ]
                     },
@@ -1053,8 +1053,8 @@
                         slideDescs: [
             { goal: 'Step 3 목표와 오늘 배울 내용을 안내한다.', topics: ['보안 설정', 'settings.json · 권한 규칙', '권한 모드 · 욜로 모드', '/model · 슬래시 명령어 · 웹 Search · Todos'], practice: null },
             { goal: 'Claude Code의 파일 접근 범위와 개인정보 설정을 이해한다.', topics: ['파일 쓰기 범위 제한', '상위 폴더 접근 허가 방식', '개인정보 opt-out 설정'], practice: null, action: { label: '설정 페이지', download: { href: 'https://claude.ai/settings/data-privacy-controls', text: 'claude.ai 설정 바로가기' } } },
-            { goal: 'settings.json의 구조와 주요 설정 항목을 이해한다.', topics: ['3계층 설정 파일 (전역/프로젝트/로컬)', 'model — 기본 모델 지정', 'permissions — deny/allow 규칙 목록', 'env — 환경 변수 주입'], practice: null }
-            { goal: 'settings.json 실습 — 파일 삭제 차단 규칙을 직접 추가한다.', topics: ['Claude에게 권한 제한 추가 요청', '차단 동작 확인 (rm 시도)', 'settings.json 파일 내용 확인'], practice: 'rm 차단 규칙을 Claude에게 추가하고 실제로 차단되는지 확인한다.' }
+            { goal: 'settings.json의 구조와 주요 설정 항목을 이해한다.', topics: ['3계층 설정 파일 (전역/프로젝트/로컬)', 'model — 기본 모델 지정', 'permissions — deny/allow 규칙 목록', 'env — 환경 변수 주입'], practice: null },
+            { goal: 'settings.json 실습 — 파일 삭제 차단 규칙을 직접 추가한다.', topics: ['Claude에게 권한 제한 추가 요청', '차단 동작 확인 (rm 시도)', 'settings.json 파일 내용 확인'], practice: 'rm 차단 규칙을 Claude에게 추가하고 실제로 차단되는지 확인한다.' },
             { goal: '3가지 권한 모드의 차이를 이해하고 전환 방법을 익힌다.', topics: ['일반 모드 — 편집·명령 매번 승인', '편집 자동 승인 모드 — 파일 편집 자동', '플랜 모드 — 추천 선택지 중 선택'], practice: null },
             { goal: '욜로 모드의 개념과 안전한 사용법을 이해한다.', topics: ['claude --dangerously-skip-permissions', '/exit 또는 Ctrl+C로 종료', '위쪽 방향키로 이전 명령 재실행'], practice: null, action: { label: '실행 명령어', copy: 'claude --dangerously-skip-permissions' } },
             { goal: '주요 슬래시 명령어의 역할을 파악한다.', topics: ['/clear · /model · /login · /logout', '/help — 전체 명령어 목록', 'Ctrl+C 또는 Esc로 종료'], practice: null },
