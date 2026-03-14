@@ -1105,20 +1105,23 @@
                         ]
                     },
                     {
-                        num: 6, title: 'MCP 개념 이해와 Notion 연동', hours: '2시간',
-                        goal: 'MCP(Model Context Protocol)의 개념을 이해하고, Notion MCP를 설치하여 에이전트로 Notion 페이지를 제어한다.',
-                        topics: ['MCP란? 개념과 구조', 'MCP 설치 및 세팅 방법', 'Notion MCP 설치하기', 'Notion 에이전트 제어 실습'],
-                        practice: 'Notion MCP를 연결하고 에이전트 명령어 하나로 Notion 페이지를 자동 생성한다.',
-                        slides: ['01.svg','02.svg','03.svg','04.svg','11.svg','12.svg','13.svg','05.svg'],
+                        num: 6, title: 'MCP 개념 이해와 Notion · Canva 연동', hours: '2시간',
+                        goal: 'MCP(Model Context Protocol)의 개념을 이해하고, Notion과 Canva MCP를 설치하여 에이전트로 디자인·문서를 자동화한다.',
+                        topics: ['MCP란? 개념과 구조', 'MCP 설치 및 세팅 방법', 'Notion MCP 설치·실습', 'Canva MCP 설치·실습'],
+                        practice: 'Notion MCP로 페이지를 자동 생성하고, Canva MCP로 프레젠테이션을 만들어 내보낸다.',
+                        slides: ['01.svg','02.svg','03.svg','04.svg','11.svg','12.svg','13.svg','05.svg','14.svg','15.svg','16.svg'],
                         slideDescs: [
-            { goal: 'Step 6 목표와 오늘 배울 내용을 안내한다.', topics: ['MCP란 무엇인가', 'MCP 설치와 세팅', 'Notion MCP 설치', 'Notion 자동화'], practice: null },
+            { goal: 'Step 6 목표와 오늘 배울 내용을 안내한다.', topics: ['MCP란 무엇인가', 'MCP 설치와 세팅', 'Notion MCP 설치', 'Canva MCP 설치·실습'], practice: null },
             { goal: 'MCP(Model Context Protocol)의 개념을 이해한다.', topics: ['AI와 외부 시스템 연결 개방형 표준', 'USB-C 비유 — 한 번 구축으로 어디서든 연결', '데이터베이스·SaaS·API 확장', 'Claude·ChatGPT·Cursor 모두 지원'], practice: null },
             { goal: 'claude mcp add 명령어로 MCP 서버를 등록한다.', topics: ['HTTP 방식 — 원격 서버 (권장)', 'stdio 방식 — 로컬 프로세스', 'claude mcp list · mcp remove', 'scope: local · project · user'], practice: null, action: { label: '명령어', items: [{ desc: 'mcp add', copy: 'claude mcp add --transport http notion https://mcp.notion.com/mcp' }, { desc: 'mcp 확인', copy: 'claude mcp list' }] } },
             { goal: 'Notion MCP를 OAuth 방식으로 등록한다.', topics: ['토큰 발급 불필요 — OAuth 방식', 'claude mcp add --transport http notion https://mcp.notion.com/mcp', 'claude mcp list로 등록 확인', 'Notion Integration 없이 바로 인증 진행'], practice: null, action: { label: '명령어', items: [{ desc: 'mcp 등록', copy: 'claude mcp add --transport http notion https://mcp.notion.com/mcp' }, { desc: '등록 확인', copy: 'claude mcp list' }] } },
             { goal: 'Notion MCP 인증 절차를 진행한다.', topics: ['claude --dangerously-skip-permissions 실행', '/mcp 입력 후 notion 선택', 'Authenticate 선택 → 브라우저 인증 페이지 열림'], practice: null, action: { label: '실행 명령어', copy: 'claude --dangerously-skip-permissions' } },
             { goal: '브라우저에서 Notion 계정으로 인증을 완료한다.', topics: ['브라우저 인증 페이지 자동 열림', 'URL 신뢰 체크박스 선택', '계속하기 → Notion 계정 로그인 → 완료'], practice: null },
             { goal: '/mcp로 Notion 연결 상태를 확인한다.', topics: ['/mcp 입력 → notion 서버 목록 확인', 'connected 상태이면 연결 성공', '자연어 지시로 Notion 자동화 시작'], practice: null },
-            { goal: '자연어 지시로 Notion을 자동화한다.', topics: ['페이지 생성·검색·수정', '데이터베이스 조회·항목 추가·업데이트', '예시: "회의록 페이지 만들어줘"', '예시: "DB에 작업 항목 추가해줘"'], practice: 'Notion MCP를 연결하고 에이전트 명령어 하나로 Notion 페이지를 자동 생성한다.' }
+            { goal: '자연어 지시로 Notion을 자동화한다.', topics: ['페이지 생성·검색·수정', '데이터베이스 조회·항목 추가·업데이트', '예시: "회의록 페이지 만들어줘"', '예시: "DB에 작업 항목 추가해줘"'], practice: 'Notion MCP를 연결하고 에이전트 명령어 하나로 Notion 페이지를 자동 생성한다.' },
+            { goal: 'Canva MCP의 기능과 활용 방법을 이해한다.', topics: ['Search — 기존 디자인·템플릿 검색', 'Create — 새 디자인 자동 생성', 'Autofill — 텍스트·이미지 자동 채우기', 'Export — PNG·PDF 내보내기'], practice: null },
+            { goal: 'Canva MCP를 등록하고 인증한다.', topics: ['claude mcp add --transport http canva https://mcp.canva.com/mcp', '/mcp → canva → Authenticate → 브라우저 로그인', '/mcp로 connected 상태 확인'], practice: null, action: { label: '명령어', items: [{ desc: 'mcp 등록', copy: 'claude mcp add --transport http canva https://mcp.canva.com/mcp' }, { desc: '등록 확인', copy: 'claude mcp list' }] } },
+            { goal: 'Canva MCP 실습 — 자연어로 프레젠테이션을 만들고 내보낸다.', topics: ['프레젠테이션 생성 프롬프트', 'PDF 내보내기 링크 확인', 'Autofill로 슬라이드 제목 수정'], practice: 'AI 에이전트 소개 프레젠테이션을 Canva로 만들고 PDF로 내보낸다.' }
                         ]
                     },
                     {
