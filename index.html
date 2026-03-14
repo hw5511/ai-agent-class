@@ -1060,9 +1060,9 @@
             { goal: '주요 슬래시 명령어의 역할을 파악한다.', topics: ['/clear · /model · /login · /logout', '/help — 전체 명령어 목록', 'Ctrl+C 또는 Esc로 종료'], practice: null },
             { goal: '상황에 맞는 Claude 모델을 선택하는 방법을 익힌다.', topics: ['Haiku 4.5 — 가장 빠름 (간단한 작업)', 'Sonnet 4.6 — 빠르고 강력 (기본 추천)', 'Opus 4.5 — 최고 성능 (복잡한 추론)'], practice: null },
             { goal: '웹 Search 툴의 동작 원리를 이해한다.', topics: ['사용자 명령 불필요 — Claude 자동 판단', '최신 정보 필요 시 자동 검색', '"ㅇㅇㅇ 주제에 대해 웹조사해줘" 활용'], practice: null },
-            { goal: '웹 Search 실습을 진행한다.', topics: ['claude 실행', '"요즘 AI 에이전트 트렌드를 웹조사해줘" 입력', 'WebSearch 도구 자동 실행 확인'], practice: '"요즘 AI 에이전트 트렌드를 웹조사해줘" 프롬프트로 실습' },
+            { goal: '웹 Search 실습을 진행한다.', topics: ['claude 실행', '최근 7일 이내 AI 에이전트 기사 조사 프롬프트 입력', '기사 제목·요약·출처 URL 포함 결과 확인'], practice: '최근 7일 이내 발행 기사를 조사하고 출처 링크를 함께 정리하도록 요청', action: { label: '실습 프롬프트', copy: '오늘 기준 최근 7일 이내에 발행된 AI 에이전트 관련 기사나 글을 웹조사해줘. 각 항목의 주요 내용과 실제 출처 링크(URL)도 함께 정리해줘.' } },
             { goal: 'Todos 내장 툴을 이해한다.', topics: ['TodoWrite · TodoRead 내장 툴', 'pending → in_progress → completed', '"ㅇㅇㅇ 작업을 todo 리스트를 세워서 순차적으로 진행해줘"'], practice: null },
-            { goal: 'Todos 실습을 진행한다.', topics: ['claude 실행', '"폴더 3개를 todo 리스트를 세워서 순서대로 만들어줘" 입력', 'TodoWrite 도구 실행 → 순차 완료 확인'], practice: '"폴더 3개를 todo 리스트를 세워서 순서대로 만들어줘" 프롬프트로 실습' }
+            { goal: 'Todos 실습 — 다단계 작업을 순차 실행한다.', topics: ['claude 실행', '폴더 생성·파일 작성·트리 출력 3단계 프롬프트 입력', '각 단계 완료 시 completed 상태 업데이트 확인'], practice: 'practice 폴더 생성 → readme.txt 작성 → 트리 출력까지 TodoWrite로 순차 실행', action: { label: '실습 프롬프트', copy: 'todo 리스트를 세워서 아래 작업을 순서대로 진행해줘.\n1) practice 폴더 생성, 그 안에 docs·images·code 서브폴더 생성\n2) docs/readme.txt 생성 후 \'문서 보관 폴더입니다. 생성일: 오늘 날짜\' 기록\n3) 완료 후 폴더 구조를 트리 형태로 출력' } }
                         ]
                     },
                     {

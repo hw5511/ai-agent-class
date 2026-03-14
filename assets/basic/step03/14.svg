@@ -11,10 +11,13 @@
   <text x="90" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">claude 실행</text>
   <text x="60" y="320" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af" font-weight="600">2</text>
   <text x="90" y="320" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">아래 프롬프트 입력</text>
-  <rect x="90" y="342" width="1090" height="56" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="640" y="376" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#1d4ed8">폴더 3개를 todo 리스트를 세워서 순서대로 만들어줘</text>
-  <text x="60" y="444" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af" font-weight="600">3</text>
-  <text x="90" y="444" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">TodoWrite로 계획 세우고 순서대로 실행하는 것 확인</text>
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">TodoWrite 도구 사용 → 각 할 일 완료 시 completed 상태로 업데이트</text>
+  <rect x="90" y="342" width="1090" height="108" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="640" y="370" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#1d4ed8">todo 리스트를 세워서 아래 작업을 순서대로 진행해줘.</text>
+  <text x="640" y="397" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#1d4ed8">1) practice 폴더 생성, 그 안에 docs·images·code 서브폴더 생성</text>
+  <text x="640" y="424" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#1d4ed8">2) docs/readme.txt 생성 후 '문서 보관 폴더입니다. 생성일: 오늘 날짜' 기록</text>
+  <text x="640" y="451" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#1d4ed8">3) 완료 후 폴더 구조를 트리 형태로 출력</text>
+  <text x="60" y="498" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af" font-weight="600">3</text>
+  <text x="90" y="498" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">TodoWrite 계획 수립 → 단계별 completed 업데이트 → 트리 출력 확인</text>
+  <rect x="60" y="575" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="606" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">각 단계가 완료될 때마다 해당 todo 항목이 completed로 바뀌는 것을 확인합니다</text>
 </svg>
