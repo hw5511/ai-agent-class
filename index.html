@@ -1053,9 +1053,8 @@
                         slideDescs: [
             { goal: 'Step 3 목표와 오늘 배울 내용을 안내한다.', topics: ['보안 설정', 'settings.json · 권한 규칙', '권한 모드 · 욜로 모드', '/model · 슬래시 명령어 · 웹 Search · Todos'], practice: null },
             { goal: 'Claude Code의 파일 접근 범위와 개인정보 설정을 이해한다.', topics: ['파일 쓰기 범위 제한', '상위 폴더 접근 허가 방식', '개인정보 opt-out 설정'], practice: null, action: { label: '설정 페이지', download: { href: 'https://claude.ai/settings/data-privacy-controls', text: 'claude.ai 설정 바로가기' } } },
-            { goal: 'settings.json의 구조와 권한 설정 방법을 이해한다.', topics: ['3계층 설정 파일 (전역/프로젝트/로컬)', 'permissions.deny / permissions.allow', '파일 삭제 금지 설정 예시'], practice: null },
-            { goal: 'permissions 허용·차단 규칙 구문을 이해한다.', topics: ['Tool 또는 Tool(specifier) 형식', 'Bash(npm run *) / Read(./.env) / Bash(rm -rf *)', '평가 순서: deny → ask → allow'], practice: null },
-            { goal: 'settings.json 주요 설정 항목을 파악한다.', topics: ['model — 기본 모델 지정', 'language — 응답 언어 / env — 환경 변수', 'defaultMode — 기본 권한 모드'], practice: null },
+            { goal: 'settings.json의 구조와 주요 설정 항목을 이해한다.', topics: ['3계층 설정 파일 (전역/프로젝트/로컬)', 'model — 기본 모델 지정', 'permissions — deny/allow 규칙 목록', 'env — 환경 변수 주입'], practice: null }
+            { goal: 'settings.json 실습 — 파일 삭제 차단 규칙을 직접 추가한다.', topics: ['Claude에게 권한 제한 추가 요청', '차단 동작 확인 (rm 시도)', 'settings.json 파일 내용 확인'], practice: 'rm 차단 규칙을 Claude에게 추가하고 실제로 차단되는지 확인한다.' }
             { goal: '3가지 권한 모드의 차이를 이해하고 전환 방법을 익힌다.', topics: ['일반 모드 — 편집·명령 매번 승인', '편집 자동 승인 모드 — 파일 편집 자동', '플랜 모드 — 추천 선택지 중 선택'], practice: null },
             { goal: '욜로 모드의 개념과 안전한 사용법을 이해한다.', topics: ['claude --dangerously-skip-permissions', '/exit 또는 Ctrl+C로 종료', '위쪽 방향키로 이전 명령 재실행'], practice: null, action: { label: '실행 명령어', copy: 'claude --dangerously-skip-permissions' } },
             { goal: '주요 슬래시 명령어의 역할을 파악한다.', topics: ['/clear · /model · /login · /logout', '/help — 전체 명령어 목록', 'Ctrl+C 또는 Esc로 종료'], practice: null },

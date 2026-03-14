@@ -9,10 +9,10 @@
   <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">~/.claude/settings.json          내 PC 전체 프로젝트에 적용</text>
   <text x="60" y="348" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">.claude/settings.json             현재 프로젝트 팀원과 공유</text>
   <text x="60" y="388" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">.claude/settings.local.json    현재 프로젝트 나만 적용</text>
-  <line x1="60" y1="430" x2="1220" y2="430" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="468" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">권한 제한 설정하기  (Claude에게 요청)</text>
-  <text x="60" y="506" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8">'권한에서 bash rm을 제한하고,</text>
-  <text x="60" y="540" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8"> CLAUDE.md 지침에 rm 대신 archive 폴더로 이동하도록 추가해줘'</text>
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">차단 규칙은 허용 규칙보다 항상 먼저 적용됩니다</text>
+  <text x="60" y="468" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">주요 설정 항목</text>
+  <text x="60" y="510" font-family="'Courier New',Courier,monospace" font-size="18" fill="#374151">model          기본 모델 지정  (예: claude-sonnet-4-5)</text>
+  <text x="60" y="548" font-family="'Courier New',Courier,monospace" font-size="18" fill="#374151">permissions    deny / allow 규칙 목록</text>
+  <text x="60" y="586" font-family="'Courier New',Courier,monospace" font-size="18" fill="#374151">env            환경 변수 주입</text>
+  <rect x="60" y="620" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="651" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">차단 규칙은 허용 규칙보다 항상 먼저 적용됩니다</text>
 </svg>
