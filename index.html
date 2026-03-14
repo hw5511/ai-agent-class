@@ -1084,16 +1084,15 @@
                     },
                     {
                         num: 5, title: 'Sub Agent와 Hooks', hours: '2시간',
-                        goal: 'Sub Agent와 Agent Teams 개념을 이해하고, Hooks로 도구 동작을 자동화하며, MS Office 추가기능으로 Claude를 연동한다.',
-                        topics: ['Sub Agent 개념 · YAML 파일 형식', 'Agent Teams — 에이전트 협업', 'Sub Agent 활용 (만들기 · 병렬 실행) · 실습', 'Hooks 이벤트 18종 · 동작 구조 · 실습', 'MS Office 365 추가기능 Claude 설치'],
+                        goal: 'Sub Agent 개념을 이해하고, Hooks로 도구 동작을 자동화하며, MS Office 추가기능으로 Claude를 연동한다.',
+                        topics: ['Sub Agent 개념 · YAML 파일 형식', 'Sub Agent 활용 (만들기 · 병렬 실행) · 실습', 'Hooks 이벤트 18종 · 동작 구조 · 실습', 'MS Office 365 추가기능 Claude 설치'],
                         practice: 'Sub Agent를 Claude와 함께 만들고, Hooks으로 위험 명령을 차단하는 설정을 추가한다.',
-                        slides: ['01.svg','02.svg','03.svg','12.svg','11.svg','14.svg','04.svg','05.svg','13.svg','06.svg','07.svg','08.svg','09.svg'],
+                        slides: ['01.svg','02.svg','03.svg','12.svg','14.svg','04.svg','05.svg','13.svg','06.svg','07.svg','08.svg','09.svg'],
                         slideDescs: [
-            { goal: 'Step 5 목표와 오늘 배울 내용을 안내한다.', topics: ['Sub Agent 개념 · 파일 형식', 'Agent Teams — 에이전트 협업', 'Sub Agent 활용 · 실습', 'Hooks 이벤트 18종 · 동작 구조 · 실습', 'MS Office 추가기능 Claude 설치'], practice: null },
+            { goal: 'Step 5 목표와 오늘 배울 내용을 안내한다.', topics: ['Sub Agent 개념 · 파일 형식', 'Sub Agent 활용 · 실습', 'Hooks 이벤트 18종 · 동작 구조 · 실습', 'MS Office 추가기능 Claude 설치'], practice: null },
             { goal: 'Sub Agent의 개념과 설정 파일 구조를 이해한다.', topics: ['독립 컨텍스트 윈도우로 실행', '역할 설명 기반 자동 위임', 'name · description · tools · model 필드', '/agents 명령어로 관리'], practice: null },
             { goal: 'Sub Agent를 만들고 병렬 실행하는 방법을 익힌다.', topics: ['/agents → Generate with Claude로 자동 생성', '실무 예시: 보고서 작성·데이터 정리·번역 에이전트', '프롬프트로 여러 에이전트 병렬 실행'], practice: null },
             { goal: 'Sub Agent 실습을 진행한다.', topics: ['/agents로 에이전트 만들기', '역할 설명 입력 후 자동 생성', '병렬 실행 프롬프트 실습'], practice: '/agents → Generate with Claude → 병렬 실행 프롬프트 실습' },
-            { goal: 'Agent Teams의 개념과 Sub Agent와의 차이를 이해한다.', topics: ['Sub Agent: 메인 → 결과 단방향', 'Agent Teams: 팀원끼리 직접 대화 다방향', '실무 예시: 조사·분석·보고서 팀 협업', '프롬프트로 팀 구성 요청'], practice: null },
             { goal: 'Hooks의 개념과 활용 목적을 이해한다.', topics: ['이벤트 감지 시 내 스크립트 자동 실행', '위험 명령 차단 · 작업 완료 알림 · 코드 자동 정리', 'settings.json hooks 키에 시점별 명령어 등록'], practice: null },
             { goal: 'Hooks 이벤트 18종과 차단/관찰 구분을 이해한다.', topics: ['차단 가능: PreToolUse · UserPromptSubmit · Stop 등 9종', '관찰만: SessionStart · PostToolUse · PreCompact 등 9종', 'exit 2로 차단, exit 0으로 계속 진행'], practice: null },
             { goal: 'Hooks 동작 구조를 다이어그램으로 이해한다.', topics: ['프롬프트 → PreToolUse → 도구실행 → PostToolUse → Stop', 'exit 2: 차단 + stderr → Claude 피드백', '활용 예시: 삭제 차단 · 자동 정렬 · PC 알림'], practice: null },
@@ -1146,15 +1145,16 @@
                     },
                     {
                         num: 8, title: 'Claude Desktop 사용법', hours: '2시간',
-                        goal: 'Claude Desktop의 다양한 사용 형태를 이해하고, CLI 방식과의 차이를 체험하며 각 환경의 활용 용도를 파악한다.',
-                        topics: ['일반 Claude Desktop 사용법', 'Desktop Claude Code 활용', 'Claude Cowork 기능', 'Claude Code CLI와 비교 정리'],
+                        goal: 'Claude Desktop의 다양한 사용 형태를 이해하고, Agent Teams 협업 구조를 파악하며, CLI 방식과의 차이를 체험한다.',
+                        topics: ['일반 Claude Desktop 사용법', 'Desktop Claude Code 활용', 'Claude Cowork 기능', 'Agent Teams 협업 구조', 'Claude Code CLI와 비교 정리'],
                         practice: 'Desktop 환경과 CLI 환경을 동일한 작업으로 비교 체험하고, 각자의 업무 스타일에 맞는 환경을 선택한다.',
-                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
+                        slides: ['01.svg','02.svg','03.svg','04.svg','11.svg','05.svg'],
                         slideDescs: [
             { goal: 'Step 8 목표와 오늘 배울 내용을 안내한다.', topics: ['일반 Desktop · Desktop Claude Code', '다중 에이전트 협업', 'CLI vs Desktop 비교'], practice: null },
             { goal: '일반 Claude Desktop의 주요 기능을 이해한다.', topics: ['대화형 채팅 · 파일 첨부 및 분석', 'Projects — 프로젝트 단위 작업 관리', 'MCP 서버 연동 · 커스텀 Skill', 'claude.ai/downloads 설치'], practice: null },
             { goal: 'Desktop에서 Claude Code를 실행하는 방법을 이해한다.', topics: ['Desktop 앱 Code 탭으로 시작', 'claude --resume 로 CLI-Desktop 세션 공유', 'CLI → Desktop → 웹 자유로운 이동', '/ide 명령어로 VS Code 연결'], practice: null },
             { goal: '다중 에이전트 협업 구조를 이해한다.', topics: ['리드 에이전트가 전체 작업 조율', 'Sub Agent 병렬 처리 (독립 컨텍스트)', '대규모 코드베이스·문서·리서치 활용', '작업 규모가 클수록 효과적'], practice: null },
+            { goal: 'Agent Teams의 개념과 Sub Agent와의 차이를 이해한다.', topics: ['Sub Agent: 메인 → 결과 단방향', 'Agent Teams: 팀원끼리 직접 대화 다방향', '실무 예시: 조사·분석·보고서 팀 협업', '프롬프트로 팀 구성 요청'], practice: null },
             { goal: 'CLI와 Desktop 환경의 차이점과 선택 기준을 파악한다.', topics: ['CLI — 터미널·자동화·CI/CD·Unix 파이프', 'Desktop — GUI·Projects·시각적 diff', 'CLI와 Desktop 세션 공유 가능', '업무 유형에 따라 혼용 권장'], practice: 'Desktop 환경과 CLI 환경을 동일한 작업으로 비교 체험하고, 각자의 업무 스타일에 맞는 환경을 선택한다.' }
                         ]
                     }
