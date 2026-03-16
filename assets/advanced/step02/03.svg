@@ -2,41 +2,63 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 02</text>
-  <text x="60" y="130" font-family="-apple-system,sans-serif" font-size="40" font-weight="700" fill="#171717">AI가 코딩하고 AI가 직접 테스트한다</text>
-  <text x="60" y="178" font-family="-apple-system,sans-serif" font-size="19" fill="#6b7280">실습 1 - 코딩, 확인, 수정을 AI가 한 루프 안에서 처리합니다</text>
+  <text x="60" y="130" font-family="-apple-system,sans-serif" font-size="40" font-weight="700" fill="#171717">웹 탐색 + 유저 플로우 PPT 자동 생성</text>
+  <text x="60" y="178" font-family="-apple-system,sans-serif" font-size="19" fill="#6b7280">실습 1 - Playwright MCP 탐색 + ADV 01 python-pptx 스킬 연계</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <rect x="60" y="248" width="196" height="72" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
-  <text x="158" y="278" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="14" font-weight="700" fill="#2563eb">Claude Code</text>
-  <text x="158" y="302" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" fill="#374151">HTML/CSS/JS 작성</text>
-  <polygon points="268,284 256,272 256,296" fill="#9ca3af"/>
-  <line x1="256" y1="284" x2="280" y2="284" stroke="#9ca3af" stroke-width="2"/>
-  <rect x="280" y="248" width="196" height="72" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
-  <text x="378" y="278" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="14" font-weight="700" fill="#2563eb">MCP 접속</text>
-  <text x="378" y="302" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" fill="#374151">localhost 열기</text>
-  <polygon points="488,284 476,272 476,296" fill="#9ca3af"/>
-  <line x1="476" y1="284" x2="500" y2="284" stroke="#9ca3af" stroke-width="2"/>
-  <rect x="500" y="248" width="196" height="72" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
-  <text x="598" y="278" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="14" font-weight="700" fill="#2563eb">스크린샷</text>
-  <text x="598" y="302" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" fill="#374151">렌더링 확인</text>
-  <polygon points="708,284 696,272 696,296" fill="#9ca3af"/>
-  <line x1="696" y1="284" x2="720" y2="284" stroke="#9ca3af" stroke-width="2"/>
-  <rect x="720" y="248" width="220" height="72" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
-  <text x="830" y="278" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="14" font-weight="700" fill="#2563eb">콘솔 에러 확인</text>
-  <text x="830" y="302" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" fill="#374151">console_messages</text>
-  <polygon points="952,284 940,272 940,296" fill="#9ca3af"/>
-  <line x1="940" y1="284" x2="964" y2="284" stroke="#9ca3af" stroke-width="2"/>
-  <rect x="964" y="248" width="196" height="72" rx="10" fill="#dcfce7" stroke="#86efac" stroke-width="1.5"/>
-  <text x="1062" y="278" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="14" font-weight="700" fill="#16a34a">자동 수정</text>
-  <text x="1062" y="302" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" fill="#374151">에러 보고 즉시 반영</text>
-  <line x1="1062" y1="320" x2="1062" y2="356" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <line x1="1062" y1="356" x2="158" y2="356" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <line x1="158" y1="356" x2="158" y2="322" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <polygon points="158,320 150,334 166,334" fill="#2563eb"/>
-  <text x="640" y="378" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" fill="#2563eb">반복 루프</text>
-  <line x1="60" y1="404" x2="1220" y2="404" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="444" font-family="-apple-system,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">활용 시나리오</text>
-  <text x="60" y="482" font-family="-apple-system,sans-serif" font-size="18" fill="#374151">랜딩페이지 제작 후 모바일, PC 렌더링 동시 확인</text>
-  <text x="60" y="518" font-family="-apple-system,sans-serif" font-size="18" fill="#374151">앱스토어 제출용 - 여러 해상도 스크린샷 한 번에 자동 캡처</text>
+
+  <!-- 5단계 흐름 -->
+  <rect x="60" y="248" width="196" height="80" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="158" y="281" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="#2563eb">HTML 제공</text>
+  <text x="158" y="301" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="#374151">로그인 / 대시보드</text>
+  <text x="158" y="319" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="#374151">상세 페이지 구성</text>
+  <polygon points="268,288 256,276 256,300" fill="#9ca3af"/>
+  <line x1="256" y1="288" x2="280" y2="288" stroke="#9ca3af" stroke-width="2"/>
+
+  <rect x="280" y="248" width="196" height="80" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="378" y="281" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="#2563eb">로컬 서버 실행</text>
+  <text x="378" y="301" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="#374151">python -m http.server</text>
+  <text x="378" y="319" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="#374151">localhost 접속 준비</text>
+  <polygon points="488,288 476,276 476,300" fill="#9ca3af"/>
+  <line x1="476" y1="288" x2="500" y2="288" stroke="#9ca3af" stroke-width="2"/>
+
+  <rect x="500" y="248" width="196" height="80" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="598" y="281" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="#2563eb">MCP 탐색</text>
+  <text x="598" y="301" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="#374151">각 페이지 접속</text>
+  <text x="598" y="319" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="#374151">snapshot + 스크린샷</text>
+  <polygon points="708,288 696,276 696,300" fill="#9ca3af"/>
+  <line x1="696" y1="288" x2="720" y2="288" stroke="#9ca3af" stroke-width="2"/>
+
+  <rect x="720" y="248" width="196" height="80" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="818" y="281" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="#2563eb">플로우 분석</text>
+  <text x="818" y="301" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="#374151">Claude가 동선 파악</text>
+  <text x="818" y="319" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="#374151">페이지별 설명 생성</text>
+  <polygon points="928,288 916,276 916,300" fill="#9ca3af"/>
+  <line x1="916" y1="288" x2="940" y2="288" stroke="#9ca3af" stroke-width="2"/>
+
+  <rect x="940" y="248" width="220" height="80" rx="10" fill="#dcfce7" stroke="#86efac" stroke-width="1.5"/>
+  <text x="1050" y="281" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="#16a34a">PPT 자동 생성</text>
+  <text x="1050" y="301" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="#374151">python-pptx</text>
+  <text x="1050" y="319" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="#374151">스크린샷 + 설명 삽입</text>
+
+  <line x1="60" y1="354" x2="1220" y2="354" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- PPT 슬라이드 구성 설명 -->
+  <text x="60" y="390" font-family="-apple-system,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">생성되는 PPT 구성</text>
+
+  <rect x="60" y="408" width="352" height="64" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="236" y="432" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="600" fill="#374151">슬라이드 1 - 로그인 페이지</text>
+  <text x="236" y="454" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="#6b7280">스크린샷 + 구성 요소 설명</text>
+
+  <rect x="434" y="408" width="352" height="64" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="610" y="432" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="600" fill="#374151">슬라이드 2 - 대시보드</text>
+  <text x="610" y="454" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="#6b7280">스크린샷 + 주요 기능 설명</text>
+
+  <rect x="808" y="408" width="352" height="64" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="984" y="432" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="600" fill="#374151">슬라이드 3 - 상세 페이지</text>
+  <text x="984" y="454" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="#6b7280">스크린샷 + 유저 액션 흐름</text>
+
+  <text x="60" y="510" font-family="-apple-system,sans-serif" font-size="15" fill="#374151">ADV 01에서 만든 python-pptx 스킬을 그대로 재사용합니다</text>
+
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="15" fill="#2563eb">내 사이트를 AI가 직접 눈으로 보면서 고쳐나갑니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="15" fill="#2563eb">웹 탐색 자동화 + 문서 자동화 스킬을 하나의 파이프라인으로 연결합니다</text>
 </svg>

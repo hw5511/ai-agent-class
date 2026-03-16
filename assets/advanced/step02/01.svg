@@ -10,10 +10,10 @@
 
   <!-- 실습 1 블럭 -->
   <rect x="60" y="286" width="545" height="180" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
-  <text x="88" y="320" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#2563eb">실습 1 — AI 코딩 + 자체 테스트 루프</text>
-  <text x="88" y="352" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">AI가 웹사이트를 코딩하고</text>
-  <text x="88" y="380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">직접 접속해 스크린샷·콘솔 에러를 확인한다</text>
-  <text x="88" y="414" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">렌더링 확인  /  에러 체크  /  앱스토어 스크린샷 자동화</text>
+  <text x="88" y="320" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#2563eb">실습 1 — 웹 탐색 + 유저 플로우 PPT 자동 생성</text>
+  <text x="88" y="352" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">제공된 HTML 사이트를 AI가 탐색·스크린샷하고</text>
+  <text x="88" y="380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">python-pptx로 유저 플로우 PPT를 자동 생성한다</text>
+  <text x="88" y="414" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">Playwright MCP 탐색  /  스크린샷  /  python-pptx 슬라이드 생성</text>
 
   <!-- 실습 2 블럭 -->
   <rect x="655" y="286" width="545" height="180" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
