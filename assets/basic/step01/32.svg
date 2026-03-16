@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- 헤더 배지 -->
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+
+  <!-- 제목 -->
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">AI 동작원리를 알면 달라진다</text>
+  <text x="60" y="122" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#737373">이 강의에서 배울 핵심 개념들이 에이전트 활용에 어떻게 연결되는지</text>
+  <line x1="60" y1="138" x2="1220" y2="138" stroke="#e5e5e5" stroke-width="1.5"/>
+
+  <!-- 4개 개념 카드 (2x2 레이아웃) -->
+  <!-- 카드 1: 컨텍스트 윈도우 -->
+  <rect x="60" y="162" width="555" height="130" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="88" y="195" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#16a34a">컨텍스트 윈도우 이해</text>
+  <text x="88" y="221" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">AI가 한 번에 기억하는 범위를 알면</text>
+  <text x="88" y="243" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">긴 대화에서도 중요한 내용을 놓치지 않게 관리할 수 있다</text>
+  <rect x="88" y="266" width="162" height="18" rx="5" fill="#dcfce7"/>
+  <text x="169" y="279" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#16a34a">대화 관리 능력 향상</text>
+
+  <!-- 카드 2: 프롬프트 구조 -->
+  <rect x="665" y="162" width="555" height="130" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="693" y="195" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#2563eb">프롬프트 구조 이해</text>
+  <text x="693" y="221" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">시스템 프롬프트, 사용자 메시지, 역할 지정 방식을 알면</text>
+  <text x="693" y="243" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">원하는 결과를 정확하고 일관되게 요청할 수 있다</text>
+  <rect x="693" y="266" width="162" height="18" rx="5" fill="#dbeafe"/>
+  <text x="774" y="279" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#2563eb">요청 정확도 향상</text>
+
+  <!-- 카드 3: 도구(툴) 개념 -->
+  <rect x="60" y="310" width="555" height="130" rx="12" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
+  <text x="88" y="343" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#d97706">도구(Tool) 개념 이해</text>
+  <text x="88" y="369" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">에이전트가 파일 읽기, 코드 실행, 웹 검색 등을 하는 방식을 알면</text>
+  <text x="88" y="391" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">어떤 권한을 주고, 무엇을 맡길지 올바르게 결정할 수 있다</text>
+  <rect x="88" y="414" width="150" height="18" rx="5" fill="#fef3c7"/>
+  <text x="163" y="427" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#d97706">권한 설계 능력 향상</text>
+
+  <!-- 카드 4: 토큰과 비용 -->
+  <rect x="665" y="310" width="555" height="130" rx="12" fill="#fdf4ff" stroke="#d8b4fe" stroke-width="1.5"/>
+  <text x="693" y="343" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#9333ea">토큰과 사용량 이해</text>
+  <text x="693" y="369" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">AI가 텍스트를 처리하는 단위(토큰)와 사용 한도를 알면</text>
+  <text x="693" y="391" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">비용을 절약하고 세션을 효율적으로 운용할 수 있다</text>
+  <rect x="693" y="414" width="150" height="18" rx="5" fill="#f3e8ff"/>
+  <text x="768" y="427" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#9333ea">비용 효율 향상</text>
+
+  <!-- 핵심 메시지 박스 -->
+  <rect x="60" y="462" width="1160" height="64" rx="12" fill="#0a0a0a"/>
+  <text x="640" y="488" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#ffffff">"AI에게 일을 시키려면, AI가 어떻게 생각하는지를 먼저 알아야 한다"</text>
+  <text x="640" y="513" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">이 강의에서 위 4가지 개념을 순서대로 체득하게 됩니다</text>
+
+  <!-- 하단 안내 -->
+  <text x="640" y="582" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">원리를 알면 프롬프트 품질이 올라가고, 에이전트 실수를 줄일 수 있습니다</text>
+</svg>

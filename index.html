@@ -920,7 +920,7 @@
                         goal: 'AI 에이전트의 개념을 이해하고, 3종 CLI 에이전트(Gemini, GPT Codex, Claude Code)를 직접 설치하여 동작을 확인한다.',
                         topics: ['AI 에이전트란? / 설치형 AI란?', 'Gemini CLI 설치 및 로그인', 'GPT CLI(Codex) 설치 및 로그인', 'Claude Code 설치 및 로그인', '세션 사용량 및 extra-usage'],
                         practice: '3종 에이전트를 모두 설치하고 동일한 질문을 입력해 응답 차이를 비교한다.',
-                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg','07.svg','08.svg','09.svg','10.svg','11.svg','12.svg','13.svg','14.svg','15.svg','16.svg','17.svg','18.svg','19.svg','20.svg','21.svg','22.svg','24.svg','25.svg','23.svg','26.svg','27.svg','28.svg','29.svg','30.svg'],
+                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','31.svg','32.svg','33.svg','06.svg','07.svg','08.svg','09.svg','10.svg','11.svg','12.svg','13.svg','14.svg','15.svg','16.svg','17.svg','18.svg','19.svg','20.svg','21.svg','22.svg','24.svg','25.svg','23.svg','26.svg','27.svg','28.svg','29.svg','30.svg'],
                         slideDescs: [
                             {
                                 goal: 'AI 에이전트의 개념과 SEE-THINK-PLAN-DO-FIX 동작 루프를 이해한다.',
@@ -946,6 +946,22 @@
                                 goal: '에이전트 프로그램이 명령을 자동 감지·실행하는 원리를 이해한다.',
                                 topics: ['시스템 프롬프트로 출력 형식 지정', 'command{} 패턴 자동 감지', '터미널에서 명령 자동 실행', '지시 → 판단 → 행동의 에이전트 루프'],
                                 practice: '시스템 프롬프트를 작성하여 에이전트가 명령어를 자동 감지하고 실행하는 흐름을 직접 확인한다.'
+                            },
+                            {
+                                goal: '에이전트를 잘 다루려면 무엇이 필요한지 개발자/비개발자 관점으로 이해한다.',
+                                topics: ['개발자 — 기존 코드 능력 + 에이전트로 생산성 극대화', '비개발자 — 도메인 지식 + 에이전트로 업무 자동화', 'AI 동작 원리 이해가 공통 핵심 역량'],
+                                practice: null
+                            },
+                            {
+                                goal: 'AI 동작원리 4가지(컨텍스트/프롬프트/툴/토큰)를 이해하면 에이전트 활용 능력이 달라짐을 학습한다.',
+                                topics: ['컨텍스트 윈도우 — 대화 관리', '프롬프트 구조 — 정확한 요청', '도구(Tool) 개념 — 권한 설계', '토큰과 사용량 — 비용 효율'],
+                                practice: null
+                            },
+                            {
+                                goal: '이 강의에서 사용하는 Claude Pro 플랜의 특징과 효율적인 사용법을 이해한다.',
+                                topics: ['Claude Pro — 월 약 $20, 5시간 세션 초기화', '매일 사용 + 자기 분야 적용 = AI 전문가', '현재 사용량 확인: claude.ai/settings/usage'],
+                                practice: null,
+                                action: { label: '사용량 확인', download: { href: 'https://claude.ai/settings/usage', text: 'Claude 사용량 대시보드' } }
                             },
                             {
                                 goal: 'Git 설치 및 초기 설정을 완료한다.',
