@@ -1,18 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
-  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 02</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">환경 구성</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Playwright 설치는 두 단계로 진행합니다</text>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 02</text>
+  <text x="60" y="130" font-family="-apple-system,sans-serif" font-size="40" font-weight="700" fill="#171717">AI가 코딩하고 AI가 직접 테스트한다</text>
+  <text x="60" y="178" font-family="-apple-system,sans-serif" font-size="19" fill="#6b7280">실습 1 - 코딩, 확인, 수정을 AI가 한 루프 안에서 처리합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">설치</text>
-  <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">pip install playwright</text>
-  <text x="60" y="348" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">playwright install        # 브라우저 바이너리 다운로드 (필수)</text>
-  <line x1="60" y1="394" x2="1220" y2="394" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="434" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">기본 구조</text>
-  <text x="60" y="474" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">from playwright.sync_api import sync_playwright</text>
-  <text x="60" y="514" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">with sync_playwright() as p:</text>
-  <text x="60" y="550" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">    browser = p.chromium.launch()</text>
+  <rect x="60" y="248" width="196" height="72" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="158" y="278" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="14" font-weight="700" fill="#2563eb">Claude Code</text>
+  <text x="158" y="302" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" fill="#374151">HTML/CSS/JS 작성</text>
+  <polygon points="268,284 256,272 256,296" fill="#9ca3af"/>
+  <line x1="256" y1="284" x2="280" y2="284" stroke="#9ca3af" stroke-width="2"/>
+  <rect x="280" y="248" width="196" height="72" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="378" y="278" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="14" font-weight="700" fill="#2563eb">MCP 접속</text>
+  <text x="378" y="302" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" fill="#374151">localhost 열기</text>
+  <polygon points="488,284 476,272 476,296" fill="#9ca3af"/>
+  <line x1="476" y1="284" x2="500" y2="284" stroke="#9ca3af" stroke-width="2"/>
+  <rect x="500" y="248" width="196" height="72" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="598" y="278" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="14" font-weight="700" fill="#2563eb">스크린샷</text>
+  <text x="598" y="302" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" fill="#374151">렌더링 확인</text>
+  <polygon points="708,284 696,272 696,296" fill="#9ca3af"/>
+  <line x1="696" y1="284" x2="720" y2="284" stroke="#9ca3af" stroke-width="2"/>
+  <rect x="720" y="248" width="220" height="72" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="830" y="278" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="14" font-weight="700" fill="#2563eb">콘솔 에러 확인</text>
+  <text x="830" y="302" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" fill="#374151">console_messages</text>
+  <polygon points="952,284 940,272 940,296" fill="#9ca3af"/>
+  <line x1="940" y1="284" x2="964" y2="284" stroke="#9ca3af" stroke-width="2"/>
+  <rect x="964" y="248" width="196" height="72" rx="10" fill="#dcfce7" stroke="#86efac" stroke-width="1.5"/>
+  <text x="1062" y="278" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="14" font-weight="700" fill="#16a34a">자동 수정</text>
+  <text x="1062" y="302" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" fill="#374151">에러 보고 즉시 반영</text>
+  <line x1="1062" y1="320" x2="1062" y2="356" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="1062" y1="356" x2="158" y2="356" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="158" y1="356" x2="158" y2="322" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="158,320 150,334 166,334" fill="#2563eb"/>
+  <text x="640" y="378" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" fill="#2563eb">반복 루프</text>
+  <line x1="60" y1="404" x2="1220" y2="404" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="444" font-family="-apple-system,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">활용 시나리오</text>
+  <text x="60" y="482" font-family="-apple-system,sans-serif" font-size="18" fill="#374151">랜딩페이지 제작 후 모바일, PC 렌더링 동시 확인</text>
+  <text x="60" y="518" font-family="-apple-system,sans-serif" font-size="18" fill="#374151">앱스토어 제출용 - 여러 해상도 스크린샷 한 번에 자동 캡처</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">pip install 만으로는 부족 — playwright install 반드시 실행</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="15" fill="#2563eb">내 사이트를 AI가 직접 눈으로 보면서 고쳐나갑니다</text>
 </svg>

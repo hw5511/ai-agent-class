@@ -1208,17 +1208,17 @@
                         ]
                     },
                     {
-                        num: 2, title: '웹 브라우저 자동 조작하기', hours: '2시간 · Web Automation',
-                        goal: '웹 자동화의 원리를 이해하고, 에이전트로 브라우저를 직접 제어하여 반복 웹 작업을 자동화한다.',
-                        topics: ['웹 자동화의 원리와 활용법', '브라우저 자동 제어 환경 구성 (Playwright)', '페이지 이동 / 클릭 / 입력 자동화', '스크린샷 및 데이터 수집·저장'],
-                        practice: '지정한 웹페이지에 자동으로 접속하여 데이터를 수집하고 결과를 파일로 저장하는 흐름을 구현한다.',
+                        num: 2, title: '웹 브라우저 자동화', hours: '2시간 · Web Automation',
+                        goal: 'AI가 직접 브라우저를 제어해 코딩 결과를 테스트하고, 레코딩한 루틴을 스크립트·스킬로 변환하는 웹 자동화 흐름을 익힌다.',
+                        topics: ['AI 코딩→자체 테스트 루프 (렌더링 확인·콘솔 에러·앱스토어 스크린샷)', '웹 자동화 활용 범위와 법적 주의사항', 'Playwright MCP 설치와 핵심 툴', '레코딩→스크립트→스킬 3단계 변환'],
+                        practice: 'AI가 제작한 웹페이지를 Playwright MCP로 직접 테스트하고, toscrape.com과 Wikipedia에서 레코딩한 루틴을 CLI 스킬로 변환한다.',
                         slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
                         slideDescs: [
-            { goal: 'ADV 2 목표와 오늘 배울 내용을 안내한다.', topics: ['웹 자동화 원리', 'Playwright vs Selenium', '환경 구성', '이동·클릭·입력·수집·저장'], practice: null },
-            { goal: '웹 자동화 원리와 Playwright vs Selenium을 비교한다.', topics: ['코드 -> 브라우저 제어 -> 클릭·입력·추출', 'Playwright — 빠름·자동 대기·설치 간단 (권장)', 'Selenium — 레거시 지원·명시적 대기 필요', '새 프로젝트는 Playwright 권장'], practice: null },
-            { goal: 'Playwright 설치와 기본 구조를 파악한다.', topics: ['pip install playwright', 'playwright install (브라우저 바이너리 필수)', 'sync_playwright() 컨텍스트 매니저', 'chromium.launch() -> browser -> page'], practice: null },
-            { goal: 'page 핵심 API로 이동·클릭·입력·수집을 자동화한다.', topics: ['page.goto() URL 이동', 'page.click() 자동 대기 포함', 'page.fill() 입력 필드', 'page.locator().all() 수집 · screenshot()'], practice: null },
-            { goal: '수집 데이터를 CSV와 JSON으로 저장한다.', topics: ['csv.DictWriter — writeheader + writerows', 'json.dump — ensure_ascii=False indent=2', '에이전트 명령 하나로 수집 + 저장 자동화', '전체 파이프라인 완성'], practice: '지정한 웹페이지에 자동으로 접속하여 데이터를 수집하고 결과를 파일로 저장하는 흐름을 구현한다.' }
+            { goal: 'ADV 2 목표와 두 가지 실습 흐름을 안내한다.', topics: ['실습 1 — AI 코딩 + 자체 테스트 루프', '실습 2 — 웹 데이터 수집 + 스크립트화', 'Playwright MCP 기반 진행'], practice: null },
+            { goal: '웹 자동화 활용 범위와 법적 주의사항을 이해한다.', topics: ['활용 가능: 내 사이트 테스트·앱스토어 스크린샷·허용 사이트 수집', '주의: 이용약관 금지 사이트 (잡코리아-사람인 120억 판례)', '기술적으로 가능한 것과 해도 되는 것의 구분'], practice: null },
+            { goal: 'AI 코딩→MCP 접속→스크린샷→콘솔 에러→수정 루프를 이해한다.', topics: ['Claude Code로 HTML/CSS/JS 작성', 'Playwright MCP로 localhost 접속', 'browser_take_screenshot + browser_console_messages', '앱스토어 제출용 해상도별 스크린샷 자동 캡처'], practice: 'AI가 제작한 랜딩페이지를 Playwright MCP로 접속해 스크린샷을 찍고 콘솔 에러를 확인한다.' },
+            { goal: 'Playwright MCP를 설치하고 핵심 툴의 역할을 파악한다.', topics: ['claude mcp add playwright npx @playwright/mcp@latest', 'browser_navigate / browser_snapshot / browser_take_screenshot', 'browser_click / browser_type / browser_fill_form', 'browser_snapshot이 스크린샷보다 권장되는 이유'], practice: null, action: { label: '설치 명령어', copy: 'claude mcp add playwright npx @playwright/mcp@latest' } },
+            { goal: '레코딩→스크립트→스킬 3단계로 자동화 루틴을 완성한다.', topics: ['books.toscrape.com — 연습용 스크래핑 사이트', 'Wikipedia 검색창 입력 → 결과 수집 → 저장', 'browser_generate_locator로 셀렉터 확정', 'Python 스크립트 추출 → CLI 스킬 래핑'], practice: 'Wikipedia에서 키워드를 검색해 결과를 수집하고, 해당 루틴을 CLI 스킬로 변환한다.' }
                         ]
                     },
                     {

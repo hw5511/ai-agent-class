@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
-  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 02</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">CSV  /  JSON 저장</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">수집한 데이터를 파일로 저장합니다</text>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 02</text>
+  <text x="60" y="130" font-family="-apple-system,sans-serif" font-size="40" font-weight="700" fill="#171717">레코딩 -&gt; 스크립트 -&gt; 스킬</text>
+  <text x="60" y="178" font-family="-apple-system,sans-serif" font-size="19" fill="#6b7280">실습 2 - 한 번 잡은 루틴을 자동 실행 스킬로 변환합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">CSV 저장</text>
-  <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">with open('data.csv', 'w', newline='', encoding='utf-8') as f:</text>
-  <text x="60" y="344" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">    writer = csv.DictWriter(f, fieldnames=['이름', '가격'])</text>
-  <text x="60" y="380" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">    writer.writeheader()  /  writer.writerows(data)</text>
-  <line x1="60" y1="416" x2="1220" y2="416" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="456" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">JSON 저장</text>
-  <text x="60" y="496" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">with open('data.json', 'w', encoding='utf-8') as f:</text>
-  <text x="60" y="532" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">    json.dump(data, f, ensure_ascii=False, indent=2)</text>
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">수집 -&gt; 저장까지 에이전트 명령 하나로 자동 완성됩니다</text>
+  <text x="60" y="256" font-family="-apple-system,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 사이트</text>
+  <text x="60" y="292" font-family="-apple-system,sans-serif" font-size="18" fill="#374151">books.toscrape.com  -  스크래핑 전용 연습 사이트  (법적 문제 없음)</text>
+  <text x="60" y="324" font-family="-apple-system,sans-serif" font-size="18" fill="#374151">en.wikipedia.org  -  검색창 입력 -&gt; 결과 수집 -&gt; 저장</text>
+  <line x1="60" y1="354" x2="1220" y2="354" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="394" font-family="-apple-system,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">3단계 흐름</text>
+  <text x="60" y="432" font-family="-apple-system,sans-serif" font-size="18" fill="#374151">1  레코딩    AI와 함께 요소 분석 -&gt; browser_generate_locator로 셀렉터 확정</text>
+  <text x="60" y="468" font-family="-apple-system,sans-serif" font-size="18" fill="#374151">2  스크립트   확정된 루틴을 Python 파일로 추출 -&gt; MCP 없이도 단독 실행</text>
+  <text x="60" y="504" font-family="-apple-system,sans-serif" font-size="18" fill="#374151">3  스킬화     CLI 스킬로 래핑 -&gt; 말 한마디로 자동 실행</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#171717"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="15" fill="#ffffff">공식 API가 없는 서비스도  허용된 범위 안에서  자동화 스킬로 만들 수 있습니다</text>
 </svg>
