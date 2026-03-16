@@ -1175,7 +1175,12 @@
             { goal: 'CLI와 Desktop 환경의 장단점과 선택 기준을 파악한다.', topics: ['CLI — 자동화·스크립팅·Hooks·파이프라인', 'Desktop — GUI·Projects·드래그앤드롭', 'CLI 단점: 터미널 지식 필요', 'Desktop 단점: Hooks·자동화 스크립팅 불가'], practice: 'Desktop 환경과 CLI 환경을 동일한 작업으로 비교 체험하고, 각자의 업무 스타일에 맞는 환경을 선택한다.' },
             { goal: 'CLI의 개념과 우리가 배울 CLI 도구들을 파악한다.', topics: ['CLI = Command Line Interface', '공통 구조: [도구] [명령] [--옵션] [인수]', 'Claude Code · GitHub CLI · Gemini CLI', '스킬 자동화와 파이프라인의 기반'], practice: null },
             { goal: 'GitHub 계정을 만들고 gh cli 설치를 준비한다.', topics: ['github.com 가입 · 이메일 인증', 'GitHub = 코드 버전 관리 + 원격 저장소', 'gh cli로 저장소·PR·이슈 터미널 관리', 'github.com/signup 접속'], practice: null },
-            { goal: 'gh cli를 설치하고 --scopes 인증을 완료한다.', topics: ['winget install GitHub.cli (Windows)', 'brew install gh (macOS)', 'gh auth login --scopes repo,delete_repo,workflow,...', 'gh auth status 로 인증 확인'], practice: null },
+            { goal: 'gh cli를 설치하고 --scopes 인증을 완료한다.', topics: ['winget install GitHub.cli (Windows)', 'brew install gh (macOS)', 'gh auth login --scopes repo,delete_repo,workflow,...', 'gh auth status 로 인증 확인'], practice: null, action: { label: '명령어', items: [
+                { desc: '설치 (Windows)', copy: 'winget install GitHub.cli' },
+                { desc: '설치 (macOS)', copy: 'brew install gh' },
+                { desc: '인증 (스코프 지정)', copy: 'gh auth login --scopes repo,delete_repo,workflow,gist,read:org,admin:public_key,write:packages' },
+                { desc: '인증 확인', copy: 'gh auth status' }
+            ] } },
             { goal: 'Claude에게 gh cli 기반 스킬을 자동 제작시킨다.', topics: ['gh repo list / gh pr list 직접 실행', '"gh cli로 저장소 목록과 PR 정리 스킬 만들어줘"', 'Claude가 SKILL.md + 스크립트 자동 생성', '/내-저장소-요약 스킬 완성'], practice: 'Claude에게 gh cli 명령어 기반 스킬을 자동 제작하도록 시키고 실행한다.' },
             { goal: 'Gemini CLI를 설치하고 터미널에서 질문하는 방법을 익힌다.', topics: ['npm install -g @google/gemini-cli', 'gemini -p "질문" — 비대화형 모드', 'Google 계정 로그인 (무료 1,000 req/day)', '1M 토큰 컨텍스트'], practice: null },
             { goal: 'Gemini CLI를 실습하고 Claude에게 연동 스킬을 제작시킨다.', topics: ['gemini -p "질문" 터미널 실행', '"bash로 gemini -p 호출 스킬 만들어줘"', '/ask-gemini 스킬 완성', 'Claude + Gemini 두 AI 병행 워크플로우'], practice: 'Gemini CLI를 실행하고 Claude에게 bash gemini 기반 스킬을 자동 제작하도록 시킨다.' }
