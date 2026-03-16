@@ -12,7 +12,7 @@
   <text x="60" y="416" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Message Content Intent 활성화 (Privileged Gateway Intents)</text>
   <text x="60" y="462" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">3단계</text>
   <text x="60" y="498" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">OAuth2 탭  →  URL Generator  →  bot 체크  →  Read/Send Messages 권한</text>
-  <text x="60" y="534" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">생성된 URL로 접속해서 본인 서버에 밇 초대</text>
+  <text x="60" y="534" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">생성된 URL로 접속해서 본인 서버에 봇 초대</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">토큰은 비밀번호첫럼 관리  —  코드에 직접 입력 금지, 환경변수로 보관</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">토큰은 비밀번호처럼 관리  —  코드에 직접 입력 금지, 환경변수로 보관</text>
 </svg>

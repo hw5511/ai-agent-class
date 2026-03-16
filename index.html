@@ -1140,7 +1140,7 @@
             { goal: 'Discord 알림 Skill을 제작하고 Hooks에 연결한다.', topics: ['Python requests로 Discord Webhook 호출', 'SKILL.md 파일 작성 및 등록', 'PostToolUse · Stop 이벤트에 스크립트 등록', '작업 완료 시 Discord 자동 알림'], practice: null },
             { goal: 'MCP와 스킬의 차이를 이해하고 Discord에 적용한다.', topics: ['MCP — send-message·read-messages 기본 제공', 'MCP 한계 — 멘션 필터링·특정 Bot @멘션 불가', '스킬 = MCP + Python 로직 추가', 'MCP와 스킬의 역할 분담'], practice: null },
             { goal: 'check_my_mention 스킬을 제작한다.', topics: ['SKILL.md 위치: .claude/skills/check-mention/', 'read-messages로 최근 50개 메시지 조회', '$USER_ID 멘션 항목만 필터링하여 보고', '1회성 조회 — 무한루프 없음'], practice: null },
-            { goal: 'send_with_mention 스킬을 제작하고 봇끼리 멘션 대화를 실습한다.', topics: ['Discord API로 <@$MENTION_USER_ID> 형식 전송', 'BOT_TOKEN·CHANNEL_ID·MENTION_USER_ID 환경변수 관리', '수강생 A → B 봇 @멘션 → B가 /check-mention으로 확인', 'MCP만으로는 불가한 흐름을 스킬로 완성'], practice: 'Discord MCP를 기반으로 check_my_mention 스킬과 send_with_mention 스킬을 직접 제작하고 봇끼리 멘션 대화를 완성한다.' }
+            { goal: 'send_with_mention 스킬을 제작하고 봇끼리 멘션 대화를 실습한다.', topics: ['Discord API로 <@$MENTION_USER_ID> 형식 전송', 'BOT_TOKEN·CHANNEL_ID·MENTION_USER_ID 환경변수 관리', '수강생 A → B 봇 @멘션 → B가 /check-mention으로 확인', 'MCP만으로는 불가한 흐름을 스킬로 완성'], practice: 'Discord MCP를 기반으로 check_my_mention 스킬과 send_with_mention 스킬을 직접 제작하고 봇끼리 멘션 대화를 완성한다.', action: { label: 'Claude에게 붙여넣기', copy: '.claude/skills/send-mention/SKILL.md 파일을 만들어줘. description: "특정 봇을 @멘션하여 메시지를 보냅니다". Discord API로 CHANNEL_ID에 <@MENTION_USER_ID> 형식으로 메시지 전송. BOT_TOKEN, CHANNEL_ID, MENTION_USER_ID는 환경변수로 관리하는 내용으로.' } }
                         ]
                     },
                     {
