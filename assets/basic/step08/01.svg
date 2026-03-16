@@ -7,7 +7,7 @@
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">TODAY</text>
   <text x="60" y="294" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">일반 Desktop  /  Desktop Claude Code  /  Claude Cowork</text>
-  <text x="60" y="334" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Agent Teams (코워크)  /  CLI vs Desktop 비교  /  CLI 개념</text>
+  <text x="60" y="334" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">CLI vs Desktop 비교  /  CLI 개념</text>
   <text x="60" y="374" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">GitHub CLI 설치 · 인증 · 스킬 제작</text>
   <text x="60" y="414" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Gemini CLI 소개 · 실습 · 스킬 제작</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
