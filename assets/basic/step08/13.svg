@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 08</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">GitHub 가입</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">버전 관리와 협업의 기반, GitHub 계정을 만듭니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">1단계  —  계정 생성</text>
+  <text x="60" y="292" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">github.com  →  Sign up  →  이메일 · 비밀번호 · 사용자명 입력</text>
+  <text x="60" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">이메일 인증 완료  →  무료 플랜으로 시작</text>
+  <line x1="60" y1="360" x2="1220" y2="360" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">GitHub를 사용하는 이유</text>
+  <text x="60" y="438" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">코드 버전 관리 (Git)  /  원격 저장소 백업  /  팀 협업</text>
+  <text x="60" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">gh cli로 터미널에서 PR · 이슈 · 저장소를 직접 조작</text>
+  <rect x="60" y="508" width="700" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="390" y="536" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="16" fill="#1d4ed8">github.com/signup</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">이미 GitHub 계정이 있으면 다음 단계로 바로 이동</text>
+</svg>

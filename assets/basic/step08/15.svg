@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 08</text>
+  <rect x="152" y="44" width="52" height="24" rx="12" fill="#2563eb"/>
+  <text x="178" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">실습</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">GitHub CLI 스킬 만들기</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Claude에게 gh cli 기반 스킬을 스스로 만들도록 시킵니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 1  —  gh cli 직접 실행</text>
+  <rect x="90" y="268" width="800" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="490" y="296" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="16" fill="#1d4ed8">gh repo list  /  gh pr list  /  gh issue list</text>
+  <text x="60" y="344" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 2  —  Claude에게 스킬 제작 요청</text>
+  <rect x="90" y="358" width="1090" height="52" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="635" y="390" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#1d4ed8">gh cli로 내 저장소 목록과 최근 PR 상태를 정리해주는 스킬을 만들어줘</text>
+  <text x="60" y="444" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">예상 결과</text>
+  <text x="60" y="482" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Claude가 SKILL.md + 실행 스크립트 자동 생성</text>
+  <text x="60" y="520" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">/내-저장소-요약 입력 시 gh cli 명령을 조합해 결과 출력</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">Claude Code가 gh 명령어를 조합해서 GitHub 작업을 자동화합니다</text>
+</svg>

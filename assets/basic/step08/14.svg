@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 08</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">GitHub CLI 설치와 인증</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">gh 명령어로 GitHub를 터미널에서 조작합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="252" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">1단계  —  설치</text>
+  <rect x="60" y="266" width="520" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="290" y="294" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="16" fill="#1d4ed8">winget install GitHub.cli</text>
+  <text x="600" y="294" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#9ca3af">Windows</text>
+  <rect x="60" y="320" width="440" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="280" y="348" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="16" fill="#1d4ed8">brew install gh</text>
+  <text x="520" y="348" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#9ca3af">macOS</text>
+  <text x="60" y="394" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">2단계  —  인증 (스코프 지정)</text>
+  <rect x="60" y="408" width="1160" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="640" y="436" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="14" fill="#1d4ed8">gh auth login --scopes repo,delete_repo,workflow,gist,read:org,admin:public_key,write:packages</text>
+  <text x="60" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">3단계  —  확인</text>
+  <rect x="60" y="490" width="380" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="250" y="518" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="16" fill="#1d4ed8">gh auth status</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="591" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">Browser 인증 또는 Personal Access Token(PAT) 방식 선택 가능</text>
+  <text x="640" y="611" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#f59e0b">gh repo list 로 내 저장소 목록이 보이면 인증 완료</text>
+</svg>

@@ -3,16 +3,35 @@
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 08</text>
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">CLI vs Desktop</text>
-  <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Claude Code CLI</text>
-  <text x="60" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">터미널 기반  /  자동화·스크립팅에 최적</text>
-  <text x="60" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">자동화 파이프라인 연결 가능</text>
-  <text x="60" y="342" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Hooks·Skills·MCP 전체 기능 활용</text>
-  <line x1="60" y1="386" x2="1220" y2="386" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="430" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Claude Desktop</text>
-  <text x="60" y="468" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">GUI 기반  /  시각적 작업·비개발자에게 친화적</text>
-  <text x="60" y="508" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Projects 관리  /  파일 드래그·드롭·변경 내용 비교</text>
-  <text x="60" y="548" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">CLI와 세션 공유 가능 — 필요에 따라 전환</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">상황에 맞는 도구를 선택합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <!-- Left Block: CLI -->
+  <rect x="60" y="228" width="555" height="316" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="337" y="268" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" font-weight="700" fill="#1d4ed8">Claude Code CLI</text>
+  <line x1="80" y1="282" x2="595" y2="282" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="80" y="306" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#059669" letter-spacing="0.08em">장점</text>
+  <text x="80" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">+ 자동화 · 스크립팅 최적화</text>
+  <text x="80" y="358" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">+ Hooks · Skills · MCP 풀 기능 지원</text>
+  <text x="80" y="386" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">+ 파이프라인 연결 · 반복 작업 자동화</text>
+  <line x1="80" y1="406" x2="595" y2="406" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="80" y="428" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#dc2626" letter-spacing="0.08em">단점</text>
+  <text x="80" y="452" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">- 터미널 기본 지식 필요</text>
+  <text x="80" y="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">- GUI 없음 · 시각적 작업 불편</text>
+  <text x="80" y="508" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">- 학습 곡선 존재</text>
+  <!-- Right Block: Desktop -->
+  <rect x="665" y="228" width="555" height="316" rx="12" fill="#f9fafb" stroke="#9ca3af" stroke-width="2"/>
+  <text x="942" y="268" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" font-weight="700" fill="#374151">Claude Desktop</text>
+  <line x1="685" y1="282" x2="1200" y2="282" stroke="#d1d5db" stroke-width="1"/>
+  <text x="685" y="306" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#059669" letter-spacing="0.08em">장점</text>
+  <text x="685" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">+ GUI 친화 · 비개발자도 활용 가능</text>
+  <text x="685" y="358" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">+ Projects 단위 관리 · 파일 드래그앤드롭</text>
+  <text x="685" y="386" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">+ CLI와 세션 공유 가능</text>
+  <line x1="685" y1="406" x2="1200" y2="406" stroke="#d1d5db" stroke-width="1"/>
+  <text x="685" y="428" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#dc2626" letter-spacing="0.08em">단점</text>
+  <text x="685" y="452" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">- Hooks · 고급 자동화 스크립팅 불가</text>
+  <text x="685" y="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">- 파이프라인 연결 제한</text>
+  <text x="685" y="508" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">- 설치 및 업데이트 수동 관리</text>
+  <!-- Footer -->
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#171717"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">상황에 맞게 CLI와 Desktop을 함께 활용합니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">개발·자동화 → CLI  /  시각적 작업·비개발자 → Desktop  /  둘 다 병행도 가능</text>
 </svg>
