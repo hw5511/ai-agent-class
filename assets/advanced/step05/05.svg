@@ -3,17 +3,19 @@
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 05</text>
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">PPT 자동화  —  데이터  →  프레젠테이션</text>
-  <line x1="60" y1="180" x2="1220" y2="180" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">자동화 흐름</text>
-  <text x="60" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">데이터 파일(CSV/JSON)  →  Claude 분석  →  슬라이드 구성 설계</text>
-  <text x="60" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">python-pptx  →  템플릿 기반 슬라이드 자동 삽입  →  파일 저장</text>
-  <line x1="60" y1="346" x2="1220" y2="346" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="390" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 프롬프트</text>
-  <text x="60" y="428" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8">'sales_data.csv를 읽고 월별 실적을 분석해서</text>
-  <text x="60" y="464" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8"> 임원 보고용 PPT를 자동으로 만들어줘'</text>
-  <line x1="60" y1="504" x2="1220" y2="504" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="540" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">오늘의 핵심</text>
-  <text x="60" y="572" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">트리거 키워드  /  문서 라우팅  /  headless 자동화  /  PPT 생성</text>
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">CLAUDE.md가 AI 에이전트의 두뇌 역할을 합니다</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">데이터 파일을 읽어 임원 보고용 PPT를 자동 생성합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">자동화 흐름</text>
+  <text x="60" y="296" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">데이터 파일(CSV/JSON)  →  Claude 분석  →  슬라이드 구성 설계</text>
+  <text x="60" y="334" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">python-pptx  →  템플릿 기반 슬라이드 자동 삽입  →  파일 저장</text>
+  <line x1="60" y1="368" x2="1220" y2="368" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 프롬프트</text>
+  <rect x="60" y="422" width="1160" height="72" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="84" y="452" font-family="'Courier New',Courier,monospace" font-size="17" fill="#1e40af">sales_data.csv를 읽고 월별 실적을 분석해서</text>
+  <text x="84" y="480" font-family="'Courier New',Courier,monospace" font-size="17" fill="#1e40af">임원 보고용 PPT를 자동으로 만들어줘</text>
+  <line x1="60" y1="512" x2="1220" y2="512" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="548" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">오늘의 핵심</text>
+  <text x="60" y="578" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#374151">트리거 키워드  /  문서 라우팅  /  headless 자동화  /  PPT 생성</text>
+  <rect x="60" y="600" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="631" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">CLAUDE.md가 AI 에이전트의 두뇌 역할을 합니다</text>
 </svg>
