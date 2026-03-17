@@ -276,11 +276,12 @@ def slide11():
         t_label(264, "STEPS") + "\n" +
         step(308, "1", '"gonggong_hwpxskills 레포 클론하고 Skill 만들어줘" 요청') + "\n" +
         step(358, "2", '"assets/report-template.hwpx 기반으로 보고서 만들어줘 — 제목: [원하는 제목]"') + "\n" +
-        step(408, "3", "생성된 report.hwpx 열어서 양식·내용 확인") + "\n" +
+        step(408, "3", "생성된 report.hwpx를 폴라리스 오피스 웹버전에서 열어 확인") + "\n" +
         divider(450) + "\n" +
         t_label(480, "PROMPT") + "\n" +
         prompt_box(494, '"gonggong report-template.hwpx로 [주제] 보고서 만들어줘"') + "\n" +
-        footer_light_green("생성된 .hwpx 파일을 폴라리스 오피스로 열어 보여주세요")
+        f'  <rect x="60" y="560" width="1160" height="40" rx="8" fill="#ecfdf5" stroke="#bbf7d0" stroke-width="1"/>\n'
+        f'  <text x="84" y="585" font-family="{FONT}" font-size="14" fill="#059669">hwp.polarisoffice.com  —  설치 없이 브라우저에서 .hwpx 파일을 바로 열 수 있습니다</text>'
     )
 
 

@@ -2,38 +2,24 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 03</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Playwright로 OAuth 설정 보조</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">개인 계정은 OAuth 클라이언트를 수동 생성해야 합니다 — Claude가 화면을 안내합니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="36" font-weight="700" fill="#171717">gws auth login  —  인증 완료 확인</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">7개 서비스 스코프 인증이 완료되면 Claude가 gws 명령을 바로 사용할 수 있습니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-
-  <rect x="60" y="228" width="340" height="130" rx="8" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
-  <text x="230" y="260" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0369a1">1. OAuth 동의 화면</text>
-  <text x="230" y="284" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">browser_navigate → GCP 콘솔</text>
-  <text x="230" y="304" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">User Type: External 선택</text>
-  <text x="230" y="324" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">앱 이름 + 이메일 입력 후 저장</text>
-  <text x="240" y="350" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#9ca3af">→</text>
-
-  <rect x="470" y="228" width="340" height="130" rx="8" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
-  <text x="640" y="260" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0369a1">2. 테스트 사용자 등록</text>
-  <text x="640" y="284" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">browser_snapshot → 화면 확인</text>
-  <text x="640" y="304" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">테스트 사용자 추가 클릭</text>
-  <text x="640" y="324" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#e11d48">⚠ 빠뜨리면 403 access_denied</text>
-  <text x="650" y="350" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#9ca3af">→</text>
-
-  <rect x="880" y="228" width="360" height="130" rx="8" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
-  <text x="1060" y="260" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#0369a1">3. OAuth 클라이언트 ID 생성</text>
-  <text x="1060" y="284" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">사용자 인증정보 만들기 클릭</text>
-  <text x="1060" y="304" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">애플리케이션 유형: 데스크톱 앱</text>
-  <text x="1060" y="324" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">클라이언트 ID + Secret 복사</text>
-
-  <line x1="60" y1="382" x2="1220" y2="382" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="418" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Claude 보조 프롬프트</text>
-  <rect x="60" y="432" width="1160" height="60" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="84" y="458" font-family="'Courier New',Courier,monospace" font-size="15" fill="#1e40af">Playwright MCP로 console.cloud.google.com 열어서</text>
-  <text x="84" y="480" font-family="'Courier New',Courier,monospace" font-size="15" fill="#1e40af">OAuth 동의화면 설정 단계를 화면 보면서 안내해줘</text>
-
-  <line x1="60" y1="510" x2="1220" y2="510" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="548" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">완료 후 → gws auth login -s drive,gmail,calendar,sheets,docs,tasks</text>
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#171717"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#ffffff">Claude가 GCP 콘솔 화면을 보며 단계별로 클릭 위치를 안내해준다</text>
+  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">최종 인증 명령어</text>
+  <rect x="60" y="278" width="1160" height="56" rx="8" fill="#0f172a"/>
+  <text x="84" y="312" font-family="'Courier New',Courier,monospace" font-size="17" fill="#a5f3fc">gws auth login -s drive,gmail,calendar,sheets,docs,youtube,forms</text>
+  <line x1="60" y1="358" x2="1220" y2="358" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">브라우저 경고 처리 (반드시 완료)</text>
+  <circle cx="84" cy="430" r="14" fill="#eff6ff"/>
+  <text x="84" y="436" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">1</text>
+  <text x="110" y="436" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"Google에서 확인하지 않은 앱" 경고 → 고급 클릭</text>
+  <circle cx="84" cy="474" r="14" fill="#eff6ff"/>
+  <text x="84" y="480" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">2</text>
+  <text x="110" y="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"gws CLI(으)로 이동(안전하지 않음)" 클릭</text>
+  <circle cx="84" cy="518" r="14" fill="#eff6ff"/>
+  <text x="84" y="524" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">3</text>
+  <text x="110" y="524" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">권한 체크박스 모두 선택 → 계속 → 인증 완료</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="584" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#2563eb">완료 확인:  gws auth status</text>
+  <text x="640" y="604" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#2563eb">테스트:  gws drive files list --params 'pageSize'</text>
 </svg>
