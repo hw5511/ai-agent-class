@@ -1225,17 +1225,17 @@
                         ]
                     },
                     {
-                        num: 3, title: '외부 API 연동 1: Google Cloud Platform 통합', hours: '2시간 · Tool & Automation',
-                        goal: 'GCP OAuth 인증을 공통 가이드로 이해하고, Sheets·Forms·Docs·Drive·Gmail 5가지 API를 에이전트와 연결한다.',
-                        topics: ['OAuth 인증 공통 가이드 (OAuth 2.0 / 서비스 계정)', 'Google Sheets·Forms API 연동', 'Google Docs·Drive API 연동', 'Gmail API + 통합 실습: Sheets 데이터 → Gmail 리포트'],
-                        practice: 'Google Sheets 데이터를 Python으로 읽어 Claude로 분석하고, Gmail API로 담당자에게 리포트를 자동 발송하는 파이프라인을 완성한다.',
+                        num: 3, title: 'GWS CLI로 Google Workspace 자동화', hours: '2시간 · Tool & Automation',
+                        goal: 'GWS CLI + gcloud를 설치하고, Playwright로 OAuth 설정을 보조받아 Drive·Gmail·Sheets·Calendar를 에이전트와 연결하는 파이프라인을 완성한다.',
+                        topics: ['GWS CLI 설치 (gcloud + npm install @googleworkspace/cli)', 'Playwright MCP로 OAuth 클라이언트 설정 화면 안내', 'gws 핵심 명령어 (drive · gmail · calendar · sheets)', 'subprocess로 gws 호출 → Python 파이프라인 완성'],
+                        practice: 'Drive에서 오늘 수정된 파일 목록을 Gmail로 자동 발송하는 파이프라인을 gws + subprocess로 완성한다.',
                         slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
                         slideDescs: [
-            { goal: 'ADV 3 목표와 오늘 배울 5가지 GCP API를 안내한다.', topics: ['OAuth 인증 공통 가이드', 'Google Sheets / Forms API', 'Google Docs / Drive API', 'Gmail API + 통합 실습'], practice: null },
-            { goal: 'GCP 5가지 API에 공통으로 적용되는 OAuth 인증을 설정한다.', topics: ['OAuth 2.0 — credentials.json → token.json 자동 갱신', '서비스 계정 — JSON 키 + GOOGLE_APPLICATION_CREDENTIALS', 'Sheets·Drive 공유 권한 설정 필요', 'pip install google-api-python-client google-auth'], practice: null },
-            { goal: 'Google Sheets와 Forms API로 데이터를 읽고 수집한다.', topics: ['build("sheets", "v4") + spreadsheets().values().get()', 'spreadsheets().values().update() 쓰기', 'build("forms", "v1") + forms().responses().list()', 'SHEET_ID / FORM_ID URL 추출법'], practice: null },
-            { goal: 'Google Docs와 Drive API로 문서를 생성하고 파일을 관리한다.', topics: ['build("docs", "v1") + documents().create()', 'batchUpdate로 텍스트·표·이미지 삽입', 'build("drive", "v3") + MediaFileUpload', 'files().create() 업로드 + 공유 설정'], practice: null },
-            { goal: 'Gmail API로 메일을 조회·발송하고 통합 실습을 완성한다.', topics: ['build("gmail", "v1") + MIMEText 메일 구성', 'users().messages().send() 자동 발송', 'Sheets 읽기 → Claude 분석 → Gmail 발송 파이프라인', 'GCP 5가지 API 통합 완성'], practice: 'Google Sheets 데이터를 Python으로 읽어 Claude로 분석하고, Gmail API로 담당자에게 리포트를 자동 발송하는 파이프라인을 완성한다.' }
+            { goal: 'ADV 3 목표와 GWS CLI 접근 방식을 안내한다.', topics: ['GWS CLI 설치 (gcloud + npm)', 'Playwright로 OAuth 설정 보조', 'gws 핵심 명령어', 'subprocess 파이프라인', 'ADV 02 Playwright 스킬 재사용'], practice: null },
+            { goal: 'gcloud SDK와 GWS CLI를 설치하고 기본 프로젝트를 설정한다.', topics: ['choco install gcloudsdk -y', 'npm install -g @googleworkspace/cli', 'gcloud auth login --launch-browser', 'gcloud projects create + config set project', 'PATH 환경변수 수동 설정'], practice: null, action: { label: '설치 명령어', type: 'items', items: ['choco install gcloudsdk -y', 'npm install -g @googleworkspace/cli', 'gcloud auth login --launch-browser'] } },
+            { goal: 'Playwright MCP로 GCP 콘솔 OAuth 클라이언트 설정을 안내받는다.', topics: ['개인 계정은 OAuth 클라이언트 수동 생성 필요', 'browser_navigate → GCP 콘솔 → OAuth 동의 화면', 'browser_snapshot으로 현재 화면 확인 + 클릭 위치 안내', '테스트 사용자 등록 필수 (빠뜨리면 403 access_denied)', 'gws auth login -s drive,gmail,calendar,sheets,docs,tasks'], practice: '"Playwright MCP로 console.cloud.google.com 열어서 OAuth 동의화면 설정 단계를 화면 보면서 안내해줘" 실습', action: { label: '보조 프롬프트 복사', copy: 'Playwright MCP로 console.cloud.google.com 열어서 OAuth 동의화면 설정 단계를 화면 보면서 안내해줘' } },
+            { goal: 'gws 핵심 명령어로 Google 서비스를 즉시 사용한다.', topics: ['gws drive files list — Drive 파일 목록', 'gws gmail +triage — 안 읽은 메일 요약', 'gws calendar +agenda — 오늘 일정 확인', 'gws auth status — 인증 상태 확인', 'Claude Bash tool에서 직접 실행 가능'], practice: null },
+            { goal: 'subprocess로 gws를 호출해 Google Workspace 파이프라인을 완성한다.', topics: ['subprocess.run([gws, ...], capture_output=True) 패턴', 'json.loads()로 결과 파싱', 'Drive 파일 목록 → Gmail 자동 발송 흐름', '에이전트 명령 하나로 전체 실행'], practice: 'Drive에서 오늘 수정된 파일 목록을 Gmail로 자동 발송하는 파이프라인을 gws + subprocess로 완성한다.' }
                         ]
                     },
                     {
