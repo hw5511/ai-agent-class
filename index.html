@@ -1195,16 +1195,18 @@
                 title: 'AI 에이전트 심화 과정',
                 sessions: [
                     {
-                        num: 1, title: '엑셀 & 워드 문서 자동 작성', hours: '2시간 · Tool & Automation',
-                        goal: '에이전트를 활용해 엑셀 데이터를 분석하고, 워드 형식의 보고서를 자동으로 생성하는 로컬 Python Skill을 구현한다.',
-                        topics: ['엑셀 데이터 분석 Skill (openpyxl)', '워드 보고서 자동 생성 Skill (python-docx)', '데이터 -> 문서 자동화 파이프라인 연결'],
-                        practice: '샘플 엑셀 데이터를 읽어 분석 결과를 워드 보고서로 자동 출력하는 흐름을 완성한다.',
-                        slides: ['01.svg','02.svg','03.svg','04.svg'],
+                        num: 1, title: '엑셀 · 워드 · PPT · 한글 문서 자동 작성', hours: '2시간 · Tool & Automation',
+                        goal: '에이전트를 활용해 엑셀·워드·PPT·한글(hwpx) 4종 오피스 문서를 자동으로 생성하는 로컬 Python Skill을 구현하고 파이프라인으로 연결한다.',
+                        topics: ['엑셀 데이터 분석 Skill (openpyxl)', '워드 보고서 자동 생성 Skill (python-docx)', 'PPT 슬라이드 자동 생성 Skill (python-pptx)', '한글 문서 자동 생성 Skill (pyhwpx)', '4종 파이프라인 연결'],
+                        practice: '샘플 엑셀 데이터를 읽어 분석 결과를 워드·PPT·한글 보고서로 동시에 자동 출력하는 흐름을 완성한다.',
+                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg'],
                         slideDescs: [
-            { goal: 'ADV 1 목표와 오늘 배울 내용을 안내한다.', topics: ['문서 자동화 개요', '엑셀 분석 Skill (openpyxl)', '워드 보고서 Skill (python-docx)', '파이프라인 연결'], practice: null },
+            { goal: 'ADV 1 목표와 오늘 배울 내용을 안내한다.', topics: ['문서 자동화 개요', '엑셀 분석 Skill (openpyxl)', '워드 보고서 Skill (python-docx)', 'PPT Skill (python-pptx)', '한글 Skill (pyhwpx)', '4종 파이프라인 연결'], practice: null },
             { goal: 'openpyxl로 엑셀 데이터를 읽는 Skill을 제작한다.', topics: ['pip install openpyxl', 'load_workbook() + ws.active', 'iter_rows(values_only=True) 행 반복', 'Skill 스크립트로 래핑'], practice: null },
             { goal: 'python-docx로 워드 보고서를 생성하는 Skill을 제작한다.', topics: ['pip install python-docx', 'from docx import Document (import 주의)', 'add_heading · add_paragraph · add_table', 'doc.save()로 .docx 출력'], practice: null },
-            { goal: '두 Skill을 파이프라인으로 연결해 자동화를 완성한다.', topics: ['엑셀 읽기 -> 데이터 추출 -> 워드 생성 흐름', '에이전트 명령 하나로 전체 실행', 'Claude가 두 Skill 순서 자동 조율', '최종 결과물 확인'], practice: '샘플 엑셀 데이터를 읽어 분석 결과를 워드 보고서로 자동 출력하는 흐름을 완성한다.' }
+            { goal: 'python-pptx로 PPT 슬라이드를 자동 생성하는 Skill을 제작한다.', topics: ['pip install python-pptx', 'Presentation() + slide_layouts', 'add_textbox · add_picture로 슬라이드 구성', 'prs.save()로 .pptx 출력'], practice: null },
+            { goal: 'pyhwpx로 한글(.hwpx) 문서를 자동 생성하는 Skill을 제작한다.', topics: ['pip install pyhwpx', 'Hwp() — 한글/폴라리스 오피스 자동 실행', 'write_text() · save_as("report.hwpx")', 'Windows 전용 · 폴라리스 오피스로 대체 가능'], practice: null, action: { label: '폴라리스 오피스 다운로드', type: 'download', url: 'https://www.polarisoffice.com/ko/download' } },
+            { goal: '4종 Skill을 파이프라인으로 연결해 자동화를 완성한다.', topics: ['엑셀 읽기 → 워드·PPT·한글 동시 생성 흐름', '에이전트 명령 하나로 전체 실행', 'Claude가 4개 Skill 순서 자동 조율', '최종 결과물 4종 동시 확인'], practice: '샘플 엑셀 데이터를 읽어 워드·PPT·한글 보고서를 동시에 자동 출력하는 흐름을 완성한다.' }
                         ]
                     },
                     {
