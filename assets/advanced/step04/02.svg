@@ -2,17 +2,33 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 04</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">NanoBanana API  —  AI 이미지 생성 Skill</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">SKILL.md + Python 스크립트로 이미지 생성 API를 Skill로 감쌉니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">공개 API 탐색  —  어디서 찾나?</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">한국에서 바로 쓸 수 있는 API 목록을 한눈에 확인합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Skill 구조</text>
-  <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">.claude/skills/image-gen/SKILL.md      진입점 · 사용법 정의</text>
-  <text x="60" y="344" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">.claude/skills/image-gen/scripts/run.py  NanoBanana API 호출</text>
-  <line x1="60" y1="386" x2="1220" y2="386" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="426" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">핵심 코드 흐름</text>
-  <text x="60" y="464" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">1.  os.getenv('NANOBANANA_API_KEY')  로 API 키 로드</text>
-  <text x="60" y="500" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">2.  requests.post(endpoint, headers=..., json={'prompt': prompt})</text>
-  <text x="60" y="536" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">3.  base64.b64decode(data)  -&gt;  타임스탬프 파일명으로 PNG 저장</text>
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">API 키는 환경변수로 관리 — 코드에 직접 입력 금지</text>
+
+  <rect x="60" y="228" width="540" height="160" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="330" y="264" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#171717">public-apis-4Kr</text>
+  <text x="330" y="292" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="13" fill="#2563eb">github.com/yybmion/public-apis-4Kr</text>
+  <text x="330" y="322" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">한국에서 사용 가능한 공개 API 모음</text>
+  <text x="330" y="348" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">카테고리별 정리 · 무료 여부 · 인증 방식 표시</text>
+  <text x="330" y="374" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">모르는 API가 필요할 때 가장 먼저 확인</text>
+
+  <rect x="680" y="228" width="540" height="160" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="950" y="264" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#171717">네이버 오픈 API</text>
+  <text x="950" y="292" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="13" fill="#2563eb">developers.naver.com</text>
+  <text x="950" y="322" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">검색 · 번역 · 지도 · 쇼핑 · 블로그</text>
+  <text x="950" y="348" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">네이버 계정으로 발급 · 무료</text>
+  <text x="950" y="374" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">한국어 검색·번역 품질 최고</text>
+
+  <line x1="60" y1="410" x2="1220" y2="410" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">API 발급 방법 — Claude에게 맡기기</text>
+  <rect x="60" y="462" width="1160" height="56" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="84" y="488" font-family="'Courier New',Courier,monospace" font-size="16" fill="#1e40af">네이버 오픈 API에서 검색 API 발급받는 방법 알려주고 같이 해줘</text>
+  <text x="84" y="508" font-family="'Courier New',Courier,monospace" font-size="16" fill="#1e40af">developers.naver.com 들어가서 애플리케이션 등록까지 안내해줘</text>
+
+  <rect x="60" y="560" width="580" height="52" rx="10" fill="#171717"/>
+  <text x="350" y="591" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#ffffff">API 레퍼런스를 Claude에게 주면 Skill이 자동 완성</text>
+  <rect x="660" y="560" width="560" height="52" rx="10" fill="#1e293b"/>
+  <text x="680" y="580" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">GitHub</text>
+  <text x="680" y="602" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#818cf8">github.com/yybmion/public-apis-4Kr</text>
 </svg>

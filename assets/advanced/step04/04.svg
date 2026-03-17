@@ -2,18 +2,50 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 04</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">CLI 도구 개념  —  터미널 명령 실행 원리</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Claude Code가 subprocess로 터미널 명령어를 직접 실행합니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">이미지 · 영상 스톡 API</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">무료 고품질 미디어를 API로 가져와 콘텐츠에 활용합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">subprocess  /  os.system</text>
-  <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">import subprocess, os</text>
-  <text x="60" y="344" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">subprocess.run(['python', 'script.py', '--input', 'data.csv'])</text>
-  <text x="60" y="380" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">result = subprocess.check_output(['ls', '-la'], text=True)  # 출력 캡처</text>
-  <text x="60" y="416" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">os.system('mkdir -p output &amp;&amp; mv *.png output/')  # 셸 명령 직접 실행</text>
-  <line x1="60" y1="452" x2="1220" y2="452" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="492" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실용 예제</text>
-  <text x="60" y="530" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">파일 정리:  확장자별 자동 분류  -&gt;  폴더 이동  -&gt;  결과 보고</text>
-  <text x="60" y="560" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">배치 처리:  폴더 내 이미지 전체 리사이즈  -&gt;  완료 파일 목록 출력</text>
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">Claude Code = 에이전트 + 터미널 — 명령 실행과 코드 작성을 동시에</text>
+
+  <text x="60" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">이미지</text>
+  <text x="230" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">무료</text>
+  <text x="380" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">한도</text>
+  <text x="620" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">특징</text>
+
+  <line x1="60" y1="268" x2="1220" y2="268" stroke="#e5e7eb" stroke-width="1"/>
+
+  <text x="60" y="296" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Unsplash API</text>
+  <text x="230" y="296" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#16a34a">가능</text>
+  <text x="380" y="296" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">시간당 50 요청</text>
+  <text x="620" y="296" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">다양한 해상도 · 검색 키워드 지원</text>
+
+  <text x="60" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Pexels API</text>
+  <text x="230" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#16a34a">가능</text>
+  <text x="380" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">시간당 200 요청</text>
+  <text x="620" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">이미지 + 비디오 동시 제공</text>
+
+  <text x="60" y="364" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Pixabay API</text>
+  <text x="230" y="364" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#16a34a">가능</text>
+  <text x="380" y="364" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">하루 5,000 요청</text>
+  <text x="620" y="364" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">이미지 · 영상 · 음악 · AI 생성 이미지</text>
+
+  <text x="60" y="398" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Lorem Picsum</text>
+  <text x="230" y="398" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#16a34a">가능</text>
+  <text x="380" y="398" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">제한 없음</text>
+  <text x="620" y="398" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">랜덤 이미지 · 블러 · 흑백 옵션</text>
+
+  <line x1="60" y1="418" x2="1220" y2="418" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">영상</text>
+
+  <text x="60" y="484" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Coverr API</text>
+  <text x="230" y="484" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#16a34a">가능</text>
+  <text x="380" y="484" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">제한 없음</text>
+  <text x="620" y="484" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">배경용 영상 · 로그인 없이 사용</text>
+
+  <text x="60" y="518" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Mixkit API</text>
+  <text x="230" y="518" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#16a34a">가능</text>
+  <text x="380" y="518" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">제한 없음</text>
+  <text x="620" y="518" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">영상 + 사운드 직접 다운로드 방식</text>
+
+  <rect x="60" y="554" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="585" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">모두 API 키만 발급하면 requests.get() 한 줄로 미디어 자동 수집</text>
 </svg>
