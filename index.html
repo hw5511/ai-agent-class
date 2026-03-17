@@ -1257,16 +1257,23 @@
                     },
                     {
                         num: 4, title: '외부 API로 AI 기능 확장하기', hours: '2시간 · Tool & Automation',
-                        goal: '공개 API를 탐색하고 Skill로 감싸, 네이버 검색·타입캐스트 TTS·이미지 스톡 API를 조합해 콘텐츠 자동 제작 파이프라인을 완성한다.',
-                        topics: ['공개 API 탐색 — public-apis-4Kr 활용법', '네이버 오픈 API (검색 · 번역) + 타입캐스트 TTS', '이미지·영상 스톡 API (Unsplash · Pexels · Pixabay · Coverr)', 'API 조합 통합 실습 — 뉴스 수집 → 요약 → 이미지 → 음성 파이프라인'],
-                        practice: '네이버 검색 API로 뉴스를 수집하고, Claude로 요약한 뒤 Pexels 이미지와 타입캐스트 음성을 붙여 브리핑 파일을 자동 생성한다.',
-                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
+                        goal: 'API 키 발급 방법을 익히고, 네이버 오픈 API·타입캐스트 TTS API를 Claude가 Skill로 제작·실행하는 전 과정을 완성한다.',
+                        topics: ['API 키 발급을 두려워하지 말자 — MCP/CLI가 적은 지금 핵심 스킬', '네이버 오픈 API 소개 · 종류 · 앱 등록 · 데이터랩 Skill 제작', '타입캐스트 TTS API — 소개 · 키 발급 · voice_id · Skill 제작', 'public-apis-4Kr — 원하는 API 직접 골라서 연결하기'],
+                        practice: '네이버 데이터랩 API와 타입캐스트 TTS API를 Claude가 Skill로 제작하고, public-apis-4Kr에서 원하는 API를 직접 선택해 연결한다.',
+                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg','07.svg','08.svg','09.svg','10.svg','11.svg','12.svg'],
                         slideDescs: [
-            { goal: 'ADV 4 목표와 외부 API 활용 컨셉을 안내한다.', topics: ['공개 API 탐색 방법', '네이버 오픈 API + 타입캐스트 TTS', '이미지·영상 스톡 API', 'API 조합 파이프라인', '카드 등록 없이 발급 가능한 API만 사용'], practice: null },
-            { goal: 'public-apis-4Kr로 필요한 API를 탐색하고 네이버 오픈 API를 발급한다.', topics: ['github.com/yybmion/public-apis-4Kr — 한국 공개 API 모음', '카테고리·무료여부·인증방식 한눈에 확인', '네이버 개발자센터 — 계정 가입 후 즉시 발급', 'Claude에게 API 레퍼런스 주고 Skill 자동 생성'], practice: null, action: { label: 'public-apis-4Kr', type: 'download', url: 'https://github.com/yybmion/public-apis-4Kr' } },
-            { goal: '네이버 오픈 API와 타입캐스트 TTS API를 Skill로 구현한다.', topics: ['requests + X-Naver-Client-Id/Secret 헤더 방식', '뉴스·검색·번역·쇼핑 API 엔드포인트', 'pip install typecast-python', 'TypeCast(api_token).tts() — 한국어 고품질 음성 생성'], practice: null },
-            { goal: '이미지·영상 스톡 API를 파악하고 Skill로 구현한다.', topics: ['Unsplash (시간당 50) · Pexels (시간당 200) · Pixabay (하루 5,000)', 'Lorem Picsum — 제한 없는 랜덤 이미지', 'Coverr · Mixkit — 배경 영상 무제한', 'requests.get(url, headers={Authorization}) 공통 패턴'], practice: null },
-            { goal: 'API 4종을 조합해 뉴스 브리핑 자동 제작 파이프라인을 완성한다.', topics: ['네이버 검색 → 뉴스 3건 수집', 'Claude → 핵심 3줄 요약', 'Pexels → 관련 이미지 자동 검색', '타입캐스트 → 한국어 음성 파일 생성', '에이전트 명령 하나로 전체 실행'], practice: '네이버 검색 API로 뉴스를 수집하고, Claude로 요약한 뒤 Pexels 이미지와 타입캐스트 음성을 붙여 브리핑 파일을 자동 생성한다.' }
+            { goal: 'ADV 4 목표와 API 키 발급 중심 접근 방식을 안내한다.', topics: ['API 키 발급 = AI 활용의 첫 번째 실전 스킬', '네이버 오픈 API · 타입캐스트 · public-apis 구성', '카드 등록 없이 발급 가능한 API만 사용'], practice: null },
+            { goal: 'API 키 발급이 두렵지 않은 이유와 중요성을 이해한다.', topics: ['MCP/CLI가 아직 적은 서비스가 대부분 — API 키가 유일한 연결 수단', '발급 4단계: 회원가입 → 콘솔 → 키 생성 → 복사', 'Claude에게 발급 방법을 물으면 단계별 안내', 'API 키 = 어떤 서비스든 에이전트로 연결하는 열쇠'], practice: null },
+            { goal: '네이버 오픈 API의 특징과 이번 강의에서 사용할 API를 파악한다.', topics: ['무료 쿼터 · 카드 불필요 · 한국어 강점', '클라이언트 ID + Secret 두 가지 키로 전체 사용', '데이터랩: 검색어 트렌드 / 쇼핑인사이트'], practice: null },
+            { goal: '네이버 오픈 API 7개 카테고리와 30개 이상의 API 종류를 파악한다.', topics: ['인증 / AI·번역(Papago·Clova) / 지도·위치', '검색 12종 (블로그·뉴스·이미지·쇼핑 등)', '콘텐츠 작성 / 유틸리티 / 데이터랩'], practice: null },
+            { goal: '네이버 개발자 센터에서 애플리케이션을 등록하고 API를 선택한다.', topics: ['developers.naver.com/apps/#/list 접속', '애플리케이션 이름 입력', '데이터랩(검색어트렌드) + 데이터랩(쇼핑인사이트) 선택'], practice: null, action: { label: '네이버 개발자 센터', type: 'link', url: 'https://developers.naver.com/apps/#/list' } },
+            { goal: '환경 설정 완료 후 클라이언트 ID와 Secret을 복사한다.', topics: ['환경: Web 선택 → URL: http://localhost:3000', '클라이언트 ID 복사', '클라이언트 Secret 복사'], practice: null },
+            { goal: 'API 문서를 Claude에게 읽히고 데이터랩 CLI Skill을 제작한다.', topics: ['curl로 API 문서 2개 읽기 (검색어트렌드·쇼핑인사이트)', 'Client ID와 Secret 제공', 'CLI 스크립트 형태 Skill 제작 및 실행 테스트'], practice: '네이버 데이터랩 API 문서 읽고 Client ID/Secret으로 CLI Skill 만들어줘', action: { label: '데이터랩 API 문서', type: 'link', url: 'https://developers.naver.com/docs/serviceapi/datalab/search/search.md' } },
+            { goal: '타입캐스트가 무엇인지와 API 활용 시나리오를 이해한다.', topics: ['100개 이상 AI 캐릭터 목소리 · 한국어 특화', 'REST API: voice_id + text → MP3 파일 반환', '활용: 뉴스 요약 음성화 · 카드뉴스 내레이션'], practice: null },
+            { goal: '타입캐스트 개발자 페이지에서 API 키를 발급받는다.', topics: ['typecast.ai/developers/api 접속', '구글 계정으로 회원가입/로그인', 'API 키 탭 → 키 생성 → 복사'], practice: null, action: { label: '타입캐스트 API 페이지', type: 'link', url: 'https://typecast.ai/developers/api' } },
+            { goal: '원하는 AI 캐릭터를 선택하고 voice_id를 복사한다.', topics: ['캐릭터 목록 접속 → 미리 듣기로 목소리 선택', 'URL 또는 개발자 도구에서 voice_id 확인', 'voice_id 메모 (24자리 hex 형태)'], practice: null },
+            { goal: 'API 문서를 학습시키고 타입캐스트 TTS CLI Skill을 제작한다.', topics: ['typecast.ai/docs/overview 문서 읽기', 'API 키 + voice_id 제공', 'CLI TTS Skill 제작 및 실행 테스트'], practice: 'typecast.ai/docs/overview 읽고 API키와 voice_id로 TTS CLI Skill 만들어줘', action: { label: '타입캐스트 API 문서', type: 'link', url: 'https://typecast.ai/docs/overview' } },
+            { goal: 'public-apis-4Kr에서 API를 골라 직접 연결하는 Skill을 제작한다.', topics: ['github.com/yybmion/public-apis-4Kr — 한국 공개 API 목록', '원하는 API 선택 → 키 발급 → 문서 읽기 → Skill 제작', '나만의 API Skill 완성'], practice: '원하는 API 선택해서 키 발급받고 Claude에게 Skill 만들어줘', action: { label: 'public-apis-4Kr', type: 'link', url: 'https://github.com/yybmion/public-apis-4Kr?tab=readme-ov-file' } }
                         ]
                     },
                     {

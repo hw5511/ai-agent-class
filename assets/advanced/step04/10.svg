@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 04</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="32" font-weight="700" fill="#171717">타입캐스트 캐릭터 선택  —  voice_id 복사</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">원하는 AI 캐릭터의 voice_id를 복사해야 API 호출 시 목소리를 지정할 수 있습니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">STEPS</text>
+  <circle cx="84" cy="302" r="14" fill="#eff6ff"/>
+  <text x="84" y="308" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">1</text>
+  <text x="110" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">타입캐스트 캐릭터 목록 페이지 접속</text>
+  <circle cx="84" cy="352" r="14" fill="#eff6ff"/>
+  <text x="84" y="358" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">2</text>
+  <text x="110" y="358" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">원하는 캐릭터 클릭 → 캐릭터 상세 페이지에서 미리 듣기 확인</text>
+  <circle cx="84" cy="402" r="14" fill="#eff6ff"/>
+  <text x="84" y="408" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">3</text>
+  <text x="110" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">URL 또는 개발자 도구에서 voice_id 값 복사</text>
+  <line x1="60" y1="450" x2="1220" y2="450" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">voice_id 확인 방법</text>
+  <rect x="60" y="494" width="1160" height="52" rx="8" fill="#0f172a"/>
+  <text x="84" y="516" font-family="'Courier New',Courier,monospace" font-size="14" fill="#a5f3fc">캐릭터 URL:  typecast.ai/voices/[voice_id]</text>
+  <text x="84" y="538" font-family="'Courier New',Courier,monospace" font-size="14" fill="#6b7280">예시:  5f3b2e1d0a7c4f8b9e2d1a3c  (24자리 hex 형태)</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">voice_id를 메모해두세요 — 다음 슬라이드에서 Claude에게 제공합니다</text>
+</svg>

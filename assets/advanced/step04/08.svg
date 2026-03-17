@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 04</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">타입캐스트  —  AI 음성 합성 API</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">다양한 AI 캐릭터 목소리로 텍스트를 음성으로 변환합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">타입캐스트란?</text>
+  <rect x="60" y="278" width="680" height="130" rx="8" fill="#f8fafc"/>
+  <text x="84" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">무엇인가</text>
+  <text x="84" y="332" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">AI 성우 플랫폼 — 100개 이상의 캐릭터 목소리 보유</text>
+  <text x="84" y="354" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">한국어 특화 · 감정 표현 · 속도/톤 조절 가능</text>
+  <text x="84" y="376" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">유튜브, 광고, 교육 콘텐츠 제작에 주로 활용</text>
+  <rect x="760" y="278" width="460" height="130" rx="8" fill="#f0fdf4"/>
+  <text x="784" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#059669">API 활용 시나리오</text>
+  <text x="784" y="332" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">뉴스 요약 텍스트 → AI 음성 파일 자동 생성</text>
+  <text x="784" y="354" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">블로그 글 → MP3 오디오 변환</text>
+  <text x="784" y="376" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">카드뉴스 내레이션 자동 생성</text>
+  <line x1="60" y1="428" x2="1220" y2="428" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="460" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">API 방식</text>
+  <text x="60" y="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">REST API  /  voice_id + text → MP3 파일 반환  /  무료 쿼터 제공</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">typecast.ai  —  구글 계정으로 바로 가입 · API 키 즉시 발급 가능</text>
+</svg>
