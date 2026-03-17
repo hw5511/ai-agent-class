@@ -2,18 +2,20 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">비주얼 소재 생성</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Pexels API로 블로그 이미지를 자동 수집합니다 (ADV 04 Skill 재사용)</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Claude가 카드 텍스트를 작성합니다</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">인스타 카드뉴스 포맷으로 구조화된 텍스트를 생성합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">이미지 수집 흐름</text>
-  <text x="60" y="296" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Claude로 주제에 맞는 검색 키워드 자동 생성</text>
-  <text x="60" y="334" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Pexels API로 고품질 이미지 검색  →  PNG 파일 로컬 저장</text>
-  <line x1="60" y1="368" x2="1220" y2="368" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Python 연동 예시</text>
-  <text x="60" y="444" font-family="'Courier New',Courier,monospace" font-size="17" fill="#374151">headers = {"Authorization": PEXELS_API_KEY}</text>
-  <text x="60" y="478" font-family="'Courier New',Courier,monospace" font-size="17" fill="#374151">res = requests.get("https://api.pexels.com/v1/search",</text>
-  <text x="60" y="512" font-family="'Courier New',Courier,monospace" font-size="17" fill="#374151">    headers=headers, params={"query": keyword, "per_page": 1})</text>
-  <text x="60" y="546" font-family="'Courier New',Courier,monospace" font-size="17" fill="#374151">img_url = res.json()["photos"][0]["src"]["large"]</text>
-  <rect x="60" y="574" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="605" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">ADV 04에서 만든 Pexels Skill을 그대로 불러와 재사용합니다</text>
+  <text x="60" y="252" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">카드뉴스 프롬프트 패턴</text>
+  <rect x="60" y="268" width="1160" height="190" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="76" y="292" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#374151">prompt = f'''</text>
+  <text x="96" y="312" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#374151">주제: {topic}  /  키워드: {keywords}</text>
+  <text x="96" y="332" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#374151">인스타 카드뉴스 5장을 JSON 배열로 만들어줘.</text>
+  <text x="96" y="352" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#374151">카드 1: 훅 (제목 15자 이내 · 본문 2줄 이내)</text>
+  <text x="96" y="372" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#374151">카드 2~4: 핵심 내용 (제목 15자 이내 · 본문 3줄 이내)</text>
+  <text x="96" y="392" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#374151">카드 5: 행동 유도 CTA</text>
+  <text x="96" y="412" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#374151">출력 형식: [{{'title': '...', 'body': '...'}}]</text>
+  <text x="76" y="432" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#374151">'''</text>
+  <text x="76" y="452" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#374151">cards = json.loads(subprocess.run(['claude', '-p', prompt], ...).stdout)</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">짧고 임팩트 있게 / 각 카드는 독립적으로 읽혀야 합니다</text>
 </svg>

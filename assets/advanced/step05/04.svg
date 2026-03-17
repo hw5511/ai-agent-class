@@ -2,17 +2,23 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 05</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">매뉴얼  /  가이드 자동 생성</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">코드·데이터를 입력하면 문서를 자동으로 작성합니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">워크플로우 DB 설계  —  입력·처리·출력</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">역할별로 Notion DB를 분리합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">생성 흐름</text>
-  <text x="60" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">소스 파일 분석  →  구조 파악  →  섹션별 문서 초안 작성</text>
-  <text x="60" y="354" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Claude -p headless 모드로 스크립트에서 자동 호출 가능</text>
-  <line x1="60" y1="400" x2="1220" y2="400" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="440" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 프롬프트</text>
-  <text x="60" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8">'이 프로젝트 폴더를 분석해서 신규 팀원용 온보딩</text>
-  <text x="60" y="514" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8"> 가이드를 Markdown으로 작성해줘. 설치 → 구조 → 주요</text>
-  <text x="60" y="550" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#1d4ed8"> 명령어 순서로 구성해줘'</text>
+  <text x="60" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">3단 구조</text>
+  <rect x="60" y="272" width="360" height="110" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="80" y="304" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">입력 DB  —  Tasks</text>
+  <text x="80" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">할일 / 진행중 / 완료 상태 관리</text>
+  <rect x="460" y="272" width="360" height="110" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="480" y="304" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">처리  —  Claude 에이전트</text>
+  <text x="480" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">CLAUDE.md 트리거로 워크플로우 선택</text>
+  <rect x="860" y="272" width="360" height="110" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="880" y="304" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">출력 DB  —  Docs / Reports</text>
+  <text x="880" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">리서치·콘텐츠·보고서 결과 저장</text>
+  <line x1="60" y1="408" x2="1220" y2="408" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="444" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실전 예시</text>
+  <text x="60" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Tasks DB: '리서치: AI 에이전트 동향'  →  Claude 실행  →  Docs DB에 결과 페이지 생성</text>
+  <text x="60" y="518" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Tasks DB: '보고서: 주간 보고'  →  Claude 분석 + PPT 생성  →  Reports DB에 저장</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">CLAUDE.md에 출력 형식·섹션 구조를 미리 지정하면 일관성 향상</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">DB 분리로 어떤 작업이 어디까지 진행됐는지 투명하게 파악합니다</text>
 </svg>

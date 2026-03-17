@@ -2,17 +2,22 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 05</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">문서 라우팅 패턴</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">키워드를 담당 문서·모듈에 자동으로 연결합니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">CLAUDE.md 트리거  —  워크플로우 자동 진입</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">태스크 이름의 키워드로 담당 워크플로우를 결정합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">라우팅 구조</text>
-  <text x="60" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">CLAUDE.md에 키워드 → 참조 파일 매핑 테이블 작성</text>
-  <text x="60" y="354" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Claude가 키워드를 감지하면 해당 문서를 Read 후 작업 수행</text>
-  <line x1="60" y1="400" x2="1220" y2="400" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="440" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">매핑 예시</text>
-  <text x="60" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">결제 관련  →  docs/payment_spec.md  참조</text>
-  <text x="60" y="518" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">DB 쿼리   →  docs/db_schema.md  참조</text>
-  <text x="60" y="554" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#6b7280">API 작성   →  docs/api_convention.md  참조</text>
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">키워드 하나로 올바른 문서를 자동으로 읽고 작업합니다</text>
+  <text x="60" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">키워드 → 워크플로우 매핑</text>
+  <rect x="60" y="272" width="1160" height="68" rx="8" fill="#eff6ff"/>
+  <text x="80" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#2563eb">리서치:</text>
+  <text x="180" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">태스크 이름이 이 키워드로 시작하면 → 리서치 자동화 워크플로우 (ADV 06)</text>
+  <text x="80" y="326" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#2563eb">카드뉴스:</text>
+  <text x="200" y="326" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">→ 인스타 카드뉴스 워크플로우 (ADV 07)</text>
+  <line x1="60" y1="360" x2="1220" y2="360" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="396" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">CLAUDE.md 작성 예시</text>
+  <rect x="60" y="412" width="1160" height="100" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="76" y="434" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#374151">태스크 이름이 '리서치:'로 시작하면 research_workflow.py를 실행한다.</text>
+  <text x="76" y="454" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#374151">태스크 이름이 '카드뉴스:'로 시작하면 cardnews_workflow.py를 실행한다.</text>
+  <text x="76" y="474" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#374151">태스크 이름이 '보고서:'로 시작하면 report_workflow.py를 실행한다.</text>
+  <text x="76" y="494" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#374151">작업 완료 후 Notion Tasks 상태를 '완료'로 업데이트한다.</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">Notion 태스크 이름에 키워드를 붙이면 워크플로우가 자동으로 선택됩니다</text>
 </svg>
