@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 02</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="36" font-weight="700" fill="#171717">실습 3 — 가상 커뮤니티 사이트</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">로컬스토리지 기반 커뮤니티 사이트로 AI 전체 탐색 실습을 합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="252" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">사이트 기능</text>
+  <rect x="60" y="266" width="540" height="120" rx="8" fill="#f8fafc"/>
+  <text x="84" y="296" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#374151">인증</text>
+  <text x="84" y="318" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">회원가입  /  로그인  /  로그아웃</text>
+  <text x="84" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#374151">콘텐츠</text>
+  <text x="84" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">게시판 목록  /  게시물 상세  /  글쓰기</text>
+  <text x="84" y="384" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">댓글 입력 + 스크롤  /  마이페이지</text>
+  <rect x="640" y="266" width="580" height="120" rx="8" fill="#f8fafc"/>
+  <text x="664" y="296" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#374151">AI 탐색 시나리오</text>
+  <text x="664" y="318" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">회원가입 → 로그인 → 게시판 탐색</text>
+  <text x="664" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">글쓰기 → 댓글 작성 → 마이페이지</text>
+  <text x="664" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">로그아웃 → 스크린샷 → PPT 생성</text>
+  <line x1="60" y1="406" x2="1220" y2="406" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="438" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">시작 방법</text>
+  <circle cx="84" cy="476" r="14" fill="#eff6ff"/>
+  <text x="84" y="482" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">1</text>
+  <text x="110" y="482" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">아래에서 HTML 파일 다운로드</text>
+  <circle cx="84" cy="526" r="14" fill="#eff6ff"/>
+  <text x="84" y="532" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">2</text>
+  <text x="110" y="532" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">파일 더블클릭 → 브라우저에서 file:// 로 열기 확인</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">서버 불필요 — Chrome/Edge에서 file:// 방식으로 로컬 실행</text>
+</svg>

@@ -4,23 +4,23 @@
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 02</text>
   <rect x="1100" y="44" width="120" height="24" rx="12" fill="#059669"/>
   <text x="1160" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">PRACTICE</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="34" font-weight="700" fill="#171717">실습 2-1 — Wikipedia 접속 · 요소 분석</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">검색창 위치를 찾고 페이지 DOM 구조를 파악합니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="34" font-weight="700" fill="#171717">실습 3-3 — 글쓰기 · 댓글 · 스크롤</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">게시물 작성, 댓글 입력, 스크롤 탐색을 단계별로 진행합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">STEPS</text>
   <circle cx="84" cy="302" r="14" fill="#eff6ff"/>
   <text x="84" y="308" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">1</text>
-  <text x="110" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"ko.wikipedia.org 접속해서 스냅샷 찍어줘" 요청</text>
+  <text x="110" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"글쓰기 버튼 찾아서 테스트 게시물 작성해줘" 요청</text>
   <circle cx="84" cy="352" r="14" fill="#eff6ff"/>
   <text x="84" y="358" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">2</text>
-  <text x="110" y="358" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"검색창(input) 요소를 찾아서 셀렉터 알려줘" 요청</text>
+  <text x="110" y="358" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"게시물 상세 페이지에서 댓글 입력란 찾아 댓글 달아줘" 요청</text>
   <circle cx="84" cy="402" r="14" fill="#eff6ff"/>
   <text x="84" y="408" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">3</text>
-  <text x="110" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">스냅샷에서 검색창 셀렉터 확인 (예: #searchInput)</text>
+  <text x="110" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"댓글 영역 스크롤해서 전체 댓글 확인해줘" 요청</text>
   <line x1="60" y1="450" x2="1220" y2="450" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">PROMPT</text>
   <rect x="60" y="494" width="1160" height="52" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
-  <text x="640" y="525" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" font-weight="600" fill="#2563eb">"ko.wikipedia.org 접속하고 검색창 셀렉터 찾아줘"</text>
+  <text x="640" y="525" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" font-weight="600" fill="#2563eb">"글쓰기 → 댓글 달기 → 댓글 영역 스크롤해서 전체 확인해줘"</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#ecfdf5"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#059669">browser_snapshot이 스크린샷보다 요소 분석에 유리합니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#059669">스크롤 탐색: keyboard.press('End') 또는 mouse.wheel() 활용</text>
 </svg>

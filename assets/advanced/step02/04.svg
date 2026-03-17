@@ -1,21 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
-  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 02</text>
-  <text x="60" y="130" font-family="-apple-system,sans-serif" font-size="40" font-weight="700" fill="#171717">Playwright MCP 설치와 핵심 툴</text>
-  <text x="60" y="178" font-family="-apple-system,sans-serif" font-size="19" fill="#6b7280">Claude Code에서 브라우저를 직접 제어하는 MCP 서버입니다</text>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 02</text>
+  <rect x="1100" y="44" width="120" height="24" rx="12" fill="#059669"/>
+  <text x="1160" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">PRACTICE</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="34" font-weight="700" fill="#171717">실습 1 — 스크래핑 연습 사이트 탐색</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">books.toscrape.com — Playwright 학습 전용 무료 사이트</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="256" font-family="-apple-system,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Claude에게 이렇게 요청하세요</text>
-  <rect x="60" y="270" width="1160" height="48" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
-  <text x="640" y="300" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="18" font-weight="600" fill="#2563eb">"Playwright MCP 설치해줘"</text>
-  <line x1="60" y1="338" x2="1220" y2="338" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="374" font-family="-apple-system,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">핵심 툴 (기본 포함)</text>
-  <text x="60" y="412" font-family="-apple-system,sans-serif" font-size="17" fill="#374151">browser_navigate               URL로 이동</text>
-  <text x="60" y="444" font-family="-apple-system,sans-serif" font-size="17" fill="#374151">browser_snapshot               페이지 요소 구조 분석  (액션 전 필수)</text>
-  <text x="60" y="476" font-family="-apple-system,sans-serif" font-size="17" fill="#374151">browser_take_screenshot        스크린샷 저장</text>
-  <text x="60" y="508" font-family="-apple-system,sans-serif" font-size="17" fill="#374151">browser_click / browser_type / browser_fill_form    클릭, 입력</text>
-  <text x="60" y="540" font-family="-apple-system,sans-serif" font-size="17" fill="#374151">browser_console_messages       콘솔 에러 조회</text>
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="594" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="14" fill="#2563eb">browser_snapshot 이 스크린샷보다 권장됩니다</text>
-  <text x="640" y="612" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" fill="#6b7280">접근성 트리 기반으로 Claude가 요소를 정확히 파악하고 조작합니다</text>
+  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">STEPS</text>
+  <circle cx="84" cy="302" r="14" fill="#eff6ff"/>
+  <text x="84" y="308" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">1</text>
+  <text x="110" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"books.toscrape.com 접속해서 첫 페이지 스크린샷 찍어줘" 요청</text>
+  <circle cx="84" cy="352" r="14" fill="#eff6ff"/>
+  <text x="84" y="358" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">2</text>
+  <text x="110" y="358" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"책 목록에서 제목과 가격 5개 수집해줘" 요청</text>
+  <circle cx="84" cy="402" r="14" fill="#eff6ff"/>
+  <text x="84" y="408" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">3</text>
+  <text x="110" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">수집된 제목·가격·재고 상태 확인</text>
+  <line x1="60" y1="450" x2="1220" y2="450" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">PROMPT</text>
+  <rect x="60" y="494" width="1160" height="52" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="640" y="525" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" font-weight="600" fill="#2563eb">"books.toscrape.com 접속해서 책 5권 제목과 가격 수집해줘"</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#ecfdf5"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#059669">수집된 책 데이터를 화면에 출력해주세요 — 법적 제한 없이 자유롭게 실습 가능</text>
 </svg>

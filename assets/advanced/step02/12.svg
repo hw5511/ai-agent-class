@@ -4,23 +4,23 @@
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 02</text>
   <rect x="1100" y="44" width="120" height="24" rx="12" fill="#059669"/>
   <text x="1160" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">PRACTICE</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="34" font-weight="700" fill="#171717">실습 2-1 — Wikipedia 접속 · 요소 분석</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">검색창 위치를 찾고 페이지 DOM 구조를 파악합니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="32" font-weight="700" fill="#171717">실습 3-4 — 전체 스크린샷 · PPT 생성</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">모든 기능 페이지를 스크린샷하고 유저 플로우 PPT를 자동 생성합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">STEPS</text>
   <circle cx="84" cy="302" r="14" fill="#eff6ff"/>
   <text x="84" y="308" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">1</text>
-  <text x="110" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"ko.wikipedia.org 접속해서 스냅샷 찍어줘" 요청</text>
+  <text x="110" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"회원가입·로그인·게시판·게시물·댓글·마이페이지 각 페이지 스크린샷 찍어줘"</text>
   <circle cx="84" cy="352" r="14" fill="#eff6ff"/>
   <text x="84" y="358" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">2</text>
-  <text x="110" y="358" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"검색창(input) 요소를 찾아서 셀렉터 알려줘" 요청</text>
+  <text x="110" y="358" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"스크린샷으로 유저 플로우 PPT 만들어줘" 요청 (python-pptx 활용)</text>
   <circle cx="84" cy="402" r="14" fill="#eff6ff"/>
   <text x="84" y="408" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">3</text>
-  <text x="110" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">스냅샷에서 검색창 셀렉터 확인 (예: #searchInput)</text>
+  <text x="110" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">생성된 PPT 확인 (페이지별 슬라이드 + 설명 자동 구성)</text>
   <line x1="60" y1="450" x2="1220" y2="450" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">PROMPT</text>
   <rect x="60" y="494" width="1160" height="52" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
-  <text x="640" y="525" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" font-weight="600" fill="#2563eb">"ko.wikipedia.org 접속하고 검색창 셀렉터 찾아줘"</text>
+  <text x="640" y="525" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" font-weight="600" fill="#2563eb">"모든 페이지 스크린샷 찍고 유저 플로우 PPT 만들어줘"</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#ecfdf5"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#059669">browser_snapshot이 스크린샷보다 요소 분석에 유리합니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#059669">ADV 01 python-pptx Skill 재사용 — 스크린샷 + 설명 슬라이드 자동 구성</text>
 </svg>

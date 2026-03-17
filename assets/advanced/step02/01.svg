@@ -2,29 +2,41 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 02</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">웹 브라우저 자동화</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">AI와 함께 웹을 탐색하고, 루틴을 스크립트로 만든다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="38" font-weight="700" fill="#171717">웹 브라우저 자동화 원리</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Playwright · Puppeteer · Selenium 비교 + AI가 브라우저와 소통하는 방식</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">TODAY</text>
-
-  <!-- 실습 1 블럭 -->
-  <rect x="60" y="286" width="545" height="180" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
-  <text x="88" y="320" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#2563eb">실습 1 — 웹 탐색 + 유저 플로우 PPT 자동 생성</text>
-  <text x="88" y="352" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">제공된 HTML 사이트를 AI가 탐색·스크린샷하고</text>
-  <text x="88" y="380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">python-pptx로 유저 플로우 PPT를 자동 생성한다</text>
-  <text x="88" y="414" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">Playwright MCP 탐색  /  스크린샷  /  python-pptx 슬라이드 생성</text>
-
-  <!-- 실습 2 블럭 -->
-  <rect x="655" y="286" width="545" height="180" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
-  <text x="683" y="320" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#16a34a">실습 2 — 웹 데이터 수집 + 스크립트화</text>
-  <text x="683" y="352" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">AI와 함께 요소를 분석하며 루틴을 확정하고</text>
-  <text x="683" y="380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">자동 실행 스크립트 + CLI 스킬로 변환한다</text>
-  <text x="683" y="414" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">toscrape.com  /  Wikipedia  /  스킬 자동화</text>
-
-  <text x="60" y="510" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">TOOL</text>
-  <text x="60" y="546" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Playwright MCP  —  browser_navigate · browser_snapshot · browser_screenshot</text>
-
+  <text x="60" y="252" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">라이브러리 비교</text>
+  <rect x="60" y="266" width="360" height="130" rx="8" fill="#eff6ff"/>
+  <text x="240" y="296" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1d4ed8">Playwright</text>
+  <text x="240" y="320" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">Microsoft · Python/JS</text>
+  <text x="240" y="342" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">자동 대기 내장 · MCP 공식 지원</text>
+  <text x="240" y="364" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#059669">★ 이 강의에서 사용</text>
+  <rect x="460" y="266" width="360" height="130" rx="8" fill="#f8fafc"/>
+  <text x="640" y="296" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">Puppeteer</text>
+  <text x="640" y="320" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">Google · Node.js 전용</text>
+  <text x="640" y="342" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">Chrome/Edge 최적화</text>
+  <text x="640" y="364" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">JS 환경에서 주로 사용</text>
+  <rect x="860" y="266" width="360" height="130" rx="8" fill="#f8fafc"/>
+  <text x="1040" y="296" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">Selenium</text>
+  <text x="1040" y="320" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">가장 오래됨 · 다양한 언어</text>
+  <text x="1040" y="342" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">명시적 대기(wait) 필요</text>
+  <text x="1040" y="364" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">레거시 프로젝트에 주로 남아있음</text>
+  <line x1="60" y1="416" x2="1220" y2="416" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">AI 연동 원리 — MCP 방식</text>
+  <rect x="60" y="462" width="200" height="52" rx="8" fill="#dbeafe"/>
+  <text x="160" y="492" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e40af">Claude (AI)</text>
+  <text x="275" y="492" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#9ca3af">→</text>
+  <rect x="290" y="462" width="240" height="52" rx="8" fill="#dbeafe"/>
+  <text x="410" y="492" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e40af">MCP Tool 호출</text>
+  <text x="545" y="492" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#9ca3af">→</text>
+  <rect x="560" y="462" width="240" height="52" rx="8" fill="#dbeafe"/>
+  <text x="680" y="492" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e40af">Playwright 서버</text>
+  <text x="815" y="492" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#9ca3af">→</text>
+  <rect x="830" y="462" width="200" height="52" rx="8" fill="#dbeafe"/>
+  <text x="930" y="492" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e40af">CDP (브라우저)</text>
+  <text x="1045" y="492" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#9ca3af">→</text>
+  <rect x="1060" y="462" width="160" height="52" rx="8" fill="#bbf7d0"/>
+  <text x="1140" y="492" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#065f46">화면 조작</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">Playwright MCP가 설치된 Claude Code 환경에서 진행합니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">AI는 브라우저를 직접 보지 않는다 — DOM 스냅샷을 텍스트로 받아 판단한다</text>
 </svg>

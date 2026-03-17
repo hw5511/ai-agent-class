@@ -4,23 +4,23 @@
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 02</text>
   <rect x="1100" y="44" width="120" height="24" rx="12" fill="#059669"/>
   <text x="1160" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">PRACTICE</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="34" font-weight="700" fill="#171717">실습 2-1 — Wikipedia 접속 · 요소 분석</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">검색창 위치를 찾고 페이지 DOM 구조를 파악합니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="34" font-weight="700" fill="#171717">실습 2-3 — 스크립트화 · 헤드리스 CLI</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">레코딩한 동작을 Python 스크립트로 변환해 CLI에서 실행합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">STEPS</text>
   <circle cx="84" cy="302" r="14" fill="#eff6ff"/>
   <text x="84" y="308" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">1</text>
-  <text x="110" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"ko.wikipedia.org 접속해서 스냅샷 찍어줘" 요청</text>
+  <text x="110" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"방금 한 Wikipedia 검색 과정을 Python 스크립트로 만들어줘" 요청</text>
   <circle cx="84" cy="352" r="14" fill="#eff6ff"/>
   <text x="84" y="358" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">2</text>
-  <text x="110" y="358" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"검색창(input) 요소를 찾아서 셀렉터 알려줘" 요청</text>
+  <text x="110" y="358" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"headless=True로 실행해서 결과를 터미널에 출력해줘" 요청</text>
   <circle cx="84" cy="402" r="14" fill="#eff6ff"/>
   <text x="84" y="408" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">3</text>
-  <text x="110" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">스냅샷에서 검색창 셀렉터 확인 (예: #searchInput)</text>
+  <text x="110" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">브라우저 창 없이 터미널에 검색 결과가 출력되는 것 확인</text>
   <line x1="60" y1="450" x2="1220" y2="450" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">PROMPT</text>
   <rect x="60" y="494" width="1160" height="52" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
-  <text x="640" y="525" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" font-weight="600" fill="#2563eb">"ko.wikipedia.org 접속하고 검색창 셀렉터 찾아줘"</text>
+  <text x="640" y="525" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" font-weight="600" fill="#2563eb">"Wikipedia 키워드 검색 → 첫 문단 출력하는 headless Python 스크립트 만들어줘"</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#ecfdf5"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#059669">browser_snapshot이 스크린샷보다 요소 분석에 유리합니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#059669">headless=True : 화면 없이 백그라운드 실행 → 서버·자동화 환경에 적합</text>
 </svg>

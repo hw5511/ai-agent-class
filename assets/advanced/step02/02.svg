@@ -2,25 +2,15 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 02</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">웹 자동화, 어디까지 가능한가</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">기술적으로 가능한 것과 해도 되는 것은 다릅니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">웹 자동화 원리</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">코드가 브라우저를 직접 조종합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-
-  <!-- 좌: 가능한 것 -->
-  <text x="60" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#16a34a" letter-spacing="0.08em">활용 가능</text>
-  <text x="60" y="294" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">내가 만든 웹사이트 자동 테스트</text>
-  <text x="60" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">앱스토어 제출용 스크린샷 자동 캡처</text>
-  <text x="60" y="366" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">공개 허용 사이트 데이터 수집  (robots.txt 허용)</text>
-  <text x="60" y="402" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">내 계정 업무 자동화  (반복 작업 처리)</text>
-
-  <line x1="60" y1="432" x2="1220" y2="432" stroke="#e5e7eb" stroke-width="1"/>
-
-  <!-- 우: 주의 필요 -->
-  <text x="60" y="466" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#dc2626" letter-spacing="0.08em">주의 필요</text>
-  <text x="60" y="504" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">이용약관에 크롤링 금지가 명시된 사이트</text>
-  <text x="60" y="536" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">사람인이 잡코리아 크롤링으로 합의금 120억 지급  (대법원 2017년 확정)</text>
-
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#fef2f2"/>
-  <text x="640" y="594" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#dc2626">이 강의에서 배운 기술은 개인 업무 자동화 · 허용된 공개 데이터 · 본인 소유 사이트에만 사용하세요</text>
-  <text x="640" y="612" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#ef4444">무단 수집으로 인한 법적 책임은 수강생 본인에게 있습니다</text>
+  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">원리</text>
+  <text x="60" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">코드  -&gt;  브라우저 제어  -&gt;  클릭 · 입력 · 데이터 추출 자동 수행</text>
+  <line x1="60" y1="354" x2="1220" y2="354" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="394" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Playwright vs Selenium</text>
+  <text x="60" y="434" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Playwright   빠름 · 자동 대기 내장 · 설치 간단  (권장)</text>
+  <text x="60" y="474" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Selenium      오래된 생태계 · 레거시 지원 · 명시적 대기 필요</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">새로운 프로젝트는 Playwright 권장</text>
 </svg>
