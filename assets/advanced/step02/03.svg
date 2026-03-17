@@ -16,7 +16,7 @@
 
   <rect x="280" y="248" width="196" height="80" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
   <text x="378" y="281" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="13" font-weight="700" fill="#2563eb">로컬 서버 실행</text>
-  <text x="378" y="301" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="#374151">python -m http.server</text>
+  <text x="378" y="301" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="#374151">"로컬 서버 실행해줘"</text>
   <text x="378" y="319" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="12" fill="#374151">localhost 접속 준비</text>
   <polygon points="488,288 476,276 476,300" fill="#9ca3af"/>
   <line x1="476" y1="288" x2="500" y2="288" stroke="#9ca3af" stroke-width="2"/>

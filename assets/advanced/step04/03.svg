@@ -7,16 +7,17 @@
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
 
   <text x="60" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">네이버 오픈 API  —  검색 · 번역 · 쇼핑</text>
-  <text x="60" y="294" font-family="'Courier New',Courier,monospace" font-size="17" fill="#374151">pip install requests</text>
-  <text x="60" y="326" font-family="'Courier New',Courier,monospace" font-size="17" fill="#374151">headers = {"X-Naver-Client-Id": ID, "X-Naver-Client-Secret": SECRET}</text>
-  <text x="60" y="358" font-family="'Courier New',Courier,monospace" font-size="17" fill="#374151">res = requests.get("https://openapi.naver.com/v1/search/news.json", ...</text>
+  <rect x="60" y="272" width="1160" height="48" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="640" y="302" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#2563eb">"네이버 검색 API Skill 만들어줘. Client-Id랑 Secret은 환경변수로 받게 해줘."</text>
+  <text x="60" y="344" font-family="'Courier New',Courier,monospace" font-size="17" fill="#374151">headers = {"X-Naver-Client-Id": ID, "X-Naver-Client-Secret": SECRET}</text>
+  <text x="60" y="372" font-family="'Courier New',Courier,monospace" font-size="17" fill="#374151">res = requests.get("https://openapi.naver.com/v1/search/news.json", ...</text>
 
-  <line x1="60" y1="388" x2="1220" y2="388" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="60" y1="398" x2="1220" y2="398" stroke="#e5e7eb" stroke-width="1"/>
 
-  <text x="60" y="428" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">타입캐스트 TTS API  —  한국어 고품질 음성</text>
-  <text x="60" y="464" font-family="'Courier New',Courier,monospace" font-size="17" fill="#374151">pip install typecast-python</text>
-  <text x="60" y="496" font-family="'Courier New',Courier,monospace" font-size="17" fill="#374151">from typecast import TypeCast</text>
-  <text x="60" y="528" font-family="'Courier New',Courier,monospace" font-size="17" fill="#374151">tc = TypeCast(api_token="...")  →  tc.tts("안녕하세요", actor_id="...")</text>
+  <text x="60" y="430" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">타입캐스트 TTS API  —  한국어 고품질 음성</text>
+  <rect x="60" y="444" width="1160" height="48" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="640" y="474" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#2563eb">"typecast-python 설치하고 TTS Skill 만들어줘. actor_id는 파라미터로."</text>
+  <text x="60" y="516" font-family="'Courier New',Courier,monospace" font-size="17" fill="#374151">tc = TypeCast(api_token="...")  →  tc.tts("안녕하세요", actor_id="...")</text>
 
   <rect x="60" y="560" width="820" height="52" rx="10" fill="#eff6ff"/>
   <text x="470" y="591" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">네이버 · 타입캐스트 모두 계정 가입 후 즉시 발급 가능 (카드 불필요)</text>

@@ -5,9 +5,9 @@
   <text x="60" y="130" font-family="-apple-system,sans-serif" font-size="40" font-weight="700" fill="#171717">Playwright MCP 설치와 핵심 툴</text>
   <text x="60" y="178" font-family="-apple-system,sans-serif" font-size="19" fill="#6b7280">Claude Code에서 브라우저를 직접 제어하는 MCP 서버입니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="256" font-family="-apple-system,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">설치</text>
-  <rect x="60" y="270" width="1160" height="48" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="640" y="300" text-anchor="middle" font-family="Courier New,monospace" font-size="16" fill="#1d4ed8">claude mcp add playwright npx @playwright/mcp@latest</text>
+  <text x="60" y="256" font-family="-apple-system,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Claude에게 이렇게 요청하세요</text>
+  <rect x="60" y="270" width="1160" height="48" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="640" y="300" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="18" font-weight="600" fill="#2563eb">"Playwright MCP 설치해줘"</text>
   <line x1="60" y1="338" x2="1220" y2="338" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="374" font-family="-apple-system,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">핵심 툴 (기본 포함)</text>
   <text x="60" y="412" font-family="-apple-system,sans-serif" font-size="17" fill="#374151">browser_navigate               URL로 이동</text>
