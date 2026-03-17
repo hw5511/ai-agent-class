@@ -3,16 +3,16 @@
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 01</text>
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">4종 파이프라인 연결</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Skill들을 연결해 에이전트 명령 하나로 실행합니다</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Skill들을 연결해 에이전트 명령 하나로 4종 문서를 동시에 생성합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">흐름</text>
-  <text x="60" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">1.  엑셀 Skill  :  data.xlsx 읽기  →  데이터 추출</text>
-  <text x="60" y="350" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">2.  워드 Skill  :  추출 데이터  →  report.docx 생성</text>
-  <text x="60" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">3.  PPT Skill   :  핵심 내용  →  summary.pptx 생성</text>
-  <text x="60" y="434" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">4.  한글 Skill  :  본문  →  report.hwpx 생성</text>
+  <text x="60" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">1.  엑셀 Skill  :  매출데이터_템플릿.xlsx 읽기  →  데이터 추출</text>
+  <text x="60" y="350" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">2.  워드 Skill  :  추출 데이터  →  보고서_템플릿.docx 채우기</text>
+  <text x="60" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">3.  PPT Skill   :  핵심 내용  →  회사_범용_템플릿.pptx 발표자료</text>
+  <text x="60" y="434" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">4.  한글 Skill  :  분석 결과  →  gonggong report.hwpx 생성</text>
   <line x1="60" y1="464" x2="1220" y2="464" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="504" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">에이전트 명령</text>
-  <text x="60" y="542" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">"data.xlsx 를 읽어 워드·PPT·한글 보고서를 모두 만들어줘"</text>
-  <rect x="60" y="574" width="1160" height="52" rx="10" fill="#2563eb"/>
-  <text x="640" y="605" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">데이터 입력 하나로 4종 문서가 동시에 생성됩니다</text>
+  <text x="60" y="494" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">에이전트 명령</text>
+  <text x="60" y="530" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">"매출 데이터 읽어서 워드·PPT·한글 보고서를 모두 만들어줘"</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">데이터 입력 하나로 4종 문서가 동시에 생성됩니다</text>
 </svg>

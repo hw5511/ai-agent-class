@@ -5,37 +5,28 @@
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">GitHub 레포 → Skill 자동 제작</text>
   <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">URL과 목적만 알려주면 Claude가 코드를 분석하고 Skill을 만든다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-
   <text x="60" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">프롬프트 예시</text>
   <rect x="60" y="272" width="1160" height="72" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
   <text x="84" y="300" font-family="'Courier New',Courier,monospace" font-size="17" fill="#1e40af">https://github.com/neolord0/hwp2hwpx</text>
   <text x="84" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#374151">이 라이브러리를 참고해서 .hwp 파일을 .hwpx로 변환하는 Python Skill을 만들어줘</text>
-
   <line x1="60" y1="368" x2="1220" y2="368" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="406" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Claude가 하는 일</text>
-
   <rect x="60" y="420" width="360" height="100" rx="8" fill="#eff6ff"/>
   <text x="240" y="452" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">1. 레포 분석</text>
   <text x="240" y="478" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">GitHub 코드 구조 파악</text>
-  <text x="240" y="500" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">Java 라이브러리 사용법 이해</text>
-
+  <text x="240" y="500" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">라이브러리 사용법 이해</text>
   <text x="460" y="475" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" fill="#9ca3af">→</text>
-
   <rect x="480" y="420" width="360" height="100" rx="8" fill="#eff6ff"/>
   <text x="660" y="452" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">2. 설계</text>
-  <text x="660" y="478" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">subprocess로 JAR 호출 방식</text>
+  <text x="660" y="478" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">subprocess로 호출 방식</text>
   <text x="660" y="500" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">Python Skill 구조 설계</text>
-
   <text x="880" y="475" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" fill="#9ca3af">→</text>
-
   <rect x="900" y="420" width="360" height="100" rx="8" fill="#eff6ff"/>
   <text x="1080" y="452" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">3. Skill 생성</text>
   <text x="1080" y="478" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">hwp_to_hwpx.py 자동 작성</text>
   <text x="1080" y="500" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">즉시 실행 가능한 상태로</text>
-
   <rect x="60" y="554" width="820" height="52" rx="10" fill="#171717"/>
   <text x="470" y="585" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#ffffff">라이브러리를 몰라도, 언어가 달라도 Skill로 만들 수 있다</text>
-
   <rect x="900" y="554" width="360" height="52" rx="10" fill="#1e293b"/>
   <text x="920" y="574" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">GitHub 레포</text>
   <text x="920" y="596" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#818cf8">github.com/neolord0/hwp2hwpx</text>
