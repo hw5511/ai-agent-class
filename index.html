@@ -1500,10 +1500,10 @@
                         // 현재 세션의 첫 슬라이드만 즉시 로드, 나머지는 lazy (data-src)
                         const imgAttr = (i === currentSession && j === 0)
                             ? `src="${src}"`
-                            : `data-src="${src}" src=""`;
+                            : `data-src="${src}"`;
                         return `<div class="image-slide${j === 0 ? ' is-active' : ''}" data-img-index="${j}">
                             <img ${imgAttr} alt="${s.title} - ${j + 1}"
-                                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                onerror="if(!this.dataset.src){this.style.display='none';this.nextElementSibling.style.display='flex'}">
                             <div class="image-placeholder" style="display:none">
                                 <svg class="image-placeholder-icon" width="40" height="40" viewBox="0 0 40 40" fill="none">
                                     <rect x="4" y="8" width="32" height="24" rx="3" stroke="#a3a3a3" stroke-width="2"/>
