@@ -837,6 +837,130 @@
             font-size: var(--font-xs);
             font-weight: 600;
         }
+
+        /* ============================================
+           Mobile Responsive (max-width: 768px)
+           ============================================ */
+        @media (max-width: 768px) {
+            html, body {
+                height: auto;
+                overflow: auto;
+            }
+
+            .app-body {
+                flex-direction: column;
+                min-height: 100vh;
+                overflow: auto;
+            }
+
+            /* 사이드바: overlay 방식으로 전환 */
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                z-index: 100;
+                box-shadow: 2px 0 12px rgba(0,0,0,0.15);
+                width: var(--sidebar-width) !important;
+                transition: transform var(--sidebar-transition);
+                transform: translateX(0);
+            }
+
+            .sidebar.collapsed {
+                transform: translateX(-100%);
+                width: var(--sidebar-width) !important;
+                border-right-color: var(--border);
+            }
+
+            /* 메인 콘텐츠: 전체 너비 */
+            .slide-area {
+                flex: none;
+                width: 100%;
+                height: auto;
+                overflow: visible;
+            }
+
+            .slides-container {
+                height: auto;
+                overflow: visible;
+            }
+
+            .slide {
+                position: relative;
+                transform: none !important;
+                display: none;
+            }
+
+            .slide.is-active {
+                display: block;
+            }
+
+            /* 세션 콘텐츠: 세로 레이아웃 */
+            .session-inner {
+                overflow: visible;
+                height: auto;
+                padding: 1rem;
+            }
+
+            .session-header {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .slide-action-box {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .session-title {
+                font-size: var(--font-xl);
+            }
+
+            .session-body {
+                grid-template-columns: 1fr;
+                height: auto;
+                overflow: visible;
+            }
+
+            /* 이미지 슬라이더: 고정 높이 대신 비율 유지 */
+            .body-image {
+                overflow: visible;
+            }
+
+            .image-slider {
+                position: relative;
+                height: 0;
+                padding-bottom: 56.25%; /* 16:9 비율 (SVG 1280x720) */
+                overflow: hidden;
+            }
+
+            .image-slide {
+                position: absolute;
+                inset: 0;
+            }
+
+            /* 슬라이드 전환: 모바일에서 translateX 대신 opacity */
+            .image-slide { opacity: 0; transform: none !important; transition: opacity 0.22s; }
+            .image-slide.is-active { opacity: 1; }
+            .image-slide.is-prev   { opacity: 0; }
+
+            /* 사이드바 reopen 버튼: 항상 표시 */
+            .sidebar-reopen {
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+
+            /* 슬라이드 네비 */
+            .slide-nav {
+                padding: 0.5rem 1rem;
+            }
+
+            /* 슬라이드 dots 줄바꿈 허용 */
+            .slide-dots {
+                flex-wrap: wrap;
+                max-width: 60vw;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1373,8 +1497,12 @@
                 if (s.slides && s.slides.length > 0) {
                     imageSlidesHtml = s.slides.map((filename, j) => {
                         const src = getImagePath(course, s.num, filename);
+                        // 현재 세션의 첫 슬라이드만 즉시 로드, 나머지는 lazy (data-src)
+                        const imgAttr = (i === currentSession && j === 0)
+                            ? `src="${src}"`
+                            : `data-src="${src}" src=""`;
                         return `<div class="image-slide${j === 0 ? ' is-active' : ''}" data-img-index="${j}">
-                            <img src="${src}" alt="${s.title} - ${j + 1}"
+                            <img ${imgAttr} alt="${s.title} - ${j + 1}"
                                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
                             <div class="image-placeholder" style="display:none">
                                 <svg class="image-placeholder-icon" width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -1459,7 +1587,15 @@
             document.querySelectorAll('.slide').forEach((el, i) => {
                 el.classList.remove('is-prev', 'is-active');
                 if (i < currentSession)       el.classList.add('is-prev');
-                else if (i === currentSession) el.classList.add('is-active');
+                else if (i === currentSession) {
+                    el.classList.add('is-active');
+                    // 세션 전환 시 첫 번째 슬라이드 lazy load
+                    const firstImg = el.querySelector('.image-slide[data-img-index="0"] img[data-src]');
+                    if (firstImg && firstImg.dataset.src) {
+                        firstImg.src = firstImg.dataset.src;
+                        delete firstImg.dataset.src;
+                    }
+                }
             });
         }
 
@@ -1474,6 +1610,14 @@
                         // 현재 스텝: currentSlide 기준으로 위치 설정
                         if (imgIdx < currentSlide)       imgSlide.classList.add('is-prev');
                         else if (imgIdx === currentSlide) imgSlide.classList.add('is-active');
+                        // lazy load: 현재 + 다음 슬라이드 미리 로드
+                        if (imgIdx === currentSlide || imgIdx === currentSlide + 1) {
+                            const img = imgSlide.querySelector('img[data-src]');
+                            if (img && img.dataset.src) {
+                                img.src = img.dataset.src;
+                                delete img.dataset.src;
+                            }
+                        }
                     } else {
                         // 다른 스텝: 첫 번째 이미지만 active로 초기화
                         if (imgIdx === 0) imgSlide.classList.add('is-active');
