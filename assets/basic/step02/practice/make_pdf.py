@@ -35,9 +35,7 @@ def draw_pdf(path):
     # 메타
     c.setFont('Malgun', 10)
     c.drawString(20*mm, y, "작성일: 2026년 3월 14일  |  부서: 영업부")
-    y -= 6*mm
-    c.line(20*mm, y, W - 20*mm, y)
-    y -= 8*mm
+    y -= 10*mm
 
     # 섹션 1
     c.setFont('MalgunBold', 12)
@@ -58,27 +56,20 @@ def draw_pdf(path):
     c.drawString(20*mm, y, "2. 월별 실적")
     y -= 6*mm
 
-    # 테이블 헤더
-    cols = [20, 70, 115, 160, 205]  # mm
-    headers = ["월", "목표(원)", "실적(원)", "합계", "달성률"]
-    c.setFont('MalgunBold', 9)
-    for i, h in enumerate(headers):
-        c.drawString(cols[i]*mm, y, h)
-    y -= 5*mm
-    c.line(20*mm, y, W - 20*mm, y)
-    y -= 1*mm
+    # 헤더 (텍스트만, 선 없음)
+    c.setFont('MalgunBold', 10)
+    c.drawString(20*mm, y, "월          목표(원)         실적(원)         달성률")
+    y -= 6*mm
 
-    rows = [
-        ["1월",    "420,000", "398,000", "",            "94.8%"],
-        ["2월",    "430,000", "451,000", "",            "104.9%"],
-        ["3월(예상)", "450,000", "435,000", "",         "96.7%"],
-        ["합계",   "1,300,000","1,284,000","",          "98.8%"],
+    rows_plain = [
+        "1월         420,000          398,000          94.8%",
+        "2월         430,000          451,000          104.9%",
+        "3월(예상)   450,000          435,000          96.7%",
+        "합계      1,300,000        1,284,000          98.8%",
     ]
-    c.setFont('Malgun', 9)
-    for row in rows:
-        for i, cell in enumerate(row):
-            if cell:
-                c.drawString(cols[i]*mm, y, cell)
+    c.setFont('Malgun', 10)
+    for row in rows_plain:
+        c.drawString(20*mm, y, row)
         y -= 5*mm
     y -= 4*mm
 
