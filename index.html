@@ -1914,6 +1914,8 @@
         document.addEventListener('DOMContentLoaded', () => {
             readHash();   // URL 해시에서 course/session/slide 복원
             renderSlides(currentCourse);
+            applySlidePositions();           // 복원된 세션 위치 반영
+            applyImageSlidePositions();      // 복원된 슬라이드 위치 반영
             renderDots(getSlideCount(COURSES[currentCourse].sessions[currentSession]));
             renderSidebar(currentCourse);
             updateIndicator();
