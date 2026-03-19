@@ -1470,6 +1470,36 @@
         let sidebarOpen    = true;
 
         /* ============================================
+           URL Hash State  (#course/sessionIdx/slideIdx)
+           ============================================ */
+        function pushHash() {
+            const hash = '#' + currentCourse + '/' + currentSession + '/' + currentSlide;
+            if (location.hash !== hash) {
+                history.replaceState(null, '', hash);
+            }
+        }
+
+        function readHash() {
+            const raw = location.hash.replace('#', '');
+            if (!raw) return;
+            const parts = raw.split('/');
+            if (parts.length < 1) return;
+            const course = parts[0];
+            if (!COURSES[course]) return;
+            currentCourse = course;
+            const sessionIdx = parseInt(parts[1]) || 0;
+            const slideIdx   = parseInt(parts[2]) || 0;
+            const sessions   = COURSES[course].sessions;
+            currentSession = Math.min(Math.max(sessionIdx, 0), sessions.length - 1);
+            const slideCount = getSlideCount(sessions[currentSession]);
+            currentSlide = Math.min(Math.max(slideIdx, 0), slideCount - 1);
+            // 탭 UI 동기화
+            document.querySelectorAll('.course-tab').forEach(t => {
+                t.classList.toggle('active', t.dataset.course === currentCourse);
+            });
+        }
+
+        /* ============================================
            Helper
            ============================================ */
         function getSlideCount(session) {
@@ -1729,6 +1759,7 @@
                 updateIndicator();
                 updateSidebarActive();
                 updateDescPanel();
+                pushHash();
             }
         }
 
@@ -1744,6 +1775,7 @@
             updateIndicator();
             updateSidebarActive();
             updateDescPanel();
+            pushHash();
         }
 
         /* ============================================
@@ -1836,6 +1868,7 @@
                 renderDots(getSlideCount(COURSES[currentCourse].sessions[0]));
                 renderSidebar(currentCourse);
                 updateIndicator();
+                pushHash();
             });
         });
 
@@ -1879,10 +1912,12 @@
            Init
            ============================================ */
         document.addEventListener('DOMContentLoaded', () => {
+            readHash();   // URL 해시에서 course/session/slide 복원
             renderSlides(currentCourse);
-            renderDots(getSlideCount(COURSES[currentCourse].sessions[0]));
+            renderDots(getSlideCount(COURSES[currentCourse].sessions[currentSession]));
             renderSidebar(currentCourse);
             updateIndicator();
+            pushHash();   // 초기 상태를 URL에 반영
 
             // 전체화면 진입 버튼 이벤트 (renderSlides 후 등록)
             document.getElementById('slides-container').addEventListener('click', e => {
