@@ -30,8 +30,9 @@
   <text x="80" y="365" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">• '카카오톡 실행해줘'</text>
   <text x="80" y="390" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">  (C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe)</text>
   <text x="80" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">• '윈도우 토스트 알림 보내줘 — 내용: 실습 완료!'</text>
-  <text x="80" y="452" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">• '현재 폴더의 파일 목록을 보여줘'</text>
-  <text x="80" y="484" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">• 'Python 스크립트(dice.py)를 실행해줘'</text>
+  <text x="96" y="438" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">  (BurntToast로 보내줘)</text>
+  <text x="80" y="466" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">• '현재 폴더의 파일 목록을 보여줘'</text>
+  <text x="80" y="498" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">• 'Python 스크립트(dice.py)를 실행해줘'</text>
   <text x="655" y="365" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">• 'Python Tkinter 클리커 게임 만들어서 바로 실행해줘'</text>
   <text x="655" y="397" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">• '크롬으로 유튜브 열어줘'</text>
   <text x="655" y="429" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">• '바탕화면에 메모장 바로가기 만들어줘'</text>
