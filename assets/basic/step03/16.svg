@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 03</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">/config 설정 항목 (2/2)</text>
+  <text x="60" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#6b7280">/config 명령어로 Claude Code의 동작을 개인화합니다</text>
+  <line x1="60" y1="196" x2="1220" y2="196" stroke="#e5e7eb" stroke-width="1"/>
+  <!-- 컬럼 헤더 -->
+  <rect x="60" y="200" width="1160" height="28" fill="#f3f4f6"/>
+  <text x="68" y="219" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#6b7280" letter-spacing="0.05em">설정 항목</text>
+  <text x="478" y="219" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#6b7280" letter-spacing="0.05em">설명</text>
+  <line x1="460" y1="200" x2="460" y2="628" stroke="#e5e7eb" stroke-width="1"/>
+  <!-- 행 1 -->
+  <rect x="60" y="228" width="1160" height="36" fill="#f9fafb"/>
+  <text x="68" y="251" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Auto-update channel</text>
+  <text x="478" y="251" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">자동 업데이트 채널 선택 (latest / stable)</text>
+  <!-- 행 2 -->
+  <text x="68" y="287" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Theme</text>
+  <text x="478" y="287" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">UI 테마 선택 (Dark / Light / System 등)</text>
+  <!-- 행 3 -->
+  <rect x="60" y="300" width="1160" height="36" fill="#f9fafb"/>
+  <text x="68" y="323" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Notifications</text>
+  <text x="478" y="323" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">작업 완료 알림 방식 (Auto / Always / Never)</text>
+  <!-- 행 4 -->
+  <text x="68" y="359" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Output style</text>
+  <text x="478" y="359" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">응답 출력 스타일 (default / verbose 등)</text>
+  <!-- 행 5 -->
+  <rect x="60" y="372" width="1160" height="36" fill="#f9fafb"/>
+  <text x="68" y="395" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Language</text>
+  <text x="478" y="395" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">Claude 응답 언어 설정 (Default: 영어)</text>
+  <!-- 행 6 -->
+  <text x="68" y="431" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Editor mode</text>
+  <text x="478" y="431" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">프롬프트 입력 모드 (normal / vim / emacs)</text>
+  <!-- 행 7 -->
+  <rect x="60" y="444" width="1160" height="36" fill="#f9fafb"/>
+  <text x="68" y="467" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Show PR status footer</text>
+  <text x="478" y="467" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">하단에 GitHub PR 상태 표시 여부</text>
+  <!-- 행 8 -->
+  <text x="68" y="503" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Model</text>
+  <text x="478" y="503" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">기본 모델 설정 (Default / Haiku / Sonnet / Opus)</text>
+  <!-- 행 9 -->
+  <rect x="60" y="516" width="1160" height="36" fill="#f9fafb"/>
+  <text x="68" y="539" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Auto-install IDE extension</text>
+  <text x="478" y="539" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">VS Code 등 IDE 확장 프로그램 자동 설치</text>
+  <!-- 행 10 -->
+  <text x="68" y="575" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Claude in Chrome enabled by default</text>
+  <text x="478" y="575" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">Chrome 확장 기본 활성화 여부</text>
+  <!-- 행 11 -->
+  <rect x="60" y="588" width="1160" height="36" fill="#f9fafb"/>
+  <text x="68" y="611" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Enable Remote Control for all sessions</text>
+  <text x="478" y="611" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">모든 세션에 원격 제어 허용 (MCP 등 외부 도구 연동)</text>
+  <!-- 테두리 -->
+  <rect x="60" y="200" width="1160" height="424" rx="0" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+  <!-- 하단 박스 -->
+  <rect x="60" y="640" width="1160" height="48" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="669" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">설정값은 즉시 저장됩니다 — 재시작 불필요</text>
+</svg>
