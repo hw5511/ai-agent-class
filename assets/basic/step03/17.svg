@@ -2,47 +2,15 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 03</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">/config 화면 구성</text>
-  <text x="60" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#6b7280">상단 탭 3개로 구성 — Status · Config · Usage</text>
-  <line x1="60" y1="196" x2="1220" y2="196" stroke="#e5e7eb" stroke-width="1"/>
-
-  <!-- 탭 UI -->
-  <rect x="60" y="220" width="340" height="44" rx="8" fill="#171717"/>
-  <text x="230" y="247" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#ffffff">Status</text>
-  <rect x="420" y="220" width="340" height="44" rx="8" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="590" y="247" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#6b7280">Config</text>
-  <rect x="780" y="220" width="340" height="44" rx="8" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="950" y="247" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#6b7280">Usage</text>
-
-  <!-- Status 설명 -->
-  <rect x="60" y="288" width="540" height="280" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
-  <rect x="60" y="288" width="540" height="40" rx="12" fill="#171717"/>
-  <rect x="60" y="308" width="540" height="20" fill="#171717"/>
-  <text x="330" y="313" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff">Status</text>
-  <text x="80" y="356" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">• 현재 Claude Code 버전</text>
-  <text x="80" y="388" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">• 세션명 / 세션 ID</text>
-  <text x="80" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">• 현재 작업 폴더 (cwd)</text>
-  <text x="80" y="452" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">• 로그인 계정 / 조직</text>
-  <text x="80" y="484" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">• 사용 중인 모델</text>
-  <text x="80" y="516" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">• IDE 연결 상태 / MCP 서버 목록</text>
-  <text x="80" y="548" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">• 적용 중인 설정 파일 출처</text>
-
-  <!-- Usage 설명 -->
-  <rect x="680" y="288" width="540" height="280" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
-  <rect x="680" y="288" width="540" height="40" rx="12" fill="#171717"/>
-  <rect x="680" y="308" width="540" height="20" fill="#171717"/>
-  <text x="950" y="313" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff">Usage</text>
-  <text x="700" y="356" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">• 현재 세션 사용량 (% 표시)</text>
-  <text x="700" y="388" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">• 이번 주 전체 모델 사용량</text>
-  <text x="700" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">• 이번 주 Sonnet 전용 사용량</text>
-  <text x="700" y="452" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">• 각 항목별 리셋 시간 표시</text>
-  <text x="700" y="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">  /extra-usage 로 초과 사용 활성화 가능</text>
-
-  <!-- Config 안내 -->
-  <rect x="60" y="592" width="1160" height="44" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
-  <text x="640" y="619" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#1d4ed8">Config 탭에서는 Claude Code의 세부 동작을 설정합니다 — 다음 슬라이드에서 항목별 설명</text>
-
-  <!-- 하단 박스 -->
-  <rect x="60" y="652" width="1160" height="48" rx="10" fill="#f3f4f6"/>
-  <text x="640" y="681" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">Tab 키 또는 방향키로 탭 전환  —  Esc로 닫기</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Todos</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">에이전트가 작업 목록을 스스로 관리합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">내장 툴</text>
+  <text x="60" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">TodoWrite  —  할 일 목록 작성·업데이트</text>
+  <text x="60" y="354" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">TodoRead   —  현재 목록 조회</text>
+  <line x1="60" y1="410" x2="1220" y2="410" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">상태</text>
+  <text x="60" y="490" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">pending  →  in_progress  →  completed</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">'ㅇㅇㅇ 작업을 todo 리스트를 세워서 순차적으로 진행해줘'</text>
 </svg>

@@ -2,56 +2,50 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 03</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">/config 설정 항목 (1/2)</text>
-  <text x="60" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#6b7280">/config 명령어로 Claude Code의 동작을 개인화합니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Claude in Chrome</text>
+  <text x="60" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#6b7280">Claude Code가 Chrome 브라우저를 직접 제어하는 연동 기능  (베타)</text>
   <line x1="60" y1="196" x2="1220" y2="196" stroke="#e5e7eb" stroke-width="1"/>
-  <!-- 컬럼 헤더 -->
-  <rect x="60" y="200" width="1160" height="28" fill="#f3f4f6"/>
-  <text x="68" y="219" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#6b7280" letter-spacing="0.05em">설정 항목</text>
-  <text x="478" y="219" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#6b7280" letter-spacing="0.05em">설명</text>
-  <line x1="460" y1="200" x2="460" y2="628" stroke="#e5e7eb" stroke-width="1"/>
-  <!-- 행 1 -->
-  <rect x="60" y="228" width="1160" height="36" fill="#f9fafb"/>
-  <text x="68" y="251" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Auto-compact</text>
-  <text x="478" y="251" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">컨텍스트 한도 도달 시 대화 내용 자동 압축 (기본: 켜짐)</text>
-  <!-- 행 2 -->
-  <text x="68" y="287" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Show tips</text>
-  <text x="478" y="287" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">Claude Code 사용 팁 메시지 표시</text>
-  <!-- 행 3 -->
-  <rect x="60" y="300" width="1160" height="36" fill="#f9fafb"/>
-  <text x="68" y="323" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Reduce motion</text>
-  <text x="478" y="323" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">UI 전환 애니메이션 줄이기 (접근성)</text>
-  <!-- 행 4 -->
-  <text x="68" y="359" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Thinking mode</text>
-  <text x="478" y="359" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">Extended Thinking 활성화 — Claude의 사고 과정 표시</text>
-  <!-- 행 5 -->
-  <rect x="60" y="372" width="1160" height="36" fill="#f9fafb"/>
-  <text x="68" y="395" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Rewind code (checkpoints)</text>
-  <text x="478" y="395" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">파일 편집 전 체크포인트 자동 저장 (되돌리기 가능)</text>
-  <!-- 행 6 -->
-  <text x="68" y="431" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Verbose output</text>
-  <text x="478" y="431" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">툴 호출 과정 상세 출력</text>
-  <!-- 행 7 -->
-  <rect x="60" y="444" width="1160" height="36" fill="#f9fafb"/>
-  <text x="68" y="467" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Terminal progress bar</text>
-  <text x="478" y="467" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">작업 진행 상태 바 터미널 표시</text>
-  <!-- 행 8 -->
-  <text x="68" y="503" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Show turn duration</text>
-  <text x="478" y="503" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">각 응답에 소요된 시간 표시</text>
-  <!-- 행 9 -->
-  <rect x="60" y="516" width="1160" height="36" fill="#f9fafb"/>
-  <text x="68" y="539" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Default permission mode</text>
-  <text x="478" y="539" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">기본 권한 모드 설정 (Default / Auto-edit / Plan)</text>
-  <!-- 행 10 -->
-  <text x="68" y="575" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Respect .gitignore in file picker</text>
-  <text x="478" y="575" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">파일 선택기에서 .gitignore 목록 자동 숨김</text>
-  <!-- 행 11 -->
-  <rect x="60" y="588" width="1160" height="36" fill="#f9fafb"/>
-  <text x="68" y="611" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Always copy full response</text>
-  <text x="478" y="611" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">/copy 없이 전체 응답을 자동으로 클립보드 복사</text>
-  <!-- 테두리 -->
-  <rect x="60" y="200" width="1160" height="424" rx="0" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- 왼쪽 컬럼 -->
+  <text x="60" y="240" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.06em">주요 기능</text>
+
+  <rect x="60" y="254" width="16" height="16" rx="4" fill="#171717"/>
+  <text x="84" y="266" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#171717">라이브 디버깅</text>
+  <text x="84" y="284" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">콘솔 에러 / DOM 상태 직접 읽고 즉시 코드 수정</text>
+
+  <rect x="60" y="302" width="16" height="16" rx="4" fill="#171717"/>
+  <text x="84" y="314" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#171717">디자인 검증</text>
+  <text x="84" y="332" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Figma 목업 → 브라우저에서 결과 즉시 확인</text>
+
+  <rect x="60" y="350" width="16" height="16" rx="4" fill="#171717"/>
+  <text x="84" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#171717">웹앱 테스트</text>
+  <text x="84" y="380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">폼 검증, 시각 회귀 테스트, 유저 플로우 확인</text>
+
+  <rect x="60" y="398" width="16" height="16" rx="4" fill="#171717"/>
+  <text x="84" y="410" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#171717">인증 웹앱 접근</text>
+  <text x="84" y="428" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">로그인 상태 공유 — Google Docs, Gmail, Notion 등 API 없이 접근</text>
+
+  <!-- 오른쪽 컬럼 -->
+  <line x1="660" y1="210" x2="660" y2="580" stroke="#e5e7eb" stroke-width="1"/>
+
+  <rect x="692" y="254" width="16" height="16" rx="4" fill="#171717"/>
+  <text x="716" y="266" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#171717">데이터 추출</text>
+  <text x="716" y="284" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">웹페이지 내용 → CSV 등 구조화된 파일로 저장</text>
+
+  <rect x="692" y="302" width="16" height="16" rx="4" fill="#171717"/>
+  <text x="716" y="314" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#171717">반복 작업 자동화</text>
+  <text x="716" y="332" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">데이터 입력, 폼 작성, 멀티사이트 워크플로우</text>
+
+  <rect x="692" y="350" width="16" height="16" rx="4" fill="#171717"/>
+  <text x="716" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#171717">세션 녹화</text>
+  <text x="716" y="380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">브라우저 동작 과정을 GIF로 저장·공유</text>
+
+  <!-- 지원 브라우저 안내 -->
+  <rect x="692" y="408" width="528" height="52" rx="8" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="956" y="430" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#374151">지원 브라우저</text>
+  <text x="956" y="450" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Chrome · Edge  /  Brave · Arc · WSL 미지원</text>
+
   <!-- 하단 박스 -->
-  <rect x="60" y="640" width="1160" height="48" rx="10" fill="#f3f4f6"/>
-  <text x="640" y="669" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">설정값은 즉시 저장됩니다 — 재시작 불필요</text>
+  <rect x="60" y="628" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="659" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">Claude Code와 Chrome이 실시간으로 연결 — 코드 작성과 브라우저 테스트를 한 곳에서</text>
 </svg>

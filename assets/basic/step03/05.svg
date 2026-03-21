@@ -2,20 +2,14 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 03</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">욜로 모드  (YOLO Mode)</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">모든 권한 확인을 건너뛰고 자동 실행  —  격리 환경에서만 사용</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">settings.json — 주요 설정 항목</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">자주 쓰는 항목만 알아도 충분합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실행 방법  (일반 모드 진입 후 변경 불가 — 처음부터 이 인자로 실행)</text>
-  <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="22" fill="#dc2626">claude --dangerously-skip-permissions</text>
-  <line x1="60" y1="354" x2="1220" y2="354" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="394" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">종료 방법</text>
-  <text x="60" y="434" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">1.  /exit  입력  (Claude 대화 안에서 종료)</text>
-  <text x="60" y="474" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">2.  Ctrl+C  연타  (강제 종료)</text>
-  <line x1="60" y1="514" x2="1220" y2="514" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="548" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#6b7280">종료 후 터미널에서  위쪽 방향키  →  이전 명령어 바로 재실행</text>
-  <rect x="60" y="558" width="1160" height="52" rx="10" fill="#f3f4f6"/>
-  <text x="640" y="589" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">욜로 모드는 실서버 · 실제 파일 환경에서 절대 사용 금지</text>
-  <rect x="60" y="622" width="1160" height="74" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
-  <text x="80" y="648" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#92400e">※ 현재 'bug'로 인하여 vscode 터미널에서 bypass permissions로 실행해도 권한 요청 메세지를 표시하는 버그가 다수 보고됨.</text>
-  <text x="80" y="672" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#92400e">   claude 버전에 따라 vscode에서 권한 우회가 안될 수도 있습니다.</text>
+  <text x="60" y="264" font-family="'Courier New',Courier,monospace" font-size="19" fill="#171717">model          <tspan font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fill="#374151">기본 모델 지정   (예: claude-sonnet-4-6)</tspan></text>
+  <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="19" fill="#171717">language      <tspan font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fill="#374151">응답 언어 설정   (예: "ko")</tspan></text>
+  <text x="60" y="352" font-family="'Courier New',Courier,monospace" font-size="19" fill="#171717">env              <tspan font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fill="#374151">환경 변수 주입   (API 키 등)</tspan></text>
+  <text x="60" y="396" font-family="'Courier New',Courier,monospace" font-size="19" fill="#171717">defaultMode  <tspan font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fill="#374151">기본 권한 모드   (default · acceptEdits · plan)</tspan></text>
+  <text x="60" y="440" font-family="'Courier New',Courier,monospace" font-size="19" fill="#171717">permissions  <tspan font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fill="#374151">도구 허용 · 차단 규칙 목록</tspan></text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">Claude에게 "settings.json에 ㅇㅇ 설정 추가해줘"라고 요청해도 됩니다</text>
 </svg>

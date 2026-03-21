@@ -2,14 +2,26 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 03</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">settings.json — 주요 설정 항목</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">자주 쓰는 항목만 알아도 충분합니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">/model  —  Claude 모델 선택</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Haiku · Sonnet · Opus  —  상황에 맞는 모델을 선택합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="'Courier New',Courier,monospace" font-size="19" fill="#171717">model          <tspan font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fill="#374151">기본 모델 지정   (예: claude-sonnet-4-6)</tspan></text>
-  <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="19" fill="#171717">language      <tspan font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fill="#374151">응답 언어 설정   (예: "ko")</tspan></text>
-  <text x="60" y="352" font-family="'Courier New',Courier,monospace" font-size="19" fill="#171717">env              <tspan font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fill="#374151">환경 변수 주입   (API 키 등)</tspan></text>
-  <text x="60" y="396" font-family="'Courier New',Courier,monospace" font-size="19" fill="#171717">defaultMode  <tspan font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fill="#374151">기본 권한 모드   (default · acceptEdits · plan)</tspan></text>
-  <text x="60" y="440" font-family="'Courier New',Courier,monospace" font-size="19" fill="#171717">permissions  <tspan font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" fill="#374151">도구 허용 · 차단 규칙 목록</tspan></text>
+  <line x1="447" y1="224" x2="447" y2="554" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="834" y1="224" x2="834" y2="554" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="254" y="268" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="24" font-weight="700" fill="#171717">Haiku 4.5</text>
+  <text x="254" y="302" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">가장 빠름</text>
+  <text x="100" y="360" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">간단한 질문 · 요약</text>
+  <text x="100" y="396" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">반복 · 대량 작업</text>
+  <text x="100" y="432" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">빠른 응답 필요</text>
+  <text x="640" y="268" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="24" font-weight="700" fill="#171717">Sonnet 4.6</text>
+  <text x="640" y="302" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">빠르고 강력 · 기본 모델</text>
+  <text x="487" y="360" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">일상적인 코딩</text>
+  <text x="487" y="396" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">일반 업무 자동화</text>
+  <text x="487" y="432" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">대부분의 작업에 추천</text>
+  <text x="1027" y="268" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="24" font-weight="700" fill="#171717">Opus 4.5</text>
+  <text x="1027" y="302" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">최고 성능</text>
+  <text x="874" y="360" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">복잡한 추론 · 분석</text>
+  <text x="874" y="396" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">심화 코딩 · 아키텍처</text>
+  <text x="874" y="432" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">장기 계획 · 의사결정</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">Claude에게 "settings.json에 ㅇㅇ 설정 추가해줘"라고 요청해도 됩니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">/model 입력 후 원하는 모델 선택  /  Ctrl+C로 취소</text>
 </svg>
