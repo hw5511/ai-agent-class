@@ -2,19 +2,19 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 08</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Claude Agent Teams</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">여러 Claude Code 인스턴스가 팀으로 협업합니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Claude Cowork</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">코딩 없이 Claude가 직접 파일을 읽고 만들고 정리합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="252" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">구조</text>
-  <text x="60" y="288" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">리더 1명이 전체 작업 조율  +  팀원 3-5명이 각자 독립 컨텍스트에서 실행</text>
-  <text x="60" y="324" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">팀원끼리 직접 메시지 교환  /  공유 작업 목록으로 조율</text>
-  <line x1="60" y1="352" x2="1220" y2="352" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="388" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">활성화 (기본 비활성 — 실험적 기능)</text>
-  <rect x="60" y="402" width="860" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="490" y="430" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="16" fill="#1d4ed8">CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1  (settings.json env 또는 환경변수)</text>
-  <line x1="60" y1="466" x2="1220" y2="466" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="502" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">활용 예시</text>
-  <text x="60" y="536" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">병렬 코드 리뷰  /  경쟁 가설 디버깅  /  대규모 모듈 병렬 리팩토링</text>
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">단순 작업은 Sub-agents가 효율적  —  팀원이 서로 소통해야 할 때 Agent Teams 사용</text>
+  <text x="60" y="252" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Cowork란</text>
+  <text x="60" y="290" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Claude Desktop 앱의 Cowork 탭  →  폴더를 지정하면 Claude가 직접 접근</text>
+  <text x="60" y="328" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">"AI에게 질문하는 것"  →  "AI에게 일을 시키는 것"으로의 전환</text>
+  <line x1="60" y1="356" x2="1220" y2="356" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="394" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">주요 기능</text>
+  <text x="60" y="430" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">다단계 작업을 스스로 계획 · 실행 · 완료 보고  (실행 전 계획 확인 → 승인)</text>
+  <text x="60" y="468" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">파일 정리 · 보고서 작성 · 스프레드시트 · 발표자료 자동 생성</text>
+  <text x="60" y="506" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Google Drive · Gmail · DocuSign 등 외부 도구 연결 가능</text>
+  <rect x="60" y="530" width="700" height="30" rx="6" fill="#fef9c3"/>
+  <text x="80" y="551" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#92400e">Claude Desktop 필수 (Mac / Windows)  ·  Pro 이상 유료 플랜</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#171717"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Claude Code (개발자용 CLI)  vs  Cowork (누구나 사용하는 GUI 에이전트)</text>
 </svg>

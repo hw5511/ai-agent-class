@@ -4,18 +4,28 @@
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 02</text>
   <rect x="150" y="44" width="52" height="24" rx="12" fill="#fef3c7" stroke="#d1d5db" stroke-width="1"/>
   <text x="176" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#d97706">실습</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="36" font-weight="700" fill="#171717">/init 실습</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="36" font-weight="700" fill="#171717">Edit 실습</text>
   <line x1="60" y1="160" x2="1220" y2="160" stroke="#e5e7eb" stroke-width="1"/>
   <rect x="60" y="175" width="1160" height="60" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
-  <text x="88" y="201" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">1  실습 자료 다운로드</text>
-  <text x="88" y="223" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">액션박스 링크에서 자료를 받아 작업 폴더에 넣기</text>
+  <text x="88" y="201" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">1  파일 일부 수정</text>
+  <text x="88" y="223" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">'hello.txt 첫 줄을 수정된 첫 줄로 바꿔줘'</text>
   <rect x="60" y="248" width="1160" height="60" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
-  <text x="88" y="274" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">2  기존 CLAUDE.md 삭제</text>
-  <text x="88" y="296" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">작업 폴더에서 CLAUDE.md 파일을 삭제</text>
+  <text x="88" y="274" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">2  수정 결과 확인</text>
+  <text x="88" y="296" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">'hello.txt 파일 내용을 읽어줘' &#8212; 변경된 내용 확인</text>
   <rect x="60" y="321" width="1160" height="60" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
-  <text x="88" y="347" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">3  /init 실행</text>
-  <text x="88" y="369" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">Claude가 폴더를 분석해 CLAUDE.md 초안 자동 생성</text>
-  <rect x="60" y="400" width="1160" height="60" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
-  <text x="88" y="424" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">확인 포인트</text>
-  <text x="88" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">생성된 CLAUDE.md 를 열어서 프로젝트 분석 결과 확인</text>
+  <text x="88" y="347" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">3  CLAUDE.md 수정</text>
+  <text x="88" y="369" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">'CLAUDE.md 에 항상 반말로 대화 규칙 한 줄 추가해줘'</text>
+  <!-- 연습해보세요 섹션 -->
+  <rect x="60" y="394" width="120" height="22" rx="11" fill="#059669"/>
+  <text x="120" y="409" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">연습해보세요</text>
+  <rect x="60" y="422" width="1160" height="132" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <line x1="640" y1="432" x2="640" y2="544" stroke="#d1fae5" stroke-width="1"/>
+  <text x="80" y="449" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">• 'CLAUDE.md에 항상 존댓말 사용 규칙 추가해줘'</text>
+  <text x="80" y="474" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">• 'Write에서 만든 강아지 SVG, 고양이로 바꿔줘'</text>
+  <text x="80" y="499" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">• '포스터 HTML 배경색을 하늘색으로 바꿔줘'</text>
+  <text x="655" y="449" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">• 'todo.txt에 항목 3개 더 추가해줘'</text>
+  <text x="655" y="474" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">• 'dice.py 주사위를 2개 굴리도록 수정해줘'</text>
+  <text x="655" y="499" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">• 'Tkinter 계산기에 초기화(C) 버튼 추가해줘'</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">Edit은 파일 전체가 아닌 특정 부분만 정확하게 교체합니다</text>
 </svg>

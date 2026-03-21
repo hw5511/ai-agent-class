@@ -1,52 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
   <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- 헤더 배지 -->
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
-
-  <!-- 제목 -->
-  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">에이전트를 잘 다루려면?</text>
-  <text x="60" y="122" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#737373">개발자와 비개발자 모두 AI 동작 원리를 이해하면 활용도가 달라집니다</text>
-  <line x1="60" y1="138" x2="1220" y2="138" stroke="#e5e5e5" stroke-width="1.5"/>
-
-  <!-- 좌블럭: 개발자 -->
-  <rect x="60" y="162" width="555" height="340" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
-  <rect x="72" y="150" width="96" height="24" rx="6" fill="#3b82f6"/>
-  <text x="120" y="166" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">개발자</text>
-
-  <text x="88" y="210" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#1d4ed8">기존에 이미 갖춘 것</text>
-  <text x="88" y="238" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">- 코드 작성 능력, 터미널 사용 경험</text>
-  <text x="88" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">- 라이브러리, API 활용 경험</text>
-
-  <line x1="88" y1="285" x2="590" y2="285" stroke="#bfdbfe" stroke-width="1"/>
-  <text x="88" y="314" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#1d4ed8">에이전트 추가 시</text>
-  <text x="88" y="342" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">- 반복 코드 자동 생성 + 리뷰</text>
-  <text x="88" y="366" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">- 에이전트를 "도구"로 개발 생산성 극대화</text>
-  <text x="88" y="390" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">- 기술 스택 확장, 전체 워크플로우 자동화</text>
-
-  <rect x="80" y="458" width="515" height="32" rx="8" fill="#dbeafe"/>
-  <text x="337" y="479" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1d4ed8">AI 동작 원리 이해 → 에이전트에게 정확한 지시 가능</text>
-
-  <!-- 우블럭: 비개발자 -->
-  <rect x="665" y="162" width="555" height="340" rx="12" fill="#f9fafb" stroke="#9ca3af" stroke-width="2"/>
-  <rect x="677" y="150" width="84" height="24" rx="6" fill="#6b7280"/>
-  <text x="719" y="166" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">비개발자</text>
-
-  <text x="693" y="210" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#374151">기존에 이미 갖춘 것</text>
-  <text x="693" y="238" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">- 도메인 전문 지식 (마케팅, 법무, 디자인 등)</text>
-  <text x="693" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">- 문제를 정의하고 기획하는 능력</text>
-
-  <line x1="693" y1="285" x2="1195" y2="285" stroke="#d1d5db" stroke-width="1"/>
-  <text x="693" y="314" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#374151">에이전트 추가 시</text>
-  <text x="693" y="342" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">- 코드 없이 업무 자동화 가능</text>
-  <text x="693" y="366" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">- 에이전트를 "비서"로 반복 작업 위임</text>
-  <text x="693" y="390" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">- 문서 작성, 조사, 아이디어 실행 자동화</text>
-
-  <rect x="685" y="458" width="515" height="32" rx="8" fill="#f3f4f6"/>
-  <text x="942" y="479" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">AI 동작 원리 이해 → 원하는 것을 정확히 요청 가능</text>
-
-  <!-- 하단 결론 -->
-  <rect x="60" y="564" width="1160" height="52" rx="12" fill="#171717"/>
-  <text x="640" y="595" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#ffffff">공통 핵심 — AI가 어떻게 동작하는지 알면, 누구든 에이전트를 제대로 활용할 수 있다</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">작업 폴더 열기</text>
+  <text x="60" y="148" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">VS Code에서 작업할 폴더를 지정하면 에이전트가 해당 폴더를 기준으로 동작합니다</text>
+  <rect x="60" y="178" width="1160" height="64" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="88" y="204" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">1.  작업 폴더 생성</text>
+  <text x="88" y="228" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">예: C:\ai-agent\ 폴더를 새로 만들기</text>
+  <rect x="60" y="260" width="1160" height="64" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="88" y="286" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">2.  VS Code 실행</text>
+  <text x="88" y="310" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">시작 메뉴에서 Visual Studio Code 클릭</text>
+  <rect x="60" y="342" width="1160" height="64" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="88" y="368" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">3.  File &gt; Open Folder</text>
+  <text x="88" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">1번에서 만든 폴더 선택 후 열기</text>
+  <text x="640" y="600" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">이후 VS Code 터미널에서 claude를 실행하면 이 폴더가 작업 기준 디렉토리가 됩니다</text>
 </svg>
