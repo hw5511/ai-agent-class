@@ -1188,7 +1188,7 @@
                         goal: 'Claude Code의 보안 설정을 이해하고, 권한 모드·욜로 모드·모델 선택·주요 명령어를 실습을 통해 익힌다.',
                         topics: ['Claude 개인정보 보안 설정', 'settings.json (파일 삭제 금지)', '권한 모드 (일반·편집자동승인·플랜)', '욜로 모드 / /model 모델 선택', '주요 슬래시 명령어', '웹 Search 툴 / Todos'],
                         practice: '개인 환경에 맞는 보안 설정을 직접 구성하고, 권한 모드와 주요 명령어를 순서대로 실행해본다.',
-                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg','07.svg','08.svg','09.svg','10.svg','11.svg','12.svg','13.svg','14.svg','15.svg','16.svg','17.svg','18.svg'],
+                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg','07.svg','08.svg','09.svg','10.svg','11.svg','12.svg','13.svg','14.svg','15.svg','16.svg','17.svg','18.svg','19.svg'],
                         slideDescs: [
             { goal: 'Step 3 목표와 오늘 배울 내용을 안내한다.', topics: ['보안 설정', 'settings.json · 권한 규칙', '권한 모드 · 욜로 모드', '/model · 슬래시 명령어 · 웹 Search · Todos'], practice: null },
             { goal: 'Claude Code의 파일 접근 범위와 개인정보 설정을 이해한다.', topics: ['파일 쓰기 범위 제한', '상위 폴더 접근 허가 방식', '개인정보 opt-out 설정'], practice: null, action: { label: '설정 페이지', download: { href: 'https://claude.ai/settings/data-privacy-controls', text: 'claude.ai 설정 바로가기' } } },
@@ -1204,7 +1204,8 @@
             { goal: '웹 Search 툴의 동작 원리를 이해한다.', topics: ['사용자 명령 불필요 — Claude 자동 판단', '최신 정보 필요 시 자동 검색', '"ㅇㅇㅇ 주제에 대해 웹조사해줘" 활용'], practice: null },
             { goal: '웹 Search 실습을 진행한다.', topics: ['claude 실행', '최근 7일 이내 AI 에이전트 기사 조사 프롬프트 입력', '기사 제목·요약·출처 URL 포함 결과 확인'], practice: '최근 7일 이내 발행 기사를 조사하고 출처 링크를 함께 정리하도록 요청' },
             { goal: 'Claude in Chrome의 개념과 7가지 기능을 이해한다.', topics: ['라이브 디버깅 · 디자인 검증 · 웹앱 테스트', '인증 웹앱 접근 (Google Docs · Gmail · Notion)', '데이터 추출 · 반복 자동화 · 세션 녹화', '지원 브라우저: Chrome · Edge (Brave · Arc 미지원)'], practice: null },
-            { goal: 'Claude in Chrome 설치와 활성화 방법을 익힌다.', topics: ['Chrome 웹스토어에서 확장 설치 (v1.0.36+)', 'claude --chrome 플래그로 실행', '/chrome 또는 /config에서 기본 활성화', '실습: 브라우저 검색 자동화 명령'], practice: null, action: { label: '확장 설치', download: { href: 'https://claude.com/claude-for-chrome', text: 'Claude for Chrome 바로가기' } } },
+            { goal: 'Claude in Chrome 설치와 활성화 방법을 익힌다.', topics: ['Chrome 웹스토어에서 확장 설치 (v1.0.36+)', 'claude --chrome 플래그로 실행 또는 /config에서 기본 활성화', '/mcp 입력 → chrome for claude 선택 → Enable'], practice: null, action: { label: '확장 설치', download: { href: 'https://claude.com/claude-for-chrome', text: 'Claude for Chrome 바로가기' } } },
+            { goal: 'Claude in Chrome 실습을 진행한다.', topics: ['챌린지 3종 직접 테스트 (페이지 내 챌린지 클릭)', '구글에서 AI 에이전트 트렌드 조사 명령 실행', '브라우저 자동화 결과 확인'], practice: '챌린지 3종 + 구글 트렌드 조사 실습', action: { label: '챌린지 페이지', download: { href: 'https://claude.com/claude-for-chrome', text: 'Claude for Chrome 바로가기' } } },
             { goal: 'Todos 내장 툴을 이해한다.', topics: ['TodoWrite · TodoRead 내장 툴', 'pending → in_progress → completed', '"ㅇㅇㅇ 작업을 todo 리스트를 세워서 순차적으로 진행해줘"'], practice: null, action: { label: '실습 프롬프트', copy: '오늘 기준 최근 7일 이내에 발행된 AI 에이전트 관련 기사나 글을 웹조사해줘. 각 항목의 주요 내용과 실제 출처 링크(URL)도 함께 정리해줘.' } },
             { goal: 'Todos 실습 — 다단계 작업을 순차 실행한다.', topics: ['claude 실행', '폴더 생성·파일 작성·트리 출력 3단계 프롬프트 입력', '각 단계 완료 시 completed 상태 업데이트 확인'], practice: 'practice 폴더 생성 → readme.txt 작성 → 트리 출력까지 TodoWrite로 순차 실행' },
             { goal: 'Todos 실습을 직접 진행한다.', topics: ['claude 실행', '아래 프롬프트 입력', 'TodoWrite 계획 수립 → 단계별 completed 업데이트 → 트리 출력 확인'], practice: null, action: { label: '실습 프롬프트', copy: 'todo 리스트를 세워서 아래 작업을 순서대로 진행해줘.\n1) practice 폴더 생성, 그 안에 docs·images·code 서브폴더 생성\n2) docs/readme.txt 생성 후 \'문서 보관 폴더입니다. 생성일: 오늘 날짜\' 기록\n3) 완료 후 폴더 구조를 트리 형태로 출력' } }
