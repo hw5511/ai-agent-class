@@ -5,14 +5,19 @@
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">대화 기억 공간 관리</text>
   <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">대화가 길어지면 Claude의 기억 공간을 정리해야 합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">/context</text>
-  <text x="60" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">현재 기억 공간 사용량을 색상 그리드로 시각화</text>
-  <line x1="60" y1="360" x2="1220" y2="360" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="404" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">/compact</text>
-  <text x="60" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">대화 내용을 요약 압축  --  기억 공간을 확보</text>
-  <text x="60" y="488" font-family="'Courier New',Courier,monospace" font-size="16" fill="#374151">/compact 파스타 레시피 내용 중심으로 압축  처럼 주제 지정 가능</text>
-  <line x1="60" y1="530" x2="1220" y2="530" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="560" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">/clear</text>
-  <text x="60" y="596" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">기억 공간 완전 초기화  --  모든 대화 내용이 사라짐</text>
-
+  <text x="60" y="248" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">/context</text>
+  <text x="60" y="280" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">현재 기억 공간 사용량을 색상 그리드로 시각화</text>
+  <line x1="60" y1="306" x2="1220" y2="306" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="336" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">/compact</text>
+  <text x="60" y="368" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">대화 내용을 요약 압축 — 기억 공간을 확보</text>
+  <text x="60" y="398" font-family="'Courier New',Courier,monospace" font-size="15" fill="#374151">/compact 파스타 레시피 내용 중심으로 압축  처럼 주제 지정 가능</text>
+  <line x1="60" y1="422" x2="1220" y2="422" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="452" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">/clear</text>
+  <text x="60" y="484" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">기억 공간 완전 초기화 — 모든 대화 내용이 사라짐</text>
+  <line x1="60" y1="508" x2="1220" y2="508" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="538" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">압축 기준점 조정하기</text>
+  <text x="60" y="570" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">Auto Compact 발동 임계값을 환경변수로 조정 —</text>
+  <text x="452" y="570" font-family="'Courier New',Courier,monospace" font-size="17" fill="#2563eb">CLAUDE_AUTOCOMPACT_PCT_OVERRIDE</text>
+  <rect x="60" y="586" width="1160" height="44" rx="8" fill="#f0fdf4"/>
+  <text x="80" y="613" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#15803d">settings.json 의 env 항목에 CLAUDE_AUTOCOMPACT_PCT_OVERRIDE=80 을 추가해줘</text>
 </svg>

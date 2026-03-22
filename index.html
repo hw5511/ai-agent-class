@@ -1223,7 +1223,7 @@
             { goal: '--continue와 CLI 내부 /resume의 차이를 이해한다.', topics: ['claude --continue (최근 대화 바로 이어서)', '/resume (대화 중 다른 세션으로 전환)', '--resume는 터미널에서, /resume는 대화 중에'], practice: null },
             { goal: '/rewind로 대화를 되돌리는 방법을 이해한다.', topics: ['Esc 두 번 또는 /rewind 입력', '대화만 되돌리기 vs 파일 변경도 함께 되돌리기', 'Ctrl+Z처럼 실수를 빠르게 복구'], practice: null },
             { goal: '세션 관리 실습을 진행한다.', topics: ['/rename으로 이름 부여 → /exit → --resume 재개', '--continue로 최근 대화 바로 이어가기', '/resume로 대화 중 세션 전환', 'Esc×2로 /rewind 체험'], practice: '/rename → --resume → --continue → /resume → /rewind 전체 실습' },
-            { goal: '/context · /compact · /clear 명령어로 컨텍스트를 관리한다.', topics: ['/context — 컨텍스트 사용량 시각화', '/compact — 대화 압축 (주제 지정 가능)', '/clear — 컨텍스트 완전 초기화'], practice: null },
+            { goal: '/context · /compact · /clear 명령어로 컨텍스트를 관리하고, 압축 기준점을 조정한다.', topics: ['/context — 컨텍스트 사용량 시각화', '/compact — 대화 압축 (주제 지정 가능)', '/clear — 컨텍스트 완전 초기화', 'CLAUDE_AUTOCOMPACT_PCT_OVERRIDE — 압축 기준점 환경변수 조정'], practice: null, action: { label: '프롬프트 복사', copy: 'settings.json 의 env 항목에 CLAUDE_AUTOCOMPACT_PCT_OVERRIDE=80 을 추가해줘' } },
             { goal: 'Auto Compact 개념과 임계값 설정 방법을 이해한다.', topics: ['Auto Compact — 컨텍스트 ~95% 시 자동 압축', '프롬프트로 임계값 조정 가능', 'CLAUDE.md에 보존할 내용 지정'], practice: null },
             { goal: 'Auto Compact 실습 — 자동 압축을 직접 체감한다.', topics: ['임계값을 20%로 낮추기 요청', '/context로 사용량 확인 → 대화 쌓기', 'Auto Compact 자동 발동 체감', '임계값을 원래대로 복구 요청'], practice: '자동 압축 기준 20% → 대화 쌓기 → 자동 압축 체감 → 기본값 복구' },
             { goal: 'Foreground와 Background의 차이를 이해한다.', topics: ['Foreground — Claude가 완료를 기다림', 'Background — 비동기 실행, 즉시 고유 ID 반환', '전환: Claude에게 요청 또는 Ctrl+B'], practice: null },
