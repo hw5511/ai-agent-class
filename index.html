@@ -1228,7 +1228,7 @@
             { goal: 'Auto Compact 실습 — 자동 압축을 직접 체감한다.', topics: ['임계값을 20%로 낮추기 요청', '/context로 사용량 확인 → 대화 쌓기', 'Auto Compact 자동 발동 체감', '임계값을 원래대로 복구 요청'], practice: '자동 압축 기준 20% → 대화 쌓기 → 자동 압축 체감 → 기본값 복구' },
             { goal: 'Foreground와 Background의 차이를 이해한다.', topics: ['Foreground — Claude가 완료를 기다림', 'Background — 비동기 실행, 즉시 고유 ID 반환', '전환: Claude에게 요청 또는 Ctrl+B'], practice: null },
             { goal: '/tasks 명령어로 백그라운드 작업 목록을 관리한다.', topics: ['/tasks — 백그라운드 작업 목록 조회·관리', '작업 상태: 실행 중 / 완료 / 보류 중', 'Ctrl+F — 모든 백그라운드 에이전트 종료'], practice: null },
-            { goal: '백그라운드 프로세스 실습을 진행한다.', topics: ['실습1 — Claude에게 백그라운드 실행 요청', '실습2 — foreground 실행 중 Ctrl+B로 전환', 'tmux 사용자는 Ctrl+B 두 번'], practice: '직접 백그라운드 요청 + Ctrl+B 전환 두 가지 방법 실습' },
+            { goal: '백그라운드 프로세스 실습을 진행한다.', topics: ['실습1 — count.md에 1초 간격으로 1~20 숫자 쓰기 스크립트를 백그라운드 실행', '실습2 — 같은 작업을 foreground로 시작 후 Ctrl+B 전환', '/tasks로 진행 확인 · 완료 후 count.md 열어보기'], practice: 'count.md 숫자 쓰기 스크립트 백그라운드 실행 + Ctrl+B 전환 실습' },
             { goal: '백그라운드 활용 패턴 3가지를 이해한다.', topics: ['오래 걸리는 작업 백그라운드 전환', '개발 서버 + 코드 수정 병렬 진행', '에러 로그 감시 · 메시지 수신 대기 활용'], practice: null },
             { goal: 'Step 4 학습 내용을 정리한다.', topics: ['/rename · --resume · --continue · /resume · /rewind', '/compact · Auto Compact · /context', 'Ctrl+B · /tasks · 백그라운드 활용 패턴'], practice: null }
                         ]
@@ -1384,18 +1384,16 @@
                         goal: 'GWS CLI + gcloud를 설치하고, Playwright MCP로 OAuth 설정을 안내받아 Drive·Gmail·Calendar·Sheets·Docs·Forms·YouTube를 Claude가 직접 제어하는 파이프라인을 완성한다.',
                         topics: ['통합 설치 프롬프트로 Claude가 gws 설치·인증 전 과정 처리', 'Playwright MCP로 OAuth 클라이언트 GCP Console 화면 안내', 'gws auth login -s drive,gmail,calendar,sheets,docs,youtube,forms', 'GWS CLI Skill 문서화 → 자연어 요청을 gws 명령으로 자동 변환', '실습 5종: Drive · Gmail · Calendar · Sheets/Docs/Forms · YouTube'],
                         practice: 'Claude가 Drive·Gmail·Calendar·Sheets·YouTube를 gws 명령으로 직접 조작하고, 채널 분석 결과를 Sheets로 자동 정리한다.',
-                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg','07.svg','08.svg','09.svg','10.svg'],
+                        slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg','07.svg','08.svg'],
                         slideDescs: [
-            { goal: 'ADV 3 목표와 GWS CLI 접근 방식을 안내한다.', topics: ['수강생은 명령어를 몰라도 됨 — Claude가 gws CLI를 직접 실행', '통합 설치 프롬프트로 설치·인증 자동 처리', 'GWS CLI Skill 문서화', '실습 5종 + YouTube Skill 제작 구성'], practice: null },
+            { goal: 'ADV 3 목표와 GWS CLI 접근 방식을 안내한다.', topics: ['수강생은 명령어를 몰라도 됨 — Claude가 gws CLI를 직접 실행', '통합 설치 프롬프트로 설치·인증 자동 처리', 'GWS CLI Skill 문서화', '실습 5종: Drive · Gmail · Calendar · Sheets/Docs/Forms'], practice: null },
             { goal: '통합 설치 프롬프트를 Claude에 붙여넣어 gws 설치·인증을 완료한다.', topics: ['npm install -g @googleworkspace/cli + choco install gcloudsdk', 'gcloud auth login + GCP 프로젝트 생성', 'OAuth 클라이언트 — Playwright MCP로 화면 스냅샷 안내', '~/.config/gws/.env 환경변수 저장'], practice: null, action: { label: '통합 설치 프롬프트 복사', copy: 'GWS CLI 설치 및 인증을 처음부터 끝까지 도와줘.\n\n[설치]\n1. npm install -g @googleworkspace/cli 실행\n2. choco install gcloudsdk -y 실행 (PATH 미반영 시 수동 추가)\n3. gcloud auth login --launch-browser 로 gcloud 인증\n4. gcloud projects create [고유ID] --name=gws-workspace 프로젝트 생성\n5. gcloud config set project [프로젝트ID]\n6. gws auth setup --project [프로젝트ID] (YouTube·Forms API 포함 활성화)\n\n[OAuth 클라이언트 — Playwright MCP로 브라우저 스냅샷 찍으며 단계별 안내]\n7. OAuth 동의 화면: External·앱이름·이메일 설정\n8. 테스트 사용자에 내 Gmail 추가 (필수)\n9. OAuth 클라이언트 ID 생성 (데스크톱 앱) → ID와 Secret 저장\n\n[환경변수 및 최종 인증]\n10. ~/.config/gws/.env 에 CLIENT_ID·SECRET·PROJECT_ID 저장\n11. gws auth login -s drive,gmail,calendar,sheets,docs,youtube,forms\n12. gws auth status 로 완료 확인' } },
             { goal: 'gws auth login 성공을 확인하고 7개 서비스 인증 상태를 검증한다.', topics: ['gws auth login -s drive,gmail,calendar,sheets,docs,youtube,forms', '"Google에서 확인하지 않은 앱" 경고 처리 방법', 'gws auth status 로 인증 완료 확인', 'gws drive files list 테스트'], practice: null },
             { goal: 'gws CLI 사용법 문서를 Skill로 만들어 자연어 요청을 명령으로 변환한다.', topics: ['Skill 문서 생성 요청: "gws CLI 사용법 gws_skill.md로 만들어줘"', 'drive/gmail/calendar/sheets 핵심 명령 패턴 포함', '이후 자연어 요청 → Claude가 gws 명령 자동 변환·실행'], practice: 'gws CLI 사용법 정리해서 gws_skill.md Skill 문서로 만들어줘' },
             { goal: 'Claude가 gws drive로 파일 조회·업로드·다운로드를 수행한다.', topics: ['드라이브 최근 파일 5개 목록 조회', '텍스트 파일 생성 후 업로드', '업로드 파일 다운로드 확인'], practice: '내 드라이브 최근 파일 5개 목록 보여주고, 텍스트 파일 하나 만들어서 업로드해줘' },
             { goal: 'Claude가 gws gmail로 메일을 조회하고 발송한다.', topics: ['안 읽은 메일 3개 제목·발신자 조회', '본인 이메일로 테스트 메일 발송', 'Gmail에서 수신 확인'], practice: '안 읽은 메일 3개 요약해주고, 나한테 실습 완료 메일 보내줘' },
             { goal: 'Claude가 gws calendar로 일정을 조회하고 새 이벤트를 추가한다.', topics: ['이번 주 일정 목록 조회', '내일 오후 3시 테스트 일정 추가', 'Google Calendar에서 확인'], practice: '이번 주 일정 보여주고, 내일 오후 3시에 테스트 일정 하나 추가해줘' },
-            { goal: 'Claude가 gws로 Sheets·Docs·Forms를 각각 생성한다.', topics: ['Google Sheets — 월별 매출 표 생성', 'Google Docs — 회의록 문서 생성', 'Google Forms — 만족도 설문 3문항 생성'], practice: '구글 시트·닥스·폼 각 하나씩 만들어줘 (매출표 / 회의록 / 만족도 설문)' },
-            { goal: 'gws youtube 미지원 문제를 파악하고 google-api-python-client로 Skill을 직접 제작한다.', topics: ['gws youtube → Unknown service 에러 확인', 'google-api-python-client로 YouTube Skill 직접 제작', 'gws의 client_secret.json 재사용', 'youtube_skill.py + SKILL.md 자동 생성'], practice: '유튜브 채널 분석 Skill을 만들어줘. gws에서 쓰는 client_secret.json을 재사용하고, google-api-python-client로 채널 정보/인기 영상/검색 기능을 넣어줘' },
-            { goal: '직접 만든 YouTube Skill로 채널을 분석하고 결과를 Sheets에 정리한다.', topics: ['youtube_skill.py 실행 확인 (OAuth 인증 포함)', '공개 채널 URL로 구독자·조회수·인기 영상 분석', '분석 결과를 gws sheets로 자동 정리'], practice: '침착맨 유튜브 채널 분석해서 인기 영상 Top 5를 구글 시트로 정리해줘' }
+            { goal: 'Claude가 gws로 Sheets·Docs·Forms를 각각 생성한다.', topics: ['Google Sheets — 월별 매출 표 생성', 'Google Docs — 회의록 문서 생성', 'Google Forms — 만족도 설문 3문항 생성'], practice: '구글 시트·닥스·폼 각 하나씩 만들어줘 (매출표 / 회의록 / 만족도 설문)' }
                         ]
                     },
                     {

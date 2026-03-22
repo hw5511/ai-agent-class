@@ -278,21 +278,47 @@ def slide08():
     )
 
 
-# --- 09.svg: 실습 — YouTube 채널 분석 ---
+# --- 09.svg: YouTube Skill 제작 ---
 def slide09():
     return wrap(
+        badge() + "\n" +
+        t_title("YouTube API Skill 직접 만들기", size=36) + "\n" +
+        t_sub("gws CLI가 지원하지 않는 API도 Skill로 만들면 Claude가 자연어로 사용합니다") + "\n" +
+        divider(212) + "\n" +
+        t_label(264, "WHY  —  gws youtube는 미지원") + "\n" +
+        f'  <rect x="60" y="278" width="540" height="48" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>\n'
+        f'  <text x="84" y="308" font-family="{MONO}" font-size="15" fill="#dc2626">gws youtube videos list  -->  Unknown service \'youtube\'</text>\n' +
+        f'  <rect x="640" y="278" width="580" height="48" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>\n'
+        f'  <text x="664" y="308" font-family="{FONT}" font-size="15" fill="#16a34a">해결: google-api-python-client로 Skill 직접 제작!</text>\n' +
+        divider(350) + "\n" +
+        t_label(386, "PROMPT  —  Claude에게 Skill 제작 요청") + "\n" +
+        f'  <rect x="60" y="400" width="1160" height="100" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>\n'
+        f'  <text x="84" y="428" font-family="{MONO}" font-size="14" fill="#1e40af">"유튜브 채널 분석 Skill을 만들어줘.</text>\n'
+        f'  <text x="84" y="452" font-family="{MONO}" font-size="14" fill="#1e40af">gws에서 쓰는 client_secret.json을 재사용하고,</text>\n'
+        f'  <text x="84" y="476" font-family="{MONO}" font-size="14" fill="#1e40af">google-api-python-client로 채널 정보/인기 영상/검색 기능을 넣어줘"</text>\n' +
+        divider(520) + "\n" +
+        t_label(550, "Claude가 자동 생성하는 파일") + "\n" +
+        f'  <text x="84" y="580" font-family="{MONO}" font-size="16" fill="#374151">youtube_skill.py   - 채널 분석 / 영상 검색 / 좋아요 조회 기능</text>\n'
+        f'  <text x="84" y="608" font-family="{MONO}" font-size="16" fill="#374151">SKILL.md           - Claude가 사용법을 자동으로 참조하는 문서</text>\n' +
+        footer("gws가 안 되면 직접 만든다 = AI 에이전트 활용의 핵심")
+    )
+
+
+# --- 10.svg: 실습 — YouTube Skill 실전 활용 ---
+def slide10():
+    return wrap(
         badge() + "\n" + practice_badge() + "\n" +
-        t_title("실습 — YouTube 채널 분석", size=38) + "\n" +
-        t_sub("Claude가 gws youtube 명령으로 채널·동영상 데이터를 조회·분석합니다") + "\n" +
+        t_title("실습 — YouTube Skill 실전 활용", size=34) + "\n" +
+        t_sub("직접 만든 Skill로 유튜브 채널을 분석하고 Sheets에 정리합니다") + "\n" +
         divider(212) + "\n" +
         t_label(264, "STEPS") + "\n" +
-        step(308, "1", '"내 유튜브 채널 정보 보여줘 (구독자 수, 동영상 수)" 요청') + "\n" +
-        step(358, "2", '"최근 업로드 영상 5개 제목과 조회수 보여줘" 요청') + "\n" +
-        step(408, "3", '"채널 분석 결과를 Google Sheets에 정리해줘" 요청 (ADV 03 Sheets 재사용)') + "\n" +
+        step(308, "1", "Claude가 만든 youtube_skill.py 실행 확인 (OAuth 인증 포함)") + "\n" +
+        step(358, "2", '"침착맨 유튜브 채널 분석해줘" 요청 -> 구독자/조회수/인기 영상 조회') + "\n" +
+        step(408, "3", '"분석 결과를 Google Sheets에 정리해줘" 요청 (gws sheets 연동)') + "\n" +
         divider(450) + "\n" +
         t_label(480, "PROMPT") + "\n" +
-        prompt_box(494, '"내 유튜브 채널 통계 분석해서 최근 영상 5개 성과를 구글 시트로 정리해줘"') + "\n" +
-        footer_light_green("채널이 없으면 다른 공개 채널 ID로 조회 가능 (YouTube Data API 공개 데이터)")
+        prompt_box(494, '"침착맨 유튜브 채널 분석해서 인기 영상 Top 5를 구글 시트로 정리해줘"') + "\n" +
+        footer_light_green("내 채널이 없어도 공개 채널 URL로 분석 가능 - 좋아하는 채널로 실습하세요")
     )
 
 
@@ -307,6 +333,7 @@ slides = {
     "07": slide07,
     "08": slide08,
     "09": slide09,
+    "10": slide10,
 }
 
 for num, gen in slides.items():
