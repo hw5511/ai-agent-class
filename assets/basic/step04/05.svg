@@ -2,25 +2,25 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 04</text>
-  <rect x="152" y="44" width="52" height="24" rx="12" fill="#2563eb"/>
-  <text x="178" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">실습</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">대화 기억 공간 관리 실습</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">대화를 쌓은 뒤 주제 지정 압축까지 진행합니다</text>
+  <rect x="148" y="44" width="46" height="24" rx="12" fill="#2563eb"/>
+  <text x="171" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">PLAY</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">세션 관리 실습</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">세션을 저장하고 여러 방법으로 다시 불러옵니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af" font-weight="600">1</text>
-  <text x="90" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">아래 질문을 연속으로 입력해 대화 내용을 쌓아둡니다</text>
-  <rect x="90" y="278" width="1090" height="82" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="640" y="306" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#1d4ed8">Python 리스트와 딕셔너리의 차이를 설명해줘.</text>
-  <text x="640" y="332" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#1d4ed8">for문과 while문은 언제 각각 쓰는 게 좋아?</text>
-  <text x="640" y="358" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#1d4ed8">함수에서 return과 print의 차이도 설명해줘.</text>
-  <text x="60" y="410" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af" font-weight="600">2</text>
-  <text x="90" y="410" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">현재 기억 공간 사용량 확인</text>
-  <rect x="90" y="424" width="320" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="250" y="452" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="17" fill="#1d4ed8">/context</text>
-  <text x="60" y="510" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af" font-weight="600">3</text>
-  <text x="90" y="510" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">주제를 지정해 압축 후 사용량 재확인</text>
-  <rect x="90" y="524" width="640" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="410" y="552" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="17" fill="#1d4ed8">/compact Python 기초 문법 내용 중심으로 압축</text>
-  <rect x="60" y="620" width="1160" height="52" rx="10" fill="#f3f4f6"/>
-  <text x="640" y="651" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">압축 후 /context 를 다시 입력해 토큰 사용량이 줄었는지 확인합니다</text>
+  <text x="60" y="260" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#374151">1.</text>
+  <text x="90" y="260" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">claude 실행 후 아무 질문 입력  (예: '맛있는 파스타 레시피 알려줘')</text>
+  <text x="60" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#374151">2.</text>
+  <text x="90" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">/rename 파스타  로 세션에 이름 붙이기</text>
+  <text x="60" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#374151">3.</text>
+  <text x="90" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">/exit 로 종료</text>
+  <text x="60" y="380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#374151">4.</text>
+  <text x="90" y="380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">claude --resume 파스타  로 세션 재개  --  이어서 질문하기</text>
+  <text x="60" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#374151">5.</text>
+  <text x="90" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">/exit 로 종료 후  claude --continue  로 바로 이어가기</text>
+  <text x="60" y="460" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#374151">6.</text>
+  <text x="90" y="460" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">대화 중에  /resume  입력  --  세션 선택기 확인</text>
+  <line x1="60" y1="500" x2="1220" y2="500" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="534" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">BONUS</text>
+  <text x="60" y="566" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Esc 두 번 눌러서  /rewind  --  마지막 대화 되돌리기 체험</text>
+
 </svg>
