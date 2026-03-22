@@ -1245,7 +1245,7 @@
             { goal: 'Sub Agent의 개념과 설정 파일 구조를 이해한다.', topics: ['독립 컨텍스트 윈도우로 실행', '역할 설명 기반 자동 위임', 'name · description · tools · model 필드', '/agents 명령어로 관리'], practice: null },
             { goal: 'Sub Agent를 만들고 병렬 실행하는 방법을 익힌다.', topics: ['/agents → Generate with Claude로 자동 생성', '실무 예시: 보고서 작성·데이터 정리·번역 에이전트', '프롬프트로 여러 에이전트 병렬 실행'], practice: null },
             { goal: 'Sub Agent 실습을 진행한다.', topics: ['/agents로 에이전트 만들기', '역할 설명 입력 후 자동 생성', '병렬 실행 프롬프트 실습'], practice: '/agents → Generate with Claude → 병렬 실행 프롬프트 실습' },
-            { goal: 'Claude Agent Teams의 구조와 활성화 방법을 이해한다.', topics: ['리더 1명 + 팀원 3-5명 (각자 독립 컨텍스트)', '팀원끼리 직접 메시지 / 공유 작업 목록 조율', 'CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 활성화', '병렬 코드 리뷰 · 경쟁 가설 디버깅 활용'], practice: null },
+            { goal: 'Claude Agent Teams의 구조와 활성화 방법을 이해한다.', topics: ['리더 1명 + 팀원 3-5명 (각자 독립 컨텍스트)', '팀원끼리 직접 메시지 / 공유 작업 목록 조율', 'CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 활성화', '병렬 코드 리뷰 · 경쟁 가설 디버깅 활용'], practice: null, action: { label: '환경변수 복사', copy: 'settings.json 의 env 항목에 CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 을 추가해줘' } },
             { goal: 'Agent Teams와 Sub Agent의 차이를 이해하고 팀 구성 예시를 배운다.', topics: ['Sub Agent: 메인 → 결과 단방향', 'Agent Teams: 팀원끼리 직접 대화 다방향', '프롬프트로 팀 구성 요청', '실험적 기능 — settings.json env 설정'], practice: null },
             { goal: 'Hooks의 개념과 활용 목적을 이해한다.', topics: ['이벤트 감지 시 내 스크립트 자동 실행', '위험 명령 차단 · 작업 완료 알림 · 코드 자동 정리', 'settings.json hooks 키에 시점별 명령어 등록'], practice: null },
             { goal: 'Hooks 이벤트 18종과 차단/관찰 구분을 이해한다.', topics: ['차단 가능: PreToolUse · UserPromptSubmit · Stop 등 9종', '관찰만: SessionStart · PostToolUse · PreCompact 등 9종', 'exit 2로 차단, exit 0으로 계속 진행'], practice: null },
