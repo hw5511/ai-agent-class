@@ -1195,8 +1195,8 @@
             { goal: 'settings.json의 구조와 주요 설정 항목을 이해한다.', topics: ['3계층 설정 파일 (전역/프로젝트/로컬)', 'model — 기본 모델 지정', 'permissions — deny/allow 규칙 목록', 'env — 환경 변수 주입'], practice: null, action: { label: '공식 문서', download: { href: 'https://code.claude.com/docs/ko/settings', text: 'settings.json 공식 문서' } } },
             { goal: 'settings.json 실습 — 파일 삭제 차단 규칙을 직접 추가한다.', topics: ['Claude에게 권한 제한 추가 요청', '차단 동작 확인 (rm 시도)', 'settings.json 파일 내용 확인'], practice: 'rm 차단 규칙을 Claude에게 추가하고 실제로 차단되는지 확인한다.' },
             { goal: '3가지 권한 모드의 차이를 이해하고 전환 방법을 익힌다.', topics: ['일반 모드 — 편집·명령 매번 승인', '편집 자동 승인 모드 — 파일 편집 자동', '플랜 모드 — 추천 선택지 중 선택'], practice: null },
-            { goal: '욜로 모드의 개념과 안전한 사용법을 이해한다.', topics: ['claude --dangerously-skip-permissions', '/exit 또는 Ctrl+C로 종료', '위쪽 방향키로 이전 명령 재실행'], practice: null, action: { label: '실행 명령어', copy: 'claude --dangerously-skip-permissions' } },
-            { goal: '주요 슬래시 명령어의 역할을 파악한다.', topics: ['/clear · /model · /login · /logout', '/help — 전체 명령어 목록', 'Ctrl+C 또는 Esc로 종료'], practice: null },
+            { goal: '욜로 모드의 개념과 안전한 사용법을 이해한다.', topics: ['claude --dangerously-skip-permissions', '/exit 또는 Ctrl+C로 종료', '위쪽 방향키로 이전 명령 재실행'], practice: null },
+            { goal: '주요 슬래시 명령어의 역할을 파악한다.', topics: ['/clear · /model · /login · /logout', '/help — 전체 명령어 목록', 'Ctrl+C 또는 Esc로 종료'], practice: null, action: { label: '실행 명령어', copy: 'claude --dangerously-skip-permissions' } },
             { goal: '/config 화면 구성을 이해한다 — Status · Config · Usage 3탭', topics: ['Status — 버전·세션·계정·모델·IDE·MCP 상태', 'Config — Claude Code 세부 동작 설정', 'Usage — 세션·주간 사용량 및 리셋 시간 확인'], practice: null },
             { goal: '/config 설정 항목 (1/2) — UI·동작 관련 옵션을 이해한다.', topics: ['Auto-compact · Show tips · Reduce motion', 'Thinking mode · Rewind code · Verbose output', 'Terminal progress bar · Show turn duration · Default permission mode', 'Respect .gitignore · Always copy full response'], practice: null },
             { goal: '/config 설정 항목 (2/2) — 업데이트·테마·모델 관련 옵션을 이해한다.', topics: ['Auto-update channel · Theme · Notifications', 'Output style · Language · Editor mode', 'Show PR status footer · Model · Auto-install IDE extension', 'Claude in Chrome · Enable Remote Control'], practice: null },
@@ -1259,11 +1259,11 @@
                     {
                         num: 6, title: 'MCP 개념 이해와 Notion · Canva · Discord Plugin 연동', hours: '2시간',
                         goal: 'MCP(Model Context Protocol)의 개념을 이해하고, Notion·Canva MCP와 Discord Plugin을 설치하여 문서·디자인·메시지 자동화를 구현한다.',
-                        topics: ['MCP란? 개념과 구조', 'MCP 설치 및 세팅 방법', 'Notion MCP 설치·실습', 'Canva MCP 설치·실습', 'Discord Plugin — Bot Token 발급·DM 페어링'],
-                        practice: 'Notion 페이지 생성, Canva 프레젠테이션 내보내기, Discord DM 페어링으로 메시지를 주고받는다.',
+                        topics: ['MCP란? 개념과 구조', 'MCP 설치 및 세팅 방법', 'Notion MCP 설치·실습', 'Canva MCP 설치·실습', 'Discord Plugin — 설치·토큰 저장·DM 페어링·서버 채널 등록'],
+                        practice: 'Notion 페이지 생성, Canva 프레젠테이션 내보내기, Discord DM 페어링과 서버 채널 등록으로 대화한다.',
                         slides: ['01.svg','02.svg','03.svg','04.svg','05.svg','06.svg','07.svg','08.svg','09.svg','10.svg','11.svg','12.svg','13.svg','14.svg','15.svg'],
                         slideDescs: [
-            { goal: 'Step 6 목표와 오늘 배울 내용을 안내한다.', topics: ['MCP란 무엇인가', 'MCP 설치와 세팅', 'Notion MCP 설치', 'Canva MCP 설치·실습', 'Discord Plugin 설치·DM 페어링'], practice: null },
+            { goal: 'Step 6 목표와 오늘 배울 내용을 안내한다.', topics: ['MCP란 무엇인가', 'MCP 설치와 세팅', 'Notion MCP 설치', 'Canva MCP 설치·실습', 'Discord Plugin 설치·페어링·서버 채널 등록'], practice: null },
             { goal: 'MCP(Model Context Protocol)의 개념을 이해한다.', topics: ['AI와 외부 시스템 연결 개방형 표준', 'USB-C 비유 — 한 번 구축으로 어디서든 연결', '데이터베이스·SaaS·API 확장', 'Claude·ChatGPT·Cursor 모두 지원'], practice: null },
             { goal: 'claude mcp add 명령어로 MCP 서버를 등록한다.', topics: ['HTTP 방식 — 원격 서버 (권장)', 'stdio 방식 — 로컬 프로세스', 'claude mcp list · mcp remove', 'scope: local · project · user'], practice: null, action: { label: '명령어', items: [{ desc: 'mcp add', copy: 'claude mcp add --transport http notion https://mcp.notion.com/mcp' }, { desc: 'mcp 확인', copy: 'claude mcp list' }] } },
             { goal: 'Notion MCP를 OAuth 방식으로 등록한다.', topics: ['토큰 발급 불필요 — OAuth 방식', 'claude mcp add --transport http notion https://mcp.notion.com/mcp', 'claude mcp list로 등록 확인', 'Notion Integration 없이 바로 인증 진행'], practice: null, action: { label: '명령어', items: [{ desc: 'mcp 등록', copy: 'claude mcp add --transport http notion https://mcp.notion.com/mcp' }, { desc: '등록 확인', copy: 'claude mcp list' }] } },
@@ -1275,9 +1275,9 @@
             { goal: 'Canva MCP를 등록하고 인증한다.', topics: ['claude mcp add --transport http canva https://mcp.canva.com/mcp', '/mcp → canva → Authenticate → 브라우저 로그인', '/mcp로 connected 상태 확인'], practice: null, action: { label: '명령어', items: [{ desc: 'mcp 등록', copy: 'claude mcp add --transport http canva https://mcp.canva.com/mcp' }, { desc: '등록 확인', copy: 'claude mcp list' }] } },
             { goal: 'Canva MCP 실습 — 자연어로 프레젠테이션을 만들고 내보낸다.', topics: ['프레젠테이션 생성 프롬프트', 'PDF 내보내기 링크 확인', 'Autofill로 슬라이드 제목 수정'], practice: 'AI 에이전트 소개 프레젠테이션을 Canva로 만들고 PDF로 내보낸다.' },
             { goal: 'Discord Bot 토큰을 발급하고 Plugin 연결을 준비한다.', topics: ['discord.com/developers 접속 → New Application', 'Bot 탭 → Reset Token → 토큰 복사', 'Message Content Intent 활성화', 'OAuth2 → URL Generator → 서버 초대'], practice: null },
-            { goal: 'Discord Plugin을 설치하고 연결한다.', topics: ['.env 파일에 DISCORD_BOT_TOKEN 저장', 'claude --channels plugin:discord@claude-plugins-official', '자동 설치 — git clone/npm build 불필요', 'Plugin이 자동으로 Discord 봇 연결'], practice: null, action: { label: '명령어', copy: 'claude --channels plugin:discord@claude-plugins-official' } },
-            { goal: 'DM 페어링 실습 — 봇과 DM으로 대화한다.', topics: ['Discord에서 봇에게 DM 전송 → 페어링 코드 수신', '터미널에 페어링 코드 입력 → 연결 완료', 'reply로 DM 메시지 전송', 'fetch_messages로 최근 메시지 읽기'], practice: 'DM 페어링으로 Discord를 연결하고 메시지를 주고받는다.' },
-            { goal: 'Discord Plugin이 제공하는 5가지 도구를 파악한다.', topics: ['reply — 채널에 메시지 전송 (파일 첨부 가능)', 'fetch_messages — 최근 메시지 조회', 'react — 이모지 반응 추가', 'edit_message — 보낸 메시지 수정', 'download_attachment — 첨부 파일 다운로드'], practice: null }
+            { goal: 'Discord Plugin을 설치한다.', topics: ['claude --channels plugin:discord@claude-plugins-official --dangerously-skip-permissions 실행', 'plugin not installed 시 /plugin install discord@claude-plugins-official', '/reload-plugin으로 플러그인 새로고침', '/mcp에서 discord enable'], practice: null, action: { label: '명령어', items: [{ desc: '실행', copy: 'claude --channels plugin:discord@claude-plugins-official --dangerously-skip-permissions' }, { desc: 'plugin 설치', copy: '/plugin install discord@claude-plugins-official' }] } },
+            { goal: '.env에 토큰을 저장하고 Claude Code를 재실행한다.', topics: ['Claude에게 봇 토큰을 .env에 저장해달라고 요청', '저장 경로: ~/.claude/channels/discord/.env', 'Ctrl+C로 종료 후 동일 명령어로 재실행', '토큰은 코드에 직접 입력 금지 — .env로 보관'], practice: null, action: { label: '재실행 명령어', copy: 'claude --channels plugin:discord@claude-plugins-official --dangerously-skip-permissions' } },
+            { goal: 'DM 페어링과 서버 채널을 등록한다.', topics: ['Discord에서 봇에게 DM 전송 → 페어링 코드 수신', '터미널에 페어링 코드 입력 → 연결 완료', '설정 > 고급 > 개발자 모드 → 채널 ID 복사', '/discord:access group add <채널ID>로 서버 채널 등록'], practice: 'DM 페어링으로 연결하고 서버 채널을 등록하여 대화한다.', action: { label: '채널 등록', copy: '/discord:access group add ' } }
                         ]
                     },
                     {
