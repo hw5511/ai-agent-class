@@ -2,52 +2,20 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 07</text>
-  <rect x="150" y="44" width="44" height="24" rx="12" fill="#22c55e"/>
-  <text x="172" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.02em">실습</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">나만의 Skill 만들기 — 워크플로우</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">원하는 기능을 정하면 Claude가 라이브러리 추천부터 스킬 완성까지 다 해줍니다</text>
+  <rect x="152" y="44" width="52" height="24" rx="12" fill="#2563eb"/>
+  <text x="178" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">실습</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">서버 채널 실습 준비</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">공부방 서버에 접속하여 서버 채널 실습을 준비합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <rect x="60" y="228" width="340" height="136" rx="10" fill="#f0fdf4"/>
-  <rect x="76" y="244" width="28" height="28" rx="14" fill="#16a34a"/>
-  <text x="90" y="263" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff">1</text>
-  <text x="116" y="263" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">원하는 기능 설명</text>
-  <text x="76" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">"QR 코드 생성하고 싶어"</text>
-  <text x="76" y="324" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">"엑셀 파일 자동으로 만들고 싶어"</text>
-  <text x="76" y="348" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">"PDF 보고서 뽑고 싶어"</text>
-  <text x="415" y="304" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="28" fill="#9ca3af">→</text>
-  <rect x="440" y="228" width="340" height="136" rx="10" fill="#eff6ff"/>
-  <rect x="456" y="244" width="28" height="28" rx="14" fill="#2563eb"/>
-  <text x="470" y="263" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff">2</text>
-  <text x="496" y="263" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">Claude에게 라이브러리 조사 요청</text>
-  <text x="456" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">"이걸 Python으로 만들려면"</text>
-  <text x="456" y="324" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">"어떤 라이브러리 쓰면 돼?"</text>
-  <text x="456" y="348" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">"코드까지 짜줘"</text>
-  <text x="795" y="304" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="28" fill="#9ca3af">→</text>
-  <rect x="820" y="228" width="340" height="136" rx="10" fill="#fefce8"/>
-  <rect x="836" y="244" width="28" height="28" rx="14" fill="#ca8a04"/>
-  <text x="850" y="263" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff">3</text>
-  <text x="876" y="263" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">스킬로 만들어달라고 요청</text>
-  <text x="836" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">"이걸 /qrcode 스킬로 만들어줘"</text>
-  <text x="836" y="324" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">"옵션을 인수로 받도록 해줘"</text>
-  <text x="836" y="348" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">"이제 반복 사용 가능"</text>
-  <line x1="60" y1="392" x2="1220" y2="392" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="424" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">참고 예시</text>
-  <text x="60" y="452" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af">원하는 것</text>
-  <text x="400" y="452" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af">라이브러리</text>
-  <text x="740" y="452" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af">스킬 명령어</text>
-  <line x1="60" y1="460" x2="1220" y2="460" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="486" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">QR 코드 생성</text>
-  <text x="400" y="486" font-family="'Courier New',Courier,monospace" font-size="14" fill="#2563eb">pip install qrcode</text>
-  <text x="740" y="486" font-family="'Courier New',Courier,monospace" font-size="14" fill="#16a34a">/qrcode [텍스트]</text>
-  <text x="60" y="512" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">엑셀 파일 생성</text>
-  <text x="400" y="512" font-family="'Courier New',Courier,monospace" font-size="14" fill="#2563eb">pip install openpyxl</text>
-  <text x="740" y="512" font-family="'Courier New',Courier,monospace" font-size="14" fill="#16a34a">/excel [데이터]</text>
-  <text x="60" y="538" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">파일 자동 압축/백업</text>
-  <text x="400" y="538" font-family="'Courier New',Courier,monospace" font-size="14" fill="#2563eb">zipfile (표준 내장)</text>
-  <text x="740" y="538" font-family="'Courier New',Courier,monospace" font-size="14" fill="#16a34a">/backup [폴더]</text>
-  <text x="60" y="564" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">마크다운 → HTML</text>
-  <text x="400" y="564" font-family="'Courier New',Courier,monospace" font-size="14" fill="#2563eb">pip install markdown</text>
-  <text x="740" y="564" font-family="'Courier New',Courier,monospace" font-size="14" fill="#16a34a">/md2html [파일]</text>
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#171717"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">어떤 기능이든 같은 워크플로우 — Claude에게 물어보고 짜고 스킬화하면 끝입니다</text>
+  <text x="60" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">1단계  —  공부방 서버 입장</text>
+  <rect x="60" y="270" width="600" height="52" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="360" y="302" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="18" fill="#1d4ed8">https://discord.gg/nZZrS5QN8F</text>
+  <text x="60" y="354" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#6b7280">초대 링크로 접속하여 공부방 Discord 서버에 입장합니다</text>
+  <text x="60" y="394" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">2단계  —  봇 초대</text>
+  <text x="60" y="430" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">본인 봇을 공부방 서버에 초대  (OAuth2 URL Generator 이용)</text>
+  <text x="60" y="470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">3단계  —  access.json에 채널 등록</text>
+  <text x="60" y="506" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">/discord:access 명령어로 공부방 서버 채널을 등록</text>
+  <text x="60" y="542" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#16a34a">등록 후 Claude가 해당 채널의 메시지를 읽고 쓸 수 있음</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">공부방 서버에서 다른 수강생의 봇과 대화하는 실습을 진행합니다</text>
 </svg>

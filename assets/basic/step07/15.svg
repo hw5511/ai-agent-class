@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 07</text>
+  <rect x="150" y="44" width="44" height="24" rx="12" fill="#22c55e"/>
+  <text x="172" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.02em">실습</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">실습 1단계 — Claude에게 카드뉴스 만들어달라고 해보기</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">코드를 직접 짜지 않아도 됩니다 — Claude에게 요청만 하면 됩니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">요청 예시</text>
+  <rect x="60" y="272" width="1160" height="96" rx="8" fill="#f0fdf4"/>
+  <text x="80" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#15803d">pillow로 1080x1080 카드뉴스 이미지 만들어줘.</text>
+  <text x="80" y="344" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#15803d">배경 남색, 제목 "AI가 바꾸는 세상" 흰색 굵게 중앙, 본문 "2줄 설명" 회색 작게, 하단 로고 영역 포함</text>
+  <line x1="60" y1="396" x2="1220" y2="396" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="430" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Claude가 자동으로 처리하는 것</text>
+  <rect x="60" y="448" width="260" height="80" rx="8" fill="#f8fafc"/>
+  <text x="80" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">1. 라이브러리 설치</text>
+  <text x="80" y="506" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">pip install pillow 실행</text>
+  <rect x="360" y="448" width="260" height="80" rx="8" fill="#f8fafc"/>
+  <text x="380" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">2. 코드 작성</text>
+  <text x="380" y="506" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">cardnews.py 자동 생성</text>
+  <rect x="660" y="448" width="260" height="80" rx="8" fill="#f8fafc"/>
+  <text x="680" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">3. 실행</text>
+  <text x="680" y="506" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">이미지 파일 생성</text>
+  <rect x="960" y="448" width="260" height="80" rx="8" fill="#f8fafc"/>
+  <text x="980" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">4. 결과 확인</text>
+  <text x="980" y="506" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">output.png 열기</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#171717"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">매번 긴 요청을 입력해야 할까요? — 다음 단계에서 해결합니다</text>
+</svg>

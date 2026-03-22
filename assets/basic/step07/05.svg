@@ -1,33 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
-  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 07</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Pillow — Python 이미지 처리 라이브러리</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">이미지 생성 · 편집 · 변환을 코드 몇 줄로 처리합니다</text>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 06</text>
+  <rect x="152" y="44" width="52" height="24" rx="12" fill="#2563eb"/>
+  <text x="178" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">실습</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">DM 페어링과 서버 채널 등록</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Discord와 Claude를 연결하고 서버 채널을 등록합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">설치</text>
-  <rect x="60" y="272" width="420" height="44" rx="8" fill="#f8fafc"/>
-  <text x="80" y="299" font-family="'Courier New',Courier,monospace" font-size="18" fill="#374151">pip install pillow</text>
-  <line x1="60" y1="340" x2="1220" y2="340" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="374" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">주요 기능</text>
-  <rect x="60" y="390" width="360" height="148" rx="8" fill="#f8fafc"/>
-  <text x="80" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">이미지 생성</text>
-  <text x="80" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Image.new()  — 빈 캔버스 생성</text>
-  <text x="80" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">ImageDraw    — 도형 · 텍스트 그리기</text>
-  <text x="80" y="504" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">ImageFont    — 폰트 크기 · 스타일</text>
-
-  <rect x="460" y="390" width="360" height="148" rx="8" fill="#f8fafc"/>
-  <text x="480" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">이미지 편집</text>
-  <text x="480" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">img.resize()   — 크기 변환</text>
-  <text x="480" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">img.crop()     — 잘라내기</text>
-  <text x="480" y="504" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">img.save()     — PNG / JPG 저장</text>
-
-  <rect x="860" y="390" width="360" height="148" rx="8" fill="#fefce8"/>
-  <text x="880" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">카드뉴스 활용</text>
-  <text x="880" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">정방형(1080x1080) 캔버스</text>
-  <text x="880" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">배경색 · 글자색 · 폰트 지정</text>
-  <text x="880" y="504" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">리사이즈로 다양한 포맷 출력</text>
-
+  <text x="60" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">6단계  —  DM 페어링</text>
+  <text x="60" y="292" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af" font-weight="600">1</text>
+  <text x="90" y="292" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Discord에서 본인 봇에게 직접 DM 전송  →  페어링 코드 수신</text>
+  <text x="60" y="332" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af" font-weight="600">2</text>
+  <text x="90" y="332" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Claude Code 터미널에 페어링 코드 입력  →  연결 완료!</text>
+  <text x="60" y="382" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">7단계  —  서버 채널 등록</text>
+  <text x="60" y="418" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">설정 > 고급 > 개발자 모드 활성화  →  채널 우클릭 > 채널 ID 복사</text>
+  <text x="60" y="454" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">Claude Code에 아래 명령어를 요청:</text>
+  <rect x="60" y="472" width="900" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="510" y="500" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="15" fill="#1d4ed8">/discord:access group add &lt;채널ID&gt;</text>
+  <text x="60" y="544" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#16a34a">등록한 채널에서 Claude와 대화할 수 있습니다</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">PIL (Python Imaging Library) 의 현대적 후계 라이브러리입니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">DM 페어링으로 1:1 연결  →  /discord:access로 서버 채널 추가 등록</text>
 </svg>
