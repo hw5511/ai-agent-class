@@ -2,20 +2,26 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 07</text>
-  <rect x="152" y="44" width="52" height="24" rx="12" fill="#2563eb"/>
-  <text x="178" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">실습</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">서버 채널 실습 준비</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">공부방 서버에 접속하여 서버 채널 실습을 준비합니다</text>
+  <rect x="150" y="44" width="44" height="24" rx="12" fill="#22c55e"/>
+  <text x="172" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.02em">실습</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">실습 2단계 — 카드뉴스 스킬 만들기</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Claude에게 스킬로 만들어달라고 요청합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">1단계  —  공부방 서버 입장</text>
-  <rect x="60" y="270" width="600" height="52" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="360" y="302" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="18" fill="#1d4ed8">https://discord.gg/nZZrS5QN8F</text>
-  <text x="60" y="354" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#6b7280">초대 링크로 접속하여 공부방 Discord 서버에 입장합니다</text>
-  <text x="60" y="394" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">2단계  —  봇 초대</text>
-  <text x="60" y="430" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">본인 봇을 공부방 서버에 초대  (OAuth2 URL Generator 이용)</text>
-  <text x="60" y="470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">3단계  —  access.json에 채널 등록</text>
-  <text x="60" y="506" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">/discord:access 명령어로 공부방 서버 채널을 등록</text>
-  <text x="60" y="542" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#16a34a">등록 후 Claude가 해당 채널의 메시지를 읽고 쓸 수 있음</text>
+  <text x="60" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">스킬 생성 요청</text>
+  <rect x="60" y="272" width="1160" height="56" rx="8" fill="#f0fdf4"/>
+  <text x="80" y="306" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#15803d">방금 만든 카드뉴스 코드를 /cardnews 스킬로 만들어줘. 배경색, 글자색, 제목, 본문, 사이즈를 인수로 받도록 해줘</text>
+  <line x1="60" y1="356" x2="1220" y2="356" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="390" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Claude가 자동 생성하는 파일 2개</text>
+  <rect x="60" y="408" width="540" height="120" rx="8" fill="#f8fafc"/>
+  <text x="80" y="436" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#6b7280">.claude/skills/cardnews/SKILL.md</text>
+  <text x="80" y="464" font-family="'Courier New',Courier,monospace" font-size="14" fill="#374151">---</text>
+  <text x="80" y="488" font-family="'Courier New',Courier,monospace" font-size="14" fill="#374151">description: 카드뉴스 이미지를 생성합니다</text>
+  <text x="80" y="512" font-family="'Courier New',Courier,monospace" font-size="14" fill="#374151">---  # Claude 지침 + 옵션 목록</text>
+  <rect x="680" y="408" width="540" height="120" rx="8" fill="#f8fafc"/>
+  <text x="700" y="436" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#6b7280">.claude/skills/cardnews/cardnews.py</text>
+  <text x="700" y="464" font-family="'Courier New',Courier,monospace" font-size="14" fill="#374151">from PIL import Image, ImageDraw, ImageFont</text>
+  <text x="700" y="488" font-family="'Courier New',Courier,monospace" font-size="14" fill="#374151">def make_card(bg, text_color, title, ...):</text>
+  <text x="700" y="512" font-family="'Courier New',Courier,monospace" font-size="14" fill="#374151">    # 옵션에 따라 이미지 생성</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">공부방 서버에서 다른 수강생의 봇과 대화하는 실습을 진행합니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">이제 /cardnews 를 입력하면 언제든 카드뉴스를 만들 수 있습니다</text>
 </svg>

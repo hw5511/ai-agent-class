@@ -2,29 +2,20 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 07</text>
-  <rect x="150" y="44" width="44" height="24" rx="12" fill="#22c55e"/>
-  <text x="172" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.02em">실습</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">실습 1단계 — Claude에게 카드뉴스 만들어달라고 해보기</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">코드를 직접 짜지 않아도 됩니다 — Claude에게 요청만 하면 됩니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Plugin 고급 도구 활용</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">reply / fetch 외에 react, edit, download 도구를 활용합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">요청 예시</text>
-  <rect x="60" y="272" width="1160" height="96" rx="8" fill="#f0fdf4"/>
-  <text x="80" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#15803d">pillow로 1080x1080 카드뉴스 이미지 만들어줘.</text>
-  <text x="80" y="344" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#15803d">배경 남색, 제목 "AI가 바꾸는 세상" 흰색 굵게 중앙, 본문 "2줄 설명" 회색 작게, 하단 로고 영역 포함</text>
-  <line x1="60" y1="396" x2="1220" y2="396" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="430" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Claude가 자동으로 처리하는 것</text>
-  <rect x="60" y="448" width="260" height="80" rx="8" fill="#f8fafc"/>
-  <text x="80" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">1. 라이브러리 설치</text>
-  <text x="80" y="506" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">pip install pillow 실행</text>
-  <rect x="360" y="448" width="260" height="80" rx="8" fill="#f8fafc"/>
-  <text x="380" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">2. 코드 작성</text>
-  <text x="380" y="506" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">cardnews.py 자동 생성</text>
-  <rect x="660" y="448" width="260" height="80" rx="8" fill="#f8fafc"/>
-  <text x="680" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">3. 실행</text>
-  <text x="680" y="506" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">이미지 파일 생성</text>
-  <rect x="960" y="448" width="260" height="80" rx="8" fill="#f8fafc"/>
-  <text x="980" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">4. 결과 확인</text>
-  <text x="980" y="506" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">output.png 열기</text>
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#171717"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">매번 긴 요청을 입력해야 할까요? — 다음 단계에서 해결합니다</text>
+  <text x="60" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">react  —  메시지에 이모지 반응</text>
+  <rect x="90" y="268" width="1090" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="635" y="296" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#1d4ed8">내 마지막 메시지에 확인 이모지 반응을 달아줘</text>
+  <text x="60" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">edit_message  —  보낸 메시지 수정</text>
+  <rect x="90" y="354" width="1090" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="635" y="382" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#1d4ed8">방금 보낸 메시지를 '작업 완료!'로 수정해줘</text>
+  <text x="60" y="426" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">download_attachment  —  첨부 파일 다운로드</text>
+  <rect x="90" y="440" width="1090" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="635" y="468" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#1d4ed8">채널의 최근 메시지에서 첨부 파일을 다운로드해줘</text>
+  <text x="60" y="516" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">활용 예시</text>
+  <text x="60" y="548" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#16a34a">진행 중 메시지 전송 → 완료 후 edit_message로 업데이트  —  실시간 상태 보고</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">reply로 전송 → react로 확인 → edit_message로 수정  —  완전한 대화 자동화</text>
 </svg>
