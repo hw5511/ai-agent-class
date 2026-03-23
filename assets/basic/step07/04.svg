@@ -2,16 +2,24 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 07</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Skills</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Claude의 기능을 확장하는 모듈형 시스템</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">라이브러리란?</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">남이 만든 기능 모음 — 설치하면 바로 쓸 수 있습니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">파일 구조</text>
-  <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">.claude/skills/&lt;이름&gt;/SKILL.md     프로젝트 전용</text>
-  <text x="60" y="348" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">~/.claude/skills/&lt;이름&gt;/SKILL.md   전체 프로젝트</text>
-  <line x1="60" y1="394" x2="1220" y2="394" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="434" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">호출 방법</text>
-  <text x="60" y="474" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">/skill-name              슬래시 명령어로 직접 호출</text>
-  <text x="60" y="514" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">/skill-name [인수]      인수 전달 가능</text>
+  <rect x="60" y="232" width="540" height="180" rx="8" fill="#f0fdf4"/>
+  <text x="80" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#15803d">Python — pip</text>
+  <text x="80" y="290" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">pip install pillow       이미지 처리</text>
+  <text x="80" y="318" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">pip install openpyxl     엑셀 읽기/쓰기</text>
+  <text x="80" y="346" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">pip install requests     HTTP 요청</text>
+
+  <rect x="680" y="232" width="540" height="180" rx="8" fill="#eff6ff"/>
+  <text x="700" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1d4ed8">Node.js — npm</text>
+  <text x="700" y="290" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">npm install sharp        이미지 처리</text>
+  <text x="700" y="318" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">npm install xlsx         엑셀 읽기/쓰기</text>
+  <text x="700" y="346" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">npm install axios        HTTP 요청</text>
+
+  <line x1="60" y1="444" x2="1220" y2="444" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="490" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">핵심 개념</text>
+  <text x="60" y="526" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">설치 한 번  →  import / require 한 줄  →  수십 가지 기능을 바로 사용</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">관련 대화에서 Claude가 자동으로 Skill을 로드하기도 합니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">표준 라이브러리(os, shutil, zipfile)는 설치 없이 바로 사용 가능합니다</text>
 </svg>

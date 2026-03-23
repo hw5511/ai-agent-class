@@ -2,17 +2,32 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 07</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Skill 사용법</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">SKILL.md 파일 하나로 새로운 슬래시 명령어를 정의합니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Pillow — Python 이미지 처리 라이브러리</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">이미지 생성 · 편집 · 변환을 코드 몇 줄로 처리합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">SKILL.md 구조</text>
-  <text x="60" y="308" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">---</text>
-  <text x="60" y="344" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">description: 이 Skill이 하는 일</text>
-  <text x="60" y="380" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">---</text>
-  <text x="60" y="416" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151"># 지침</text>
-  <text x="60" y="452" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">Claude에게 줄 지시사항을 마크다운으로 작성</text>
-  <line x1="60" y1="494" x2="1220" y2="494" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="530" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">기본 제공 Skill 예시</text>
-  <text x="60" y="564" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">/simplify   /batch   /debug   /loop</text>
+  <text x="60" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">설치</text>
+  <rect x="60" y="272" width="420" height="44" rx="8" fill="#f8fafc"/>
+  <text x="80" y="299" font-family="'Courier New',Courier,monospace" font-size="18" fill="#374151">pip install pillow</text>
+  <line x1="60" y1="340" x2="1220" y2="340" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="374" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">주요 기능</text>
+  <rect x="60" y="390" width="360" height="148" rx="8" fill="#f8fafc"/>
+  <text x="80" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">이미지 생성</text>
+  <text x="80" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Image.new()  — 빈 캔버스 생성</text>
+  <text x="80" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">ImageDraw    — 도형 · 텍스트 그리기</text>
+  <text x="80" y="504" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">ImageFont    — 폰트 크기 · 스타일</text>
 
+  <rect x="460" y="390" width="360" height="148" rx="8" fill="#f8fafc"/>
+  <text x="480" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">이미지 편집</text>
+  <text x="480" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">img.resize()   — 크기 변환</text>
+  <text x="480" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">img.crop()     — 잘라내기</text>
+  <text x="480" y="504" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">img.save()     — PNG / JPG 저장</text>
+
+  <rect x="860" y="390" width="360" height="148" rx="8" fill="#fefce8"/>
+  <text x="880" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">카드뉴스 활용</text>
+  <text x="880" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">정방형(1080x1080) 캔버스</text>
+  <text x="880" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">배경색 · 글자색 · 폰트 지정</text>
+  <text x="880" y="504" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">리사이즈로 다양한 포맷 출력</text>
+
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">PIL (Python Imaging Library) 의 현대적 후계 라이브러리입니다</text>
 </svg>
