@@ -12,7 +12,7 @@
   <text x="90" y="263" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff">1</text>
   <text x="116" y="263" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">원하는 기능 설명</text>
   <text x="76" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">"QR 코드 생성하고 싶어"</text>
-  <text x="76" y="324" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">"엑셀 파일 자동으로 만들고 싶어"</text>
+  <text x="76" y="324" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">"이미지 워터마크 넣고 싶어"</text>
   <text x="76" y="348" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">"PDF 보고서 뽑고 싶어"</text>
   <text x="415" y="304" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="28" fill="#9ca3af">→</text>
   <rect x="440" y="228" width="340" height="136" rx="10" fill="#eff6ff"/>
@@ -39,9 +39,9 @@
   <text x="60" y="486" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">QR 코드 생성</text>
   <text x="400" y="486" font-family="'Courier New',Courier,monospace" font-size="14" fill="#2563eb">pip install qrcode</text>
   <text x="740" y="486" font-family="'Courier New',Courier,monospace" font-size="14" fill="#16a34a">/qrcode [텍스트]</text>
-  <text x="60" y="512" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">엑셀 파일 생성</text>
-  <text x="400" y="512" font-family="'Courier New',Courier,monospace" font-size="14" fill="#2563eb">pip install openpyxl</text>
-  <text x="740" y="512" font-family="'Courier New',Courier,monospace" font-size="14" fill="#16a34a">/excel [데이터]</text>
+  <text x="60" y="512" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">이미지 워터마크</text>
+  <text x="400" y="512" font-family="'Courier New',Courier,monospace" font-size="14" fill="#2563eb">pip install pillow</text>
+  <text x="740" y="512" font-family="'Courier New',Courier,monospace" font-size="14" fill="#16a34a">/watermark [이미지]</text>
   <text x="60" y="538" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">파일 자동 압축/백업</text>
   <text x="400" y="538" font-family="'Courier New',Courier,monospace" font-size="14" fill="#2563eb">zipfile (표준 내장)</text>
   <text x="740" y="538" font-family="'Courier New',Courier,monospace" font-size="14" fill="#16a34a">/backup [폴더]</text>
