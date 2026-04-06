@@ -1844,6 +1844,15 @@
                         });
                     }
                     if (act.download) html += `<a class="action-download-link" href="${enc(act.download.href)}" target="_blank" rel="noopener">↓ ${act.download.text}</a>`;
+                    if (act.type === 'download' && act.path) {
+                        const fname = act.path.split('/').pop();
+                        html += `<a class="action-download-link" href="${enc(act.path)}" download>↓ ${enc(act.label || fname)}</a>`;
+                    } else if (act.type === 'download-folder' && act.path) {
+                        const zipPath = act.path.endsWith('.zip') ? act.path : act.path + '.zip';
+                        html += `<a class="action-download-link" href="${enc(zipPath)}" download>↓ ${enc(act.label || '템플릿 다운로드')} (zip)</a>`;
+                    } else if (act.type === 'link' && act.url) {
+                        html += `<a class="action-download-link" href="${enc(act.url)}" target="_blank" rel="noopener">→ ${enc(act.label || act.url)}</a>`;
+                    }
                     actionBox.innerHTML = html;
                 } else {
                     actionBox.innerHTML = '';
