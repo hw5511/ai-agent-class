@@ -1,0 +1,16 @@
+{
+  "slides": [
+    "외부_API로_AI_기능_확장하기.svg",
+    "API_키_발급,_두려워하지_마세요.svg",
+    "네이버_오픈_API.svg",
+    "네이버_오픈_API_종류.svg",
+    "네이버_API_앱_등록_1단계.svg",
+    "네이버_API_앱_등록_2단계.svg",
+    "Claude에게_데이터랩_Skill_개발_요청.svg",
+    "타입캐스트_—_AI_음성_합성_API.svg",
+    "타입캐스트_API_키_발급.svg",
+    "타입캐스트_캐릭터_선택_—_voice_id_복사.svg",
+    "Claude에게_타입캐스트_Skill_제작_요청.svg",
+    "public-apis-4Kr_—_직접_연결_실습.svg"
+  ]
+}

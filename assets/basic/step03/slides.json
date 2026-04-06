@@ -1,0 +1,24 @@
+{
+  "slides": [
+    "Claude_에이전트_환경_설정과_명령어.svg",
+    "보안_설정.svg",
+    "settings.json.svg",
+    "permissions_—_허용_·_차단_규칙.svg",
+    "settings.json_—_주요_설정_항목.svg",
+    "settings.json_실습.svg",
+    "권한_모드_(Shift+Tab_순환).svg",
+    "욜로_모드_(YOLO_Mode).svg",
+    "주요_슬래시_명령어.svg",
+    "config_화면_구성.svg",
+    "config_설정_항목_(1_2).svg",
+    "config_설정_항목_(2_2).svg",
+    "model_—_Claude_모델_선택.svg",
+    "웹_Search_툴.svg",
+    "웹_Search_실습.svg",
+    "Claude_in_Chrome.svg",
+    "Claude_in_Chrome_설치_·_활성화.svg",
+    "Claude_in_Chrome_실습.svg",
+    "Todos.svg",
+    "Todos_실습.svg"
+  ]
+}

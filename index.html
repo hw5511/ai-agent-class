@@ -1196,6 +1196,7 @@
             { goal: 'Claude Code의 파일 접근 범위와 개인정보 설정을 이해한다.', topics: ['파일 쓰기 범위 제한', '상위 폴더 접근 허가 방식', '개인정보 opt-out 설정'], practice: null, action: { label: '설정 페이지', download: { href: 'https://claude.ai/settings/data-privacy-controls', text: 'claude.ai 설정 바로가기' } } },
             { goal: 'settings.json의 구조와 주요 설정 항목을 이해한다.', topics: ['3계층 설정 파일 (전역/프로젝트/로컬)', 'model — 기본 모델 지정', 'permissions — deny/allow 규칙 목록', 'env — 환경 변수 주입'], practice: null, action: { label: '공식 문서', download: { href: 'https://code.claude.com/docs/ko/settings', text: 'settings.json 공식 문서' } } },
             { goal: 'settings.json 실습 — 파일 삭제 차단 규칙을 직접 추가한다.', topics: ['Claude에게 권한 제한 추가 요청', '차단 동작 확인 (rm 시도)', 'settings.json 파일 내용 확인'], practice: 'rm 차단 규칙을 Claude에게 추가하고 실제로 차단되는지 확인한다.' },
+            { goal: 'settings.json 파일 삭제 차단 규칙 추가를 직접 실습한다.', topics: ['Claude에게 권한 제한 추가 요청', '\'note.txt 파일을 삭제해줘\' 입력 후 차단 메시지 확인', '\'settings.json 파일 내용 보여줘\'로 규칙 추가 확인'], practice: 'rm 차단 규칙을 Claude에게 추가하고 실제로 차단되는지 확인한다.' },
             { goal: '3가지 권한 모드의 차이를 이해하고 전환 방법을 익힌다.', topics: ['일반 모드 — 편집·명령 매번 승인', '편집 자동 승인 모드 — 파일 편집 자동', '플랜 모드 — 추천 선택지 중 선택'], practice: null },
             { goal: '욜로 모드의 개념과 안전한 사용법을 이해한다.', topics: ['claude --dangerously-skip-permissions', '/exit 또는 Ctrl+C로 종료', '위쪽 방향키로 이전 명령 재실행'], practice: null },
             { goal: '주요 슬래시 명령어의 역할을 파악한다.', topics: ['/clear · /model · /login · /logout', '/help — 전체 명령어 목록', 'Ctrl+C 또는 Esc로 종료'], practice: null, action: { label: '실행 명령어', copy: 'claude --dangerously-skip-permissions' } },
@@ -1936,9 +1937,34 @@
         }
 
         /* ============================================
+           Slides JSON Loader
+           각 step 폴더의 slides.json을 fetch하여
+           COURSES 오브젝트의 slides 배열을 덮어씀.
+           slides.json이 없으면 기존 배열 유지 (fallback).
+           순서 변경 시 slides.json만 수정하면 됨.
+           ============================================ */
+        async function loadAllSlides() {
+            const promises = [];
+            for (const [courseName, course] of Object.entries(COURSES)) {
+                for (const session of course.sessions) {
+                    const stepFolder = 'step' + String(session.num).padStart(2, '0');
+                    const url = 'assets/' + courseName + '/' + stepFolder + '/slides.json';
+                    promises.push(
+                        fetch(url)
+                            .then(r => r.ok ? r.json() : null)
+                            .then(data => { if (data && data.slides) session.slides = data.slides; })
+                            .catch(() => {})
+                    );
+                }
+            }
+            await Promise.all(promises);
+        }
+
+        /* ============================================
            Init
            ============================================ */
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadAllSlides();   // slides.json 로드 (순서/파일명 갱신)
             readHash();   // URL 해시에서 course/session/slide 복원
             renderSlides(currentCourse);
             applySlidePositions();           // 복원된 세션 위치 반영

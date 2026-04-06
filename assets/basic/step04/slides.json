@@ -1,0 +1,18 @@
+{
+  "slides": [
+    "세션_관리와_백그라운드_작업.svg",
+    "세션_재개_이름_변경.svg",
+    "--continue_resume.svg",
+    "rewind_(Esc_+_Esc).svg",
+    "세션_관리_실습.svg",
+    "대화_기억_공간_관리.svg",
+    "Auto_Compact.svg",
+    "Auto_Compact_실습.svg",
+    "Foreground_Background.svg",
+    "타임아웃이란.svg",
+    "Tasks.svg",
+    "백그라운드_프로세스_실습.svg",
+    "백그라운드_활용법.svg",
+    "정리.svg"
+  ]
+}

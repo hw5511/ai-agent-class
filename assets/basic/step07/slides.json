@@ -1,0 +1,22 @@
+{
+  "slides": [
+    "Skills_활용과_Discord_Plugin_고급_기능.svg",
+    "Skills.svg",
+    "Skill_사용법.svg",
+    "라이브러리란.svg",
+    "Pillow_—_Python_이미지_처리_라이브러리.svg",
+    "실습_1단계_—_Claude에게_카드뉴스_만들어달라고_해보기.svg",
+    "실습_2단계_—_카드뉴스_스킬_만들기.svg",
+    "스킬_활용_—_반복_사용과_리사이즈.svg",
+    "나만의_Skill_만들기_—_워크플로우.svg",
+    "Discord_Bot_토큰_발급.svg",
+    "Discord_Plugin_설치.svg",
+    "토큰_저장과_재실행.svg",
+    "DM_페어링과_서버_채널_등록.svg",
+    "access.json_서버_채널_등록.svg",
+    "Plugin_고급_도구_활용.svg",
+    "기존_MCP_vs_Plugin.svg",
+    "서버_채널_실습_준비.svg",
+    "서버_채널_대화_실습.svg"
+  ]
+}

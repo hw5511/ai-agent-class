@@ -1,0 +1,12 @@
+{
+  "slides": [
+    "GWS_CLI_—_Google_Workspace_자동화.svg",
+    "GWS_CLI_통합_설치_프롬프트.svg",
+    "gws_auth_login_—_인증_완료_확인.svg",
+    "GWS_CLI_Skill_문서화.svg",
+    "실습_—_Drive_파일_조회_·_업로드_·_다운로드.svg",
+    "실습_—_Gmail_조회_·_보내기.svg",
+    "실습_—_캘린더_일정_조회_·_추가.svg",
+    "실습_—_Sheets_·_Docs_·_Forms_생성.svg"
+  ]
+}
