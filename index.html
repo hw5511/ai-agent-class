@@ -1430,6 +1430,8 @@
                         practice: 'Notion Tasks DB를 60초마다 폴링하고 CLAUDE.md 트리거 키워드로 담당 워크플로우를 자동 선택하는 기초 구조를 만든다.',
                         slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
                         slideDescs: [
+            { goal: 'Notion이 무엇인지와 AI 에이전트와의 연결 구조를 이해한다.', topics: ['Notion = 문서 + DB + 칸반을 하나로', '왜 Notion인가 — API 공개, AI가 직접 읽고 씀', '작업 지시 등록 → Claude 자동 감지·실행 → 결과 저장', 'Notion MCP로 Claude와 연결'], practice: null },
+            { goal: 'Notion DB가 무엇인지, 왜 단순 문서 대신 DB를 써야 하는지 이해한다.', topics: ['DB = 행(레코드) + 열(속성)로 정보를 구조화한 저장소', '단순 문서 vs DB — 필터·검색·자동화 가능 여부 차이', '핵심 속성: Title · Status · Date · Relation', 'Status = 할일 → 자동 감지 → 실행 → 완료 흐름'], practice: null },
             { goal: 'Notion 기반 워크플로우의 전체 개념을 이해한다.', topics: ['Notion을 작업 큐로 활용', 'DB 폴링 구조 개요', 'CLAUDE.md 트리거 개념', 'ADV 06~08 전체 흐름 미리보기'], practice: null },
             { goal: 'Notion DB 폴링 구조를 구현한다.', topics: ['notion-query로 할일 항목 조회', 'while True + sleep(60) 주기 실행', '처리 후 상태 완료 업데이트', '폴링 코드 작성'], practice: null },
             { goal: 'CLAUDE.md 트리거로 워크플로우 진입점을 설계한다.', topics: ['키워드별 워크플로우 매핑 규칙', 'CLAUDE.md 작성 패턴', '리서치·카드뉴스·보고서 키워드', '트리거 동작 테스트'], practice: null },
