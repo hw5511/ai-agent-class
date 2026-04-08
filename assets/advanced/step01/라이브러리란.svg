@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 01</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f59e0b"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">REVIEW</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">라이브러리란?</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">기초 복습 — 오늘 실습 전에 핵심 개념을 확인합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">라이브러리 = 누군가 미리 만들어 둔 기능 묶음</text>
+  <text x="60" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">직접 만들 필요 없이  →  설치해서 바로 사용</text>
+  <text x="60" y="344" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">사용 방법</text>
+  <text x="60" y="383" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">pip install openpyxl</text>
+  <text x="340" y="383" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af">← 설치</text>
+  <text x="60" y="421" font-family="'Courier New',Courier,monospace" font-size="19" fill="#374151">import openpyxl</text>
+  <text x="316" y="421" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af">← 불러오기</text>
+  <line x1="60" y1="450" x2="1220" y2="450" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="488" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">오늘 사용할 라이브러리</text>
+  <text x="60" y="524" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">openpyxl</text>
+  <text x="210" y="524" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af">—  엑셀 (.xlsx)</text>
+  <text x="570" y="524" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">python-docx</text>
+  <text x="770" y="524" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af">—  워드 (.docx)</text>
+  <text x="60" y="562" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">python-pptx</text>
+  <text x="246" y="562" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af">—  PPT (.pptx)</text>
+  <text x="570" y="562" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">python-hwpx</text>
+  <text x="770" y="562" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#9ca3af">—  한글 (.hwpx)</text>
+  <rect x="60" y="610" width="1160" height="52" rx="10" fill="#fefce8"/>
+  <text x="640" y="641" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#92400e">Claude가 pip install과 import를 모두 자동으로 처리해 줍니다</text>
+</svg>
