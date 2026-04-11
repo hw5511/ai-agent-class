@@ -9,11 +9,11 @@
   <rect x="60" y="266" width="1160" height="260" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
   <text x="84" y="294" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">1.  npm install -g @googleworkspace/cli  +  gcloud 설치 (choco)</text>
   <text x="84" y="318" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">2.  gcloud auth login --launch-browser  →  gcloud 인증</text>
-  <text x="84" y="342" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">3.  GCP 프로젝트 생성 + gws auth setup (YouTube · Forms API 포함 활성화)</text>
+  <text x="84" y="342" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">3.  GCP 프로젝트 생성 + gws auth setup (Forms API 포함 활성화)</text>
   <text x="84" y="370" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#ef4444">4.  OAuth 클라이언트 단계  →  Playwright MCP로 GCP Console 화면 스냅샷</text>
   <text x="84" y="394" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">       OAuth 동의 화면 설정  /  테스트 사용자 등록  /  클라이언트 ID 생성까지 안내</text>
   <text x="84" y="418" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">5.  ~/.config/gws/.env  저장</text>
-  <text x="84" y="442" font-family="'Courier New',Courier,monospace" font-size="13" fill="#1d4ed8">6.  gws auth login -s drive,gmail,calendar,sheets,docs,youtube,forms</text>
+  <text x="84" y="442" font-family="'Courier New',Courier,monospace" font-size="13" fill="#1d4ed8">6.  gws auth login -s drive,gmail,calendar,sheets,docs,forms</text>
   <text x="84" y="466" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">7.  gws auth status  →  완료 확인</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
   <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">OAuth 클라이언트 생성 단계에서 Playwright MCP가 브라우저 화면을 찍으며 단계별로 안내합니다</text>
