@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 06</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">중요도 자동 태깅 기능 추가</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">메모 내용에서 긴급도를 Claude가 자동으로 판단합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">CLAUDE.md에 추가할 규칙</text>
+  <rect x="60" y="268" width="1160" height="130" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="80" y="300" font-family="'Courier New',Courier,monospace" font-size="14" fill="#171717">## 중요도 자동 태깅 규칙</text>
+  <text x="80" y="328" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">저장 전에 메모 내용을 분석하여 Priority 속성을 자동으로 설정한다:</text>
+  <text x="80" y="354" font-family="'Courier New',Courier,monospace" font-size="13" fill="#dc2626">- '급해', '오늘까지', '긴급' 포함 -&gt; Priority: 높음</text>
+  <text x="80" y="378" font-family="'Courier New',Courier,monospace" font-size="13" fill="#6b7280">- '나중에', '언젠가', '여유있을때' 포함 -&gt; Priority: 낮음</text>
+  <text x="80" y="394" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">- 그 외 -&gt; Priority: 보통</text>
+  <line x1="60" y1="420" x2="1220" y2="420" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="454" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실제 적용 예시</text>
+  <rect x="60" y="468" width="360" height="68" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="80" y="496" font-family="'Courier New',Courier,monospace" font-size="13" fill="#dc2626">업무: 오늘까지 기획서 제출</text>
+  <text x="80" y="518" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">-> Priority: 높음 자동 태그</text>
+  <rect x="450" y="468" width="360" height="68" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="470" y="496" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">메모: 나중에 읽을 아티클 저장</text>
+  <text x="470" y="518" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">-> Priority: 낮음 자동 태그</text>
+  <rect x="840" y="468" width="380" height="68" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="860" y="496" font-family="'Courier New',Courier,monospace" font-size="13" fill="#16a34a">배움: Notion API 필터 정리</text>
+  <text x="860" y="518" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">-> Priority: 보통 자동 태그</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">CLAUDE.md 규칙 몇 줄 추가로 지능적인 태깅이 완성됩니다</text>
+</svg>

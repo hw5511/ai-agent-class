@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 06</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">4가지 메모 종류와 트리거 키워드</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">앞에 키워드만 붙이면 Claude가 어디에 저장할지 결정합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="60" y="232" width="540" height="140" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="80" y="266" font-family="'Courier New',Courier,monospace" font-size="17" font-weight="700" fill="#2563eb">개인:</text>
+  <text x="160" y="266" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Personal Tasks DB</text>
+  <text x="80" y="296" font-family="'Courier New',Courier,monospace" font-size="15" fill="#6b7280">개인: 주말에 운동화 사기</text>
+  <text x="80" y="322" font-family="'Courier New',Courier,monospace" font-size="15" fill="#6b7280">개인: 부모님 생신 선물 알아보기</text>
+  <text x="80" y="348" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">집안일, 약속, 개인 목표 등</text>
+  <rect x="640" y="232" width="580" height="140" rx="10" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
+  <text x="660" y="266" font-family="'Courier New',Courier,monospace" font-size="17" font-weight="700" fill="#d97706">업무: / 학교:</text>
+  <text x="820" y="266" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Work Tasks DB</text>
+  <text x="660" y="296" font-family="'Courier New',Courier,monospace" font-size="15" fill="#6b7280">업무: 내일까지 기획서 제출</text>
+  <text x="660" y="322" font-family="'Courier New',Courier,monospace" font-size="15" fill="#6b7280">학교: 목요일 과제 제출 마감</text>
+  <text x="660" y="348" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">두 키워드 모두 같은 DB에 저장됩니다</text>
+  <rect x="60" y="392" width="540" height="140" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="80" y="426" font-family="'Courier New',Courier,monospace" font-size="17" font-weight="700" fill="#16a34a">메모:</text>
+  <text x="160" y="426" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Notes DB</text>
+  <text x="80" y="456" font-family="'Courier New',Courier,monospace" font-size="15" fill="#6b7280">메모: 다음 강의 아이디어 — 자동화 시나리오</text>
+  <text x="80" y="482" font-family="'Courier New',Courier,monospace" font-size="15" fill="#6b7280">메모: 오늘 식당 이름 기억해두기</text>
+  <text x="80" y="508" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">일반 기록, 아이디어, 나중에 볼 것</text>
+  <rect x="640" y="392" width="580" height="140" rx="10" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="1"/>
+  <text x="660" y="426" font-family="'Courier New',Courier,monospace" font-size="17" font-weight="700" fill="#9333ea">배움:</text>
+  <text x="748" y="426" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Docs DB</text>
+  <text x="660" y="456" font-family="'Courier New',Courier,monospace" font-size="15" fill="#6b7280">배움: claude -p 는 headless 모드로 동작</text>
+  <text x="660" y="482" font-family="'Courier New',Courier,monospace" font-size="15" fill="#6b7280">배움: Notion API는 필터 쿼리가 자유롭다</text>
+  <text x="660" y="508" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">오늘 배운 것, 인사이트, 정리 내용</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">트리거 키워드 하나로 Claude가 저장 위치를 결정합니다</text>
+</svg>

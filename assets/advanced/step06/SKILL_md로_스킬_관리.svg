@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 06</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">SKILL.md로 스킬을 관리합니다</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Claude가 스킬 파일을 읽고 실행 방법을 이해합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">스킬 폴더 구조</text>
+  <rect x="60" y="268" width="520" height="240" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="80" y="300" font-family="'Courier New',Courier,monospace" font-size="15" fill="#171717">skills/</text>
+  <text x="80" y="326" font-family="'Courier New',Courier,monospace" font-size="14" fill="#6b7280">  notion-personal.md   &lt;- 개인 할일 저장</text>
+  <text x="80" y="350" font-family="'Courier New',Courier,monospace" font-size="14" fill="#6b7280">  notion-work.md       &lt;- 업무/학교 할일 저장</text>
+  <text x="80" y="374" font-family="'Courier New',Courier,monospace" font-size="14" fill="#6b7280">  notion-notes.md      &lt;- 메모 저장</text>
+  <text x="80" y="398" font-family="'Courier New',Courier,monospace" font-size="14" fill="#6b7280">  notion-docs.md       &lt;- 배움 저장</text>
+  <text x="80" y="434" font-family="'Courier New',Courier,monospace" font-size="15" fill="#171717">CLAUDE.md              &lt;- 분류 규칙 지시문</text>
+  <rect x="620" y="268" width="600" height="240" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="640" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1e40af">SKILL.md 구조 예시 (notion-personal.md)</text>
+  <text x="640" y="330" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151"># Personal Tasks 저장 스킬</text>
+  <text x="640" y="354" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151"></text>
+  <text x="640" y="378" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">## 용도</text>
+  <text x="640" y="402" font-family="'Courier New',Courier,monospace" font-size="13" fill="#6b7280">개인 할일을 Notion Personal Tasks DB에 저장</text>
+  <text x="640" y="426" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151"></text>
+  <text x="640" y="450" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">## 실행 방법</text>
+  <text x="640" y="474" font-family="'Courier New',Courier,monospace" font-size="12" fill="#6b7280">python skills/notion-personal.py --title '...'</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Claude는 SKILL.md를 읽고 언제 어떻게 스킬을 실행할지 판단합니다</text>
+</svg>
