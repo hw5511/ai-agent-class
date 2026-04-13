@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 05</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="32" font-weight="700" fill="#171717">Claude에게 API 키를 주면 스킬을 만들어줍니다</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">이것이 하네스 엔지니어링의 핵심 장면입니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">프롬프트 예시</text>
+  <rect x="60" y="270" width="1160" height="100" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="80" y="304" font-family="'Courier New',Courier,monospace" font-size="14" fill="#1d4ed8">"내 Notion API 토큰은 secret_xxx 입니다. Tasks DB ID는 abc123 입니다.</text>
+  <text x="80" y="328" font-family="'Courier New',Courier,monospace" font-size="14" fill="#1d4ed8"> 이 DB에서 Status가 할일인 항목을 조회하는 Python 스킬을 만들어줘"</text>
+  <text x="80" y="352" font-family="'Courier New',Courier,monospace" font-size="13" fill="#9ca3af"> --dangerouslySkipPermissions 없이 실행, 파일은 skills/ 폴더에 저장</text>
+  <text x="60" y="406" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Claude가 스스로 하는 일</text>
+  <rect x="60" y="420" width="330" height="100" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="225" y="458" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#16a34a">스킬 코드 작성</text>
+  <text x="225" y="480" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">notion-query.py 자동 생성</text>
+  <text x="225" y="502" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">API 호출 + 필터 로직 포함</text>
+  <text x="408" y="474" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" fill="#d1d5db">&#8594;</text>
+  <rect x="426" y="420" width="330" height="100" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="591" y="458" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#16a34a">동작 확인</text>
+  <text x="591" y="480" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">DB 조회 결과 출력</text>
+  <text x="591" y="502" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">스킬 정상 동작 확인</text>
+  <text x="774" y="474" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" fill="#d1d5db">&#8594;</text>
+  <rect x="792" y="420" width="448" height="100" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="1016" y="458" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e40af">재사용 가능한 스킬 완성</text>
+  <text x="1016" y="480" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">앞으로 Claude가 자동 호출</text>
+  <text x="1016" y="502" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">CLAUDE.md에 스킬 경로 등록</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">도구를 Claude가 직접 만든다  --  이것이 하네스 엔지니어링입니다</text>
+</svg>

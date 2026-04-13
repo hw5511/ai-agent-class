@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 05</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">하네스 엔지니어링이란?</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">AI를 단순 도우미에서 자율 실행 시스템으로 만드는 설계 방식입니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="60" y="232" width="330" height="300" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="225" y="270" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#dc2626">기존 방식</text>
+  <text x="80" y="310" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">매번 Claude에게</text>
+  <text x="80" y="336" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">직접 지시해야 함</text>
+  <text x="80" y="380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#9ca3af">"Claude야, 이거 해줘"</text>
+  <text x="80" y="406" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#9ca3af">"결과 정리해줘"</text>
+  <text x="80" y="432" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#9ca3af">"이번엔 저장해줘"</text>
+  <text x="80" y="490" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#dc2626">사람이 항상 개입해야 함</text>
+  <rect x="420" y="232" width="330" height="300" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="585" y="270" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#16a34a">하네스 방식</text>
+  <text x="440" y="310" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">지시 구조를 한 번 설계</text>
+  <text x="440" y="336" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Claude가 스스로 감지·실행</text>
+  <text x="440" y="380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#9ca3af">Notion DB에 작업 등록</text>
+  <text x="440" y="406" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#9ca3af">Claude가 자동으로 읽음</text>
+  <text x="440" y="432" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#9ca3af">결과를 다시 DB에 저장</text>
+  <text x="440" y="490" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#16a34a">반복 실행이 자동으로 됨</text>
+  <rect x="780" y="232" width="440" height="300" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="1000" y="270" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1e40af">LOGIC 에이전트</text>
+  <text x="1000" y="296" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#2563eb">Log to Logic</text>
+  <text x="800" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">기록이 쌓이면</text>
+  <text x="800" y="356" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">자동으로 작동하는 에이전트</text>
+  <text x="800" y="402" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">L — Log  (기록)</text>
+  <text x="800" y="426" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">O — Orchestrate  (조율)</text>
+  <text x="800" y="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">G — Generate  (생성)</text>
+  <text x="800" y="474" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">I — Iterate  (반복)</text>
+  <text x="800" y="498" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">C — Complete  (완료)</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Step 5~8: LOGIC 에이전트를 직접 만들어봅니다</text>
+</svg>

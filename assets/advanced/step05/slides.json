@@ -1,11 +1,14 @@
 {
   "slides": [
+    "하네스_엔지니어링이란.svg",
     "Notion이란.svg",
+    "데이터베이스가_필요한_이유.svg",
     "Notion_DB란.svg",
-    "Notion_DB_연동_기초_+_워크플로우_설계.svg",
-    "Notion_DB_폴링_—_대기_항목_감지.svg",
-    "CLAUDE.md_트리거_—_워크플로우_자동_진입.svg",
-    "워크플로우_DB_설계_—_입력·처리·출력.svg",
-    "실습_—_미니_워크플로우_만들기.svg"
+    "Notion_MCP_vs_Notion_API.svg",
+    "Notion_API_토큰_발급.svg",
+    "Integration_페이지_연결.svg",
+    "Claude에게_API_키_전달_스킬_자동_생성.svg",
+    "템플릿_복사와_세팅.svg",
+    "Claude에게_구조_파악_지시.svg"
   ]
 }

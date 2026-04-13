@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 05</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Notion MCP  vs  Notion API</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">두 가지 연결 방식의 차이를 이해합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="60" y="232" width="520" height="300" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="320" y="272" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#171717">Notion MCP</text>
+  <text x="320" y="298" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">대화 중 직접 연결</text>
+  <text x="80" y="336" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Claude Code에 MCP 서버로 등록</text>
+  <text x="80" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">대화하면서 페이지 읽기·쓰기 가능</text>
+  <text x="80" y="388" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">별도 코드 작성 불필요</text>
+  <text x="80" y="438" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#dc2626">제한사항</text>
+  <text x="80" y="464" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#9ca3af">DB 필터 쿼리 지원이 제한적</text>
+  <text x="80" y="490" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#9ca3af">데이터 삭제·일괄 수정 불가</text>
+  <rect x="620" y="232" width="600" height="300" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="920" y="272" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#1e40af">Notion API</text>
+  <text x="920" y="298" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#2563eb">자동화 스크립트로 연결</text>
+  <text x="640" y="336" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Python 코드로 API 직접 호출</text>
+  <text x="640" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">DB 필터·정렬·페이지네이션 자유롭게 사용</text>
+  <text x="640" y="388" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">데이터 생성·수정·삭제 모두 가능</text>
+  <text x="640" y="438" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#16a34a">이번 수업</text>
+  <text x="640" y="464" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#16a34a">API 토큰 발급 -&gt; notion-query 스킬 제작</text>
+  <text x="640" y="490" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#16a34a">Claude가 스스로 스킬을 작성합니다</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">이번 Step5는 Notion API 방식으로 자동화 스킬을 만듭니다</text>
+</svg>

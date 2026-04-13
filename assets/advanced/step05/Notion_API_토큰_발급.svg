@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 05</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Notion API 토큰 발급</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Integration을 만들어 API 키를 발급합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">발급 순서</text>
+  <rect x="60" y="272" width="40" height="40" rx="20" fill="#2563eb"/>
+  <text x="80" y="297" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#ffffff">1</text>
+  <text x="120" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#374151">notion.so/my-integrations 접속</text>
+  <rect x="60" y="330" width="40" height="40" rx="20" fill="#2563eb"/>
+  <text x="80" y="355" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#ffffff">2</text>
+  <text x="120" y="360" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#374151">"+ New integration" 클릭</text>
+  <rect x="60" y="388" width="40" height="40" rx="20" fill="#2563eb"/>
+  <text x="80" y="413" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#ffffff">3</text>
+  <text x="120" y="418" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#374151">이름 입력 (예: my-agent)  -&gt;  Submit 클릭</text>
+  <rect x="60" y="446" width="40" height="40" rx="20" fill="#2563eb"/>
+  <text x="80" y="471" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#ffffff">4</text>
+  <text x="120" y="476" font-family="'Courier New',Courier,monospace" font-size="17" fill="#374151">Internal Integration Token  -&gt;  복사 (secret_...)</text>
+  <line x1="60" y1="516" x2="1220" y2="516" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="60" y="530" width="1160" height="24" rx="6" fill="#fef9c3"/>
+  <text x="640" y="547" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#854d0e">발급된 토큰은 외부에 공개하지 마세요  --  Claude에게만 전달합니다</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">notion.so/my-integrations 에서 바로 발급 가능합니다</text>
+</svg>

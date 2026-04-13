@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 05</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Claude에게 구조 파악을 지시합니다</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">DB 구조 분석부터 데이터 채우기까지 Claude가 수행합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">1단계  --  구조 파악</text>
+  <rect x="60" y="268" width="1160" height="76" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="80" y="300" font-family="'Courier New',Courier,monospace" font-size="14" fill="#1d4ed8">"이 Notion DB의 구조를 분석해서 어떤 속성(컬럼)이 있는지 목록으로 알려줘</text>
+  <text x="80" y="326" font-family="'Courier New',Courier,monospace" font-size="14" fill="#1d4ed8"> DB ID: [복사해둔 ID]"</text>
+  <text x="60" y="380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Claude 응답 예시</text>
+  <rect x="60" y="394" width="540" height="72" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="80" y="424" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">Title (제목), Status (할일/진행중/완료),</text>
+  <text x="80" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">Date (날짜), Tags (다중선택) 확인 완료</text>
+  <text x="60" y="502" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">2단계  --  데이터 채우기</text>
+  <rect x="60" y="516" width="1160" height="36" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="80" y="540" font-family="'Courier New',Courier,monospace" font-size="14" fill="#1d4ed8">"방금 파악한 구조에 맞춰 샘플 데이터 5개를 Notion DB에 직접 채워줘"</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">구조 파악 -&gt; 데이터 채우기까지 모두 Claude가 자동 처리합니다</text>
+</svg>
