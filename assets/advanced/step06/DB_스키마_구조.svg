@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 06</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">DB 스키마란?</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">스키마 = 데이터베이스의 컬럼 구조 — 어떤 정보를 저장할지 설계합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- 헤더 행 -->
+  <rect x="60" y="224" width="280" height="36" rx="0" fill="#f1f5f9"/>
+  <rect x="340" y="224" width="220" height="36" rx="0" fill="#eff6ff"/>
+  <rect x="560" y="224" width="220" height="36" rx="0" fill="#fef3c7"/>
+  <rect x="780" y="224" width="220" height="36" rx="0" fill="#f0fdf4"/>
+  <rect x="1000" y="224" width="220" height="36" rx="0" fill="#fdf4ff"/>
+  <text x="200" y="248" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#475569">속성 (컬럼)</text>
+  <text x="450" y="248" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">Personal Tasks</text>
+  <text x="670" y="248" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#d97706">Work Tasks</text>
+  <text x="890" y="248" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">Notes</text>
+  <text x="1110" y="248" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9333ea">Docs</text>
+
+  <!-- 행 1: Title -->
+  <rect x="60" y="260" width="280" height="44" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="340" y="260" width="220" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="560" y="260" width="220" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="780" y="260" width="220" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="1000" y="260" width="220" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="80" y="280" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">Title</text>
+  <text x="80" y="297" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">제목 (필수)</text>
+  <text x="450" y="287" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">할일 내용</text>
+  <text x="670" y="287" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">할일 내용</text>
+  <text x="890" y="287" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">메모 제목</text>
+  <text x="1110" y="287" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">배운 내용</text>
+
+  <!-- 행 2: Status -->
+  <rect x="60" y="304" width="280" height="44" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="340" y="304" width="220" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="560" y="304" width="220" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="780" y="304" width="220" height="44" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="1000" y="304" width="220" height="44" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="80" y="324" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">Status</text>
+  <text x="80" y="341" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">상태 (선택)</text>
+  <text x="450" y="331" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">할일 / 진행중 / 완료</text>
+  <text x="670" y="331" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">할일 / 진행중 / 완료</text>
+  <text x="890" y="331" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">— (없음)</text>
+  <text x="1110" y="331" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">— (없음)</text>
+
+  <!-- 행 3: Due Date -->
+  <rect x="60" y="348" width="280" height="44" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="340" y="348" width="220" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="560" y="348" width="220" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="780" y="348" width="220" height="44" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="1000" y="348" width="220" height="44" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="80" y="368" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">Due Date</text>
+  <text x="80" y="385" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">마감일 (날짜)</text>
+  <text x="450" y="375" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">마감일 (자동 추출 시도)</text>
+  <text x="670" y="375" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">마감일 (자동 추출 시도)</text>
+  <text x="890" y="375" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">— (없음)</text>
+  <text x="1110" y="375" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">— (없음)</text>
+
+  <!-- 행 4: Tag/Topic -->
+  <rect x="60" y="392" width="280" height="44" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="340" y="392" width="220" height="44" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="560" y="392" width="220" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="780" y="392" width="220" height="44" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="1000" y="392" width="220" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="80" y="412" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">Tag / Topic</text>
+  <text x="80" y="429" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">분류 태그</text>
+  <text x="450" y="419" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">— (없음)</text>
+  <text x="670" y="419" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">업무 / 학교 자동 태그</text>
+  <text x="890" y="419" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">— (없음)</text>
+  <text x="1110" y="419" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">주제 자동 분류</text>
+
+  <!-- 행 5: Priority -->
+  <rect x="60" y="436" width="280" height="44" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="340" y="436" width="220" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="560" y="436" width="220" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="780" y="436" width="220" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="1000" y="436" width="220" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="80" y="456" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">Priority</text>
+  <text x="80" y="473" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">중요도 (자동 태깅)</text>
+  <text x="450" y="463" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">높음 / 보통 / 낮음</text>
+  <text x="670" y="463" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">높음 / 보통 / 낮음</text>
+  <text x="890" y="463" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">높음 / 보통 / 낮음</text>
+  <text x="1110" y="463" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">높음 / 보통 / 낮음</text>
+
+  <!-- 행 6: Date (생성일) -->
+  <rect x="60" y="480" width="280" height="44" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="340" y="480" width="220" height="44" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="560" y="480" width="220" height="44" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="780" y="480" width="220" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="1000" y="480" width="220" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="80" y="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">Date</text>
+  <text x="80" y="517" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">생성일 (자동)</text>
+  <text x="450" y="507" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">— (없음)</text>
+  <text x="670" y="507" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">— (없음)</text>
+  <text x="890" y="507" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">기록 날짜 자동 저장</text>
+  <text x="1110" y="507" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">학습 날짜 자동 저장</text>
+
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">Step5에서 Claude에게 이 스키마를 주면 DB 4개를 자동으로 만들어줍니다</text>
+</svg>
