@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">전체 흐름도</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Notion task 하나가 처리되는 전체 과정입니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="60" y="232" width="160" height="60" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="140" y="258" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e40af">사용자 명령</text>
+  <text x="140" y="278" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">"오늘 것 처리해줘"</text>
+  <text x="238" y="266" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
+  <rect x="256" y="232" width="160" height="60" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="336" y="258" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">Notion 조회</text>
+  <text x="336" y="278" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">오늘 날짜 필터</text>
+  <text x="434" y="266" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
+  <rect x="452" y="232" width="160" height="60" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="532" y="258" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">task 목록 수신</text>
+  <text x="532" y="278" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">4개 항목 확인</text>
+  <text x="630" y="266" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
+  <rect x="648" y="232" width="160" height="60" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
+  <text x="728" y="258" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#d97706">유형 판단</text>
+  <text x="728" y="278" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">CLAUDE.md 규칙 적용</text>
+  <text x="640" y="330" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" fill="#d1d5db">&#8595;</text>
+  <rect x="60" y="348" width="1160" height="44" rx="8" fill="#fef9c3" stroke="#fde68a" stroke-width="1"/>
+  <text x="640" y="375" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#854d0e">[ task 처리 루프 — 목록이 빌 때까지 반복 ]</text>
+  <text x="640" y="430" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" fill="#d1d5db">&#8595;</text>
+  <rect x="60" y="446" width="260" height="72" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="190" y="474" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#dc2626">Status: 진행중</text>
+  <text x="190" y="496" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">처리 시작 전 변경</text>
+  <text x="338" y="485" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
+  <rect x="356" y="446" width="260" height="72" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="486" y="474" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">스킬 실행</text>
+  <text x="486" y="496" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">캘린더 / 데이터랩</text>
+  <text x="486" y="512" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">시트 / 이메일</text>
+  <text x="634" y="485" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
+  <rect x="652" y="446" width="260" height="72" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="782" y="474" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">Status: 완료</text>
+  <text x="782" y="496" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">처리 완료 후 변경</text>
+  <text x="930" y="485" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
+  <rect x="948" y="446" width="272" height="72" rx="8" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="1"/>
+  <text x="1084" y="474" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9333ea">다음 task로</text>
+  <text x="1084" y="496" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">루프 반복</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">각 task가 처리될 때마다 Notion Status가 실시간으로 바뀝니다</text>
+</svg>

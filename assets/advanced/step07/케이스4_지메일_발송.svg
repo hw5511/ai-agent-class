@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">케이스 4 — 지메일 발송</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">이메일 관련 task를 Claude가 내용을 작성하고 자동으로 발송합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="60" y="232" width="1160" height="56" rx="8" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="1"/>
+  <text x="80" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#9333ea">Notion task 예시</text>
+  <text x="240" y="256" font-family="'Courier New',Courier,monospace" font-size="14" fill="#374151">"오늘 미팅 결과 요약해서 팀장님한테 메일 보내줘"</text>
+  <text x="80" y="277" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">키워드 감지: 메일, 보내줘</text>
+  <text x="60" y="320" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">처리 흐름</text>
+  <rect x="60" y="334" width="240" height="80" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="180" y="362" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">컨텍스트 파악</text>
+  <text x="180" y="384" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">오늘 완료된 task</text>
+  <text x="180" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Notion에서 조회</text>
+  <text x="318" y="378" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
+  <rect x="336" y="334" width="240" height="80" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="456" y="362" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">Claude 이메일 작성</text>
+  <text x="456" y="384" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">제목 + 본문 자동 생성</text>
+  <text x="456" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">격식체 자동 조정</text>
+  <text x="594" y="378" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
+  <rect x="612" y="334" width="240" height="80" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="732" y="362" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">Gmail 스킬 실행</text>
+  <text x="732" y="384" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">gmail.py</text>
+  <text x="732" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">GWS OAuth 발송</text>
+  <text x="870" y="378" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
+  <rect x="888" y="334" width="332" height="80" rx="8" fill="#dcfce7" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="1054" y="358" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">이메일 발송 완료</text>
+  <text x="1054" y="380" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">발송 완료 + Status: 완료</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Claude가 내용을 직접 작성하고 발송까지 자동으로 처리합니다</text>
+</svg>
