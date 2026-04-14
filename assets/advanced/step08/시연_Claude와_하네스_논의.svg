@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">시연: Claude와 하네스 구조 논의</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Claude가 질문하며 8요소를 함께 채워가는 과정입니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="242" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">논의 프롬프트 입력</text>
+  <rect x="60" y="254" width="1160" height="52" rx="8" fill="#1e293b"/>
+  <text x="80" y="276" font-family="'Courier New',Courier,monospace" font-size="13" fill="#94a3b8">$ 나는 신상품 기획 회의 후 자동으로 업무를 분장하고 조사하고 임원에게 보고하고 싶어.</text>
+  <text x="80" y="296" font-family="'Courier New',Courier,monospace" font-size="13" fill="#94a3b8">  Input은 구글 Docs. 하네스 8요소로 설계해줘.</text>
+  <text x="60" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Claude 응답 (질문으로 구조 잡기)</text>
+  <rect x="60" y="342" width="1160" height="190" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="80" y="370" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">Claude:</text>
+  <text x="80" y="396" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">알겠습니다. 몇 가지 확인하겠습니다.</text>
+  <text x="80" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">1. 트리거: 회의 후 Docs URL을 직접 주실 건가요, 아니면 폴더를 자동 감시할까요?</text>
+  <text x="80" y="444" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">2. 담당자 목록은 CLAUDE.md에 미리 정의할까요? (예: 홍길동 - 시장조사 담당)</text>
+  <text x="80" y="468" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">3. 최종 보고 이메일 수신자는 누구인가요? 임원 이메일을 CLAUDE.md에 넣을게요.</text>
+  <text x="80" y="492" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">4. 조사 범위는 네이버 데이터랩 + 웹 조사 두 가지 모두 사용할까요?</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">Claude가 질문 -&gt; 사용자가 답변 -&gt; 구조가 완성됩니다</text>
+</svg>

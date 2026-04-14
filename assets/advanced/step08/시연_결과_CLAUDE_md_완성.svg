@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">시연 결과: CLAUDE.md + SKILL 목록</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">논의 후 Claude가 작성한 설계 결과물입니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="60" y="228" width="580" height="310" rx="8" fill="#1e293b"/>
+  <text x="80" y="254" font-family="'Courier New',Courier,monospace" font-size="12" fill="#94a3b8"># 신상품 기획 자동화 하네스</text>
+  <text x="80" y="276" font-family="'Courier New',Courier,monospace" font-size="12" fill="#64748b">## 트리거</text>
+  <text x="80" y="296" font-family="'Courier New',Courier,monospace" font-size="11" fill="#e2e8f0">Docs URL을 받으면 즉시 시작한다</text>
+  <text x="80" y="318" font-family="'Courier New',Courier,monospace" font-size="12" fill="#64748b">## 담당자</text>
+  <text x="80" y="338" font-family="'Courier New',Courier,monospace" font-size="11" fill="#e2e8f0">홍길동: 시장 규모 조사 (데이터랩)</text>
+  <text x="80" y="358" font-family="'Courier New',Courier,monospace" font-size="11" fill="#e2e8f0">김철수: 경쟁사 분석 (웹 조사)</text>
+  <text x="80" y="378" font-family="'Courier New',Courier,monospace" font-size="12" fill="#64748b">## 보고</text>
+  <text x="80" y="398" font-family="'Courier New',Courier,monospace" font-size="11" fill="#e2e8f0">report_to: director@company.com</text>
+  <text x="80" y="418" font-family="'Courier New',Courier,monospace" font-size="12" fill="#64748b">## 처리 순서</text>
+  <text x="80" y="438" font-family="'Courier New',Courier,monospace" font-size="11" fill="#e2e8f0">1. Docs 읽기 -> 회의록 가공</text>
+  <text x="80" y="458" font-family="'Courier New',Courier,monospace" font-size="11" fill="#e2e8f0">2. 업무 추출 -> Notion 등록</text>
+  <text x="80" y="478" font-family="'Courier New',Courier,monospace" font-size="11" fill="#e2e8f0">3. 조사 -> 시트 -> Docs -> Gmail</text>
+  <text x="80" y="506" font-family="'Courier New',Courier,monospace" font-size="11" fill="#64748b">CLAUDE.md</text>
+  <rect x="680" y="228" width="560" height="310" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="700" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">필요 SKILL 목록</text>
+  <text x="700" y="290" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">read_docs.md     구글 Docs 내용 읽기</text>
+  <text x="700" y="316" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">write_docs.md    구글 Docs에 쓰기</text>
+  <text x="700" y="342" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">notion_add.md    Notion task 등록</text>
+  <text x="700" y="368" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">datalab.md       네이버 데이터랩 조회</text>
+  <text x="700" y="394" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">web_search.md    웹 조사 (Gemini)</text>
+  <text x="700" y="420" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">write_sheet.md   구글 시트 작성</text>
+  <text x="700" y="446" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">send_gmail.md    Gmail 발송</text>
+  <text x="700" y="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">-&gt; 각 SKILL.md에 실행 방법 작성</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">CLAUDE.md + SKILL.md 세팅 완료 = 하네스 준비 완료</text>
+</svg>

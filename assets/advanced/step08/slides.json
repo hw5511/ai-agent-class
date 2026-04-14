@@ -1,9 +1,14 @@
 {
   "slides": [
-    "워크플로우_3_—_보고서_자동_생성.svg",
-    "보고서_자동화_—_전체_흐름.svg",
-    "Notion_DB_데이터_집계_—_notion-query.svg",
-    "Claude_분석_→_python-pptx_PPT_보고서.svg",
-    "Notion_Reports_DB_저장_+_심화_과정_완결.svg"
+    "하네스_엔지니어링_완성_구조.svg",
+    "우리가_만든_하네스_복습.svg",
+    "오늘_목표.svg",
+    "Claude를_설계_파트너로.svg",
+    "시연_시나리오_신상품_기획회의.svg",
+    "시연_Claude와_하네스_논의.svg",
+    "시연_결과_CLAUDE_md_완성.svg",
+    "나만의_하네스_설계_시트.svg",
+    "실습_직접_세팅_테스트.svg",
+    "결과_공유_심화_수료.svg"
   ]
 }

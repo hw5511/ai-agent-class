@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">우리가 만든 하네스 복습</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Step 5~7에서 배운 것을 8요소로 다시 보면</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="60" y="228" width="360" height="36" rx="6" fill="#eff6ff"/>
+  <text x="240" y="252" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e40af">Step5: Notion 기억 저장소</text>
+  <rect x="460" y="228" width="360" height="36" rx="6" fill="#f0fdf4"/>
+  <text x="640" y="252" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#16a34a">Step6: 세컨드 브레인</text>
+  <rect x="860" y="228" width="360" height="36" rx="6" fill="#fef3c7"/>
+  <text x="1040" y="252" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#d97706">Step7: PM 에이전트</text>
+  <rect x="60" y="272" width="360" height="250" rx="8" fill="#f8fafc" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="80" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">트리거  Claude 명령</text>
+  <text x="80" y="324" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Context  CLAUDE.md 규칙</text>
+  <text x="80" y="348" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Input  Notion API 토큰</text>
+  <text x="80" y="372" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Logic  API 호출 스킬</text>
+  <text x="80" y="396" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">State  DB 레코드 저장</text>
+  <text x="80" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Output  Notion DB 항목</text>
+  <text x="80" y="444" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Report  터미널 출력</text>
+  <text x="80" y="468" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Rules  SKILL.md 정의</text>
+  <rect x="460" y="272" width="360" height="250" rx="8" fill="#f8fafc" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="480" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#16a34a">트리거  키워드 입력 (개인:/업무:)</text>
+  <text x="480" y="324" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Context  CLAUDE.md 분류 규칙</text>
+  <text x="480" y="348" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Input  터미널 메모 텍스트</text>
+  <text x="480" y="372" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Logic  분류 판단 + DB 저장</text>
+  <text x="480" y="396" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">State  Notion DB 갱신</text>
+  <text x="480" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Output  분류된 메모 레코드</text>
+  <text x="480" y="444" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Report  터미널 확인</text>
+  <text x="480" y="468" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Rules  DB 스키마 정의</text>
+  <rect x="860" y="272" width="360" height="250" rx="8" fill="#f8fafc" stroke="#fde68a" stroke-width="1"/>
+  <text x="880" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#d97706">트리거  '오늘 것 처리해줘'</text>
+  <text x="880" y="324" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Context  처리 케이스 규칙</text>
+  <text x="880" y="348" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Input  Notion 오늘 task 목록</text>
+  <text x="880" y="372" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Logic  캘린더/데이터랩/시트/Gmail</text>
+  <text x="880" y="396" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">State  Status 진행중-&gt;완료</text>
+  <text x="880" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Output  처리 결과물</text>
+  <text x="880" y="444" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Report  각 스킬 결과</text>
+  <text x="880" y="468" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Rules  task 분류 로직</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">Step5~7이 모두 같은 구조입니다 — 8요소 하네스</text>
+</svg>
