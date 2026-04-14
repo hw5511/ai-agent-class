@@ -3,7 +3,7 @@
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 05</text>
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="32" font-weight="700" fill="#171717">Claude에게 API 키를 주면 스킬을 만들어줍니다</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">이것이 하네스 엔지니어링의 핵심 장면입니다</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">API 토큰을 주면 Claude가 Notion 조회 스킬을 자동으로 만들어줍니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">프롬프트 예시</text>
   <rect x="60" y="270" width="1160" height="100" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
@@ -26,5 +26,5 @@
   <text x="1016" y="480" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">앞으로 Claude가 자동 호출</text>
   <text x="1016" y="502" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">CLAUDE.md에 스킬 경로 등록</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">도구를 Claude가 직접 만든다  --  이것이 하네스 엔지니어링입니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">API 키 하나면 Claude가 스스로 도구를 만든다  --  이것이 스킬 자동 생성입니다</text>
 </svg>

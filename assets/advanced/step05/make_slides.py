@@ -201,16 +201,16 @@ slides = {
         f'  <rect x="60" y="446" width="40" height="40" rx="20" fill="#2563eb"/>\n'
         f'  <text x="80" y="471" text-anchor="middle" font-family="{FONT}" font-size="16" font-weight="700" fill="#ffffff">4</text>\n'
         + body(476, "Confirm 클릭  ->  연결 완료", x=120, size=17) + "\n" +
-        divider(516) + "\n" +
-        label(548, "DB ID 확인 방법") + "\n" +
-        body(572, "URL 예시: notion.so/workspace/[DB_ID]?v=...  ->  DB_ID 부분 복사", x=60, size=14, color="#6b7280") + "\n" +
+        divider(508) + "\n" +
+        label(530, "DB ID 확인 방법") + "\n" +
+        body(552, "URL 예시: notion.so/workspace/[DB_ID]?v=...  ->  DB_ID 부분 복사", x=60, size=14, color="#6b7280") + "\n" +
         footer("연결된 Integration만 해당 DB에 API로 접근할 수 있습니다")
     ),
 
     "Claude에게_API_키_전달_스킬_자동_생성": lambda: wrap(
         badge() + "\n" +
         title("Claude에게 API 키를 주면 스킬을 만들어줍니다", size=32) + "\n" +
-        sub("이것이 하네스 엔지니어링의 핵심 장면입니다") + "\n" +
+        sub("API 토큰을 주면 Claude가 Notion 조회 스킬을 자동으로 만들어줍니다") + "\n" +
         divider(212) + "\n" +
         label(256, "프롬프트 예시") + "\n" +
         f'  <rect x="60" y="270" width="1160" height="100" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>\n'
@@ -232,7 +232,7 @@ slides = {
         f'  <text x="1016" y="458" text-anchor="middle" font-family="{FONT}" font-size="14" font-weight="700" fill="#1e40af">재사용 가능한 스킬 완성</text>\n'
         f'  <text x="1016" y="480" text-anchor="middle" font-family="{FONT}" font-size="13" fill="#374151">앞으로 Claude가 자동 호출</text>\n'
         f'  <text x="1016" y="502" text-anchor="middle" font-family="{FONT}" font-size="12" fill="#6b7280">CLAUDE.md에 스킬 경로 등록</text>\n' +
-        footer("도구를 Claude가 직접 만든다  --  이것이 하네스 엔지니어링입니다")
+        footer("API 키 하나면 Claude가 스스로 도구를 만든다  --  이것이 스킬 자동 생성입니다")
     ),
 
     "템플릿_복사와_세팅": lambda: wrap(

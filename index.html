@@ -1425,19 +1425,22 @@
                         ]
                     },
                     {
-                        num: 5, title: 'Notion DB 연동 기초 + 워크플로우 설계', hours: '2시간 · Workflow Automation',
-                        goal: 'Notion DB 폴링 구조와 CLAUDE.md 트리거를 결합해 AI 워크플로우 기초 뼈대를 설계한다.',
-                        topics: ['Notion DB 폴링 구조 (notion-query + while loop)', 'CLAUDE.md 트리거 — 키워드로 워크플로우 자동 진입', '입력·처리·출력 DB 설계 패턴', '실습 — 미니 워크플로우 만들기'],
-                        practice: 'Notion Tasks DB를 60초마다 폴링하고 CLAUDE.md 트리거 키워드로 담당 워크플로우를 자동 선택하는 기초 구조를 만든다.',
+                        num: 5, title: 'Notion DB + API 연결', hours: '2시간 · Workflow Automation',
+                        goal: 'Notion DB 구조를 이해하고 API 토큰을 발급하여 Claude가 스스로 Notion 조회 스킬을 만드는 전 과정을 완성한다.',
+                        topics: ['Notion이란 + DB가 필요한 이유', 'Notion MCP vs API 차이', 'API 토큰 발급 + Integration 연결', 'Claude가 스스로 스킬 자동 생성', '템플릿 복사 + DB 구조 파악'],
+                        practice: 'Notion API 토큰을 Claude에게 전달하면 Claude가 notion-query.py 스킬을 자동으로 생성하고 DB 구조를 파악한 뒤 샘플 데이터를 채운다.',
                         slides: ['01.svg','02.svg','03.svg','04.svg','05.svg'],
                         slideDescs: [
+            { goal: 'Step 5의 학습 목표와 전체 구성을 이해한다.', topics: ['Notion DB + API 연결 수업 개요', 'Notion이란 / DB 필요성 / MCP vs API', 'API 토큰 발급 + Integration 연결', '실습: notion-query 스킬 자동 생성'], practice: null },
             { goal: 'Notion이 무엇인지와 AI 에이전트와의 연결 구조를 이해한다.', topics: ['Notion = 문서 + DB + 칸반을 하나로', '왜 Notion인가 — API 공개, AI가 직접 읽고 씀', '작업 지시 등록 → Claude 자동 감지·실행 → 결과 저장', 'Notion MCP로 Claude와 연결'], practice: null },
-            { goal: 'Notion DB가 무엇인지, 왜 단순 문서 대신 DB를 써야 하는지 이해한다.', topics: ['DB = 행(레코드) + 열(속성)로 정보를 구조화한 저장소', '단순 문서 vs DB — 필터·검색·자동화 가능 여부 차이', '핵심 속성: Title · Status · Date · Relation', 'Status = 할일 → 자동 감지 → 실행 → 완료 흐름'], practice: null },
-            { goal: 'Notion 기반 워크플로우의 전체 개념을 이해한다.', topics: ['Notion을 작업 큐로 활용', 'DB 폴링 구조 개요', 'CLAUDE.md 트리거 개념', 'ADV 06~08 전체 흐름 미리보기'], practice: null },
-            { goal: 'Notion DB 폴링 구조를 구현한다.', topics: ['notion-query로 할일 항목 조회', 'while True + sleep(60) 주기 실행', '처리 후 상태 완료 업데이트', '폴링 코드 작성'], practice: null },
-            { goal: 'CLAUDE.md 트리거로 워크플로우 진입점을 설계한다.', topics: ['키워드별 워크플로우 매핑 규칙', 'CLAUDE.md 작성 패턴', '리서치·카드뉴스·보고서 키워드', '트리거 동작 테스트'], practice: null },
-            { goal: '입력·처리·출력 DB 구조를 설계한다.', topics: ['Tasks DB (입력)', 'Claude 에이전트 (처리)', 'Docs / Reports DB (출력)', 'DB 분리 이점'], practice: null },
-            { goal: '미니 워크플로우를 직접 만들어 완성한다.', topics: ['Tasks DB 생성', '폴링 스크립트 작성', 'CLAUDE.md 트리거 설정', '테스트 태스크 등록 후 동작 확인'], practice: 'Notion Tasks DB를 60초마다 폴링하고 CLAUDE.md 트리거 키워드로 담당 워크플로우를 자동 선택하는 기초 구조를 만든다.' }
+            { goal: 'AI가 기억하려면 저장 공간이 필요한 이유를 이해한다.', topics: ['세션 종료 시 기억 초기화 문제', 'Notion DB = AI의 외부 기억 장치', '지시 등록 → 감지 → 실행 → 결과 저장 흐름'], practice: null },
+            { goal: 'Notion DB가 무엇인지, 왜 단순 문서 대신 DB를 써야 하는지 이해한다.', topics: ['DB = 행(레코드) + 열(속성)로 구조화된 저장소', '단순 문서 vs DB — 필터·자동화 가능 여부 차이', '핵심 속성: Title · Status · Date · Relation'], practice: null },
+            { goal: 'Notion MCP와 Notion API의 차이를 이해하고 이번 수업 방향을 파악한다.', topics: ['MCP — 대화 중 직접 연결, 제한적 쿼리', 'API — Python으로 자유로운 CRUD', '이번 수업: API 방식으로 notion-query 스킬 제작'], practice: null },
+            { goal: 'Notion API 토큰을 발급한다.', topics: ['notion.so/my-integrations 접속', 'New integration → 이름 입력 → Submit', 'Internal Integration Token 복사 (secret_...)'], practice: null, action: { label: 'Notion Integrations', type: 'link', url: 'https://www.notion.so/my-integrations' } },
+            { goal: 'Integration을 페이지에 연결하고 DB ID를 확인한다.', topics: ['DB 페이지 → ... 메뉴 → Connections → Integration 선택', 'Confirm → 연결 완료', 'URL에서 DB ID 부분 복사'], practice: null },
+            { goal: 'Claude에게 API 키를 주면 Notion 조회 스킬을 자동으로 만들어준다.', topics: ['API 토큰 + DB ID 제공', 'Claude가 notion-query.py 자동 생성', 'DB 조회 결과 확인 → CLAUDE.md에 스킬 등록'], practice: 'Notion API 토큰과 DB ID를 Claude에게 주고 notion-query.py 스킬을 만들어줘' },
+            { goal: 'Notion 템플릿을 복사하고 Integration을 연결한다.', topics: ['notion.com/templates 접속 → 템플릿 선택', '"Duplicate" 클릭 → 내 워크스페이스에 복사', 'Integration 연결 후 DB ID 복사'], practice: null, action: { label: 'Notion 템플릿', type: 'link', url: 'https://www.notion.com/templates' } },
+            { goal: 'Claude에게 DB 구조 파악과 샘플 데이터 채우기를 지시한다.', topics: ['DB 구조 분석 지시 → 속성 목록 확인', '구조에 맞춰 샘플 데이터 5개 자동 입력', '모든 과정을 Claude가 자동 처리'], practice: 'Notion DB 구조 파악해서 샘플 데이터 5개 채워줘' }
                         ]
                     },
                     {
