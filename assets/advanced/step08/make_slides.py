@@ -70,7 +70,42 @@ def footer_light(text):
 
 
 slides = {
-    # 1. 하네스 엔지니어링 완성 구조
+    # 1. 하네스 엔지니어링이란
+    "하네스_엔지니어링이란": lambda: wrap(
+        badge() + "\n" +
+        title("하네스 엔지니어링이란?") + "\n" +
+        sub("AI를 단순 도우미에서 자율 실행 시스템으로 만드는 설계 방식입니다") + "\n" +
+        divider(212) + "\n" +
+        f'  <rect x="60" y="232" width="330" height="300" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>\n'
+        f'  <text x="225" y="270" text-anchor="middle" font-family="{FONT}" font-size="15" font-weight="700" fill="#dc2626">기존 방식</text>\n'
+        + body(310, "매번 Claude에게", x=80) + "\n" +
+        body(336, "직접 지시해야 함", x=80) + "\n" +
+        body(380, '"Claude야, 이거 해줘"', x=80, color="#9ca3af") + "\n" +
+        body(406, '"결과 정리해줘"', x=80, color="#9ca3af") + "\n" +
+        body(432, '"이번엔 저장해줘"', x=80, color="#9ca3af") + "\n" +
+        body(490, "사람이 항상 개입해야 함", x=80, color="#dc2626") + "\n" +
+        f'  <rect x="420" y="232" width="330" height="300" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>\n'
+        f'  <text x="585" y="270" text-anchor="middle" font-family="{FONT}" font-size="15" font-weight="700" fill="#16a34a">하네스 방식</text>\n'
+        + body(310, "지시 구조를 한 번 설계", x=440) + "\n" +
+        body(336, "Claude가 스스로 감지·실행", x=440) + "\n" +
+        body(380, "Notion DB에 작업 등록", x=440, color="#9ca3af") + "\n" +
+        body(406, "Claude가 자동으로 읽음", x=440, color="#9ca3af") + "\n" +
+        body(432, "결과를 다시 DB에 저장", x=440, color="#9ca3af") + "\n" +
+        body(490, "반복 실행이 자동으로 됨", x=440, color="#16a34a") + "\n" +
+        f'  <rect x="780" y="232" width="440" height="300" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>\n'
+        f'  <text x="1000" y="270" text-anchor="middle" font-family="{FONT}" font-size="15" font-weight="700" fill="#1e40af">LOGIC 에이전트</text>\n'
+        f'  <text x="1000" y="296" text-anchor="middle" font-family="{FONT}" font-size="13" fill="#2563eb">Log to Logic</text>\n'
+        + body(330, "기록이 쌓이면", x=800) + "\n" +
+        body(356, "자동으로 작동하는 에이전트", x=800) + "\n" +
+        body(402, "L — Log  (기록)", x=800, color="#6b7280", size=13) + "\n" +
+        body(426, "O — Orchestrate  (조율)", x=800, color="#6b7280", size=13) + "\n" +
+        body(450, "G — Generate  (생성)", x=800, color="#6b7280", size=13) + "\n" +
+        body(474, "I — Iterate  (반복)", x=800, color="#6b7280", size=13) + "\n" +
+        body(498, "C — Complete  (완료)", x=800, color="#6b7280", size=13) + "\n" +
+        footer("Step 5~8에서 배운 모든 것을 하나의 시스템으로 완성합니다")
+    ),
+
+    # 2. 하네스 엔지니어링 완성 구조
     "하네스_엔지니어링_완성_구조": lambda: wrap(
         badge() + "\n" +
         title("하네스 엔지니어링 완성 구조") + "\n" +

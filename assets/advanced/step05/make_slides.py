@@ -70,38 +70,32 @@ def footer_light(text):
 
 
 slides = {
-    "하네스_엔지니어링이란": lambda: wrap(
+    "Step5_개요": lambda: wrap(
         badge() + "\n" +
-        title("하네스 엔지니어링이란?") + "\n" +
-        sub("AI를 단순 도우미에서 자율 실행 시스템으로 만드는 설계 방식입니다") + "\n" +
+        title("Step 5: Notion DB + 에이전트 연결") + "\n" +
+        sub("AI가 스스로 읽고 쓰는 외부 기억 장치를 만들어봅니다") + "\n" +
         divider(212) + "\n" +
-        f'  <rect x="60" y="232" width="330" height="300" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>\n'
-        f'  <text x="225" y="270" text-anchor="middle" font-family="{FONT}" font-size="15" font-weight="700" fill="#dc2626">기존 방식</text>\n'
-        + body(310, "매번 Claude에게", x=80) + "\n" +
-        body(336, "직접 지시해야 함", x=80) + "\n" +
-        body(380, '"Claude야, 이거 해줘"', x=80, color="#9ca3af") + "\n" +
-        body(406, '"결과 정리해줘"', x=80, color="#9ca3af") + "\n" +
-        body(432, '"이번엔 저장해줘"', x=80, color="#9ca3af") + "\n" +
-        body(490, "사람이 항상 개입해야 함", x=80, color="#dc2626") + "\n" +
-        f'  <rect x="420" y="232" width="330" height="300" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>\n'
-        f'  <text x="585" y="270" text-anchor="middle" font-family="{FONT}" font-size="15" font-weight="700" fill="#16a34a">하네스 방식</text>\n'
-        + body(310, "지시 구조를 한 번 설계", x=440) + "\n" +
-        body(336, "Claude가 스스로 감지·실행", x=440) + "\n" +
-        body(380, "Notion DB에 작업 등록", x=440, color="#9ca3af") + "\n" +
-        body(406, "Claude가 자동으로 읽음", x=440, color="#9ca3af") + "\n" +
-        body(432, "결과를 다시 DB에 저장", x=440, color="#9ca3af") + "\n" +
-        body(490, "반복 실행이 자동으로 됨", x=440, color="#16a34a") + "\n" +
-        f'  <rect x="780" y="232" width="440" height="300" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>\n'
-        f'  <text x="1000" y="270" text-anchor="middle" font-family="{FONT}" font-size="15" font-weight="700" fill="#1e40af">LOGIC 에이전트</text>\n'
-        f'  <text x="1000" y="296" text-anchor="middle" font-family="{FONT}" font-size="13" fill="#2563eb">Log to Logic</text>\n'
-        + body(330, "기록이 쌓이면", x=800) + "\n" +
-        body(356, "자동으로 작동하는 에이전트", x=800) + "\n" +
-        body(402, "L — Log  (기록)", x=800, color="#6b7280", size=13) + "\n" +
-        body(426, "O — Orchestrate  (조율)", x=800, color="#6b7280", size=13) + "\n" +
-        body(450, "G — Generate  (생성)", x=800, color="#6b7280", size=13) + "\n" +
-        body(474, "I — Iterate  (반복)", x=800, color="#6b7280", size=13) + "\n" +
-        body(498, "C — Complete  (완료)", x=800, color="#6b7280", size=13) + "\n" +
-        footer("Step 5~8: LOGIC 에이전트를 직접 만들어봅니다")
+        label(252, "이번 Step에서 배우는 것") + "\n" +
+        f'  <rect x="60" y="268" width="540" height="60" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>\n'
+        f'  <text x="90" y="293" font-family="{FONT}" font-size="15" font-weight="700" fill="#2563eb">01</text>\n'
+        + body(293, "Notion이란 무엇인가  +  데이터베이스가 필요한 이유", x=116) + "\n" +
+        body(315, "AI의 외부 기억 장치로서의 Notion DB", x=116, color="#9ca3af", size=13) + "\n" +
+        f'  <rect x="60" y="340" width="540" height="60" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>\n'
+        f'  <text x="90" y="365" font-family="{FONT}" font-size="15" font-weight="700" fill="#2563eb">02</text>\n'
+        + body(365, "Notion MCP  vs  Notion API", x=116) + "\n" +
+        body(387, "두 연결 방식의 차이와 이번 수업 방향", x=116, color="#9ca3af", size=13) + "\n" +
+        f'  <rect x="60" y="412" width="540" height="60" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>\n'
+        f'  <text x="90" y="437" font-family="{FONT}" font-size="15" font-weight="700" fill="#2563eb">03</text>\n'
+        + body(437, "API 토큰 발급  +  Integration 연결", x=116) + "\n" +
+        body(459, "Notion에서 API 접근 권한 설정하기", x=116, color="#9ca3af", size=13) + "\n" +
+        f'  <rect x="640" y="268" width="580" height="204" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>\n'
+        f'  <text x="930" y="300" text-anchor="middle" font-family="{FONT}" font-size="15" font-weight="700" fill="#1e40af">실습 목표</text>\n'
+        + body(332, "Claude에게 API 키를 주면", x=670) + "\n" +
+        body(358, "Notion 조회 스킬을 자동으로 만들어줍니다", x=670) + "\n" +
+        body(400, "notion-query.py  자동 생성", x=670, color="#6b7280", size=13) + "\n" +
+        body(424, "DB 구조 파악  -->  데이터 채우기", x=670, color="#6b7280", size=13) + "\n" +
+        body(448, "스킬 등록  -->  재사용 가능", x=670, color="#6b7280", size=13) + "\n" +
+        footer("Notion DB + API 연결을 완성하면 AI가 스스로 데이터를 다룹니다")
     ),
 
     "데이터베이스가_필요한_이유": lambda: wrap(
