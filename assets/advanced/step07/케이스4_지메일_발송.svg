@@ -6,19 +6,19 @@
   <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">이메일 관련 task를 Claude가 내용을 작성하고 자동으로 발송합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
   <rect x="60" y="232" width="1160" height="56" rx="8" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="1"/>
-  <text x="80" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#9333ea">Notion task 예시</text>
-  <text x="240" y="256" font-family="'Courier New',Courier,monospace" font-size="14" fill="#374151">"오늘 미팅 결과 요약해서 팀장님한테 메일 보내줘"</text>
-  <text x="80" y="277" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">키워드 감지: 메일, 보내줘</text>
+  <text x="80" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#9333ea">Sales Playbook task 예시</text>
+  <text x="300" y="256" font-family="'Courier New',Courier,monospace" font-size="14" fill="#374151">"신규 잠재 고객에게 첫 영업 이메일 발송해줘"</text>
+  <text x="80" y="277" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">속성 감지: Channel = Email, Stage = Prospecting</text>
   <text x="60" y="320" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">처리 흐름</text>
   <rect x="60" y="334" width="240" height="80" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="180" y="362" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">컨텍스트 파악</text>
-  <text x="180" y="384" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">오늘 완료된 task</text>
-  <text x="180" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Notion에서 조회</text>
+  <text x="180" y="362" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">고객 정보 조회</text>
+  <text x="180" y="384" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">잠재 고객 정보</text>
+  <text x="180" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Sales Playbook에서 조회</text>
   <text x="318" y="378" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
   <rect x="336" y="334" width="240" height="80" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
   <text x="456" y="362" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">Claude 이메일 작성</text>
   <text x="456" y="384" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">제목 + 본문 자동 생성</text>
-  <text x="456" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">격식체 자동 조정</text>
+  <text x="456" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">첫 영업 이메일 톤 조정</text>
   <text x="594" y="378" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
   <rect x="612" y="334" width="240" height="80" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
   <text x="732" y="362" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">Gmail 스킬 실행</text>

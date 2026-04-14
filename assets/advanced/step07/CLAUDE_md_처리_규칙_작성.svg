@@ -12,11 +12,11 @@
   <text x="80" y="338" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">1. notion-query 스킬로 오늘 날짜 Due Date task 목록 조회</text>
   <text x="80" y="362" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">2. 각 task를 순서대로 처리한다 (처리 전 Status='진행중', 완료 후 Status='완료')</text>
   <text x="80" y="386" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151"></text>
-  <text x="80" y="408" font-family="'Courier New',Courier,monospace" font-size="13" fill="#171717">task 분류 기준:</text>
-  <text x="80" y="430" font-family="'Courier New',Courier,monospace" font-size="13" fill="#2563eb">- '미팅', '일정', '약속' 포함  -&gt; google-calendar 스킬 실행</text>
-  <text x="80" y="452" font-family="'Courier New',Courier,monospace" font-size="13" fill="#d97706">- '조사', '트렌드', '검색량' 포함 -&gt; naver-datalab 스킬 실행 -&gt; 결과 Docs DB 저장</text>
-  <text x="80" y="474" font-family="'Courier New',Courier,monospace" font-size="13" fill="#16a34a">- '시트', '정리', '목록' 포함   -&gt; google-sheets 스킬 실행</text>
-  <text x="80" y="496" font-family="'Courier New',Courier,monospace" font-size="13" fill="#9333ea">- '이메일', '메일', '보내줘' 포함 -&gt; gmail 스킬 실행</text>
+  <text x="80" y="408" font-family="'Courier New',Courier,monospace" font-size="13" fill="#171717">task 분류 기준 (Sales Playbook DB 속성 기반):</text>
+  <text x="80" y="430" font-family="'Courier New',Courier,monospace" font-size="13" fill="#2563eb">- Channel = 'Video Call'  -&gt; google-calendar 스킬 실행</text>
+  <text x="80" y="452" font-family="'Courier New',Courier,monospace" font-size="13" fill="#d97706">- Channel = 'LinkedIn'    -&gt; naver-datalab 스킬 실행 -&gt; 결과 Docs DB 저장</text>
+  <text x="80" y="474" font-family="'Courier New',Courier,monospace" font-size="13" fill="#16a34a">- Stage  = 'Closing'      -&gt; google-sheets 스킬 실행</text>
+  <text x="80" y="496" font-family="'Courier New',Courier,monospace" font-size="13" fill="#9333ea">- Channel = 'Email'       -&gt; gmail 스킬 실행</text>
   <text x="80" y="518" font-family="'Courier New',Courier,monospace" font-size="13" fill="#dc2626">3. 오류 발생 시 Status='오류' + 비고에 사유 기록 후 다음 task 진행</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
   <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">이 지시문 하나로 PM 에이전트 전체 동작이 정의됩니다</text>
