@@ -3,17 +3,17 @@
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">케이스 2 — 네이버 데이터랩 조사</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">LinkedIn 잠재고객 타겟 조사 task를 데이터랩으로 실행하고 결과를 Notion에 저장합니다</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">리서치 task를 데이터랩으로 실행하고 결과를 Notion에 저장합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
   <rect x="60" y="232" width="1160" height="56" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
-  <text x="80" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#d97706">Sales Playbook task 예시</text>
-  <text x="300" y="256" font-family="'Courier New',Courier,monospace" font-size="14" fill="#374151">"LinkedIn 타겟 페르소나 검색량 분석해줘"</text>
-  <text x="80" y="277" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">속성 감지: Channel = LinkedIn, Stage = Prospecting</text>
+  <text x="80" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#d97706">Work DB task 예시</text>
+  <text x="250" y="256" font-family="'Courier New',Courier,monospace" font-size="14" fill="#374151">"경쟁사 AI 도구 도입 사례 조사"</text>
+  <text x="80" y="277" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">속성 감지: 유형 = 리서치</text>
   <text x="60" y="320" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">처리 흐름</text>
   <rect x="60" y="334" width="240" height="80" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="180" y="366" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">페르소나 추출</text>
-  <text x="180" y="388" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">"B2B SaaS 구매담당자"</text>
-  <text x="180" y="404" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">LinkedIn 타겟 파악</text>
+  <text x="180" y="366" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">핵심 키워드 추출</text>
+  <text x="180" y="388" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">"AI 도구 도입"</text>
+  <text x="180" y="404" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">관련 키워드 파악</text>
   <text x="318" y="378" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
   <rect x="336" y="334" width="240" height="80" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
   <text x="456" y="366" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">데이터랩 스킬 실행</text>
@@ -26,9 +26,9 @@
   <text x="732" y="404" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">인사이트 도출</text>
   <text x="870" y="378" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
   <rect x="888" y="334" width="332" height="80" rx="8" fill="#dcfce7" stroke="#bbf7d0" stroke-width="1"/>
-  <text x="1054" y="358" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">Notion Docs DB 저장</text>
+  <text x="1054" y="358" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">Work DB 메모 저장</text>
   <text x="1054" y="380" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">조사 결과 자동 기록</text>
-  <text x="1054" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Status: 완료</text>
+  <text x="1054" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">상태: 완료</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">조사 결과가 Notion Docs DB에 자동으로 축적됩니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">조사 결과가 Work DB 메모에 자동으로 저장됩니다</text>
 </svg>

@@ -7,7 +7,7 @@
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 명령</text>
   <rect x="60" y="268" width="1160" height="52" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
-  <text x="640" y="299" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="16" fill="#2563eb">"노션에서 오늘 처리해야 하는 것들 찾아서 처리해줘"</text>
+  <text x="640" y="299" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="16" fill="#2563eb">"Work에서 오늘 처리해야 하는 것들 찾아서 처리해줘"</text>
   <text x="60" y="356" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">관찰 포인트</text>
   <rect x="60" y="370" width="270" height="80" rx="8" fill="#fef9c3" stroke="#fde68a" stroke-width="1"/>
   <text x="195" y="398" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#854d0e">Notion 화면 열어두기</text>

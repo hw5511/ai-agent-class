@@ -3,21 +3,21 @@
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">케이스 3 — 구글 시트 생성</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Closing 단계 계약 데이터를 구글 시트로 자동 생성합니다</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">문서 task를 구글 시트로 자동 생성합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
   <rect x="60" y="232" width="1160" height="56" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
-  <text x="80" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#16a34a">Sales Playbook task 예시</text>
-  <text x="300" y="256" font-family="'Courier New',Courier,monospace" font-size="14" fill="#374151">"Closing 단계 고객사 계약 조건 시트로 정리해줘"</text>
-  <text x="80" y="277" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">속성 감지: Stage = Closing</text>
+  <text x="80" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#16a34a">Work DB task 예시</text>
+  <text x="250" y="256" font-family="'Courier New',Courier,monospace" font-size="14" fill="#374151">"이번달 업무 성과 정리 시트 작성"</text>
+  <text x="80" y="277" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">속성 감지: 유형 = 문서</text>
   <text x="60" y="320" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">처리 흐름</text>
   <rect x="60" y="334" width="240" height="80" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="180" y="366" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">Closing 데이터 조회</text>
-  <text x="180" y="388" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Notion에서 Stage=Closing</text>
-  <text x="180" y="404" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">고객사 목록 불러오기</text>
+  <text x="180" y="366" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">태스크명 분석</text>
+  <text x="180" y="388" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">"업무 성과 정리" 시트</text>
+  <text x="180" y="404" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">구조 파악</text>
   <text x="318" y="378" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
   <rect x="336" y="334" width="240" height="80" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
   <text x="456" y="366" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">데이터 정리</text>
-  <text x="456" y="388" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">고객사/조건/금액</text>
+  <text x="456" y="388" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">업무/성과/지표</text>
   <text x="456" y="404" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">컬럼 구성</text>
   <text x="594" y="378" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
   <rect x="612" y="334" width="240" height="80" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
@@ -29,5 +29,5 @@
   <text x="1054" y="358" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">구글 드라이브에 시트 생성</text>
   <text x="1054" y="380" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">링크 반환 + Status: 완료</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">Closing 단계 계약 데이터가 구글 시트로 자동 정리됩니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">유형=문서인 task가 구글 시트로 자동 생성됩니다</text>
 </svg>

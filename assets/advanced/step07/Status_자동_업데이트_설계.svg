@@ -12,7 +12,7 @@
   <text x="80" y="352" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">task를 처리할 때 반드시 아래 순서로 Status를 변경한다:</text>
   <text x="80" y="376" font-family="'Courier New',Courier,monospace" font-size="13" fill="#d97706">1. 처리 시작 직전 -&gt; notion-work/personal 스킬로 Status = '진행중' 변경</text>
   <text x="80" y="400" font-family="'Courier New',Courier,monospace" font-size="13" fill="#16a34a">2. 처리 완료 직후 -&gt; Status = '완료' 변경</text>
-  <text x="80" y="416" font-family="'Courier New',Courier,monospace" font-size="13" fill="#dc2626">3. 오류 발생 시   -&gt; Status = '오류' + 비고에 사유 기록</text>
+  <text x="80" y="416" font-family="'Courier New',Courier,monospace" font-size="13" fill="#dc2626">3. 오류 발생 시   -&gt; 메모에 '[오류] 사유' 기록 후 다음 task 진행</text>
   <line x1="60" y1="452" x2="1220" y2="452" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="484" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">처리 흐름 예시</text>
   <rect x="60" y="498" width="340" height="52" rx="8" fill="#fef9c3" stroke="#fde68a" stroke-width="1"/>

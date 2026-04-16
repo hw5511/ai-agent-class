@@ -10,21 +10,21 @@
   <text x="80" y="291" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#475569">task</text>
   <text x="450" y="291" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#475569">Status</text>
   <rect x="60" y="304" width="560" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="80" y="331" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">Demo 미팅 준비 — 목요일 오후 3시</text>
+  <text x="80" y="331" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">팀장님과 신규 프로젝트 킥오프 미팅 일정 확인</text>
   <rect x="400" y="312" width="80" height="24" rx="12" fill="#dcfce7"/>
   <text x="440" y="329" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#16a34a">완료</text>
   <rect x="60" y="348" width="560" height="44" fill="#fefce8" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="80" y="375" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">LinkedIn 타겟 페르소나 트렌드 조사</text>
+  <text x="80" y="375" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">경쟁사 AI 도구 도입 사례 조사</text>
   <rect x="390" y="356" width="100" height="24" rx="12" fill="#fef9c3"/>
-  <text x="440" y="373" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#854d0e">진행중</text>
+  <text x="440" y="373" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#854d0e">진행 중</text>
   <rect x="60" y="392" width="560" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="80" y="419" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">Closing 계약 제안서 시트 생성</text>
+  <text x="80" y="419" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">이번달 업무 성과 정리 시트 작성</text>
   <rect x="390" y="400" width="100" height="24" rx="12" fill="#f1f5f9"/>
-  <text x="440" y="417" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#6b7280">진행전</text>
+  <text x="440" y="417" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#6b7280">시작 전</text>
   <rect x="60" y="436" width="560" height="44" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="80" y="463" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">신규 잠재 고객에게 첫 영업 이메일 발송</text>
+  <text x="80" y="463" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">거래처 담당자에게 프로젝트 진행 현황 이메일 발송</text>
   <rect x="390" y="444" width="100" height="24" rx="12" fill="#f1f5f9"/>
-  <text x="440" y="461" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#6b7280">진행전</text>
+  <text x="440" y="461" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#6b7280">시작 전</text>
   <rect x="660" y="268" width="560" height="216" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
   <text x="940" y="306" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1e40af">Status 3단계</text>
   <rect x="700" y="322" width="100" height="28" rx="14" fill="#f1f5f9"/>
