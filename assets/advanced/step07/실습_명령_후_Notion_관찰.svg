@@ -2,8 +2,10 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">실습 — 명령 후 Notion 실시간 관찰</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Claude가 일하는 과정을 Notion으로 눈으로 확인합니다</text>
+  <rect x="148" y="44" width="96" height="24" rx="12" fill="#16a34a"/>
+  <text x="196" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">1라운드</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">1라운드 실습 — 명령 후 Notion 실시간 관찰</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">더미 task로 Claude가 일하는 과정을 Notion에서 눈으로 확인합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 명령</text>
   <rect x="60" y="268" width="1160" height="52" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
@@ -23,8 +25,10 @@
   <text x="795" y="436" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">이메일 직접 확인</text>
   <rect x="960" y="370" width="260" height="80" rx="8" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="1"/>
   <text x="1090" y="398" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9333ea">완료 보고 수신</text>
-  <text x="1090" y="420" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">4개 task 처리</text>
-  <text x="1090" y="436" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">결과 요약 출력</text>
+  <text x="1090" y="420" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">task 처리 결과</text>
+  <text x="1090" y="436" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">요약 출력 확인</text>
+  <rect x="60" y="490" width="1160" height="40" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="640" y="515" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#16a34a">1라운드 완료! → 다음은 2라운드 — 나만의 task를 직접 입력해서 실습합니다</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
   <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Claude가 Notion을 보고 스스로 판단하고 실행하는 PM 에이전트 완성</text>
 </svg>

@@ -2,26 +2,50 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">실습 준비 — Notion에 오늘 task 4개 등록</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Work DB 유형 속성 확인 후 아래 4개 task를 Notion에서 직접 입력합니다</text>
+  <rect x="148" y="44" width="96" height="24" rx="12" fill="#16a34a"/>
+  <text x="196" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">1라운드</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="38" font-weight="700" fill="#171717">1라운드 준비 — 템플릿 복제 + 더미 데이터 확인</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">강사 템플릿을 Duplicate하면 더미 task 9개가 이미 준비됩니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">직접 등록할 task 목록 (마감일 = 오늘, 상태 = 시작 전)</text>
-  <rect x="60" y="268" width="1160" height="56" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
-  <text x="80" y="292" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">케이스 1 — 캘린더</text>
-  <text x="250" y="292" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">"팀장님과 신규 프로젝트 킥오프 미팅 일정 확인"</text>
-  <text x="80" y="312" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Work DB | 유형: 미팅</text>
-  <rect x="60" y="334" width="1160" height="56" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
-  <text x="80" y="358" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#d97706">케이스 2 — 데이터랩</text>
-  <text x="270" y="358" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">"경쟁사 AI 도구 도입 사례 조사"</text>
-  <text x="80" y="378" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Work DB | 유형: 리서치</text>
-  <rect x="60" y="400" width="1160" height="56" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
-  <text x="80" y="424" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">케이스 3 — 시트</text>
-  <text x="250" y="424" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">"이번달 업무 성과 정리 시트 작성"</text>
-  <text x="80" y="444" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Work DB | 유형: 문서</text>
-  <rect x="60" y="466" width="1160" height="56" rx="8" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="1"/>
-  <text x="80" y="490" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9333ea">케이스 4 — 이메일</text>
-  <text x="260" y="490" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">"거래처 담당자에게 프로젝트 진행 현황 이메일 발송"</text>
-  <text x="80" y="510" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Work DB | 유형: 이메일</text>
+
+  <!-- 왼쪽: 복제 방법 -->
+  <text x="60" y="248" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">복제 방법</text>
+  <rect x="60" y="260" width="520" height="270" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="80" y="278" width="24" height="24" rx="12" fill="#2563eb"/>
+  <text x="92" y="295" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">1</text>
+  <text x="116" y="295" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">아래 템플릿 링크 열기</text>
+  <rect x="80" y="312" width="480" height="32" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="290" y="333" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" fill="#2563eb">notion.so/345ea273...</text>
+  <rect x="80" y="360" width="24" height="24" rx="12" fill="#2563eb"/>
+  <text x="92" y="377" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">2</text>
+  <text x="116" y="377" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">오른쪽 상단 ··· → Duplicate 클릭</text>
+  <rect x="80" y="400" width="24" height="24" rx="12" fill="#2563eb"/>
+  <text x="92" y="417" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">3</text>
+  <text x="116" y="417" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">내 워크스페이스로 이동 후 Work DB 확인</text>
+  <rect x="80" y="442" width="24" height="24" rx="12" fill="#2563eb"/>
+  <text x="92" y="459" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">4</text>
+  <text x="116" y="459" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">더미 task 마감일을 오늘로 수정</text>
+  <text x="320" y="508" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">( 상태 = 시작 전 확인 )</text>
+
+  <!-- 오른쪽: 오늘 처리할 더미 task -->
+  <text x="620" y="248" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">오늘 마감 더미 task (자동 처리 대상)</text>
+  <rect x="620" y="260" width="600" height="52" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="640" y="282" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">미팅</text>
+  <text x="690" y="282" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">팀장님과 신규 프로젝트 킥오프 미팅 일정 확인</text>
+  <text x="640" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">→ work-meeting 스킬 실행</text>
+  <rect x="620" y="322" width="600" height="52" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
+  <text x="640" y="344" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#d97706">리서치</text>
+  <text x="700" y="344" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">경쟁사 AI 도구 도입 사례 조사</text>
+  <text x="640" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">→ work-research 스킬 실행</text>
+  <rect x="620" y="384" width="600" height="52" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="640" y="406" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">문서</text>
+  <text x="680" y="406" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">이번달 업무 성과 정리 시트 작성</text>
+  <text x="640" y="424" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">→ work-docs 스킬 실행</text>
+  <rect x="620" y="446" width="600" height="52" rx="8" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="1"/>
+  <text x="640" y="468" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9333ea">이메일</text>
+  <text x="695" y="468" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">거래처 담당자에게 진행 현황 이메일 발송</text>
+  <text x="640" y="486" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">→ work-email 스킬 실행</text>
+
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">Work DB 스키마 확인은 Claude에게, task 직접 입력은 Notion에서</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">복제 완료 + 더미 task 마감일 오늘로 수정 → 다음 슬라이드에서 실습 명령 실행</text>
 </svg>

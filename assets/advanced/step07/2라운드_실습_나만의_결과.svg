@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
+  <rect x="148" y="44" width="96" height="24" rx="12" fill="#f59e0b"/>
+  <text x="196" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">2라운드</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="38" font-weight="700" fill="#171717">2라운드 실습 — 내 업무가 자동 처리된다</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">직접 입력한 task를 Claude가 스스로 판단하고 처리합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">동일한 명령 한 번</text>
+  <rect x="60" y="268" width="1160" height="52" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
+  <text x="640" y="299" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="16" fill="#d97706">"Work에서 오늘 처리해야 하는 것들 찾아서 처리해줘"</text>
+  <text x="60" y="356" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">2라운드에서 달라지는 것</text>
+  <rect x="60" y="370" width="360" height="100" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
+  <text x="240" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#92400e">내 실제 업무 처리</text>
+  <text x="240" y="424" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">더미가 아닌 내가 입력한</text>
+  <text x="240" y="442" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">실제 task가 처리됩니다</text>
+  <text x="456" y="425" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="28" fill="#d1d5db">→</text>
+  <rect x="490" y="370" width="340" height="100" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="660" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#166534">실제 결과물 생성</text>
+  <text x="660" y="424" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">내 캘린더 / 내 시트 /</text>
+  <text x="660" y="442" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">내 이메일 실제 생성</text>
+  <text x="856" y="425" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="28" fill="#d1d5db">→</text>
+  <rect x="880" y="370" width="340" height="100" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="1050" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e40af">에이전트 완성 체감</text>
+  <text x="1050" y="424" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">명령 한 번으로</text>
+  <text x="1050" y="442" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">4가지 업무 자동 완료</text>
+  <rect x="60" y="504" width="1160" height="36" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="640" y="527" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">명령은 같지만 결과는 내 업무 — 에이전트가 context를 읽고 판단한 것입니다</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">이제 이 에이전트에 내 업무를 맡기면 됩니다</text>
+</svg>
