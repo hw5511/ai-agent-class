@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="36" font-weight="700" fill="#171717">work-email 스킬 만들기</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">이메일 task를 받아 내용을 작성하고 Gmail로 발송하는 처리 방식입니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="60" y="232" width="530" height="310" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="80" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">스킬 역할</text>
+  <rect x="80" y="278" width="490" height="34" rx="6" fill="#9333ea" opacity="0.12"/>
+  <text x="90" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9333ea">유형 = '이메일'  감지 시 실행</text>
+  <text x="80" y="338" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">Work DB에서 유형이 '이메일'인 task를 처리합니다</text>
+  <text x="80" y="374" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#9ca3af" letter-spacing="0.06em">처리 순서</text>
+  <text x="80" y="396" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">1. task명에서 수신자 / 용건 파악</text>
+  <text x="80" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">2. Claude가 이메일 초안 작성</text>
+  <text x="80" y="444" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">3. gws_skill.md gmail 기능으로 발송</text>
+  <text x="80" y="468" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">4. notion-work 스킬로 Status = '완료' 업데이트</text>
+  <text x="80" y="506" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">gws_skill.md + notion-work.md 활용</text>
+  <rect x="620" y="232" width="600" height="310" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="640" y="264" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">SKILL.md 구조 예시</text>
+  <text x="640" y="290" font-family="'Courier New',Courier,monospace" font-size="12" fill="#2563eb"># work-email 스킬</text>
+  <text x="640" y="310" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151"></text>
+  <text x="640" y="330" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="600" fill="#374151">## 용도</text>
+  <text x="640" y="350" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">Work DB 이메일 task를 작성하고 Gmail로 발송</text>
+  <text x="640" y="370" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151"></text>
+  <text x="640" y="390" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="600" fill="#374151">## 처리 방식</text>
+  <text x="640" y="410" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">1. task명에서 수신자/용건 파악</text>
+  <text x="640" y="430" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">2. Claude가 이메일 초안 작성</text>
+  <text x="640" y="450" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">3. gws gmail 기능으로 발송</text>
+  <text x="640" y="470" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">4. Status = '완료' 변경</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#2563eb">Claude에게 'work-email.md 스킬 파일 만들어줘'라고 요청합니다</text>
+</svg>
