@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="36" font-weight="700" fill="#171717">task 유형별 행동 분류</text>
+  <text x="60" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#6b7280">Work DB의 각 task가 어떤 행동을 필요로 하는지 먼저 생각해봅니다</text>
+  <line x1="60" y1="196" x2="1220" y2="196" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- 헤더 -->
+  <rect x="60" y="208" width="430" height="32" rx="6" fill="#f1f5f9"/>
+  <text x="275" y="229" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#64748b" letter-spacing="0.08em">Work DB task</text>
+  <rect x="510" y="208" width="280" height="32" rx="6" fill="#f1f5f9"/>
+  <text x="650" y="229" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#64748b" letter-spacing="0.08em">필요한 행동</text>
+  <rect x="810" y="208" width="410" height="32" rx="6" fill="#f1f5f9"/>
+  <text x="1015" y="229" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#64748b" letter-spacing="0.08em">사용 도구</text>
+
+  <!-- Row 1: 미팅 -->
+  <rect x="60" y="252" width="430" height="72" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="60" y="252" width="52" height="72" rx="8" fill="#2563eb"/>
+  <text x="86" y="290" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" writing-mode="tb" letter-spacing="0">미팅</text>
+  <text x="126" y="278" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e3a5f">"팀장님과 신규 프로젝트 킥오프</text>
+  <text x="126" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e3a5f">미팅 일정 확인"</text>
+  <text x="510" y="278" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#374151">캘린더에 일정 등록</text>
+  <text x="510" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">날짜 · 시간 파악 후 등록</text>
+  <rect x="810" y="260" width="160" height="34" rx="6" fill="#2563eb"/>
+  <text x="890" y="282" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">gws calendar</text>
+  <text x="994" y="282" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">GWS CLI</text>
+
+  <!-- Row 2: 리서치 -->
+  <rect x="60" y="336" width="430" height="72" rx="8" fill="#fefce8" stroke="#fde68a" stroke-width="1"/>
+  <rect x="60" y="336" width="52" height="72" rx="8" fill="#d97706"/>
+  <text x="86" y="374" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" writing-mode="tb" letter-spacing="0">리서치</text>
+  <text x="126" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#78350f">"경쟁사 AI 도구 도입 사례 조사"</text>
+  <text x="510" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#374151">트렌드 조사 후 결과 저장</text>
+  <text x="510" y="386" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">키워드 추출 후 검색량 분석</text>
+  <rect x="810" y="344" width="180" height="34" rx="6" fill="#d97706"/>
+  <text x="900" y="366" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">naver datalab</text>
+  <text x="1010" y="366" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">네이버 API</text>
+
+  <!-- Row 3: 문서 -->
+  <rect x="60" y="420" width="430" height="72" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <rect x="60" y="420" width="52" height="72" rx="8" fill="#16a34a"/>
+  <text x="86" y="458" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" writing-mode="tb" letter-spacing="0">문서</text>
+  <text x="126" y="446" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#14532d">"이번달 업무 성과 정리</text>
+  <text x="126" y="468" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#14532d">시트 작성"</text>
+  <text x="510" y="446" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#374151">구글 시트 생성</text>
+  <text x="510" y="470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">정리 내용 파악 후 시트 구성</text>
+  <rect x="810" y="428" width="150" height="34" rx="6" fill="#16a34a"/>
+  <text x="885" y="450" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">gws sheets</text>
+  <text x="978" y="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">GWS CLI</text>
+
+  <!-- Row 4: 이메일 -->
+  <rect x="60" y="504" width="430" height="72" rx="8" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="1"/>
+  <rect x="60" y="504" width="52" height="72" rx="8" fill="#7c3aed"/>
+  <text x="86" y="542" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" writing-mode="tb" letter-spacing="0">이메일</text>
+  <text x="126" y="530" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4c1d95">"거래처 담당자에게 프로젝트</text>
+  <text x="126" y="552" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4c1d95">진행 현황 이메일 발송"</text>
+  <text x="510" y="530" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#374151">이메일 작성 후 발송</text>
+  <text x="510" y="554" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">수신자 · 용건 파악 후 발송</text>
+  <rect x="810" y="512" width="150" height="34" rx="6" fill="#7c3aed"/>
+  <text x="885" y="534" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">gws gmail</text>
+  <text x="978" y="534" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">GWS CLI</text>
+
+  <!-- 하단 -->
+  <rect x="60" y="598" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="629" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#2563eb">각 행동의 처리 방식을 직접 설명하면 — Claude가 스킬 파일로 만들어줍니다</text>
+</svg>

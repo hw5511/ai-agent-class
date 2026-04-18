@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="36" font-weight="700" fill="#171717">스킬을 대화로 만들기</text>
+  <text x="60" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#6b7280">각 유형의 처리 방식을 내 말로 Claude에게 설명 — 스킬 파일이 생성됩니다</text>
+  <line x1="60" y1="196" x2="1220" y2="196" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- work-meeting -->
+  <rect x="60" y="212" width="555" height="218" rx="10" fill="#f8fafc" stroke="#bfdbfe" stroke-width="1.5"/>
+  <rect x="60" y="212" width="555" height="36" rx="10" fill="#2563eb"/>
+  <rect x="60" y="230" width="555" height="18" fill="#2563eb"/>
+  <text x="340" y="236" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">work-meeting.md</text>
+  <text x="80" y="274" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">나:</text>
+  <rect x="100" y="260" width="495" height="72" rx="6" fill="#eff6ff"/>
+  <text x="116" y="282" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e3a5f">"미팅 task는 캘린더에 일정을 등록해야 해.</text>
+  <text x="116" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e3a5f">task명에서 날짜·시간 파악 &gt; gws calendar 등록 &gt; 완료 처리.</text>
+  <text x="116" y="322" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e3a5f">이 내용으로 work-meeting.md 만들어줘"</text>
+  <text x="80" y="360" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">Claude:</text>
+  <text x="138" y="360" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">.claude/skills/work-meeting.md 생성 완료</text>
+  <text x="80" y="388" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">gws_skill.md + notion-work.md 참고해서 작성</text>
+
+  <!-- work-research -->
+  <rect x="665" y="212" width="555" height="218" rx="10" fill="#f8fafc" stroke="#fde68a" stroke-width="1.5"/>
+  <rect x="665" y="212" width="555" height="36" rx="10" fill="#d97706"/>
+  <rect x="665" y="230" width="555" height="18" fill="#d97706"/>
+  <text x="942" y="236" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">work-research.md</text>
+  <text x="685" y="274" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">나:</text>
+  <rect x="705" y="260" width="495" height="72" rx="6" fill="#fefce8"/>
+  <text x="721" y="282" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#78350f">"리서치 task는 키워드 트렌드를 조사해야 해.</text>
+  <text x="721" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#78350f">키워드 추출 &gt; datalab 조사 &gt; 결과 메모 저장 &gt; 완료 처리.</text>
+  <text x="721" y="322" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#78350f">이 내용으로 work-research.md 만들어줘"</text>
+  <text x="685" y="360" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">Claude:</text>
+  <text x="743" y="360" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">.claude/skills/work-research.md 생성 완료</text>
+  <text x="685" y="388" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">naver-datalab.md + notion-work.md 참고해서 작성</text>
+
+  <!-- work-docs -->
+  <rect x="60" y="444" width="555" height="210" rx="10" fill="#f8fafc" stroke="#bbf7d0" stroke-width="1.5"/>
+  <rect x="60" y="444" width="555" height="36" rx="10" fill="#16a34a"/>
+  <rect x="60" y="462" width="555" height="18" fill="#16a34a"/>
+  <text x="340" y="468" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">work-docs.md</text>
+  <text x="80" y="506" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">나:</text>
+  <rect x="100" y="492" width="495" height="72" rx="6" fill="#f0fdf4"/>
+  <text x="116" y="514" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#14532d">"문서 task는 구글 시트를 만들어야 해.</text>
+  <text x="116" y="534" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#14532d">정리할 내용 파악 &gt; gws sheets 생성 &gt; 링크 저장 &gt; 완료 처리.</text>
+  <text x="116" y="554" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#14532d">이 내용으로 work-docs.md 만들어줘"</text>
+  <text x="80" y="592" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">Claude:</text>
+  <text x="138" y="592" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">.claude/skills/work-docs.md 생성 완료</text>
+
+  <!-- work-email -->
+  <rect x="665" y="444" width="555" height="210" rx="10" fill="#f8fafc" stroke="#e9d5ff" stroke-width="1.5"/>
+  <rect x="665" y="444" width="555" height="36" rx="10" fill="#7c3aed"/>
+  <rect x="665" y="462" width="555" height="18" fill="#7c3aed"/>
+  <text x="942" y="468" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">work-email.md</text>
+  <text x="685" y="506" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">나:</text>
+  <rect x="705" y="492" width="495" height="72" rx="6" fill="#fdf4ff"/>
+  <text x="721" y="514" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4c1d95">"이메일 task는 이메일을 작성해서 보내야 해.</text>
+  <text x="721" y="534" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4c1d95">수신자·용건 파악 &gt; 이메일 초안 작성 &gt; gws gmail 발송 &gt; 완료 처리.</text>
+  <text x="721" y="554" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#4c1d95">이 내용으로 work-email.md 만들어줘"</text>
+  <text x="685" y="592" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">Claude:</text>
+  <text x="743" y="592" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">.claude/skills/work-email.md 생성 완료</text>
+
+  <!-- 하단 -->
+  <rect x="60" y="668" width="1160" height="38" rx="8" fill="#eff6ff"/>
+  <text x="640" y="692" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#2563eb">복사 없이 내 말로 직접 입력 — Claude가 이해하고 4개 스킬 파일을 생성합니다</text>
+</svg>
