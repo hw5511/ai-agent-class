@@ -3,44 +3,64 @@
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">나만의 하네스 설계 시트</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">어떤 자동화를 만들고 싶은지 8요소로 적어봅니다</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">8요소를 직접 채운 뒤 — 그 내용을 Claude에게 그대로 설명하세요</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <rect x="60" y="228" width="270" height="80" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Row 1 -->
+  <rect x="60" y="228" width="270" height="96" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
   <text x="80" y="250" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">트리거</text>
-  <text x="80" y="270" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">언제 시작하나?</text>
-  <text x="80" y="287" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#bfdbfe">예) Notion Webhook → Channels</text>
-  <text x="80" y="304" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#d1d5db">_______________</text>
-  <rect x="360" y="228" width="270" height="80" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="380" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">Context</text>
-  <text x="380" y="276" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">Claude에게 뭘 알려줘야 하나?</text>
-  <text x="380" y="298" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#d1d5db">_______________</text>
-  <rect x="660" y="228" width="270" height="80" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="680" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">Input</text>
-  <text x="680" y="276" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">어떤 데이터/파일이 필요하나?</text>
-  <text x="680" y="298" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#d1d5db">_______________</text>
-  <rect x="960" y="228" width="260" height="80" rx="8" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="1"/>
-  <text x="980" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9333ea">Rules</text>
-  <text x="980" y="276" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">어떤 제어가 필요하나?</text>
-  <text x="980" y="298" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#d1d5db">_______________</text>
-  <rect x="60" y="336" width="270" height="80" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="80" y="269" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">언제 시작하나?</text>
+  <text x="80" y="286" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#93c5fd">예) 회의 후 Docs URL 전달</text>
+  <text x="80" y="306" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#d1d5db">내 것) _______________</text>
+
+  <rect x="360" y="228" width="270" height="96" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="380" y="250" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">Context</text>
+  <text x="380" y="269" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">Claude에게 뭘 알려줘야 하나?</text>
+  <text x="380" y="286" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#93c5fd">예) 담당자 목록 · 임원 이메일</text>
+  <text x="380" y="306" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#d1d5db">내 것) _______________</text>
+
+  <rect x="660" y="228" width="270" height="96" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="680" y="250" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">Input</text>
+  <text x="680" y="269" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">어떤 데이터/파일이 필요하나?</text>
+  <text x="680" y="286" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#93c5fd">예) 구글 Docs 회의록</text>
+  <text x="680" y="306" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#d1d5db">내 것) _______________</text>
+
+  <rect x="960" y="228" width="260" height="96" rx="8" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="1"/>
+  <text x="980" y="250" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9333ea">Rules</text>
+  <text x="980" y="269" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">어떤 제어 규칙이 필요하나?</text>
+  <text x="980" y="286" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#c084fc">예) 담당자 누락 시 중단</text>
+  <text x="980" y="306" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#d1d5db">내 것) _______________</text>
+
+  <!-- Row 2 -->
+  <rect x="60" y="340" width="270" height="96" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
   <text x="80" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">Logic</text>
-  <text x="80" y="384" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">어떤 스킬/MCP를 쓰나?</text>
-  <text x="80" y="406" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#d1d5db">_______________</text>
-  <rect x="360" y="336" width="270" height="80" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="80" y="381" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">어떤 순서로 처리하나?</text>
+  <text x="80" y="398" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#6ee7b7">예) Docs&#x2192;Notion&#x2192;데이터랩&#x2192;Gmail</text>
+  <text x="80" y="418" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#d1d5db">내 것) _______________</text>
+
+  <rect x="360" y="340" width="270" height="96" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
   <text x="380" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">State</text>
-  <text x="380" y="384" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">진행 상황을 어디서 확인하나?</text>
-  <text x="380" y="406" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#d1d5db">_______________</text>
-  <rect x="660" y="336" width="270" height="80" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
+  <text x="380" y="381" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">어디서 진행 상황을 확인하나?</text>
+  <text x="380" y="398" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#6ee7b7">예) Notion 태스크 상태</text>
+  <text x="380" y="418" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#d1d5db">내 것) _______________</text>
+
+  <rect x="660" y="340" width="270" height="96" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
   <text x="680" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#d97706">Output</text>
-  <text x="680" y="384" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">무엇이 만들어지나?</text>
-  <text x="680" y="406" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#d1d5db">_______________</text>
-  <rect x="960" y="336" width="260" height="80" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
+  <text x="680" y="381" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">무엇이 만들어지나?</text>
+  <text x="680" y="398" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#fbbf24">예) 조사결과 시트 + 보고 Docs</text>
+  <text x="680" y="418" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#d1d5db">내 것) _______________</text>
+
+  <rect x="960" y="340" width="260" height="96" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
   <text x="980" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#d97706">Report</text>
-  <text x="980" y="384" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">결과를 어디로 보내나?</text>
-  <text x="980" y="406" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#d1d5db">_______________</text>
-  <rect x="60" y="440" width="1160" height="80" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
-  <text x="640" y="468" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e40af">Claude에게 줄 논의 프롬프트</text>
-  <text x="640" y="496" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">"나는 [상황]을 자동화하고 싶어. 8요소 하네스로 같이 설계해줘."</text>
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">정답은 없습니다 — 내 상황에 맞는 하네스를 만드세요</text>
+  <text x="980" y="381" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">결과를 어디로 보내나?</text>
+  <text x="980" y="398" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#fbbf24">예) 임원에게 Gmail 발송</text>
+  <text x="980" y="418" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#d1d5db">내 것) _______________</text>
+
+  <!-- Discussion prompt -->
+  <rect x="60" y="454" width="1160" height="80" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="640" y="478" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e40af">채운 내용을 그대로 Claude에게 설명하세요</text>
+  <text x="640" y="504" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">"나는 [상황]을 자동화하고 싶어. 트리거: [방법] / Input: [데이터] / Logic: [순서] / Report: [결과처] — 8요소 CLAUDE.md 설계해줘."</text>
+
+  <rect x="60" y="554" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="585" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">정답은 없습니다 — 내 상황을 구체적으로 설명할수록 Claude가 더 정확하게 설계합니다</text>
 </svg>
