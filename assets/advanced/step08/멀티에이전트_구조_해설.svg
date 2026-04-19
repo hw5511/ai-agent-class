@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">방금 본 구조 — 어떻게 돌아갔을까</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Step5 Notion + Step6 SKILL.md + Step7 PM → 오늘 하나로 합쳐집니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Left: Folder structure -->
+  <rect x="60" y="228" width="460" height="296" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="80" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#94a3b8">리허설_공유용/</text>
+  <text x="80" y="280" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#60a5fa">├── PM/.claude/</text>
+  <text x="110" y="298" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#94a3b8">CLAUDE.md + skills/</text>
+  <text x="110" y="314" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#4ade80">← Step7 PM 에이전트 구조</text>
+  <text x="80" y="338" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#fbbf24">├── 박부장/.claude/skills/</text>
+  <text x="110" y="356" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#94a3b8">naver-search-trend, naver-shopping-insight, gmail</text>
+  <text x="80" y="376" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#fbbf24">├── 이과장 / 정대리 / 김대표</text>
+  <text x="110" y="394" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#94a3b8">gmail, sheets, slides</text>
+  <text x="110" y="410" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#4ade80">← Step6 SKILL.md 작성법 그대로</text>
+  <text x="80" y="430" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#c084fc">├── 최주임/.claude/skills/</text>
+  <text x="110" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#94a3b8">stability-image-gen, drive</text>
+  <text x="110" y="464" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#c084fc">← 방금 만든 스킬!</text>
+  <text x="80" y="484" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#34d399">└── _공용/notion_poller.py</text>
+  <text x="110" y="502" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#94a3b8">10초 폴링 → 감지 → exit 0</text>
+  <text x="110" y="518" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#4ade80">← Step5 Notion API 활용</text>
+
+  <!-- Arrow -->
+  <text x="545" y="380" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="28" fill="#d1d5db">&#8594;</text>
+
+  <!-- Right: Flow -->
+  <rect x="580" y="228" width="640" height="136" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="600" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e40af">실행 흐름</text>
+  <text x="600" y="280" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">1. PM: Google Docs 회의록 수신 → 액션아이템 분석 → Notion DB 등록</text>
+  <text x="600" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">2. 담당자 5명: notion_poller.py 백그라운드 실행 (10초마다 DB 확인)</text>
+  <text x="600" y="324" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">3. 신규 task 감지 → 상태 "진행 중" → 스킬 호출 → outputs/ 저장</text>
+  <text x="600" y="346" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">4. 완료 → 상태 "완료" + 메모에 결과 링크 → 폴링 재시작</text>
+
+  <!-- Notion DB schema -->
+  <rect x="580" y="376" width="640" height="148" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="600" y="404" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#15803d">Notion Work DB 스키마</text>
+  <text x="600" y="428" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">task (title)   담당자 (select: 박부장/이과장/정대리/최주임/김대표)</text>
+  <text x="600" y="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">유형 (select: 미팅/리서치/문서/이메일/디자인/일정)</text>
+  <text x="600" y="472" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">상태 (status: 시작 전 → 진행 중 → 완료)   마감일 (date)</text>
+  <text x="600" y="494" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">메모 (rich_text: 결과 링크 기록)</text>
+  <text x="600" y="516" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#15803d">← Notion DB 상태 변화로 전체 진행 상황 실시간 확인</text>
+
+  <rect x="60" y="548" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="579" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">Step5 Notion + Step6 SKILL.md + Step7 PM 에이전트 — 오늘 하나로 합쳐집니다</text>
+</svg>

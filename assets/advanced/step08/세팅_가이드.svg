@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">세팅 가이드</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Notion 복제 → .env 설정 → VSCode 터미널 실행</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Section 1: Notion -->
+  <rect x="60" y="228" width="350" height="168" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="80" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e40af">Step 1. Notion 템플릿 복제</text>
+  <text x="80" y="282" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">1. 아래 링크 열기</text>
+  <text x="80" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#2563eb">notion.so/woohee5511/PM-...</text>
+  <text x="80" y="324" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">2. 우상단 "복제" 클릭</text>
+  <text x="80" y="344" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">3. Settings → Integration 연결</text>
+  <text x="80" y="364" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">4. DB ID 복사 (URL에서 확인)</text>
+  <text x="80" y="388" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">REHEARSAL_DB_ID에 사용</text>
+
+  <!-- Section 2: .env -->
+  <rect x="430" y="228" width="390" height="168" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="450" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#94a3b8">Step 2. .env 파일 설정</text>
+  <text x="450" y="280" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#64748b"># _공용/.env.example → .env 복사</text>
+  <text x="450" y="304" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#60a5fa">NOTION_TOKEN=</text>
+  <text x="450" y="322" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#94a3b8">  secret_xxx  (Notion Integration 토큰)</text>
+  <text x="450" y="344" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#60a5fa">REHEARSAL_DB_ID=</text>
+  <text x="450" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#94a3b8">  xxx  (복제한 DB 페이지 ID)</text>
+  <text x="450" y="384" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#c084fc">STABILITY_API_KEY=</text>
+  <text x="450" y="396" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#94a3b8">  sk-xxx  (platform.stability.ai)</text>
+
+  <!-- Section 3: VSCode -->
+  <rect x="840" y="228" width="380" height="168" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="860" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#15803d">Step 3. VSCode 터미널 실행</text>
+  <text x="860" y="280" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">Ctrl+Shift+` → 터미널 6개 분할</text>
+  <text x="860" y="304" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">각 터미널에서:</text>
+  <text x="860" y="324" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#15803d">cd 리허설_공유용/PM &amp;&amp; claude</text>
+  <text x="860" y="344" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#15803d">cd 리허설_공유용/박부장 &amp;&amp; claude</text>
+  <text x="860" y="364" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">(이과장 / 정대리 / 최주임 / 김대표 동일)</text>
+  <text x="860" y="388" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">담당자 5명 터미널: "폴링 시작" 입력</text>
+
+  <!-- guide.md tip -->
+  <rect x="60" y="416" width="1160" height="52" rx="10" fill="#fef9c3" stroke="#fde047" stroke-width="1"/>
+  <text x="640" y="438" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#854d0e">세팅이 막히면 — guide.md 활용</text>
+  <text x="640" y="458" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#854d0e">Claude에게 "guide.md 내용대로 세팅 도와줘"라고 하면 Claude가 단계별로 안내합니다</text>
+
+  <!-- checklist -->
+  <rect x="60" y="488" width="1160" height="42" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="80" y="514" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">세팅 체크: [ ] Notion DB 복제  [ ] .env 파일 3줄  [ ] 터미널 6개  [ ] 담당자 폴링 대기 중</text>
+
+  <rect x="60" y="548" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="579" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">세팅 완료 후 — PM에게 회의록 링크를 투입하세요</text>
+</svg>

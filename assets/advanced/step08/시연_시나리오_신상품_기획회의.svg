@@ -2,67 +2,87 @@
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">시연: 신상품 기획회의 자동화</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Step7 스킬 4종을 파이프라인으로 연결 — 명령 한 번으로 5단계 멀티스텝 처리</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">시연 시나리오: 신상품 기획회의</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">회의록 하나 → PM 분석 → 5명 담당자 동시 처리 → 산출물 완성</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
 
-  <!-- INPUT box (height 230) -->
-  <rect x="60" y="232" width="190" height="230" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
-  <text x="155" y="262" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e40af">INPUT</text>
-  <text x="155" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">구글 Docs</text>
-  <text x="155" y="312" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">회의 메모 (날것)</text>
-  <text x="155" y="344" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">+ 구글 Docs</text>
-  <text x="155" y="364" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">음성 텍스트 변환본</text>
+  <!-- INPUT -->
+  <rect x="60" y="232" width="150" height="230" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="135" y="262" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1e40af">INPUT</text>
+  <text x="135" y="288" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#374151">회의록</text>
+  <text x="135" y="308" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#6b7280">Google Docs</text>
+  <text x="135" y="326" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#6b7280">날것 메모</text>
+  <text x="135" y="344" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#6b7280">+ 음성 변환본</text>
+
   <!-- Arrow -->
-  <text x="268" y="350" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#d1d5db">&#8594;</text>
+  <text x="226" y="350" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
 
-  <!-- STEP 1 box (height 230) -->
-  <rect x="286" y="232" width="190" height="230" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="381" y="262" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">STEP 1</text>
-  <text x="381" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">정돈된 회의록</text>
-  <text x="381" y="314" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">두 Docs를 읽고</text>
-  <text x="381" y="334" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">가공해서 저장</text>
-  <!-- Arrow -->
-  <text x="494" y="350" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#d1d5db">&#8594;</text>
+  <!-- PM -->
+  <rect x="242" y="232" width="150" height="230" rx="10" fill="#1e40af" stroke="#1e40af" stroke-width="1"/>
+  <text x="317" y="262" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">PM</text>
+  <text x="317" y="286" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#bfdbfe">회의록 분석</text>
+  <text x="317" y="304" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#bfdbfe">액션아이템 추출</text>
+  <text x="317" y="322" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#bfdbfe">담당자 분류</text>
+  <text x="317" y="340" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#bfdbfe">Notion DB 등록</text>
+  <text x="317" y="366" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#93c5fd">5개 task 생성</text>
 
-  <!-- STEP 2 box (height 230) -->
-  <rect x="512" y="232" width="190" height="230" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="607" y="262" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">STEP 2</text>
-  <text x="607" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">Notion 업무 등록</text>
-  <text x="607" y="314" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">업무 분장 추출</text>
-  <text x="607" y="334" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">담당자별 자동 등록</text>
-  <text x="607" y="360" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#2563eb">▶ work-meeting</text>
-  <!-- Arrow -->
-  <text x="720" y="350" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#d1d5db">&#8594;</text>
+  <!-- Notion DB (center) -->
+  <rect x="418" y="292" width="130" height="46" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="483" y="310" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#15803d">Notion</text>
+  <text x="483" y="328" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#15803d">Work DB</text>
 
-  <!-- STEP 3 box (height 230) -->
-  <rect x="738" y="232" width="190" height="230" rx="10" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
-  <text x="833" y="262" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#d97706">STEP 3</text>
-  <text x="833" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">조사 + 가공</text>
-  <text x="833" y="314" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">데이터랩 시장조사</text>
-  <text x="833" y="334" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">웹 경쟁사 분석</text>
-  <text x="833" y="354" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">구글 시트 정리</text>
-  <text x="833" y="374" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">Docs 보고서 초안</text>
-  <text x="833" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="9" fill="#d97706">▶ work-research</text>
-  <text x="833" y="414" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="9" fill="#d97706">+ work-docs</text>
-  <!-- Arrow -->
-  <text x="946" y="350" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#d1d5db">&#8594;</text>
+  <!-- Arrows from Notion to agents (fan out) -->
+  <line x1="548" y1="315" x2="590" y2="255" stroke="#d1d5db" stroke-width="1.5"/>
+  <line x1="548" y1="315" x2="590" y2="310" stroke="#d1d5db" stroke-width="1.5"/>
+  <line x1="548" y1="315" x2="590" y2="365" stroke="#d1d5db" stroke-width="1.5"/>
+  <line x1="548" y1="315" x2="590" y2="415" stroke="#d1d5db" stroke-width="1.5"/>
+  <line x1="548" y1="315" x2="590" y2="450" stroke="#d1d5db" stroke-width="1.5"/>
 
-  <!-- OUTPUT box (height 230) -->
-  <rect x="964" y="232" width="276" height="230" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
-  <text x="1102" y="262" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">OUTPUT</text>
-  <text x="1102" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">최종 보고</text>
-  <text x="1102" y="314" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">완성된 보고서</text>
-  <text x="1102" y="334" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">Gmail로 임원 발송</text>
-  <text x="1102" y="354" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">Notion Status</text>
-  <text x="1102" y="374" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">전체 완료 업데이트</text>
-  <text x="1102" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#16a34a">▶ work-email</text>
+  <!-- 5 agents output boxes -->
+  <!-- 박부장 -->
+  <rect x="590" y="232" width="155" height="48" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
+  <text x="667" y="252" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#92400e">박부장 (마케팅)</text>
+  <text x="667" y="270" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#6b7280">시장조사 + 경쟁사 분석 → Sheets</text>
 
-  <!-- Yellow note box (moved down) -->
-  <rect x="60" y="490" width="1160" height="36" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
-  <text x="640" y="513" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#92400e">Step7에서 만든 스킬 4종(work-meeting / work-research / work-docs / work-email)을 파이프라인으로 연결한 것</text>
+  <!-- 이과장 -->
+  <rect x="590" y="288" width="155" height="48" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="667" y="308" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#14532d">이과장 (마케팅)</text>
+  <text x="667" y="326" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#6b7280">인플루언서 리스트 + 예산안 → Gmail</text>
 
-  <!-- Blue CTA -->
+  <!-- 정대리 -->
+  <rect x="590" y="344" width="155" height="48" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="667" y="364" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1e3a8a">정대리 (개발)</text>
+  <text x="667" y="382" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#6b7280">개발 일정표 + 외주 컨택 → Sheets/Gmail</text>
+
+  <!-- 최주임 -->
+  <rect x="590" y="400" width="155" height="48" rx="8" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="1"/>
+  <text x="667" y="420" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#581c87">최주임 (디자인)</text>
+  <text x="667" y="438" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#6b7280">AI 이미지 시안 → Drive (SD3)</text>
+
+  <!-- 김대표 -->
+  <rect x="590" y="434" width="155" height="48" rx="8" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+  <text x="667" y="454" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#7c2d12">김대표 (경영)</text>
+  <text x="667" y="472" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#6b7280">이사회 보고서 + 발표자료 → Slides</text>
+
+  <!-- Arrow to OUTPUT -->
+  <text x="760" y="355" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#d1d5db">&#8594;</text>
+
+  <!-- OUTPUT -->
+  <rect x="780" y="232" width="440" height="250" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="1000" y="262" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">산출물 (동시 완성)</text>
+  <text x="800" y="290" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">- 시장조사 구글 시트</text>
+  <text x="800" y="314" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">- 인플루언서 리스트 + 예산안 이메일</text>
+  <text x="800" y="338" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">- 개발 일정표 + 외주사 컨택 이메일</text>
+  <text x="800" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">- 제품 이미지 시안 PNG (AI 생성)</text>
+  <text x="800" y="386" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">- 이사회 보고서 + 발표자료 Slides</text>
+  <text x="800" y="418" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#15803d">Notion DB 상태: 전체 완료</text>
+  <text x="800" y="436" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">(메모에 각 결과 링크 기록)</text>
+  <text x="800" y="464" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#374151">소요: 회의록 투입 후 약 5분</text>
+
+  <!-- Yellow note -->
+  <rect x="60" y="492" width="1160" height="36" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
+  <text x="640" y="515" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#92400e">Step5 notion-api + Step6 각 SKILL.md + Step7 PM Work DB — 이 세 가지가 조립된 결과입니다</text>
+
   <rect x="60" y="548" width="1160" height="52" rx="10" fill="#2563eb"/>
-  <text x="640" y="579" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">명령 한 번 → 회의록 정리부터 임원 보고까지 자동</text>
+  <text x="640" y="579" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">회의록 하나 → 5명이 동시에 자기 일 → 모든 산출물 완성</text>
 </svg>
