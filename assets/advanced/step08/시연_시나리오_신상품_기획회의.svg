@@ -32,8 +32,9 @@
   <text x="833" y="334" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">웹 경쟁사 분석</text>
   <text x="833" y="354" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">구글 시트 정리</text>
   <text x="833" y="374" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">Docs 보고서 초안</text>
-  <text x="833" y="396" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#d97706">▶ work-research + work-docs</text>
-  <text x="946" y="382" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#d1d5db">&#8594;</text>
+  <text x="833" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="9" fill="#d97706">▶ work-research</text>
+  <text x="833" y="414" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="9" fill="#d97706">+ work-docs</text>
+  <text x="946" y="370" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#d1d5db">&#8594;</text>
   <rect x="964" y="232" width="276" height="290" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
   <text x="1102" y="262" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">OUTPUT</text>
   <text x="1102" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">최종 보고</text>
