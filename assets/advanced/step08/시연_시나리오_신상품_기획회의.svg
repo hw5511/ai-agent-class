@@ -5,27 +5,38 @@
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">시연: 신상품 기획회의 자동화</text>
   <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Step7 스킬 4종을 파이프라인으로 연결 — 명령 한 번으로 5단계 멀티스텝 처리</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <rect x="60" y="232" width="190" height="290" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+
+  <!-- INPUT box (height 230) -->
+  <rect x="60" y="232" width="190" height="230" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
   <text x="155" y="262" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e40af">INPUT</text>
   <text x="155" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">구글 Docs</text>
   <text x="155" y="312" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">회의 메모 (날것)</text>
   <text x="155" y="344" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">+ 구글 Docs</text>
   <text x="155" y="364" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">음성 텍스트 변환본</text>
-  <text x="268" y="382" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#d1d5db">&#8594;</text>
-  <rect x="286" y="232" width="190" height="290" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <!-- Arrow -->
+  <text x="268" y="350" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#d1d5db">&#8594;</text>
+
+  <!-- STEP 1 box (height 230) -->
+  <rect x="286" y="232" width="190" height="230" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
   <text x="381" y="262" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">STEP 1</text>
   <text x="381" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">정돈된 회의록</text>
   <text x="381" y="314" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">두 Docs를 읽고</text>
   <text x="381" y="334" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">가공해서 저장</text>
-  <text x="494" y="382" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#d1d5db">&#8594;</text>
-  <rect x="512" y="232" width="190" height="290" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <!-- Arrow -->
+  <text x="494" y="350" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#d1d5db">&#8594;</text>
+
+  <!-- STEP 2 box (height 230) -->
+  <rect x="512" y="232" width="190" height="230" rx="10" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
   <text x="607" y="262" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">STEP 2</text>
   <text x="607" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">Notion 업무 등록</text>
   <text x="607" y="314" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">업무 분장 추출</text>
   <text x="607" y="334" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">담당자별 자동 등록</text>
   <text x="607" y="360" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#2563eb">▶ work-meeting</text>
-  <text x="720" y="382" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#d1d5db">&#8594;</text>
-  <rect x="738" y="232" width="190" height="290" rx="10" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
+  <!-- Arrow -->
+  <text x="720" y="350" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#d1d5db">&#8594;</text>
+
+  <!-- STEP 3 box (height 230) -->
+  <rect x="738" y="232" width="190" height="230" rx="10" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
   <text x="833" y="262" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#d97706">STEP 3</text>
   <text x="833" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">조사 + 가공</text>
   <text x="833" y="314" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">데이터랩 시장조사</text>
@@ -34,8 +45,11 @@
   <text x="833" y="374" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">Docs 보고서 초안</text>
   <text x="833" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="9" fill="#d97706">▶ work-research</text>
   <text x="833" y="414" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="9" fill="#d97706">+ work-docs</text>
-  <text x="946" y="370" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#d1d5db">&#8594;</text>
-  <rect x="964" y="232" width="276" height="290" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <!-- Arrow -->
+  <text x="946" y="350" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" fill="#d1d5db">&#8594;</text>
+
+  <!-- OUTPUT box (height 230) -->
+  <rect x="964" y="232" width="276" height="230" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
   <text x="1102" y="262" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">OUTPUT</text>
   <text x="1102" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">최종 보고</text>
   <text x="1102" y="314" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">완성된 보고서</text>
@@ -43,8 +57,12 @@
   <text x="1102" y="354" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">Notion Status</text>
   <text x="1102" y="374" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">전체 완료 업데이트</text>
   <text x="1102" y="400" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#16a34a">▶ work-email</text>
-  <rect x="60" y="480" width="1160" height="36" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
-  <text x="640" y="503" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#92400e">Step7에서 만든 스킬 4종(work-meeting / work-research / work-docs / work-email)을 파이프라인으로 연결한 것</text>
-  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">명령 한 번 → 회의록 정리부터 임원 보고까지 자동</text>
+
+  <!-- Yellow note box (moved down) -->
+  <rect x="60" y="490" width="1160" height="36" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
+  <text x="640" y="513" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#92400e">Step7에서 만든 스킬 4종(work-meeting / work-research / work-docs / work-email)을 파이프라인으로 연결한 것</text>
+
+  <!-- Blue CTA -->
+  <rect x="60" y="548" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="579" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">명령 한 번 → 회의록 정리부터 임원 보고까지 자동</text>
 </svg>
