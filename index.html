@@ -1525,7 +1525,7 @@
            URL Hash State  (#course/sessionIdx/slideIdx)
            ============================================ */
         function pushHash() {
-            const hash = '#' + currentCourse + '/' + currentSession + '/' + (currentSlide + 1);
+            const hash = '#' + currentCourse + '/' + (currentSession + 1) + '/' + (currentSlide + 1);
             if (location.hash !== hash) {
                 history.replaceState(null, '', hash);
             }
@@ -1539,7 +1539,7 @@
             const course = parts[0];
             if (!COURSES[course]) return;
             currentCourse = course;
-            const sessionIdx = parseInt(parts[1]) || 0;
+            const sessionIdx = Math.max((parseInt(parts[1]) || 1) - 1, 0);
             const slideIdx   = Math.max((parseInt(parts[2]) || 1) - 1, 0);
             const sessions   = COURSES[course].sessions;
             currentSession = Math.min(Math.max(sessionIdx, 0), sessions.length - 1);
