@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
+  <rect x="148" y="44" width="104" height="24" rx="12" fill="#7c3aed"/>
+  <text x="200" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">스킬 추가</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">AI 이미지 생성 스킬 추가하기</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Stability AI API로 디자인 시안을 자동 생성하는 스킬을 하네스에 연결합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Left: API 키 발급 준비 -->
+  <text x="60" y="242" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">API 키 발급</text>
+
+  <rect x="60" y="252" width="530" height="76" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="80" y="270" width="24" height="24" rx="12" fill="#2563eb"/>
+  <text x="92" y="287" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">1</text>
+  <text x="116" y="284" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#374151">platform.stability.ai 접속 → 회원가입</text>
+  <text x="116" y="304" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">우상단 Login → Sign Up으로 계정 생성 (GitHub 로그인 가능)</text>
+
+  <rect x="60" y="340" width="530" height="76" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="80" y="358" width="24" height="24" rx="12" fill="#2563eb"/>
+  <text x="92" y="375" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">2</text>
+  <text x="116" y="372" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#374151">Dashboard → API Keys → Create Key</text>
+  <text x="116" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">키 이름 입력 후 생성 → 전체 키 값 복사 (재확인 불가)</text>
+
+  <rect x="60" y="428" width="530" height="76" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="80" y="446" width="24" height="24" rx="12" fill="#2563eb"/>
+  <text x="92" y="463" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">3</text>
+  <text x="116" y="460" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#374151">.env 파일에 STABILITY_API_KEY 저장</text>
+  <text x="116" y="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">STABILITY_API_KEY=sk-xxx  →  Claude Code가 자동 인식</text>
+
+  <!-- Right: Claude 요청 예시 -->
+  <text x="630" y="242" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">Claude에게 스킬 제작 요청</text>
+  <rect x="630" y="252" width="590" height="252" rx="8" fill="#1e293b"/>
+  <text x="650" y="278" font-family="'Courier New',Courier,monospace" font-size="13" fill="#94a3b8">$ stability.ai API로 이미지 생성 스킬 만들어줘.</text>
+  <text x="650" y="300" font-family="'Courier New',Courier,monospace" font-size="12" fill="#64748b">  모델: sd3.5-flash (Stable Diffusion 3.5 Flash)</text>
+  <text x="650" y="319" font-family="'Courier New',Courier,monospace" font-size="12" fill="#64748b">  API 키: .env의 STABILITY_API_KEY</text>
+  <text x="650" y="338" font-family="'Courier New',Courier,monospace" font-size="12" fill="#64748b">  입력: 이미지 설명 텍스트 (한&#x2192;영 자동 번역 포함)</text>
+  <text x="650" y="357" font-family="'Courier New',Courier,monospace" font-size="12" fill="#64748b">  출력: output/ 폴더에 PNG 저장</text>
+  <text x="650" y="376" font-family="'Courier New',Courier,monospace" font-size="12" fill="#64748b">  파일명: image_YYYYMMDD_HHMMSS.png</text>
+  <text x="650" y="403" font-family="'Courier New',Courier,monospace" font-size="11" fill="#475569">  &#x2192; 생성 파일: SKILL.md + generate.py</text>
+  <text x="650" y="420" font-family="'Courier New',Courier,monospace" font-size="11" fill="#475569">  &#x2192; 명령어: /image-gen [이미지 설명]</text>
+  <text x="650" y="440" font-family="'Courier New',Courier,monospace" font-size="11" fill="#475569">  &#x2192; 하네스 CLAUDE.md에 image-gen 스킬 등록</text>
+  <text x="650" y="457" font-family="'Courier New',Courier,monospace" font-size="12" fill="#94a3b8">  &#x2192; SD 3.5 Flash API Reference 참고해서 코드 작성해줘.</text>
+
+  <!-- Bottom activity banner -->
+  <rect x="60" y="530" width="1160" height="52" rx="8" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="1"/>
+  <text x="640" y="551" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#7c3aed">활용 시나리오</text>
+  <text x="640" y="572" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">신상품 기획회의 &#x2192; 제품 컨셉 키워드 추출 &#x2192; /image-gen으로 디자인 시안 자동 생성</text>
+
+  <rect x="60" y="598" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="629" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#1d4ed8">이미지 생성 스킬을 하네스에 연결하면 — 회의록에서 디자인 시안까지 자동화됩니다</text>
+</svg>
