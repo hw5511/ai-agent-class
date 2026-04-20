@@ -3,13 +3,13 @@
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">오늘 목표</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Step5+6+7의 모든 스킬이 여기서 하나로 합쳐집니다 — 캡스톤 프로젝트</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Step5+6+7이 하나로 합쳐져 오케스트레이션을 완성합니다 — 캡스톤 프로젝트</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
   <rect x="60" y="240" width="340" height="260" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
   <text x="230" y="282" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="32" fill="#2563eb">01</text>
   <text x="230" y="318" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#1e40af">구조 이해</text>
-  <text x="230" y="348" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">8요소 하네스 프레임워크</text>
-  <text x="230" y="370" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">멀티 에이전트 협업 구조</text>
+  <text x="230" y="348" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">오케스트레이션 구조 이해</text>
+  <text x="230" y="370" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">PM + 담당자 5명의 흐름</text>
   <text x="230" y="392" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#2563eb">Step5+6+7 종합</text>
   <text x="418" y="378" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="28" fill="#d1d5db">&#8594;</text>
   <rect x="470" y="240" width="340" height="260" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>

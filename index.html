@@ -1491,13 +1491,13 @@
                     {
                         num: 8, title: '하네스 엔지니어링 — 나만의 에이전트 완성', hours: '2시간 · Capstone',
                         goal: 'Step5~7에서 배운 Notion API·SKILL.md·PM 에이전트를 하나로 합쳐 멀티 에이전트 협업 시스템을 직접 세팅·실행하며 심화 과정을 수료한다.',
-                        topics: ['하네스 엔지니어링 개념 + 8가지 완성 요소', 'Step5 Notion + Step6 SKILL.md + Step7 PM → 캡스톤', '멀티 에이전트 시연 (PM + 5담당자 동시 실행)', 'Notion 세팅 + 폴링 실행 + 결과 확인 실습'],
+                        topics: ['AI 에이전트 오케스트레이션 개념', 'Step5 Notion + Step6 SKILL.md + Step7 PM → 캡스톤', '멀티 에이전트 시연 (PM + 5담당자 동시 실행)', 'Notion 세팅 + 폴링 실행 + 결과 확인 실습'],
                         practice: '리허설_공유용/ 폴더를 세팅하고 PM에게 회의록을 투입하면 5명의 담당자가 동시에 자기 일을 처리한다.',
-                        slides: ['하네스_엔지니어링이란.svg','하네스_엔지니어링_완성_구조.svg','오늘_목표.svg','AI_이미지_생성_스킬.svg','멀티에이전트_데모_예고.svg','멀티에이전트_구조_해설.svg','시연_시나리오_신상품_기획회의.svg','실습_로드맵.svg','세팅_가이드.svg','실습_직접_세팅_테스트.svg','결과_공유_심화_수료.svg'],
+                        slides: ['오케스트레이션이란.svg','오케스트레이션_동작_흐름.svg','오늘_목표.svg','AI_이미지_생성_스킬.svg','멀티에이전트_데모_예고.svg','멀티에이전트_구조_해설.svg','폴링이란.svg','시연_시나리오_신상품_기획회의.svg','실습_로드맵.svg','세팅_가이드.svg','실습_직접_세팅_테스트.svg','결과_공유_심화_수료.svg'],
                         slideDescs: [
-            { goal: '하네스 엔지니어링의 개념과 역할을 이해한다.', topics: ['하네스 = CLAUDE.md + Skills + Hooks + 정책의 조합', 'AI를 단순 도우미 → 자율 실행 시스템으로 만드는 설계', '기초 과정(설치/환경)에서 심화(자동화 시스템)으로'], practice: null },
-            { goal: '하네스 엔지니어링 완성 구조 8요소를 파악한다.', topics: ['Before(트리거/Context/Input) → During(Logic/State) → After(Output/Report) → Control(Rules)', '8가지 요소가 조합된 자율 실행 에이전트 구조', 'ADV 01~07에서 배운 Skills이 하네스의 핵심 부품'], practice: null },
-            { goal: '오늘 최종 목표를 확인한다.', topics: ['Step5+6+7의 캡스톤 — 모든 스킬이 하나로 합쳐집니다', '멀티 에이전트 시연 관찰 (PM + 5명 동시 실행)', 'Notion 세팅 + 폴링 실행 + 결과 확인', '완성 결과를 서로 공유하며 수료'], practice: null },
+            { goal: 'AI 에이전트 오케스트레이션의 개념을 이해한다.', topics: ['오케스트레이션 = PM(지휘자)이 task를 등록하면 담당자들이 각자 알아서 실행', '기존 방식(매번 직접 지시) vs 오케스트레이션(1번 등록 → 5명 동시 처리)', '오늘 시연: 회의록 1장 → PM이 분석 → 5개 산출물 자동 완성'], practice: null },
+            { goal: '오케스트레이션이 실제로 어떻게 동작하는지 파악한다.', topics: ['① 회의록 투입 → ② PM 분석 → ③ Notion task 등록 → ④ 담당자 폴링 감지 → ⑤ 독립 실행 → ⑥ 결과 집약', '시연 중 Notion DB Status 칼럼(할 일 → 진행 중 → 완료)으로 흐름 실시간 확인', 'Step5(Notion) + Step6(SKILL.md) + Step7(PM 에이전트)가 조립된 결과'], practice: null },
+            { goal: '오늘 최종 목표를 확인한다.', topics: ['Step5+6+7의 캡스톤 — 오케스트레이션을 직접 완성합니다', '멀티 에이전트 시연 관찰 (PM + 5명 동시 실행)', 'Notion 세팅 + 폴링 실행 + 결과 확인', '완성 결과를 서로 공유하며 수료'], practice: null },
             { goal: 'Stability AI API로 이미지 생성 스킬을 만들고 하네스에 연결한다.', topics: ['platform.stability.ai에서 API 키 발급', 'Stable Diffusion 3.5 Flash (sd3.5-flash) 모델 사용', 'Claude에게 스킬 제작 요청 → SKILL.md + generate.py 자동 생성', '활용: 최주임 담당자 에이전트에 이 스킬이 그대로 사용됩니다'], practice: 'stability.ai API로 이미지 생성 스킬 만들어줘. 모델: sd3.5-flash, API 키: .env의 STABILITY_API_KEY, 입력: 이미지 설명, 출력: output/ 폴더에 PNG 저장', action: { label: 'Stability AI 플랫폼', items: [{ link: { href: 'https://platform.stability.ai/', text: 'platform.stability.ai — API 키 발급' }, desc: '우상단 Login → Sign Up → Dashboard → API Keys → Create Key' }] } },
             { goal: '멀티 에이전트 시연에서 무엇을 볼지 미리 파악한다.', topics: ['PM + 5명 담당자 각 역할 확인', '방금 만든 이미지 생성 스킬 → 최주임 담당자에 적용', 'VSCode 6-split 화면에서 동시 실행', 'Notion DB 상태 변화 (시작 전 → 진행 중 → 완료)'], practice: null },
             { goal: '방금 본 멀티 에이전트 구조를 이해한다.', topics: ['리허설_공유용/ 폴더 구조 — PM + 5담당자 .claude/ 분리', 'notion_poller.py 10초 폴링 → 감지 → 스킬 호출 흐름', 'Notion Work DB 스키마 (task/담당자/유형/상태/메모)', 'Step5 Notion + Step6 SKILL.md + Step7 PM이 조립된 결과'], practice: null },
