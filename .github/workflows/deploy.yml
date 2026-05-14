@@ -28,6 +28,8 @@ jobs:
           cp -r assets _site/assets
           mkdir -p _site/template
           cp template/index.html _site/template/index.html
+          mkdir -p _site/consultation-template
+          cp consultation-template/index.html _site/consultation-template/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

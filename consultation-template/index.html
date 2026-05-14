@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[COURSE NAME] - 상담자료 템플릿</title>
+<style>
+/* ============================================
+   Consultation Template — Blank Starter
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
+
+:root {
+    --bg: #fff;
+    --fg: #0a0a0a;
+    --card: #fff;
+    --primary: #171717;
+    --primary-fg: #fafafa;
+    --secondary: #f5f5f5;
+    --secondary-fg: #171717;
+    --muted: #f5f5f5;
+    --muted-fg: #737373;
+    --border: #e5e5e5;
+    --accent: #2563eb;
+    --accent-fg: #fff;
+
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4rem;
+
+    --radius: 0.5rem;
+    --radius-lg: 1rem;
+
+    --section-padding: clamp(1rem, 2vw, 2rem);
+    --hero-padding: clamp(2rem, 5vw, 5rem);
+    --content-max-width: 1400px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 16px; scroll-behavior: smooth; overflow-y: auto; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: var(--fg);
+    background: var(--bg);
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: var(--primary-fg);
+    padding: var(--hero-padding);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: var(--content-max-width);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.hero-eyebrow {
+    font-size: clamp(0.75rem, 1.2vw, 1rem);
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.4;
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.hero-title-main {
+    font-size: clamp(4rem, 12vw, 10rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+
+.hero-title-sub {
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+    margin-top: var(--space-xs);
+}
+
+.hero-divider {
+    width: 60px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.hero-tagline {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    font-weight: 400;
+    opacity: 0.5;
+    letter-spacing: 0.1em;
+}
+
+.hero-instructor {
+    font-size: clamp(0.75rem, 1vw, 0.9rem);
+    font-weight: 400;
+    opacity: 0.35;
+    letter-spacing: 0.05em;
+    margin-top: var(--space-xs);
+}
+
+/* ============================================
+   Section
+   ============================================ */
+.section {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: var(--space-2xl) var(--section-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.section:nth-child(even) {
+    background: var(--secondary);
+}
+
+.section-container {
+    max-width: var(--content-max-width);
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.section-header {
+    margin-bottom: var(--space-lg);
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.section-badge {
+    display: inline-block;
+    padding: 0.25rem var(--space-sm);
+    background: var(--primary);
+    color: var(--primary-fg);
+    border-radius: 9999px;
+    font-size: clamp(0.6rem, 0.75vw, 0.75rem);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 800;
+    margin-bottom: var(--space-xs);
+    letter-spacing: -0.02em;
+}
+
+.content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+/* ============================================
+   Course Intro Grid (4 cards)
+   ============================================ */
+.curriculum-intro-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    flex: 1;
+}
+
+.currintro-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.currintro-card--accent {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    color: var(--accent-fg);
+    border-color: transparent;
+}
+
+.currintro-card--accent .currintro-desc {
+    color: var(--accent-fg);
+    opacity: 0.85;
+}
+
+.currintro-icon {
+    opacity: 0.7;
+}
+
+.currintro-card--accent .currintro-icon {
+    opacity: 0.9;
+}
+
+.currintro-title {
+    font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+    font-weight: 800;
+}
+
+.currintro-desc {
+    font-size: clamp(0.78rem, 0.9vw, 0.88rem);
+    color: var(--muted-fg);
+    line-height: 1.6;
+}
+
+.currintro-bottom {
+    padding: var(--space-lg);
+    background: var(--muted);
+    border-radius: var(--radius-lg);
+    flex-shrink: 0;
+}
+
+.currintro-summary {
+    font-size: clamp(0.88rem, 1.1vw, 1.05rem);
+    color: var(--muted-fg);
+    line-height: 1.8;
+    text-align: center;
+}
+
+.currintro-summary strong {
+    color: var(--fg);
+    font-weight: 700;
+}
+
+/* ============================================
+   Roadmap
+   ============================================ */
+.roadmap-row {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    gap: var(--space-sm);
+}
+
+.roadmap-card {
+    flex: 1;
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.roadmap-card--white {
+    background: var(--card);
+    border: 1px solid var(--border);
+}
+
+.roadmap-card--blue {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    color: var(--accent-fg);
+    border: none;
+}
+
+.roadmap-card--blue .roadmap-list li,
+.roadmap-card--blue .roadmap-step {
+    opacity: 0.9;
+}
+
+.roadmap-card--dark {
+    background: linear-gradient(135deg, #0a0a0a 0%, #171717 100%);
+    color: var(--primary-fg);
+    border: none;
+}
+
+.roadmap-card--dark .roadmap-list li,
+.roadmap-card--dark .roadmap-step {
+    opacity: 0.8;
+}
+
+.roadmap-step {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+.roadmap-title {
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    font-weight: 800;
+    margin-bottom: var(--space-xs);
+}
+
+.roadmap-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.roadmap-list li {
+    font-size: clamp(0.78rem, 0.9vw, 0.9rem);
+    opacity: 0.8;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.roadmap-list li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    opacity: 0.5;
+}
+
+.roadmap-arrow {
+    display: flex;
+    align-items: center;
+    color: var(--muted-fg);
+    flex-shrink: 0;
+}
+
+/* ============================================
+   Curriculum Grid (session cards)
+   ============================================ */
+.curriculum-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+    flex: 1;
+}
+
+.curr-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.curr-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+}
+
+.curr-num {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    background: var(--primary);
+    color: var(--primary-fg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.curr-title {
+    font-size: clamp(0.75rem, 0.85vw, 0.85rem);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.curr-hours {
+    font-size: 0.65rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 2px;
+    display: block;
+}
+
+.curr-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.curr-list li {
+    font-size: clamp(0.65rem, 0.75vw, 0.75rem);
+    color: var(--muted-fg);
+    padding-left: 0.8rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.curr-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--border);
+}
+
+/* ============================================
+   CTA Section
+   ============================================ */
+.cta-section {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: var(--primary-fg);
+    padding: var(--space-2xl) var(--section-padding);
+}
+
+.cta-container {
+    max-width: var(--content-max-width);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xl);
+    text-align: center;
+}
+
+.cta-badge {
+    display: inline-block;
+    padding: 0.25rem var(--space-sm);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.cta-title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.cta-desc {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    opacity: 0.5;
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+.cta-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    width: 100%;
+    max-width: 900px;
+}
+
+.cta-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-lg);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+}
+
+.cta-info-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.4;
+}
+
+.cta-info-value {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-weight: 700;
+}
+
+.cta-info-note {
+    font-size: 0.75rem;
+    opacity: 0.4;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 1024px) {
+    .curriculum-intro-grid,
+    .curriculum-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .roadmap-row {
+        flex-direction: column;
+    }
+    .roadmap-arrow {
+        justify-content: center;
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .curriculum-intro-grid,
+    .curriculum-grid,
+    .cta-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- ==========================================
+     SECTION 1: HERO
+     ========================================== -->
+<section class="hero-section">
+    <div class="hero-content">
+        <p class="hero-eyebrow">[YEAR] CURRICULUM</p>
+        <h1 class="hero-title">
+            <span class="hero-title-main">[COURSE]</span>
+            <span class="hero-title-sub">커리큘럼</span>
+        </h1>
+        <div class="hero-divider"></div>
+        <p class="hero-tagline">[과정 한줄 설명]</p>
+        <p class="hero-instructor">[학원명] - 강사 [강사명]</p>
+    </div>
+</section>
+
+<!-- ==========================================
+     SECTION 2: COURSE INTRO (4 cards)
+     ========================================== -->
+<section class="section" data-section-id="course_intro">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">ABOUT</span>
+            <h2 class="section-title">[과정명]이란?</h2>
+        </div>
+
+        <div class="content-area">
+            <div class="curriculum-intro-grid">
+                <!-- Card 1: accent (강조 카드) -->
+                <div class="currintro-card currintro-card--accent">
+                    <div class="currintro-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="4" y="8" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 18l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="currintro-title">[특징 1 제목]</h3>
+                    <p class="currintro-desc">[특징 1 설명 텍스트를 여기에 입력합니다]</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="currintro-card">
+                    <div class="currintro-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="14" r="6" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 34c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="currintro-title">[특징 2 제목]</h3>
+                    <p class="currintro-desc">[특징 2 설명 텍스트를 여기에 입력합니다]</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="currintro-card">
+                    <div class="currintro-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 6v28M6 20h28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="currintro-title">[특징 3 제목]</h3>
+                    <p class="currintro-desc">[특징 3 설명 텍스트를 여기에 입력합니다]</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="currintro-card">
+                    <div class="currintro-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="6" y="6" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <rect x="22" y="6" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <rect x="6" y="22" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <rect x="22" y="22" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="currintro-title">[특징 4 제목]</h3>
+                    <p class="currintro-desc">[특징 4 설명 텍스트를 여기에 입력합니다]</p>
+                </div>
+            </div>
+
+            <div class="currintro-bottom">
+                <p class="currintro-summary">[핵심 키워드 A], [핵심 키워드 B] 등 <strong>[주요 내용을 강조]</strong>하고, [부가 설명]까지 <strong>[학습 방향]</strong>으로 학습합니다</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     SECTION 3: CURRICULUM ROADMAP (3 steps)
+     ========================================== -->
+<section class="section" data-section-id="roadmap">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">ROADMAP</span>
+            <h2 class="section-title">[과정명] 커리큘럼 로드맵</h2>
+        </div>
+
+        <div class="content-area">
+            <div class="roadmap-row">
+                <div class="roadmap-card roadmap-card--white">
+                    <span class="roadmap-step">STEP 1</span>
+                    <h3 class="roadmap-title">[1단계 이름]</h3>
+                    <ul class="roadmap-list">
+                        <li>[1단계 항목 1]</li>
+                        <li>[1단계 항목 2]</li>
+                        <li>[1단계 항목 3]</li>
+                    </ul>
+                </div>
+                <div class="roadmap-arrow">
+                    <svg width="40" height="24" viewBox="0 0 40 24">
+                        <path d="M0 12h34M30 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="roadmap-card roadmap-card--blue">
+                    <span class="roadmap-step">STEP 2</span>
+                    <h3 class="roadmap-title">[2단계 이름]</h3>
+                    <ul class="roadmap-list">
+                        <li>[2단계 항목 1]</li>
+                        <li>[2단계 항목 2]</li>
+                        <li>[2단계 항목 3]</li>
+                        <li>[2단계 항목 4]</li>
+                    </ul>
+                </div>
+                <div class="roadmap-arrow">
+                    <svg width="40" height="24" viewBox="0 0 40 24">
+                        <path d="M0 12h34M30 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="roadmap-card roadmap-card--dark">
+                    <span class="roadmap-step">STEP 3</span>
+                    <h3 class="roadmap-title">[3단계 이름]</h3>
+                    <ul class="roadmap-list">
+                        <li>[3단계 항목 1]</li>
+                        <li>[3단계 항목 2]</li>
+                        <li>[3단계 항목 3]</li>
+                        <li>[3단계 항목 4]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     SECTION 4: SESSION CURRICULUM (8 sessions)
+     ========================================== -->
+<section class="section" data-section-id="sessions">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">CURRICULUM</span>
+            <h2 class="section-title">[과정명] 커리큘럼</h2>
+        </div>
+
+        <div class="content-area">
+            <div class="curriculum-grid">
+                <!-- Session 1 -->
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">1</span>
+                        <div>
+                            <h4 class="curr-title">[1회차 제목]</h4>
+                            <span class="curr-hours">2시간</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>[1회차 내용 1]</li>
+                        <li>[1회차 내용 2]</li>
+                        <li>[1회차 내용 3]</li>
+                        <li>[1회차 내용 4]</li>
+                    </ul>
+                </div>
+                <!-- Session 2 -->
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">2</span>
+                        <div>
+                            <h4 class="curr-title">[2회차 제목]</h4>
+                            <span class="curr-hours">2시간</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>[2회차 내용 1]</li>
+                        <li>[2회차 내용 2]</li>
+                        <li>[2회차 내용 3]</li>
+                        <li>[2회차 내용 4]</li>
+                    </ul>
+                </div>
+                <!-- Session 3 -->
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">3</span>
+                        <div>
+                            <h4 class="curr-title">[3회차 제목]</h4>
+                            <span class="curr-hours">2시간</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>[3회차 내용 1]</li>
+                        <li>[3회차 내용 2]</li>
+                        <li>[3회차 내용 3]</li>
+                        <li>[3회차 내용 4]</li>
+                    </ul>
+                </div>
+                <!-- Session 4 -->
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">4</span>
+                        <div>
+                            <h4 class="curr-title">[4회차 제목]</h4>
+                            <span class="curr-hours">2시간</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>[4회차 내용 1]</li>
+                        <li>[4회차 내용 2]</li>
+                        <li>[4회차 내용 3]</li>
+                        <li>[4회차 내용 4]</li>
+                    </ul>
+                </div>
+                <!-- Session 5 -->
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">5</span>
+                        <div>
+                            <h4 class="curr-title">[5회차 제목]</h4>
+                            <span class="curr-hours">2시간</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>[5회차 내용 1]</li>
+                        <li>[5회차 내용 2]</li>
+                        <li>[5회차 내용 3]</li>
+                        <li>[5회차 내용 4]</li>
+                    </ul>
+                </div>
+                <!-- Session 6 -->
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">6</span>
+                        <div>
+                            <h4 class="curr-title">[6회차 제목]</h4>
+                            <span class="curr-hours">2시간</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>[6회차 내용 1]</li>
+                        <li>[6회차 내용 2]</li>
+                        <li>[6회차 내용 3]</li>
+                        <li>[6회차 내용 4]</li>
+                    </ul>
+                </div>
+                <!-- Session 7 -->
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">7</span>
+                        <div>
+                            <h4 class="curr-title">[7회차 제목]</h4>
+                            <span class="curr-hours">2시간</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>[7회차 내용 1]</li>
+                        <li>[7회차 내용 2]</li>
+                        <li>[7회차 내용 3]</li>
+                        <li>[7회차 내용 4]</li>
+                    </ul>
+                </div>
+                <!-- Session 8 -->
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">8</span>
+                        <div>
+                            <h4 class="curr-title">[8회차 제목]</h4>
+                            <span class="curr-hours">2시간</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>[8회차 내용 1]</li>
+                        <li>[8회차 내용 2]</li>
+                        <li>[8회차 내용 3]</li>
+                        <li>[8회차 내용 4]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     SECTION 5: CTA
+     ========================================== -->
+<section class="cta-section">
+    <div class="cta-container">
+        <span class="cta-badge">CONTACT</span>
+        <h2 class="cta-title">수강 문의</h2>
+        <p class="cta-desc">[수강 안내 문구를 여기에 입력합니다. 학원명, 문의 방법 등을 안내하세요.]</p>
+
+        <div class="cta-info-grid">
+            <div class="cta-info-item">
+                <span class="cta-info-label">장소</span>
+                <span class="cta-info-value">[학원명]</span>
+                <span class="cta-info-note">[주소 또는 오시는 길]</span>
+            </div>
+            <div class="cta-info-item">
+                <span class="cta-info-label">일정</span>
+                <span class="cta-info-value">[요일/시간]</span>
+                <span class="cta-info-note">총 [N]회 · 주 [N]회</span>
+            </div>
+            <div class="cta-info-item">
+                <span class="cta-info-label">문의</span>
+                <span class="cta-info-value">[연락처]</span>
+                <span class="cta-info-note">[이메일 또는 카카오톡]</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
