@@ -1,0 +1,123 @@
+{
+  "step": 6,
+  "title": "세컨드 브레인 — AI 메모 자동 분류",
+  "hours": "2시간 · Workflow Automation",
+  "goal": "트리거 키워드를 입력하면 Claude가 메모를 분류하고 Notion DB 4종에 자동으로 저장하는 세컨드 브레인 시스템을 구축한다.",
+  "topics": [
+    "세컨드 브레인 개념 + 4가지 메모 종류와 트리거 키워드",
+    "Notion DB 4종 구조 + 스키마 설계",
+    "SKILL.md 스킬 관리 + CLAUDE.md 분류 규칙 작성",
+    "실습: 터미널 메모 자동 저장 + 중요도 자동 태깅"
+  ],
+  "practice": "트리거 키워드를 붙인 메모를 입력하면 Claude가 분류하고 해당 Notion DB에 자동으로 저장하는 세컨드 브레인 파이프라인을 완성한다.",
+  "slides": [
+    {
+      "imagePath": "assets/advanced/step06/세컨드_브레인이란.svg",
+      "goal": "세컨드 브레인 개념과 이번 수업에서 구축할 시스템을 이해한다.",
+      "topics": [
+        "세컨드 브레인 = 외부 두뇌, 기록이 지식이 됨",
+        "기존 방식의 문제 — 앱 분산, 검색 불가",
+        "트리거 키워드 → Claude 분류 → Notion DB 저장 흐름",
+        "ADV 05 Notion DB + 이번 메모 자동화 연결"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/advanced/step06/4가지_메모_종류와_트리거.svg",
+      "goal": "4가지 메모 종류와 트리거 키워드를 이해한다.",
+      "topics": [
+        "!할일: Personal Tasks DB로 저장",
+        "@업무: Work Tasks DB로 저장",
+        "#메모: Notes DB로 저장",
+        "$배움: Docs DB로 저장"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/advanced/step06/Notion_DB_4종_구조.svg",
+      "goal": "Notion DB 4종 구조와 Step5와의 연결 방식을 이해한다.",
+      "topics": [
+        "Personal Tasks / Work Tasks / Notes / Docs — 4종 DB",
+        "Step5에서 만든 DB에 Step6 구조 연결",
+        "각 DB의 역할과 관계",
+        "Claude가 트리거에 따라 저장 위치 결정"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/advanced/step06/스키마란.svg",
+      "goal": "스키마의 개념을 이해한다.",
+      "topics": [
+        "스키마 = DB의 컬럼 구조 설계도",
+        "엑셀 헤더 = 스키마 비유",
+        "컬럼 이름·데이터 타입·선택 옵션 3요소",
+        "Claude에게 스키마를 주면 DB를 자동 생성"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/advanced/step06/DB_스키마_구조.svg",
+      "goal": "DB 4종의 스키마 구조를 파악한다.",
+      "topics": [
+        "Title / Status / Due Date / Tag / Priority / Date 속성 구성",
+        "Personal·Work Tasks: Status + Due Date 포함",
+        "Notes: Date 자동 저장, Docs: Topic 자동 분류",
+        "Priority: 높음/보통/낮음 자동 태깅"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/advanced/step06/SKILL_md로_스킬_관리.svg",
+      "goal": "SKILL.md로 스킬을 관리하는 방법을 익힌다.",
+      "topics": [
+        "SKILL.md = Claude가 읽는 스킬 목록 파일",
+        "스킬명 + 경로 + 사용법을 SKILL.md에 등록",
+        "Claude가 SKILL.md를 읽고 실행 방법 이해",
+        "notion-save-personal / notion-save-work 스킬 등록"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/advanced/step06/CLAUDE_md_분류_규칙_작성.svg",
+      "goal": "CLAUDE.md에 트리거 → DB 분류 규칙을 작성한다.",
+      "topics": [
+        "트리거 키워드 → DB 매핑 지시문 작성",
+        "!할일 → notion-save-personal 스킬 실행",
+        "@업무 → notion-save-work 스킬 실행",
+        "#메모/#배움 → Notes/Docs 스킬 실행"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/advanced/step06/실습_터미널_메모_자동_분류.svg",
+      "goal": "터미널 메모 입력 → Notion 자동 저장 실습을 진행한다.",
+      "topics": [
+        "트리거 키워드 입력 → Claude 분류 확인",
+        "스킬 자동 실행 → Notion DB 저장 확인",
+        "4가지 트리거 모두 테스트",
+        "Status·Due Date·Priority 자동 추출 확인"
+      ],
+      "practice": "!할일 내일까지 보고서 제출",
+      "action": null
+    },
+    {
+      "imagePath": "assets/advanced/step06/중요도_자동_태깅.svg",
+      "goal": "중요도 자동 태깅 기능을 추가한다.",
+      "topics": [
+        "메모 내용에서 긴급도 자동 판단",
+        "\"긴급\", \"오늘까지\" → Priority=높음",
+        "CLAUDE.md에 태깅 규칙 추가",
+        "자동 태깅 결과 Notion에서 확인"
+      ],
+      "practice": "#메모 긴급 내일 발표 준비 필요",
+      "action": null
+    }
+  ]
+}
