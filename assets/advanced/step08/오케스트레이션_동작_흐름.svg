@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">오케스트레이션 동작 흐름</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">시연에서 이 흐름이 실제로 펼쳐집니다 — 단계마다 화면을 확인하세요</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- 단계 1: 회의록 투입 -->
+  <rect x="60" y="236" width="172" height="110" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+  <text x="146" y="268" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1e40af">① INPUT</text>
+  <text x="146" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">회의록 투입</text>
+  <text x="146" y="316" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Google Docs 링크를</text>
+  <text x="146" y="334" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">PM 터미널에 붙여넣기</text>
+
+  <!-- 화살표 -->
+  <text x="248" y="298" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="24" fill="#9ca3af">&#8594;</text>
+
+  <!-- 단계 2: PM 분석 -->
+  <rect x="262" y="236" width="172" height="110" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="2"/>
+  <text x="348" y="268" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#16a34a">② PM 에이전트</text>
+  <text x="348" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">회의록 분석</text>
+  <text x="348" y="316" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">내용 읽고 담당자별</text>
+  <text x="348" y="334" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">action item 정리</text>
+
+  <!-- 화살표 -->
+  <text x="450" y="298" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="24" fill="#9ca3af">&#8594;</text>
+
+  <!-- 단계 3: Notion 등록 -->
+  <rect x="464" y="236" width="172" height="110" rx="10" fill="#fef3c7" stroke="#fde68a" stroke-width="2"/>
+  <text x="550" y="268" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#d97706">③ Notion DB</text>
+  <text x="550" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">task 5개 등록</text>
+  <text x="550" y="316" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Status: 할 일</text>
+  <text x="550" y="334" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">담당자 이름 지정</text>
+
+  <!-- 화살표 -->
+  <text x="652" y="298" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="24" fill="#9ca3af">&#8594;</text>
+
+  <!-- 단계 4: 폴링 감지 -->
+  <rect x="666" y="236" width="172" height="110" rx="10" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="2"/>
+  <text x="752" y="268" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#9333ea">④ 폴링 감지</text>
+  <text x="752" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">5명 동시 발견</text>
+  <text x="752" y="316" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">10초마다 확인 중</text>
+  <text x="752" y="334" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">내 이름 task 발견!</text>
+
+  <!-- 화살표 -->
+  <text x="854" y="298" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="24" fill="#9ca3af">&#8594;</text>
+
+  <!-- 단계 5: 각자 실행 -->
+  <rect x="868" y="236" width="172" height="110" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+  <text x="954" y="268" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ea580c">⑤ 독립 실행</text>
+  <text x="954" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">스킬 자동 실행</text>
+  <text x="954" y="316" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Status: 진행 중</text>
+  <text x="954" y="334" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">5명이 동시에 처리</text>
+
+  <!-- 화살표 -->
+  <text x="1056" y="298" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="24" fill="#9ca3af">&#8594;</text>
+
+  <!-- 단계 6: 결과 집약 -->
+  <rect x="1070" y="236" width="150" height="110" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+  <text x="1145" y="268" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#15803d">⑥ RESULT</text>
+  <text x="1145" y="292" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#171717">결과 집약</text>
+  <text x="1145" y="316" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Status: 완료</text>
+  <text x="1145" y="334" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">산출물 Notion 저장</text>
+
+  <!-- 구분선 -->
+  <line x1="60" y1="380" x2="1220" y2="380" stroke="#f3f4f6" stroke-width="1"/>
+
+  <!-- 시연 화면 안내 -->
+  <text x="60" y="415" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">시연 중 화면에서 확인할 것</text>
+
+  <!-- 시연 안내 박스들 -->
+  <rect x="60" y="432" width="260" height="96" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="80" y="456" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">① ~ ③ 투입 &amp; 등록</text>
+  <text x="80" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">PM 터미널: 회의록 읽는 중</text>
+  <text x="80" y="496" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Notion DB: task 5개 생성됨</text>
+  <text x="80" y="516" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Status 칼럼: 모두 "할 일"</text>
+
+  <rect x="340" y="432" width="260" height="96" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="360" y="456" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9333ea">④ ~ ⑤ 감지 &amp; 실행</text>
+  <text x="360" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">5개 터미널: 동시에 움직임</text>
+  <text x="360" y="496" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">각자 담당 스킬 실행 중</text>
+  <text x="360" y="516" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Status: "할 일" → "진행 중"</text>
+
+  <rect x="620" y="432" width="260" height="96" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="640" y="456" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#15803d">⑥ 완료 &amp; 집약</text>
+  <text x="640" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Notion DB: Status "완료"</text>
+  <text x="640" y="496" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">산출물 링크 자동 저장됨</text>
+  <text x="640" y="516" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">약 5분 — 5개 완성</text>
+
+  <!-- Step 연결 박스 -->
+  <rect x="900" y="432" width="320" height="96" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="1060" y="456" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1e40af">이 흐름을 만드는 재료</text>
+  <text x="920" y="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Step5: Notion DB (task 저장소)</text>
+  <text x="920" y="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Step6: SKILL.md (각자 실행 능력)</text>
+  <text x="920" y="520" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Step7: PM 에이전트 (지휘자)</text>
+
+  <!-- 하단 바 -->
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">시연 중 Notion DB Status 칼럼을 보면 오케스트레이션이 실시간으로 보입니다</text>
+</svg>

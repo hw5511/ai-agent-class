@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">AI 에이전트 오케스트레이션이란?</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">PM이 지휘하고, 담당자들이 각자 실행하는 멀티 에이전트 협업 구조</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- 왼쪽: 기존 방식 -->
+  <rect x="60" y="232" width="330" height="300" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+  <text x="225" y="270" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#dc2626">기존 방식</text>
+  <text x="80" y="306" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">매번 직접 Claude에게 지시</text>
+  <text x="80" y="346" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">"Claude야, 마케팅안 써줘"</text>
+  <text x="80" y="370" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">"Claude야, 개발 일정 잡아줘"</text>
+  <text x="80" y="394" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">"Claude야, 디자인 시안 만들어줘"</text>
+  <text x="80" y="434" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#dc2626">→ 사람이 5번 따로 지시해야 함</text>
+  <text x="80" y="458" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#dc2626">→ 동시 실행 불가</text>
+
+  <!-- 중간 화살표 -->
+  <text x="420" y="388" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="30" fill="#d1d5db">&#8594;</text>
+
+  <!-- 가운데: 오케스트레이션 방식 -->
+  <rect x="450" y="232" width="370" height="300" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="635" y="270" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#16a34a">오케스트레이션 방식</text>
+  <text x="470" y="306" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">PM이 Notion에 task를 한 번 등록</text>
+  <text x="470" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">PM (지휘자)</text>
+  <text x="560" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">→  Notion에 task 5개 등록</text>
+  <text x="470" y="366" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">담당자들</text>
+  <text x="560" y="366" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">→  각자 폴링 → 내 이름 발견</text>
+  <text x="470" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">5명 동시</text>
+  <text x="560" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">→  독립적으로 실행</text>
+  <text x="470" y="432" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#16a34a">→ 지시 1번 → 5명이 동시에 처리</text>
+  <text x="470" y="456" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#16a34a">→ 사람 개입 없이 자동 완료</text>
+
+  <!-- 중간 화살표 2 -->
+  <text x="858" y="388" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="30" fill="#d1d5db">&#8594;</text>
+
+  <!-- 오른쪽: 오늘 시연 -->
+  <rect x="878" y="232" width="342" height="300" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="1049" y="270" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1e40af">오늘 시연</text>
+  <text x="898" y="306" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">신상품 기획회의 시나리오</text>
+  <text x="898" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">① 회의록 링크 투입</text>
+  <text x="898" y="364" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">② PM이 분석 → task 5개 등록</text>
+  <text x="898" y="388" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">③ 마케팅/개발/디자인/경영 동시 처리</text>
+  <text x="898" y="412" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">④ Notion에 결과 자동 저장</text>
+  <text x="898" y="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#2563eb">약 5분 — 산출물 5개 완성</text>
+
+  <!-- 하단 바 -->
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#2563eb"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">오케스트레이션 = PM(지휘자)이 task를 등록하면 담당자들이 각자 알아서 실행하는 구조</text>
+</svg>
