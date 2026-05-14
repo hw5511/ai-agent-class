@@ -26,6 +26,8 @@ jobs:
           mkdir -p _site
           cp index.html _site/index.html
           cp -r assets _site/assets
+          mkdir -p _site/template
+          cp template/index.html _site/template/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
