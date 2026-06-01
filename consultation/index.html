@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Lecture</title>
+    <link rel="stylesheet" href="css/style_portrait.css">
+</head>
+<body>
+    <div class="presentation-container">
+
+<section class="hero-section" data-section-id="hero">
+    <div class="hero-content">
+        <p class="hero-eyebrow">2026 CURRICULUM</p>
+        <h1 class="hero-title">
+            <span class="hero-title-main">AI AGENT</span>
+            <span class="hero-title-sub">커리큘럼</span>
+        </h1>
+        <div class="hero-divider"></div>
+        <p class="hero-tagline">실전 AI 에이전트 개발 과정</p>
+        <p class="hero-instructor">SBS아카데미 컴퓨터 아트 학원 강남점 - 강사 양희우</p>
+    </div>
+</section>
+
+<section class="section" data-section-id="what_is_agent">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">INTRODUCTION</span>
+            <h2 class="section-title">AI 에이전트란?</h2>
+        </div>
+
+        <div class="content-area">
+            <div class="split-layout">
+                <div class="split-left">
+                    <svg viewBox="0 0 400 360" class="agent-illustration">
+                        <!-- Brain core -->
+                        <circle cx="200" cy="140" r="60" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.3"/>
+                        <circle cx="200" cy="140" r="40" fill="none" stroke="#2563eb" stroke-width="2" opacity="0.5"/>
+                        <circle cx="200" cy="140" r="18" fill="#2563eb" opacity="0.15"/>
+                        <circle cx="200" cy="140" r="6" fill="#2563eb"/>
+
+                        <!-- Neural connections -->
+                        <line x1="200" y1="140" x2="108" y2="52" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
+                        <line x1="200" y1="140" x2="310" y2="58" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
+                        <line x1="200" y1="140" x2="78" y2="165" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
+                        <!-- THINK-DO 사이 선 제거 -->
+                        <line x1="200" y1="140" x2="120" y2="250" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
+                        <line x1="200" y1="140" x2="280" y2="235" stroke="#2563eb" stroke-width="1.5" opacity="0.4"/>
+
+                        <!-- Nodes (varying distances from center) -->
+                        <circle cx="108" cy="52" r="10" fill="#2563eb" opacity="0.2"/>
+                        <circle cx="108" cy="52" r="4" fill="#2563eb"/>
+                        <text x="108" y="34" text-anchor="middle" fill="#2563eb" font-size="11" font-weight="600">SEE</text>
+
+                        <circle cx="310" cy="58" r="10" fill="#2563eb" opacity="0.2"/>
+                        <circle cx="310" cy="58" r="4" fill="#2563eb"/>
+                        <text x="310" y="40" text-anchor="middle" fill="#2563eb" font-size="11" font-weight="600">THINK</text>
+
+                        <circle cx="78" cy="165" r="10" fill="#2563eb" opacity="0.2"/>
+                        <circle cx="78" cy="165" r="4" fill="#2563eb"/>
+                        <text x="40" y="169" text-anchor="middle" fill="#2563eb" font-size="11" font-weight="600">PLAN</text>
+
+                        <circle cx="330" cy="150" r="10" fill="#2563eb" opacity="0.2"/>
+                        <circle cx="330" cy="150" r="4" fill="#2563eb"/>
+                        <text x="368" y="154" text-anchor="middle" fill="#2563eb" font-size="11" font-weight="600">DO</text>
+
+                        <circle cx="120" cy="250" r="10" fill="#2563eb" opacity="0.2"/>
+                        <circle cx="120" cy="250" r="4" fill="#2563eb"/>
+                        <text x="96" y="276" text-anchor="middle" fill="#2563eb" font-size="11" font-weight="600">FIX</text>
+
+                        <circle cx="280" cy="235" r="10" fill="#2563eb" opacity="0.2"/>
+                        <circle cx="280" cy="235" r="4" fill="#2563eb"/>
+                        <text x="310" y="258" text-anchor="middle" fill="#2563eb" font-size="11" font-weight="600">TOOLS</text>
+
+                        <!-- Orbit ring -->
+                        <ellipse cx="200" cy="140" rx="110" ry="100" fill="none" stroke="#2563eb" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.2"/>
+
+                        <!-- Loop arrow -->
+                        <path d="M310 140 Q320 90 270 60" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.3"/>
+                        <polygon points="272,56 266,64 274,64" fill="#2563eb" opacity="0.3"/>
+                        <text x="200" y="290" text-anchor="middle" fill="#2563eb" font-size="10" opacity="0.5" font-weight="600">AUTONOMOUS LOOP</text>
+                    </svg>
+                </div>
+                <div class="split-right">
+                    <div class="concept-block">
+                        <h3 class="concept-title">스스로 판단하고, 행동하는 AI</h3>
+                        <p class="concept-text">
+                            AI 에이전트는 단순히 질문에 답하는 AI를 넘어,
+                            <strong>스스로 목표를 설정하고, 계획을 세우고, 도구를 사용해 실행</strong>하는
+                            자율적 AI 시스템입니다.
+                        </p>
+                    </div>
+                    <div class="concept-list">
+                        <div class="concept-item">
+                            <span class="concept-num">01</span>
+                            <div>
+                                <strong>환경 인식</strong>
+                                <p>파일, 웹, API 등 외부 환경을 스스로 탐색하고 정보를 수집</p>
+                            </div>
+                        </div>
+                        <div class="concept-item">
+                            <span class="concept-num">02</span>
+                            <div>
+                                <strong>자율 판단</strong>
+                                <p>수집한 정보를 바탕으로 다음 행동을 스스로 결정</p>
+                            </div>
+                        </div>
+                        <div class="concept-item">
+                            <span class="concept-num">03</span>
+                            <div>
+                                <strong>도구 활용</strong>
+                                <p>코드 실행, 파일 편집, 외부 서비스 호출 등 실제 작업을 수행</p>
+                            </div>
+                        </div>
+                        <div class="concept-item">
+                            <span class="concept-num">04</span>
+                            <div>
+                                <strong>반복 학습</strong>
+                                <p>결과를 확인하고 부족하면 스스로 수정하며 목표를 달성할 때까지 반복</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="ai_vs_agent">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">COMPARISON</span>
+            <h2 class="section-title">일반 AI와 에이전트의 차이</h2>
+        </div>
+
+        <div class="content-area">
+            <div class="compare-grid">
+                <div class="compare-card">
+                    <div class="compare-header">
+                        <span class="compare-label compare-label--old">TRADITIONAL</span>
+                        <h3 class="compare-title">일반 AI 사용</h3>
+                    </div>
+                    <div class="compare-steps">
+                        <div class="compare-step">
+                            <span class="step-number">1</span>
+                            <div class="step-content">
+                                <strong>프롬프트 입력</strong>
+                                <p>AI에게 질문을 직접 타이핑</p>
+                            </div>
+                        </div>
+                        <div class="compare-arrow">
+                            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 4 L10 16 M5 11 L10 16 L15 11" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                        </div>
+                        <div class="compare-step">
+                            <span class="step-number">2</span>
+                            <div class="step-content">
+                                <strong>결과물을 직접 복사</strong>
+                                <p>생성된 텍스트를 수동으로 선택/복사</p>
+                            </div>
+                        </div>
+                        <div class="compare-arrow">
+                            <svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 4 L10 16 M5 11 L10 16 L15 11" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                        </div>
+                        <div class="compare-step">
+                            <span class="step-number">3</span>
+                            <div class="step-content">
+                                <strong>문서에 붙여넣고 직접 발송</strong>
+                                <p>이메일 작성, 파일 저장 등 모두 사람이 수행</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="compare-footer compare-footer--old">
+                        모든 실행은 <strong>사람</strong>이 직접 수행
+                    </div>
+                </div>
+
+                <div class="compare-card compare-card--highlight">
+                    <div class="compare-header">
+                        <span class="compare-label compare-label--new">AGENT</span>
+                        <h3 class="compare-title">AI 에이전트 활용</h3>
+                    </div>
+                    <div class="compare-features">
+                        <div class="compare-feature">
+                            <div class="feature-icon">
+                                <svg width="28" height="28" viewBox="0 0 28 28"><path d="M4 7h7v7H4zM17 7h7v7h-7zM4 17h7v7H4zM17 17h7v7h-7z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M11 10.5h6M11 20.5h6M7.5 14v3M20.5 14v3" stroke="currentColor" stroke-width="1" opacity="0.4"/></svg>
+                            </div>
+                            <div>
+                                <strong>파일 시스템 직접 접근</strong>
+                                <p>'내 컴퓨터'의 폴더에서 파일을 직접 찾고 읽고 수정하는 AI</p>
+                            </div>
+                        </div>
+                        <div class="compare-feature">
+                            <div class="feature-icon">
+                                <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M14 8v6l4 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            </div>
+                            <div>
+                                <strong>반복 업무 자동화</strong>
+                                <p>매뉴얼 문서 기반으로 반복 작업을 자동화하고 타이머 설정까지</p>
+                            </div>
+                        </div>
+                        <div class="compare-feature">
+                            <div class="feature-icon">
+                                <svg width="28" height="28" viewBox="0 0 28 28"><rect x="3" y="8" width="9" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="16" y="8" width="9" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 14h4" stroke="currentColor" stroke-width="1.5"/><circle cx="7.5" cy="14" r="1.5" fill="currentColor" opacity="0.3"/><circle cx="20.5" cy="14" r="1.5" fill="currentColor" opacity="0.3"/></svg>
+                            </div>
+                            <div>
+                                <strong>외부 프로그램 연결</strong>
+                                <p>코드 실행으로 이메일, 슬랙, 데이터베이스 등 외부 시스템과 연동</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="compare-footer compare-footer--new">
+                        실행까지 <strong>AI가 자율적</strong>으로 수행
+                    </div>
+                </div>
+            </div>
+
+            <div class="prompt-example">
+                <span class="prompt-label">AI 에이전트는 이렇게 사용 가능합니다</span>
+                <div class="prompt-flow">
+                    <span class="prompt-chip">'매출자료' 폴더의 파일을 분석해서</span>
+                    <span class="prompt-connector">
+                        <svg width="32" height="12" viewBox="0 0 32 12"><path d="M0 6h28M24 2l4 4-4 4" fill="none" stroke="#2563eb" stroke-width="1.5"/></svg>
+                    </span>
+                    <span class="prompt-chip">매주 월요일 오전 9시,</span>
+                    <span class="prompt-connector">
+                        <svg width="32" height="12" viewBox="0 0 32 12"><path d="M0 6h28M24 2l4 4-4 4" fill="none" stroke="#2563eb" stroke-width="1.5"/></svg>
+                    </span>
+                    <span class="prompt-chip">나에게 주간 보고서를 만들어서 이메일로 보내줘</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="global_agents">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">STATUS</span>
+            <h2 class="section-title">AI 에이전트 현황</h2>
+            <p class="section-description">글로벌 AI 기업들은 앞다퉈 Agent 기능 출시</p>
+        </div>
+
+        <div class="content-area">
+            <div class="image-row-3">
+                <div class="image-card">
+                    <div class="image-wrap">
+                        <img src="assets/gptcodex.png" alt="OpenAI Codex">
+                    </div>
+                    <p class="image-caption">OpenAI의 <strong>Codex</strong></p>
+                    <div class="company-logo"><img src="assets/gpt_logo.png" alt="OpenAI"></div>
+                </div>
+                <div class="image-card">
+                    <div class="image-wrap">
+                        <img src="assets/claudecode.png" alt="Anthropic Claude Code">
+                    </div>
+                    <p class="image-caption">Anthropic의 <strong>Claude Code</strong></p>
+                    <div class="company-logo"><img src="assets/claude_logo.png" alt="Anthropic"></div>
+                </div>
+                <div class="image-card">
+                    <div class="image-wrap">
+                        <img src="assets/googleantigravity.png" alt="Google Jules">
+                    </div>
+                    <p class="image-caption">Google의 <strong>Antigravity</strong></p>
+                    <div class="company-logo"><img src="assets/gemini_logo.png" alt="Google"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="agent_market">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">MARKET</span>
+            <h2 class="section-title">AI 에이전트 시장</h2>
+        </div>
+
+        <div class="content-area image-center">
+            <div class="market-chart">
+                <h3 class="market-chart-title"><span class="market-highlight">AI 에이전트</span> 시장 전망</h3>
+                <p class="market-chart-sub">5년간 28배 성장 | CAGR 175%</p>
+
+                <div class="market-bars">
+                    <div class="market-bar-group">
+                        <div class="market-bar-label-top">&nbsp;</div>
+                        <div class="market-bar market-bar--small">
+                            <span class="market-bar-value">2.2조원</span>
+                        </div>
+                        <span class="market-bar-year">2025</span>
+                    </div>
+                    <div class="market-arrow-area">
+                        <svg width="80" height="80" viewBox="0 0 80 80">
+                            <path d="M10 70 Q30 30 65 15" fill="none" stroke="#2563eb" stroke-width="3"/>
+                            <polygon points="63,10 70,16 62,20" fill="#2563eb"/>
+                        </svg>
+                    </div>
+                    <div class="market-bar-group">
+                        <div class="market-bar-label-top market-highlight">61.7조원</div>
+                        <div class="market-bar market-bar--large">
+                        </div>
+                        <span class="market-bar-year"><strong>2026</strong></span>
+                    </div>
+                </div>
+
+                <div class="market-note">
+                    <p>2026년까지 전체 기업 애플리케이션의 40%가 작업 특화 AI 에이전트를 통합</p>
+                    <p>2028년에는 90%의 기업 앱이 AI 에이전트를 통합</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="job_market">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">IMPACT</span>
+            <h2 class="section-title">AI로 인한 채용시장의 변화</h2>
+            <p class="section-description">2024년 회계사 합격자 1,200명 중 수습기관 등록 338명 (28%), 2025년 누적 미지정 회계사 약 1,000명 예상</p>
+        </div>
+
+        <div class="content-area image-center">
+            <div class="image-row-2">
+                <div class="image-wrap">
+                    <img src="assets/4-2-2.png" alt="채용시장 변화 1">
+                </div>
+                <div class="image-wrap">
+                    <img src="assets/4-2-1.png" alt="채용시장 변화 2">
+                </div>
+            </div>
+            <p class="image-source">당신의 직업은 안녕하십니까? - 신년기획 &lt;멋진 신AI세계&gt; 1부 | 추적60분 KBS 260102 방송</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="role_change">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">FUTURE</span>
+            <h2 class="section-title">인간의 역할의 변화</h2>
+        </div>
+
+        <div class="content-area image-center">
+            <div class="image-full">
+                <img src="assets/diagram1.png" alt="인간 역할 변화 다이어그램">
+            </div>
+            <p class="image-note">실질적인 문서, 사무 업무나 반복업무는 <strong>에이전트가 담당</strong>하며, <strong>'AI 에이전트 관리자'</strong>만이 남게 된다</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="hiring_samsung">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">HIRING</span>
+            <h2 class="section-title">2026년 채용 공고 현황</h2>
+            <p class="section-description">AI 에이전트 매니저 직군 1 - 삼성전자 (미국법인)</p>
+        </div>
+
+        <div class="content-area">
+            <div class="hiring-layout-samsung">
+                <div class="hiring-left-stack">
+                    <div class="image-wrap">
+                        <img src="assets/삼성채용.png" alt="삼성전자 채용 공고 1">
+                    </div>
+                    <div class="image-wrap">
+                        <img src="assets/삼성채용2.png" alt="삼성전자 채용 공고 2">
+                    </div>
+                </div>
+                <div class="hiring-right">
+                    <div class="image-wrap">
+                        <img src="assets/삼성채용3.png" alt="삼성전자 채용 공고 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="hiring_zillow">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">HIRING</span>
+            <h2 class="section-title">2026년 채용 공고 현황</h2>
+            <p class="section-description">AI 에이전트 매니저 직군 2 - ZILLOW (미국 1위 부동산 앱)</p>
+        </div>
+
+        <div class="content-area image-center">
+            <div class="image-crop-sides">
+                <img src="assets/zillow공고.png" alt="Zillow 채용 공고">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="hiring_cnh">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">HIRING</span>
+            <h2 class="section-title">2026년 채용 공고 현황</h2>
+            <p class="section-description">AI 에이전트 매니저 직군 3 - CNH 인더스트리얼 (다국적 농사/건설 기계 제조 및 판매 기업)</p>
+        </div>
+
+        <div class="content-area image-center">
+            <div class="image-full">
+                <img src="assets/cnh인더스트리얼공고.png" alt="CNH Industrial 채용 공고">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="hiring_yam">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">HIRING</span>
+            <h2 class="section-title">2026년 채용 공고 현황</h2>
+            <p class="section-description">AI 에이전트 매니저 직군 4 - Yum! Brands (피자헛, KFC, 타코벨 모기업)</p>
+        </div>
+
+        <div class="content-area image-center">
+            <div class="image-crop-sides">
+                <img src="assets/얌브랜드공고.png" alt="Yum Brands 채용 공고">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section--dark" data-section-id="ai_transformation">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge badge-accent">INSIGHT</span>
+            <h2 class="section-title">현재 기업들의 AI 전환</h2>
+        </div>
+
+        <div class="content-area insight-center">
+            <div class="insight-block">
+                <p class="insight-lead">현재 기업들은 산업&middot;분야에 상관없이</p>
+            </div>
+            <div class="insight-hero-text">
+                <p>AI 도입 &amp; AI 전환</p>
+            </div>
+            <div class="insight-hero-text">
+                <p>진행중<span style="font-weight:400;opacity:0.6">ing...</span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="curriculum_intro">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">CURRICULUM</span>
+            <h2 class="section-title">AI 에이전트 커리큘럼이란?</h2>
+        </div>
+
+        <div class="content-area">
+            <div class="curriculum-intro-grid">
+                <div class="currintro-card currintro-card--accent">
+                    <div class="currintro-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="4" y="8" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 18l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="currintro-title">에이전트 기반 실습</h3>
+                    <p class="currintro-desc">설치형 AI 에이전트를 직접 설치하고 에이전트 환경에서 실습하며 익히는 과정</p>
+                </div>
+                <div class="currintro-card">
+                    <div class="currintro-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="14" r="6" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 34c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="currintro-title">비개발자 대상</h3>
+                    <p class="currintro-desc">프로그래밍 경험이 없어도 AI 에이전트를 활용할 수 있도록 설계된 과정</p>
+                </div>
+                <div class="currintro-card">
+                    <div class="currintro-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 6v28M6 20h28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="currintro-title">3단계 로드맵</h3>
+                    <p class="currintro-desc">프롬프트 엔지니어링 - AI 에이전트 기초 - AI 에이전트 심화로 이어지는 체계적 구성</p>
+                </div>
+                <div class="currintro-card">
+                    <div class="currintro-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="6" y="6" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <rect x="22" y="6" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <rect x="6" y="22" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <rect x="22" y="22" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="currintro-title">실무 자동화</h3>
+                    <p class="currintro-desc">메신저 연동, 업무 자동화, 웹 자동화 등 실무에서 바로 활용 가능한 내용</p>
+                </div>
+            </div>
+
+            <div class="currintro-bottom">
+                <p class="currintro-summary">Claude Code, GPT Codex, Gemini CLI 등 <strong>주요 AI 에이전트를 직접 설치</strong>하고, 파일 관리부터 업무 자동화까지 <strong>실전 중심</strong>으로 학습합니다</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="curriculum_roadmap">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">ROADMAP</span>
+            <h2 class="section-title">AI 에이전트 커리큘럼 로드맵</h2>
+        </div>
+
+        <div class="content-area">
+            <div class="roadmap-row">
+                <div class="roadmap-card roadmap-card--white">
+                    <span class="roadmap-step">STEP 1</span>
+                    <h3 class="roadmap-title">프롬프트 엔지니어링</h3>
+                    <ul class="roadmap-list">
+                        <li>AI 모델 비교 및 선택</li>
+                        <li>프롬프트 구조화 기법</li>
+                        <li>실무 활용 예시 실습</li>
+                    </ul>
+                </div>
+                <div class="roadmap-arrow">
+                    <svg width="40" height="24" viewBox="0 0 40 24"><path d="M0 12h34M30 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                </div>
+                <div class="roadmap-card roadmap-card--blue">
+                    <span class="roadmap-step">STEP 2</span>
+                    <h3 class="roadmap-title">AI 에이전트 기초</h3>
+                    <ul class="roadmap-list">
+                        <li>Claude Code 기본 사용법</li>
+                        <li>Sub Agent / Hooks / MCP</li>
+                        <li>Skills 제작 및 자동화</li>
+                        <li>메신저 알림 연동</li>
+                    </ul>
+                </div>
+                <div class="roadmap-arrow">
+                    <svg width="40" height="24" viewBox="0 0 40 24"><path d="M0 12h34M30 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                </div>
+                <div class="roadmap-card roadmap-card--dark">
+                    <span class="roadmap-step">STEP 3</span>
+                    <h3 class="roadmap-title">AI 에이전트 심화</h3>
+                    <ul class="roadmap-list">
+                        <li>고급 스킬 구현 (엑셀/워드/PPT)</li>
+                        <li>Notion DB + API 자동화</li>
+                        <li>세컨드 브레인·PM 에이전트 구축</li>
+                        <li>나만의 하네스 설계·완성</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="basic_curriculum">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">BASIC</span>
+            <h2 class="section-title">AI 에이전트 기초 커리큘럼</h2>
+        </div>
+
+        <div class="content-area">
+            <div class="curriculum-grid">
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">1</span>
+                        <div>
+                            <h4 class="curr-title">AI 에이전트 이해와 CLI 환경 구축</h4>
+                            <span class="curr-hours">2시간</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>AI 에이전트란? / 설치형 AI란?</li>
+                        <li>Gemini CLI 설치 및 로그인</li>
+                        <li>GPT CLI(Codex) 설치 및 로그인</li>
+                        <li>Claude Code 설치 및 로그인</li>
+                        <li>세션 사용량 및 extra-usage</li>
+                    </ul>
+                </div>
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">2</span>
+                        <div>
+                            <h4 class="curr-title">Claude 에이전트 메모리와 파일/폴더 제어</h4>
+                            <span class="curr-hours">2시간</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>에이전트 메모리 (/init, /memory, Auto Memory)</li>
+                        <li>에이전트 이름 지어주기 - 프롬프팅</li>
+                        <li>파일/폴더 생성, 이동, 이름변경</li>
+                        <li>파일/폴더 삭제, 복사, 목록 조회</li>
+                        <li>파일 내용 수정, 실행(start)</li>
+                    </ul>
+                </div>
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">3</span>
+                        <div>
+                            <h4 class="curr-title">Claude Code 환경 설정과 기본 명령어</h4>
+                            <span class="curr-hours">2시간</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>Claude 개인정보 보안 설정 체크하기</li>
+                        <li>Claude 설정 세팅하기 (파일 삭제 금지 세팅)</li>
+                        <li>Bypass 모드 / esc / 사전 입력</li>
+                        <li>/clear, /login, /logout, /exit, /color</li>
+                        <li>웹 Search 툴 사용하기</li>
+                        <li>Todos 기능 / /todos 명령어</li>
+                    </ul>
+                </div>
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">4</span>
+                        <div>
+                            <h4 class="curr-title">세션 관리와 백그라운드 작업</h4>
+                            <span class="curr-hours">2시간</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>/resume, /context 명령어</li>
+                        <li>/compact & auto compact</li>
+                        <li>/rename 세션</li>
+                        <li>/task - 백그라운드 프로세스 개념</li>
+                        <li>백그라운드 프로세스 만들기</li>
+                    </ul>
+                </div>
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">5</span>
+                        <div>
+                            <h4 class="curr-title">Sub Agent와 Hooks</h4>
+                            <span class="curr-hours">2시간</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>Sub Agent란?</li>
+                        <li>Sub Agent의 작동 원리</li>
+                        <li>Sub Agent 만들기</li>
+                        <li>Claude in PowerPoint &amp; Excel</li>
+                    </ul>
+                </div>
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">6</span>
+                        <div>
+                            <h4 class="curr-title">MCP 개념 이해와 Notion 연동</h4>
+                            <span class="curr-hours">2시간</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>MCP란?</li>
+                        <li>MCP 설치 및 세팅 방법</li>
+                        <li>실전 MCP 사례: Trivago·Canva·Wix</li>
+                        <li>Notion MCP 설치하기</li>
+                        <li>Notion 에이전트 제어 실습</li>
+                    </ul>
+                </div>
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">7</span>
+                        <div>
+                            <h4 class="curr-title">Discord Plugin 고급 기능 실습</h4>
+                            <span class="curr-hours">2시간</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>Discord Plugin MCP 설치 및 세팅</li>
+                        <li>채널 메시지 읽기 / 보내기 자동화</li>
+                        <li>Claude ↔ Discord 양방향 연동</li>
+                        <li>작업 완료 알림 + 명령 수신 실습</li>
+                    </ul>
+                </div>
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">8</span>
+                        <div>
+                            <h4 class="curr-title">Claude Desktop 사용법</h4>
+                            <span class="curr-hours">2시간</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>일반 Claude Desktop</li>
+                        <li>Desktop Claude Code</li>
+                        <li>Claude Cowork</li>
+                        <li>Claude Code CLI와 비교</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="advanced_curriculum">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">ADVANCED</span>
+            <h2 class="section-title">AI 에이전트 심화 커리큘럼</h2>
+        </div>
+
+        <div class="content-area">
+            <div class="curriculum-grid">
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">1</span>
+                        <div>
+                            <h4 class="curr-title">엑셀·워드·PPT·한글 문서 자동 작성</h4>
+                            <span class="curr-hours">2시간 · Tool &amp; Automation</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>openpyxl로 엑셀 Skill 제작</li>
+                        <li>python-docx로 워드 Skill 제작</li>
+                        <li>python-pptx로 PPT 자동 생성</li>
+                        <li>한글(HWP) 문서 자동 작성</li>
+                        <li>4가지 Skill 파이프라인 연결</li>
+                    </ul>
+                </div>
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">2</span>
+                        <div>
+                            <h4 class="curr-title">웹 브라우저 자동화</h4>
+                            <span class="curr-hours">2시간 · Web Automation</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>웹 자동화 원리 + Playwright 환경 구성</li>
+                        <li>페이지 이동 / 클릭 / 입력 자동화</li>
+                        <li>데이터 수집 및 CSV·JSON 저장</li>
+                    </ul>
+                </div>
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">3</span>
+                        <div>
+                            <h4 class="curr-title">GWS CLI로 Google Workspace 자동화</h4>
+                            <span class="curr-hours">2시간 · Tool &amp; Automation</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>GCP 서비스 계정 설정 및 인증</li>
+                        <li>Sheets·Docs·Drive API CLI 연동</li>
+                        <li>Gmail API + 데이터 → 리포트 자동화</li>
+                    </ul>
+                </div>
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">4</span>
+                        <div>
+                            <h4 class="curr-title">외부 API — 네이버·타입캐스트</h4>
+                            <span class="curr-hours">2시간 · Tool &amp; Automation</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>네이버 검색 API 연동 + 데이터 수집</li>
+                        <li>타입캐스트 TTS API로 음성 자동 생성</li>
+                        <li>API 결합 파이프라인 실습</li>
+                    </ul>
+                </div>
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">5</span>
+                        <div>
+                            <h4 class="curr-title">Notion DB + API 연결</h4>
+                            <span class="curr-hours">2시간 · Workflow Automation</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>Notion API 토큰 발급 + Integration 설정</li>
+                        <li>데이터베이스 구조 파악 및 템플릿 세팅</li>
+                        <li>Claude에게 API 키 전달 + Skill 자동 생성</li>
+                    </ul>
+                </div>
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">6</span>
+                        <div>
+                            <h4 class="curr-title">세컨드 브레인 — AI 메모 자동 분류</h4>
+                            <span class="curr-hours">2시간 · Workflow Automation</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>4가지 메모 종류와 자동 분류 트리거 설계</li>
+                        <li>Notion DB 4종 스키마 구성</li>
+                        <li>CLAUDE.md 분류 규칙 작성 + 중요도 자동 태깅</li>
+                    </ul>
+                </div>
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">7</span>
+                        <div>
+                            <h4 class="curr-title">PM 에이전트 — Notion Sales Playbook 자동화</h4>
+                            <span class="curr-hours">2시간 · Workflow Automation</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>Sales Playbook DB 구조 + 속성 설계</li>
+                        <li>Channel / Stage 기반 task 분류 로직</li>
+                        <li>CLAUDE.md 규칙 작성 + 4가지 케이스 실습</li>
+                    </ul>
+                </div>
+                <div class="curr-card">
+                    <div class="curr-header">
+                        <span class="curr-num">8</span>
+                        <div>
+                            <h4 class="curr-title">하네스 엔지니어링 — 나만의 에이전트 완성</h4>
+                            <span class="curr-hours">2시간 · Capstone</span>
+                        </div>
+                    </div>
+                    <ul class="curr-list">
+                        <li>하네스(에이전트 시스템) 전체 구조 복습</li>
+                        <li>Claude를 설계 파트너로 활용하는 방법</li>
+                        <li>나만의 하네스 직접 설계·세팅·테스트</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="usecase_1_2">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">USE CASE</span>
+            <h2 class="section-title">AI 에이전트 활용 사례</h2>
+        </div>
+
+        <div class="content-area image-center">
+            <div class="usecase-dual-grid">
+                <div class="usecase-item">
+                    <div class="usecase-item-header">
+                        <span class="usecase-item-badge">USE CASE 1</span>
+                        <h3>이메일 자동 작성</h3>
+                        <p>컨텍스트 분석 후 Gmail 자동 작성 및 발송</p>
+                    </div>
+                    <div class="video-showcase">
+                        <video loop muted playsinline preload="none" poster="assets/videos/posters/demo1_email_poster.jpg" class="demo-video">
+                            <source src="assets/videos/demo1_email.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="usecase-caption">
+                        <span class="caption-tag">Claude Code</span>
+                        <span class="caption-text">이메일 분석 + 작성 + 발송 자동 처리</span>
+                    </div>
+                </div>
+                <div class="usecase-item">
+                    <div class="usecase-item-header">
+                        <span class="usecase-item-badge">USE CASE 2</span>
+                        <h3>데이터 분석 + 보고서</h3>
+                        <p>엑셀 자동 분석 후 Word 보고서 생성</p>
+                    </div>
+                    <div class="video-showcase">
+                        <video loop muted playsinline preload="none" poster="assets/videos/posters/demo2_report_poster.jpg" class="demo-video">
+                            <source src="assets/videos/demo2_report.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="usecase-caption">
+                        <span class="caption-tag">데이터 자동화</span>
+                        <span class="caption-text">엑셀 분석 + 피벗 + 차트 + Word 보고서</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="usecase_3_4">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">USE CASE</span>
+            <h2 class="section-title">AI 에이전트 활용 사례</h2>
+        </div>
+
+        <div class="content-area image-center">
+            <div class="usecase-dual-grid">
+                <div class="usecase-item">
+                    <div class="usecase-item-header">
+                        <span class="usecase-item-badge">USE CASE 3</span>
+                        <h3>홍보 영상 + 웹사이트</h3>
+                        <p>AI 영상 생성 후 웹사이트에 자동 배포</p>
+                    </div>
+                    <div class="video-showcase">
+                        <video loop muted playsinline preload="none" poster="assets/videos/posters/demo4_video_poster.jpg" class="demo-video">
+                            <source src="assets/videos/demo4_video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="usecase-caption">
+                        <span class="caption-tag">영상 자동화</span>
+                        <span class="caption-text">Veo3 영상 생성 + FFmpeg + 웹사이트 빌드</span>
+                    </div>
+                </div>
+                <div class="usecase-item">
+                    <div class="usecase-item-header">
+                        <span class="usecase-item-badge">USE CASE 4</span>
+                        <h3>SNS 카드뉴스 생성</h3>
+                        <p>브랜드 분석 후 인스타 카드뉴스 자동 디자인</p>
+                    </div>
+                    <div class="video-showcase">
+                        <video loop muted playsinline preload="none" poster="assets/videos/posters/demo5_cardnews_poster.jpg" class="demo-video">
+                            <source src="assets/videos/demo5_cardnews.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="usecase-caption">
+                        <span class="caption-tag">SNS 마케팅</span>
+                        <span class="caption-text">카피라이팅 + 레이아웃 + 인스타 업로드</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="usecase_5_6">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">USE CASE</span>
+            <h2 class="section-title">AI 에이전트 활용 사례</h2>
+        </div>
+
+        <div class="content-area image-center">
+            <div class="usecase-dual-grid">
+                <div class="usecase-item">
+                    <div class="usecase-item-header">
+                        <span class="usecase-item-badge">USE CASE 5</span>
+                        <h3>SVG 애니메이션 생성</h3>
+                        <p>로고 분석 후 3D 애니메이션 SVG 자동 생성</p>
+                    </div>
+                    <div class="video-showcase">
+                        <video loop muted playsinline preload="none" poster="assets/videos/posters/demo6_svg_poster.jpg" class="demo-video">
+                            <source src="assets/videos/demo6_svg.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="usecase-caption">
+                        <span class="caption-tag">디자인 자동화</span>
+                        <span class="caption-text">SVG path 추출 + CSS 애니메이션 생성</span>
+                    </div>
+                </div>
+                <div class="usecase-item">
+                    <div class="usecase-item-header">
+                        <span class="usecase-item-badge">USE CASE 6</span>
+                        <h3>쇼핑몰 최저가 검색</h3>
+                        <p>여러 쇼핑몰 크롤링 후 최저가 비교 분석</p>
+                    </div>
+                    <div class="video-showcase">
+                        <video loop muted playsinline preload="none" poster="assets/videos/posters/demo7_shopping_poster.jpg" class="demo-video">
+                            <source src="assets/videos/demo7_shopping.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="usecase-caption">
+                        <span class="caption-tag">웹 크롤링</span>
+                        <span class="caption-text">쿠팡 + 네이버 + 11번가 107개 상품 비교</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="usecase_7_8">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="section-badge">USE CASE</span>
+            <h2 class="section-title">AI 에이전트 활용 사례</h2>
+        </div>
+
+        <div class="content-area image-center">
+            <div class="usecase-dual-grid">
+                <div class="usecase-item">
+                    <div class="usecase-item-header">
+                        <span class="usecase-item-badge">USE CASE 7</span>
+                        <h3>자동 워크플로우 생성</h3>
+                        <p>에이전트가 자동화 워크플로우를 설계하고 PPT로 시각화</p>
+                    </div>
+                    <div class="video-showcase">
+                        <video loop muted playsinline preload="none" poster="assets/videos/posters/demo8_workflow_poster.jpg" class="demo-video">
+                            <source src="assets/videos/demo8_workflow.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="usecase-caption">
+                        <span class="caption-tag">워크플로우 자동화</span>
+                        <span class="caption-text">기획 -> 시각자료 -> 슬라이드 -> PPT 저장 자동 파이프라인</span>
+                    </div>
+                </div>
+                <div class="usecase-item">
+                    <div class="usecase-item-header">
+                        <span class="usecase-item-badge">USE CASE 8</span>
+                        <h3>AI 뉴스 데일리 리포트</h3>
+                        <p>AI 트렌드 뉴스 수집 후 데일리 리포트 생성 및 Discord 전송</p>
+                    </div>
+                    <div class="video-showcase">
+                        <video loop muted playsinline preload="none" poster="assets/videos/posters/demo9_dailyreport_poster.jpg" class="demo-video">
+                            <source src="assets/videos/demo9_dailyreport.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="usecase-caption">
+                        <span class="caption-tag">뉴스 자동화</span>
+                        <span class="caption-text">42개 기사 수집 -> TOP 10 선정 -> Discord 전송</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" data-section-id="agent_demo">
+    <div class="section-container" style="display: flex; align-items: center; justify-content: center; min-height: 100%;">
+        <div class="section-header" style="text-align: center; margin-bottom: 0;">
+            <span class="section-badge">LIVE DEMO</span>
+            <h2 class="section-title">AI 에이전트 시연</h2>
+        </div>
+    </div>
+</section>
+
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Auto-apply reveal classes
+        document.querySelectorAll('.section-header').forEach(el => el.classList.add('reveal'));
+        document.querySelectorAll('.content-area').forEach(el => el.classList.add('reveal'));
+        document.querySelectorAll('.curriculum-grid, .curriculum-intro-grid, .roadmap-row, .compare-grid, .image-row-3, .image-row-2').forEach(el => {
+            el.classList.add('reveal-children');
+        });
+
+        // IntersectionObserver for scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.reveal, .reveal-children').forEach(el => observer.observe(el));
+
+        // Video modal player
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        // Add play overlay to each video-showcase
+        document.querySelectorAll('.video-showcase').forEach(wrap => {
+            const overlay = document.createElement('div');
+            overlay.className = 'play-overlay';
+            overlay.innerHTML = '<svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><polygon points="5,3 19,12 5,21"/></svg>';
+            wrap.appendChild(overlay);
+        });
+
+        // Create modal backdrop (once)
+        const backdrop = document.createElement('div');
+        backdrop.className = 'video-modal-backdrop';
+        backdrop.style.pointerEvents = 'none';
+        document.body.appendChild(backdrop);
+
+        function openVideoModal(src, poster) {
+            if (isMobile) {
+                // Mobile: create temp video and request fullscreen
+                const tmp = document.createElement('video');
+                tmp.src = src;
+                tmp.poster = poster;
+                tmp.controls = true;
+                tmp.autoplay = true;
+                tmp.playsInline = false;
+                tmp.style.display = 'none';
+                document.body.appendChild(tmp);
+                tmp.play().then(() => {
+                    if (tmp.requestFullscreen) tmp.requestFullscreen();
+                    else if (tmp.webkitEnterFullscreen) tmp.webkitEnterFullscreen();
+                }).catch(() => {});
+                tmp.addEventListener('fullscreenchange', () => {
+                    if (!document.fullscreenElement) { tmp.pause(); tmp.remove(); }
+                });
+                tmp.addEventListener('webkitendfullscreen', () => { tmp.pause(); tmp.remove(); });
+                tmp.addEventListener('ended', () => { tmp.remove(); });
+                return;
+            }
+            // Desktop: modal popup
+            backdrop.innerHTML = '<button class="video-modal-close">&times;</button>';
+            const mv = document.createElement('video');
+            mv.src = src;
+            mv.poster = poster;
+            mv.controls = true;
+            mv.autoplay = true;
+            mv.loop = true;
+            mv.style.borderRadius = '12px';
+            backdrop.appendChild(mv);
+            backdrop.classList.add('active');
+            backdrop.style.pointerEvents = 'auto';
+            mv.play().catch(() => {});
+            function closeModal() {
+                mv.pause();
+                backdrop.classList.remove('active');
+                setTimeout(() => { backdrop.innerHTML = ''; backdrop.style.pointerEvents = 'none'; }, 300);
+            }
+            backdrop.querySelector('.video-modal-close').addEventListener('click', (e) => { e.stopPropagation(); closeModal(); });
+            backdrop.addEventListener('click', (e) => { if (e.target === backdrop) closeModal(); });
+            document.addEventListener('keydown', function esc(e) { if (e.key === 'Escape') { closeModal(); document.removeEventListener('keydown', esc); } });
+        }
+
+        document.querySelectorAll('.video-showcase').forEach(wrap => {
+            wrap.addEventListener('click', () => {
+                const v = wrap.querySelector('video');
+                if (!v) return;
+                const src = v.querySelector('source')?.src || v.src;
+                const poster = v.poster || '';
+                openVideoModal(src, poster);
+            });
+        });
+    });
+    </script>
+</body>
+</html>

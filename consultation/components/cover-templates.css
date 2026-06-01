@@ -1,0 +1,170 @@
+/*
+ * Cover Templates
+ *
+ * 표지 페이지를 위한 사전 정의된 템플릿
+ *
+ * 기존 프로젝트 분석 결과:
+ * - artwork_curriculum
+ * - vibe_curriculum
+ */
+
+/* ============================================
+   Cover Template: Curriculum (커리큘럼용 표지)
+   ============================================
+
+   구조:
+   1. Badge: "2025 CURRICULUM"
+   2. Title: 과정명 (큰 글자)
+   3. Subtitle: 부제목
+   4. Stats: 3개의 통계 (Total Hours, Sessions, Weeks)
+
+   사용 예시:
+   <section class="hero-section hero-curriculum">
+     <div class="hero-content">
+       <div class="hero-badge">2025 CURRICULUM</div>
+       <h1 class="hero-title">AI 개발 과정</h1>
+       <p class="hero-subtitle">실전 웹 개발 마스터</p>
+
+       <div class="hero-stats">
+         <div class="stat-item">
+           <span class="stat-value">16H</span>
+           <span class="stat-label">Total Hours</span>
+         </div>
+         <div class="stat-item">
+           <span class="stat-value">4</span>
+           <span class="stat-label">Sessions</span>
+         </div>
+         <div class="stat-item">
+           <span class="stat-value">4</span>
+           <span class="stat-label">Weeks</span>
+         </div>
+       </div>
+     </div>
+   </section>
+*/
+
+.hero-curriculum {
+    /* 커리큘럼 표지 특화 스타일 (필요시 추가) */
+}
+
+/* ============================================
+   Cover Template: Report (보고서용 표지)
+   ============================================
+
+   구조:
+   1. Badge: "2025 REPORT"
+   2. Title: 보고서 제목
+   3. Subtitle: 부제목
+   4. Meta: 날짜, 작성자, 버전 정보
+
+   사용 예시:
+   <section class="hero-section hero-report">
+     <div class="hero-content">
+       <div class="hero-badge">2025 REPORT</div>
+       <h1 class="hero-title">시장 분석 보고서</h1>
+       <p class="hero-subtitle">AI 교육 시장 현황 및 전망</p>
+
+       <div class="hero-meta">
+         <div class="meta-item">
+           <span class="meta-label">Date</span>
+           <span class="meta-value">2025-01-21</span>
+         </div>
+         <div class="meta-item">
+           <span class="meta-label">Author</span>
+           <span class="meta-value">Hana (CPO)</span>
+         </div>
+         <div class="meta-item">
+           <span class="meta-label">Version</span>
+           <span class="meta-value">v1.0</span>
+         </div>
+       </div>
+     </div>
+   </section>
+*/
+
+.hero-report {
+    /* 보고서 표지 특화 스타일 (필요시 추가) */
+}
+
+/* Hero Meta (보고서용) */
+.hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2xl);
+    flex-wrap: wrap;
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.meta-item {
+    text-align: center;
+}
+
+.meta-label {
+    display: block;
+    font-size: 1rem;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-xs);
+}
+
+.meta-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* ============================================
+   Cover Template: Pitch (피치덱용 표지)
+   ============================================
+
+   구조:
+   1. Badge: "PITCH DECK 2025"
+   2. Title: 프로젝트명
+   3. Subtitle: 한줄 설명
+   4. 간단한 통계 (선택)
+
+   사용 예시:
+   <section class="hero-section hero-pitch">
+     <div class="hero-content">
+       <div class="hero-badge">PITCH DECK 2025</div>
+       <h1 class="hero-title">AI 교육 플랫폼</h1>
+       <p class="hero-subtitle">누구나 쉽게 배우는 AI 개발</p>
+     </div>
+   </section>
+*/
+
+.hero-pitch {
+    /* 피치덱 표지 특화 스타일 (필요시 추가) */
+}
+
+/* ============================================
+   Cover Template: Simple (심플 표지)
+   ============================================
+
+   구조:
+   1. Title만 (최소주의)
+   2. Subtitle (선택)
+
+   사용 예시:
+   <section class="hero-section hero-simple">
+     <div class="hero-content">
+       <h1 class="hero-title">제목</h1>
+       <p class="hero-subtitle">부제목</p>
+     </div>
+   </section>
+*/
+
+.hero-simple {
+    /* 심플 표지 특화 스타일 (필요시 추가) */
+}
+
+.hero-simple .hero-title {
+    margin-bottom: 0;
+}
+
+.hero-simple .hero-subtitle {
+    margin-top: var(--space-lg);
+}

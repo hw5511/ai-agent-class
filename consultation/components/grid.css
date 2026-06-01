@@ -1,0 +1,69 @@
+/*
+ * Grid Component
+ *
+ * Grid layouts for organizing content
+ *
+ * Usage:
+ *   <div class="overview-grid">
+ *     <div class="overview-card">...</div>
+ *     <div class="overview-card">...</div>
+ *   </div>
+ *
+ *   <div class="curriculum-detail-grid">
+ *     <div class="curriculum-detail-card">...</div>
+ *   </div>
+ */
+
+/* ============================================
+   Overview Grid (3-column)
+   ============================================ */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: var(--space-md);
+    width: 100%;
+}
+
+/* ============================================
+   Curriculum Detail Grid (4-column)
+   ============================================ */
+.curriculum-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    width: 100%;
+    flex: 1;
+}
+
+/* ============================================
+   Grid Variants
+   ============================================ */
+
+/* 2-column grid */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+}
+
+/* 3-column grid */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+}
+
+/* 4-column grid */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+}
+
+/* Auto-fit grid (responsive) */
+.grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+}

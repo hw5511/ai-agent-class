@@ -1,0 +1,98 @@
+/*
+ * Hero Component
+ *
+ * Full-page hero section for presentation cover pages
+ *
+ * Usage:
+ *   <section class="hero-section">
+ *     <div class="hero-content">
+ *       <div class="hero-badge">BADGE TEXT</div>
+ *       <h1 class="hero-title">Title</h1>
+ *       <p class="hero-subtitle">Subtitle</p>
+ *       <div class="hero-stats">...</div>
+ *     </div>
+ *   </section>
+ */
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: var(--primary-fg);
+    padding: 2cm;
+    margin: 0;
+    page-break-after: always;
+    page-break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.hero-content {
+    max-width: 100%;
+    width: 100%;
+    padding: var(--space-sm);
+    text-align: center;
+}
+
+/* Hero Badge */
+.hero-badge {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--secondary);
+    color: var(--secondary-fg);
+    border-radius: var(--radius-full);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Hero Title */
+.hero-title {
+    font-size: 7rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: var(--space-sm);
+    letter-spacing: -0.02em;
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+    font-size: 4rem;
+    font-weight: 400;
+    opacity: 0.8;
+    margin-bottom: var(--space-lg);
+}
+
+/* Hero Stats */
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+    margin-top: var(--space-xl);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 4.5rem;
+    font-weight: 900;
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+.stat-label {
+    font-size: 1.5rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}

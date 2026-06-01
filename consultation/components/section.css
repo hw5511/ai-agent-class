@@ -1,0 +1,96 @@
+/*
+ * Section Component
+ *
+ * Full-page section layout for content slides
+ *
+ * Usage:
+ *   <section class="section">
+ *     <div class="section-container">
+ *       <div class="section-header">
+ *         <span class="section-badge">Badge</span>
+ *         <h2 class="section-title">Title</h2>
+ *         <p class="section-description">Description</p>
+ *       </div>
+ *       <!-- Content here -->
+ *     </div>
+ *   </section>
+ */
+
+/* ============================================
+   Section Layout
+   ============================================ */
+.section {
+    width: 100%;
+    height: 100vh;
+    padding: 2cm;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    page-break-after: always;
+    page-break-inside: avoid;
+}
+
+/* Alternating background */
+.section:nth-child(even) {
+    background: var(--secondary);
+}
+
+/* Last section */
+.section:last-of-type {
+    page-break-after: auto;
+}
+
+/* ============================================
+   Section Container
+   ============================================ */
+.section-container {
+    max-width: 100%;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* ============================================
+   Section Header
+   ============================================ */
+.section-header {
+    margin-bottom: var(--space-lg);
+    text-align: left;
+    flex-shrink: 0;
+}
+
+/* Section Badge */
+.section-badge {
+    display: inline-block;
+    padding: 0.5rem var(--space-md);
+    background: var(--primary);
+    color: var(--primary-fg);
+    border-radius: var(--radius-full);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: var(--space-sm);
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+/* Section Description */
+.section-description {
+    font-size: 1.4rem;
+    color: var(--muted-fg);
+    text-align: left;
+}

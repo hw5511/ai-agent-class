@@ -1,0 +1,7 @@
+{
+  "orientation": "portrait",
+  "type": "curriculum",
+  "css_files": [
+    "css/style_portrait.css"
+  ]
+}

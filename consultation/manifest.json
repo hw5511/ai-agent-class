@@ -1,0 +1,207 @@
+{
+  "manifest_version": "2.0",
+  "project": {
+    "name": "ai_agent_lecture",
+    "title": "AI Agent Lecture",
+    "author": "Woohee",
+    "date": "2026-02-20",
+    "version": "1.0.0"
+  },
+  "presentation": {
+    "type": "curriculum",
+    "orientation": "portrait",
+    "page_size": "1400x1980"
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "file": "sections/01_hero.html",
+      "title": "AI Agent Curriculum",
+      "order": 1,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "what_is_agent",
+      "file": "sections/02_what_is_agent.html",
+      "title": "AI Agent?",
+      "order": 2,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "ai_vs_agent",
+      "file": "sections/03_ai_vs_agent.html",
+      "title": "AI vs Agent",
+      "order": 3,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "global_agents",
+      "file": "sections/04a_global_agents.html",
+      "title": "Global AI Agent Launch",
+      "order": 4,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "agent_market",
+      "file": "sections/04b_market.html",
+      "title": "AI Agent Market",
+      "order": 5,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "job_market",
+      "file": "sections/04c_job_market.html",
+      "title": "Job Market Change",
+      "order": 6,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "role_change",
+      "file": "sections/05a_role_change.html",
+      "title": "Human Role Change",
+      "order": 7,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "hiring_samsung",
+      "file": "sections/05b_samsung.html",
+      "title": "Hiring - Samsung",
+      "order": 8,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "hiring_zillow",
+      "file": "sections/05c_zillow.html",
+      "title": "Hiring - Zillow",
+      "order": 9,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "hiring_cnh",
+      "file": "sections/05d_cnh.html",
+      "title": "Hiring - CNH Industrial",
+      "order": 10,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "hiring_yam",
+      "file": "sections/05e_yam.html",
+      "title": "Hiring - Yum Brands",
+      "order": 11,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "ai_transformation",
+      "file": "sections/05f_ai_transformation.html",
+      "title": "AI Transformation",
+      "order": 12,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "curriculum_intro",
+      "file": "sections/06a_curriculum_intro.html",
+      "title": "Curriculum Intro",
+      "order": 13,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "curriculum_roadmap",
+      "file": "sections/06_curriculum_roadmap.html",
+      "title": "Curriculum Roadmap",
+      "order": 14,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "basic_curriculum",
+      "file": "sections/07_basic_curriculum.html",
+      "title": "Basic Curriculum",
+      "order": 15,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "advanced_curriculum",
+      "file": "sections/08_advanced_curriculum.html",
+      "title": "Advanced Curriculum",
+      "order": 16,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "lecture_features",
+      "file": "sections/09_lecture_features.html",
+      "title": "Lecture Features",
+      "order": 17,
+      "enabled": false,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-20T00:00:00" }
+    },
+    {
+      "id": "agent_demo",
+      "file": "sections/10_agent_demo.html",
+      "title": "Agent Demo",
+      "order": 24,
+      "enabled": true,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-24T00:00:00" }
+    },
+    {
+      "id": "qa",
+      "file": "sections/11_qa.html",
+      "title": "Q&A",
+      "order": 19,
+      "enabled": false,
+      "metadata": { "created": "2026-02-20T00:00:00", "modified": "2026-02-24T00:00:00" }
+    },
+    {
+      "id": "usecase_1_2",
+      "file": "sections/12a_usecase_email.html",
+      "title": "Use Case 1-2: Email + Report",
+      "order": 20,
+      "enabled": true,
+      "metadata": { "created": "2026-02-24T00:00:00", "modified": "2026-02-24T00:00:00" }
+    },
+    {
+      "id": "usecase_3_4",
+      "file": "sections/12b_usecase_report.html",
+      "title": "Use Case 3-4: Video + Card News",
+      "order": 21,
+      "enabled": true,
+      "metadata": { "created": "2026-02-24T00:00:00", "modified": "2026-02-24T00:00:00" }
+    },
+    {
+      "id": "usecase_5_6",
+      "file": "sections/12c_usecase_video.html",
+      "title": "Use Case 5-6: SVG + Shopping",
+      "order": 22,
+      "enabled": true,
+      "metadata": { "created": "2026-02-24T00:00:00", "modified": "2026-02-24T00:00:00" }
+    },
+    {
+      "id": "usecase_7_8",
+      "file": "sections/12d_usecase_cardnews.html",
+      "title": "Use Case 7-8: Workflow + Daily Report",
+      "order": 23,
+      "enabled": true,
+      "metadata": { "created": "2026-02-24T00:00:00", "modified": "2026-02-24T00:00:00" }
+    }
+  ],
+  "build_config": {
+    "output_dir": "_build",
+    "output_filename": "ai_agent_lecture.html",
+    "standalone_filename": "ai_agent_lecture_standalone.html",
+    "embed_images": true
+  }
+}
