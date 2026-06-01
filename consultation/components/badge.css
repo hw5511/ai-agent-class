@@ -1,0 +1,71 @@
+/*
+ * Badge Component
+ *
+ * Badge elements for labels and tags
+ *
+ * Usage:
+ *   <span class="badge">Default</span>
+ *   <span class="badge badge-primary">Primary</span>
+ *   <span class="badge badge-secondary">Secondary</span>
+ *   <span class="badge badge-outline">Outline</span>
+ */
+
+/* ============================================
+   Base Badge
+   ============================================ */
+.badge {
+    display: inline-block;
+    padding: 0.5rem var(--space-md);
+    background: var(--primary);
+    color: var(--primary-fg);
+    border-radius: var(--radius-full);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   Badge Variants
+   ============================================ */
+
+/* Primary badge */
+.badge-primary {
+    background: var(--primary);
+    color: var(--primary-fg);
+}
+
+/* Secondary badge */
+.badge-secondary {
+    background: var(--secondary);
+    color: var(--secondary-fg);
+}
+
+/* Muted badge */
+.badge-muted {
+    background: var(--muted);
+    color: var(--muted-fg);
+}
+
+/* Outline badge */
+.badge-outline {
+    background: transparent;
+    color: var(--fg);
+    border: 1px solid var(--border);
+}
+
+/* ============================================
+   Badge Sizes
+   ============================================ */
+
+/* Small badge */
+.badge-sm {
+    font-size: 0.875rem;
+    padding: 0.25rem var(--space-sm);
+}
+
+/* Large badge */
+.badge-lg {
+    font-size: 1.25rem;
+    padding: 0.75rem var(--space-lg);
+}

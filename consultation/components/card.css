@@ -1,0 +1,156 @@
+/*
+ * Card Component
+ *
+ * Card layouts for content organization
+ *
+ * Usage:
+ *   <div class="overview-card">
+ *     <div class="overview-label">Label</div>
+ *     <div class="overview-value">Value</div>
+ *     <div class="overview-subtitle">Subtitle</div>
+ *   </div>
+ *
+ *   <div class="curriculum-detail-card">
+ *     <div class="detail-header">
+ *       <span class="detail-session">Session 1</span>
+ *       <h3 class="detail-title">Title</h3>
+ *     </div>
+ *     <ul class="detail-steps">
+ *       <li>Step 1</li>
+ *       <li>Step 2</li>
+ *     </ul>
+ *   </div>
+ */
+
+/* ============================================
+   Overview Card
+   ============================================ */
+.overview-card {
+    padding: 2rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-align: left;
+    page-break-inside: avoid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.overview-label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--muted-fg);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-sm);
+}
+
+.overview-value {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--fg);
+    margin-bottom: var(--space-xs);
+    line-height: 1.4;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.overview-subtitle {
+    font-size: 1.8rem;
+    color: var(--muted-fg);
+    line-height: 1.7;
+    margin-top: 0.5rem;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+/* ============================================
+   Card Title
+   ============================================ */
+.card-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: var(--space-sm);
+    color: var(--fg);
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+/* ============================================
+   Curriculum Detail Card
+   ============================================ */
+.curriculum-detail-card {
+    padding: 1.5rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    page-break-inside: avoid;
+}
+
+.detail-header {
+    margin-bottom: var(--space-sm);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--primary);
+}
+
+.detail-session {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--muted-fg);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.detail-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--fg);
+    line-height: 1.3;
+}
+
+/* ============================================
+   Detail Steps (Ordered List)
+   ============================================ */
+.detail-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    counter-reset: step;
+}
+
+.detail-steps li {
+    font-size: 1.5rem;
+    color: var(--fg);
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.5;
+}
+
+.detail-steps li:last-child {
+    border-bottom: none;
+}
+
+.detail-steps li::before {
+    content: counter(step) ".";
+    counter-increment: step;
+    font-weight: 600;
+    color: var(--muted-fg);
+    margin-right: 0.5rem;
+}
+
+/* ============================================
+   Utility: Difficulty Stars
+   ============================================ */
+.difficulty-stars {
+    color: var(--fg);
+    font-size: 2.5rem;
+    letter-spacing: 0.25rem;
+}
