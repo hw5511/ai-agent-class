@@ -2,10 +2,10 @@
   "step": 1,
   "title": "AI 에이전트 이해와 CLI 환경 구축",
   "hours": "2시간",
-  "goal": "AI 에이전트의 개념을 이해하고, 3종 CLI 에이전트(Gemini, GPT Codex, Claude Code)를 직접 설치하여 동작을 확인한다.",
+  "goal": "AI 에이전트의 개념을 이해하고, 3종 CLI 에이전트(Antigravity, GPT Codex, Claude Code)를 직접 설치하여 동작을 확인한다.",
   "topics": [
     "AI 에이전트란? / 설치형 AI란?",
-    "Gemini CLI 설치 및 로그인",
+    "Antigravity CLI 설치 및 로그인 (구 Gemini CLI)",
     "GPT CLI(Codex) 설치 및 로그인",
     "Claude Code 설치 및 로그인",
     "세션 사용량 및 extra-usage"
@@ -30,7 +30,7 @@
       "topics": [
         "GPT CLI (Codex) - OpenAI",
         "Claude Code - Anthropic",
-        "Gemini CLI - Google",
+        "Antigravity CLI - Google (구 Gemini CLI)",
         "각 에이전트의 특화 기능 비교"
       ],
       "practice": null,
@@ -138,14 +138,14 @@
     },
     {
       "imagePath": "assets/basic/step01/11.svg",
-      "goal": "Gemini CLI를 설치하고 Google 계정으로 로그인한다.",
+      "goal": "Antigravity CLI를 설치하고 Google 계정으로 로그인한다. (구 Gemini CLI — 2026.6.18 전환)",
       "topics": [
-        "npm install -g @google/gemini-cli",
-        "gemini 명령어 확인",
-        "Google 계정 인증 (gemini auth)",
+        "셸 인스톨러로 Antigravity CLI 설치",
+        "agy 명령어 확인 (agy --version)",
+        "Google 계정 브라우저 OAuth 로그인",
         "첫 번째 응답 테스트"
       ],
-      "practice": "Gemini CLI를 설치하고 간단한 질문으로 첫 응답을 확인한다.",
+      "practice": "Antigravity CLI를 설치하고 간단한 질문으로 첫 응답을 확인한다.",
       "action": null
     },
     {
@@ -167,7 +167,7 @@
         "npm install -g @anthropic-ai/claude-code",
         "claude 명령어 확인",
         "Anthropic 계정 인증",
-        "3종 에이전트 비교 테스트"
+        "3종 에이전트(Antigravity·GPT Codex·Claude Code) 비교 테스트"
       ],
       "practice": "3종 에이전트에 동일한 질문을 입력하고 응답 방식의 차이를 비교한다.",
       "action": null
@@ -327,15 +327,19 @@
       "topics": null,
       "practice": null,
       "action": {
-        "label": "명령어",
+        "label": "Antigravity CLI 설치 명령어 (구 Gemini CLI — 2026.6.18 전환)",
         "items": [
           {
-            "desc": "설치",
-            "copy": "npm install -g @google/gemini-cli"
+            "desc": "설치 (macOS/Linux)",
+            "copy": "curl -fsSL https://antigravity.google/cli/install.sh | bash"
           },
           {
-            "desc": "확인",
-            "copy": "gemini --version"
+            "desc": "설치 (Windows PowerShell)",
+            "copy": "irm https://antigravity.google/cli/install.ps1 | iex"
+          },
+          {
+            "desc": "버전 확인",
+            "copy": "agy --version"
           }
         ]
       }

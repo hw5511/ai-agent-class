@@ -4,18 +4,18 @@
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 08</text>
   <rect x="152" y="44" width="52" height="24" rx="12" fill="#2563eb"/>
   <text x="178" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">실습</text>
-  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Gemini CLI 실습</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">터미널에서 Gemini에게 질문하고, Claude에게 스킬을 만들게 합니다</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Antigravity CLI 실습 (구 Gemini CLI)</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">터미널에서 Antigravity에게 질문하고, Claude에게 스킬을 만들게 합니다</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 1  —  터미널에서 Gemini에게 직접 질문</text>
+  <text x="60" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 1  —  터미널에서 Antigravity에게 직접 질문</text>
   <rect x="90" y="268" width="900" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="540" y="296" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="16" fill="#1d4ed8">gemini -p "Claude Code와 Gemini CLI의 차이점을 간단히 설명해줘"</text>
-  <text x="60" y="350" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 2  —  Claude에게 Gemini 연동 스킬 만들기</text>
+  <text x="540" y="296" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="16" fill="#1d4ed8">agy -p "Claude Code와 Antigravity CLI의 차이점을 간단히 설명해줘"</text>
+  <text x="60" y="350" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">실습 2  —  Claude에게 Antigravity 연동 스킬 만들기</text>
   <rect x="90" y="364" width="1090" height="52" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="635" y="396" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#1d4ed8">bash로 gemini -p 를 호출해서 내 질문에 Gemini가 답하는 스킬을 만들어줘</text>
+  <text x="635" y="396" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#1d4ed8">bash로 agy -p 를 호출해서 내 질문에 Antigravity가 답하는 스킬을 만들어줘</text>
   <text x="60" y="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">예상 결과</text>
-  <text x="60" y="488" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">/ask-gemini 스킬 완성  →  Claude 안에서 Gemini에게 질문 가능</text>
+  <text x="60" y="488" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">/ask-antigravity 스킬 완성  →  Claude 안에서 Antigravity에게 질문 가능</text>
   <text x="60" y="526" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#374151">두 AI를 동시에 활용하는 워크플로우 구현</text>
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">Claude + GitHub CLI + Gemini CLI — 여러 CLI를 조합하면 복잡한 자동화도 가능합니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">Claude + GitHub CLI + Antigravity CLI — 여러 CLI를 조합하면 복잡한 자동화도 가능합니다</text>
 </svg>
