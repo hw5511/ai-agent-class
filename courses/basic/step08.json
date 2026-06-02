@@ -2,16 +2,16 @@
   "step": 8,
   "title": "Claude Desktop 사용법",
   "hours": "2시간",
-  "goal": "Claude Desktop과 CLI 생태계를 이해하고, Agent Teams 협업 구조를 파악하며, GitHub CLI·Gemini CLI를 활용한 스킬을 직접 제작한다.",
+  "goal": "Claude Desktop과 CLI 생태계를 이해하고, Agent Teams 협업 구조를 파악하며, GitHub CLI·Antigravity CLI를 활용한 스킬을 직접 제작한다.",
   "topics": [
     "일반 Claude Desktop 사용법",
     "Desktop Claude Code 활용",
     "Claude Cowork",
     "CLI vs Desktop 비교",
     "GitHub CLI 인증·스킬 제작",
-    "Gemini CLI 실습·스킬 제작"
+    "Antigravity CLI 실습·스킬 제작 (구 Gemini CLI)"
   ],
-  "practice": "GitHub CLI와 Gemini CLI를 설치하고 인증한 뒤, Claude에게 각 CLI 기반 스킬을 자동 제작하도록 시킨다.",
+  "practice": "GitHub CLI와 Antigravity CLI를 설치하고 인증한 뒤, Claude에게 각 CLI 기반 스킬을 자동 제작하도록 시킨다.",
   "slides": [
     {
       "imagePath": "assets/basic/step08/01.svg",
@@ -20,7 +20,7 @@
         "일반 Desktop · Desktop Claude Code",
         "Claude Cowork",
         "CLI vs Desktop 비교",
-        "GitHub CLI · Gemini CLI 스킬"
+        "GitHub CLI · Antigravity CLI 스킬 (구 Gemini CLI)"
       ],
       "practice": null,
       "action": null
@@ -85,7 +85,7 @@
       "topics": [
         "CLI = Command Line Interface",
         "공통 구조: [도구] [명령] [--옵션] [인수]",
-        "Claude Code · GitHub CLI · Gemini CLI",
+        "Claude Code · GitHub CLI · Antigravity CLI (구 Gemini CLI)",
         "스킬 자동화와 파이프라인의 기반"
       ],
       "practice": null,
@@ -155,11 +155,11 @@
     },
     {
       "imagePath": "assets/basic/step08/10.svg",
-      "goal": "Gemini CLI를 설치하고 터미널에서 질문하는 방법을 익힌다.",
+      "goal": "Antigravity CLI를 설치하고 터미널에서 질문하는 방법을 익힌다. (구 Gemini CLI — 2026.6.18 전환)",
       "topics": [
-        "npm install -g @google/gemini-cli",
-        "gemini -p \"질문\" — 비대화형 모드",
-        "Google 계정 로그인 (무료 1,000 req/day)",
+        "셸 인스톨러로 Antigravity CLI 설치",
+        "agy -p \"질문\" — 비대화형 모드",
+        "Google 계정 브라우저 OAuth 로그인",
         "1M 토큰 컨텍스트"
       ],
       "practice": null,
@@ -167,14 +167,14 @@
     },
     {
       "imagePath": "assets/basic/step08/11.svg",
-      "goal": "Gemini CLI를 실습하고 Claude에게 연동 스킬을 제작시킨다.",
+      "goal": "Antigravity CLI를 실습하고 Claude에게 연동 스킬을 제작시킨다. (구 Gemini CLI — 2026.6.18 전환)",
       "topics": [
-        "gemini -p \"질문\" 터미널 실행",
-        "\"bash로 gemini -p 호출 스킬 만들어줘\"",
-        "/ask-gemini 스킬 완성",
-        "Claude + Gemini 두 AI 병행 워크플로우"
+        "agy -p \"질문\" 터미널 실행",
+        "\"bash로 agy -p 호출 스킬 만들어줘\"",
+        "/ask-antigravity 스킬 완성",
+        "Claude + Antigravity 두 AI 병행 워크플로우"
       ],
-      "practice": "Gemini CLI를 실행하고 Claude에게 bash gemini 기반 스킬을 자동 제작하도록 시킨다.",
+      "practice": "Antigravity CLI를 실행하고 Claude에게 bash agy 기반 스킬을 자동 제작하도록 시킨다.",
       "action": null
     }
   ]
