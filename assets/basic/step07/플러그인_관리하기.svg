@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 07</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">플러그인 관리하기</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">설치한 플러그인을 켜고 끄고 지웁니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">목록 · 상태</text>
+  <text x="60" y="296" font-family="'Courier New',Courier,monospace" font-size="18" fill="#1d4ed8">/plugin list                     설치 목록 확인</text>
+  <text x="60" y="348" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">켜기 / 끄기 / 삭제</text>
+  <text x="60" y="386" font-family="'Courier New',Courier,monospace" font-size="18" fill="#1d4ed8">/plugin disable &lt;이름&gt;@&lt;마켓&gt;     비활성화</text>
+  <text x="60" y="420" font-family="'Courier New',Courier,monospace" font-size="18" fill="#1d4ed8">/plugin enable  &lt;이름&gt;@&lt;마켓&gt;     다시 활성화</text>
+  <text x="60" y="454" font-family="'Courier New',Courier,monospace" font-size="18" fill="#1d4ed8">/plugin uninstall &lt;이름&gt;@&lt;마켓&gt;   완전 삭제</text>
+  <text x="60" y="506" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">마켓플레이스 갱신</text>
+  <text x="60" y="544" font-family="'Courier New',Courier,monospace" font-size="18" fill="#1d4ed8">/plugin marketplace update &lt;마켓&gt;   최신 목록 받기</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">변경 후에는 /reload-plugins 로 즉시 반영됩니다</text>
+</svg>

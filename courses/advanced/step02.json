@@ -14,7 +14,7 @@
   "practice": "가상 커뮤니티 사이트를 AI가 직접 탐색해 전체 기능을 파악하고, 각 페이지 스크린샷으로 유저 플로우 PPT를 자동 생성한다.",
   "slides": [
     {
-      "imagePath": "assets/advanced/step02/01.svg",
+      "imagePath": "assets/advanced/step02/웹_브라우저_자동화_원리.svg",
       "goal": "Playwright·Puppeteer·Selenium 차이와 AI가 MCP로 브라우저와 소통하는 원리를 이해한다.",
       "topics": [
         "Playwright: Microsoft · Python/JS · 자동 대기 · MCP 공식 지원",
@@ -27,7 +27,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step02/02.svg",
+      "imagePath": "assets/advanced/step02/웹_자동화_원리.svg",
       "goal": "웹 자동화 원리와 Playwright vs Selenium 차이를 파악한다.",
       "topics": [
         "코드 → 브라우저 제어 → 클릭·입력·데이터 추출",
@@ -38,7 +38,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step02/03.svg",
+      "imagePath": "assets/advanced/step02/Playwright_MCP_설치.svg",
       "goal": "Playwright MCP를 설치하고 Claude Code에 연결한다.",
       "topics": [
         "claude mcp add playwright npx @playwright/mcp@latest",
@@ -52,7 +52,7 @@
       }
     },
     {
-      "imagePath": "assets/advanced/step02/04.svg",
+      "imagePath": "assets/advanced/step02/실습_1_—_스크래핑_연습_사이트_탐색.svg",
       "goal": "books.toscrape.com에서 Playwright MCP 기본 조작을 익힌다.",
       "topics": [
         "books.toscrape.com — 법적 제한 없는 학습 전용 사이트",
@@ -67,7 +67,7 @@
       }
     },
     {
-      "imagePath": "assets/advanced/step02/05.svg",
+      "imagePath": "assets/advanced/step02/실습_2-1_—_Wikipedia_접속_·_요소_분석.svg",
       "goal": "Wikipedia에 접속해 검색창 셀렉터를 분석한다.",
       "topics": [
         "ko.wikipedia.org 접속 + 스냅샷",
@@ -82,7 +82,7 @@
       }
     },
     {
-      "imagePath": "assets/advanced/step02/06.svg",
+      "imagePath": "assets/advanced/step02/실습_2-2_—_검색_입력_·_결과_파악.svg",
       "goal": "검색창에 키워드를 입력해 결과 페이지 내용을 읽는다.",
       "topics": [
         "'인공지능' 키워드 입력 + 검색 실행",
@@ -93,7 +93,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step02/07.svg",
+      "imagePath": "assets/advanced/step02/실습_2-3_—_스크립트화_·_헤드리스_CLI.svg",
       "goal": "레코딩한 Wikipedia 검색 동작을 headless Python 스크립트로 변환한다.",
       "topics": [
         "Python 스크립트 자동 생성 요청",
@@ -104,7 +104,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step02/08.svg",
+      "imagePath": "assets/advanced/step02/실습_3_—_가상_커뮤니티_사이트.svg",
       "goal": "실습 3에서 사용할 가상 커뮤니티 HTML 사이트 구조를 파악한다.",
       "topics": [
         "로컬스토리지 기반 — 서버 불필요",
@@ -119,7 +119,7 @@
       }
     },
     {
-      "imagePath": "assets/advanced/step02/09.svg",
+      "imagePath": "assets/advanced/step02/실습_3-1_—_회원가입.svg",
       "goal": "AI가 회원가입 폼을 찾아 직접 작성한다.",
       "topics": [
         "HTML 파일 브라우저로 열기 (file:// 경로 확인)",
@@ -130,7 +130,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step02/10.svg",
+      "imagePath": "assets/advanced/step02/실습_3-2_—_로그인_·_게시판_탐색.svg",
       "goal": "로그인 후 게시판으로 이동해 최신 글 목록을 파악한다.",
       "topics": [
         "로그인 폼 찾아 계정 입력",
@@ -141,7 +141,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step02/11.svg",
+      "imagePath": "assets/advanced/step02/실습_3-3_—_글쓰기_·_댓글_·_스크롤.svg",
       "goal": "게시물 작성·댓글 입력·스크롤 탐색을 단계별로 진행한다.",
       "topics": [
         "글쓰기 버튼 탐색 → 게시물 작성",
@@ -152,7 +152,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step02/12.svg",
+      "imagePath": "assets/advanced/step02/실습_3-4_—_전체_스크린샷_·_PPT_생성.svg",
       "goal": "전체 페이지 스크린샷 → python-pptx로 유저 플로우 PPT를 자동 생성한다.",
       "topics": [
         "회원가입·로그인·게시판·게시물·댓글·마이페이지 스크린샷",

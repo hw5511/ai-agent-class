@@ -1,31 +1,31 @@
 {
   "step": 7,
-  "title": "Skills 활용과 Discord Plugin 고급 기능 실습",
+  "title": "Skills 활용과 플러그인(Plugin) 실습",
   "hours": "2시간",
-  "goal": "Skills의 개념과 사용법을 익히고, Discord Plugin의 고급 기능(access.json 서버 채널 등록·react·edit_message)을 활용하여 서버 채널 대화를 구현한다.",
+  "goal": "Skills의 개념과 사용법을 익히고, Claude Code 플러그인 시스템(구조·마켓플레이스·설치·관리)을 이해하여 필요한 기능을 직접 확장한다.",
   "topics": [
     "Skills란? 개념 이해",
     "Skill 사용하기",
-    "access.json 서버 채널 등록",
-    "Plugin 고급 도구 활용",
-    "기존 MCP vs Plugin 비교 · 서버 채널 실습"
+    "플러그인이란? 구조 이해",
+    "마켓플레이스에서 플러그인 설치",
+    "플러그인 관리 · 설치 실습"
   ],
-  "practice": "Discord Plugin으로 공부방 서버 채널에 접속하여 봇끼리 메시지를 주고받고 react/edit_message를 활용한다.",
+  "practice": "공식 마켓플레이스에서 플러그인을 설치하고, 네임스페이스 명령어로 직접 사용해본다.",
   "slides": [
     {
-      "imagePath": "assets/basic/step07/01.svg",
+      "imagePath": "assets/basic/step07/Skills_활용과_플러그인_실습.svg",
       "goal": "Step 7 목표와 오늘 배울 내용을 안내한다.",
       "topics": [
         "Skills 개념 · 사용법",
         "라이브러리 개념 · Pillow",
         "카드뉴스 실습 · 스킬화",
-        "Discord Plugin 고급 기능"
+        "플러그인 개념 · 마켓플레이스 · 설치"
       ],
       "practice": null,
       "action": null
     },
     {
-      "imagePath": "assets/basic/step07/02.svg",
+      "imagePath": "assets/basic/step07/Skills.svg",
       "goal": "Skills의 개념과 파일 구조를 이해한다.",
       "topics": [
         ".claude/skills/<이름>/SKILL.md (프로젝트)",
@@ -37,7 +37,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step07/03.svg",
+      "imagePath": "assets/basic/step07/Skill_사용법.svg",
       "goal": "SKILL.md 파일 구조와 기본 제공 Skill을 파악한다.",
       "topics": [
         "YAML frontmatter + Markdown 지시사항",
@@ -49,7 +49,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step07/04.svg",
+      "imagePath": "assets/basic/step07/라이브러리란.svg",
       "goal": "라이브러리 개념과 설치 방법을 이해한다.",
       "topics": [
         "라이브러리 = 남이 만든 기능 모음",
@@ -61,7 +61,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step07/05.svg",
+      "imagePath": "assets/basic/step07/Pillow_—_Python_이미지_처리_라이브러리.svg",
       "goal": "Pillow 라이브러리의 기능과 활용 범위를 파악한다.",
       "topics": [
         "pip install pillow",
@@ -73,7 +73,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step07/06.svg",
+      "imagePath": "assets/basic/step07/실습_1단계_—_Claude에게_카드뉴스_만들어달라고_해보기.svg",
       "goal": "Claude에게 직접 카드뉴스 이미지 생성을 요청한다.",
       "topics": [
         "자연어로 이미지 옵션 지정 (배경색·글자색·폰트·정렬)",
@@ -85,7 +85,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step07/07.svg",
+      "imagePath": "assets/basic/step07/실습_2단계_—_카드뉴스_스킬_만들기.svg",
       "goal": "카드뉴스 코드를 /cardnews 스킬로 변환한다.",
       "topics": [
         "Claude에게 \"이걸 /cardnews 스킬로 만들어줘\" 요청",
@@ -97,7 +97,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step07/08.svg",
+      "imagePath": "assets/basic/step07/스킬_활용_—_반복_사용과_리사이즈.svg",
       "goal": "/cardnews 스킬을 다양한 옵션으로 활용한다.",
       "topics": [
         "/cardnews 배경=남색 제목=\"AI가 바꾸는 세상\" 즉시 생성",
@@ -109,7 +109,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step07/09.svg",
+      "imagePath": "assets/basic/step07/나만의_Skill_만들기_—_워크플로우.svg",
       "goal": "나만의 Skill 만들기 워크플로우를 이해하고 자유 실습한다.",
       "topics": [
         "원하는 기능 정하기 → Claude에게 라이브러리 추천 요청",
@@ -121,133 +121,151 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step07/10.svg",
-      "goal": "Discord Plugin 연결에 필요한 Bot 토큰을 발급한다.",
+      "imagePath": "assets/basic/step07/플러그인이란.svg",
+      "goal": "플러그인의 개념과 직접 만든 Skill과의 관계를 이해한다.",
       "topics": [
-        "discord.com/developers/applications → New Application",
-        "Bot 탭 → Reset Token → 토큰 복사",
-        "Message Content Intent 활성화 (Privileged Gateway Intents)",
-        "OAuth2 URL Generator → bot 권한 → 서버 초대 URL 생성"
+        "플러그인 = 스킬·명령어·에이전트·Hooks·MCP를 묶은 설치 단위",
+        "직접 만든 Skill과 달리, 남이 만든 기능을 설치해 사용",
+        "한 번 설치로 여러 기능을 한꺼번에 추가",
+        "팀·커뮤니티 공유, 버전 관리, 여러 프로젝트 재사용"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step07/플러그인_vs_단독_설정.svg",
+      "goal": "단독 설정(.claude/)과 플러그인의 차이와 선택 기준을 이해한다.",
+      "topics": [
+        "단독 설정(.claude/) — 개인·프로젝트 전용, 짧은 이름 /hello",
+        "플러그인 — 공유·배포·버전관리, 네임스페이스 /plugin-name:hello",
+        "빠른 실험은 단독 설정, 공유·재사용은 플러그인",
+        "네임스페이스가 플러그인 간 이름 충돌 방지"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step07/플러그인_구조.svg",
+      "goal": "플러그인의 디렉토리 구조를 파악한다.",
+      "topics": [
+        ".claude-plugin/plugin.json — 이름·설명·버전 메타데이터",
+        "skills/ · commands/ · agents/ · hooks/ — 기능별 폴더",
+        ".mcp.json — MCP 서버 설정",
+        "plugin.json만 .claude-plugin/ 안, 나머지는 플러그인 루트"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step07/플러그인_마켓플레이스란.svg",
+      "goal": "플러그인 마켓플레이스의 개념과 종류를 이해한다.",
+      "topics": [
+        "마켓플레이스 = 공유된 플러그인 카탈로그 (앱스토어 비유)",
+        "공식 claude-plugins-official — 기본 제공",
+        "커뮤니티 claude-community — 심사 통과한 서드파티",
+        "사용 2단계: 마켓플레이스 추가 → 플러그인 설치"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step07/마켓플레이스_추가하기.svg",
+      "goal": "마켓플레이스를 추가하는 방법을 익힌다.",
+      "topics": [
+        "/plugin marketplace add owner/repo (GitHub)",
+        "Git URL · 로컬 경로 · 원격 URL 도 지원",
+        "추가 = 카탈로그 등록 (아직 설치 아님)",
+        "공식 마켓플레이스는 기본 제공되어 추가 불필요"
       ],
       "practice": null,
       "action": {
-        "label": "바로가기",
+        "label": "마켓플레이스 추가",
         "items": [
           {
-            "desc": "Discord",
-            "link": {
-              "href": "https://discord.com",
-              "text": "discord.com"
-            }
+            "desc": "커뮤니티 마켓플레이스 추가",
+            "copy": "/plugin marketplace add anthropics/claude-plugins-community"
           },
           {
-            "desc": "Developer Portal",
-            "link": {
-              "href": "https://discord.com/developers/applications",
-              "text": "discord.com/developers"
-            }
+            "desc": "마켓플레이스 목록 확인",
+            "copy": "/plugin marketplace list"
           }
         ]
       }
     },
     {
-      "imagePath": "assets/basic/step07/11.svg",
-      "goal": "Claude Code에 Discord Plugin을 설치하고 활성화한다.",
+      "imagePath": "assets/basic/step07/플러그인_설치하기.svg",
+      "goal": "플러그인을 설치하고 활성화하는 방법을 익힌다.",
       "topics": [
-        "--channels plugin:discord@claude-plugins-official 플래그로 실행",
-        "/plugin install discord@claude-plugins-official (첫 설치 시)",
-        "/reload-plugin 후 /mcp에서 discord enable",
-        "처음 설치 후 이후에는 1단계만으로 자동 연결"
+        "/plugin install <이름>@<마켓플레이스>",
+        "/plugin 인터랙티브 UI (Discover/Installed/Marketplaces/Errors)",
+        "설치 범위: User(전체)/Project(저장소)/Local(나만)",
+        "/reload-plugins 로 재시작 없이 즉시 적용"
       ],
       "practice": null,
       "action": {
-        "label": "실행 명령어",
-        "copy": "claude --channels plugin:discord@claude-plugins-official --dangerously-skip-permissions"
+        "label": "설치 명령어",
+        "items": [
+          {
+            "desc": "GitHub 플러그인 설치",
+            "copy": "/plugin install github@claude-plugins-official"
+          },
+          {
+            "desc": "즉시 활성화",
+            "copy": "/reload-plugins"
+          }
+        ]
       }
     },
     {
-      "imagePath": "assets/basic/step07/12.svg",
-      "goal": "Bot 토큰을 .env 파일에 저장하고 Claude Code를 재실행한다.",
+      "imagePath": "assets/basic/step07/공식_마켓플레이스_둘러보기.svg",
+      "goal": "공식 마켓플레이스의 대표 플러그인 종류를 살펴본다.",
       "topics": [
-        "~/.claude/channels/discord/.env에 DISCORD_BOT_TOKEN 저장",
-        "Claude에게 \"봇 토큰을 .env에 저장해줘\" 요청 가능",
-        "Ctrl+C 종료 → 동일 명령어로 재실행",
-        "토큰 저장 후 재실행해야 Plugin이 토큰을 인식"
+        "외부 연동(MCP): github · slack · notion · figma · sentry",
+        "개발 워크플로우: commit-commands · pr-review-toolkit · plugin-dev",
+        "코드 인텔리전스(LSP): pyright-lsp · typescript-lsp 등",
+        "보안: security-guidance — 작성 코드 취약점 자동 점검"
       ],
       "practice": null,
       "action": null
     },
     {
-      "imagePath": "assets/basic/step07/13.svg",
-      "goal": "DM 페어링으로 Discord와 Claude를 연결하고 서버 채널을 등록한다.",
+      "imagePath": "assets/basic/step07/플러그인_관리하기.svg",
+      "goal": "설치한 플러그인을 관리하는 명령어를 익힌다.",
       "topics": [
-        "Discord에서 본인 봇에게 DM → 페어링 코드 수신",
-        "Claude Code 터미널에 페어링 코드 입력 → 연결 완료",
-        "개발자 모드 → 채널 우클릭 → 채널 ID 복사",
-        "/discord:access group add <채널ID>로 서버 채널 등록"
-      ],
-      "practice": "DM 페어링으로 봇 연결 후 서버 채널을 /discord:access로 등록한다.",
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step07/14.svg",
-      "goal": "access.json으로 서버 채널을 등록하는 방법을 이해한다.",
-      "topics": [
-        "DM = 자동 페어링 / 서버 채널 = access.json 등록 필요",
-        "/discord:access 명령어로 설정",
-        "groups에 채널 등록 → Claude가 해당 채널 접근 허용",
-        "requireMention: true로 노이즈 차단"
+        "/plugin list — 설치 목록 확인",
+        "/plugin disable · enable <이름>@<마켓> — 끄기/켜기",
+        "/plugin uninstall <이름>@<마켓> — 완전 삭제",
+        "/plugin marketplace update <마켓> — 최신 목록 갱신"
       ],
       "practice": null,
-      "action": null
+      "action": {
+        "label": "관리 명령어",
+        "items": [
+          {
+            "desc": "설치 목록 확인",
+            "copy": "/plugin list"
+          },
+          {
+            "desc": "변경 즉시 반영",
+            "copy": "/reload-plugins"
+          }
+        ]
+      }
     },
     {
-      "imagePath": "assets/basic/step07/15.svg",
-      "goal": "Plugin 고급 도구(react·edit_message·download_attachment)를 활용한다.",
+      "imagePath": "assets/basic/step07/플러그인_설치_실습.svg",
+      "goal": "공식 마켓플레이스에서 플러그인을 설치하고 직접 사용해본다.",
       "topics": [
-        "react — 메시지에 이모지 반응 추가",
-        "edit_message — 이전에 보낸 메시지 수정",
-        "download_attachment — 첨부 파일 다운로드",
-        "진행 중 → 완료로 메시지 업데이트 패턴"
+        "/plugin Discover 탭에서 commit-commands 선택",
+        "설치 후 /reload-plugins 로 활성화",
+        "/commit-commands:commit 으로 커밋 자동화 체험",
+        "설치한 플러그인의 스킬을 네임스페이스로 호출"
       ],
-      "practice": null,
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step07/16.svg",
-      "goal": "기존 MCP와 Plugin의 차이를 비교한다.",
-      "topics": [
-        "기존 MCP — git clone + npm build, read/send 2가지만",
-        "Plugin — 자동 설치, 5가지 도구, 실시간 수신",
-        "MCP는 DM 전용 / Plugin은 서버 채널도 지원",
-        "Plugin이 공식 지원 + 더 강력"
-      ],
-      "practice": null,
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step07/17.svg",
-      "goal": "공부방 서버에 봇을 초대하고 채널을 등록한다.",
-      "topics": [
-        "강사가 초대하는 Discord 서버 초대링크로 접속",
-        "본인 봇을 공부방 서버에 초대",
-        "/discord:access로 공부방 채널 등록",
-        "채널 등록 후 Claude가 메시지 읽기·쓰기 가능"
-      ],
-      "practice": null,
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step07/18.svg",
-      "goal": "공부방 서버에서 봇끼리 대화를 실습한다.",
-      "topics": [
-        "채널에 인사 메시지 전송 (reply)",
-        "최근 메시지 읽기 (fetch_messages)",
-        "수강생 A → B 봇 @멘션 → B가 확인 후 답장",
-        "답장에 react로 이모지 반응 달기"
-      ],
-      "practice": "Discord Plugin으로 공부방 서버에서 봇끼리 메시지를 주고받고 react/edit_message를 활용한다.",
-      "action": null
+      "practice": "공식 마켓플레이스에서 commit-commands 플러그인을 설치하고 /commit-commands:commit으로 커밋을 만들어본다.",
+      "action": {
+        "label": "실습 명령어",
+        "copy": "/plugin install commit-commands@claude-plugins-official"
+      }
     }
   ]
 }

@@ -12,7 +12,7 @@
   "practice": "Sub Agent를 Claude와 함께 만들고, Hooks으로 위험 명령을 차단하는 설정을 추가한다.",
   "slides": [
     {
-      "imagePath": "assets/basic/step05/01.svg",
+      "imagePath": "assets/basic/step05/Sub_Agent와_Hooks.svg",
       "goal": "Step 5 목표와 오늘 배울 내용을 안내한다.",
       "topics": [
         "Sub Agent 개념 · 파일 형식",
@@ -25,7 +25,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step05/02.svg",
+      "imagePath": "assets/basic/step05/Sub_Agent.svg",
       "goal": "Sub Agent의 개념과 설정 파일 구조를 이해한다.",
       "topics": [
         "독립 컨텍스트 윈도우로 실행",
@@ -37,7 +37,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step05/03.svg",
+      "imagePath": "assets/basic/step05/Sub_Agent_활용법.svg",
       "goal": "Sub Agent를 만들고 병렬 실행하는 방법을 익힌다.",
       "topics": [
         "/agents → Generate with Claude로 자동 생성",
@@ -48,7 +48,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step05/04.svg",
+      "imagePath": "assets/basic/step05/Sub_Agent_실습.svg",
       "goal": "Sub Agent 실습을 진행한다.",
       "topics": [
         "/agents로 에이전트 만들기",
@@ -59,7 +59,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step05/05.svg",
+      "imagePath": "assets/basic/step05/Claude_Agent_Teams.svg",
       "goal": "Claude Agent Teams의 구조와 활성화 방법을 이해한다.",
       "topics": [
         "리더 1명 + 팀원 3-5명 (각자 독립 컨텍스트)",
@@ -74,7 +74,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step05/06.svg",
+      "imagePath": "assets/basic/step05/Agent_Teams.svg",
       "goal": "Agent Teams와 Sub Agent의 차이를 이해하고 팀 구성 예시를 배운다.",
       "topics": [
         "Sub Agent: 메인 → 결과 단방향",
@@ -86,7 +86,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step05/07.svg",
+      "imagePath": "assets/basic/step05/Hooks.svg",
       "goal": "Hooks의 개념과 활용 목적을 이해한다.",
       "topics": [
         "이벤트 감지 시 내 스크립트 자동 실행",
@@ -97,7 +97,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step05/08.svg",
+      "imagePath": "assets/basic/step05/Hooks_—_이벤트_종류.svg",
       "goal": "Hooks 이벤트 18종과 차단/관찰 구분을 이해한다.",
       "topics": [
         "차단 가능: PreToolUse · UserPromptSubmit · Stop 등 9종",
@@ -108,7 +108,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step05/09.svg",
+      "imagePath": "assets/basic/step05/Hooks_—_동작_구조.svg",
       "goal": "Hooks 동작 구조를 다이어그램으로 이해한다.",
       "topics": [
         "프롬프트 → PreToolUse → 도구실행 → PostToolUse → Stop",
@@ -119,7 +119,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step05/10.svg",
+      "imagePath": "assets/basic/step05/Hooks_실습.svg",
       "goal": "Hooks 실습을 진행한다.",
       "topics": [
         "[실습1] BurntToast PC 알림 — Stop 이벤트",
@@ -141,7 +141,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step05/11.svg",
+      "imagePath": "assets/basic/step05/MS_Office_+_Claude_연결.svg",
       "goal": "MS Office 추가기능 Claude 설치 준비를 안내한다.",
       "topics": [
         "Microsoft 365 구독 필요 (2026 최신버전)",
@@ -152,7 +152,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step05/12.svg",
+      "imagePath": "assets/basic/step05/홈_메뉴에서_추가기능_클릭.svg",
       "goal": "홈 메뉴에서 추가기능 버튼을 클릭한다.",
       "topics": [
         "PowerPoint/Excel 홈 탭 우측에 추가기능 위치",
@@ -162,7 +162,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step05/13.svg",
+      "imagePath": "assets/basic/step05/추가기능에서_Claude_검색_후_추가.svg",
       "goal": "추가기능에서 Claude를 검색하고 추가한다.",
       "topics": [
         "검색창에 Claude 입력",
@@ -173,7 +173,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step05/14.svg",
+      "imagePath": "assets/basic/step05/설치_후_우측_패널에서_로그인.svg",
       "goal": "설치 후 로그인하여 Claude를 사용한다.",
       "topics": [
         "우측 패널에 Claude 창 열림",

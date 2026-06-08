@@ -14,7 +14,7 @@
   "practice": "세션 저장·재개, Auto Compact 체감, 백그라운드 실행을 직접 실습한다.",
   "slides": [
     {
-      "imagePath": "assets/basic/step04/01.svg",
+      "imagePath": "assets/basic/step04/세션_관리와_백그라운드_작업.svg",
       "goal": "Step 4 목표와 오늘 배울 내용을 안내한다.",
       "topics": [
         "세션 재개 · 이름 변경 · --continue",
@@ -26,7 +26,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step04/02.svg",
+      "imagePath": "assets/basic/step04/세션_재개_이름_변경.svg",
       "goal": "claude --resume와 /rename 명령어를 이해한다.",
       "topics": [
         "claude --resume (대화형 선택기 · 이름 지정)",
@@ -37,7 +37,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step04/03.svg",
+      "imagePath": "assets/basic/step04/--continue_resume.svg",
       "goal": "--continue와 CLI 내부 /resume의 차이를 이해한다.",
       "topics": [
         "claude --continue (최근 대화 바로 이어서)",
@@ -48,7 +48,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step04/04.svg",
+      "imagePath": "assets/basic/step04/rewind_(Esc_+_Esc).svg",
       "goal": "/rewind로 대화를 되돌리는 방법을 이해한다.",
       "topics": [
         "Esc 두 번 또는 /rewind 입력",
@@ -59,7 +59,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step04/05.svg",
+      "imagePath": "assets/basic/step04/세션_관리_실습.svg",
       "goal": "세션 관리 실습을 진행한다.",
       "topics": [
         "/rename으로 이름 부여 → /exit → --resume 재개",
@@ -71,7 +71,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step04/06.svg",
+      "imagePath": "assets/basic/step04/대화_기억_공간_관리.svg",
       "goal": "/context · /compact · /clear 명령어로 컨텍스트를 관리하고, 압축 기준점을 조정한다.",
       "topics": [
         "/context — 컨텍스트 사용량 시각화",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step04/07.svg",
+      "imagePath": "assets/basic/step04/Auto_Compact.svg",
       "goal": "Auto Compact 개념과 임계값 설정 방법을 이해한다.",
       "topics": [
         "Auto Compact — 컨텍스트 ~95% 시 자동 압축",
@@ -97,7 +97,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step04/08.svg",
+      "imagePath": "assets/basic/step04/Auto_Compact_실습.svg",
       "goal": "Auto Compact 실습 — 자동 압축을 직접 체감한다.",
       "topics": [
         "임계값을 20%로 낮추기 요청",
@@ -109,7 +109,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step04/09.svg",
+      "imagePath": "assets/basic/step04/Foreground_Background.svg",
       "goal": "Foreground와 Background의 차이를 이해한다.",
       "topics": [
         "Foreground — Claude가 완료를 기다림",
@@ -120,7 +120,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step04/10.svg",
+      "imagePath": "assets/basic/step04/타임아웃이란.svg",
       "goal": "타임아웃의 개념과 두 가지 해결책을 이해한다.",
       "topics": [
         "기본 타임아웃 120초 — 초과 시 Foreground 강제 종료",
@@ -135,7 +135,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step04/11.svg",
+      "imagePath": "assets/basic/step04/Tasks.svg",
       "goal": "/tasks 명령어로 백그라운드 작업 목록을 관리한다.",
       "topics": [
         "/tasks — 백그라운드 작업 목록 조회·관리",
@@ -146,7 +146,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step04/12.svg",
+      "imagePath": "assets/basic/step04/백그라운드_프로세스_실습.svg",
       "goal": "백그라운드 프로세스 실습을 진행한다.",
       "topics": [
         "실습1 — count.md에 1초 간격으로 1~20 숫자 쓰기 스크립트를 백그라운드 실행",
@@ -157,7 +157,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step04/13.svg",
+      "imagePath": "assets/basic/step04/백그라운드_활용법.svg",
       "goal": "백그라운드 활용 패턴 3가지를 이해한다.",
       "topics": [
         "오래 걸리는 작업 백그라운드 전환",
@@ -168,7 +168,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step04/14.svg",
+      "imagePath": "assets/basic/step04/정리.svg",
       "goal": "Step 4 학습 내용을 정리한다.",
       "topics": [
         "/rename · --resume · --continue · /resume · /rewind",

@@ -14,7 +14,7 @@
   "practice": "GitHub CLI와 Antigravity CLI를 설치하고 인증한 뒤, Claude에게 각 CLI 기반 스킬을 자동 제작하도록 시킨다.",
   "slides": [
     {
-      "imagePath": "assets/basic/step08/01.svg",
+      "imagePath": "assets/basic/step08/Claude_Desktop_사용법.svg",
       "goal": "Step 8 목표와 오늘 배울 내용을 안내한다.",
       "topics": [
         "일반 Desktop · Desktop Claude Code",
@@ -26,7 +26,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step08/02.svg",
+      "imagePath": "assets/basic/step08/일반_Claude_Desktop.svg",
       "goal": "일반 Claude Desktop의 주요 기능을 이해한다.",
       "topics": [
         "대화형 채팅 · 파일 첨부 및 분석",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step08/03.svg",
+      "imagePath": "assets/basic/step08/Desktop_Claude_Code.svg",
       "goal": "Desktop에서 Claude Code를 실행하는 방법을 이해한다.",
       "topics": [
         "Desktop 앱 Code 탭으로 시작",
@@ -56,7 +56,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step08/04.svg",
+      "imagePath": "assets/basic/step08/Claude_Cowork.svg",
       "goal": "Claude Cowork의 개념과 주요 기능을 이해한다.",
       "topics": [
         "Desktop Cowork 탭 → 폴더 지정 → Claude 직접 접근",
@@ -68,7 +68,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step08/05.svg",
+      "imagePath": "assets/basic/step08/CLI_vs_Desktop.svg",
       "goal": "CLI와 Desktop 환경의 장단점과 선택 기준을 파악한다.",
       "topics": [
         "CLI — 자동화·스크립팅·Hooks·파이프라인",
@@ -80,7 +80,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step08/06.svg",
+      "imagePath": "assets/basic/step08/CLI란_무엇인가.svg",
       "goal": "CLI의 개념과 우리가 배울 CLI 도구들을 파악한다.",
       "topics": [
         "CLI = Command Line Interface",
@@ -92,7 +92,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step08/07.svg",
+      "imagePath": "assets/basic/step08/GitHub_가입.svg",
       "goal": "GitHub 계정을 만들고 gh cli 설치를 준비한다.",
       "topics": [
         "github.com 가입 · 이메일 인증",
@@ -110,7 +110,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step08/08.svg",
+      "imagePath": "assets/basic/step08/GitHub_CLI_설치와_인증.svg",
       "goal": "gh cli를 설치하고 --scopes 인증을 완료한다.",
       "topics": [
         "winget install GitHub.cli (Windows)",
@@ -142,7 +142,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step08/09.svg",
+      "imagePath": "assets/basic/step08/GitHub_CLI_스킬_만들기.svg",
       "goal": "Claude에게 gh cli 기반 스킬을 자동 제작시킨다.",
       "topics": [
         "gh repo list / gh pr list 직접 실행",
@@ -154,7 +154,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step08/10.svg",
+      "imagePath": "assets/basic/step08/Gemini_CLI도_CLI다!.svg",
       "goal": "Antigravity CLI를 설치하고 터미널에서 질문하는 방법을 익힌다. (구 Gemini CLI — 2026.6.18 전환)",
       "topics": [
         "셸 인스톨러로 Antigravity CLI 설치",
@@ -166,7 +166,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step08/11.svg",
+      "imagePath": "assets/basic/step08/Gemini_CLI_실습.svg",
       "goal": "Antigravity CLI를 실습하고 Claude에게 연동 스킬을 제작시킨다. (구 Gemini CLI — 2026.6.18 전환)",
       "topics": [
         "agy -p \"질문\" 터미널 실행",
