@@ -1,6 +1,6 @@
 {
   "slides": [
-    "Skills_활용과_Discord_Plugin_고급_기능.svg",
+    "Skills_활용과_플러그인_실습.svg",
     "Skills.svg",
     "Skill_사용법.svg",
     "라이브러리란.svg",
@@ -9,14 +9,14 @@
     "실습_2단계_—_카드뉴스_스킬_만들기.svg",
     "스킬_활용_—_반복_사용과_리사이즈.svg",
     "나만의_Skill_만들기_—_워크플로우.svg",
-    "Discord_Bot_토큰_발급.svg",
-    "Discord_Plugin_설치.svg",
-    "토큰_저장과_재실행.svg",
-    "DM_페어링과_서버_채널_등록.svg",
-    "access.json_서버_채널_등록.svg",
-    "Plugin_고급_도구_활용.svg",
-    "기존_MCP_vs_Plugin.svg",
-    "서버_채널_실습_준비.svg",
-    "서버_채널_대화_실습.svg"
+    "플러그인이란.svg",
+    "플러그인_vs_단독_설정.svg",
+    "플러그인_구조.svg",
+    "플러그인_마켓플레이스란.svg",
+    "마켓플레이스_추가하기.svg",
+    "플러그인_설치하기.svg",
+    "공식_마켓플레이스_둘러보기.svg",
+    "플러그인_관리하기.svg",
+    "플러그인_설치_실습.svg"
   ]
 }

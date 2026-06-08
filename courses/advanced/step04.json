@@ -12,7 +12,7 @@
   "practice": "네이버 데이터랩 API와 타입캐스트 TTS API를 Claude가 Skill로 제작하고, public-apis-4Kr에서 원하는 API를 직접 선택해 연결한다.",
   "slides": [
     {
-      "imagePath": "assets/advanced/step04/01.svg",
+      "imagePath": "assets/advanced/step04/외부_API로_AI_기능_확장하기.svg",
       "goal": "ADV 4 목표와 API 키 발급 중심 접근 방식을 안내한다.",
       "topics": [
         "API 키 발급 = AI 활용의 첫 번째 실전 스킬",
@@ -23,7 +23,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step04/02.svg",
+      "imagePath": "assets/advanced/step04/API_키_발급,_두려워하지_마세요.svg",
       "goal": "API 키 발급이 두렵지 않은 이유와 중요성을 이해한다.",
       "topics": [
         "MCP/CLI가 아직 적은 서비스가 대부분 — API 키가 유일한 연결 수단",
@@ -35,7 +35,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step04/03.svg",
+      "imagePath": "assets/advanced/step04/네이버_오픈_API.svg",
       "goal": "네이버 오픈 API의 특징과 이번 강의에서 사용할 API를 파악한다.",
       "topics": [
         "무료 쿼터 · 카드 불필요 · 한국어 강점",
@@ -46,7 +46,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step04/04.svg",
+      "imagePath": "assets/advanced/step04/네이버_오픈_API_종류.svg",
       "goal": "네이버 오픈 API 7개 카테고리와 30개 이상의 API 종류를 파악한다.",
       "topics": [
         "인증 / AI·번역(Papago·Clova) / 지도·위치",
@@ -57,7 +57,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step04/05.svg",
+      "imagePath": "assets/advanced/step04/네이버_API_앱_등록_1단계.svg",
       "goal": "네이버 개발자 센터에서 애플리케이션을 등록하고 API를 선택한다.",
       "topics": [
         "developers.naver.com/apps/#/list 접속",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "imagePath": "assets/advanced/step04/06.svg",
+      "imagePath": "assets/advanced/step04/네이버_API_앱_등록_2단계.svg",
       "goal": "환경 설정 완료 후 클라이언트 ID와 Secret을 복사한다.",
       "topics": [
         "환경: Web 선택 → URL: http://localhost:3000",
@@ -83,7 +83,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step04/07.svg",
+      "imagePath": "assets/advanced/step04/Claude에게_데이터랩_Skill_개발_요청.svg",
       "goal": "API 문서를 Claude에게 읽히고 데이터랩 CLI Skill을 제작한다.",
       "topics": [
         "curl로 API 문서 2개 읽기 (검색어트렌드·쇼핑인사이트)",
@@ -98,7 +98,7 @@
       }
     },
     {
-      "imagePath": "assets/advanced/step04/08.svg",
+      "imagePath": "assets/advanced/step04/타입캐스트_—_AI_음성_합성_API.svg",
       "goal": "타입캐스트가 무엇인지와 API 활용 시나리오를 이해한다.",
       "topics": [
         "100개 이상 AI 캐릭터 목소리 · 한국어 특화",
@@ -109,7 +109,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step04/09.svg",
+      "imagePath": "assets/advanced/step04/타입캐스트_API_키_발급.svg",
       "goal": "타입캐스트 개발자 페이지에서 API 키를 발급받는다.",
       "topics": [
         "typecast.ai/developers/api 접속",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "imagePath": "assets/advanced/step04/10.svg",
+      "imagePath": "assets/advanced/step04/타입캐스트_캐릭터_선택_—_voice_id_복사.svg",
       "goal": "원하는 AI 캐릭터를 선택하고 voice_id를 복사한다.",
       "topics": [
         "캐릭터 목록 접속 → 미리 듣기로 목소리 선택",
@@ -135,7 +135,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step04/11.svg",
+      "imagePath": "assets/advanced/step04/Claude에게_타입캐스트_Skill_제작_요청.svg",
       "goal": "API 문서를 학습시키고 타입캐스트 TTS CLI Skill을 제작한다.",
       "topics": [
         "typecast.ai/docs/overview 문서 읽기",
@@ -150,7 +150,7 @@
       }
     },
     {
-      "imagePath": "assets/advanced/step04/12.svg",
+      "imagePath": "assets/advanced/step04/public-apis-4Kr_—_직접_연결_실습.svg",
       "goal": "public-apis-4Kr에서 API를 골라 직접 연결하는 Skill을 제작한다.",
       "topics": [
         "github.com/yybmion/public-apis-4Kr — 한국 공개 API 목록",

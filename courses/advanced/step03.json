@@ -13,7 +13,7 @@
   "practice": "Claude가 Drive·Gmail·Calendar·Sheets를 gws 명령으로 직접 조작하고, 실습 결과를 Sheets로 자동 정리한다.",
   "slides": [
     {
-      "imagePath": "assets/advanced/step03/01.svg",
+      "imagePath": "assets/advanced/step03/GWS_CLI_—_Google_Workspace_자동화.svg",
       "goal": "ADV 3 목표와 GWS CLI 접근 방식을 안내한다.",
       "topics": [
         "수강생은 명령어를 몰라도 됨 — Claude가 gws CLI를 직접 실행",
@@ -25,7 +25,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step03/02.svg",
+      "imagePath": "assets/advanced/step03/GWS_CLI_통합_설치_프롬프트.svg",
       "goal": "통합 설치 프롬프트를 Claude에 붙여넣어 gws 설치·인증을 완료한다.",
       "topics": [
         "npm install -g @googleworkspace/cli (일반 터미널)",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "imagePath": "assets/advanced/step03/03.svg",
+      "imagePath": "assets/advanced/step03/gws_auth_login_—_인증_완료_확인.svg",
       "goal": "gws auth login 성공을 확인하고 6개 서비스 인증 상태를 검증한다.",
       "topics": [
         "gws auth login -s drive,gmail,calendar,sheets,docs,forms",
@@ -52,7 +52,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step03/04.svg",
+      "imagePath": "assets/advanced/step03/GWS_CLI_Skill_문서화.svg",
       "goal": "gws CLI 사용법 문서를 Skill로 만들어 자연어 요청을 명령으로 변환한다.",
       "topics": [
         "Skill 문서 생성 요청: \"gws CLI 사용법 gws_skill.md로 만들어줘\"",
@@ -63,7 +63,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step03/05.svg",
+      "imagePath": "assets/advanced/step03/실습_—_Drive_파일_조회_·_업로드_·_다운로드.svg",
       "goal": "Claude가 gws drive로 파일 조회·업로드·다운로드를 수행한다.",
       "topics": [
         "드라이브 최근 파일 5개 목록 조회",
@@ -74,7 +74,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step03/06.svg",
+      "imagePath": "assets/advanced/step03/실습_—_Gmail_조회_·_보내기.svg",
       "goal": "Claude가 gws gmail로 메일을 조회하고 발송한다.",
       "topics": [
         "안 읽은 메일 3개 제목·발신자 조회",
@@ -85,7 +85,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step03/07.svg",
+      "imagePath": "assets/advanced/step03/실습_—_캘린더_일정_조회_·_추가.svg",
       "goal": "Claude가 gws calendar로 일정을 조회하고 새 이벤트를 추가한다.",
       "topics": [
         "이번 주 일정 목록 조회",
@@ -96,7 +96,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step03/08.svg",
+      "imagePath": "assets/advanced/step03/실습_—_Sheets_·_Docs_·_Forms_생성.svg",
       "goal": "Claude가 gws로 Sheets·Docs·Forms를 각각 생성한다.",
       "topics": [
         "Google Sheets — 월별 매출 표 생성",

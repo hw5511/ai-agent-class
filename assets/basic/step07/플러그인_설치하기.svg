@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">BASIC 07</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">플러그인 설치하기</text>
+  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">원하는 플러그인을 골라 설치합니다</text>
+  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">설치 명령어</text>
+  <text x="60" y="296" font-family="'Courier New',Courier,monospace" font-size="18" fill="#1d4ed8">/plugin install &lt;이름&gt;@&lt;마켓플레이스&gt;</text>
+  <text x="60" y="348" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">인터랙티브 UI</text>
+  <text x="60" y="386" font-family="'Courier New',Courier,monospace" font-size="18" fill="#1d4ed8">/plugin → Discover · Installed · Marketplaces · Errors 탭</text>
+  <text x="60" y="438" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">설치 범위(scope) · 활성화</text>
+  <text x="60" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#374151">User(전체) / Project(저장소 공유) / Local(나만)</text>
+  <text x="60" y="510" font-family="'Courier New',Courier,monospace" font-size="18" fill="#1d4ed8">/reload-plugins 로 재시작 없이 즉시 적용</text>
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">예: /plugin install github@claude-plugins-official</text>
+</svg>
