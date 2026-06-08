@@ -14,7 +14,7 @@
   "practice": "개인 환경에 맞는 보안 설정을 직접 구성하고, 권한 모드와 주요 명령어를 순서대로 실행해본다.",
   "slides": [
     {
-      "imagePath": "assets/basic/step03/01.svg",
+      "imagePath": "assets/basic/step03/Claude_에이전트_환경_설정과_명령어.svg",
       "goal": "Step 3 목표와 오늘 배울 내용을 안내한다.",
       "topics": [
         "보안 설정",
@@ -26,7 +26,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step03/02.svg",
+      "imagePath": "assets/basic/step03/보안_설정.svg",
       "goal": "Claude Code의 파일 접근 범위와 개인정보 설정을 이해한다.",
       "topics": [
         "파일 쓰기 범위 제한",
@@ -43,7 +43,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step03/03.svg",
+      "imagePath": "assets/basic/step03/settings.json.svg",
       "goal": "settings.json의 구조와 주요 설정 항목을 이해한다.",
       "topics": [
         "3계층 설정 파일 (전역/프로젝트/로컬)",
@@ -61,18 +61,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step03/04.svg",
-      "goal": "settings.json 실습 — 파일 삭제 차단 규칙을 직접 추가한다.",
-      "topics": [
-        "Claude에게 권한 제한 추가 요청",
-        "차단 동작 확인 (rm 시도)",
-        "settings.json 파일 내용 확인"
-      ],
-      "practice": "rm 차단 규칙을 Claude에게 추가하고 실제로 차단되는지 확인한다.",
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step03/05.svg",
+      "imagePath": "assets/basic/step03/permissions_—_허용_·_차단_규칙.svg",
       "goal": "settings.json 파일 삭제 차단 규칙 추가를 직접 실습한다.",
       "topics": [
         "Claude에게 권한 제한 추가 요청",
@@ -83,7 +72,25 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step03/06.svg",
+      "imagePath": "assets/basic/step03/settings.json_—_주요_설정_항목.svg",
+      "goal": null,
+      "topics": null,
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step03/settings.json_실습.svg",
+      "goal": "settings.json 실습 — 파일 삭제 차단 규칙을 직접 추가한다.",
+      "topics": [
+        "Claude에게 권한 제한 추가 요청",
+        "차단 동작 확인 (rm 시도)",
+        "settings.json 파일 내용 확인"
+      ],
+      "practice": "rm 차단 규칙을 Claude에게 추가하고 실제로 차단되는지 확인한다.",
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step03/권한_모드_(Shift+Tab_순환).svg",
       "goal": "3가지 권한 모드의 차이를 이해하고 전환 방법을 익힌다.",
       "topics": [
         "일반 모드 — 편집·명령 매번 승인",
@@ -94,7 +101,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step03/07.svg",
+      "imagePath": "assets/basic/step03/욜로_모드_(YOLO_Mode).svg",
       "goal": "욜로 모드의 개념과 안전한 사용법을 이해한다.",
       "topics": [
         "claude --dangerously-skip-permissions",
@@ -105,7 +112,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step03/08.svg",
+      "imagePath": "assets/basic/step03/주요_슬래시_명령어.svg",
       "goal": "주요 슬래시 명령어의 역할을 파악한다.",
       "topics": [
         "/clear · /model · /login · /logout",
@@ -119,7 +126,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step03/09.svg",
+      "imagePath": "assets/basic/step03/config_화면_구성.svg",
       "goal": "/config 화면 구성을 이해한다 — Status · Config · Usage 3탭",
       "topics": [
         "Status — 버전·세션·계정·모델·IDE·MCP 상태",
@@ -130,7 +137,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step03/10.svg",
+      "imagePath": "assets/basic/step03/config_설정_항목_(1_2).svg",
       "goal": "/config 설정 항목 (1/2) — UI·동작 관련 옵션을 이해한다.",
       "topics": [
         "Auto-compact · Show tips · Reduce motion",
@@ -142,7 +149,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step03/11.svg",
+      "imagePath": "assets/basic/step03/config_설정_항목_(2_2).svg",
       "goal": "/config 설정 항목 (2/2) — 업데이트·테마·모델 관련 옵션을 이해한다.",
       "topics": [
         "Auto-update channel · Theme · Notifications",
@@ -154,7 +161,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step03/12.svg",
+      "imagePath": "assets/basic/step03/model_—_Claude_모델_선택.svg",
       "goal": "상황에 맞는 Claude 모델을 선택하는 방법을 익힌다.",
       "topics": [
         "Haiku 4.5 — 가장 빠름 (간단한 작업)",
@@ -165,7 +172,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step03/13.svg",
+      "imagePath": "assets/basic/step03/웹_Search_툴.svg",
       "goal": "웹 Search 툴의 동작 원리를 이해한다.",
       "topics": [
         "사용자 명령 불필요 — Claude 자동 판단",
@@ -176,7 +183,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step03/14.svg",
+      "imagePath": "assets/basic/step03/웹_Search_실습.svg",
       "goal": "웹 Search 실습을 진행한다.",
       "topics": [
         "claude 실행",
@@ -187,7 +194,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step03/15.svg",
+      "imagePath": "assets/basic/step03/Claude_in_Chrome.svg",
       "goal": "Claude in Chrome의 개념과 7가지 기능을 이해한다.",
       "topics": [
         "라이브 디버깅 · 디자인 검증 · 웹앱 테스트",
@@ -199,7 +206,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step03/16.svg",
+      "imagePath": "assets/basic/step03/Claude_in_Chrome_설치_·_활성화.svg",
       "goal": "Claude in Chrome 설치와 활성화 방법을 익힌다.",
       "topics": [
         "Chrome 웹스토어에서 확장 설치 (v1.0.36+)",
@@ -216,7 +223,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step03/17.svg",
+      "imagePath": "assets/basic/step03/Claude_in_Chrome_실습.svg",
       "goal": "Claude in Chrome 실습을 진행한다.",
       "topics": [
         "챌린지 3종 직접 테스트 (페이지 내 챌린지 클릭)",
@@ -233,7 +240,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step03/18.svg",
+      "imagePath": "assets/basic/step03/Todos.svg",
       "goal": "Todos 내장 툴을 이해한다.",
       "topics": [
         "TodoWrite · TodoRead 내장 툴",
@@ -247,7 +254,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step03/19.svg",
+      "imagePath": "assets/basic/step03/Todos_실습.svg",
       "goal": "Todos 실습 — 다단계 작업을 순차 실행한다.",
       "topics": [
         "claude 실행",

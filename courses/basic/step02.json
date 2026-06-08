@@ -12,7 +12,7 @@
   "practice": "나만의 에이전트에 이름을 부여하고, 각 툴(Read/Write/Edit/Bash)을 직접 실습한다.",
   "slides": [
     {
-      "imagePath": "assets/basic/step02/01.svg",
+      "imagePath": "assets/basic/step02/Claude_에이전트_메모리와_파일_폴더_제어.svg",
       "goal": "Step 2 목표와 VSCode 터미널 환경을 안내한다.",
       "topics": [
         "Step 2 학습 목표",
@@ -23,7 +23,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step02/02.svg",
+      "imagePath": "assets/basic/step02/CLAUDE.md.svg",
       "goal": "CLAUDE.md의 개념과 역할을 이해한다.",
       "topics": [
         "CLAUDE.md란?",
@@ -34,7 +34,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step02/03.svg",
+      "imagePath": "assets/basic/step02/CLAUDE.md_실습.svg",
       "goal": "CLAUDE.md 실습 — 에이전트에 이름·말투·역할을 부여한다.",
       "topics": [
         "claude 실행 후 너는 누구야? 질문",
@@ -45,7 +45,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step02/04.svg",
+      "imagePath": "assets/basic/step02/init.svg",
       "goal": "/init 명령어의 역할을 이해한다.",
       "topics": [
         "/init이란?",
@@ -56,7 +56,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step02/05.svg",
+      "imagePath": "assets/basic/step02/init_실습.svg",
       "goal": "/init 실습 — 폴더 분석 후 CLAUDE.md 자동 생성을 체험한다.",
       "topics": [
         "실습 자료 다운로드 후 작업 폴더에 배치",
@@ -73,7 +73,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step02/06.svg",
+      "imagePath": "assets/basic/step02/memory.svg",
       "goal": "에이전트 메모리를 직접 확인하고 편집한다.",
       "topics": [
         "/memory — 로드된 CLAUDE.md·rules 파일 목록",
@@ -84,7 +84,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step02/07.svg",
+      "imagePath": "assets/basic/step02/Auto_Memory.svg",
       "goal": "Auto Memory의 작동 원리를 이해한다.",
       "topics": [
         "Claude가 스스로 MEMORY.md에 자동 기록",
@@ -95,18 +95,18 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step02/08.svg",
-      "goal": "Write 툴의 역할을 이해한다.",
+      "imagePath": "assets/basic/step02/Read_툴.svg",
+      "goal": "Read 툴이 읽을 수 있는 파일 종류를 이해한다.",
       "topics": [
-        "새 파일 생성·작성",
-        "기존 파일 덮어쓰기 주의",
-        "Write vs Edit 차이"
+        "텍스트 파일: txt·md·py·html 등",
+        "이미지 파일: jpg·png·gif·webp",
+        "PDF — 실제 내용 분석 (최대 100페이지/20MB)"
       ],
       "practice": null,
       "action": null
     },
     {
-      "imagePath": "assets/basic/step02/09.svg",
+      "imagePath": "assets/basic/step02/Read_실습.svg",
       "goal": "Read 실습 — 파일·이미지·PDF를 읽어본다.",
       "topics": [
         "실습 자료 다운로드 후 압축 해제",
@@ -123,7 +123,18 @@
       }
     },
     {
-      "imagePath": "assets/basic/step02/10.svg",
+      "imagePath": "assets/basic/step02/Write_툴.svg",
+      "goal": "Write 툴의 역할을 이해한다.",
+      "topics": [
+        "새 파일 생성·작성",
+        "기존 파일 덮어쓰기 주의",
+        "Write vs Edit 차이"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/Write_실습.svg",
       "goal": "Write 실습 — 새 파일을 만들어본다.",
       "topics": [
         "자기소개 txt 파일 생성 요청",
@@ -134,7 +145,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step02/11.svg",
+      "imagePath": "assets/basic/step02/Edit_툴.svg",
       "goal": "Edit 툴의 역할을 이해한다.",
       "topics": [
         "기존 파일 일부 수정",
@@ -145,7 +156,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step02/12.svg",
+      "imagePath": "assets/basic/step02/Edit_실습.svg",
       "goal": "Edit 실습 — 기존 파일의 일부를 수정해본다.",
       "topics": [
         "파일 특정 줄 수정 요청",
@@ -156,18 +167,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step02/13.svg",
-      "goal": "Read 툴이 읽을 수 있는 파일 종류를 이해한다.",
-      "topics": [
-        "텍스트 파일: txt·md·py·html 등",
-        "이미지 파일: jpg·png·gif·webp",
-        "PDF — 실제 내용 분석 (최대 100페이지/20MB)"
-      ],
-      "practice": null,
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step02/14.svg",
+      "imagePath": "assets/basic/step02/Bash_툴.svg",
       "goal": "Bash 툴의 역할을 이해한다.",
       "topics": [
         "컴퓨터 명령어 직접 실행",
@@ -178,18 +178,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step02/15.svg",
-      "goal": "Bash 주요 명령어를 파악한다.",
-      "topics": [
-        "mkdir · cp · mv · rm",
-        "start 명령으로 파일 실행",
-        "python · node 스크립트 실행"
-      ],
-      "practice": null,
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step02/16.svg",
+      "imagePath": "assets/basic/step02/Bash_실습.svg",
       "goal": "Bash 실습 — 폴더 생성·이동·복사·제거·프로그램 실행을 실습한다.",
       "topics": [
         "폴더 생성: work + docs 서브폴더",
@@ -198,6 +187,17 @@
         "탐색기로 특정 폴더 열기"
       ],
       "practice": "폴더 만들기 → 파일 이동 → 크롬 실행 순서로 실습",
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/Bash_주요_명령어.svg",
+      "goal": "Bash 주요 명령어를 파악한다.",
+      "topics": [
+        "mkdir · cp · mv · rm",
+        "start 명령으로 파일 실행",
+        "python · node 스크립트 실행"
+      ],
+      "practice": null,
       "action": null
     }
   ]
