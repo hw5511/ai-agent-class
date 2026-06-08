@@ -13,7 +13,7 @@
   "practice": "3종 에이전트를 모두 설치하고 동일한 질문을 입력해 응답 차이를 비교한다.",
   "slides": [
     {
-      "imagePath": "assets/basic/step01/01.svg",
+      "imagePath": "assets/basic/step01/AI_에이전트란.svg",
       "goal": "AI 에이전트의 개념과 SEE-THINK-PLAN-DO-FIX 동작 루프를 이해한다.",
       "topics": [
         "에이전트(Agent)란 무엇인가?",
@@ -25,7 +25,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/02.svg",
+      "imagePath": "assets/basic/step01/AI_에이전트_현황.svg",
       "goal": "글로벌 AI 기업 3종의 CLI 에이전트 특징을 파악한다.",
       "topics": [
         "GPT CLI (Codex) - OpenAI",
@@ -37,7 +37,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/03.svg",
+      "imagePath": "assets/basic/step01/에이전트_동작_방식_①.svg",
       "goal": "사람이 직접 수행하는 기존 방식의 한계를 이해한다.",
       "topics": [
         "웹 검색으로 명령어 찾기",
@@ -49,7 +49,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/04.svg",
+      "imagePath": "assets/basic/step01/에이전트_동작_방식_②.svg",
       "goal": "AI에게 질문하는 방식과 그 한계를 파악한다.",
       "topics": [
         "ChatGPT에 자연어로 질문",
@@ -61,7 +61,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/05.svg",
+      "imagePath": "assets/basic/step01/에이전트_동작_방식_③.svg",
       "goal": "에이전트 프로그램이 명령을 자동 감지·실행하는 원리를 이해한다.",
       "topics": [
         "시스템 프롬프트로 출력 형식 지정",
@@ -73,7 +73,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/06.svg",
+      "imagePath": "assets/basic/step01/에이전트를_잘_다루려면.svg",
       "goal": "에이전트를 잘 다루려면 무엇이 필요한지 개발자/비개발자 관점으로 이해한다.",
       "topics": [
         "개발자 — 기존 코드 능력 + 에이전트로 생산성 극대화",
@@ -84,7 +84,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/07.svg",
+      "imagePath": "assets/basic/step01/AI_동작원리를_알면_달라진다.svg",
       "goal": "AI 동작원리 4가지(컨텍스트/프롬프트/툴/토큰)를 이해하면 에이전트 활용 능력이 달라짐을 학습한다.",
       "topics": [
         "컨텍스트 윈도우 — 대화 관리",
@@ -96,7 +96,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/08.svg",
+      "imagePath": "assets/basic/step01/어떤_AI로_진행하나요.svg",
       "goal": "이 강의에서 사용하는 Claude Pro 플랜의 특징과 효율적인 사용법을 이해한다.",
       "topics": [
         "Claude Pro — 월 약 $20, 5시간 세션 초기화",
@@ -113,7 +113,42 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/09.svg",
+      "imagePath": "assets/basic/step01/CLI_에이전트_설치_—_단계별_로드맵.svg",
+      "goal": null,
+      "topics": null,
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step01/PowerShell_실행.svg",
+      "goal": null,
+      "topics": null,
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step01/PowerShell_창_확인.svg",
+      "goal": null,
+      "topics": null,
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step01/(권장)_창_색상_변경_—_속성_진입.svg",
+      "goal": null,
+      "topics": null,
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step01/(권장)_창_색상_변경_—_검정색_선택.svg",
+      "goal": null,
+      "topics": null,
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step01/Git_설치.svg",
       "goal": "Git 설치 및 초기 설정을 완료한다.",
       "topics": [
         "winget install git 명령어",
@@ -122,10 +157,27 @@
         "CLI 환경 준비 완료"
       ],
       "practice": "winget으로 Git을 설치하고 git --version으로 정상 설치를 확인한다.",
+      "action": {
+        "label": "설치 명령어",
+        "copy": "winget install Git.Git"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step01/Git_설치_—_약관_동의.svg",
+      "goal": null,
+      "topics": null,
+      "practice": null,
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/10.svg",
+      "imagePath": "assets/basic/step01/Git_설치_완료.svg",
+      "goal": null,
+      "topics": null,
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step01/Node.js_설치.svg",
       "goal": "Node.js 설치 및 npm 환경을 준비한다.",
       "topics": [
         "winget install node.js 명령어",
@@ -134,87 +186,20 @@
         "이후 CLI 에이전트 설치 환경 준비"
       ],
       "practice": "winget으로 Node.js를 설치하고 node/npm 버전을 확인한다.",
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step01/11.svg",
-      "goal": "Antigravity CLI를 설치하고 Google 계정으로 로그인한다. (구 Gemini CLI — 2026.6.18 전환)",
-      "topics": [
-        "셸 인스톨러로 Antigravity CLI 설치",
-        "agy 명령어 확인 (agy --version)",
-        "Google 계정 브라우저 OAuth 로그인",
-        "첫 번째 응답 테스트"
-      ],
-      "practice": "Antigravity CLI를 설치하고 간단한 질문으로 첫 응답을 확인한다.",
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step01/12.svg",
-      "goal": "GPT CLI(Codex)를 설치하고 OpenAI 계정으로 로그인한다.",
-      "topics": [
-        "npm install -g @openai/codex",
-        "codex 명령어 확인",
-        "OpenAI API 키 설정",
-        "첫 번째 응답 테스트"
-      ],
-      "practice": "GPT CLI를 설치하고 동일한 질문으로 응답을 확인한다.",
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step01/13.svg",
-      "goal": "Claude Code를 설치하고 Anthropic 계정으로 로그인한다.",
-      "topics": [
-        "npm install -g @anthropic-ai/claude-code",
-        "claude 명령어 확인",
-        "Anthropic 계정 인증",
-        "3종 에이전트(Antigravity·GPT Codex·Claude Code) 비교 테스트"
-      ],
-      "practice": "3종 에이전트에 동일한 질문을 입력하고 응답 방식의 차이를 비교한다.",
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step01/14.svg",
-      "goal": null,
-      "topics": null,
-      "practice": null,
-      "action": {
-        "label": "설치 명령어",
-        "copy": "winget install Git.Git"
-      }
-    },
-    {
-      "imagePath": "assets/basic/step01/15.svg",
-      "goal": null,
-      "topics": null,
-      "practice": null,
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step01/16.svg",
-      "goal": null,
-      "topics": null,
-      "practice": null,
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step01/17.svg",
-      "goal": null,
-      "topics": null,
-      "practice": null,
       "action": {
         "label": "설치 명령어",
         "copy": "winget install OpenJS.NodeJS"
       }
     },
     {
-      "imagePath": "assets/basic/step01/18.svg",
+      "imagePath": "assets/basic/step01/Node.js_설치_완료.svg",
       "goal": null,
       "topics": null,
       "practice": null,
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/19.svg",
+      "imagePath": "assets/basic/step01/Mac_설치_—_Homebrew_설치.svg",
       "goal": null,
       "topics": null,
       "practice": null,
@@ -233,7 +218,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/20.svg",
+      "imagePath": "assets/basic/step01/Mac_설치_—_Node.js_설치_및_버전_확인.svg",
       "goal": null,
       "topics": null,
       "practice": null,
@@ -252,7 +237,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/21.svg",
+      "imagePath": "assets/basic/step01/설치_확인_—_npm_오류_발생_케이스.svg",
       "goal": null,
       "topics": null,
       "practice": null,
@@ -275,14 +260,14 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/22.svg",
+      "imagePath": "assets/basic/step01/관리자_권한으로_PowerShell_재실행.svg",
       "goal": null,
       "topics": null,
       "practice": null,
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/23.svg",
+      "imagePath": "assets/basic/step01/실행_정책_변경_명령어_입력.svg",
       "goal": null,
       "topics": null,
       "practice": null,
@@ -292,14 +277,14 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/24.svg",
+      "imagePath": "assets/basic/step01/실행_규칙_변경_—_A_입력.svg",
       "goal": null,
       "topics": null,
       "practice": null,
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/25.svg",
+      "imagePath": "assets/basic/step01/정상_버전_확인.svg",
       "goal": null,
       "topics": null,
       "practice": null,
@@ -322,10 +307,15 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/26.svg",
-      "goal": null,
-      "topics": null,
-      "practice": null,
+      "imagePath": "assets/basic/step01/Gemini_CLI_설치.svg",
+      "goal": "Antigravity CLI를 설치하고 Google 계정으로 로그인한다. (구 Gemini CLI — 2026.6.18 전환)",
+      "topics": [
+        "셸 인스톨러로 Antigravity CLI 설치",
+        "agy 명령어 확인 (agy --version)",
+        "Google 계정 브라우저 OAuth 로그인",
+        "첫 번째 응답 테스트"
+      ],
+      "practice": "Antigravity CLI를 설치하고 간단한 질문으로 첫 응답을 확인한다.",
       "action": {
         "label": "Antigravity CLI 설치 명령어 (구 Gemini CLI — 2026.6.18 전환)",
         "items": [
@@ -345,10 +335,15 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/27.svg",
-      "goal": null,
-      "topics": null,
-      "practice": null,
+      "imagePath": "assets/basic/step01/GPT_Codex_설치.svg",
+      "goal": "GPT CLI(Codex)를 설치하고 OpenAI 계정으로 로그인한다.",
+      "topics": [
+        "npm install -g @openai/codex",
+        "codex 명령어 확인",
+        "OpenAI API 키 설정",
+        "첫 번째 응답 테스트"
+      ],
+      "practice": "GPT CLI를 설치하고 동일한 질문으로 응답을 확인한다.",
       "action": {
         "label": "명령어",
         "items": [
@@ -364,10 +359,15 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/28.svg",
-      "goal": null,
-      "topics": null,
-      "practice": null,
+      "imagePath": "assets/basic/step01/Claude_Code_설치.svg",
+      "goal": "Claude Code를 설치하고 Anthropic 계정으로 로그인한다.",
+      "topics": [
+        "npm install -g @anthropic-ai/claude-code",
+        "claude 명령어 확인",
+        "Anthropic 계정 인증",
+        "3종 에이전트(Antigravity·GPT Codex·Claude Code) 비교 테스트"
+      ],
+      "practice": "3종 에이전트에 동일한 질문을 입력하고 응답 방식의 차이를 비교한다.",
       "action": {
         "label": "명령어",
         "items": [
@@ -383,7 +383,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/29.svg",
+      "imagePath": "assets/basic/step01/claude_install_실행.svg",
       "goal": "claude install로 네이티브 바이너리를 업데이트한다.",
       "topics": [
         "npm 기반 설치 완료 후 실행",
@@ -397,7 +397,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/30.svg",
+      "imagePath": "assets/basic/step01/VS_Code_설치.svg",
       "goal": "VS Code를 설치하고 에이전트 작업 환경을 구성한다.",
       "topics": [
         "VS Code — 생성 파일 확인·수정에 활용",
@@ -414,7 +414,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/31.svg",
+      "imagePath": "assets/basic/step01/작업_폴더_열기.svg",
       "goal": "VS Code에서 작업 폴더를 설정하는 방법을 익힌다.",
       "topics": [
         "작업 폴더 생성 (예: C:\\ai-agent\\)",
@@ -425,7 +425,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/32.svg",
+      "imagePath": "assets/basic/step01/터미널에서_claude_실행.svg",
       "goal": "VS Code 터미널에서 claude를 실행하는 방법을 익힌다.",
       "topics": [
         "Terminal > New Terminal 또는 Ctrl+`",
@@ -439,7 +439,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/33.svg",
+      "imagePath": "assets/basic/step01/claude_명령어_오류_시_PATH_설정.svg",
       "goal": "VS Code에서 claude 명령어 오류 시 PATH를 자동 설정한다.",
       "topics": [
         "'claude is not recognized' 오류 발생 시",
@@ -454,22 +454,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/34.svg",
-      "goal": "Mac에서 claude 명령어 오류 시 PATH를 자동 설정한다.",
-      "topics": [
-        "'claude: command not found' 오류 발생 시",
-        "bash 스크립트 — 터미널에서 실행",
-        "Homebrew · npm · Claude 경로 자동 탐색 및 ~/.zshrc 영구 등록",
-        "심볼릭 링크 자동 복구 포함"
-      ],
-      "practice": null,
-      "action": {
-        "label": "PATH 자동 설정 스크립트 (macOS)",
-        "copy": "#!/bin/bash\n\n# 1. 추가할 경로 리스트 초기화\npaths_to_add=()\n\n# 2. Homebrew 경로 탐색\nif [ -d \"/opt/homebrew/bin\" ]; then\n    paths_to_add+=(\"/opt/homebrew/bin\")\nfi\nif [ -d \"/usr/local/bin\" ]; then\n    paths_to_add+=(\"/usr/local/bin\")\nfi\n\n# 3. Claude Code 네이티브 설치 경로 (핵심)\nclaude_native_path=\"$HOME/.local/bin\"\nclaude_npm_path=\"$HOME/.npm-global/bin\"\n\nif [ -d \"$claude_native_path\" ]; then\n    paths_to_add+=(\"$claude_native_path\")\nfi\nif [ -d \"$claude_npm_path\" ]; then\n    paths_to_add+=(\"$claude_npm_path\")\nfi\n\n# 4. npm 관련 경로 (Global Prefix)\nif command -v npm &>/dev/null; then\n    npm_prefix=$(npm config get prefix 2>/dev/null)\n    if [ -n \"$npm_prefix\" ] && [ -d \"$npm_prefix/bin\" ]; then\n        paths_to_add+=(\"$npm_prefix/bin\")\n    fi\nfi\n\nnpm_global_default=\"$HOME/.npm-global/bin\"\nif [ -d \"$npm_global_default\" ]; then\n    paths_to_add+=(\"$npm_global_default\")\nfi\n\n# --- 경로 등록 로직 (중복 제거 및 영구 적용) ---\nshell_rc=\"$HOME/.zshrc\"\nif [ ! -f \"$shell_rc\" ]; then\n    shell_rc=\"$HOME/.bashrc\"\nfi\n\nadded_count=0\nfor p in \"${paths_to_add[@]}\"; do\n    if [[ \":$PATH:\" != *\":$p:\"* ]]; then\n        export PATH=\"$p:$PATH\"\n        if ! grep -qF \"$p\" \"$shell_rc\" 2>/dev/null; then\n            echo \"export PATH=\\\"$p:\\$PATH\\\"\" >> \"$shell_rc\"\n            echo \"  + $p (영구 등록)\"\n            added_count=$((added_count + 1))\n        fi\n    fi\ndone\n\nif [ $added_count -eq 0 ]; then\n    echo \"모든 경로가 이미 등록되어 있습니다.\"\nfi\n\n# --- Claude 심볼릭 링크 복구 (Homebrew 환경) ---\nif ! command -v claude &>/dev/null; then\n    npm_root=$(npm root -g 2>/dev/null)\n    claude_bin=\"$npm_root/@anthropic-ai/claude-code/bin/claude\"\n    if [ -f \"$claude_bin\" ]; then\n        brew_bin=\"/opt/homebrew/bin\"\n        if [ -d \"$brew_bin\" ]; then\n            rm -f \"$brew_bin/claude\"\n            ln -s \"$claude_bin\" \"$brew_bin/claude\"\n            echo \"Claude 심볼릭 링크 복구 완료: $brew_bin/claude\"\n        fi\n    fi\nfi\n\n# --- 검증 및 경로 분석 로직 ---\necho \"\"\necho \"[설치 상태 및 버전 확인]\"\necho \"--------------------------------\"\n\nclaude_path=$(which claude 2>/dev/null)\nif [ -n \"$claude_path\" ]; then\n    echo \"Claude 실행 위치: $claude_path\"\n    if [[ \"$claude_path\" == *\".local/bin\"* ]]; then\n        echo \"현재 '네이티브(Native)' 버전 사용 중\"\n    else\n        echo \"현재 'npm' 패키지 버전 사용 중\"\n    fi\n    claude --version 2>/dev/null || true\nelse\n    echo \"Claude를 찾을 수 없습니다.\"\n    echo \"터미널을 닫고 다시 열어서 재시도하세요.\"\nfi\n\necho \"--------------------------------\"\necho \"Node.js: $(node -v 2>/dev/null || echo 'N/A')\"\necho \"npm:     $(npm -v 2>/dev/null || echo 'N/A')\"\necho \"Git:     $(git --version 2>/dev/null || echo 'N/A')\"\necho \"--------------------------------\""
-      }
-    },
-    {
-      "imagePath": "assets/basic/step01/35.svg",
+      "imagePath": "assets/basic/step01/Claude_Code_사용량_확인하기.svg",
       "goal": "Claude Code 사용량을 확인하는 방법을 익힌다.",
       "topics": [
         "claude.ai/settings/usage 페이지 접속",
@@ -481,6 +466,13 @@
         "label": "사용량 확인 페이지",
         "copy": "https://claude.ai/settings/usage"
       }
+    },
+    {
+      "imagePath": "assets/basic/step01/추가_사용량_활성화하기.svg",
+      "goal": null,
+      "topics": null,
+      "practice": null,
+      "action": null
     }
   ]
 }
