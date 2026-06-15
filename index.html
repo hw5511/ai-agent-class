@@ -1213,6 +1213,10 @@
                                     copy: "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
                                 },
                                 {
+                                    desc: "PATH 등록 (설치 후 Next steps · 2줄 붙여넣기)",
+                                    copy: "echo 'eval \"$(/opt/homebrew/bin/brew shellenv)\"' >> ~/.zprofile\neval \"$(/opt/homebrew/bin/brew shellenv)\""
+                                },
+                                {
                                     desc: "버전 확인",
                                     copy: "brew --version"
                                 }
