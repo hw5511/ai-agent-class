@@ -33,11 +33,10 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html _site/index.html
+          # 슬라이드는 .svg 만 참조됨 — 미참조 PNG(렌더 사본·_check 검증캡처)는 배포 제외
           cp -r assets _site/assets
-          mkdir -p _site/template
-          cp template/index.html _site/template/index.html
-          mkdir -p _site/consultation-template
-          cp consultation-template/index.html _site/consultation-template/index.html
+          find _site/assets -name '*.png' -delete
+          rm -rf _site/assets/basic/_check
           cp -r consultation _site/consultation
           cp -r playwright_demo _site/playwright_demo
 
