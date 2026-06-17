@@ -1,6 +1,11 @@
 ﻿"""
 build.py - Lecture viewer builder
-Reads JSON files from courses/ and regenerates index.html with embedded COURSES data.
+Assembles viewer.template.html + courses/*.json into index.html (build artifact).
+
+The 뷰어 셸(CSS+JS)은 viewer.template.html 에 보관되고, courses/*.json 데이터는
+빌드 시 마커(//__COURSES__) 자리에 const COURSES = {…} 로 주입된다.
+index.html 은 순수 산출물이므로 git 에서 추적하지 않는다(.gitignore). CI 가 재생성한다.
+
 Usage: python build.py
        python build.py --dry-run
 """
@@ -12,7 +17,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 COURSES_DIR = ROOT / 'courses'
+TEMPLATE_PATH = ROOT / 'viewer.template.html'
 HTML_PATH = ROOT / 'index.html'
+COURSES_MARKER = '        //__COURSES__'
 COURSE_ORDER = ['basic', 'advanced']
 INDENT = '        '  # 8 spaces
 
@@ -146,29 +153,32 @@ def build_courses_js():
     return '\n'.join(lines)
 
 
-def inject_into_html(courses_js):
-    with open(HTML_PATH, encoding='utf-8') as f:
-        html = f.read()
-    html_lines = html.split('\n')
-    start_line = -1
-    end_line = -1
-    for i, line in enumerate(html_lines):
-        if 'const COURSES = {' in line and start_line == -1:
-            start_line = i
-        if start_line != -1 and i > start_line and line.rstrip() == '        };':
-            end_line = i
-            break
-    if start_line == -1 or end_line == -1:
-        raise RuntimeError('Could not locate COURSES block in index.html')
-    print(f'Replacing COURSES block: lines {start_line + 1}--{end_line + 1}')
-    new_lines = html_lines[:start_line] + courses_js.split('\n') + html_lines[end_line + 1:]
+def render_from_template(courses_js):
+    """viewer.template.html 의 //__COURSES__ 마커를 생성된 COURSES JS 로 치환한다."""
+    if not TEMPLATE_PATH.exists():
+        raise RuntimeError(f'Template not found: {TEMPLATE_PATH}')
+    with open(TEMPLATE_PATH, encoding='utf-8') as f:
+        template_lines = f.read().split('\n')
+    marker_idx = [i for i, l in enumerate(template_lines) if l == COURSES_MARKER]
+    if len(marker_idx) != 1:
+        raise RuntimeError(
+            f'Expected exactly one COURSES marker ({COURSES_MARKER!r}) in template, '
+            f'found {len(marker_idx)}'
+        )
+    i = marker_idx[0]
+    print(f'Injecting COURSES at template line {i + 1}')
+    new_lines = template_lines[:i] + courses_js.split('\n') + template_lines[i + 1:]
     return '\n'.join(new_lines)
 
 
 def git_deploy(message=None):
-    """Stage build artifacts and push to main to trigger GitHub Pages deployment."""
+    """Stage sources and push to main to trigger GitHub Pages deployment.
+
+    index.html 은 git 추적 대상이 아니므로(.gitignore) 스테이징하지 않는다.
+    배포는 CI 가 viewer.template.html + courses/ 로 index.html 을 재생성한다.
+    """
     if message is None:
-        message = 'build: regenerate index.html from JSON sources'
+        message = 'build: update lecture viewer sources'
 
     def run(cmd):
         result = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True)
@@ -179,12 +189,12 @@ def git_deploy(message=None):
             raise RuntimeError(f'git command failed: {" ".join(cmd)}')
 
     print('Staging changes...')
-    run(['git', 'add', 'index.html', 'courses/', 'build.py'])
+    run(['git', 'add', 'viewer.template.html', 'courses/', 'build.py'])
 
     status = subprocess.run(['git', 'status', '--porcelain'], cwd=ROOT, capture_output=True, text=True)
     staged = [l for l in status.stdout.splitlines() if l.startswith(('A ', 'M ', 'D '))]
     if not staged:
-        print('Nothing to commit — index.html and courses/ are already up to date.')
+        print('Nothing to commit — sources are already up to date.')
         return
 
     run(['git', 'commit', '-m', message])
@@ -208,7 +218,7 @@ def main():
         print('--- end ---')
         return
 
-    new_html = inject_into_html(courses_js)
+    new_html = render_from_template(courses_js)
     with open(HTML_PATH, 'w', encoding='utf-8') as f:
         f.write(new_html)
     print(f'Done. Wrote {HTML_PATH}')

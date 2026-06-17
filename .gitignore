@@ -3,3 +3,6 @@ _build/
 .DS_Store
 *.log
 __pycache__/
+
+# 빌드 산출물 — viewer.template.html + courses/*.json 로 build.py 가 생성. CI 가 재생성한다.
+/index.html
