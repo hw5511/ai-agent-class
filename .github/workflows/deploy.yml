@@ -39,6 +39,7 @@ jobs:
           mkdir -p _site/consultation-template
           cp consultation-template/index.html _site/consultation-template/index.html
           cp -r consultation _site/consultation
+          cp -r playwright_demo _site/playwright_demo
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
