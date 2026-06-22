@@ -3,20 +3,21 @@
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 03</text>
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="36" font-weight="700" fill="#171717">GWS CLI 통합 설치 프롬프트</text>
-  <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">아래 프롬프트를 Claude에 붙여넣으면 설치부터 인증까지 자동으로 진행됩니다</text>
-  <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
-  <text x="60" y="252" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">프롬프트 구성 (액션박스에서 복사)</text>
-  <rect x="60" y="266" width="1160" height="280" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="84" y="292" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">1.  npm install -g @googleworkspace/cli  →  일반 터미널에서 실행</text>
-  <text x="84" y="312" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">     gcloud SDK: Claude가 설치 exe 다운로드 + 관리자 권한 실행까지 처리</text>
-  <text x="84" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">     설치 마법사 팝업 → 사용자가 Next 클릭하여 설치 완료</text>
-  <text x="84" y="352" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">2.  gcloud auth login --launch-browser  →  gcloud 인증</text>
-  <text x="84" y="374" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">3.  GCP 프로젝트 생성 + gws auth setup (Forms API 포함 활성화)</text>
-  <text x="84" y="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#ef4444">4.  OAuth 클라이언트 단계  →  Playwright MCP로 GCP Console 화면 스냅샷</text>
-  <text x="84" y="422" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">       OAuth 동의 화면 설정  /  테스트 사용자 등록  /  클라이언트 ID 생성까지 안내</text>
-  <text x="84" y="444" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">5.  ~/.config/gws/.env  저장</text>
-  <text x="84" y="466" font-family="'Courier New',Courier,monospace" font-size="13" fill="#1d4ed8">6.  gws auth login -s drive,gmail,calendar,sheets,docs,forms</text>
-  <text x="84" y="488" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">7.  gws auth status  →  완료 확인</text>
+  <text x="60" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" fill="#6b7280">맨 위 &quot;한 단계씩 진행해줘&quot; 지시 + 아래 7단계를 한 줄(줄바꿈 없이)로 복사해 붙여넣습니다</text>
+  <line x1="60" y1="200" x2="1220" y2="200" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="60" y="232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">통합 프롬프트 7단계 (액션박스에서 한 줄로 복사)</text>
+
+  <rect x="60" y="248" width="1160" height="296" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="84" y="280" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">1.  gcloud SDK 설치 파일 다운로드 후 실행  —  설치 마법사 팝업은 사용자가 직접 완료</text>
+  <text x="84" y="318" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">2.  gcloud auth login --launch-browser  —  브라우저가 뜨면 사용자가 로그인</text>
+  <text x="84" y="356" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">3.  gws-workspace-(시·분·초 고유 ID) 프로젝트 생성 + Drive·Gmail·Sheets·Docs·Slides·Forms·Calendar API 활성화</text>
+  <text x="84" y="394" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#ef4444">4.  OAuth 클라이언트 등록  —  Playwright로 화면 보며: 클라이언트 ID·Secret 저장 + 테스트 사용자(내 Gmail) 추가</text>
+  <text x="108" y="416" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">Secret 마스킹 시: 복사 버튼 aria-label 속성값(평문)을 Playwright로 추출해 저장</text>
+  <text x="84" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">5.  npm install -g @googleworkspace/cli  +  전역 환경변수에 클라이언트 ID·Secret·프로젝트 ID 저장</text>
+  <text x="84" y="486" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#1d4ed8">6.  gws auth login (drive·gmail·calendar·docs·sheets·slides·forms·tasks 전체)  →  OAuth 인증 링크 띄우기</text>
+  <text x="84" y="524" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">7.  gws CLI 전체 연결 테스트  →  연결 안 되는 항목 있으면 스코프 추가 후 재인증 링크</text>
+
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">OAuth 클라이언트 생성 단계에서 Playwright MCP가 브라우저 화면을 찍으며 단계별로 안내합니다</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">각 단계 완료 후 다음으로 — Claude가 순차 진행하고, 설치 마법사·로그인·인증만 사용자가 직접 처리</text>
 </svg>
