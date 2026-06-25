@@ -17,7 +17,6 @@
       "topics": [
         "Sub Agent 개념 · 파일 형식",
         "Sub Agent 활용 · 실습",
-        "Agent Teams 개념",
         "Hooks 이벤트 18종 · 동작 구조 · 실습",
         "MS Office 추가기능 Claude 설치"
       ],
@@ -56,33 +55,6 @@
         "병렬 실행 프롬프트 실습"
       ],
       "practice": "/agents → Generate with Claude → 병렬 실행 프롬프트 실습",
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step05/Claude_Agent_Teams.svg",
-      "goal": "Claude Agent Teams의 구조와 활성화 방법을 이해한다.",
-      "topics": [
-        "리더 1명 + 팀원 3-5명 (각자 독립 컨텍스트)",
-        "팀원끼리 직접 메시지 / 공유 작업 목록 조율",
-        "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 활성화",
-        "병렬 코드 리뷰 · 경쟁 가설 디버깅 활용"
-      ],
-      "practice": null,
-      "action": {
-        "label": "환경변수 복사",
-        "copy": "settings.json 의 env 항목에 CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 을 추가해줘"
-      }
-    },
-    {
-      "imagePath": "assets/basic/step05/Agent_Teams.svg",
-      "goal": "Agent Teams와 Sub Agent의 차이를 이해하고 팀 구성 예시를 배운다.",
-      "topics": [
-        "Sub Agent: 메인 → 결과 단방향",
-        "Agent Teams: 팀원끼리 직접 대화 다방향",
-        "프롬프트로 팀 구성 요청",
-        "실험적 기능 — settings.json env 설정"
-      ],
-      "practice": null,
       "action": null
     },
     {
