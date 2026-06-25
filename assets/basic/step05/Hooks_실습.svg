@@ -5,89 +5,28 @@
   <rect x="152" y="44" width="52" height="24" rx="12" fill="#2563eb"/>
   <text x="178" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">실습</text>
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">Hooks 실습</text>
-  <text x="60" y="170" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">두 가지 Hook을 직접 설정합니다</text>
+  <text x="60" y="170" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">Stop Hook — Claude 응답이 완료되면 PC에 알림 팝업을 띄웁니다</text>
   <line x1="60" y1="196" x2="1220" y2="196" stroke="#e5e7eb" stroke-width="1"/>
 
-  <!-- 실습 1: BurntToast PC 알림 -->
-  <rect x="60" y="208" width="1160" height="206" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
-  <rect x="60" y="208" width="6" height="206" rx="3" fill="#2563eb"/>
-  <rect x="80" y="220" width="58" height="22" rx="11" fill="#2563eb"/>
-  <text x="109" y="235" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">실습 1</text>
-  <text x="150" y="236" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" fill="#1d40af">BurntToast PC 알림  —  응답 완료 시 윈도우 알림 팝업</text>
-  <text x="80" y="270" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#9ca3af" font-weight="600">1</text>
-  <text x="102" y="270" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">claude 실행</text>
-  <text x="80" y="298" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#9ca3af" font-weight="600">2</text>
-  <text x="102" y="298" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">아래 프롬프트 입력</text>
-  <rect x="102" y="308" width="1090" height="42" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
-  <text x="647" y="334" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#1d4ed8">settings.json에 Claude 응답이 완료될 때마다 BurntToast로 PC 알림이 뜨는 Hook을 추가해줘</text>
-  <text x="80" y="372" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#9ca3af" font-weight="600">3</text>
-  <text x="102" y="372" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#374151">Claude에게 아무 질문 입력 후 완료 시 알림 팝업 확인</text>
-  <text x="1192" y="400" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#93c5fd">Stop 이벤트</text>
+  <!-- 실습: BurntToast PC 알림 -->
+  <rect x="60" y="248" width="1160" height="312" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="60" y="248" width="6" height="312" rx="3" fill="#2563eb"/>
+  <text x="96" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" font-weight="700" fill="#1d40af">BurntToast PC 알림  —  응답 완료 시 윈도우 알림 팝업</text>
 
-  <!-- 실습 2: 위험 명령 차단 -->
-  <rect x="60" y="424" width="1160" height="282" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
-  <rect x="60" y="424" width="6" height="282" rx="3" fill="#f97316"/>
-  <rect x="80" y="436" width="58" height="22" rx="11" fill="#f97316"/>
-  <text x="109" y="451" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">실습 2</text>
-  <text x="150" y="452" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" fill="#c2410c">위험 명령 차단  —  Bash 삭제 명령 실행 전 차단 (PreToolUse)</text>
+  <text x="96" y="356" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#9ca3af" font-weight="600">1</text>
+  <text x="122" y="356" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#374151">claude 실행</text>
 
-  <!-- settings.json 핵심 필드 -->
-  <text x="80" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af" font-weight="600">settings.json 핵심 필드</text>
-  <rect x="80" y="484" width="1092" height="26" rx="5" fill="#1e293b"/>
-  <text x="96" y="501" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#9cdcfe">"matcher"</text>
-  <text x="178" y="501" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#d4d4d4">: </text>
-  <text x="192" y="501" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#ce9178">"Bash"</text>
-  <text x="242" y="501" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#6a9955">  ← 도구 이름 정규식 (Bash(rm *) 형태 아님)</text>
-  <text x="720" y="501" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#9cdcfe">"type"</text>
-  <text x="762" y="501" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#d4d4d4">: </text>
-  <text x="776" y="501" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#ce9178">"command"</text>
-  <text x="856" y="501" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#6a9955">  ← prompt 아님</text>
+  <text x="96" y="398" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#9ca3af" font-weight="600">2</text>
+  <text x="122" y="398" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#374151">아래 프롬프트 입력</text>
+  <rect x="122" y="410" width="1064" height="48" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="654" y="440" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" fill="#1d4ed8">settings.json에 Claude 응답이 완료될 때마다 BurntToast로 PC 알림이 뜨는 Hook을 추가해줘</text>
 
-  <!-- 차단 로직 코드 블록 -->
-  <text x="80" y="524" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af" font-weight="600">차단 스크립트 (node -e 인라인, stdin JSON → permissionDecision: deny)</text>
-  <rect x="80" y="530" width="1092" height="126" rx="6" fill="#1e293b"/>
+  <text x="96" y="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#9ca3af" font-weight="600">3</text>
+  <text x="122" y="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" fill="#374151">Claude에게 아무 질문 입력 후, 완료될 때 알림 팝업이 뜨는지 확인</text>
 
-  <!-- line 1: comment -->
-  <text x="96" y="550" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#6a9955">// node -e 인라인  ·  stdin → JSON.parse(d) → tool_input.command 추출</text>
+  <rect x="96" y="522" width="118" height="26" rx="13" fill="#dbeafe"/>
+  <text x="155" y="540" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#1d4ed8">Stop 이벤트</text>
 
-  <!-- line 2 -->
-  <text x="96" y="568" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#c586c0">const </text>
-  <text x="135" y="568" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#9cdcfe">c</text>
-  <text x="143" y="568" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#d4d4d4"> = j.tool_input &amp;&amp; j.tool_input.command || </text>
-  <text x="455" y="568" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#ce9178">''</text>
-  <text x="471" y="568" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#d4d4d4">;</text>
-
-  <!-- line 3 -->
-  <text x="96" y="586" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#c586c0">if </text>
-  <text x="116" y="586" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#d4d4d4">(</text>
-  <text x="124" y="586" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#ce9178">/\b(rm|rmdir|del|Remove-Item)\b/</text>
-  <text x="376" y="586" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#d4d4d4">.test(</text>
-  <text x="416" y="586" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#9cdcfe">c</text>
-  <text x="424" y="586" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#d4d4d4">)) {</text>
-
-  <!-- line 4 -->
-  <text x="96" y="604" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#d4d4d4">  </text>
-  <text x="112" y="604" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#c586c0">const </text>
-  <text x="151" y="604" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#d4d4d4">out = { hookEventName: </text>
-  <text x="323" y="604" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#ce9178">'PreToolUse'</text>
-  <text x="417" y="604" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#d4d4d4">, permissionDecision: </text>
-  <text x="585" y="604" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#ce9178">'deny'</text>
-  <text x="624" y="604" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#d4d4d4">,</text>
-
-  <!-- line 5 -->
-  <text x="96" y="622" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#d4d4d4">    permissionDecisionReason: </text>
-  <text x="316" y="622" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#ce9178">'삭제 명령어 차단. archive/ 이동 — 한글경로: PowerShell Move-Item 사용'</text>
-  <text x="930" y="622" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#d4d4d4"> };</text>
-
-  <!-- line 6 -->
-  <text x="96" y="640" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#d4d4d4">  console.log(JSON.stringify({ hookSpecificOutput: out })); }  process.exit(</text>
-  <text x="680" y="640" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#b5cea8">0</text>
-  <text x="688" y="640" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#d4d4d4">)</text>
-  <text x="706" y="640" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#6a9955">  // 차단/통과 모두 exit 0</text>
-
-  <!-- Steps -->
-  <text x="80" y="674" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#9ca3af" font-weight="600">1</text>
-  <text x="100" y="674" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">claude에게 위 구조로 Bash 삭제 명령 차단 Hook을 settings.json에 추가해달라고 요청</text>
-  <text x="80" y="698" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#9ca3af" font-weight="600">2</text>
-  <text x="100" y="698" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">Claude에게 폴더 삭제 명령 실행 요청 → 차단 메시지 확인 / 일반 명령 요청 → 정상 통과 확인</text>
+  <rect x="60" y="600" width="1160" height="48" rx="10" fill="#f3f4f6"/>
+  <text x="640" y="629" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">BurntToast 모듈이 없으면 Claude가 Install-Module로 먼저 설치합니다</text>
 </svg>
