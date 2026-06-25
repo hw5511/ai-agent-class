@@ -94,20 +94,15 @@
       "imagePath": "assets/basic/step05/Hooks_실습.svg",
       "goal": "Hooks 실습을 진행한다.",
       "topics": [
-        "[실습1] BurntToast PC 알림 — Stop 이벤트",
-        "[실습2] 위험 명령 차단 — PreToolUse 이벤트"
+        "[실습1] BurntToast PC 알림 — Stop 이벤트"
       ],
-      "practice": "[실습1] BurntToast PC 알림 Hook · [실습2] 위험 명령 차단 Hook",
+      "practice": "[실습] BurntToast PC 알림 Hook (Stop 이벤트)",
       "action": {
         "label": "실습 프롬프트",
         "items": [
           {
-            "desc": "실습1: BurntToast PC 알림",
+            "desc": "BurntToast PC 알림 (Stop Hook)",
             "copy": "settings.json에 Stop Hook을 추가해줘. BurntToast 모듈이 설치되어 있는지 먼저 확인하고, 없으면 Install-Module로 설치한 뒤, powershell.exe -NoProfile -Command 형식으로 Import-Module BurntToast 후 New-BurntToastNotification으로 작업 완료 알림을 띄워줘"
-          },
-          {
-            "desc": "실습2: 위험 명령 차단",
-            "copy": "settings.json에 PreToolUse Hook을 추가해줘. matcher는 Bash, type은 command로 설정하고, node -e 인라인 스크립트로 stdin JSON을 파싱해서 tool_input.command에 rm, rmdir, del, Remove-Item이 포함되면 hookSpecificOutput으로 hookEventName: PreToolUse, permissionDecision: deny, permissionDecisionReason: \"삭제 명령어가 차단되었습니다. 삭제 명령어 사용 대신 archive/ 폴더로 이동시키세요. 주의: 한글 경로는 Git Bash mv 명령어가 실패할 수 있으므로 PowerShell Move-Item을 사용하세요.\" 를 JSON으로 출력하고 process.exit(0)으로 종료해줘"
           }
         ]
       }
