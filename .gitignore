@@ -6,3 +6,6 @@ __pycache__/
 
 # 빌드 산출물 — viewer.template.html + courses/*.json 로 build.py 가 생성. CI 가 재생성한다.
 /index.html
+
+# Understand-Anything 코드맵 (로컬 전용 — 노트북에서만 생성/사용)
+.understand-anything/

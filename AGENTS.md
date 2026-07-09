@@ -42,3 +42,12 @@ AI 에이전트 강의 수업자료.
 4. 본문에 필요한 작업을 구체적으로 적는다 — 무엇을 / 왜 / 기대 결과.
 
 담당자가 감지하여 처리한 뒤 해당 이슈/PR 에 회신한다.
+
+## Code Map (생성된 구조 지도)
+
+이 레포의 파일·의존성 구조 지도는 `.understand-anything/knowledge-graph.json`에 있다(로컬 전용, `.gitignore` 처리 — 노트북 비비만 생성/보유, 커밋 안 함).
+파일 구조·함수 역할·의존성 흐름을 파악할 땐 **수동 탐색 전에** 이 그래프나 `/understand-chat`을 먼저 본다.
+
+- 생성: 2026-07-09 (Understand-Anything, 한국어) · 노드 129 · 엣지 162 · 레이어 6 · 언어 python/javascript/html/css/markdown/json/yaml/powershell
+- 레이어: 코어 빌드 · 배포 · 강의 커리큘럼 데이터 · Basic 슬라이드 생성 자산 · Advanced 슬라이드 생성 자산 · 상담·랜딩 페이지 · 도구 스크립트 · 실습 데모
+- 갱신: 구조 대변경(새 모듈·파일 이동·public API/라우트 변경·대형 리팩터·데이터흐름 변경) 시 `/understand . --full` 재실행. 카피/주석/스타일/문서-전용/단발 버그픽스엔 갱신 불필요.
