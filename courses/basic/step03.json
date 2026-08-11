@@ -9,7 +9,7 @@
     "권한 모드 (일반·편집자동승인·플랜)",
     "욜로 모드 / /model 모델 선택",
     "주요 슬래시 명령어",
-    "웹 Search 툴 / Todos"
+    "웹 Search 툴 / Task 목록"
   ],
   "practice": "개인 환경에 맞는 보안 설정을 직접 구성하고, 권한 모드와 주요 명령어를 순서대로 실행해본다.",
   "slides": [
@@ -20,7 +20,7 @@
         "보안 설정",
         "settings.json · 권한 규칙",
         "권한 모드 · 욜로 모드",
-        "/model · 슬래시 명령어 · 웹 Search · Todos"
+        "/model · 슬래시 명령어 · 웹 Search · Task 목록"
       ],
       "practice": null,
       "action": null
@@ -242,9 +242,9 @@
     },
     {
       "imagePath": "assets/basic/step03/Todos.svg",
-      "goal": "Todos 내장 툴을 이해한다.",
+      "goal": "Task 목록 내장 툴을 이해한다.",
       "topics": [
-        "TodoWrite · TodoRead 내장 툴",
+        "TaskCreate · TaskList · TaskUpdate 내장 툴",
         "pending → in_progress → completed",
         "\"ㅇㅇㅇ 작업을 todo 리스트를 세워서 순차적으로 진행해줘\""
       ],
@@ -256,13 +256,13 @@
     },
     {
       "imagePath": "assets/basic/step03/Todos_실습.svg",
-      "goal": "Todos 실습 — 다단계 작업을 순차 실행한다.",
+      "goal": "Task 목록 실습 — 다단계 작업을 순차 실행한다.",
       "topics": [
         "claude 실행",
         "폴더 생성·파일 작성·트리 출력 3단계 프롬프트 입력",
         "각 단계 완료 시 completed 상태 업데이트 확인"
       ],
-      "practice": "practice 폴더 생성 → readme.txt 작성 → 트리 출력까지 TodoWrite로 순차 실행",
+      "practice": "practice 폴더 생성 → readme.txt 작성 → 트리 출력까지 TaskCreate로 순차 실행",
       "action": null
     }
   ]
