@@ -20,7 +20,7 @@ COURSES_DIR = ROOT / 'courses'
 TEMPLATE_PATH = ROOT / 'viewer.template.html'
 HTML_PATH = ROOT / 'index.html'
 COURSES_MARKER = '        //__COURSES__'
-COURSE_ORDER = ['basic', 'advanced']
+COURSE_ORDER = ['basic', 'advanced', 'automation']
 INDENT = '        '  # 8 spaces
 
 

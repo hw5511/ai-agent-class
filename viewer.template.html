@@ -47,6 +47,9 @@
             --advanced:       #7c3aed;
             --advanced-muted: #fdf4ff;
 
+            --automation:       #0d9488;
+            --automation-muted: #f0fdfa;
+
             --success:        #16a34a;
             --success-muted:  #f0fdf4;
             --success-border: #bbf7d0;
@@ -218,8 +221,9 @@
             margin-bottom: 0.5rem;
         }
 
-        .sidebar-course-badge.basic    { background: var(--accent-muted);   color: var(--accent); }
-        .sidebar-course-badge.advanced { background: var(--advanced-muted); color: var(--advanced); }
+        .sidebar-course-badge.basic      { background: var(--accent-muted);     color: var(--accent); }
+        .sidebar-course-badge.advanced   { background: var(--advanced-muted);   color: var(--advanced); }
+        .sidebar-course-badge.automation { background: var(--automation-muted); color: var(--automation); }
 
         .sidebar-course-title {
             font-size: 0.9375rem;
@@ -831,6 +835,17 @@
             text-transform: uppercase;
         }
 
+        .badge-automation {
+            background: var(--automation-muted);
+            color: var(--automation);
+            padding: 0.2rem 0.625rem;
+            border-radius: var(--radius-full);
+            font-size: var(--font-xs);
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
         .badge-hours {
             background: var(--secondary);
             color: var(--muted-fg);
@@ -979,6 +994,7 @@
                         <div class="course-tabs">
                             <button class="course-tab active" data-course="basic">기초</button>
                             <button class="course-tab" data-course="advanced">심화</button>
+                            <button class="course-tab" data-course="automation">자동화</button>
                         </div>
                         <button class="sidebar-toggle" id="sidebar-toggle" title="사이드바 접기">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
