@@ -164,9 +164,10 @@
       "imagePath": "assets/basic/step03/model_—_Claude_모델_선택.svg",
       "goal": "상황에 맞는 Claude 모델을 선택하는 방법을 익힌다.",
       "topics": [
-        "Haiku 4.5 — 가장 빠름 (간단한 작업)",
-        "Sonnet 4.6 — 빠르고 강력 (기본 추천)",
-        "Opus 4.5 — 최고 성능 (복잡한 추론)"
+        "Haiku — 가장 빠름 (간단 · 대량 작업)",
+        "Sonnet — 속도와 성능의 균형 (기본 추천)",
+        "Opus — 복잡한 작업의 기본 (에이전트 코딩)",
+        "Fable — 최고 성능 (가장 어려운 문제)"
       ],
       "practice": null,
       "action": null

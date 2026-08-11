@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 에이전트 3단계 과정 안내</title>
+<style>
+:root{
+  --navy-950:#080f22; --navy-900:#0d1730; --navy-800:#132145; --navy-700:#1c2e5c; --navy-500:#2f4d8a;
+  --accent:#8a9bc4; --accent-deep:#425a8f;
+  --paper:#f4f5f8; --paper-2:#eaedf3; --ink:#12172a; --ink-soft:#525a72; --line:#d8dce6;
+  --amber:#a85c1d;
+
+  /* 단계별 색 — 수업 뷰어의 탭 배지 색과 동일하게 맞춤 */
+  --s1:#2563eb; --s1-soft:#eff6ff;
+  --s2:#7c3aed; --s2-soft:#f5f3ff;
+  --s3:#0d9488; --s3-soft:#f0fdfa;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Pretendard',-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  background:var(--paper);color:var(--ink);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:980px;margin:0 auto;padding:0 28px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:radial-gradient(circle at 85% -10%, rgba(138,155,196,.18), transparent 45%),
+    radial-gradient(circle at -5% 100%, rgba(47,77,138,.35), transparent 50%),
+    linear-gradient(180deg,var(--navy-950),var(--navy-900) 60%,var(--navy-800));
+  color:#fff;padding:110px 0 90px;
+}
+.eyebrow{font-size:12.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:24px;display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:1.5px;background:var(--accent)}
+.hero h1{font-size:clamp(30px,5vw,48px);font-weight:800;letter-spacing:-.02em;line-height:1.25;margin-bottom:20px}
+.hero .lede{font-size:clamp(15px,1.8vw,18px);color:#cfd6ec;max-width:660px;margin-bottom:36px}
+.stat-row{display:flex;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.16);padding-top:24px}
+.stat{padding:0 28px 0 0;margin-right:28px;border-right:1px solid rgba(255,255,255,.14)}
+.stat:last-child{border-right:none}
+.stat .num{font-size:26px;font-weight:800;color:#fff;line-height:1}
+.stat .lbl{font-size:11.5px;color:#8b93ad;margin-top:6px}
+
+/* ---------- SECTION ---------- */
+section.block{padding:76px 0;border-top:1px solid var(--line)}
+section.block.dark{background:var(--navy-900);color:#fff;border-top:1px solid var(--navy-800)}
+.sec-eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-deep);font-weight:800;margin-bottom:12px}
+.dark .sec-eyebrow{color:var(--accent)}
+h2.sec-title{font-size:clamp(22px,3.2vw,30px);font-weight:800;letter-spacing:-.015em;color:var(--navy-900);line-height:1.3;margin-bottom:14px}
+.dark h2.sec-title{color:#fff}
+.sec-sub{color:var(--ink-soft);font-size:14.5px;max-width:700px;margin-bottom:36px}
+.dark .sec-sub{color:#aeb7d1}
+
+/* ---------- 왜 3단계인가 (3칸 카드) ---------- */
+.mods3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+.mod3{background:var(--navy-800);border:1px solid var(--navy-700);border-radius:8px;padding:22px}
+.mod3 .mh{font-size:10.5px;color:#8b93ad;font-weight:700;letter-spacing:.05em;margin-bottom:6px}
+.mod3 .mt{font-size:20px;font-weight:800;color:#fff;margin-bottom:14px}
+.mod3 .hrs{font-size:24px;font-weight:800;color:#fff;margin-bottom:14px}
+.mod3 .desc{font-size:12px;color:#aeb7d1;line-height:1.6;border-top:1px solid rgba(255,255,255,.15);padding-top:12px}
+.mod3 .desc b{display:block;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#8b93ad;font-weight:700;margin-bottom:4px}
+@media(max-width:760px){.mods3{grid-template-columns:1fr}}
+.callout{background:var(--navy-900);color:#fff;border-radius:8px;padding:22px 26px}
+.callout .tag{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:8px}
+.callout .big{font-size:19px;font-weight:800;line-height:1.5}
+
+/* ---------- 원리 도식 ---------- */
+.flow{display:grid;grid-template-columns:1fr 40px 1fr 40px 1fr;align-items:stretch;gap:0;margin-bottom:22px}
+.flow-box{background:var(--navy-800);border:1px solid var(--navy-700);border-radius:10px;padding:22px 20px;text-align:center}
+.flow-box .fb-t{font-size:18px;font-weight:800;color:#fff;margin-bottom:6px}
+.flow-box .fb-d{font-size:12px;color:#aeb7d1;line-height:1.55}
+.flow-arrow{display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:20px;font-weight:700}
+@media(max-width:760px){.flow{grid-template-columns:1fr}.flow-arrow{padding:8px 0;transform:rotate(90deg)}}
+.slot-note{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.slot{background:var(--navy-800);border:1px solid var(--navy-700);border-radius:8px;padding:16px 20px}
+.slot.ai{border-color:var(--accent);background:var(--accent-deep)}
+.slot .st{font-size:13.5px;font-weight:800;color:#fff;margin-bottom:5px}
+.slot .sd{font-size:12.5px;color:#aeb7d1;line-height:1.55}
+.slot.ai .sd{color:#e4e9f5}
+@media(max-width:600px){.slot-note{grid-template-columns:1fr}}
+.principle-line{margin-top:20px;background:var(--navy-800);border:1px solid var(--navy-700);border-radius:8px;padding:16px 22px;font-size:13.5px;color:var(--accent);font-weight:700;line-height:1.6}
+
+/* ---------- 단계 커리큘럼 ---------- */
+/* 단계별 색 토큰 — 섹션에 .stage.sN 을 붙이면 내부 카드가 이 색을 따른다 */
+.stage{--sc:var(--accent-deep);--sc-soft:var(--paper-2);--sc-dark:var(--accent)}
+.stage.s1{--sc:var(--s1);--sc-soft:var(--s1-soft);--sc-dark:#93c5fd}
+.stage.s2{--sc:var(--s2);--sc-soft:var(--s2-soft);--sc-dark:#c4b5fd}
+.stage.s3{--sc:var(--s3);--sc-soft:var(--s3-soft);--sc-dark:#5eead4}
+
+.stage-head{display:flex;align-items:center;gap:14px;margin-bottom:14px;flex-wrap:wrap}
+.stage-pill{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 13px;border-radius:20px;background:var(--sc-soft);color:var(--sc)}
+.dark .stage-pill{background:rgba(255,255,255,.12);color:var(--sc-dark)}
+.stage-meta{font-size:12.5px;color:var(--ink-soft);font-weight:600}
+.dark .stage-meta{color:#aeb7d1}
+
+.stage-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.stage-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px}
+.stage-card .sn{font-size:12px;font-weight:800;color:#9ca3af;letter-spacing:.1em;margin-bottom:10px}
+.stage-card .st{font-size:21px;font-weight:800;color:var(--navy-900);margin-bottom:10px;line-height:1.35}
+.stage-card .sr{font-size:11px;font-weight:700;color:var(--sc);background:var(--sc-soft);display:inline-block;padding:4px 12px;border-radius:20px;margin-bottom:14px}
+.stage-card .sd{font-size:13.5px;color:var(--ink-soft);line-height:1.65;margin-bottom:14px}
+.stage-card .sl{list-style:none;margin-bottom:14px}
+.stage-card .sl li{font-size:12.5px;color:var(--ink-soft);padding:4px 0 4px 16px;position:relative;line-height:1.5}
+.stage-card .sl li::before{content:"·";position:absolute;left:2px;color:var(--sc);font-weight:800}
+.stage-card .sres{font-size:12px;font-weight:700;color:var(--navy-900);background:var(--paper-2);border-radius:6px;padding:9px 12px;line-height:1.5}
+
+/* 강조 카드 — 라이트 섹션 */
+.stage-card.hi{background:var(--sc);border-color:var(--sc)}
+.stage-card.hi .sn{color:#e4e9f5}
+.stage-card.hi .st{color:#fff}
+.stage-card.hi .sr{color:#fff;background:rgba(255,255,255,.2)}
+.stage-card.hi .sd,.stage-card.hi .sl li{color:#f0f2fa}
+.stage-card.hi .sl li::before{color:#fff}
+.stage-card.hi .sres{color:#fff;background:rgba(255,255,255,.18)}
+
+/* 다크 섹션 */
+.dark .stage-card{background:var(--navy-800);border-color:var(--navy-700)}
+.dark .stage-card .sn{color:#8b93ad}
+.dark .stage-card .st{color:#fff}
+.dark .stage-card .sr{color:var(--sc-dark);background:rgba(255,255,255,.08)}
+.dark .stage-card .sd,.dark .stage-card .sl li{color:#aeb7d1}
+.dark .stage-card .sl li::before{color:var(--sc-dark)}
+.dark .stage-card .sres{color:#fff;background:rgba(255,255,255,.08)}
+.dark .stage-card.hi{background:var(--accent-deep);border-color:var(--accent)}
+.dark .stage-card.hi .sn{color:#e4e9f5}
+.dark .stage-card.hi .sr{color:#fff;background:rgba(255,255,255,.18)}
+.dark .stage-card.hi .sd,.dark .stage-card.hi .sl li{color:#f0f2fa}
+.dark .stage-card.hi .sl li::before{color:#fff}
+.dark .stage-card.hi .sres{background:rgba(255,255,255,.18)}
+
+@media(max-width:700px){.stage-cards{grid-template-columns:1fr}}
+
+.stage-outcome{margin-top:18px;background:var(--paper-2);border:1px solid var(--line);border-radius:8px;padding:16px 22px;font-size:13.5px;color:var(--navy-900);font-weight:700}
+.dark .stage-outcome{background:var(--navy-800);border-color:var(--navy-700);color:#fff}
+.stage-outcome span{color:var(--ink-soft);font-weight:600}
+.dark .stage-outcome span{color:#aeb7d1}
+
+/* ---------- 결과물 비교 ---------- */
+.out3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ocard{background:var(--navy-800);border:1px solid var(--navy-700);border-radius:10px;padding:24px}
+.ocard .oh{font-size:11px;font-weight:800;letter-spacing:.08em;color:#8b93ad;margin-bottom:8px}
+.ocard .ot{font-size:17px;font-weight:800;color:#fff;margin-bottom:14px;line-height:1.4}
+.ocard ul{list-style:none;border-top:1px solid rgba(255,255,255,.15);padding-top:12px}
+.ocard li{font-size:12.5px;color:#aeb7d1;padding:5px 0 5px 20px;position:relative;line-height:1.5}
+.ocard li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:800;font-size:11px}
+@media(max-width:760px){.out3{grid-template-columns:1fr}}
+
+/* ---------- 수강 안내 표 ---------- */
+table.tbl{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+table.tbl th{background:var(--navy-900);color:#fff;text-align:left;padding:11px 14px;font-weight:700;font-size:12.5px}
+table.tbl td{padding:11px 14px;border-top:1px solid var(--line);color:var(--ink-soft);vertical-align:top}
+table.tbl td strong{color:var(--ink)}
+table.tbl tr:nth-child(even) td{background:var(--paper)}
+
+/* ---------- CTA ---------- */
+.cta{background:var(--navy-950);color:#fff;padding:90px 0 60px;text-align:center}
+.cta h2{font-size:clamp(22px,3.6vw,32px);font-weight:800;line-height:1.5;margin-bottom:18px;max-width:820px;margin-left:auto;margin-right:auto}
+.cta p{color:#aeb7d1;font-size:14px;max-width:620px;margin:0 auto 40px}
+.cta .fnote{font-size:11px;color:#5c6689;border-top:1px solid rgba(255,255,255,.1);padding-top:20px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">SBS아카데미AIX학원</div>
+    <h1>AI 에이전트 3단계 과정</h1>
+    <p class="lede">도구를 쓰는 것에서 시작해, 도구를 연결하고, 끝내는 시스템을 설계한다 — 세 단계를 마치면 손에 작동하는 미니 앱 하나가 남습니다.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">48h</div><div class="lbl">3단계 합계</div></div>
+      <div class="stat"><div class="num">24강</div><div class="lbl">단계당 8강 · 2시간</div></div>
+      <div class="stat"><div class="num">3단계</div><div class="lbl">기초 · 심화 · 자동화</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- 왜 3단계인가 -->
+<section class="block dark">
+  <div class="wrap">
+    <div class="sec-eyebrow">Why</div>
+    <h2 class="sec-title reveal">왜 3단계로 나누는가</h2>
+    <p class="sec-sub reveal">같은 도구를 다루지만 <strong>매 단계 동사가 바뀝니다.</strong> 쓴다 → 연결한다 → 설계한다. 단계가 올라갈수록 손에 남는 것이 무거워집니다.</p>
+    <div class="mods3">
+      <div class="mod3 reveal">
+        <div class="mh">STAGE 01 · 기초</div><div class="mt">도구를 쓴다</div>
+        <div class="hrs">16h</div>
+        <div class="desc"><b>수료 시</b>설정이 끝난 내 에이전트</div>
+      </div>
+      <div class="mod3 reveal">
+        <div class="mh">STAGE 02 · 심화</div><div class="mt">도구를 연결한다</div>
+        <div class="hrs">16h</div>
+        <div class="desc"><b>수료 시</b>실제로 돌아가는 업무 자동화</div>
+      </div>
+      <div class="mod3 reveal">
+        <div class="mh">STAGE 03 · 사무 자동화</div><div class="mt">시스템을 설계한다</div>
+        <div class="hrs">16h</div>
+        <div class="desc"><b>수료 시</b>내가 설계한 미니 앱 1개</div>
+      </div>
+    </div>
+    <div class="callout reveal">
+      <div class="tag">핵심</div>
+      <div class="big">앞 단계를 듣지 않아도 시작할 수 있지만, 세 단계를 이어서 들으면 도구 사용자에서 시스템 설계자로 넘어갑니다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 자동화의 원리 -->
+<section class="block dark">
+  <div class="wrap">
+    <div class="sec-eyebrow">Principle</div>
+    <h2 class="sec-title reveal">이 과정이 가르치는 자동화의 모양</h2>
+    <p class="sec-sub reveal">AI가 화면을 실시간으로 조작하는 것은 자동화가 아닙니다. 자동화는 <strong>재료를 모으고, 가공하고, 내보내는 프로그램</strong>이며 — 그중 일부 구간에만 AI가 들어갑니다.</p>
+    <div class="flow reveal">
+      <div class="flow-box"><div class="fb-t">수집</div><div class="fb-d">API · 파일 · 입력<br>재료를 모은다</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box"><div class="fb-t">가공</div><div class="fb-d">md · json · csv · db<br>다루기 좋은 형태로</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box"><div class="fb-t">출력</div><div class="fb-d">템플릿에 주입<br>밖으로 내보낸다</div></div>
+    </div>
+    <div class="slot-note reveal">
+      <div class="slot"><div class="st">결정론 구간</div><div class="sd">규칙으로 처리되는 대부분. 언제 돌려도 같은 결과가 나옵니다.</div></div>
+      <div class="slot ai"><div class="st">AI 슬롯 — 판단 · 생성</div><div class="sd">분류하거나 말을 만들어야 하는 지점에만 AI를 부릅니다.</div></div>
+    </div>
+    <div class="principle-line reveal">데이터는 md · json · csv 로 다루고, 오피스 문서는 마지막 출구에서만 — 그것도 미리 만들어 둔 템플릿에 값을 꽂는 방식으로 만듭니다.</div>
+  </div>
+</section>
+
+<!--__CURRICULUM__-->
+
+<!-- 결과물 -->
+<section class="block dark">
+  <div class="wrap">
+    <div class="sec-eyebrow">Output</div>
+    <h2 class="sec-title reveal">단계마다 손에 남는 것</h2>
+    <p class="sec-sub reveal">수업을 들었다는 기억이 아니라, 실행되는 결과물이 남습니다.</p>
+    <div class="out3">
+      <div class="ocard reveal">
+        <div class="oh">STAGE 01 · 기초</div>
+        <div class="ot">설정이 끝난<br>내 에이전트</div>
+        <ul>
+          <li>3종 CLI 설치 완료 환경</li>
+          <li>이름·역할이 부여된 CLAUDE.md</li>
+          <li>Sub Agent · Hooks 설정</li>
+          <li>MCP · 플러그인 연결</li>
+        </ul>
+      </div>
+      <div class="ocard reveal">
+        <div class="oh">STAGE 02 · 심화</div>
+        <div class="ot">실제로 돌아가는<br>업무 자동화</div>
+        <ul>
+          <li>오피스 문서 자동 생성 Skill</li>
+          <li>브라우저 · Workspace 자동화</li>
+          <li>Notion 기반 업무 DB</li>
+          <li>멀티 에이전트 협업 시스템</li>
+        </ul>
+      </div>
+      <div class="ocard reveal">
+        <div class="oh">STAGE 03 · 자동화</div>
+        <div class="ot">내가 설계한<br>미니 앱 1개</div>
+        <ul>
+          <li>수집·가공·출력 파이프라인</li>
+          <li>AI 슬롯 배치도와 정확도 측정표</li>
+          <li>README · 실행 명령</li>
+          <li>재료만 바꾸면 재사용 가능</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 수강 안내 -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-eyebrow">Guide</div>
+    <h2 class="sec-title reveal">수강 안내</h2>
+    <p class="sec-sub reveal">각 단계는 독립적으로 수강할 수 있습니다.</p>
+    <table class="tbl reveal">
+      <tr><th style="width:24%">항목</th><th>내용</th></tr>
+      <tr><td>구성</td><td><strong>단계별 8강 · 회차당 2시간</strong> — 한 단계 16시간, 3단계 합계 48시간</td></tr>
+      <tr><td>운영 방식</td><td>실습 중심 — 개념 설명은 짧게, 직접 만들어보고 피드백받는 시간에 대부분을 씁니다</td></tr>
+      <tr><td>사용 도구</td><td>Claude Code · VS Code · MCP · 외부 API · Notion</td></tr>
+      <tr><td>진입 조건</td><td>코딩 무경험자 가능 · 각 단계는 선수과목 없이 시작할 수 있습니다</td></tr>
+      <tr><td>준비물</td><td>노트북(Windows · Mac 모두 가능) · Claude 유료 플랜</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="cta">
+  <div class="wrap">
+    <h2>도구를 쓰는 사람에서<br>시스템을 설계하는 사람으로</h2>
+    <p>48시간 동안 세 단계를 지나면, 본인 업무에 맞춰 직접 설계한 자동화 하나가 남습니다.</p>
+    <div class="fnote">SBS아카데미AIX학원 · AI 에이전트 3단계 과정 안내</div>
+  </div>
+</section>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.1});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
