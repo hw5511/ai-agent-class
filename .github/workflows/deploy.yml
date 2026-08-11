@@ -39,6 +39,8 @@ jobs:
           rm -rf _site/assets/basic/_check
           cp -r consultation _site/consultation
           cp -r playwright_demo _site/playwright_demo
+          # overview/index.html 은 build.py 산출물(.gitignore) — 위 build 스텝이 만든 것을 옮긴다
+          cp -r overview _site/overview
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
