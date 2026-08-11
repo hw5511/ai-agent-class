@@ -27,7 +27,7 @@ INDENT = '        '  # 8 spaces
 # 설명회용 3단계 소개 페이지 (overview/index.html) — 같은 courses/*.json 에서 생성한다.
 OVERVIEW_DIR = ROOT / 'overview'
 OVERVIEW_TEMPLATE = OVERVIEW_DIR / 'template.html'
-OVERVIEW_GROUPS = OVERVIEW_DIR / 'groups.json'
+OVERVIEW_STAGES = OVERVIEW_DIR / 'stages.json'
 OVERVIEW_OUT = OVERVIEW_DIR / 'index.html'
 OVERVIEW_MARKER = '<!--__CURRICULUM__-->'
 
@@ -179,55 +179,51 @@ def render_from_template(courses_js):
     return '\n'.join(new_lines)
 
 
-def _session_range(nums):
-    """[1,2,3] -> '1~3강', [1] -> '1강'"""
-    return f'{nums[0]}~{nums[-1]}강' if len(nums) > 1 else f'{nums[0]}강'
+def _step_card_html(session, cfg):
+    """회차 1개 = 카드 1개. 원본 설명회 자료의 .stage-card 구조를 그대로 따른다."""
+    n = session['step']
+    hi = ' hi' if cfg.get('highlight') == n else ''
+    label = f'STEP {n:02d}'
+    if hi and cfg.get('highlightLabel'):
+        label += f' · {cfg["highlightLabel"]}'
 
-
-def _group_card_html(group, sessions_by_num, color_class, idx):
-    nums = group['sessions']
-    items = []
-    for n in nums:
-        s = sessions_by_num.get(n)
-        if s is None:
-            raise RuntimeError(f'groups.json 이 존재하지 않는 회차 {n} 을 참조합니다')
-        items.append(
-            f'            <li><b>{n}강</b> {html.escape(s["title"])}</li>'
+    topics = '\n'.join(
+        f'            <li>{html.escape(t)}</li>' for t in session.get('topics') or []
+    )
+    parts = [
+        f'        <div class="stage-card{hi} reveal">',
+        f'          <div class="sn">{html.escape(label)}</div>',
+        f'          <div class="st">{html.escape(session["title"])}</div>',
+        f'          <div class="sr">{html.escape(session["hours"])}</div>',
+        f'          <div class="sd">{html.escape(session.get("goal") or "")}</div>',
+    ]
+    if topics:
+        parts += ['          <ul class="sl">', topics, '          </ul>']
+    if session.get('practice'):
+        parts.append(
+            f'          <div class="sres">실습 — {html.escape(session["practice"])}</div>'
         )
-    return '\n'.join([
-        f'        <div class="gcard {color_class} reveal">',
-        f'          <div class="gn">GROUP {idx:02d}</div>',
-        f'          <div class="gt">{html.escape(group["title"])}</div>',
-        f'          <div class="gr">{_session_range(nums)}</div>',
-        f'          <div class="gd">{html.escape(group["desc"])}</div>',
-        '          <ul class="gl">',
-        *items,
-        '          </ul>',
-        '        </div>',
-    ])
+    parts.append('        </div>')
+    return '\n'.join(parts)
 
 
-def _stage_section_html(course_key, cfg, sessions):
-    sessions_by_num = {s['step']: s for s in sessions}
+def _stage_section_html(cfg, sessions):
     cc = cfg['colorClass']
     dark = ' dark' if cfg.get('background') == 'dark' else ''
-    cards = '\n'.join(
-        _group_card_html(g, sessions_by_num, cc, i + 1)
-        for i, g in enumerate(cfg['groups'])
-    )
+    cards = '\n'.join(_step_card_html(s, cfg) for s in sessions)
     return '\n'.join([
         f'<!-- {cfg["stageNo"]}단계 · {cfg["name"]} -->',
-        f'<section class="block{dark}">',
+        f'<section class="block stage {cc}{dark}">',
         '  <div class="wrap">',
         '    <div class="sec-eyebrow">Curriculum</div>',
         f'    <h2 class="sec-title reveal">{cfg["stageNo"]}단계 · {html.escape(cfg["name"])}'
         f' — {html.escape(cfg["tagline"])}</h2>',
         '    <div class="stage-head reveal">',
-        f'      <span class="stage-pill {cc}">Stage {cfg["stageNo"]:02d}</span>',
+        f'      <span class="stage-pill">Stage {cfg["stageNo"]:02d}</span>',
         f'      <span class="stage-meta">{len(sessions)}강 · {len(sessions) * 2}시간</span>',
         '    </div>',
         f'    <p class="sec-sub reveal">{html.escape(cfg["summary"])}</p>',
-        '    <div class="group-cards">',
+        '    <div class="stage-cards">',
         cards,
         '    </div>',
         f'    <div class="stage-outcome reveal">수료 시 <span>—</span> '
@@ -238,17 +234,17 @@ def _stage_section_html(course_key, cfg, sessions):
 
 
 def build_overview():
-    """courses/*.json + overview/groups.json -> overview/index.html (설명회 자료)."""
+    """courses/*.json + overview/stages.json -> overview/index.html (설명회 자료)."""
     if not OVERVIEW_TEMPLATE.exists():
         print(f'Skip overview: template not found ({OVERVIEW_TEMPLATE})')
         return
-    with open(OVERVIEW_GROUPS, encoding='utf-8') as f:
-        groups = json.load(f)
+    with open(OVERVIEW_STAGES, encoding='utf-8') as f:
+        stages = json.load(f)
 
     sections = []
-    for course_key in groups['order']:
+    for course_key in stages['order']:
         _, sessions = load_course(course_key)
-        sections.append(_stage_section_html(course_key, groups['courses'][course_key], sessions))
+        sections.append(_stage_section_html(stages['courses'][course_key], sessions))
 
     with open(OVERVIEW_TEMPLATE, encoding='utf-8') as f:
         template = f.read()

@@ -53,19 +53,15 @@ h2.sec-title{font-size:clamp(22px,3.2vw,30px);font-weight:800;letter-spacing:-.0
 .sec-sub{color:var(--ink-soft);font-size:14.5px;max-width:700px;margin-bottom:36px}
 .dark .sec-sub{color:#aeb7d1}
 
-/* ---------- 왜 3단계인가 ---------- */
-.ladder{display:flex;flex-direction:column;gap:12px;margin-bottom:26px}
-.rung{display:grid;grid-template-columns:88px 1fr 220px;gap:20px;align-items:center;
-  background:#fff;border:1px solid var(--line);border-left-width:5px;border-radius:8px;padding:20px 24px}
-.rung.s1{border-left-color:var(--s1)} .rung.s2{border-left-color:var(--s2)} .rung.s3{border-left-color:var(--s3)}
-.rung .step-no{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
-.rung.s1 .step-no{color:var(--s1)} .rung.s2 .step-no{color:var(--s2)} .rung.s3 .step-no{color:var(--s3)}
-.rung .step-no b{display:block;font-size:24px;letter-spacing:0;margin-top:2px}
-.rung .verb{font-size:19px;font-weight:800;color:var(--navy-900);line-height:1.4}
-.rung .verb span{color:var(--ink-soft);font-weight:600;font-size:14px;display:block;margin-top:4px}
-.rung .keep{font-size:12.5px;color:var(--ink-soft);border-left:1px solid var(--line);padding-left:20px;line-height:1.55}
-.rung .keep b{display:block;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#9ca3af;margin-bottom:4px}
-@media(max-width:760px){.rung{grid-template-columns:1fr;gap:12px}.rung .keep{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:12px}}
+/* ---------- 왜 3단계인가 (3칸 카드) ---------- */
+.mods3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+.mod3{background:var(--navy-800);border:1px solid var(--navy-700);border-radius:8px;padding:22px}
+.mod3 .mh{font-size:10.5px;color:#8b93ad;font-weight:700;letter-spacing:.05em;margin-bottom:6px}
+.mod3 .mt{font-size:20px;font-weight:800;color:#fff;margin-bottom:14px}
+.mod3 .hrs{font-size:24px;font-weight:800;color:#fff;margin-bottom:14px}
+.mod3 .desc{font-size:12px;color:#aeb7d1;line-height:1.6;border-top:1px solid rgba(255,255,255,.15);padding-top:12px}
+.mod3 .desc b{display:block;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#8b93ad;font-weight:700;margin-bottom:4px}
+@media(max-width:760px){.mods3{grid-template-columns:1fr}}
 .callout{background:var(--navy-900);color:#fff;border-radius:8px;padding:22px 26px}
 .callout .tag{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:8px}
 .callout .big{font-size:19px;font-weight:800;line-height:1.5}
@@ -87,36 +83,54 @@ h2.sec-title{font-size:clamp(22px,3.2vw,30px);font-weight:800;letter-spacing:-.0
 .principle-line{margin-top:20px;background:var(--navy-800);border:1px solid var(--navy-700);border-radius:8px;padding:16px 22px;font-size:13.5px;color:var(--accent);font-weight:700;line-height:1.6}
 
 /* ---------- 단계 커리큘럼 ---------- */
+/* 단계별 색 토큰 — 섹션에 .stage.sN 을 붙이면 내부 카드가 이 색을 따른다 */
+.stage{--sc:var(--accent-deep);--sc-soft:var(--paper-2);--sc-dark:var(--accent)}
+.stage.s1{--sc:var(--s1);--sc-soft:var(--s1-soft);--sc-dark:#93c5fd}
+.stage.s2{--sc:var(--s2);--sc-soft:var(--s2-soft);--sc-dark:#c4b5fd}
+.stage.s3{--sc:var(--s3);--sc-soft:var(--s3-soft);--sc-dark:#5eead4}
+
 .stage-head{display:flex;align-items:center;gap:14px;margin-bottom:14px;flex-wrap:wrap}
-.stage-pill{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 13px;border-radius:20px}
-.stage-pill.s1{background:var(--s1-soft);color:var(--s1)}
-.stage-pill.s2{background:var(--s2-soft);color:var(--s2)}
-.stage-pill.s3{background:var(--s3-soft);color:var(--s3)}
-.dark .stage-pill.s1,.dark .stage-pill.s2,.dark .stage-pill.s3{background:rgba(255,255,255,.12);color:#fff}
+.stage-pill{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 13px;border-radius:20px;background:var(--sc-soft);color:var(--sc)}
+.dark .stage-pill{background:rgba(255,255,255,.12);color:var(--sc-dark)}
 .stage-meta{font-size:12.5px;color:var(--ink-soft);font-weight:600}
 .dark .stage-meta{color:#aeb7d1}
 
-.group-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.gcard{background:#fff;border:1px solid var(--line);border-top-width:3px;border-radius:10px;padding:24px}
-.gcard.s1{border-top-color:var(--s1)} .gcard.s2{border-top-color:var(--s2)} .gcard.s3{border-top-color:var(--s3)}
-.dark .gcard{background:var(--navy-800);border-color:var(--navy-700)}
-.gcard .gn{font-size:11px;font-weight:800;letter-spacing:.1em;color:#9ca3af;margin-bottom:8px}
-.dark .gcard .gn{color:#8b93ad}
-.gcard .gt{font-size:19px;font-weight:800;color:var(--navy-900);margin-bottom:8px}
-.dark .gcard .gt{color:#fff}
-.gcard .gr{display:inline-block;font-size:11px;font-weight:700;color:var(--ink-soft);background:var(--paper-2);padding:3px 11px;border-radius:20px;margin-bottom:13px}
-.dark .gcard .gr{color:#e4e9f5;background:rgba(255,255,255,.1)}
-.gcard .gd{font-size:13px;color:var(--ink-soft);line-height:1.6;margin-bottom:14px}
-.dark .gcard .gd{color:#aeb7d1}
-.gcard .gl{list-style:none;border-top:1px solid var(--line);padding-top:12px}
-.dark .gcard .gl{border-top-color:rgba(255,255,255,.15)}
-.gcard .gl li{font-size:12.5px;color:var(--ink-soft);padding:4px 0 4px 18px;position:relative;line-height:1.5}
-.dark .gcard .gl li{color:#aeb7d1}
-.gcard .gl li::before{content:"";position:absolute;left:2px;top:12px;width:5px;height:5px;border-radius:50%;background:#c3c9d6}
-.dark .gcard .gl li::before{background:var(--accent)}
-.gcard .gl li b{color:var(--ink);font-weight:700}
-.dark .gcard .gl li b{color:#fff}
-@media(max-width:760px){.group-cards{grid-template-columns:1fr}}
+.stage-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.stage-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px}
+.stage-card .sn{font-size:12px;font-weight:800;color:#9ca3af;letter-spacing:.1em;margin-bottom:10px}
+.stage-card .st{font-size:21px;font-weight:800;color:var(--navy-900);margin-bottom:10px;line-height:1.35}
+.stage-card .sr{font-size:11px;font-weight:700;color:var(--sc);background:var(--sc-soft);display:inline-block;padding:4px 12px;border-radius:20px;margin-bottom:14px}
+.stage-card .sd{font-size:13.5px;color:var(--ink-soft);line-height:1.65;margin-bottom:14px}
+.stage-card .sl{list-style:none;margin-bottom:14px}
+.stage-card .sl li{font-size:12.5px;color:var(--ink-soft);padding:4px 0 4px 16px;position:relative;line-height:1.5}
+.stage-card .sl li::before{content:"·";position:absolute;left:2px;color:var(--sc);font-weight:800}
+.stage-card .sres{font-size:12px;font-weight:700;color:var(--navy-900);background:var(--paper-2);border-radius:6px;padding:9px 12px;line-height:1.5}
+
+/* 강조 카드 — 라이트 섹션 */
+.stage-card.hi{background:var(--sc);border-color:var(--sc)}
+.stage-card.hi .sn{color:#e4e9f5}
+.stage-card.hi .st{color:#fff}
+.stage-card.hi .sr{color:#fff;background:rgba(255,255,255,.2)}
+.stage-card.hi .sd,.stage-card.hi .sl li{color:#f0f2fa}
+.stage-card.hi .sl li::before{color:#fff}
+.stage-card.hi .sres{color:#fff;background:rgba(255,255,255,.18)}
+
+/* 다크 섹션 */
+.dark .stage-card{background:var(--navy-800);border-color:var(--navy-700)}
+.dark .stage-card .sn{color:#8b93ad}
+.dark .stage-card .st{color:#fff}
+.dark .stage-card .sr{color:var(--sc-dark);background:rgba(255,255,255,.08)}
+.dark .stage-card .sd,.dark .stage-card .sl li{color:#aeb7d1}
+.dark .stage-card .sl li::before{color:var(--sc-dark)}
+.dark .stage-card .sres{color:#fff;background:rgba(255,255,255,.08)}
+.dark .stage-card.hi{background:var(--accent-deep);border-color:var(--accent)}
+.dark .stage-card.hi .sn{color:#e4e9f5}
+.dark .stage-card.hi .sr{color:#fff;background:rgba(255,255,255,.18)}
+.dark .stage-card.hi .sd,.dark .stage-card.hi .sl li{color:#f0f2fa}
+.dark .stage-card.hi .sl li::before{color:#fff}
+.dark .stage-card.hi .sres{background:rgba(255,255,255,.18)}
+
+@media(max-width:700px){.stage-cards{grid-template-columns:1fr}}
 
 .stage-outcome{margin-top:18px;background:var(--paper-2);border:1px solid var(--line);border-radius:8px;padding:16px 22px;font-size:13.5px;color:var(--navy-900);font-weight:700}
 .dark .stage-outcome{background:var(--navy-800);border-color:var(--navy-700);color:#fff}
@@ -163,26 +177,26 @@ table.tbl tr:nth-child(even) td{background:var(--paper)}
 </header>
 
 <!-- 왜 3단계인가 -->
-<section class="block" style="background:var(--paper-2)">
+<section class="block dark">
   <div class="wrap">
     <div class="sec-eyebrow">Why</div>
     <h2 class="sec-title reveal">왜 3단계로 나누는가</h2>
     <p class="sec-sub reveal">같은 도구를 다루지만 <strong>매 단계 동사가 바뀝니다.</strong> 쓴다 → 연결한다 → 설계한다. 단계가 올라갈수록 손에 남는 것이 무거워집니다.</p>
-    <div class="ladder">
-      <div class="rung s1 reveal">
-        <div class="step-no">STAGE<b>01</b></div>
-        <div class="verb">도구를 <strong>쓴다</strong><span>Claude Code의 기능을 하나씩 익혀 내 에이전트를 세팅합니다</span></div>
-        <div class="keep"><b>수료 시</b>설정이 끝난 내 에이전트</div>
+    <div class="mods3">
+      <div class="mod3 reveal">
+        <div class="mh">STAGE 01 · 기초</div><div class="mt">도구를 쓴다</div>
+        <div class="hrs">16h</div>
+        <div class="desc"><b>수료 시</b>설정이 끝난 내 에이전트</div>
       </div>
-      <div class="rung s2 reveal">
-        <div class="step-no">STAGE<b>02</b></div>
-        <div class="verb">도구를 <strong>연결한다</strong><span>문서·브라우저·외부 서비스에 손을 뻗어 업무를 자동화합니다</span></div>
-        <div class="keep"><b>수료 시</b>실제로 돌아가는 업무 자동화</div>
+      <div class="mod3 reveal">
+        <div class="mh">STAGE 02 · 심화</div><div class="mt">도구를 연결한다</div>
+        <div class="hrs">16h</div>
+        <div class="desc"><b>수료 시</b>실제로 돌아가는 업무 자동화</div>
       </div>
-      <div class="rung s3 reveal">
-        <div class="step-no">STAGE<b>03</b></div>
-        <div class="verb">시스템을 <strong>설계한다</strong><span>수집·가공·출력 구조를 직접 짜고 AI가 들어갈 자리를 판단합니다</span></div>
-        <div class="keep"><b>수료 시</b>미니 앱 1개 + 실행 문서</div>
+      <div class="mod3 reveal">
+        <div class="mh">STAGE 03 · 사무 자동화</div><div class="mt">시스템을 설계한다</div>
+        <div class="hrs">16h</div>
+        <div class="desc"><b>수료 시</b>내가 설계한 미니 앱 1개</div>
       </div>
     </div>
     <div class="callout reveal">

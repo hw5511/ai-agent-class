@@ -1,0 +1,39 @@
+{
+  "_comment": "설명회 자료(overview/index.html)의 단계별 서술. 강 제목·목표·주요내용·실습은 courses/*.json 에서 자동으로 가져오므로 여기 적지 않는다. build.py 의 build_overview() 가 읽는다.",
+  "order": ["basic", "advanced", "automation"],
+  "courses": {
+    "basic": {
+      "stageNo": 1,
+      "colorClass": "s1",
+      "background": "light",
+      "name": "기초",
+      "tagline": "도구를 쓴다",
+      "summary": "Claude Code 라는 도구 자체를 정복하는 단계입니다. 설치부터 시작해 메모리·권한·세션을 다루고, Sub Agent·Hooks·MCP·플러그인으로 기능을 넓힙니다.",
+      "outcome": "설정이 끝난 내 에이전트",
+      "highlight": 6,
+      "highlightLabel": "확장 분기점"
+    },
+    "advanced": {
+      "stageNo": 2,
+      "colorClass": "s2",
+      "background": "dark",
+      "name": "심화",
+      "tagline": "도구를 연결한다",
+      "summary": "에이전트의 손을 바깥으로 뻗는 단계입니다. 오피스 문서·브라우저·Google Workspace·외부 API 를 연결하고, 후반부는 Notion 을 축으로 앞 강의 결과물을 쌓아 올려 캡스톤까지 이어집니다.",
+      "outcome": "실제로 돌아가는 업무 자동화",
+      "highlight": 7,
+      "highlightLabel": "핵심 구간"
+    },
+    "automation": {
+      "stageNo": 3,
+      "colorClass": "s3",
+      "background": "light",
+      "name": "사무 자동화",
+      "tagline": "시스템을 설계한다",
+      "summary": "자동화 파트까지 오면 결국 개발에 가까워집니다 — 미니 앱을 만듭니다. 모든 실습이 수집·가공·출력 3칸으로 설계되고, AI 를 어디에 넣고 어디에 넣지 않을지 직접 판단합니다.",
+      "outcome": "내가 설계한 미니 앱 1개",
+      "highlight": 4,
+      "highlightLabel": "핵심 구간"
+    }
+  }
+}
