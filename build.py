@@ -9,6 +9,7 @@ index.html 은 순수 산출물이므로 git 에서 추적하지 않는다(.giti
 Usage: python build.py
        python build.py --dry-run
 """
+import html
 import json
 import os
 import subprocess
@@ -22,6 +23,13 @@ HTML_PATH = ROOT / 'index.html'
 COURSES_MARKER = '        //__COURSES__'
 COURSE_ORDER = ['basic', 'advanced', 'automation']
 INDENT = '        '  # 8 spaces
+
+# 설명회용 3단계 소개 페이지 (overview/index.html) — 같은 courses/*.json 에서 생성한다.
+OVERVIEW_DIR = ROOT / 'overview'
+OVERVIEW_TEMPLATE = OVERVIEW_DIR / 'template.html'
+OVERVIEW_GROUPS = OVERVIEW_DIR / 'groups.json'
+OVERVIEW_OUT = OVERVIEW_DIR / 'index.html'
+OVERVIEW_MARKER = '<!--__CURRICULUM__-->'
 
 
 def js_string(s):
@@ -171,6 +179,90 @@ def render_from_template(courses_js):
     return '\n'.join(new_lines)
 
 
+def _session_range(nums):
+    """[1,2,3] -> '1~3강', [1] -> '1강'"""
+    return f'{nums[0]}~{nums[-1]}강' if len(nums) > 1 else f'{nums[0]}강'
+
+
+def _group_card_html(group, sessions_by_num, color_class, idx):
+    nums = group['sessions']
+    items = []
+    for n in nums:
+        s = sessions_by_num.get(n)
+        if s is None:
+            raise RuntimeError(f'groups.json 이 존재하지 않는 회차 {n} 을 참조합니다')
+        items.append(
+            f'            <li><b>{n}강</b> {html.escape(s["title"])}</li>'
+        )
+    return '\n'.join([
+        f'        <div class="gcard {color_class} reveal">',
+        f'          <div class="gn">GROUP {idx:02d}</div>',
+        f'          <div class="gt">{html.escape(group["title"])}</div>',
+        f'          <div class="gr">{_session_range(nums)}</div>',
+        f'          <div class="gd">{html.escape(group["desc"])}</div>',
+        '          <ul class="gl">',
+        *items,
+        '          </ul>',
+        '        </div>',
+    ])
+
+
+def _stage_section_html(course_key, cfg, sessions):
+    sessions_by_num = {s['step']: s for s in sessions}
+    cc = cfg['colorClass']
+    dark = ' dark' if cfg.get('background') == 'dark' else ''
+    cards = '\n'.join(
+        _group_card_html(g, sessions_by_num, cc, i + 1)
+        for i, g in enumerate(cfg['groups'])
+    )
+    return '\n'.join([
+        f'<!-- {cfg["stageNo"]}단계 · {cfg["name"]} -->',
+        f'<section class="block{dark}">',
+        '  <div class="wrap">',
+        '    <div class="sec-eyebrow">Curriculum</div>',
+        f'    <h2 class="sec-title reveal">{cfg["stageNo"]}단계 · {html.escape(cfg["name"])}'
+        f' — {html.escape(cfg["tagline"])}</h2>',
+        '    <div class="stage-head reveal">',
+        f'      <span class="stage-pill {cc}">Stage {cfg["stageNo"]:02d}</span>',
+        f'      <span class="stage-meta">{len(sessions)}강 · {len(sessions) * 2}시간</span>',
+        '    </div>',
+        f'    <p class="sec-sub reveal">{html.escape(cfg["summary"])}</p>',
+        '    <div class="group-cards">',
+        cards,
+        '    </div>',
+        f'    <div class="stage-outcome reveal">수료 시 <span>—</span> '
+        f'{html.escape(cfg["outcome"])}</div>',
+        '  </div>',
+        '</section>',
+    ])
+
+
+def build_overview():
+    """courses/*.json + overview/groups.json -> overview/index.html (설명회 자료)."""
+    if not OVERVIEW_TEMPLATE.exists():
+        print(f'Skip overview: template not found ({OVERVIEW_TEMPLATE})')
+        return
+    with open(OVERVIEW_GROUPS, encoding='utf-8') as f:
+        groups = json.load(f)
+
+    sections = []
+    for course_key in groups['order']:
+        _, sessions = load_course(course_key)
+        sections.append(_stage_section_html(course_key, groups['courses'][course_key], sessions))
+
+    with open(OVERVIEW_TEMPLATE, encoding='utf-8') as f:
+        template = f.read()
+    if template.count(OVERVIEW_MARKER) != 1:
+        raise RuntimeError(
+            f'Expected exactly one curriculum marker ({OVERVIEW_MARKER!r}) in overview template'
+        )
+
+    out = template.replace(OVERVIEW_MARKER, '\n\n'.join(sections))
+    with open(OVERVIEW_OUT, 'w', encoding='utf-8') as f:
+        f.write(out)
+    print(f'Done. Wrote {OVERVIEW_OUT} ({len(sections)} stage sections)')
+
+
 def git_deploy(message=None):
     """Stage sources and push to main to trigger GitHub Pages deployment.
 
@@ -222,6 +314,8 @@ def main():
     with open(HTML_PATH, 'w', encoding='utf-8') as f:
         f.write(new_html)
     print(f'Done. Wrote {HTML_PATH}')
+
+    build_overview()
 
     if deploy:
         git_deploy()
