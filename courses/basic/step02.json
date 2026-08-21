@@ -5,7 +5,6 @@
   "goal": "에이전트에 메모리를 설정하고 이름을 부여하는 방법을 익히며, 파일과 폴더를 에이전트로 직접 제어한다.",
   "topics": [
     "CLAUDE.md — 에이전트 이름·말투·역할 정의",
-    "/init · /memory · Auto Memory",
     ".claude/rules/ 조건부 규칙",
     "Read / Write / Edit / Bash 툴 실습"
   ],
@@ -42,56 +41,6 @@
         "/clear 후 다시 질문해 변화 확인"
       ],
       "practice": "CLAUDE.md를 직접 작성하고 에이전트가 달라지는 것을 확인한다.",
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step02/init.svg",
-      "goal": "/init 명령어의 역할을 이해한다.",
-      "topics": [
-        "/init이란?",
-        "CLAUDE.md 자동 생성 흐름",
-        "직접 작성 vs 자동 생성"
-      ],
-      "practice": null,
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step02/init_실습.svg",
-      "goal": "/init 실습 — 폴더 분석 후 CLAUDE.md 자동 생성을 체험한다.",
-      "topics": [
-        "실습 자료 다운로드 후 작업 폴더에 배치",
-        "기존 CLAUDE.md 삭제",
-        "/init 실행 후 생성 결과 확인"
-      ],
-      "practice": "/init으로 자동 생성된 CLAUDE.md를 열어 내용을 확인한다.",
-      "action": {
-        "label": "실습 자료",
-        "download": {
-          "href": "assets/basic/step02/practice/init_practice.zip",
-          "text": "init_practice.zip 다운로드"
-        }
-      }
-    },
-    {
-      "imagePath": "assets/basic/step02/memory.svg",
-      "goal": "에이전트 메모리를 직접 확인하고 편집한다.",
-      "topics": [
-        "/memory — 로드된 CLAUDE.md·rules 파일 목록",
-        "Project / User / Auto Memory 세 종류",
-        "~/.claude/projects/<project>/memory/ 경로"
-      ],
-      "practice": null,
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step02/Auto_Memory.svg",
-      "goal": "Auto Memory의 작동 원리를 이해한다.",
-      "topics": [
-        "Claude가 스스로 MEMORY.md에 자동 기록",
-        "기본값 ON — /memory에서 on/off 설정",
-        "직접 요청: 이걸 기억해줘"
-      ],
-      "practice": null,
       "action": null
     },
     {
