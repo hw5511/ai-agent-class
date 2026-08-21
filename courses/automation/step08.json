@@ -12,5 +12,47 @@
     "수료 후 — 재료만 갈아끼워 내 업무로 옮기는 법"
   ],
   "practice": "미니 앱 1개와 README를 완성하고, 입력부터 출력까지 전 과정을 시연한다.",
-  "slides": []
+  "slides": [
+    {
+      "imagePath": "assets/automation/step08/캡스톤_④_—_마감과_발표.svg",
+      "goal": "캡스톤 ④ — 마감과 발표 — 이번 회차의 목표와 다룰 내용을 안내한다.",
+      "topics": [
+        "README — 무엇을, 어떻게 실행하나",
+        "실행 명령 정리 — 한 줄로 도는가",
+        "로그 남기기 — 언제 무엇을 처리했는지",
+        "확장 — 사람이 실행하지 않아도 도는 형태(스케줄 실행)"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/automation/step08/핵심_개념_(1_2).svg",
+      "goal": "남이 실행할 수 있는 상태로 마감하고 시연하며 사무 자동화 과정을 수료한다.",
+      "topics": [
+        "README — 무엇을, 어떻게 실행하나",
+        "실행 명령 정리 — 한 줄로 도는가",
+        "로그 남기기 — 언제 무엇을 처리했는지"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/automation/step08/핵심_개념_(2_2).svg",
+      "goal": "남이 실행할 수 있는 상태로 마감하고 시연하며 사무 자동화 과정을 수료한다.",
+      "topics": [
+        "확장 — 사람이 실행하지 않아도 도는 형태(스케줄 실행)",
+        "시연 발표 — 입력부터 출력까지",
+        "수료 후 — 재료만 갈아끼워 내 업무로 옮기는 법"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/automation/step08/실습.svg",
+      "goal": "캡스톤 ④ — 마감과 발표 실습 — 이번 회차 산출물을 만든다.",
+      "topics": null,
+      "practice": "미니 앱 1개와 README를 완성하고, 입력부터 출력까지 전 과정을 시연한다.",
+      "action": null
+    }
+  ]
 }

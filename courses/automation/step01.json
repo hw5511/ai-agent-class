@@ -12,5 +12,58 @@
     "빌드타임 AI(코드를 짜준다) vs 런타임 AI(슬롯으로 호출된다)"
   ],
   "practice": "실습 A 착수 — 국세청 API 키를 발급받고 거래처 200건을 100건씩 나눠 조회해 원본 응답 json을 확보한다.",
-  "slides": []
+  "slides": [
+    {
+      "imagePath": "assets/automation/step01/자동화의_구조_—_왜_미니_앱인가.svg",
+      "goal": "자동화의 구조 — 왜 미니 앱인가 — 이번 회차의 목표와 다룰 내용을 안내한다.",
+      "topics": [
+        "자동화 파트에 오면 결국 '개발'이다 — 미니 앱 만들기",
+        "수집 → 가공 → 출력, 모든 자동화의 3칸",
+        "데이터 기층은 md·json·csv·db / 오피스는 출구에서만 템플릿 주입",
+        "실시간 화면 제어가 자동화가 아닌 이유 — 속도 10배 차이, 10회 연속 성공 36%"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/automation/step01/수집_가공_출력_3칸.svg",
+      "goal": "모든 자동화가 수집·가공·출력 3칸으로 분해됨을 이해한다.",
+      "topics": [
+        "수집 — API · 파일 · 수기 입력",
+        "가공 — 정규화·판정, 중간 데이터는 md·json·csv",
+        "출력 — 템플릿 주입, 출구는 여러 개"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/automation/step01/핵심_개념_(1_2).svg",
+      "goal": "자동화가 실시간 화면 제어가 아니라 수집→가공→출력 구조의 프로그램 설계임을 이해하고, AI가 들어갈 자리와 아닌 자리를 구분한다.",
+      "topics": [
+        "자동화 파트에 오면 결국 '개발'이다 — 미니 앱 만들기",
+        "수집 → 가공 → 출력, 모든 자동화의 3칸",
+        "데이터 기층은 md·json·csv·db / 오피스는 출구에서만 템플릿 주입"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/automation/step01/핵심_개념_(2_2).svg",
+      "goal": "자동화가 실시간 화면 제어가 아니라 수집→가공→출력 구조의 프로그램 설계임을 이해하고, AI가 들어갈 자리와 아닌 자리를 구분한다.",
+      "topics": [
+        "실시간 화면 제어가 자동화가 아닌 이유 — 속도 10배 차이, 10회 연속 성공 36%",
+        "결정론 구간 vs AI 슬롯 — 판단 슬롯 · 생성 슬롯",
+        "빌드타임 AI(코드를 짜준다) vs 런타임 AI(슬롯으로 호출된다)"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/automation/step01/실습.svg",
+      "goal": "자동화의 구조 — 왜 미니 앱인가 실습 — 이번 회차 산출물을 만든다.",
+      "topics": null,
+      "practice": "실습 A 착수 — 국세청 API 키를 발급받고 거래처 200건을 100건씩 나눠 조회해 원본 응답 json을 확보한다.",
+      "action": null
+    }
+  ]
 }

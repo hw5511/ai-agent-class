@@ -12,5 +12,47 @@
     "README 작성 — 미니 앱의 최소 요건"
   ],
   "practice": "같은 result.json에서 마크다운 리포트와 엑셀 두 출구를 동시에 뽑고, 출구 하나를 추가하는 비용이 얼마나 싼지 확인한다.",
-  "slides": []
+  "slides": [
+    {
+      "imagePath": "assets/automation/step02/실습_A_—_거래처_검증기_완성_(AI_슬롯_0개).svg",
+      "goal": "실습 A — 거래처 검증기 완성 (AI 슬롯 0개) — 이번 회차의 목표와 다룰 내용을 안내한다.",
+      "topics": [
+        "중간표현 설계 — result.json 스키마 잡기",
+        "규칙 기반 판정 — 휴업·폐업·과세유형 플래그",
+        "출구 ① 마크다운 리포트",
+        "출구 ② 엑셀 템플릿 주입 — 서식은 템플릿이 이미 갖고 있다"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/automation/step02/핵심_개념_(1_2).svg",
+      "goal": "런타임 AI 없이 완결되는 파이프라인을 완성하고, 하나의 중간 데이터에서 출구 2개를 뽑아낸다.",
+      "topics": [
+        "중간표현 설계 — result.json 스키마 잡기",
+        "규칙 기반 판정 — 휴업·폐업·과세유형 플래그",
+        "출구 ① 마크다운 리포트"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/automation/step02/핵심_개념_(2_2).svg",
+      "goal": "런타임 AI 없이 완결되는 파이프라인을 완성하고, 하나의 중간 데이터에서 출구 2개를 뽑아낸다.",
+      "topics": [
+        "출구 ② 엑셀 템플릿 주입 — 서식은 템플릿이 이미 갖고 있다",
+        "3회 재실행 동일 결과 확인 — 결정론이란 무엇인가",
+        "README 작성 — 미니 앱의 최소 요건"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/automation/step02/실습.svg",
+      "goal": "실습 A — 거래처 검증기 완성 (AI 슬롯 0개) 실습 — 이번 회차 산출물을 만든다.",
+      "topics": null,
+      "practice": "같은 result.json에서 마크다운 리포트와 엑셀 두 출구를 동시에 뽑고, 출구 하나를 추가하는 비용이 얼마나 싼지 확인한다.",
+      "action": null
+    }
+  ]
 }

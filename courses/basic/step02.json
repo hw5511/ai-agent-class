@@ -5,7 +5,6 @@
   "goal": "에이전트에 메모리를 설정하고 이름을 부여하는 방법을 익히며, 파일과 폴더를 에이전트로 직접 제어한다.",
   "topics": [
     "CLAUDE.md — 에이전트 이름·말투·역할 정의",
-    ".claude/rules/ 조건부 규칙",
     "Read / Write / Edit / Bash 툴 실습"
   ],
   "practice": "나만의 에이전트에 이름을 부여하고, 각 툴(Read/Write/Edit/Bash)을 직접 실습한다.",

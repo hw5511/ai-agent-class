@@ -11,5 +11,46 @@
     "파일 vs DB — 매번 새로 만들면 파일, 쌓이고 조회하면 DB"
   ],
   "practice": "챗봇 껍데기는 만들지 않고 2시간 전부를 재료 손질에 쓴다. 카테고리별 건수 통계까지 확인한다.",
-  "slides": []
+  "slides": [
+    {
+      "imagePath": "assets/automation/step03/실습_B_①_—_지식베이스_파이프라인.svg",
+      "goal": "실습 B ① — 지식베이스 파이프라인 — 이번 회차의 목표와 다룰 내용을 안내한다.",
+      "topics": [
+        "챗봇도 결국 수집→가공→출력이다 — 빌드타임·런타임 두 겹 구조",
+        "형식이 제각각인 원본 정규화 — FAQ·상품정보·상담이력",
+        "중복 제거 · 카테고리 부여 · 통합 스키마",
+        "knowledge.json 설계"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/automation/step03/핵심_개념_(1_2).svg",
+      "goal": "흩어진 원본을 조회 가능한 지식베이스로 정규화하는 파이프라인을 만들고, 파일과 DB의 갈림길을 판단한다.",
+      "topics": [
+        "챗봇도 결국 수집→가공→출력이다 — 빌드타임·런타임 두 겹 구조",
+        "형식이 제각각인 원본 정규화 — FAQ·상품정보·상담이력",
+        "중복 제거 · 카테고리 부여 · 통합 스키마"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/automation/step03/핵심_개념_(2_2).svg",
+      "goal": "흩어진 원본을 조회 가능한 지식베이스로 정규화하는 파이프라인을 만들고, 파일과 DB의 갈림길을 판단한다.",
+      "topics": [
+        "knowledge.json 설계",
+        "파일 vs DB — 매번 새로 만들면 파일, 쌓이고 조회하면 DB"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/automation/step03/실습.svg",
+      "goal": "실습 B ① — 지식베이스 파이프라인 실습 — 이번 회차 산출물을 만든다.",
+      "topics": null,
+      "practice": "챗봇 껍데기는 만들지 않고 2시간 전부를 재료 손질에 쓴다. 카테고리별 건수 통계까지 확인한다.",
+      "action": null
+    }
+  ]
 }
