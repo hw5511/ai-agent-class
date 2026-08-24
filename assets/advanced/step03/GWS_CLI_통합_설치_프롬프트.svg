@@ -7,17 +7,18 @@
   <line x1="60" y1="200" x2="1220" y2="200" stroke="#e5e7eb" stroke-width="1"/>
   <text x="60" y="232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">통합 프롬프트 7단계 (액션박스에서 한 줄로 복사)</text>
 
-  <rect x="60" y="248" width="1160" height="296" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="60" y="248" width="1160" height="300" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
 
   <text x="84" y="280" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">1.  gcloud SDK 설치 파일 다운로드 후 실행  —  설치 마법사 팝업은 사용자가 직접 완료</text>
-  <text x="84" y="318" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">2.  gcloud auth login --launch-browser  —  브라우저가 뜨면 사용자가 로그인</text>
-  <text x="84" y="356" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">3.  gws-workspace-(시·분·초 고유 ID) 프로젝트 생성 + Drive·Gmail·Sheets·Docs·Slides·Forms·Calendar API 활성화</text>
-  <text x="84" y="394" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#ef4444">4.  OAuth 클라이언트 등록  —  Playwright로 화면 보며: 클라이언트 ID·Secret 저장 + 테스트 사용자(내 Gmail) 추가</text>
-  <text x="108" y="416" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">Secret 마스킹 시: 복사 버튼 aria-label 속성값(평문)을 Playwright로 추출해 저장</text>
-  <text x="84" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">5.  npm install -g @googleworkspace/cli  +  전역 환경변수에 클라이언트 ID·Secret·프로젝트 ID 저장</text>
-  <text x="84" y="486" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#1d4ed8">6.  gws auth login (drive·gmail·calendar·docs·sheets·slides·forms·tasks 전체)  →  OAuth 인증 링크 띄우기</text>
-  <text x="84" y="524" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">7.  gws CLI 전체 연결 테스트  →  연결 안 되는 항목 있으면 스코프 추가 후 재인증 링크</text>
+  <text x="84" y="316" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">2.  gcloud auth login --launch-browser  —  브라우저가 뜨면 사용자가 로그인</text>
+  <text x="84" y="352" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">3.  gws-workspace-(시·분·초 고유 ID) 프로젝트 생성 + Drive·Gmail·Sheets·Docs·Slides·Forms·Calendar API 활성화</text>
+  <text x="84" y="388" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#ef4444">4.  OAuth 클라이언트 등록  —  Playwright로 화면 보며: 클라이언트 ID·Secret 저장 + 테스트 사용자(내 Gmail) 추가</text>
+  <text x="108" y="410" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">Secret 마스킹 시: 복사 버튼 aria-label 속성값(평문)을 Playwright로 추출해 저장</text>
+  <text x="84" y="440" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">5.  npm install -g @googleworkspace/cli  +  환경변수 저장  —  4단계의 로그인된 Playwright 창은 닫지 말고 유지</text>
+  <text x="84" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#1d4ed8">6.  gws auth login 백그라운드 실행  →  출력에서 OAuth URL 추출  →  로그인된 Playwright 창으로 동의까지 자동 진행</text>
+  <text x="108" y="498" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">콜백 대기로 멈추므로 반드시 백그라운드 · 계정 선택 → &quot;확인하지 않은 앱&quot; 경고 → 고급 → 이동 → 스코프 전체 체크 → 계속</text>
+  <text x="84" y="528" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">7.  gws CLI 전체 연결 테스트  →  누락 스코프 있으면 6단계와 같은 방식으로 재인증</text>
 
   <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
-  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">각 단계 완료 후 다음으로 — Claude가 순차 진행하고, 설치 마법사·로그인·인증만 사용자가 직접 처리</text>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">사용자가 직접 하는 건 설치 마법사와 2단계 구글 로그인뿐 — OAuth 동의는 Playwright가 자동 처리</text>
 </svg>
