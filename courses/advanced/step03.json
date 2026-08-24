@@ -6,7 +6,7 @@
   "topics": [
     "통합 설치 프롬프트로 Claude가 gws 설치·인증 전 과정 처리",
     "Playwright MCP로 OAuth 클라이언트 GCP Console 화면 안내",
-    "gws auth login -s drive,gmail,calendar,sheets,docs,forms",
+    "gws auth login -s drive,gmail,calendar,docs,sheets,slides,forms,tasks",
     "GWS CLI Skill 문서화 → 자연어 요청을 gws 명령으로 자동 변환",
     "실습 4종: Drive · Gmail · Calendar · Sheets/Docs/Forms"
   ],
@@ -41,9 +41,9 @@
     },
     {
       "imagePath": "assets/advanced/step03/gws_auth_login_—_인증_완료_확인.svg",
-      "goal": "gws auth login 성공을 확인하고 6개 서비스 인증 상태를 검증한다.",
+      "goal": "gws auth login 성공을 확인하고 8개 서비스 인증 상태를 검증한다.",
       "topics": [
-        "gws auth login -s drive,gmail,calendar,sheets,docs,forms",
+        "gws auth login -s drive,gmail,calendar,docs,sheets,slides,forms,tasks",
         "\"Google에서 확인하지 않은 앱\" 경고 — Playwright가 자동 클릭 (수동 진행 시 직접)",
         "gws auth status 로 인증 완료 확인",
         "gws drive files list 테스트"
