@@ -8,7 +8,8 @@
     "ELI5 — 상대에 맞춰 설명을 바꿔주는 스킬",
     "스킬 세트로 묶기 — 층이 다르면 겹쳐 쓰고, 같으면 충돌한다",
     "고르는 기준 — 별 수가 아니라 SKILL.md 를 읽는다",
-    "Remotion 공식 스킬 — 라우터 구조를 벤더 규모로 확인"
+    "Remotion 공식 스킬 — 라우터 구조를 벤더 규모로 확인",
+    "스킬 이어붙이기 — 자막에서 완성 영상까지 파이프라인"
   ],
   "practice": "추천 스킬을 하나씩 설치해 보고, react-shadcn-kit 세트를 받아 .claude/skills/ 에 넣은 뒤 실제로 발동시켜 본다.",
   "slides": [
@@ -113,6 +114,43 @@
           {
             "desc": "12개 전부 설치 — 중복이 생깁니다",
             "copy": "npx skills add remotion-dev/skills --all"
+          }
+        ]
+      }
+    },
+    {
+      "imagePath": "assets/advanced/step08/스킬_이어붙이기_영상_만들기.svg",
+      "goal": "스킬 두 개를 파이프라인으로 이어 실제 산출물(영상)을 끝까지 만들어 본다.",
+      "topics": [
+        "SRT → srt-whiteboard → 씬 MP4 5개 → Remotion → 완성 MP4",
+        "역할 분담 — 그리기는 화이트보드, 편집·전환·자막은 Remotion",
+        "접합부는 파일이다 — SRT 와 MP4 가 두 스킬을 잇는다",
+        "설치 전 확인 — 파이썬 실행 + SKILL.md 의 중국어 강제 조항"
+      ],
+      "practice": "완성 영상을 먼저 보고, 두 레포의 SKILL.md 를 열어 각자 무엇을 책임지는지 확인한다.",
+      "action": {
+        "label": "결과물과 재료",
+        "items": [
+          {
+            "link": {
+              "href": "https://hw5511.github.io/ai-agent-class/assets/advanced/step08/스킬_조합_데모.mp4",
+              "text": "완성 영상 보기 — 복리는 왜 강한가 (48초)"
+            },
+            "desc": "두 스킬을 이어 만든 실제 결과물입니다"
+          },
+          {
+            "link": {
+              "href": "https://github.com/geeklee/srt-whiteboard-animation",
+              "text": "srt-whiteboard-animation — SKILL.md 열어보기"
+            },
+            "desc": "자막을 손그림 영상으로 바꾸는 스킬 (파이썬 실행)"
+          },
+          {
+            "link": {
+              "href": "https://github.com/remotion-dev/skills/tree/main/skills/remotion-markup/video-editing.md",
+              "text": "Remotion video-editing.md — 타임라인 편집"
+            },
+            "desc": "TransitionSeries 로 클립을 배치하는 방법"
           }
         ]
       }
