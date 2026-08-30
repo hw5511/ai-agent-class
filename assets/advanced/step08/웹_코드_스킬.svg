@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="38" font-weight="700" fill="#171717">Claude가 웹 코드를 잘 만들게 하는 스킬</text>
+  <text x="60" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">ZIP을 받아 폴더 두 개를 스킬 폴더에 넣기만 하면 됩니다. 설치 명령도, 인터넷도 필요 없습니다</text>
+  <line x1="60" y1="200" x2="1220" y2="200" stroke="#e5e7eb" stroke-width="1"/>
+
+  <text x="60" y="230" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">설치 — 세 단계</text>
+
+  <rect x="60" y="244" width="360" height="118" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="94" cy="278" r="15" fill="#eff6ff"/>
+  <text x="94" y="284" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">1</text>
+  <text x="122" y="284" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" fill="#374151">ZIP 받아서 압축 풀기</text>
+  <text x="84" y="320" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">react-shadcn-kit/</text>
+  <text x="84" y="344" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">shadcn/</text>
+  <text x="250" y="332" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">폴더 2개가 나옵니다</text>
+
+  <rect x="460" y="244" width="360" height="118" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="494" cy="278" r="15" fill="#eff6ff"/>
+  <text x="494" y="284" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">2</text>
+  <text x="522" y="284" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" fill="#374151">스킬 폴더에 넣기</text>
+  <text x="484" y="320" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="700" fill="#1d4ed8">~/.claude/skills/</text>
+  <text x="484" y="346" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">끌어다 놓아도 됩니다</text>
+
+  <rect x="860" y="244" width="360" height="118" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <circle cx="894" cy="278" r="15" fill="#dcfce7"/>
+  <text x="894" y="284" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#15803d">3</text>
+  <text x="922" y="284" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" fill="#374151">그냥 말하기</text>
+  <text x="884" y="322" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#166534">"5페이지 정도 규모의</text>
+  <text x="884" y="344" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#166534">ERP 대시보드 만들어줘"</text>
+
+  <text x="60" y="400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">스킬 이름을 부를 필요가 없습니다 — 두 개가 알아서 나뉘어 일합니다</text>
+
+  <rect x="60" y="414" width="566" height="126" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="84" y="442" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#1d4ed8">shadcn</text>
+  <text x="170" y="442" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#60a5fa">shadcn 팀 공식 스킬</text>
+  <text x="84" y="472" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">버튼 · 표 · 폼 · 다이얼로그를 어떻게 쓰는가</text>
+  <text x="84" y="498" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">스타일 규칙 · 컴포넌트 설치 명령</text>
+  <text x="84" y="524" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">키보드 · 포커스가 이미 해결된 부품을 씁니다</text>
+
+  <rect x="654" y="414" width="566" height="126" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="678" y="442" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#374151">react-shadcn-kit</text>
+  <text x="850" y="442" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">공식이 안 다루는 것</text>
+  <text x="678" y="472" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">디자인 결정 · 접근성 · 테스트</text>
+  <text x="678" y="498" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">브라우저로 직접 열어보고 확인시키기</text>
+  <text x="678" y="524" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">"됐습니다"를 믿을 수 있게 만듭니다</text>
+
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">화면이 세 개면 필터 · 정렬 · 페이지네이션을 한 번만 만들고 세 번 씁니다 — 실제로 절반 이하로 줄었습니다</text>
+</svg>
