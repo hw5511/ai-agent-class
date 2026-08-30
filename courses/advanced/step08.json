@@ -63,9 +63,9 @@
         "SKILL.md 는 짧게, 절차는 reference/ 문서로 — 7회차와 같은 구조",
         "프로세스 · 스택 · 미감 · 검증 — 층이 다르면 겹쳐 쓸 수 있다",
         "같은 층에 둘을 깔면 충돌한다 (Tailwind + UnoCSS)",
-        "스킬(규칙) + MCP(실시간 컴포넌트 정보) — 층이 달라 함께 쓴다"
+        "공식 shadcn 스킬과 함께 쓰기 — 컴포넌트는 공식, 나머지는 세트"
       ],
-      "practice": "세트를 .claude/skills/ 에 넣고 shadcn MCP 를 붙인 뒤, 5페이지짜리 ERP 대시보드를 만들게 시켜 세트가 실제로 발동하는지 확인한다.",
+      "practice": "세트와 공식 shadcn 스킬을 함께 설치한 뒤, 5페이지짜리 ERP 대시보드를 만들게 시켜 둘이 어떻게 나눠 일하는지 확인한다.",
       "action": {
         "label": "react-shadcn-kit 내려받기",
         "items": [
@@ -81,11 +81,11 @@
             "copy": "unzip react-shadcn-kit.zip && mkdir -p ~/.claude/skills && cp -r react-shadcn-kit ~/.claude/skills/"
           },
           {
-            "desc": "shadcn 공식 MCP 도 함께 붙입니다 — 컴포넌트 정보를 실시간으로 조회합니다",
-            "copy": "npx shadcn@latest mcp init --client claude"
+            "desc": "shadcn 공식 스킬도 함께 — 설치 27만 회, rules 6장 + 자체 평가 포함",
+            "copy": "npx skills add shadcn-ui/ui --skill shadcn"
           },
           {
-            "desc": "세트가 발동하는지 이 과제로 확인합니다",
+            "desc": "둘을 함께 켜고 이 과제로 확인합니다",
             "copy": "shadcn 기반으로 5페이지짜리 ERP 대시보드를 만들어줘. 대시보드 홈 / 주문 목록 / 재고 / 거래처 / 설정 다섯 화면이고, 목록 화면은 정렬·필터·페이지네이션이 되어야 해. 필터 상태는 URL 에 반영하고, 빈 상태와 삭제 되돌리기도 넣어줘."
           }
         ]
