@@ -114,6 +114,10 @@
           {
             "desc": "12개 전부 설치 — 중복이 생깁니다",
             "copy": "npx skills add remotion-dev/skills --all"
+          },
+          {
+            "desc": "설치 후 이렇게 시켜봅니다",
+            "copy": "Remotion으로 5초짜리 인트로 영상 만들어줘. 로고가 페이드로 들어오고 아래에 슬로건 한 줄이 타이핑되듯 나타나면 좋겠어. 만들고 나서 npx remotion render 로 MP4까지 뽑아줘."
           }
         ]
       }
@@ -151,6 +155,18 @@
               "text": "Remotion video-editing.md — 타임라인 편집"
             },
             "desc": "TransitionSeries 로 클립을 배치하는 방법"
+          },
+          {
+            "desc": "화이트보드 스킬 설치 — 전용 venv 를 따로 만듭니다",
+            "copy": "git clone https://github.com/geeklee/srt-whiteboard-animation.git && cd srt-whiteboard-animation && python scripts/prepare_env.py"
+          },
+          {
+            "desc": "1단계 — 자막을 장면으로 쪼개게 시킵니다",
+            "copy": "이 SRT 자막으로 화이트보드 손그림 영상을 만들 거야. 먼저 25~35초 단위로 장면을 나누고 각 장면에 뭘 그릴지 전략만 보여줘. 확인하면 그다음으로 넘어가자. 모든 설명과 결과물 문구는 한국어로 써줘."
+          },
+          {
+            "desc": "2단계 — 장면 MP4 가 나온 뒤 Remotion 으로 합칩니다",
+            "copy": "방금 만든 장면 MP4 들을 Remotion TransitionSeries 로 이어붙여줘. 클립 사이에 페이드 전환을 넣고, 앞에 타이틀 카드와 뒤에 엔딩 카드를 붙이고, 화면 하단에 자막 띠를 따로 만들어서 그림과 겹치지 않게 해줘."
           }
         ]
       }
