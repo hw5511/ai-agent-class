@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="38" font-weight="700" fill="#171717">Work DB CRUD 스킬 만들기</text>
+  <text x="60" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">복제한 Work DB의 ID를 연결해 조회 · 생성 · 상태변경까지 하는 CLI 스킬 하나를 만듭니다</text>
+  <line x1="60" y1="200" x2="1220" y2="200" stroke="#e5e7eb" stroke-width="1"/>
+
+  <text x="60" y="230" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">① Work DB ID 확보</text>
+  <rect x="60" y="242" width="1160" height="62" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="84" y="268" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">복제한 Work DB 페이지를 열면 주소창에 32자 해시가 보입니다 — 그게 DB ID입니다</text>
+  <text x="84" y="290" font-family="'Courier New',Courier,monospace" font-size="13" fill="#6b7280">notion.so/&lt;workspace&gt;/</text>
+  <text x="264" y="290" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="700" fill="#1d4ed8">345ea273b92681b1a3b6c6fc914aabc3</text>
+  <text x="520" y="290" font-family="'Courier New',Courier,monospace" font-size="13" fill="#6b7280">?v=...</text>
+
+  <text x="60" y="336" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">② Claude에게 스킬 제작 요청</text>
+  <rect x="60" y="348" width="1160" height="146" rx="8" fill="#0f172a"/>
+  <text x="84" y="376" font-family="'Courier New',Courier,monospace" font-size="14" fill="#a5f3fc">아래 Notion DB를 CRUD 하는 CLI 스킬을 notion-work 라는 이름으로 만들어줘.</text>
+  <text x="108" y="400" font-family="'Courier New',Courier,monospace" font-size="13" fill="#e2e8f0">DB ID: (내 Work DB ID)   ·   인증: NOTION_TOKEN 환경변수</text>
+  <text x="108" y="422" font-family="'Courier New',Courier,monospace" font-size="13" fill="#e2e8f0">기능: 오늘 마감 task 조회 / task 생성 / 상태 변경 / 메모 기록</text>
+  <text x="108" y="444" font-family="'Courier New',Courier,monospace" font-size="13" fill="#e2e8f0">유형 · 상태 · 마감일 속성을 그대로 읽고 쓸 수 있어야 해.</text>
+  <text x="84" y="472" font-family="'Courier New',Courier,monospace" font-size="13" fill="#94a3b8">&#8594; .claude/skills/notion-work/SKILL.md + Notion API 호출 스크립트가 생성됩니다</text>
+
+  <text x="60" y="526" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">③ 확인</text>
+  <text x="60" y="550" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#374151">"오늘 마감인 task 보여줘" 라고 물어보면 Work DB 내용이 그대로 나와야 합니다 — 여기까지 되면 연결 성공입니다</text>
+
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">스킬은 하나만 만듭니다 — 유형별 처리 방법은 다음 슬라이드에서 reference/ 로 분리합니다</text>
+</svg>

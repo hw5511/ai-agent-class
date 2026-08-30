@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="38" font-weight="700" fill="#171717">리허설 폴더 세팅 — guide.md 를 Claude에게</text>
+  <text x="60" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">세팅을 손으로 하지 않습니다. 1부에서 쓰던 그 Claude에게 guide.md 를 읽히면 알아서 맞춰줍니다</text>
+  <line x1="60" y1="200" x2="1220" y2="200" stroke="#e5e7eb" stroke-width="1"/>
+
+  <text x="60" y="230" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">① 사람이 먼저 준비하는 것 — 2가지</text>
+
+  <rect x="60" y="242" width="566" height="96" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="88" cy="272" r="13" fill="#eff6ff"/>
+  <text x="88" y="277" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#2563eb">1</text>
+  <text x="112" y="277" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">리허설_공유용/ 폴더 내려받기</text>
+  <text x="112" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">rehearsal_shared.zip 압축 해제 — 안에 guide.md 가 들어 있습니다</text>
+  <text x="112" y="322" font-family="'Courier New',Courier,monospace" font-size="12" fill="#9ca3af">리허설_공유용/{PM, 박부장, 이과장, 정대리, 최주임, 김대표, _공용}</text>
+
+  <rect x="654" y="242" width="566" height="96" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="682" cy="272" r="13" fill="#eff6ff"/>
+  <text x="682" y="277" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#2563eb">2</text>
+  <text x="706" y="277" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">리허설용 Notion 템플릿 복제 + Integration 연결</text>
+  <text x="706" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">담당자 5명 스키마가 들어 있는 별도 DB입니다 (1부 Work DB와 다름)</text>
+  <text x="706" y="322" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">DB ID 는 직접 안 찾아도 됩니다 — URL 만 Claude에게 주면 됩니다</text>
+
+  <text x="60" y="374" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">② 1부에서 쓰던 Claude 창에 그대로 요청</text>
+  <rect x="60" y="386" width="1160" height="96" rx="8" fill="#0f172a"/>
+  <text x="84" y="416" font-family="'Courier New',Courier,monospace" font-size="14" fill="#a5f3fc">리허설_공유용/guide.md 읽고, 이 폴더에 세팅 필요한 거 다 세팅해줘.</text>
+  <text x="84" y="440" font-family="'Courier New',Courier,monospace" font-size="13" fill="#e2e8f0">리허설용 Notion DB 주소는 (복제한 페이지 URL) 이야.</text>
+  <text x="84" y="468" font-family="'Courier New',Courier,monospace" font-size="12" fill="#94a3b8">스킬도 .env 도 이미 이 창에 있으니 새로 만들 필요 없습니다 — 1부를 진행한 그 창에서 이어서 요청하세요</text>
+
+  <text x="60" y="518" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">③ Claude가 해주는 것 / 사람이 하는 것</text>
+  <rect x="60" y="530" width="566" height="28" rx="6" fill="#f0fdf4"/>
+  <text x="80" y="549" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#166534">Claude — URL에서 DB ID 추출 · .env 3줄 작성 · 폴더/스킬 점검</text>
+  <rect x="654" y="530" width="566" height="28" rx="6" fill="#fffbeb"/>
+  <text x="674" y="549" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#92400e">사람 — VSCode 터미널 6분할 · 각 폴더에서 claude 실행</text>
+
+  <rect x="60" y="574" width="1160" height="46" rx="10" fill="#eff6ff"/>
+  <text x="640" y="602" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">세팅이 끝나면 담당자 5명 창에 &quot;폴링 시작&quot; 을 입력하고 PM 창에 회의록을 투입합니다</text>
+</svg>
