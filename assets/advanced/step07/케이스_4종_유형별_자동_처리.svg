@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="38" font-weight="700" fill="#171717">케이스 4종 — 유형별 자동 처리</text>
+  <text x="60" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">유형 속성만 다를 뿐, 네 케이스 모두 같은 흐름으로 처리됩니다</text>
+  <line x1="60" y1="200" x2="1220" y2="200" stroke="#e5e7eb" stroke-width="1"/>
+
+  <text x="76" y="240" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#9ca3af" letter-spacing="0.06em">유형</text>
+  <text x="176" y="240" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#9ca3af" letter-spacing="0.06em">Work DB task (더미 데이터)</text>
+  <text x="676" y="240" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#9ca3af" letter-spacing="0.06em">실행 스킬</text>
+  <text x="940" y="240" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#9ca3af" letter-spacing="0.06em">결과물</text>
+
+  <rect x="60" y="252" width="1160" height="68" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="76" y="274" width="72" height="24" rx="12" fill="#eff6ff"/>
+  <text x="112" y="290" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">미팅</text>
+  <text x="176" y="282" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">"팀장님과 신규 프로젝트 킥오프 미팅 일정 확인"</text>
+  <text x="176" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">태스크명에서 날짜 · 시간 추출</text>
+  <text x="676" y="282" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="700" fill="#1d4ed8">work-meeting</text>
+  <text x="676" y="302" font-family="'Courier New',Courier,monospace" font-size="12" fill="#6b7280">gws calendar</text>
+  <text x="940" y="282" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">Google Calendar 일정 생성</text>
+  <text x="940" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#16a34a">Status: 완료</text>
+
+  <rect x="60" y="330" width="1160" height="68" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="76" y="352" width="72" height="24" rx="12" fill="#f0fdf4"/>
+  <text x="112" y="368" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#16a34a">리서치</text>
+  <text x="176" y="360" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">"경쟁사 AI 도구 도입 사례 조사"</text>
+  <text x="176" y="380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">핵심 키워드 추출 후 검색량 추이 조회</text>
+  <text x="676" y="360" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="700" fill="#1d4ed8">work-research</text>
+  <text x="676" y="380" font-family="'Courier New',Courier,monospace" font-size="12" fill="#6b7280">naver datalab</text>
+  <text x="940" y="360" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">조사 결과 Work DB 메모 저장</text>
+  <text x="940" y="380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#16a34a">Status: 완료</text>
+
+  <rect x="60" y="408" width="1160" height="68" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="76" y="430" width="72" height="24" rx="12" fill="#fef3c7"/>
+  <text x="112" y="446" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b45309">문서</text>
+  <text x="176" y="438" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">"이번달 업무 성과 정리 시트 작성"</text>
+  <text x="176" y="458" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">정리할 내용 파악 후 업무 · 성과 · 지표 컬럼 구성</text>
+  <text x="676" y="438" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="700" fill="#1d4ed8">work-docs</text>
+  <text x="676" y="458" font-family="'Courier New',Courier,monospace" font-size="12" fill="#6b7280">gws sheets</text>
+  <text x="940" y="438" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">구글 시트 생성 + 링크 저장</text>
+  <text x="940" y="458" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#16a34a">Status: 완료</text>
+
+  <rect x="60" y="486" width="1160" height="68" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="76" y="508" width="72" height="24" rx="12" fill="#fce7f3"/>
+  <text x="112" y="524" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#be185d">이메일</text>
+  <text x="176" y="516" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">"거래처 담당자에게 프로젝트 진행 현황 이메일 발송"</text>
+  <text x="176" y="536" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">수신자 · 용건 파악 후 Claude가 초안 작성</text>
+  <text x="676" y="516" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="700" fill="#1d4ed8">work-email</text>
+  <text x="676" y="536" font-family="'Courier New',Courier,monospace" font-size="12" fill="#6b7280">gws gmail</text>
+  <text x="940" y="516" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#374151">업무 이메일 발송 완료</text>
+  <text x="940" y="536" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#16a34a">Status: 완료</text>
+
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">공통 흐름:  태스크명 분석  &#8594;  유형별 스킬 실행  &#8594;  산출물 생성  &#8594;  Status: 완료 (Notion 자동 반영)</text>
+</svg>
