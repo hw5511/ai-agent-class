@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="38" font-weight="700" fill="#171717">Remotion 스킬 — 라우터 구조의 완성형</text>
+  <text x="60" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">React 코드로 영상을 만드는 공식 스킬. 우리가 만든 reference 라우팅과 같은 구조를 벤더 규모로 본 것</text>
+  <line x1="60" y1="200" x2="1220" y2="200" stroke="#e5e7eb" stroke-width="1"/>
+
+  <text x="60" y="230" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">라우터 1개 + 스킬 11개</text>
+  <rect x="60" y="242" width="560" height="248" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+
+  <rect x="84" y="262" width="512" height="40" rx="6" fill="#eff6ff"/>
+  <text x="100" y="287" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="700" fill="#1d4ed8">remotion-best-practices</text>
+  <text x="330" y="287" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#2563eb">59줄 — 분기 규칙만</text>
+
+  <text x="100" y="326" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">영상 만들어줘</text>
+  <text x="290" y="326" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">&#8594; remotion-create</text>
+  <text x="100" y="352" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">React 마크업 작성</text>
+  <text x="290" y="352" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">&#8594; remotion-markup</text>
+  <text x="470" y="352" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">365줄+62문서</text>
+  <text x="100" y="378" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">자막 · 지도 · 소리</text>
+  <text x="290" y="378" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">&#8594; captions · maps · multimedia</text>
+  <text x="100" y="404" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">렌더링 · 미리보기</text>
+  <text x="290" y="404" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">&#8594; render · studio</text>
+  <text x="100" y="430" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#6b7280">SaaS · 문서 · 업그레이드</text>
+  <text x="290" y="430" font-family="'Courier New',Courier,monospace" font-size="12" fill="#374151">&#8594; saas · docs · upgrade</text>
+
+  <line x1="84" y1="450" x2="596" y2="450" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="100" y="472" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">버전이 라이브러리에 고정 — 12개 전부</text>
+  <text x="392" y="472" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="700" fill="#1d4ed8">version: 4.0.518</text>
+
+  <text x="660" y="230" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">만든 사람만 쓸 수 있는 내용</text>
+  <rect x="660" y="242" width="560" height="112" rx="8" fill="#0f172a"/>
+  <text x="684" y="272" font-family="'Courier New',Courier,monospace" font-size="13" fill="#a5f3fc">CSS transition · animation 은 렌더링되지 않는다</text>
+  <text x="684" y="296" font-family="'Courier New',Courier,monospace" font-size="13" fill="#e2e8f0">Tailwind 애니메이션 클래스도 마찬가지다</text>
+  <text x="684" y="324" font-family="'Courier New',Courier,monospace" font-size="13" fill="#a5f3fc">useCurrentFrame() + interpolate() 로 구동하라</text>
+  <text x="684" y="344" font-family="'Courier New',Courier,monospace" font-size="11" fill="#94a3b8">프레임 단위 렌더러에서 왜 죽는지는 만든 쪽만 압니다</text>
+
+  <text x="660" y="384" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">같은 문서를 두 역할로 배포</text>
+  <rect x="660" y="396" width="560" height="94" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="684" y="422" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="700" fill="#374151">SKILL.md</text>
+  <text x="800" y="422" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">단독 설치 — description 으로 자동 발동</text>
+  <text x="684" y="446" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="700" fill="#374151">REFERENCE.md</text>
+  <text x="800" y="446" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">라우터 안 — 필요할 때만 열림</text>
+  <text x="684" y="474" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">내용은 같고 링크 경로만 다릅니다 — 생성기와 링크 검증기가 관리합니다</text>
+
+  <text x="60" y="518" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">설치할 때 고르기</text>
+  <rect x="60" y="530" width="566" height="28" rx="6" fill="#f0fdf4"/>
+  <text x="80" y="549" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#166534">라우터만 — 1.7MB · SKILL.md 1개 · 라우팅으로 전부 커버</text>
+  <rect x="654" y="530" width="566" height="28" rx="6" fill="#fffbeb"/>
+  <text x="674" y="549" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#92400e">--all — 3.4MB · SKILL.md 12개 · 같은 문서 89개가 두 벌</text>
+
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">라우팅이 커지면 문서를 손으로 관리할 수 없습니다 — 그래서 생성기를 만들었습니다</text>
+</svg>

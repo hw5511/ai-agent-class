@@ -7,7 +7,8 @@
     "되짚기 — 스킬 · reference 라우팅 · 멀티 에이전트",
     "ELI5 — 상대에 맞춰 설명을 바꿔주는 스킬",
     "스킬 세트로 묶기 — 층이 다르면 겹쳐 쓰고, 같으면 충돌한다",
-    "고르는 기준 — 별 수가 아니라 SKILL.md 를 읽는다"
+    "고르는 기준 — 별 수가 아니라 SKILL.md 를 읽는다",
+    "Remotion 공식 스킬 — 라우터 구조를 벤더 규모로 확인"
   ],
   "practice": "추천 스킬을 하나씩 설치해 보고, react-shadcn-kit 세트를 받아 .claude/skills/ 에 넣은 뒤 실제로 발동시켜 본다.",
   "slides": [
@@ -81,6 +82,37 @@
           {
             "desc": "설치 후 이렇게 시켜봅니다",
             "copy": "React로 할 일 목록 화면 하나 만들어줘"
+          }
+        ]
+      }
+    },
+    {
+      "imagePath": "assets/advanced/step08/Remotion_스킬_라우터의_완성형.svg",
+      "goal": "공식 벤더가 만든 라우터형 스킬을 열어보고, 우리가 만든 reference 라우팅이 커지면 어떤 모습이 되는지 확인한다.",
+      "topics": [
+        "라우터 1개(59줄) + 스킬 11개 — 분기 규칙만 담은 SKILL.md",
+        "같은 문서를 SKILL.md(자동 발동)와 REFERENCE.md(필요할 때)로 이중 배포",
+        "만든 사람만 아는 내용 — CSS 애니메이션은 렌더링되지 않는다",
+        "설치는 라우터만 1.7MB, --all 은 3.4MB에 문서 89개가 두 벌"
+      ],
+      "practice": "라우터 SKILL.md 59줄을 먼저 읽고, 내 스킬의 라우팅과 무엇이 다른지 비교한 뒤 설치한다.",
+      "action": {
+        "label": "Remotion 스킬 열어보기",
+        "items": [
+          {
+            "link": {
+              "href": "https://github.com/remotion-dev/skills/tree/main/skills/remotion-best-practices",
+              "text": "remotion-best-practices — 라우터 SKILL.md 읽기"
+            },
+            "desc": "설치 전에 59줄짜리 라우팅 규칙부터 봅니다"
+          },
+          {
+            "desc": "라우터만 설치 (권장)",
+            "copy": "npx skills add remotion-dev/skills --skill remotion-best-practices"
+          },
+          {
+            "desc": "12개 전부 설치 — 중복이 생깁니다",
+            "copy": "npx skills add remotion-dev/skills --all"
           }
         ]
       }
