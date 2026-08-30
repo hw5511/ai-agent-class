@@ -44,11 +44,11 @@
               "href": "https://github.com/dreambigou/eli5",
               "text": "dreambigou/eli5"
             },
-            "desc": "설치 전에 skills/eli5/SKILL.md 를 먼저 읽어봅니다"
+            "desc": "먼저 눌러서 skills/eli5/SKILL.md 를 읽어봅니다"
           },
           {
-            "desc": "클론해서 스킬 폴더로 복사",
-            "copy": "git clone https://github.com/dreambigou/eli5.git && cp -r eli5/skills/eli5 ~/.claude/skills/"
+            "desc": "Claude 에게 그대로 붙여넣으세요",
+            "copy": "https://github.com/dreambigou/eli5 이 레포의 eli5 스킬을 현재 폴더의 .claude/skills 에 설치해줘. 설치하기 전에 SKILL.md 를 읽고 무엇을 하는 스킬인지 한 줄로 알려줘."
           }
         ]
       }
@@ -64,18 +64,18 @@
       ],
       "practice": "두 폴더를 스킬 폴더에 넣고, \"5페이지 정도 규모의 ERP 대시보드 만들어줘\" 라고 시켜 결과물을 브라우저로 확인한다.",
       "action": {
-        "label": "웹 코드 스킬 내려받기",
+        "label": "웹 코드 스킬 설치",
         "items": [
           {
             "link": {
               "href": "https://hw5511.github.io/ai-agent-class/assets/advanced/step08/web-skills.zip",
               "text": "web-skills.zip — 스킬 2개"
             },
-            "desc": "압축을 풀면 react-shadcn-kit · shadcn 두 폴더가 나옵니다"
+            "desc": "직접 받아서 넣어도 됩니다 (react-shadcn-kit · shadcn)"
           },
           {
-            "desc": "압축을 풀고 두 폴더를 스킬 폴더에 넣습니다",
-            "copy": "unzip web-skills.zip && mkdir -p ~/.claude/skills && cp -r react-shadcn-kit shadcn ~/.claude/skills/"
+            "desc": "Claude 에게 그대로 붙여넣으세요",
+            "copy": "https://hw5511.github.io/ai-agent-class/assets/advanced/step08/web-skills.zip 이 ZIP 을 받아서 압축을 풀고, 안에 들어 있는 react-shadcn-kit 과 shadcn 두 폴더를 현재 폴더의 .claude/skills 에 설치해줘. 설치가 끝나면 두 스킬이 각각 무엇을 담당하는지 한 줄씩 알려줘."
           }
         ]
       }
@@ -98,11 +98,11 @@
               "href": "https://github.com/remotion-dev/skills/tree/main/skills/remotion-best-practices",
               "text": "remotion-dev/skills — 라우터 SKILL.md"
             },
-            "desc": "설치 전에 59줄짜리 라우팅 규칙부터 봅니다"
+            "desc": "먼저 눌러서 59줄짜리 라우팅 규칙을 봅니다"
           },
           {
-            "desc": "라우터만 설치하면 나머지 11개가 따라옵니다",
-            "copy": "npx skills add remotion-dev/skills --skill remotion-best-practices"
+            "desc": "Claude 에게 그대로 붙여넣으세요",
+            "copy": "https://github.com/remotion-dev/skills 여기서 remotion-best-practices 스킬만 현재 폴더의 .claude/skills 에 설치해줘. 그 하나가 나머지 11개를 라우팅으로 품고 있으니 전부 설치하지는 마."
           }
         ]
       }
@@ -135,8 +135,8 @@
             "desc": "자막을 손그림 영상으로 바꾸는 스킬 (파이썬 실행)"
           },
           {
-            "desc": "클론하고 전용 가상환경까지 한 번에",
-            "copy": "git clone https://github.com/geeklee/srt-whiteboard-animation.git && cd srt-whiteboard-animation && python scripts/prepare_env.py"
+            "desc": "Claude 에게 그대로 붙여넣으세요",
+            "copy": "https://github.com/geeklee/srt-whiteboard-animation 이 레포를 받아서 현재 폴더의 .claude/skills 에 설치하고, scripts/prepare_env.py 로 전용 파이썬 가상환경까지 준비해줘. SKILL.md 에 출력을 중국어로 쓰라는 조항이 있으면 한국어로 바꿔줘."
           }
         ]
       }
@@ -155,15 +155,18 @@
         "label": "두 CLI 설치하고 불러보기",
         "items": [
           {
-            "desc": "Codex CLI (OpenAI · GPT)",
-            "copy": "npm i -g @openai/codex"
+            "link": {
+              "href": "https://antigravity.google/docs/cli/install",
+              "text": "Antigravity CLI 설치 문서"
+            },
+            "desc": "macOS · Linux · Windows 설치 방법"
           },
           {
-            "desc": "Antigravity CLI (Google · Gemini) — 명령어는 agy",
-            "copy": "curl -fsSL https://antigravity.google/cli/install.sh | bash"
+            "desc": "Claude 에게 그대로 붙여넣으세요 — 두 CLI 를 설치합니다",
+            "copy": "Codex CLI 와 Antigravity CLI 를 설치해줘. Codex 는 npm 패키지 @openai/codex 를 전역 설치하면 되고, Antigravity 는 https://antigravity.google/cli/install.sh 설치 스크립트를 쓰면 돼. 설치 후 codex 와 agy 명령이 잡히는지 확인해줘."
           },
           {
-            "desc": "① 다른 AI에게 검수시키기 — Claude 에게 이렇게 시킵니다",
+            "desc": "① 다른 AI에게 검수시키기",
             "copy": "방금 만든 코드를 codex 와 agy 한테도 각각 보여주고 검토받아줘. 두 쪽이 지적한 것 중 네가 놓친 게 있으면 정리해서 알려줘."
           },
           {
@@ -171,15 +174,8 @@
             "copy": "agy 로 이 문서에 넣을 삽화 하나 만들어줘. 만든 파일 경로를 알려줘."
           },
           {
-            "desc": "③ 비디오 분석하기 — agy 는 영상을 그대로 읽습니다",
+            "desc": "③ 비디오 분석하기",
             "copy": "agy 한테 이 mp4 파일을 읽혀서 무슨 내용인지 요약하게 해줘. 프레임을 따로 뽑지 말고 영상 파일 자체를 넘겨."
-          },
-          {
-            "link": {
-              "href": "https://antigravity.google/docs/cli/install",
-              "text": "Antigravity CLI 설치 문서"
-            },
-            "desc": "macOS · Linux · Windows 설치 방법"
           }
         ]
       }
