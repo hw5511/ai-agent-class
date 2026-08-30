@@ -5,13 +5,14 @@
   "goal": "Notion Work DB의 유형 속성을 읽고 스스로 스킬을 고르는 PM 에이전트를 만든 뒤, 같은 구조를 PM + 담당자 5명으로 확장해 회의록 하나로 산출물 5개가 동시에 나오는 오케스트레이션까지 완성한다.",
   "topics": [
     "PM 에이전트 개념 — Notion을 보고 알아서 처리",
-    "Work DB 유형 속성(미팅/리서치/문서/이메일) 기반 분류 + Status 자동 업데이트",
-    "케이스 4종: 캘린더·데이터랩·시트·이메일",
+    "Work DB CRUD 스킬(work-db) 1개 제작 — DB ID 연결",
+    "reference/ 유형별 처리 문서 + SKILL.md 라우팅 (미팅/리서치/문서/이메일)",
+    "케이스 4종 실행: 캘린더·데이터랩·시트·이메일 + Status 자동 업데이트",
     "단일 → 멀티 확장: 오케스트레이션 개념과 동작 흐름",
     "Stability AI 이미지 생성 스킬 추가",
-    "멀티 에이전트 시연 (PM + 담당자 5명 동시 실행)"
+    "리허설 폴더 세팅(.env 3줄) + 폴링 실행 → PM + 담당자 5명 동시 처리"
   ],
-  "practice": "1부에서 Work DB에 등록한 task 4개를 명령 한 번으로 자동 처리하고, 2부에서 회의록 하나를 PM에게 투입해 담당자 5명이 동시에 산출물을 만들어내는 것을 확인한다.",
+  "practice": "1부에서 work-db 스킬과 reference/ 문서 4장을 만들어 명령 한 번으로 오늘 할 일을 처리하고, 2부에서 리허설 폴더를 세팅한 뒤 회의록을 PM에게 투입해 담당자 5명이 동시에 산출물을 만들어내는 것을 확인한다.",
   "slides": [
     {
       "imagePath": "assets/advanced/step07/PM_에이전트란.svg",
@@ -75,16 +76,50 @@
       }
     },
     {
+      "imagePath": "assets/advanced/step07/Work_DB_CRUD_스킬_만들기.svg",
+      "goal": "복제한 Work DB의 DB ID를 연결해 조회·생성·상태변경까지 하는 CLI 스킬 하나(work-db)를 만든다.",
+      "topics": [
+        "Work DB 페이지 URL의 32자 해시 = DB ID",
+        "스킬은 4개가 아니라 1개 — work-db 하나로 CRUD 전부 처리",
+        "인증은 NOTION_TOKEN 환경변수, 유형·상태·마감일 속성을 읽고 쓸 수 있어야 함",
+        "\"오늘 마감인 task 보여줘\"로 연결 확인"
+      ],
+      "practice": null,
+      "action": {
+        "label": "스킬 제작 요청 프롬프트 복사",
+        "copy": "아래 Notion DB를 CRUD 하는 CLI 스킬을 work-db 라는 이름으로 만들어줘. DB ID는 (내 Work DB ID), 인증은 NOTION_TOKEN 환경변수를 쓴다. 기능은 오늘 마감 task 조회 / task 생성 / 상태 변경 / 메모 기록 네 가지고, 유형·상태·마감일 속성을 그대로 읽고 쓸 수 있어야 해. .claude/skills/work-db/ 아래에 SKILL.md 와 Notion API 호출 스크립트를 만들어줘."
+      }
+    },
+    {
+      "imagePath": "assets/advanced/step07/reference_라우팅_유형별_처리_방법.svg",
+      "goal": "유형별 처리 절차를 reference/ 문서로 분리하고, SKILL.md에는 어느 문서를 열지만 라우팅으로 적는다.",
+      "topics": [
+        ".claude/skills/work-db/reference/ 에 meeting·research·docs·email 문서 4장",
+        "SKILL.md에는 처리 절차 대신 '유형 → 참조 문서' 라우팅 표만",
+        "SKILL.md는 항상 읽히지만 reference 문서는 해당 유형을 만났을 때만 열림",
+        "유형이 늘면 문서 한 장 추가 + 라우팅 한 줄 추가"
+      ],
+      "practice": null,
+      "action": {
+        "label": "SKILL.md 라우팅 블록 복사",
+        "items": [
+          {
+            "desc": "전체 복사",
+            "copy": "## 유형별 처리 라우팅\n\ntask 의 '유형' 속성을 읽고 아래 문서를 열어 그 절차대로 실행한다.\n\n- 유형 = '미팅'   → reference/meeting.md\n- 유형 = '리서치' → reference/research.md\n- 유형 = '문서'   → reference/docs.md\n- 유형 = '이메일' → reference/email.md\n\n처리 시작 직전 상태 = '진행 중' 으로 변경하고, 처리 완료 직후 상태 = '완료' 로 변경한다.\n오류가 나면 메모에 '[오류] 사유' 를 기록하고 상태는 그대로 둔 뒤 다음 task 로 넘어간다."
+          }
+        ]
+      }
+    },
+    {
       "imagePath": "assets/advanced/step07/유형별_분류_로직_케이스_4종.svg",
-      "goal": "Work DB '유형' 속성으로 실행할 스킬이 결정되는 분류 로직을 이해하고, 유형 4종이 각각 어떤 결과물을 만드는지 확인한 뒤 명령 한 번으로 네 건이 처리되는 것을 관찰한다.",
+      "goal": "SKILL.md 라우팅이 실제로 어떻게 도는지 유형 4종으로 확인하고, 명령 한 번으로 네 건이 처리되는 것을 관찰한다.",
       "topics": [
         "분류 기준 = Work DB '유형' 속성 (미팅/리서치/문서/이메일)",
-        "미팅 → work-meeting (gws calendar) → 캘린더 일정 생성",
-        "리서치 → work-research (naver datalab) → Work DB 메모에 조사 결과 저장",
-        "문서 → work-docs (gws sheets) → 구글 시트 생성 + 링크 저장",
-        "이메일 → work-email (gws gmail) → 업무 이메일 발송",
-        "이 매핑을 CLAUDE.md 규칙으로 작성해야 Claude가 스스로 스킬을 고름",
-        "공통 흐름: 태스크명 분석 → 스킬 실행 → 산출물 생성 → Status: 완료"
+        "미팅 → reference/meeting.md (gws calendar) → 캘린더 일정 생성",
+        "리서치 → reference/research.md (naver datalab) → Work DB 메모에 조사 결과 저장",
+        "문서 → reference/docs.md (gws sheets) → 구글 시트 생성 + 링크 저장",
+        "이메일 → reference/email.md (gws gmail) → 업무 이메일 발송",
+        "공통 흐름: 태스크명 분석 → reference 문서 절차 실행 → 산출물 생성 → Status: 완료"
       ],
       "practice": "Work에서 오늘 처리해야 하는 것들 찾아서 처리해줘",
       "action": {
@@ -175,6 +210,48 @@
         "담당자 5명 폴링 감지 → 동시 처리 시작",
         "각 담당자 스킬 호출 → 산출물 생성 (Sheets/Gmail/Drive/Slides)",
         "Notion DB 상태 변화로 실시간 진행 확인"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/advanced/step07/세팅_가이드.svg",
+      "goal": "리허설 폴더 세팅 3단계(Notion 복제 + DB ID 추출 / .env 설정 / 터미널 실행)를 완료한다.",
+      "topics": [
+        "8회차용 Notion 템플릿 복제 + Integration 연결 + URL에서 DB ID 추출",
+        ".env.example → .env 복사 후 토큰 3개 입력 (NOTION_TOKEN / REHEARSAL_DB_ID / STABILITY_API_KEY)",
+        "VSCode 터미널 6개 분할 + 리허설_공유용/ 각 폴더에서 claude 실행",
+        "담당자 5명 \"폴링 시작\" 입력 + 대기 상태 확인"
+      ],
+      "practice": "guide.md 내용대로 세팅 도와줘",
+      "action": {
+        "label": "리허설 자료",
+        "items": [
+          {
+            "link": {
+              "href": "https://github.com/hw5511/ai-agent-class/releases/download/step8-materials/rehearsal_shared.zip",
+              "text": "rehearsal_shared.zip 다운로드"
+            },
+            "desc": "실습용 리허설_공유용/ 폴더 ZIP"
+          },
+          {
+            "link": {
+              "href": "https://woohee5511.notion.site/PM-347ea273b92681e191d3ce9586ffaa16",
+              "text": "리허설용 Work DB 템플릿 복제하기"
+            },
+            "desc": "복제 → Integration 연결 → URL의 32자 해시를 REHEARSAL_DB_ID 에 입력"
+          }
+        ]
+      }
+    },
+    {
+      "imagePath": "assets/advanced/step07/실습_직접_세팅_테스트.svg",
+      "goal": "직접 폴링 실행 + 회의록 투입 + 결과 확인으로 멀티 에이전트를 완성한다.",
+      "topics": [
+        "담당자 5명 터미널에 \"폴링 시작\" 입력",
+        "PM 터미널에 회의록 Google Docs 링크 투입",
+        "Notion DB 상태 실시간 확인 (시작 전 → 진행 중 → 완료)",
+        "outputs/ 폴더 산출물 확인"
       ],
       "practice": "아래 회의록 분석해서 담당자별 task를 Notion Work DB에 등록해줘.\n\nhttps://docs.google.com/document/d/1xou1GeVB5REq6aMME2FtS7RzINTkmqHmWh6Xeq3sKeQ/edit?usp=sharing",
       "action": {
