@@ -9,7 +9,8 @@
     "스킬 세트로 묶기 — 층이 다르면 겹쳐 쓰고, 같으면 충돌한다",
     "고르는 기준 — 별 수가 아니라 SKILL.md 를 읽는다",
     "Remotion 공식 스킬 — 라우터 구조를 벤더 규모로 확인",
-    "스킬 이어붙이기 — 자막에서 완성 영상까지 파이프라인"
+    "스킬 이어붙이기 — 자막에서 완성 영상까지 파이프라인",
+    "Codex · Antigravity CLI — 다른 AI에게 검수 · 이미지 · 영상 분석 맡기기"
   ],
   "practice": "추천 스킬을 하나씩 설치해 보고, react-shadcn-kit 세트를 받아 .claude/skills/ 에 넣은 뒤 실제로 발동시켜 본다.",
   "slides": [
@@ -171,6 +172,49 @@
           {
             "desc": "2단계 — 장면 MP4 가 나온 뒤 Remotion 으로 합칩니다",
             "copy": "방금 만든 장면 MP4 들을 Remotion TransitionSeries 로 이어붙여줘. 클립 사이에 페이드 전환을 넣고, 앞에 타이틀 카드와 뒤에 엔딩 카드를 붙이고, 화면 하단에 자막 띠를 따로 만들어서 그림과 겹치지 않게 해줘."
+          }
+        ]
+      }
+    },
+    {
+      "imagePath": "assets/advanced/step08/Codex_Antigravity_CLI_활용법.svg",
+      "goal": "Claude 하나로 안 되는 일을 다른 회사의 AI CLI 를 불러 해결하는 방법을 익힌다.",
+      "topics": [
+        "다른 AI에게 검수시키기 — Claude가 짠 것을 GPT·Gemini에게 리뷰받는다",
+        "이미지 생성하기 — 두 CLI 모두 이미지 모델을 갖고 있다",
+        "비디오 분석하기 — agy 는 프레임 추출 없이 영상 파일을 그대로 읽는다",
+        "CLI 를 감싸 두면 Claude 가 대화하듯 호출한다"
+      ],
+      "practice": "codex 와 agy 를 설치하고, 방금 만든 코드를 다른 모델에게 검수시켜 Claude가 놓친 것이 나오는지 확인한다.",
+      "action": {
+        "label": "두 CLI 설치하고 불러보기",
+        "items": [
+          {
+            "desc": "Codex CLI (OpenAI · GPT)",
+            "copy": "npm i -g @openai/codex"
+          },
+          {
+            "desc": "Antigravity CLI (Google · Gemini) — 명령어는 agy",
+            "copy": "curl -fsSL https://antigravity.google/cli/install.sh | bash"
+          },
+          {
+            "desc": "① 다른 AI에게 검수시키기 — Claude 에게 이렇게 시킵니다",
+            "copy": "방금 만든 코드를 codex 와 agy 한테도 각각 보여주고 검토받아줘. 두 쪽이 지적한 것 중 네가 놓친 게 있으면 정리해서 알려줘."
+          },
+          {
+            "desc": "② 이미지 생성하기",
+            "copy": "agy 로 이 문서에 넣을 삽화 하나 만들어줘. 만든 파일 경로를 알려줘."
+          },
+          {
+            "desc": "③ 비디오 분석하기 — agy 는 영상을 그대로 읽습니다",
+            "copy": "agy 한테 이 mp4 파일을 읽혀서 무슨 내용인지 요약하게 해줘. 프레임을 따로 뽑지 말고 영상 파일 자체를 넘겨."
+          },
+          {
+            "link": {
+              "href": "https://antigravity.google/docs/cli/install",
+              "text": "Antigravity CLI 설치 문서"
+            },
+            "desc": "macOS · Linux · Windows 설치 방법"
           }
         ]
       }

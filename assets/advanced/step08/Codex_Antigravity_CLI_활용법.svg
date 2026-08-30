@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
+  <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="38" font-weight="700" fill="#171717">Codex · Antigravity CLI 활용법</text>
+  <text x="60" y="172" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">다른 회사의 AI를 Claude가 도구처럼 불러 씁니다 — 검수 · 이미지 · 영상</text>
+  <line x1="60" y1="200" x2="1220" y2="200" stroke="#e5e7eb" stroke-width="1"/>
+
+  <rect x="60" y="222" width="1160" height="52" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="88" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#374151">Claude Code</text>
+  <text x="212" y="254" font-family="'Courier New',Courier,monospace" font-size="14" fill="#9ca3af">&#8594;</text>
+  <text x="244" y="254" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#1d4ed8">codex</text>
+  <text x="316" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">OpenAI · GPT</text>
+  <text x="452" y="254" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#15803d">agy</text>
+  <text x="502" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">Google Antigravity · Gemini</text>
+  <text x="790" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#9ca3af">두 CLI 를 감싸 두면 Claude 가 대화하듯 호출합니다</text>
+
+  <rect x="60" y="300" width="360" height="244" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="94" cy="338" r="15" fill="#eff6ff"/>
+  <text x="94" y="344" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">1</text>
+  <text x="122" y="344" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#374151">다른 AI에게 검수시키기</text>
+  <text x="84" y="384" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">Claude 가 짠 코드를 GPT 나 Gemini</text>
+  <text x="84" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">에게 넘겨 리뷰를 받습니다.</text>
+  <rect x="84" y="428" width="312" height="60" rx="6" fill="#0f172a"/>
+  <text x="100" y="452" font-family="'Courier New',Courier,monospace" font-size="12" fill="#a5f3fc">codex exec "이 diff 검토해줘"</text>
+  <text x="100" y="474" font-family="'Courier New',Courier,monospace" font-size="12" fill="#e2e8f0">agy -p "놓친 엣지케이스 있나"</text>
+  <text x="84" y="516" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">같은 모델끼리는 같은 실수를 합니다</text>
+
+  <rect x="460" y="300" width="360" height="244" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="494" cy="338" r="15" fill="#f0fdf4"/>
+  <text x="494" y="344" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#15803d">2</text>
+  <text x="522" y="344" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#374151">이미지 생성하기</text>
+  <text x="484" y="384" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">두 CLI 모두 이미지 모델을 갖고</text>
+  <text x="484" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#6b7280">있어 그림을 직접 만들어 줍니다.</text>
+  <rect x="484" y="428" width="312" height="60" rx="6" fill="#0f172a"/>
+  <text x="500" y="452" font-family="'Courier New',Courier,monospace" font-size="12" fill="#a5f3fc">agy -p "슬라이드용 삽화 하나"</text>
+  <text x="500" y="474" font-family="'Courier New',Courier,monospace" font-size="12" fill="#94a3b8">→ 파일로 저장됩니다</text>
+  <text x="484" y="516" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">Claude 에 없는 능력을 빌려옵니다</text>
+
+  <rect x="860" y="300" width="360" height="244" rx="8" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+  <circle cx="894" cy="338" r="15" fill="#fef3c7"/>
+  <text x="894" y="344" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b45309">3</text>
+  <text x="922" y="344" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#374151">비디오 분석하기</text>
+  <text x="884" y="384" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#92400e">agy 는 영상 파일을 그대로 읽고</text>
+  <text x="884" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" fill="#92400e">스스로 분석합니다.</text>
+  <rect x="884" y="428" width="312" height="60" rx="6" fill="#0f172a"/>
+  <text x="900" y="452" font-family="'Courier New',Courier,monospace" font-size="12" fill="#a5f3fc">agy -p "demo.mp4 읽고 요약해줘"</text>
+  <text x="900" y="474" font-family="'Courier New',Courier,monospace" font-size="12" fill="#94a3b8">프레임을 뽑지 않습니다</text>
+  <text x="884" y="516" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#b45309">영상 자체를 이해합니다</text>
+
+  <rect x="60" y="568" width="1160" height="52" rx="10" fill="#eff6ff"/>
+  <text x="640" y="599" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#2563eb">Claude 하나로 안 되는 일은 다른 AI 를 부릅니다 — CLI 가 그 창구입니다</text>
+</svg>
