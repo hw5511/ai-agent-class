@@ -5,14 +5,14 @@
   "goal": "Notion Work DB의 유형 속성을 읽고 스스로 스킬을 고르는 PM 에이전트를 만든 뒤, 같은 구조를 PM + 담당자 5명으로 확장해 회의록 하나로 산출물 5개가 동시에 나오는 오케스트레이션까지 완성한다.",
   "topics": [
     "PM 에이전트 개념 — Notion을 보고 알아서 처리",
-    "Work DB CRUD 스킬(work-db) 1개 제작 — DB ID 연결",
+    "Work DB CRUD 스킬(notion-work) 1개 제작 — DB ID 연결",
     "reference/ 유형별 처리 문서 + SKILL.md 라우팅 (미팅/리서치/문서/이메일)",
     "케이스 4종 실행: 캘린더·데이터랩·시트·이메일 + Status 자동 업데이트",
     "단일 → 멀티 확장: 오케스트레이션 개념과 동작 흐름",
     "Stability AI 이미지 생성 스킬 추가",
     "리허설 폴더 세팅(.env 3줄) + 폴링 실행 → PM + 담당자 5명 동시 처리"
   ],
-  "practice": "1부에서 work-db 스킬과 reference/ 문서 4장을 만들어 명령 한 번으로 오늘 할 일을 처리하고, 2부에서 리허설 폴더를 세팅한 뒤 회의록을 PM에게 투입해 담당자 5명이 동시에 산출물을 만들어내는 것을 확인한다.",
+  "practice": "1부에서 notion-work 스킬과 reference/ 문서 4장을 만들어 명령 한 번으로 오늘 할 일을 처리하고, 2부에서 리허설 폴더를 세팅한 뒤 회의록을 PM에게 투입해 담당자 5명이 동시에 산출물을 만들어내는 것을 확인한다.",
   "slides": [
     {
       "imagePath": "assets/advanced/step07/PM_에이전트란.svg",
@@ -39,12 +39,12 @@
     },
     {
       "imagePath": "assets/advanced/step07/스킬_세팅_확인.svg",
-      "goal": "Step3/4/6에서 만든 스킬 파일이 있는지 확인한다.",
+      "goal": "Step3·Step4에서 만든 선행 스킬 2개를 확인하고, 오늘 만들 notion-work 스킬을 미리 본다.",
       "topics": [
-        "gws_skill.md — Step3 GWS CLI 통합 스킬",
-        "naver-datalab.md — Step4 네이버 API 스킬",
-        "notion-work.md — Step6 Work DB 조회 스킬",
-        ".claude/skills/ 폴더에 3개 모두 존재 확인"
+        "gws_skill.md — Step3 GWS CLI 통합 스킬 (선행)",
+        "naver-datalab.md — Step4 네이버 API 스킬 (선행)",
+        "notion-work — Work DB CRUD + reference/ 라우팅 스킬 (오늘 5~6번에서 제작)",
+        ".claude/skills/ 폴더에 앞의 2개가 있는지 확인"
       ],
       "practice": null,
       "action": {
@@ -77,24 +77,24 @@
     },
     {
       "imagePath": "assets/advanced/step07/Work_DB_CRUD_스킬_만들기.svg",
-      "goal": "복제한 Work DB의 DB ID를 연결해 조회·생성·상태변경까지 하는 CLI 스킬 하나(work-db)를 만든다.",
+      "goal": "복제한 Work DB의 DB ID를 연결해 조회·생성·상태변경까지 하는 CLI 스킬 하나(notion-work)를 만든다.",
       "topics": [
         "Work DB 페이지 URL의 32자 해시 = DB ID",
-        "스킬은 4개가 아니라 1개 — work-db 하나로 CRUD 전부 처리",
+        "스킬은 4개가 아니라 1개 — notion-work 하나로 CRUD 전부 처리",
         "인증은 NOTION_TOKEN 환경변수, 유형·상태·마감일 속성을 읽고 쓸 수 있어야 함",
         "\"오늘 마감인 task 보여줘\"로 연결 확인"
       ],
       "practice": null,
       "action": {
         "label": "스킬 제작 요청 프롬프트 복사",
-        "copy": "아래 Notion DB를 CRUD 하는 CLI 스킬을 work-db 라는 이름으로 만들어줘. DB ID는 (내 Work DB ID), 인증은 NOTION_TOKEN 환경변수를 쓴다. 기능은 오늘 마감 task 조회 / task 생성 / 상태 변경 / 메모 기록 네 가지고, 유형·상태·마감일 속성을 그대로 읽고 쓸 수 있어야 해. .claude/skills/work-db/ 아래에 SKILL.md 와 Notion API 호출 스크립트를 만들어줘."
+        "copy": "아래 Notion DB를 CRUD 하는 CLI 스킬을 notion-work 라는 이름으로 만들어줘. DB ID는 (내 Work DB ID), 인증은 NOTION_TOKEN 환경변수를 쓴다. 기능은 오늘 마감 task 조회 / task 생성 / 상태 변경 / 메모 기록 네 가지고, 유형·상태·마감일 속성을 그대로 읽고 쓸 수 있어야 해. .claude/skills/notion-work/ 아래에 SKILL.md 와 Notion API 호출 스크립트를 만들어줘."
       }
     },
     {
       "imagePath": "assets/advanced/step07/reference_라우팅_유형별_처리_방법.svg",
       "goal": "유형별 처리 절차를 reference/ 문서로 분리하고, SKILL.md에는 어느 문서를 열지만 라우팅으로 적는다.",
       "topics": [
-        ".claude/skills/work-db/reference/ 에 meeting·research·docs·email 문서 4장",
+        ".claude/skills/notion-work/reference/ 에 meeting·research·docs·email 문서 4장",
         "SKILL.md에는 처리 절차 대신 '유형 → 참조 문서' 라우팅 표만",
         "SKILL.md는 항상 읽히지만 reference 문서는 해당 유형을 만났을 때만 열림",
         "유형이 늘면 문서 한 장 추가 + 라우팅 한 줄 추가"
@@ -216,30 +216,35 @@
     },
     {
       "imagePath": "assets/advanced/step07/세팅_가이드.svg",
-      "goal": "리허설 폴더 세팅 3단계(Notion 복제 + DB ID 추출 / .env 설정 / 터미널 실행)를 완료한다.",
+      "goal": "리허설 폴더를 내려받고 Notion 템플릿을 복제한 뒤, 1부에서 쓰던 Claude에게 guide.md를 읽혀 세팅을 맡긴다.",
       "topics": [
-        "8회차용 Notion 템플릿 복제 + Integration 연결 + URL에서 DB ID 추출",
-        ".env.example → .env 복사 후 토큰 3개 입력 (NOTION_TOKEN / REHEARSAL_DB_ID / STABILITY_API_KEY)",
-        "VSCode 터미널 6개 분할 + 리허설_공유용/ 각 폴더에서 claude 실행",
-        "담당자 5명 \"폴링 시작\" 입력 + 대기 상태 확인"
+        "리허설_공유용/ ZIP 압축 해제 — 안에 guide.md 포함",
+        "리허설용 Notion 템플릿 복제 + Integration 연결 (1부 Work DB와 다른 DB)",
+        "1부에서 쓰던 Claude 창에 그대로 요청 — 스킬·.env가 이미 있음",
+        "Claude: URL에서 DB ID 추출 + .env 3줄 작성 + 폴더·스킬 점검",
+        "사람: VSCode 터미널 6분할 + 각 폴더에서 claude 실행 → \"폴링 시작\""
       ],
-      "practice": "guide.md 내용대로 세팅 도와줘",
+      "practice": "리허설_공유용/guide.md 읽고, 이 폴더에 세팅 필요한 거 다 세팅해줘. 리허설용 Notion DB 주소는 (복제한 페이지 URL) 이야.",
       "action": {
-        "label": "리허설 자료",
+        "label": "리허설 세팅 요청 프롬프트",
         "items": [
+          {
+            "desc": "1부에서 쓰던 Claude 창에 붙여넣기",
+            "copy": "리허설_공유용/guide.md 읽고, 이 폴더에 세팅 필요한 거 다 세팅해줘. 리허설용 Notion DB 주소는 (복제한 페이지 URL) 이야. 스킬이랑 .env 는 이미 이 창에 있으니 새로 만들지 말고 필요한 값만 채워줘."
+          },
           {
             "link": {
               "href": "https://github.com/hw5511/ai-agent-class/releases/download/step8-materials/rehearsal_shared.zip",
               "text": "rehearsal_shared.zip 다운로드"
             },
-            "desc": "실습용 리허설_공유용/ 폴더 ZIP"
+            "desc": "압축 해제하면 guide.md 가 들어 있습니다"
           },
           {
             "link": {
               "href": "https://woohee5511.notion.site/PM-347ea273b92681e191d3ce9586ffaa16",
               "text": "리허설용 Work DB 템플릿 복제하기"
             },
-            "desc": "복제 → Integration 연결 → URL의 32자 해시를 REHEARSAL_DB_ID 에 입력"
+            "desc": "복제 → Integration 연결 → 페이지 URL 을 Claude에게 전달"
           }
         ]
       }

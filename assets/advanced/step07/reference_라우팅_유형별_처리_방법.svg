@@ -8,7 +8,7 @@
 
   <text x="60" y="230" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#9ca3af" letter-spacing="0.08em">스킬 폴더 구조</text>
   <rect x="60" y="242" width="560" height="222" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="80" y="276" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="700" fill="#374151">.claude/skills/work-db/</text>
+  <text x="80" y="276" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="700" fill="#374151">.claude/skills/notion-work/</text>
   <text x="92" y="302" font-family="'Courier New',Courier,monospace" font-size="13" fill="#1d4ed8">├── SKILL.md</text>
   <text x="300" y="302" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">라우팅 표만 — 짧게 유지</text>
   <text x="92" y="328" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">└── reference/</text>
