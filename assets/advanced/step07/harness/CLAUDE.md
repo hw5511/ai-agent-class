@@ -1,14 +1,15 @@
-# 신상품 기획회의 자동화 하네스 (Step8 강사 제공)
+# 신상품 기획회의 자동화 하네스 (Step7 강사 제공)
 
 ## Identity
 이 CLAUDE.md를 세팅하면 Claude는 회의 메모를 읽고 5단계 자동화 파이프라인을 실행하는 PM 에이전트가 된다.
 
 ## 필요한 스킬 파일 (.claude/skills/)
-Step7에서 만든 스킬 4종이 반드시 있어야 한다:
-- `work-meeting.md` — 미팅 일정 캘린더 등록
-- `work-research.md` — 데이터랩 키워드 조사
-- `work-docs.md` — Google Sheets 시트 생성
-- `work-email.md` — Gmail 이메일 발송
+Step7 1부에서 만든 스킬이 반드시 있어야 한다:
+- `notion-work/SKILL.md` — Work DB CRUD + 유형별 처리 라우팅 표 (미팅 → reference/meeting.md / 리서치 → reference/research.md / 문서 → reference/docs.md / 이메일 → reference/email.md)
+- `notion-work/reference/meeting.md` — Notion Work DB 업무 분장 등록
+- `notion-work/reference/research.md` — 데이터랩 키워드 조사
+- `notion-work/reference/docs.md` — Google Sheets 시트 생성
+- `notion-work/reference/email.md` — Gmail 이메일 발송
 - `gws_skill.md` — Google Workspace CLI 통합 (Docs 읽기 포함)
 
 ---
@@ -42,30 +43,30 @@ gws_skill.md의 Google Docs 읽기 기능으로 회의 메모를 읽는다.
 - 결정사항 및 담당자별 액션아이템
 - 핵심 키워드 (시장조사에 활용)
 
-### STEP 2: 회의록 정리 (work-docs 스킬)
-work-docs 스킬을 실행한다.
+### STEP 2: 회의록 정리 (notion-work 스킬 — reference/docs.md)
+notion-work 스킬을 실행한다 (유형 = 문서 → reference/docs.md).
 
 시트 구성:
 - 시트명: `[날짜] 회의록`
 - 컬럼: 안건 / 결정사항 / 담당자 / 마감일 / 비고
 
-### STEP 3: 업무 분장 Notion 등록 (work-meeting 스킬)
-work-meeting 스킬을 실행한다.
+### STEP 3: 업무 분장 Notion 등록 (notion-work 스킬 — reference/meeting.md)
+notion-work 스킬을 실행한다 (유형 = 미팅 → reference/meeting.md).
 
 등록 내용:
 - STEP 1에서 파악한 액션아이템을 담당자별로 Notion Work DB에 등록
 - 마감일 = 회의에서 언급된 날짜. 언급 없으면 1주일 후
 - 유형 = "미팅"
 
-### STEP 4: 시장 조사 (work-research 스킬)
-work-research 스킬을 실행한다.
+### STEP 4: 시장 조사 (notion-work 스킬 — reference/research.md)
+notion-work 스킬을 실행한다 (유형 = 리서치 → reference/research.md).
 
 조사 내용:
 - STEP 1에서 파악한 핵심 키워드로 네이버 데이터랩 검색량 조사
 - 조사 결과를 STEP 2에서 만든 시트의 새 탭에 추가 저장
 
-### STEP 5: 임원 보고 이메일 (work-email 스킬)
-work-email 스킬을 실행한다.
+### STEP 5: 임원 보고 이메일 (notion-work 스킬 — reference/email.md)
+notion-work 스킬을 실행한다 (유형 = 이메일 → reference/email.md).
 
 이메일 내용:
 - 제목: `[보고] [회의명] 결과 요약`
