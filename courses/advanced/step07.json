@@ -1,15 +1,17 @@
 {
   "step": 7,
-  "title": "PM 에이전트 — Notion Work DB 자동화",
-  "hours": "2시간 · Workflow Automation",
-  "goal": "Step6에서 만든 Notion Work DB에 오늘 task를 등록하면 Claude가 유형 속성을 읽고 캘린더 등록·데이터랩 조사·시트 생성·이메일 발송을 자동으로 처리하는 PM 에이전트를 구축한다.",
+  "title": "PM 에이전트 → 멀티 에이전트 오케스트레이션",
+  "hours": "2시간 · Workflow Automation & Capstone",
+  "goal": "Notion Work DB의 유형 속성을 읽고 스스로 스킬을 고르는 PM 에이전트를 만든 뒤, 같은 구조를 PM + 담당자 5명으로 확장해 회의록 하나로 산출물 5개가 동시에 나오는 오케스트레이션까지 완성한다.",
   "topics": [
     "PM 에이전트 개념 — Notion을 보고 알아서 처리",
-    "Work DB 유형 속성(미팅/리서치/문서/이메일) 기반 분류",
-    "CLAUDE.md 처리 규칙 + Status 자동 업데이트",
-    "케이스 4종: 캘린더·데이터랩·시트·이메일"
+    "Work DB 유형 속성(미팅/리서치/문서/이메일) 기반 분류 + Status 자동 업데이트",
+    "케이스 4종: 캘린더·데이터랩·시트·이메일",
+    "단일 → 멀티 확장: 오케스트레이션 개념과 동작 흐름",
+    "Stability AI 이미지 생성 스킬 추가",
+    "멀티 에이전트 시연 (PM + 담당자 5명 동시 실행)"
   ],
-  "practice": "Work DB에 task 4개를 등록하고 \"Work에서 오늘 처리해야 하는 것들 찾아서 처리해줘\"라고 명령하면 Claude가 유형 속성을 읽고 4가지 스킬을 자동 실행한다.",
+  "practice": "1부에서 Work DB에 등록한 task 4개를 명령 한 번으로 자동 처리하고, 2부에서 회의록 하나를 PM에게 투입해 담당자 5명이 동시에 산출물을 만들어내는 것을 확인한다.",
   "slides": [
     {
       "imagePath": "assets/advanced/step07/PM_에이전트란.svg",
@@ -87,6 +89,97 @@
       "practice": "Work에서 오늘 처리해야 하는 것들 찾아서 처리해줘",
       "action": {
         "copy": "Work에서 오늘 처리해야 하는 것들 찾아서 처리해줘"
+      }
+    },
+    {
+      "imagePath": "assets/advanced/step07/오케스트레이션이란.svg",
+      "goal": "에이전트 1개에서 PM + 담당자 5명으로 확장하는 오케스트레이션 개념을 이해한다.",
+      "topics": [
+        "오케스트레이션 = PM(지휘자)이 task를 등록하면 담당자들이 각자 알아서 실행",
+        "기존 방식(매번 직접 지시) vs 오케스트레이션(1번 등록 → 5명 동시 처리)",
+        "앞에서 만든 PM 에이전트를 그대로 확장한 구조",
+        "오늘 시연: 회의록 1장 → PM이 분석 → 5개 산출물 자동 완성"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/advanced/step07/오케스트레이션_동작_흐름.svg",
+      "goal": "오케스트레이션이 실제로 어떻게 동작하는지 파악한다.",
+      "topics": [
+        "① 회의록 투입 → ② PM 분석 → ③ Notion task 등록 → ④ 담당자 폴링 감지 → ⑤ 독립 실행 → ⑥ 결과 집약",
+        "시연 중 Notion DB Status 칼럼(할 일 → 진행 중 → 완료)으로 흐름 실시간 확인",
+        "Step5(Notion) + Step6(SKILL.md) + 앞 절반(PM 에이전트)이 조립된 결과"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/advanced/step07/AI_이미지_생성_스킬.svg",
+      "goal": "Stability AI API로 이미지 생성 스킬을 만들고 하네스에 연결한다.",
+      "topics": [
+        "platform.stability.ai에서 API 키 발급",
+        "Stable Diffusion 3.5 Flash (sd3.5-flash) 모델 사용",
+        "Claude에게 스킬 제작 요청 → SKILL.md + generate.py 자동 생성",
+        "활용: 최주임 담당자 에이전트에 이 스킬이 그대로 사용됩니다"
+      ],
+      "practice": "stability.ai API로 이미지 생성 스킬 만들어줘. 모델: sd3.5-flash, API 키: .env의 STABILITY_API_KEY, 입력: 이미지 설명, 출력: output/ 폴더에 PNG 저장",
+      "action": {
+        "label": "Stability AI 플랫폼",
+        "items": [
+          {
+            "link": {
+              "href": "https://platform.stability.ai/",
+              "text": "platform.stability.ai — API 키 발급"
+            },
+            "desc": "우상단 Login → Sign Up → Dashboard → API Keys → Create Key"
+          }
+        ]
+      }
+    },
+    {
+      "imagePath": "assets/advanced/step07/멀티에이전트_데모_예고.svg",
+      "goal": "멀티 에이전트 시연에서 무엇을 볼지 미리 파악한다.",
+      "topics": [
+        "PM + 5명 담당자 각 역할 확인",
+        "방금 만든 이미지 생성 스킬 → 최주임 담당자에 적용",
+        "VSCode 6-split 화면에서 동시 실행",
+        "Notion DB 상태 변화 (시작 전 → 진행 중 → 완료)"
+      ],
+      "practice": null,
+      "action": {
+        "label": "실습 자료",
+        "items": [
+          {
+            "link": {
+              "href": "https://github.com/hw5511/ai-agent-class/releases/download/step8-materials/rehearsal_shared.zip",
+              "text": "rehearsal_shared.zip 다운로드"
+            },
+            "desc": "실습용 리허설_공유용/ 폴더 ZIP"
+          },
+          {
+            "link": {
+              "href": "https://woohee5511.notion.site/PM-347ea273b92681e191d3ce9586ffaa16",
+              "text": "Work DB 템플릿 복제하기"
+            },
+            "desc": "우상단 복제 버튼 클릭 → 내 워크스페이스에 복제"
+          }
+        ]
+      }
+    },
+    {
+      "imagePath": "assets/advanced/step07/시연_시나리오_신상품_기획회의.svg",
+      "goal": "멀티 에이전트 시연 시나리오 — 회의록에서 5개 산출물까지의 전체 흐름을 이해한다.",
+      "topics": [
+        "회의록 Google Docs → PM 분석 → Notion DB 5개 task 등록",
+        "담당자 5명 폴링 감지 → 동시 처리 시작",
+        "각 담당자 스킬 호출 → 산출물 생성 (Sheets/Gmail/Drive/Slides)",
+        "Notion DB 상태 변화로 실시간 진행 확인"
+      ],
+      "practice": "아래 회의록 분석해서 담당자별 task를 Notion Work DB에 등록해줘.\n\nhttps://docs.google.com/document/d/1xou1GeVB5REq6aMME2FtS7RzINTkmqHmWh6Xeq3sKeQ/edit?usp=sharing",
+      "action": {
+        "label": "PM 투입 프롬프트",
+        "copy": "아래 회의록 분석해서 담당자별 task를 Notion Work DB에 등록해줘.\n\nhttps://docs.google.com/document/d/1xou1GeVB5REq6aMME2FtS7RzINTkmqHmWh6Xeq3sKeQ/edit?usp=sharing"
       }
     }
   ]

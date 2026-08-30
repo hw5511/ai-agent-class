@@ -12,7 +12,7 @@
   </defs>
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#2563eb"/>
-  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 08</text>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.05em">ADV 07</text>
   <text x="60" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="40" font-weight="700" fill="#171717">시연 시나리오: 신상품 기획회의</text>
   <text x="60" y="178" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" fill="#6b7280">회의록 하나 → PM 분석 → 5명 담당자 동시 처리 → 산출물 완성</text>
   <line x1="60" y1="212" x2="1220" y2="212" stroke="#e5e7eb" stroke-width="1"/>
@@ -116,7 +116,7 @@
 
   <!-- Yellow note -->
   <rect x="60" y="514" width="1160" height="34" rx="8" fill="#fef3c7" stroke="#fde68a" stroke-width="1"/>
-  <text x="640" y="536" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#92400e">Step5 notion-api + Step6 각 SKILL.md + Step7 PM Work DB — 이 세 가지가 조립된 결과입니다</text>
+  <text x="640" y="536" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#92400e">Step5 notion-api + Step6 각 SKILL.md + 오늘 만든 PM Work DB — 이 세 가지가 조립된 결과입니다</text>
 
   <rect x="60" y="562" width="1160" height="50" rx="10" fill="#2563eb"/>
   <text x="640" y="592" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffff">회의록 하나 → 5명이 동시에 자기 일 → 모든 산출물 완성</text>
