@@ -9,7 +9,8 @@
     "스킬 세트로 묶기 — 층이 다르면 겹쳐 쓰고, 같으면 충돌한다",
     "고르는 기준 — 별 수가 아니라 SKILL.md 를 읽는다",
     "Remotion 공식 스킬 — 라우터 구조를 벤더 규모로 확인",
-    "스킬 이어붙이기 — 자막에서 완성 영상까지 파이프라인"
+    "스킬 이어붙이기 — 자막에서 완성 영상까지 파이프라인",
+    "Codex · Antigravity CLI — 다른 AI에게 검수 · 이미지 · 영상 분석 맡기기"
   ],
   "practice": "추천 스킬을 하나씩 설치해 보고, react-shadcn-kit 세트를 받아 .claude/skills/ 에 넣은 뒤 실제로 발동시켜 본다.",
   "slides": [
@@ -63,9 +64,9 @@
         "SKILL.md 는 짧게, 절차는 reference/ 문서로 — 7회차와 같은 구조",
         "프로세스 · 스택 · 미감 · 검증 — 층이 다르면 겹쳐 쓸 수 있다",
         "같은 층에 둘을 깔면 충돌한다 (Tailwind + UnoCSS)",
-        "출처: superpowers · frontend-design · web-interface-guidelines · antfu"
+        "공식 shadcn 스킬과 함께 쓰기 — 컴포넌트는 공식, 나머지는 세트"
       ],
-      "practice": "세트를 내려받아 .claude/skills/ 에 넣고, React 화면을 하나 만들게 시켜 세트가 실제로 발동하는지 확인한다.",
+      "practice": "세트와 공식 shadcn 스킬을 함께 설치한 뒤, 5페이지짜리 ERP 대시보드를 만들게 시켜 둘이 어떻게 나눠 일하는지 확인한다.",
       "action": {
         "label": "react-shadcn-kit 내려받기",
         "items": [
@@ -74,15 +75,19 @@
               "href": "https://hw5511.github.io/ai-agent-class/assets/advanced/step08/react-shadcn-kit.zip",
               "text": "react-shadcn-kit.zip 다운로드"
             },
-            "desc": "SKILL.md + reference 문서 7장이 들어 있습니다 (스크립트 없음)"
+            "desc": "SKILL.md + reference 문서 7장 (스크립트 없음)"
           },
           {
             "desc": "압축을 풀고 스킬 폴더에 넣습니다",
             "copy": "unzip react-shadcn-kit.zip && mkdir -p ~/.claude/skills && cp -r react-shadcn-kit ~/.claude/skills/"
           },
           {
-            "desc": "설치 후 이렇게 시켜봅니다",
-            "copy": "React로 할 일 목록 화면 하나 만들어줘"
+            "desc": "shadcn 공식 스킬도 함께 — 설치 27만 회, rules 6장 + 자체 평가 포함",
+            "copy": "npx skills add shadcn-ui/ui --skill shadcn"
+          },
+          {
+            "desc": "둘을 함께 켜고 이 과제로 확인합니다",
+            "copy": "shadcn 기반으로 5페이지짜리 ERP 대시보드를 만들어줘. 대시보드 홈 / 주문 목록 / 재고 / 거래처 / 설정 다섯 화면이고, 목록 화면은 정렬·필터·페이지네이션이 되어야 해. 필터 상태는 URL 에 반영하고, 빈 상태와 삭제 되돌리기도 넣어줘."
           }
         ]
       }
@@ -114,6 +119,10 @@
           {
             "desc": "12개 전부 설치 — 중복이 생깁니다",
             "copy": "npx skills add remotion-dev/skills --all"
+          },
+          {
+            "desc": "설치 후 이렇게 시켜봅니다",
+            "copy": "Remotion으로 5초짜리 인트로 영상 만들어줘. 로고가 페이드로 들어오고 아래에 슬로건 한 줄이 타이핑되듯 나타나면 좋겠어. 만들고 나서 npx remotion render 로 MP4까지 뽑아줘."
           }
         ]
       }
@@ -151,6 +160,61 @@
               "text": "Remotion video-editing.md — 타임라인 편집"
             },
             "desc": "TransitionSeries 로 클립을 배치하는 방법"
+          },
+          {
+            "desc": "화이트보드 스킬 설치 — 전용 venv 를 따로 만듭니다",
+            "copy": "git clone https://github.com/geeklee/srt-whiteboard-animation.git && cd srt-whiteboard-animation && python scripts/prepare_env.py"
+          },
+          {
+            "desc": "1단계 — 자막을 장면으로 쪼개게 시킵니다",
+            "copy": "이 SRT 자막으로 화이트보드 손그림 영상을 만들 거야. 먼저 25~35초 단위로 장면을 나누고 각 장면에 뭘 그릴지 전략만 보여줘. 확인하면 그다음으로 넘어가자. 모든 설명과 결과물 문구는 한국어로 써줘."
+          },
+          {
+            "desc": "2단계 — 장면 MP4 가 나온 뒤 Remotion 으로 합칩니다",
+            "copy": "방금 만든 장면 MP4 들을 Remotion TransitionSeries 로 이어붙여줘. 클립 사이에 페이드 전환을 넣고, 앞에 타이틀 카드와 뒤에 엔딩 카드를 붙이고, 화면 하단에 자막 띠를 따로 만들어서 그림과 겹치지 않게 해줘."
+          }
+        ]
+      }
+    },
+    {
+      "imagePath": "assets/advanced/step08/Codex_Antigravity_CLI_활용법.svg",
+      "goal": "Claude 하나로 안 되는 일을 다른 회사의 AI CLI 를 불러 해결하는 방법을 익힌다.",
+      "topics": [
+        "다른 AI에게 검수시키기 — Claude가 짠 것을 GPT·Gemini에게 리뷰받는다",
+        "이미지 생성하기 — 두 CLI 모두 이미지 모델을 갖고 있다",
+        "비디오 분석하기 — agy 는 프레임 추출 없이 영상 파일을 그대로 읽는다",
+        "CLI 를 감싸 두면 Claude 가 대화하듯 호출한다"
+      ],
+      "practice": "codex 와 agy 를 설치하고, 방금 만든 코드를 다른 모델에게 검수시켜 Claude가 놓친 것이 나오는지 확인한다.",
+      "action": {
+        "label": "두 CLI 설치하고 불러보기",
+        "items": [
+          {
+            "desc": "Codex CLI (OpenAI · GPT)",
+            "copy": "npm i -g @openai/codex"
+          },
+          {
+            "desc": "Antigravity CLI (Google · Gemini) — 명령어는 agy",
+            "copy": "curl -fsSL https://antigravity.google/cli/install.sh | bash"
+          },
+          {
+            "desc": "① 다른 AI에게 검수시키기 — Claude 에게 이렇게 시킵니다",
+            "copy": "방금 만든 코드를 codex 와 agy 한테도 각각 보여주고 검토받아줘. 두 쪽이 지적한 것 중 네가 놓친 게 있으면 정리해서 알려줘."
+          },
+          {
+            "desc": "② 이미지 생성하기",
+            "copy": "agy 로 이 문서에 넣을 삽화 하나 만들어줘. 만든 파일 경로를 알려줘."
+          },
+          {
+            "desc": "③ 비디오 분석하기 — agy 는 영상을 그대로 읽습니다",
+            "copy": "agy 한테 이 mp4 파일을 읽혀서 무슨 내용인지 요약하게 해줘. 프레임을 따로 뽑지 말고 영상 파일 자체를 넘겨."
+          },
+          {
+            "link": {
+              "href": "https://antigravity.google/docs/cli/install",
+              "text": "Antigravity CLI 설치 문서"
+            },
+            "desc": "macOS · Linux · Windows 설치 방법"
           }
         ]
       }
