@@ -1,0 +1,159 @@
+{
+  "step": 8,
+  "title": "마무리와 추천 활용안",
+  "hours": "2시간 · Wrap-up & Skill Curation",
+  "goal": "7회차까지 직접 만든 구조를 기준 삼아, 공개된 스킬 중 실제로 쓸 만한 것을 고르고 검증하는 눈을 갖는다. 여러 스킬에서 필요한 부분만 뽑아 하나의 세트로 묶는 방법까지 익힌다.",
+  "topics": [
+    "되짚기 — 스킬 · reference 라우팅 · 멀티 에이전트",
+    "ELI5 — 상대에 맞춰 설명을 바꿔주는 스킬",
+    "스킬 세트로 묶기 — 층이 다르면 겹쳐 쓰고, 같으면 충돌한다",
+    "고르는 기준 — 별 수가 아니라 SKILL.md 를 읽는다",
+    "Remotion 공식 스킬 — 라우터 구조를 벤더 규모로 확인",
+    "스킬 이어붙이기 — 자막에서 완성 영상까지 파이프라인"
+  ],
+  "practice": "추천 스킬을 하나씩 설치해 보고, react-shadcn-kit 세트를 받아 .claude/skills/ 에 넣은 뒤 실제로 발동시켜 본다.",
+  "slides": [
+    {
+      "imagePath": "assets/advanced/step08/마무리와_추천_활용안.svg",
+      "goal": "오늘 무엇을 하는지 알고, 스킬을 고를 때의 기본 태도를 잡는다.",
+      "topics": [
+        "되짚기 — 7회차까지 직접 만든 것이 판단 기준",
+        "추천 스킬 둘러보기 — 설명 · 글쓰기 · 디자인 · 리서치 · 개발",
+        "고르는 기준 — 별 수는 기준이 아니다",
+        "스킬은 코드 실행 권한을 가진다 — 신뢰하는 소스에서만"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/advanced/step08/ELI5_상대에_맞춰_설명하기.svg",
+      "goal": "듣는 사람에 맞춰 어휘·비유·깊이·관점을 바꿔주는 스킬을 설치하고 써 본다.",
+      "topics": [
+        "\"이 에러 우리 팀장한테 설명해줘\" 한 마디로 발동",
+        "나이 · 학년 · 직무 · 관계별로 설명 방식이 달라진다",
+        "레포 전체가 파일 9개 — SKILL.md 를 통째로 읽어볼 수 있는 크기",
+        "평가 스크립트가 함께 들어 있어 스킬의 효과를 직접 측정한다"
+      ],
+      "practice": "SKILL.md 를 먼저 열어 읽어본 뒤 설치하고, 같은 내용을 두 상대에게 설명시켜 차이를 확인한다.",
+      "action": {
+        "label": "ELI5 스킬 설치",
+        "items": [
+          {
+            "link": {
+              "href": "https://github.com/dreambigou/eli5",
+              "text": "dreambigou/eli5 — GitHub 열기"
+            },
+            "desc": "설치 전에 skills/eli5/SKILL.md 를 먼저 읽어봅니다"
+          },
+          {
+            "desc": "클론한 뒤 스킬 폴더로 복사합니다",
+            "copy": "git clone https://github.com/dreambigou/eli5.git && cp -r eli5/skills/eli5 ~/.claude/skills/eli5"
+          },
+          {
+            "desc": "설치 후 이렇게 물어봅니다",
+            "copy": "방금 그거 우리 팀장한테 설명해줘"
+          }
+        ]
+      }
+    },
+    {
+      "imagePath": "assets/advanced/step08/스킬_세트로_묶기.svg",
+      "goal": "여러 스킬에서 필요한 부분만 뽑아 하나의 세트로 묶는 방법과, 층이 겹칠 때 생기는 충돌을 이해한다.",
+      "topics": [
+        "SKILL.md 는 짧게, 절차는 reference/ 문서로 — 7회차와 같은 구조",
+        "프로세스 · 스택 · 미감 · 검증 — 층이 다르면 겹쳐 쓸 수 있다",
+        "같은 층에 둘을 깔면 충돌한다 (Tailwind + UnoCSS)",
+        "출처: superpowers · frontend-design · web-interface-guidelines · antfu"
+      ],
+      "practice": "세트를 내려받아 .claude/skills/ 에 넣고, React 화면을 하나 만들게 시켜 세트가 실제로 발동하는지 확인한다.",
+      "action": {
+        "label": "react-shadcn-kit 내려받기",
+        "items": [
+          {
+            "link": {
+              "href": "https://hw5511.github.io/ai-agent-class/assets/advanced/step08/react-shadcn-kit.zip",
+              "text": "react-shadcn-kit.zip 다운로드"
+            },
+            "desc": "SKILL.md + reference 문서 7장이 들어 있습니다 (스크립트 없음)"
+          },
+          {
+            "desc": "압축을 풀고 스킬 폴더에 넣습니다",
+            "copy": "unzip react-shadcn-kit.zip && mkdir -p ~/.claude/skills && cp -r react-shadcn-kit ~/.claude/skills/"
+          },
+          {
+            "desc": "설치 후 이렇게 시켜봅니다",
+            "copy": "React로 할 일 목록 화면 하나 만들어줘"
+          }
+        ]
+      }
+    },
+    {
+      "imagePath": "assets/advanced/step08/Remotion_스킬_라우터의_완성형.svg",
+      "goal": "공식 벤더가 만든 라우터형 스킬을 열어보고, 우리가 만든 reference 라우팅이 커지면 어떤 모습이 되는지 확인한다.",
+      "topics": [
+        "라우터 1개(59줄) + 스킬 11개 — 분기 규칙만 담은 SKILL.md",
+        "같은 문서를 SKILL.md(자동 발동)와 REFERENCE.md(필요할 때)로 이중 배포",
+        "만든 사람만 아는 내용 — CSS 애니메이션은 렌더링되지 않는다",
+        "설치는 라우터만 1.7MB, --all 은 3.4MB에 문서 89개가 두 벌"
+      ],
+      "practice": "라우터 SKILL.md 59줄을 먼저 읽고, 내 스킬의 라우팅과 무엇이 다른지 비교한 뒤 설치한다.",
+      "action": {
+        "label": "Remotion 스킬 열어보기",
+        "items": [
+          {
+            "link": {
+              "href": "https://github.com/remotion-dev/skills/tree/main/skills/remotion-best-practices",
+              "text": "remotion-best-practices — 라우터 SKILL.md 읽기"
+            },
+            "desc": "설치 전에 59줄짜리 라우팅 규칙부터 봅니다"
+          },
+          {
+            "desc": "라우터만 설치 (권장)",
+            "copy": "npx skills add remotion-dev/skills --skill remotion-best-practices"
+          },
+          {
+            "desc": "12개 전부 설치 — 중복이 생깁니다",
+            "copy": "npx skills add remotion-dev/skills --all"
+          }
+        ]
+      }
+    },
+    {
+      "imagePath": "assets/advanced/step08/스킬_이어붙이기_영상_만들기.svg",
+      "goal": "스킬 두 개를 파이프라인으로 이어 실제 산출물(영상)을 끝까지 만들어 본다.",
+      "topics": [
+        "SRT → srt-whiteboard → 씬 MP4 5개 → Remotion → 완성 MP4",
+        "역할 분담 — 그리기는 화이트보드, 편집·전환·자막은 Remotion",
+        "접합부는 파일이다 — SRT 와 MP4 가 두 스킬을 잇는다",
+        "설치 전 확인 — 파이썬 실행 + SKILL.md 의 중국어 강제 조항"
+      ],
+      "practice": "완성 영상을 먼저 보고, 두 레포의 SKILL.md 를 열어 각자 무엇을 책임지는지 확인한다.",
+      "action": {
+        "label": "결과물과 재료",
+        "items": [
+          {
+            "link": {
+              "href": "https://hw5511.github.io/ai-agent-class/assets/advanced/step08/스킬_조합_데모.mp4",
+              "text": "완성 영상 보기 — 복리는 왜 강한가 (48초)"
+            },
+            "desc": "두 스킬을 이어 만든 실제 결과물입니다"
+          },
+          {
+            "link": {
+              "href": "https://github.com/geeklee/srt-whiteboard-animation",
+              "text": "srt-whiteboard-animation — SKILL.md 열어보기"
+            },
+            "desc": "자막을 손그림 영상으로 바꾸는 스킬 (파이썬 실행)"
+          },
+          {
+            "link": {
+              "href": "https://github.com/remotion-dev/skills/tree/main/skills/remotion-markup/video-editing.md",
+              "text": "Remotion video-editing.md — 타임라인 편집"
+            },
+            "desc": "TransitionSeries 로 클립을 배치하는 방법"
+          }
+        ]
+      }
+    }
+  ]
+}
