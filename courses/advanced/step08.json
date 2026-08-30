@@ -6,7 +6,7 @@
   "topics": [
     "되짚기 — 스킬 · reference 라우팅 · 멀티 에이전트",
     "ELI5 — 상대에 맞춰 설명을 바꿔주는 스킬",
-    "스킬 세트로 묶기 — 층이 다르면 겹쳐 쓰고, 같으면 충돌한다",
+    "스킬 세트로 묶기 — 공식과 겹치는 층은 덜어낸다",
     "고르는 기준 — 별 수가 아니라 SKILL.md 를 읽는다",
     "Remotion 공식 스킬 — 라우터 구조를 벤더 규모로 확인",
     "스킬 이어붙이기 — 자막에서 완성 영상까지 파이프라인",
@@ -59,14 +59,14 @@
     },
     {
       "imagePath": "assets/advanced/step08/스킬_세트로_묶기.svg",
-      "goal": "여러 스킬에서 필요한 부분만 뽑아 하나의 세트로 묶는 방법과, 층이 겹칠 때 생기는 충돌을 이해한다.",
+      "goal": "공식 스킬과 겹치는 층을 덜어내고, 안 다루는 것만 남겨 하나의 세트로 묶는 방법을 익힌다.",
       "topics": [
         "SKILL.md 는 짧게, 절차는 reference/ 문서로 — 7회차와 같은 구조",
-        "프로세스 · 스택 · 미감 · 검증 — 층이 다르면 겹쳐 쓸 수 있다",
-        "같은 층에 둘을 깔면 충돌한다 (Tailwind + UnoCSS)",
-        "공식 shadcn 스킬과 함께 쓰기 — 컴포넌트는 공식, 나머지는 세트"
+        "같은 층에 둘을 깔면 충돌한다 — 그래서 겹치는 문서 3장을 덜어냈다",
+        "공식 shadcn 스킬 = 컴포넌트·스타일·폼·CLI / 이 세트 = 디자인·접근성·테스트·검증",
+        "install.sh 한 줄이면 둘 다 설치된다"
       ],
-      "practice": "세트와 공식 shadcn 스킬을 함께 설치한 뒤, 5페이지짜리 ERP 대시보드를 만들게 시켜 둘이 어떻게 나눠 일하는지 확인한다.",
+      "practice": "install.sh 로 두 스킬을 함께 설치한 뒤, 5페이지짜리 ERP 대시보드를 만들게 시켜 둘이 어떻게 나눠 일하는지 확인한다.",
       "action": {
         "label": "react-shadcn-kit 내려받기",
         "items": [
@@ -75,15 +75,15 @@
               "href": "https://hw5511.github.io/ai-agent-class/assets/advanced/step08/react-shadcn-kit.zip",
               "text": "react-shadcn-kit.zip 다운로드"
             },
-            "desc": "SKILL.md + reference 문서 7장 (스크립트 없음)"
+            "desc": "SKILL.md + reference 문서 4장 + install.sh"
           },
           {
-            "desc": "압축을 풀고 스킬 폴더에 넣습니다",
-            "copy": "unzip react-shadcn-kit.zip && mkdir -p ~/.claude/skills && cp -r react-shadcn-kit ~/.claude/skills/"
+            "desc": "이 한 줄이면 세트와 공식 shadcn 스킬이 함께 설치됩니다",
+            "copy": "unzip react-shadcn-kit.zip && ./react-shadcn-kit/install.sh"
           },
           {
-            "desc": "shadcn 공식 스킬도 함께 — 설치 27만 회, rules 6장 + 자체 평가 포함",
-            "copy": "npx skills add shadcn-ui/ui --skill shadcn"
+            "desc": "설치되었는지 확인합니다 — 두 개가 보여야 합니다",
+            "copy": "ls ~/.claude/skills/"
           },
           {
             "desc": "둘을 함께 켜고 이 과제로 확인합니다",
