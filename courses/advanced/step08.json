@@ -145,37 +145,37 @@
       "imagePath": "assets/advanced/step08/Codex_Antigravity_CLI_활용법.svg",
       "goal": "Claude 하나로 안 되는 일을 다른 회사의 AI CLI 를 불러 해결하는 방법을 익힌다.",
       "topics": [
-        "다른 AI에게 검수시키기 — Claude가 짠 것을 GPT·Gemini에게 리뷰받는다",
-        "이미지 생성하기 — 두 CLI 모두 이미지 모델을 갖고 있다",
-        "비디오 분석하기 — agy 는 프레임 추출 없이 영상 파일을 그대로 읽는다",
-        "CLI 를 감싸 두면 Claude 가 대화하듯 호출한다"
+        "다른 AI에게 물어보기 — 모델을 골라 보내고, 직전 대화를 이어서 묻는다",
+        "이미지 만들기 — codex 와 agy 둘 다 이미지 생성 도구를 갖고 있다",
+        "영상 읽히기 — Gemini 는 mp4 파일을 프레임 추출 없이 그대로 본다",
+        "스킬로 감싸 두면 Claude 가 대화하듯 세 가지를 알아서 부른다"
       ],
-      "practice": "codex 와 agy 를 설치하고, 방금 만든 코드를 다른 모델에게 검수시켜 Claude가 놓친 것이 나오는지 확인한다.",
+      "practice": "스킬 3개를 설치하고, 방금 만든 코드를 다른 모델에게 검수시켜 Claude 가 놓친 것이 나오는지 확인한다.",
       "action": {
-        "label": "두 CLI 설치하고 불러보기",
+        "label": "CLI 스킬 3개 설치하고 불러보기",
         "items": [
           {
             "link": {
-              "href": "https://antigravity.google/docs/cli/install",
-              "text": "Antigravity CLI 설치 문서"
+              "href": "https://hw5511.github.io/ai-agent-class/assets/advanced/step08/cli-skills.zip",
+              "text": "cli-skills.zip — 스킬 3개"
             },
-            "desc": "macOS · Linux · Windows 설치 방법"
+            "desc": "cli-ask · cli-image · cli-video"
           },
           {
-            "desc": "Claude 에게 그대로 붙여넣으세요 — 두 CLI 를 설치합니다",
-            "copy": "Codex CLI 와 Antigravity CLI 를 설치해줘. Codex 는 npm 패키지 @openai/codex 를 전역 설치하면 되고, Antigravity 는 https://antigravity.google/cli/install.sh 설치 스크립트를 쓰면 돼. 설치 후 codex 와 agy 명령이 잡히는지 확인해줘."
+            "desc": "Claude 에게 그대로 붙여넣으세요 — 스킬 3개를 설치합니다",
+            "copy": "https://hw5511.github.io/ai-agent-class/assets/advanced/step08/cli-skills.zip 이 ZIP 을 받아서 압축을 풀고, 안에 들어 있는 cli-ask · cli-image · cli-video 세 폴더를 현재 폴더의 .claude/skills 에 설치해줘. 설치가 끝나면 세 스킬이 각각 무엇을 담당하는지 한 줄씩 알려줘."
           },
           {
-            "desc": "① 다른 AI에게 검수시키기",
-            "copy": "방금 만든 코드를 codex 와 agy 한테도 각각 보여주고 검토받아줘. 두 쪽이 지적한 것 중 네가 놓친 게 있으면 정리해서 알려줘."
+            "desc": "① 다른 AI에게 물어보기",
+            "copy": "방금 만든 코드를 cli-ask 스킬로 codex 와 agy 한테 각각 검수받아줘. 두 쪽이 지적한 것 중 네가 놓친 게 있으면 정리해서 알려줘."
           },
           {
-            "desc": "② 이미지 생성하기",
-            "copy": "agy 로 이 문서에 넣을 삽화 하나 만들어줘. 만든 파일 경로를 알려줘."
+            "desc": "② 이미지 만들기",
+            "copy": "cli-image 스킬로 이 문서에 넣을 삽화 하나 만들어줘. agy 로 16:9 로 뽑고 assets 폴더에 저장한 다음 경로를 알려줘."
           },
           {
-            "desc": "③ 비디오 분석하기",
-            "copy": "agy 한테 이 mp4 파일을 읽혀서 무슨 내용인지 요약하게 해줘. 프레임을 따로 뽑지 말고 영상 파일 자체를 넘겨."
+            "desc": "③ 영상 읽히기",
+            "copy": "cli-video 스킬로 이 mp4 를 Gemini 에게 읽혀서, 샷이 몇 개이고 각 샷에 무엇이 보이는지 표로 정리하게 해줘."
           }
         ]
       }
