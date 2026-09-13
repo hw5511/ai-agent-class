@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="54" height="24" rx="12" fill="#f0f4ff" stroke="#c7d7ff" stroke-width="1"/>
+  <text x="177" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#3b5bdb">STEP 4</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">인증 코드를 터미널에 입력</text>
+  <rect x="140" y="118" width="1000" height="520" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+<path d="M150 119h980a9 9 0 0 1 9 9v23H141v-23a9 9 0 0 1 9-9z" fill="#f3f4f6"/>
+<circle cx="162" cy="135" r="5" fill="#ef4444"/><circle cx="180" cy="135" r="5" fill="#f59e0b"/><circle cx="198" cy="135" r="5" fill="#22c55e"/>
+<text x="225" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="500" fill="#374151" >Antigravity CLI · 인증</text>
+<rect x="141" y="152" width="998" height="485" fill="#111827"/>
+<text x="172" y="194" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="16" font-weight="400" fill="#e5e7eb" >브라우저에서 Google 인증을 마쳤습니다.</text><text x="172" y="239" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="15" font-weight="400" fill="#cbd5e1" >인증을 완료하려면 터미널 입력창에 코드를 붙여넣으세요.</text><rect x="166" y="278" width="908" height="68" rx="8" fill="#1f2937" stroke="#4b5563"/><text x="190" y="319" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="16" font-weight="400" fill="#9ca3af" >[ 인증 코드 입력 ]</text><text x="172" y="386" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="15" font-weight="400" fill="#93c5fd" >입력 후 Enter를 누르면 로그인이 이어집니다.</text><text x="172" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14.5" font-weight="400" fill="#fbbf24" >실제 인증 코드는 개인 인증 정보이므로 강의 화면에 남기지 않습니다.</text>
+  <text x="640" y="668" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="500" fill="#374151">브라우저에서 받은 코드를 직접 입력하고 Enter를 누릅니다.</text>
+</svg>
+

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">VS Code 화면 구성</text>
+  <text x="60" y="148" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">파일을 보고, 내용을 확인하고, 아래 터미널에서 에이전트를 실행합니다</text>
+
+  <rect x="60" y="180" width="1160" height="366" rx="12" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="60" y="180" width="1160" height="34" rx="12" fill="#f3f4f6"/>
+  <rect x="60" y="202" width="1160" height="12" fill="#f3f4f6"/>
+  <circle cx="82" cy="197" r="5" fill="#d1d5db"/>
+  <circle cx="100" cy="197" r="5" fill="#d1d5db"/>
+  <circle cx="118" cy="197" r="5" fill="#d1d5db"/>
+  <text x="640" y="202" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#4b5563">에이전트1 — Visual Studio Code</text>
+
+  <rect x="60" y="214" width="48" height="332" fill="#f3f4f6"/>
+  <rect x="77" y="236" width="14" height="16" rx="2" fill="#6b7280"/>
+  <circle cx="84" cy="282" r="8" fill="none" stroke="#9ca3af" stroke-width="2"/>
+  <path d="M76 309h16M84 301v16" stroke="#9ca3af" stroke-width="2"/>
+  <rect x="108" y="214" width="255" height="332" fill="#ffffff"/>
+  <text x="128" y="242" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#6b7280" letter-spacing="0.4">탐색기</text>
+  <path d="M128 260l5 5-5 5" fill="none" stroke="#6b7280" stroke-width="1.5"/>
+  <path d="M143 259h13l4 4v13h-17z" fill="#facc15" stroke="#eab308" stroke-width="0.8"/>
+  <text x="166" y="273" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#374151">에이전트1</text>
+  <rect x="132" y="286" width="218" height="27" rx="4" fill="#eff6ff"/>
+  <path d="M149 292h13l4 4v12h-17z" fill="#dbeafe" stroke="#93c5fd" stroke-width="0.8"/>
+  <text x="174" y="305" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#1d4ed8">자기소개서.txt</text>
+  <path d="M149 322h13l4 4v12h-17z" fill="#e0e7ff" stroke="#a5b4fc" stroke-width="0.8"/>
+  <text x="174" y="335" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#4b5563">brief.md</text>
+
+  <rect x="363" y="214" width="857" height="206" fill="#ffffff"/>
+  <rect x="363" y="214" width="188" height="30" fill="#ffffff"/>
+  <text x="384" y="234" font-family="'Courier New',Courier,monospace" font-size="11" fill="#4b5563">자기소개서.txt</text>
+  <line x1="363" y1="244" x2="1220" y2="244" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="390" y="276" font-family="'Courier New',Courier,monospace" font-size="12" fill="#9ca3af">1</text>
+  <text x="414" y="276" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">안녕하세요. 저는 AI 에이전트입니다.</text>
+  <text x="390" y="302" font-family="'Courier New',Courier,monospace" font-size="12" fill="#9ca3af">2</text>
+  <text x="414" y="302" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">질문에 답하고 파일 작업을 도울 수 있습니다.</text>
+  <text x="390" y="328" font-family="'Courier New',Courier,monospace" font-size="12" fill="#9ca3af">3</text>
+  <text x="414" y="328" font-family="'Courier New',Courier,monospace" font-size="13" fill="#6b7280">작업 결과는 탐색기에서 확인할 수 있습니다.</text>
+
+  <rect x="363" y="420" width="857" height="126" fill="#1f2937"/>
+  <text x="385" y="445" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="#d1d5db" letter-spacing="0.7">TERMINAL</text>
+  <text x="474" y="445" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#9ca3af">OUTPUT</text>
+  <line x1="363" y1="454" x2="1220" y2="454" stroke="#374151" stroke-width="1"/>
+  <text x="385" y="484" font-family="'Courier New',Courier,monospace" font-size="12" fill="#e5e7eb">PS C:\Users\student\에이전트1&gt;</text>
+  <rect x="386" y="495" width="7" height="15" fill="#93c5fd"/>
+
+  <circle cx="78" cy="574" r="14" fill="#171717"/>
+  <text x="78" y="579" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">1</text>
+  <text x="101" y="579" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">탐색기</text>
+  <text x="101" y="601" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">폴더와 파일 목록</text>
+
+  <circle cx="365" cy="574" r="14" fill="#171717"/>
+  <text x="365" y="579" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">2</text>
+  <text x="388" y="579" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">편집기</text>
+  <text x="388" y="601" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">선택한 파일 내용</text>
+
+  <circle cx="650" cy="574" r="14" fill="#171717"/>
+  <text x="650" y="579" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">3</text>
+  <text x="673" y="579" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">아래 패널</text>
+  <text x="673" y="601" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">터미널을 여는 곳</text>
+
+  <circle cx="938" cy="574" r="14" fill="#1d4ed8"/>
+  <text x="938" y="579" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">4</text>
+  <text x="961" y="579" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1d4ed8">현재 폴더</text>
+  <text x="961" y="601" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">에이전트의 작업 범위</text>
+
+  <text x="640" y="652" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">파일은 탐색기에서 확인하고, 에이전트는 터미널에서 실행합니다</text>
+</svg>

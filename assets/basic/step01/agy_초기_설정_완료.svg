@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="54" height="24" rx="12" fill="#f0f4ff" stroke="#c7d7ff" stroke-width="1"/>
+  <text x="177" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#3b5bdb">STEP 4</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">Antigravity 초기 설정 완료</text>
+  <rect x="140" y="118" width="1000" height="520" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+<path d="M150 119h980a9 9 0 0 1 9 9v23H141v-23a9 9 0 0 1 9-9z" fill="#f3f4f6"/>
+<circle cx="162" cy="135" r="5" fill="#ef4444"/><circle cx="180" cy="135" r="5" fill="#f59e0b"/><circle cx="198" cy="135" r="5" fill="#22c55e"/>
+<text x="225" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="500" fill="#374151" >Antigravity CLI · 초기 설정</text>
+<rect x="141" y="152" width="998" height="485" fill="#111827"/>
+<g transform="translate(178 194)">
+    <rect x="12" y="0" width="16" height="16" fill="#f59e0b"/><rect x="0" y="16" width="16" height="16" fill="#84cc16"/>
+    <rect x="28" y="16" width="16" height="16" fill="#ef4444"/><rect x="0" y="32" width="16" height="16" fill="#06b6d4"/>
+    <rect x="28" y="32" width="16" height="16" fill="#3b82f6"/><rect x="12" y="48" width="16" height="16" fill="#6366f1"/>
+  </g><text x="244" y="220" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="19" font-weight="600" fill="#f3f4f6" >Antigravity CLI</text><text x="178" y="299" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="17" font-weight="500" fill="#e5e7eb" >초기 설정이 완료되었습니다.</text><text x="178" y="340" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14.5" font-weight="400" fill="#9ca3af" >Enter를 눌러 작업 환경으로 이동합니다.</text><rect x="175" y="388" width="128" height="36" rx="4" fill="#15803d"/><text x="239" y="412" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">[ 완료 ]</text><text x="178" y="476" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14.5" font-weight="400" fill="#cbd5e1" >이제 현재 작업 폴더를 확인하는 단계로 이어집니다.</text>
+  <text x="640" y="668" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="500" fill="#374151">완료를 선택해 CLI 작업 화면으로 이동합니다.</text>
+</svg>
+

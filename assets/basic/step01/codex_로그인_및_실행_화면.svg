@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a">Codex 로그인 및 실행 화면</text>
+  <text x="60" y="148" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">첫 실행 안내에 따라 ChatGPT 계정으로 로그인하고 CLI 화면을 확인합니다</text>
+
+  <rect x="60" y="180" width="520" height="382" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="60" y="180" width="520" height="48" rx="12" fill="#f3f4f6"/>
+  <rect x="60" y="214" width="520" height="14" fill="#f3f4f6"/>
+  <circle cx="85" cy="204" r="6" fill="#d1d5db"/><circle cx="104" cy="204" r="6" fill="#d1d5db"/><circle cx="123" cy="204" r="6" fill="#d1d5db"/>
+  <text x="320" y="209" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#4b5563">로그인 안내</text>
+  <circle cx="112" cy="276" r="18" fill="#eff6ff"/>
+  <path d="M104 276h16M112 268v16" stroke="#2563eb" stroke-width="2"/>
+  <text x="145" y="281" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#111827">Codex CLI에 연결</text>
+  <text x="92" y="322" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">화면에 표시되는 인증 안내를 따라 진행합니다.</text>
+  <rect x="92" y="350" width="456" height="58" rx="8" fill="#111827"/>
+  <text x="320" y="385" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff">ChatGPT 계정으로 로그인</text>
+  <rect x="92" y="428" width="456" height="74" rx="8" fill="#f9fafb" stroke="#e5e7eb"/>
+  <circle cx="117" cy="453" r="9" fill="#22c55e"/>
+  <path d="M113 453l3 3 5-6" fill="none" stroke="#ffffff" stroke-width="1.7"/>
+  <text x="138" y="457" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#374151">브라우저 인증 완료</text>
+  <text x="117" y="482" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">계정 정보와 인증 코드는 화면에 표시하지 않습니다</text>
+
+  <path d="M594 365h54" stroke="#9ca3af" stroke-width="2"/>
+  <path d="M640 357l9 8-9 8" fill="none" stroke="#9ca3af" stroke-width="2"/>
+
+  <rect x="660" y="180" width="560" height="382" rx="12" fill="#1f2937" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="660" y="180" width="560" height="48" rx="12" fill="#111827"/>
+  <rect x="660" y="214" width="560" height="14" fill="#111827"/>
+  <circle cx="686" cy="204" r="6" fill="#6b7280"/><circle cx="705" cy="204" r="6" fill="#6b7280"/><circle cx="724" cy="204" r="6" fill="#6b7280"/>
+  <text x="940" y="209" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#d1d5db">Codex CLI · 일반 실행 화면</text>
+  <text x="694" y="270" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="#93c5fd" letter-spacing="0.6">CODEX</text>
+  <text x="694" y="310" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#f9fafb">안녕하세요. 어떤 작업을 도와드릴까요?</text>
+  <text x="694" y="344" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">작업 폴더: C:\Users\student\에이전트1\codex</text>
+  <rect x="694" y="374" width="492" height="74" rx="8" fill="#111827" stroke="#4b5563"/>
+  <text x="716" y="402" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">요청을 입력하는 영역</text>
+  <text x="716" y="427" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#e5e7eb">너는 누구니?</text>
+  <text x="694" y="491" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">계정·모델·토큰 정보는 표시하지 않은 일반 화면 목업</text>
+  <rect x="694" y="510" width="176" height="26" rx="13" fill="#374151"/>
+  <text x="782" y="527" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="#d1d5db">자연어로 요청하기</text>
+
+  <text x="640" y="608" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#374151">인증이 끝나면 같은 터미널에서 Codex와 대화를 시작할 수 있습니다</text>
+  <text x="640" y="658" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">로그인 화면과 세부 메뉴는 CLI 버전에 따라 달라질 수 있습니다</text>
+</svg>

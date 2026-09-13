@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/><text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db"/><text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a">다음 도구: Codex</text>
+  <text x="60" y="148" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">Antigravity CLI를 종료했으면 Codex 전용 폴더로 이동합니다</text>
+  <rect x="60" y="176" width="1160" height="454" rx="14" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="60" y="196" width="560" height="226" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="84" y="228" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">Windows · PowerShell</text>
+  <rect x="78" y="246" width="524" height="154" rx="8" fill="#1e1e1e"/>
+  <text x="96" y="282" font-family="'Courier New',Courier,monospace" font-size="12" fill="#d4d4d4">PS C:\Users\student\에이전트1\agy&gt; Set-Location ..\codex</text>
+  <text x="96" y="316" font-family="'Courier New',Courier,monospace" font-size="13" fill="#86efac">PS C:\Users\student\에이전트1\codex&gt;</text>
+  <text x="96" y="368" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">명령 실행 후 새 작업 폴더의 프롬프트를 확인</text>
+  <rect x="660" y="196" width="560" height="226" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="684" y="228" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">macOS · zsh</text>
+  <rect x="678" y="246" width="524" height="154" rx="8" fill="#1e1e1e"/>
+  <text x="696" y="282" font-family="'Courier New',Courier,monospace" font-size="12" fill="#d4d4d4">student@Mac agy % cd ../codex</text>
+  <text x="696" y="316" font-family="'Courier New',Courier,monospace" font-size="13" fill="#86efac">student@Mac codex %</text>
+  <text x="696" y="368" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">명령 실행 후 새 작업 폴더의 프롬프트를 확인</text>
+  <rect x="60" y="444" width="1160" height="150" rx="12" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="88" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">같은 실습 폴더 아래에서 도구별 작업 공간을 나눕니다</text>
+  <text x="100" y="514" font-family="'Courier New',Courier,monospace" font-size="14" fill="#6b7280">에이전트1\</text>
+  <text x="132" y="540" font-family="'Courier New',Courier,monospace" font-size="13" fill="#9ca3af">├── agy\</text>
+  <text x="132" y="563" font-family="'Courier New',Courier,monospace" font-size="13" fill="#1d4ed8" font-weight="700">├── codex\   ← 다음 작업</text>
+  <text x="132" y="586" font-family="'Courier New',Courier,monospace" font-size="13" fill="#9ca3af" font-weight="400">└── claude\</text>
+  <text x="640" y="682" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">agy, codex, claude는 각각 별도 폴더에서 실습합니다</text>
+</svg>
