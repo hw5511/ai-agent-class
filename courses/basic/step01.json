@@ -144,12 +144,12 @@
     },
     {
       "imagePath": "assets/basic/step01/VS_Code_화면_구성.svg",
-      "goal": "VS Code의 기본 화면 구성과 역할을 파악한다.",
+      "goal": "VS Code의 다크모드 화면 구성과 우측 터미널 패널(Panel: Right) 배치를 파악한다.",
       "topics": [
         "좌측 탐색기(파일 및 폴더 목록)",
         "중앙 편집기(코드·문서 확인 및 수정)",
-        "하단 패널(터미널 위치)",
-        "현재 열린 작업 폴더 확인"
+        "우측 패널(터미널 위치 · Panel Position: Right)",
+        "현재 열린 작업 폴더(에이전트1) 확인"
       ],
       "practice": null,
       "action": null
