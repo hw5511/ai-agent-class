@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a">자기소개서를 폴더로 옮기기</text>
+  <text x="60" y="148" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">Codex에 파일 이동을 요청하고 탐색기에서 위치가 바뀌었는지 확인합니다</text>
+
+  <rect x="60" y="180" width="1160" height="98" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="88" y="210" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1d4ed8" letter-spacing="0.6">요청 문장</text>
+  <text x="88" y="250" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#111827">'자기소개서.txt'를 'introduce' 폴더로 옮겨줘.</text>
+
+  <rect x="60" y="300" width="1160" height="284" rx="12" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="88" y="334" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#4b5563">작업 전</text>
+  <rect x="88" y="352" width="430" height="174" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+  <path d="M116 378l5 5-5 5" fill="none" stroke="#6b7280" stroke-width="1.5"/>
+  <path d="M132 377h13l4 4v13h-17z" fill="#facc15" stroke="#eab308" stroke-width="0.8"/>
+  <text x="156" y="391" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">codex</text>
+  <rect x="128" y="410" width="364" height="32" rx="4" fill="#eff6ff"/>
+  <rect x="146" y="418" width="13" height="15" rx="1" fill="#fee2e2" stroke="#fca5a5" stroke-width="0.8"/>
+  <text x="169" y="431" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">자기소개서.txt</text>
+  <path d="M130 454h13l4 4v13h-17z" fill="#dbeafe" stroke="#93c5fd" stroke-width="0.8"/>
+  <text x="155" y="468" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">introduce</text>
+  <text x="88" y="548" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">파일이 codex 바로 아래에 있습니다</text>
+
+  <path d="M552 432h116" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M658 423l10 9-10 9" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <text x="610" y="412" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#1d4ed8">Codex에 요청</text>
+
+  <text x="702" y="334" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#4b5563">작업 후</text>
+  <rect x="702" y="352" width="490" height="174" rx="8" fill="#ffffff" stroke="#bbf7d0"/>
+  <path d="M730 378l5 5-5 5" fill="none" stroke="#6b7280" stroke-width="1.5"/>
+  <path d="M746 377h13l4 4v13h-17z" fill="#facc15" stroke="#eab308" stroke-width="0.8"/>
+  <text x="770" y="391" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">codex</text>
+  <path d="M762 410l5 5-5 5" fill="none" stroke="#6b7280" stroke-width="1.5"/>
+  <path d="M778 409h14l4 4v13h-18z" fill="#dbeafe" stroke="#93c5fd" stroke-width="0.8"/>
+  <text x="802" y="423" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1d4ed8">introduce</text>
+  <rect x="798" y="437" width="365" height="30" rx="4" fill="#f0fdf4"/>
+  <rect x="814" y="444" width="13" height="15" rx="1" fill="#fee2e2" stroke="#fca5a5" stroke-width="0.8"/>
+  <text x="838" y="457" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#15803d">자기소개서.txt</text>
+  <text x="702" y="548" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#15803d">introduce 안에 들어왔는지 확인합니다</text>
+
+  <text x="640" y="638" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="600" fill="#374151">이동이 끝나면 원래 위치에 파일이 남아 있지 않은지도 살펴보세요</text>
+  <text x="640" y="676" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">작업 범위: C:\Users\student\에이전트1\codex</text>
+</svg>

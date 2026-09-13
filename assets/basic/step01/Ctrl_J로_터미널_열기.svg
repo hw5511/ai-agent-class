@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">Ctrl + J로 터미널 열기</text>
+  <text x="60" y="148" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">VS Code 아래 패널을 열고 터미널 탭을 선택합니다</text>
+
+  <rect x="60" y="180" width="1160" height="374" rx="12" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="60" y="180" width="1160" height="34" rx="12" fill="#f3f4f6"/>
+  <rect x="60" y="202" width="1160" height="12" fill="#f3f4f6"/>
+  <circle cx="82" cy="197" r="5" fill="#d1d5db"/>
+  <circle cx="100" cy="197" r="5" fill="#d1d5db"/>
+  <circle cx="118" cy="197" r="5" fill="#d1d5db"/>
+  <text x="640" y="202" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#4b5563">에이전트1 — Visual Studio Code</text>
+  <rect x="60" y="214" width="48" height="340" fill="#f3f4f6"/>
+  <rect x="108" y="214" width="250" height="340" fill="#ffffff"/>
+  <text x="128" y="244" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#6b7280">탐색기</text>
+  <path d="M130 263l5 5-5 5" fill="none" stroke="#6b7280" stroke-width="1.5"/>
+  <path d="M145 262h13l4 4v13h-17z" fill="#facc15" stroke="#eab308" stroke-width="0.8"/>
+  <text x="168" y="276" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#374151">에이전트1</text>
+  <text x="128" y="322" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">열린 파일이 여기에 표시됩니다</text>
+  <rect x="358" y="214" width="862" height="198" fill="#ffffff"/>
+  <text x="389" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="18" font-weight="600" fill="#9ca3af">작업할 파일을 열거나 새로 만드세요</text>
+
+  <rect x="358" y="412" width="862" height="142" fill="#1f2937"/>
+  <rect x="358" y="412" width="862" height="34" fill="#111827"/>
+  <text x="382" y="434" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#9ca3af">문제</text>
+  <text x="436" y="434" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#9ca3af">출력</text>
+  <text x="478" y="434" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#9ca3af">디버그 콘솔</text>
+  <rect x="565" y="412" width="76" height="34" fill="#1f2937"/>
+  <text x="603" y="434" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="#ffffff">터미널</text>
+  <line x1="575" y1="445" x2="632" y2="445" stroke="#60a5fa" stroke-width="2"/>
+  <text x="382" y="480" font-family="'Courier New',Courier,monospace" font-size="13" fill="#e5e7eb">PS C:\Users\student\에이전트1&gt;</text>
+  <rect x="383" y="491" width="7" height="16" fill="#93c5fd"/>
+  <rect x="992" y="457" width="186" height="34" rx="7" fill="#eff6ff"/>
+  <text x="1085" y="479" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1d4ed8">터미널 탭 선택</text>
+  <path d="M992 475h-20l-8 8" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+
+  <rect x="60" y="574" width="1160" height="56" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="88" y="608" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">패널 열기</text>
+  <rect x="214" y="585" width="86" height="34" rx="7" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="257" y="608" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">Ctrl</text>
+  <text x="317" y="608" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#6b7280">+</text>
+  <rect x="340" y="585" width="48" height="34" rx="7" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="364" y="608" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">J</text>
+  <text x="430" y="608" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">macOS 기본 키: ⌘ + J</text>
+  <text x="640" y="668" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">명령은 위쪽 검색창이 아니라 아래쪽 터미널에 입력합니다</text>
+</svg>

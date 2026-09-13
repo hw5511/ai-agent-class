@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="54" height="24" rx="12" fill="#f0f4ff" stroke="#c7d7ff" stroke-width="1"/>
+  <text x="177" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#3b5bdb">STEP 4</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">Claude Code 설치</text>
+  <rect x="140" y="118" width="1000" height="520" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+<path d="M150 119h980a9 9 0 0 1 9 9v23H141v-23a9 9 0 0 1 9-9z" fill="#f3f4f6"/>
+<circle cx="162" cy="135" r="5" fill="#ef4444"/><circle cx="180" cy="135" r="5" fill="#f59e0b"/><circle cx="198" cy="135" r="5" fill="#22c55e"/>
+<text x="225" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="500" fill="#374151" >PowerShell · 에이전트1 · claude</text>
+<rect x="141" y="152" width="998" height="485" fill="#111827"/>
+<text x="172" y="188" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14.5" font-weight="400" fill="#e5e7eb" >PS C:\Users\student\에이전트1\claude&gt; irm https://claude.ai/install.ps1 | iex</text><text x="172" y="226" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="15.5" font-weight="400" fill="#cbd5e1" >Claude Code 설치 프로그램을 실행 중입니다...</text><text x="172" y="261" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="16" font-weight="600" fill="#4ade80" >✓ Claude Code 설치 완료</text><text x="194" y="291" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="15" font-weight="400" fill="#d1d5db" >%USERPROFILE%\.local\bin\claude.exe</text><text x="172" y="329" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="15" font-weight="400" fill="#fbbf24" >! 설치 경로가 사용자 PATH에 아직 반영되지 않았습니다.</text><text x="172" y="371" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="15" font-weight="400" fill="#e5e7eb" >현재 터미널을 새로 열거나 PATH를 갱신한 뒤 실행하세요.</text><rect x="164" y="414" width="910" height="76" rx="8" fill="#172554" stroke="#1d4ed8"/><text x="188" y="446" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#dbeafe" >설치 자체는 성공했습니다.</text><text x="188" y="470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14.5" font-weight="400" fill="#dbeafe" >다음 화면에서 claude 명령을 찾지 못하는 원인을 확인합니다.</text>
+  <text x="640" y="668" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="500" fill="#374151">공식 설치 스크립트가 성공해도 현재 셸의 PATH는 별도로 갱신해야 할 수 있습니다.</text>
+</svg>
+

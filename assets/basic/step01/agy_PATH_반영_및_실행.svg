@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="54" height="24" rx="12" fill="#f0f4ff" stroke="#c7d7ff" stroke-width="1"/>
+  <text x="177" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#3b5bdb">STEP 4</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">PATH 반영 후 Antigravity 실행</text>
+  <rect x="140" y="118" width="1000" height="520" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+<path d="M150 119h980a9 9 0 0 1 9 9v23H141v-23a9 9 0 0 1 9-9z" fill="#f3f4f6"/>
+<circle cx="162" cy="135" r="5" fill="#ef4444"/><circle cx="180" cy="135" r="5" fill="#f59e0b"/><circle cx="198" cy="135" r="5" fill="#22c55e"/>
+<text x="225" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="500" fill="#374151" >PowerShell · 에이전트1</text>
+<rect x="141" y="152" width="998" height="485" fill="#111827"/>
+<text x="172" y="190" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14.5" font-weight="400" fill="#9ca3af" ># 현재 PowerShell에 Machine 및 User PATH 다시 읽기</text><text x="172" y="226" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="13.5" font-weight="400" fill="#e5e7eb" >$env:Path = [Environment]::GetEnvironmentVariable("Path", "Machine") + ";" +</text><text x="194" y="252" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="13.5" font-weight="400" fill="#e5e7eb" >            [Environment]::GetEnvironmentVariable("Path", "User")</text><text x="172" y="310" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="15.5" font-weight="400" fill="#93c5fd" >PS C:\Users\student\에이전트1&gt; agy --version</text><text x="172" y="344" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="15.5" font-weight="400" fill="#4ade80" >Antigravity CLI — 설치 확인</text><text x="172" y="391" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="15.5" font-weight="400" fill="#e5e7eb" >PS C:\Users\student\에이전트1&gt; agy</text><text x="172" y="430" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="15.5" font-weight="400" fill="#d1d5db" >Antigravity CLI가 시작됩니다.</text><text x="172" y="480" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14.5" font-weight="400" fill="#fbbf24" >명령이 계속 인식되지 않으면 VS Code 터미널을 닫고 새로 여세요.</text>
+  <text x="640" y="668" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="500" fill="#374151">PATH를 새로 읽은 다음 버전을 확인하고 agy를 실행합니다.</text>
+</svg>
+

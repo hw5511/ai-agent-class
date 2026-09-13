@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a">VS Code에서 파일 확인</text>
+  <text x="60" y="148" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">Codex가 만든 파일은 VS Code 탐색기와 편집기에서 확인할 수 있습니다</text>
+
+  <rect x="60" y="180" width="1160" height="420" rx="12" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="60" y="180" width="1160" height="34" rx="12" fill="#f3f4f6"/>
+  <rect x="60" y="202" width="1160" height="12" fill="#f3f4f6"/>
+  <circle cx="82" cy="197" r="5" fill="#d1d5db"/><circle cx="100" cy="197" r="5" fill="#d1d5db"/><circle cx="118" cy="197" r="5" fill="#d1d5db"/>
+  <text x="640" y="202" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#4b5563">에이전트1\codex — Visual Studio Code</text>
+  <rect x="60" y="214" width="300" height="386" fill="#ffffff"/>
+  <text x="84" y="244" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#6b7280">탐색기</text>
+  <path d="M87 264l5 5-5 5" fill="none" stroke="#6b7280" stroke-width="1.5"/>
+  <path d="M101 263h13l4 4v13h-17z" fill="#facc15" stroke="#eab308" stroke-width="0.8"/>
+  <text x="124" y="277" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">codex</text>
+  <rect x="82" y="291" width="260" height="30" rx="4" fill="#eff6ff"/>
+  <rect x="101" y="298" width="13" height="15" rx="1" fill="#fee2e2" stroke="#fca5a5" stroke-width="0.8"/>
+  <text x="124" y="311" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1d4ed8">자기소개서.txt</text>
+  <rect x="360" y="214" width="860" height="386" fill="#ffffff"/>
+  <rect x="360" y="214" width="860" height="34" fill="#ffffff"/>
+  <text x="386" y="236" font-family="'Courier New',Courier,monospace" font-size="11" fill="#4b5563">자기소개서.txt</text>
+  <line x1="360" y1="248" x2="1220" y2="248" stroke="#e5e7eb"/>
+  <text x="388" y="286" font-family="'Courier New',Courier,monospace" font-size="12" fill="#9ca3af">1</text>
+  <text x="414" y="286" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#111827">안녕하세요. 저는 Codex입니다.</text>
+  <text x="388" y="316" font-family="'Courier New',Courier,monospace" font-size="12" fill="#9ca3af">2</text>
+  <text x="414" y="316" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">작업 폴더의 파일을 살펴보고 질문에 답할 수 있습니다.</text>
+  <text x="388" y="346" font-family="'Courier New',Courier,monospace" font-size="12" fill="#9ca3af">3</text>
+  <text x="414" y="346" font-family="'Courier New',Courier,monospace" font-size="13" fill="#374151">요청에 따라 문서를 작성하거나 파일을 정리할 수 있습니다.</text>
+  <rect x="396" y="392" width="350" height="54" rx="8" fill="#f0fdf4"/>
+  <circle cx="420" cy="419" r="8" fill="#22c55e"/>
+  <path d="M416 419l3 3 5-7" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+  <text x="441" y="424" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#15803d">파일 생성 확인</text>
+  <text x="640" y="652" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">파일 이름과 저장 위치가 요청한 폴더인지 확인하세요</text>
+</svg>

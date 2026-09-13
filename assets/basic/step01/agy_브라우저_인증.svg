@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="54" height="24" rx="12" fill="#f0f4ff" stroke="#c7d7ff" stroke-width="1"/>
+  <text x="177" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#3b5bdb">STEP 4</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">브라우저에서 Google 인증</text>
+  <rect x="140" y="118" width="1000" height="520" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+<path d="M150 119h980a9 9 0 0 1 9 9v23H141v-23a9 9 0 0 1 9-9z" fill="#f3f4f6"/>
+<circle cx="162" cy="135" r="5" fill="#ef4444"/><circle cx="180" cy="135" r="5" fill="#f59e0b"/><circle cx="198" cy="135" r="5" fill="#22c55e"/>
+<rect x="245" y="124" width="650" height="22" rx="11" fill="#ffffff" stroke="#e5e7eb"/>
+<text x="265" y="139" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="500" fill="#4b5563" >Google 로그인</text>
+<rect x="141" y="152" width="998" height="485" fill="#f8fafc"/>
+<rect x="304" y="194" width="672" height="360" rx="16" fill="#ffffff" stroke="#e5e7eb"/><circle cx="640" cy="267" r="28" fill="#e8f0fe"/><text x="640" y="276" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="24" font-weight="700" fill="#1a73e8" text-anchor="middle">✓</text><text x="640" y="329" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="25" font-weight="500" fill="#202124" text-anchor="middle">Antigravity 연결 완료</text><text x="640" y="366" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="400" fill="#5f6368" text-anchor="middle">Google 인증이 완료되었습니다.</text><text x="640" y="398" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#5f6368" text-anchor="middle">브라우저 창을 닫고 VS Code 터미널로 돌아가세요.</text><rect x="494" y="441" width="292" height="44" rx="22" fill="#1a73e8"/><text x="640" y="469" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">인증 완료</text>
+  <text x="640" y="668" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="500" fill="#374151">인증 성공 상태만 보여주며 코드와 주소는 화면에 표시하지 않습니다.</text>
+</svg>
+

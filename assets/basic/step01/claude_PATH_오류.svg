@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="54" height="24" rx="12" fill="#f0f4ff" stroke="#c7d7ff" stroke-width="1"/>
+  <text x="177" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#3b5bdb">STEP 4</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="22" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">claude 명령을 찾을 수 없을 때</text>
+  <rect x="140" y="118" width="1000" height="520" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+<path d="M150 119h980a9 9 0 0 1 9 9v23H141v-23a9 9 0 0 1 9-9z" fill="#f3f4f6"/>
+<circle cx="162" cy="135" r="5" fill="#ef4444"/><circle cx="180" cy="135" r="5" fill="#f59e0b"/><circle cx="198" cy="135" r="5" fill="#22c55e"/>
+<text x="225" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="500" fill="#374151" >PowerShell · 에이전트1 · claude</text>
+<rect x="141" y="152" width="998" height="485" fill="#111827"/>
+<text x="172" y="190" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="15.5" font-weight="400" fill="#e5e7eb" >PS C:\Users\student\에이전트1\claude&gt; claude --version</text><text x="172" y="227" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="15" font-weight="400" fill="#f87171" >claude : 'claude' 명령을 실행할 수 있는 프로그램으로</text><text x="172" y="253" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="15" font-weight="400" fill="#f87171" >인식하지 못합니다. 이름이나 경로를 확인한 뒤 다시 시도하십시오.</text><text x="172" y="296" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14.5" font-weight="600" fill="#fca5a5" >CommandNotFoundException</text><rect x="164" y="350" width="910" height="120" rx="8" fill="#1f2937" stroke="#374151"/><text x="190" y="387" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#93c5fd" >원인</text><text x="190" y="419" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15.5" font-weight="400" fill="#e5e7eb" >Claude Code는 설치됐지만 현재 PowerShell이</text><text x="190" y="446" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15.5" font-weight="400" fill="#e5e7eb" >%USERPROFILE%\.local\bin 경로를 아직 읽지 못했습니다.</text>
+  <text x="640" y="668" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="500" fill="#374151">설치 파일 위치와 현재 터미널의 PATH 반영 상태를 구분합니다.</text>
+</svg>
+
