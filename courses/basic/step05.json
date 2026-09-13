@@ -101,8 +101,12 @@
         "label": "실습 프롬프트",
         "items": [
           {
-            "desc": "BurntToast PC 알림 (Stop Hook)",
+            "desc": "Windows — BurntToast PC 알림",
             "copy": "settings.json에 Stop Hook을 추가해줘. BurntToast 모듈이 설치되어 있는지 먼저 확인하고, 없으면 Install-Module로 설치한 뒤, powershell.exe -NoProfile -Command 형식으로 Import-Module BurntToast 후 New-BurntToastNotification으로 작업 완료 알림을 띄워줘"
+          },
+          {
+            "desc": "macOS — 알림 센터",
+            "copy": "settings.json에 Stop Hook을 추가해줘. osascript -e 'display notification \"작업이 완료되었습니다\" with title \"Claude Code\"' 형식으로 macOS 알림 센터에 작업 완료 알림을 띄워줘"
           }
         ]
       }

@@ -177,7 +177,13 @@
         "PowerShell 또는 zsh 프롬프트 확인"
       ],
       "practice": null,
-      "action": null
+      "action": {
+        "label": "터미널 열기 단축키",
+        "items": [
+          { "desc": "Windows", "copy": "Ctrl + J" },
+          { "desc": "macOS", "copy": "Cmd + J" }
+        ]
+      }
     },
     {
       "imagePath": "assets/basic/step01/터미널과_AI_CLI_상태.svg",
@@ -262,8 +268,17 @@
       ],
       "practice": null,
       "action": {
-        "label": "Windows PATH 등록",
-        "copy": "$agyBin = \"$env:LOCALAPPDATA\\agy\\bin\"\n$userPath = [Environment]::GetEnvironmentVariable(\"Path\", \"User\")\nif (($userPath -split \";\") -notcontains $agyBin) {\n  $newUserPath = (($userPath -split \";\") + $agyBin | Where-Object { $_ } | Select-Object -Unique) -join \";\"\n  [Environment]::SetEnvironmentVariable(\"Path\", $newUserPath, \"User\")\n}"
+        "label": "PATH 등록",
+        "items": [
+          {
+            "desc": "Windows",
+            "copy": "$agyBin = \"$env:LOCALAPPDATA\\agy\\bin\"\n$userPath = [Environment]::GetEnvironmentVariable(\"Path\", \"User\")\nif (($userPath -split \";\") -notcontains $agyBin) {\n  $newUserPath = (($userPath -split \";\") + $agyBin | Where-Object { $_ } | Select-Object -Unique) -join \";\"\n  [Environment]::SetEnvironmentVariable(\"Path\", $newUserPath, \"User\")\n}"
+          },
+          {
+            "desc": "macOS",
+            "copy": "echo 'export PATH=\"$HOME/.agy/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc"
+          }
+        ]
       }
     },
     {
@@ -276,8 +291,17 @@
       ],
       "practice": null,
       "action": {
-        "label": "PATH 갱신 및 실행 (Windows)",
-        "copy": "$env:Path = [Environment]::GetEnvironmentVariable(\"Path\", \"Machine\") + \";\" + [Environment]::GetEnvironmentVariable(\"Path\", \"User\")\nagy --version\nagy"
+        "label": "PATH 갱신 및 실행",
+        "items": [
+          {
+            "desc": "Windows",
+            "copy": "$env:Path = [Environment]::GetEnvironmentVariable(\"Path\", \"Machine\") + \";\" + [Environment]::GetEnvironmentVariable(\"Path\", \"User\")\nagy --version\nagy"
+          },
+          {
+            "desc": "macOS",
+            "copy": "source ~/.zshrc\nagy --version\nagy"
+          }
+        ]
       }
     },
     {
@@ -738,8 +762,17 @@
       ],
       "practice": null,
       "action": {
-        "label": "Windows PATH 등록",
-        "copy": "$claudeBin = Join-Path $env:USERPROFILE \".local\\bin\"\n$userPath = [Environment]::GetEnvironmentVariable(\"Path\", \"User\")\nif (($userPath -split \";\") -notcontains $claudeBin) {\n  $newUserPath = (($userPath -split \";\") + $claudeBin |\n    Where-Object { $_ } |\n    Select-Object -Unique) -join \";\"\n  [Environment]::SetEnvironmentVariable(\"Path\", $newUserPath, \"User\")\n}"
+        "label": "PATH 등록",
+        "items": [
+          {
+            "desc": "Windows",
+            "copy": "$claudeBin = Join-Path $env:USERPROFILE \".local\\bin\"\n$userPath = [Environment]::GetEnvironmentVariable(\"Path\", \"User\")\nif (($userPath -split \";\") -notcontains $claudeBin) {\n  $newUserPath = (($userPath -split \";\") + $claudeBin |\n    Where-Object { $_ } |\n    Select-Object -Unique) -join \";\"\n  [Environment]::SetEnvironmentVariable(\"Path\", $newUserPath, \"User\")\n}"
+          },
+          {
+            "desc": "macOS",
+            "copy": "echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc"
+          }
+        ]
       }
     },
     {
@@ -752,8 +785,17 @@
       ],
       "practice": null,
       "action": {
-        "label": "PATH 갱신 및 실행 (Windows)",
-        "copy": "$env:Path = [Environment]::GetEnvironmentVariable(\"Path\", \"Machine\") + \";\" + [Environment]::GetEnvironmentVariable(\"Path\", \"User\")\nclaude --version\nclaude"
+        "label": "PATH 갱신 및 실행",
+        "items": [
+          {
+            "desc": "Windows",
+            "copy": "$env:Path = [Environment]::GetEnvironmentVariable(\"Path\", \"Machine\") + \";\" + [Environment]::GetEnvironmentVariable(\"Path\", \"User\")\nclaude --version\nclaude"
+          },
+          {
+            "desc": "macOS",
+            "copy": "source ~/.zshrc\nclaude --version\nclaude"
+          }
+        ]
       }
     },
     {
