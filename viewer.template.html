@@ -1071,15 +1071,25 @@
         }
 
         function readHash() {
-            const raw = location.hash.replace('#', '');
-            if (!raw) return;
+            const raw = location.hash.replace('#', '').trim();
+            if (!raw) {
+                currentCourse = 'basic';
+                currentSession = 0;
+                currentSlide = 0;
+                document.querySelectorAll('.course-tab').forEach(t => {
+                    t.classList.toggle('active', t.dataset.course === currentCourse);
+                });
+                return;
+            }
             const parts = raw.split('/');
             if (parts.length < 1) return;
             const course = parts[0];
             if (!COURSES[course]) return;
             currentCourse = course;
-            const sessionIdx = Math.max((parseInt(parts[1]) || 1) - 1, 0);
-            const slideIdx   = Math.max((parseInt(parts[2]) || 1) - 1, 0);
+            const sNum = parseInt(String(parts[1] || '1').replace(/[^0-9]/g, '')) || 1;
+            const sessionIdx = Math.max(sNum - 1, 0);
+            const slNum = parseInt(String(parts[2] || '1').replace(/[^0-9]/g, '')) || 1;
+            const slideIdx   = Math.max(slNum - 1, 0);
             const sessions   = COURSES[course].sessions;
             currentSession = Math.min(Math.max(sessionIdx, 0), sessions.length - 1);
             const slideCount = getSlideCount(sessions[currentSession]);
@@ -1089,6 +1099,42 @@
                 t.classList.toggle('active', t.dataset.course === currentCourse);
             });
         }
+
+        // 전체 화면 상태 동기화 (해시 변경, 딥링크, 슬라이드 이동 공통)
+        function applyCurrentState(courseChanged = false) {
+            if (courseChanged) {
+                renderSlides(currentCourse);
+                renderSidebar(currentCourse);
+            }
+            applySlidePositions();
+            applyImageSlidePositions();
+            renderDots(getSlideCount(COURSES[currentCourse].sessions[currentSession]));
+            updateIndicator();
+            updateSidebarActive();
+            updateDescPanel();
+            const fsOverlay = document.getElementById('fs-overlay');
+            if (fsOverlay && !fsOverlay.hidden) {
+                fsUpdateImage();
+            }
+        }
+
+        // 서브링크/뒤로가기/해시 변경 시 슬라이드 및 액션박스 즉시 동기화
+        function handleHashChange() {
+            const prevCourse = currentCourse;
+            const prevSession = currentSession;
+            const prevSlide = currentSlide;
+
+            readHash();
+
+            const courseChanged = (currentCourse !== prevCourse);
+            const stateChanged = courseChanged || (currentSession !== prevSession) || (currentSlide !== prevSlide);
+
+            if (stateChanged || !document.querySelector('.slide.is-active')) {
+                applyCurrentState(courseChanged);
+            }
+        }
+
+        window.addEventListener('hashchange', handleHashChange);
 
         /* ============================================
            Helper
@@ -1118,11 +1164,13 @@
                 if (s.slides && s.slides.length > 0) {
                     imageSlidesHtml = s.slides.map((filename, j) => {
                         const src = getImagePath(course, s.num, filename);
-                        // 현재 세션의 첫 슬라이드만 즉시 로드, 나머지는 lazy (data-src)
-                        const imgAttr = (i === currentSession && j === 0)
+                        // 현재 세션의 현재 슬라이드 및 다음 슬라이드는 즉시 로드
+                        const isCurrent = (i === currentSession && j === currentSlide);
+                        const isNext = (i === currentSession && j === currentSlide + 1);
+                        const imgAttr = (isCurrent || isNext)
                             ? `src="${src}"`
                             : `data-src="${src}"`;
-                        return `<div class="image-slide${j === 0 ? ' is-active' : ''}" data-img-index="${j}">
+                        return `<div class="image-slide${isCurrent ? ' is-active' : ''}" data-img-index="${j}">
                             <img ${imgAttr} alt="${s.title} - ${j + 1}"
                                 onerror="if(!this.dataset.src){this.style.display='none';this.nextElementSibling.style.display='flex'}">
                             <div class="image-placeholder" style="display:none">
@@ -1261,6 +1309,9 @@
                     currentSlide = idx;
                     applyImageSlidePositions();
                     updateIndicator();
+                    updateSidebarActive();
+                    updateDescPanel();
+                    pushHash();
                 });
             });
         }
@@ -1541,17 +1592,18 @@
         /* ============================================
            Init
            ============================================ */
-        document.addEventListener('DOMContentLoaded', async () => {
-            await loadAllSlides();   // slides.json 로드 (순서/파일명 갱신)
+        document.addEventListener('DOMContentLoaded', () => {
             readHash();   // URL 해시에서 course/session/slide 복원
             renderSlides(currentCourse);
-            applySlidePositions();           // 복원된 세션 위치 반영
-            applyImageSlidePositions();      // 복원된 슬라이드 위치 반영
-            renderDots(getSlideCount(COURSES[currentCourse].sessions[currentSession]));
             renderSidebar(currentCourse);
-            updateIndicator();
-            updateDescPanel();   // 액션박스·목표·토픽을 초기 로드에도 채운다 (딥링크 진입 대응)
+            applyCurrentState(false);   // 복원된 위치, 닷, 인디케이터, 사이드바, 액션박스 즉시 렌더링
             pushHash();   // 초기 상태를 URL에 반영
+
+            // slides.json 파일이 있는 경우 백그라운드에서 추가 갱신
+            loadAllSlides().then(() => {
+                readHash();
+                applyCurrentState(false);
+            }).catch(() => {});
 
             // 전체화면 진입 버튼 이벤트 (renderSlides 후 등록)
             document.getElementById('slides-container').addEventListener('click', e => {
