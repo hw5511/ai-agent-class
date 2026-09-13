@@ -19,3 +19,14 @@
   - 슬라이드 54: claude PATH 갱신 및 실행 — `items` 분기
 - **step05.json 변경 내역**:
   - 슬라이드 8: Hook 알림 — Windows BurntToast + macOS osascript `display notification` 분기
+
+---
+
+## ~~3. 서브링크(#해시) 이동 및 액션박스 동기화 버그 수정~~ ✅ 완료
+- **완료**: `0c9e938` 커밋에서 처리됨.
+- **viewer.template.html 변경 내역**:
+  - `window.addEventListener('hashchange', handleHashChange)` 추가로 페이지 내 서브링크 클릭, 주소창 해시 변경, 브라우저 뒤로가기/앞으로가기 시 슬라이드 및 액션박스 즉시 동기화.
+  - `readHash()` 정규화: `step01`, `slide13` 등 문자열 포함 서브링크에서도 숫자 추출 방어코드 적용.
+  - `renderSlides()` 최적화: 링크 접속 시 해당 슬라이드 이미지 즉시 로드(1번 슬라이드 깜빡임 및 로딩 지연 방지).
+  - 인디케이터 닷(dot) 클릭 시 액션박스 갱신(`updateDescPanel()`) 및 URL 해시 동기화(`pushHash()`) 누락 수정.
+  - `DOMContentLoaded` 시 빌드 내장 데이터를 활용하여 0초 즉시 렌더링하도록 개선.
