@@ -170,10 +170,10 @@
     },
     {
       "imagePath": "assets/basic/step01/Ctrl_J로_터미널_열기.svg",
-      "goal": "Ctrl + J 단축키로 하단 패널을 열고 터미널 탭을 확인한다.",
+      "goal": "Ctrl + J 단축키로 패널(우측 터미널)을 열고 터미널 탭을 확인한다.",
       "topics": [
-        "Ctrl + J로 하단 패널 토글",
-        "터미널(Terminal) 탭 선택",
+        "Ctrl + J로 패널(터미널) 열기/닫기 토글",
+        "우측 패널(Panel: Right) 터미널 확인",
         "PowerShell 또는 zsh 프롬프트 확인"
       ],
       "practice": null,
