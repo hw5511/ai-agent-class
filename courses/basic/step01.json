@@ -180,8 +180,14 @@
       "action": {
         "label": "터미널 열기 단축키",
         "items": [
-          { "desc": "Windows", "copy": "Ctrl + J" },
-          { "desc": "macOS", "copy": "Cmd + J" }
+          {
+            "desc": "Windows",
+            "copy": "Ctrl + J"
+          },
+          {
+            "desc": "macOS",
+            "copy": "Cmd + J"
+          }
         ]
       }
     },
@@ -550,7 +556,7 @@
         "items": [
           {
             "desc": "Windows",
-            "copy": "irm https://chatgpt.com/codex/install.ps1 | iex"
+            "copy": "pwsh -ExecutionPolicy ByPass -c \"irm https://chatgpt.com/codex/install.ps1 | iex\""
           },
           {
             "desc": "macOS",
