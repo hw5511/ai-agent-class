@@ -205,6 +205,34 @@
       "action": null
     },
     {
+      "imagePath": "assets/basic/step01/터미널_기본_명령어.svg",
+      "goal": "설치 전에 터미널에 명령을 직접 쳐보고, 반응하는 것을 확인한다.",
+      "topics": [
+        "echo 안녕하세요 — 친 대로 받아 그대로 돌려준다",
+        "한 줄 치고 Enter → 한 줄로 답한다. AI CLI 대화창과 다른 점",
+        "clear — 화면만 비운다. 파일·폴더는 지워지지 않는다",
+        "두 명령 모두 Windows · macOS 동일 (Windows 는 cls 도 가능)"
+      ],
+      "practice": "터미널에 두 명령을 직접 쳐서 출력과 화면 정리를 확인한다.",
+      "action": {
+        "label": "터미널 기본 명령어",
+        "items": [
+          {
+            "desc": "① 출력해 보기",
+            "copy": "echo 안녕하세요"
+          },
+          {
+            "desc": "② 화면 비우기",
+            "copy": "clear"
+          },
+          {
+            "desc": "Windows 는 이것도 됩니다",
+            "copy": "cls"
+          }
+        ]
+      }
+    },
+    {
       "imagePath": "assets/basic/step01/현재_작업_폴더_확인.svg",
       "goal": "현재 터미널 경로가 에이전트1/agy인지 확인한다.",
       "topics": [

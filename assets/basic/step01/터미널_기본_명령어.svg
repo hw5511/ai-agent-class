@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">터미널에 명령을 직접 쳐봅니다</text>
+  <text x="60" y="148" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">설치를 시작하기 전에, 터미널이 어떻게 반응하는지 두 개만 해봅니다</text>
+
+  <rect x="60" y="180" width="560" height="346" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="60" y="180" width="560" height="48" rx="12" fill="#eff6ff"/>
+  <rect x="60" y="214" width="560" height="14" fill="#eff6ff"/>
+  <circle cx="91" cy="204" r="11" fill="#2563eb"/>
+  <text x="91" y="209" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">1</text>
+  <text x="114" y="209" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">echo — 친 대로 돌려줍니다</text>
+
+  <rect x="84" y="250" width="512" height="150" rx="8" fill="#1f2937"/>
+  <text x="108" y="277" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="#9ca3af" letter-spacing="0.6">명령 입력</text>
+  <text x="108" y="312" font-family="'Courier New',Courier,monospace" font-size="15" fill="#e5e7eb">echo 안녕하세요</text>
+  <line x1="108" y1="332" x2="572" y2="332" stroke="#374151" stroke-dasharray="4 4"/>
+  <text x="108" y="357" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="#9ca3af" letter-spacing="0.6">출력</text>
+  <text x="108" y="384" font-family="'Courier New',Courier,monospace" font-size="15" fill="#86efac">안녕하세요</text>
+
+  <rect x="84" y="420" width="512" height="82" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="108" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#15803d">내가 친 것을 컴퓨터가 받았다는 뜻입니다</text>
+  <text x="108" y="472" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#4b5563">터미널은 한 줄 치고 Enter 를 누르면 한 줄로 답합니다.</text>
+  <text x="108" y="491" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#4b5563">이것이 AI CLI 의 대화창과 다른 점입니다.</text>
+
+  <rect x="660" y="180" width="560" height="346" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="660" y="180" width="560" height="48" rx="12" fill="#f5f3ff"/>
+  <rect x="660" y="214" width="560" height="14" fill="#f5f3ff"/>
+  <circle cx="691" cy="204" r="11" fill="#6d28d9"/>
+  <text x="691" y="209" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">2</text>
+  <text x="714" y="209" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#6d28d9">clear — 화면을 비웁니다</text>
+
+  <rect x="684" y="250" width="512" height="150" rx="8" fill="#1f2937"/>
+  <text x="708" y="277" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="#9ca3af" letter-spacing="0.6">명령 입력</text>
+  <text x="708" y="312" font-family="'Courier New',Courier,monospace" font-size="15" fill="#e5e7eb">clear</text>
+  <line x1="708" y1="332" x2="1172" y2="332" stroke="#374151" stroke-dasharray="4 4"/>
+  <text x="708" y="357" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="#9ca3af" letter-spacing="0.6">결과</text>
+  <text x="708" y="384" font-family="'Courier New',Courier,monospace" font-size="14" fill="#9ca3af">화면이 비고 프롬프트만 남습니다</text>
+
+  <rect x="684" y="420" width="512" height="82" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="708" y="448" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="700" fill="#15803d">지워지는 것은 화면뿐입니다</text>
+  <text x="708" y="472" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#4b5563">파일·폴더는 아무것도 사라지지 않습니다.</text>
+  <text x="708" y="491" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#4b5563">출력이 길어져 헷갈릴 때 쓰면 됩니다.</text>
+
+  <rect x="60" y="550" width="1160" height="72" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="88" y="579" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">두 명령 모두 Windows · macOS 에서 똑같이 동작합니다</text>
+  <text x="88" y="603" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#6b7280">Windows 에서는 clear 대신 cls 라고 쳐도 됩니다. 결과는 같습니다.</text>
+  <text x="640" y="668" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">터미널이 내 명령에 반응하는 것을 확인했으면, 이제 작업 폴더를 확인합니다</text>
+</svg>
