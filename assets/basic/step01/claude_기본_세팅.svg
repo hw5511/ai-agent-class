@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">대화 전에 기본 세팅 두 가지</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">Claude Code 입력창에 슬래시(/)로 시작하는 명령을 칩니다. 대화가 아니라 설정입니다</text>
+
+  <rect x="60" y="172" width="566" height="244" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="60" y="172" width="566" height="48" rx="12" fill="#eff6ff"/>
+  <rect x="60" y="206" width="566" height="14" fill="#eff6ff"/>
+  <circle cx="91" cy="196" r="11" fill="#2563eb"/>
+  <text x="91" y="201" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">1</text>
+  <text x="114" y="201" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">사용할 모델 정하기</text>
+  <rect x="84" y="240" width="518" height="58" rx="8" fill="#1f2937"/>
+  <text x="108" y="277" font-family="'Courier New',Courier,monospace" font-size="18" font-weight="700" fill="#fbbf24">/model sonnet</text>
+  <text x="84" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" fill="#374151">실습에는 Sonnet 이면 충분합니다. 빠르고 사용량도 덜 씁니다.</text>
+  <text x="84" y="356" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" fill="#374151">한 번 정하면 이 폴더에서 계속 유지됩니다.</text>
+  <text x="84" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#9ca3af">화면 아래쪽에 지금 모델이 무엇인지 계속 표시됩니다</text>
+
+  <rect x="654" y="172" width="566" height="244" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="654" y="172" width="566" height="48" rx="12" fill="#f5f3ff"/>
+  <rect x="654" y="206" width="566" height="14" fill="#f5f3ff"/>
+  <circle cx="685" cy="196" r="11" fill="#6d28d9"/>
+  <text x="685" y="201" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">2</text>
+  <text x="708" y="201" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#6d28d9">VS Code 연동 끊기</text>
+  <rect x="678" y="240" width="518" height="58" rx="8" fill="#1f2937"/>
+  <text x="702" y="277" font-family="'Courier New',Courier,monospace" font-size="18" font-weight="700" fill="#fbbf24">/ide</text>
+  <text x="678" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" fill="#374151">목록이 뜨면 <tspan font-family="'Courier New',Courier,monospace" font-weight="700" fill="#6d28d9">none</tspan> 을 고릅니다 (보통 2번).</text>
+  <text x="678" y="356" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" fill="#374151">연동을 끊고 터미널만으로 진행합니다.</text>
+  <text x="678" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#b91c1c">연동을 켜두면 편집기 쪽 안내창이 끼어들어 실습 흐름이 끊깁니다</text>
+
+  <text x="60" y="452" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">입력창에 이렇게 칩니다</text>
+  <rect x="60" y="466" width="1160" height="156" rx="10" fill="#1f2937"/>
+  <text x="88" y="502" font-family="'Courier New',Courier,monospace" font-size="15" fill="#93c5fd">&gt; <tspan fill="#fbbf24">/model sonnet</tspan></text>
+  <text x="112" y="528" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#86efac">✔ 모델이 Sonnet 으로 바뀝니다</text>
+  <line x1="88" y1="546" x2="1192" y2="546" stroke="#374151" stroke-dasharray="4 4"/>
+  <text x="88" y="574" font-family="'Courier New',Courier,monospace" font-size="15" fill="#93c5fd">&gt; <tspan fill="#fbbf24">/ide</tspan></text>
+  <text x="112" y="600" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" fill="#e5e7eb">목록에서 <tspan font-family="'Courier New',Courier,monospace" fill="#fbbf24">none</tspan> 을 방향키로 고르고 Enter — 연동이 끊깁니다</text>
+
+  <text x="640" y="668" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">두 가지를 끝냈으면 이제 "너는 누구니?" 부터 시작합니다</text>
+</svg>

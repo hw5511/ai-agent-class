@@ -928,6 +928,30 @@
       "action": null
     },
     {
+      "imagePath": "assets/basic/step01/claude_기본_세팅.svg",
+      "goal": "대화를 시작하기 전에 모델을 정하고 VS Code 연동을 끊는다.",
+      "topics": [
+        "슬래시(/)로 시작하면 대화가 아니라 설정 명령이다",
+        "/model sonnet — 실습에는 Sonnet 이면 충분하다",
+        "/ide 실행 후 목록에서 none 선택 (보통 2번) — VS Code 연동 해제",
+        "연동을 켜두면 편집기 쪽 안내창이 끼어들어 실습 흐름이 끊긴다"
+      ],
+      "practice": "두 명령을 차례로 실행한 뒤 화면 아래 모델 표시가 Sonnet 으로 바뀌었는지 확인한다.",
+      "action": {
+        "label": "기본 세팅 두 가지",
+        "items": [
+          {
+            "desc": "① 모델 정하기",
+            "copy": "/model sonnet"
+          },
+          {
+            "desc": "② VS Code 연동 끊기 — 목록에서 none 선택",
+            "copy": "/ide"
+          }
+        ]
+      }
+    },
+    {
       "imagePath": "assets/basic/step01/claude_첫_대화_자기소개.svg",
       "goal": "Claude Code에 '너는 누구니?'를 입력하고 응답을 확인한다.",
       "topics": [
