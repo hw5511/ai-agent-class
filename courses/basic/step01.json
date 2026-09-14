@@ -560,6 +560,35 @@
       }
     },
     {
+      "imagePath": "assets/basic/step01/PATH_자동_등록.svg",
+      "goal": "경로를 외우지 않고, 세 CLI 를 직접 찾아 사용자 PATH 에 등록한다.",
+      "topics": [
+        "예비책 — 버전이 안 찍힐 때 먼저 시도하는 한 방",
+        "이미 PATH 에 있는 것은 건너뛴다",
+        "기본 설치 위치를 먼저 보고, 없으면 홈 폴더를 뒤져서 찾는다",
+        "여러 번 실행해도 같은 경로가 중복 등록되지 않는다",
+        "실행한 '다음에' VS Code 를 완전히 껐다 켠다"
+      ],
+      "practice": null,
+      "action": {
+        "label": "자동 탐색·등록 (안 될 때만)",
+        "items": [
+          {
+            "desc": "Windows — PowerShell 에 통째로 붙여넣기",
+            "copy": "$names = 'agy','codex','claude'\n$guess = @{\n  agy    = @(\"$env:LOCALAPPDATA\\agy\\bin\")\n  codex  = @(\"$env:LOCALAPPDATA\\Programs\\OpenAI\\Codex\\bin\", \"$env:USERPROFILE\\.codex\\bin\")\n  claude = @(\"$env:USERPROFILE\\.local\\bin\")\n}\n$roots = @($env:LOCALAPPDATA, $env:APPDATA, $env:USERPROFILE) | Where-Object { $_ -and (Test-Path $_) } | Select-Object -Unique\n$add = @()\nforeach ($n in $names) {\n  if (Get-Command $n -ErrorAction SilentlyContinue) { Write-Host \"OK   $n - 이미 PATH 에 있습니다\"; continue }\n  $dir = $null\n  foreach ($g in $guess[$n]) { if (Test-Path (Join-Path $g \"$n.exe\")) { $dir = $g; break } }\n  if (-not $dir) {\n    foreach ($r in $roots) {\n      $hit = Get-ChildItem -Path $r -Filter \"$n.exe\" -Recurse -File -Depth 5 -ErrorAction SilentlyContinue | Select-Object -First 1\n      if ($hit) { $dir = $hit.DirectoryName; break }\n    }\n  }\n  if ($dir) { Write-Host \"FIND $n - $dir\"; $add += $dir }\n  else      { Write-Host \"MISS $n - 찾지 못했습니다. 설치부터 다시 하세요\" }\n}\n$add = $add | Select-Object -Unique\nif ($add.Count -eq 0) { Write-Host \"추가할 경로가 없습니다\"; return }\n$userPath = [Environment]::GetEnvironmentVariable('Path','User')\n$have = @($userPath -split ';' | Where-Object { $_ })\n$new = @($add | Where-Object { $have -notcontains $_ })\nif ($new.Count -eq 0) { Write-Host \"이미 모두 등록돼 있습니다\"; return }\n[Environment]::SetEnvironmentVariable('Path', (($have + $new) -join ';'), 'User')\nWrite-Host (\"ADDED \" + ($new -join ' | '))"
+          },
+          {
+            "desc": "macOS — 터미널에 통째로 붙여넣기",
+            "copy": "for n in agy codex claude; do\n  if command -v \"$n\" >/dev/null 2>&1; then echo \"OK   $n - 이미 PATH 에 있습니다\"; continue; fi\n  d=\"\"\n  for c in \"$HOME/.local/bin\" \"$HOME/.agy/bin\" \"$HOME/.codex/bin\"; do\n    [ -x \"$c/$n\" ] && { d=\"$c\"; break; }\n  done\n  if [ -z \"$d\" ]; then\n    f=$(find \"$HOME\" -maxdepth 6 -type f -name \"$n\" -perm -u+x 2>/dev/null | head -1)\n    [ -n \"$f\" ] && d=$(dirname \"$f\")\n  fi\n  if [ -z \"$d\" ]; then echo \"MISS $n - 찾지 못했습니다. 설치부터 다시 하세요\"; continue; fi\n  echo \"FIND $n - $d\"\n  if grep -qsF \"\\\"$d:\\$PATH\\\"\" \"$HOME/.zshrc\"; then echo \"SKIP $d - 이미 등록돼 있습니다\"; else\n    printf 'export PATH=\"%s:$PATH\"\\n' \"$d\" >> \"$HOME/.zshrc\"; echo \"ADDED $d\"; fi\ndone"
+          },
+          {
+            "desc": "끝나고 다시 확인",
+            "copy": "codex --version\nclaude --version"
+          }
+        ]
+      }
+    },
+    {
       "imagePath": "assets/basic/step01/codex_PATH_등록.svg",
       "goal": "codex --version 이 안 찍힐 때, Codex 설치 폴더를 사용자 PATH에 직접 등록한다.",
       "topics": [
