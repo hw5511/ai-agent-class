@@ -255,8 +255,8 @@
       "goal": "설치 직후 agy 명령을 찾지 못하는 원인을 파악한다.",
       "topics": [
         "'agy is not recognized' 오류 화면",
-        "설치 직후 현재 터미널 세션의 PATH 미갱신",
-        "환경 변수(PATH)의 동작 방식 이해"
+        "원인: VS Code는 켜질 때의 PATH를 복사해 두므로, 켜둔 채 설치한 명령어를 새 터미널에도 못 싣는다",
+        "해결은 다음 슬라이드 — VS Code를 완전히 껐다 켠다 (명령어로 PATH 를 만지지 않는다)"
       ],
       "practice": null,
       "action": {
@@ -265,47 +265,21 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/agy_PATH_등록.svg",
-      "goal": "Antigravity CLI 설치 폴더를 사용자 PATH에 등록한다.",
-      "topics": [
-        "%LOCALAPPDATA%\\agy\\bin 경로 확인",
-        "사용자 환경 변수 PATH에 영구 등록",
-        "PowerShell 스크립트로 안전하게 등록"
-      ],
-      "practice": null,
-      "action": {
-        "label": "PATH 등록",
-        "items": [
-          {
-            "desc": "Windows",
-            "copy": "$agyBin = \"$env:LOCALAPPDATA\\agy\\bin\"\n$userPath = [Environment]::GetEnvironmentVariable(\"Path\", \"User\")\nif (($userPath -split \";\") -notcontains $agyBin) {\n  $newUserPath = (($userPath -split \";\") + $agyBin | Where-Object { $_ } | Select-Object -Unique) -join \";\"\n  [Environment]::SetEnvironmentVariable(\"Path\", $newUserPath, \"User\")\n}"
-          },
-          {
-            "desc": "macOS",
-            "copy": "echo 'export PATH=\"$HOME/.agy/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc"
-          }
-        ]
-      }
-    },
-    {
       "imagePath": "assets/basic/step01/agy_PATH_반영_및_실행.svg",
-      "goal": "현재 터미널 세션에 PATH를 새로고침하고 agy를 실행한다.",
+      "goal": "VS Code를 완전히 껐다가 다시 켜고 agy를 실행한다.",
       "topics": [
-        "현재 터미널 PATH 새로고침",
-        "agy --version 버전 확인",
-        "agy 실행"
+        "File > Exit 로 VS Code 완전 종료 (창 ✕ 닫기·Reload Window 는 PATH 를 다시 안 읽는다)",
+        "VS Code 다시 실행 → 같은 폴더 열기 → Terminal > New Terminal",
+        "agy --version 버전 확인 후 agy 실행",
+        "macOS 는 새 터미널만 열면 된다"
       ],
       "practice": null,
       "action": {
-        "label": "PATH 갱신 및 실행",
+        "label": "재실행 후 확인·실행",
         "items": [
           {
-            "desc": "Windows",
-            "copy": "$env:Path = [Environment]::GetEnvironmentVariable(\"Path\", \"Machine\") + \";\" + [Environment]::GetEnvironmentVariable(\"Path\", \"User\")\nagy --version\nagy"
-          },
-          {
-            "desc": "macOS",
-            "copy": "source ~/.zshrc\nagy --version\nagy"
+            "desc": "Windows / macOS (새 터미널)",
+            "copy": "agy --version\nagy"
           }
         ]
       }
@@ -751,7 +725,8 @@
       "goal": "설치 직후 claude 명령을 찾지 못하는 원인을 파악한다.",
       "topics": [
         "'claude is not recognized' 오류 화면",
-        "설치 직후 현재 터미널 세션의 PATH 미갱신"
+        "원인: Claude 설치기는 PATH 를 등록하지 않으므로 한 줄 등록이 필요하다(다음 슬라이드)",
+        "등록 뒤에는 VS Code를 완전히 껐다 켠다 — 등록 전에 껐다 켜면 한 번 더 켜야 한다"
       ],
       "practice": null,
       "action": {
@@ -763,8 +738,8 @@
       "imagePath": "assets/basic/step01/claude_PATH_등록.svg",
       "goal": "Claude Code 설치 경로를 사용자 PATH에 등록한다.",
       "topics": [
-        "%USERPROFILE%\\.local\\bin 경로 확인",
-        "사용자 환경 변수 PATH에 중복 없이 영구 등록"
+        "%USERPROFILE%\\.local\bin 경로를 사용자 PATH에 중복 없이 영구 등록",
+        "이 한 줄을 실행한 '다음에' VS Code를 껐다 켠다 (순서가 바뀌면 재시작이 두 번)"
       ],
       "practice": null,
       "action": {
@@ -783,23 +758,20 @@
     },
     {
       "imagePath": "assets/basic/step01/claude_PATH_반영_및_실행.svg",
-      "goal": "현재 터미널 PATH를 새로고침하고 Claude Code를 실행한다.",
+      "goal": "VS Code를 완전히 껐다가 다시 켜고 Claude Code를 실행한다.",
       "topics": [
-        "현재 세션 PATH 새로고침",
-        "claude --version 버전 확인",
-        "claude 실행"
+        "File > Exit 로 VS Code 완전 종료 (창 ✕ 닫기·Reload Window 는 PATH 를 다시 안 읽는다)",
+        "VS Code 다시 실행 → 같은 폴더 열기 → Terminal > New Terminal",
+        "claude --version 버전 확인 후 claude 실행",
+        "macOS 는 새 터미널만 열면 된다"
       ],
       "practice": null,
       "action": {
-        "label": "PATH 갱신 및 실행",
+        "label": "재실행 후 확인·실행",
         "items": [
           {
-            "desc": "Windows",
-            "copy": "$env:Path = [Environment]::GetEnvironmentVariable(\"Path\", \"Machine\") + \";\" + [Environment]::GetEnvironmentVariable(\"Path\", \"User\")\nclaude --version\nclaude"
-          },
-          {
-            "desc": "macOS",
-            "copy": "source ~/.zshrc\nclaude --version\nclaude"
+            "desc": "Windows / macOS (새 터미널)",
+            "copy": "claude --version\nclaude"
           }
         ]
       }
