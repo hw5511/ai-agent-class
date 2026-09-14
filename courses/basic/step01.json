@@ -2,16 +2,17 @@
   "step": 1,
   "title": "AI 에이전트 이해와 CLI 환경 구축",
   "hours": "2시간",
-  "goal": "AI 에이전트의 개념을 이해하고, VS Code 환경에서 3종 CLI 에이전트(Antigravity, Codex, Claude Code)를 설치하여 동일한 실습을 완수하고 동작을 비교한다.",
+  "goal": "AI 에이전트의 개념을 이해하고, VS Code 환경에서 Antigravity CLI 를 직접 설치한 뒤 그 에이전트에게 나머지 두 CLI(Codex · Claude Code) 설치를 맡긴다. 세 에이전트로 동일한 실습을 완수하고 동작을 비교한다.",
   "topics": [
     "AI 에이전트란? / 설치형 AI란?",
     "VS Code 환경 설정 및 터미널 기초",
-    "Antigravity CLI 설치 및 실습",
-    "Codex CLI 설치 및 실습",
-    "Claude Code 설치 및 실습",
+    "Antigravity CLI 설치 · VS Code 재실행 · 로그인",
+    "agy 에게 Codex · Claude Code 설치와 PATH 등록 맡기기",
+    "Codex CLI 로그인 및 실습",
+    "Claude Code 로그인 및 실습",
     "3대 에이전트 실습 결과 비교"
   ],
-  "practice": "VS Code 안에서 3종 에이전트(Antigravity·Codex·Claude)를 설치하고, 동일한 4단계 실습을 수행하여 응답과 동작 방식을 비교한다.",
+  "practice": "Antigravity 만 손으로 설치하고, 나머지 두 CLI 는 agy 에게 설치시킨다. 세 에이전트에 동일한 4단계 실습(자기소개 → 자기소개서 → introduce 폴더 → 파일 이동)을 시켜 결과를 비교한다.",
   "slides": [
     {
       "imagePath": "assets/basic/step01/AI_에이전트란.svg",
@@ -266,12 +267,12 @@
     },
     {
       "imagePath": "assets/basic/step01/agy_PATH_반영_및_실행.svg",
-      "goal": "VS Code를 완전히 껐다가 다시 켜고 agy를 실행한다.",
+      "goal": "VS Code를 완전히 껐다가 다시 켜고, 권한 확인 없이 agy를 실행한다.",
       "topics": [
         "File > Exit 로 VS Code 완전 종료 (창 ✕ 닫기·Reload Window 는 PATH 를 다시 안 읽는다)",
         "VS Code 다시 실행 → 같은 폴더 열기 → Terminal > New Terminal",
-        "agy --version 버전 확인 후 agy 실행",
-        "macOS 는 새 터미널만 열면 된다"
+        "agy --version 확인 후 agy --dangerously-skip-permissions 로 실행",
+        "확인 없이 파일·명령을 실행하는 모드 — 이어서 설치까지 맡기기 위해 쓴다"
       ],
       "practice": null,
       "action": {
@@ -279,7 +280,7 @@
         "items": [
           {
             "desc": "Windows / macOS (새 터미널)",
-            "copy": "agy --version\nagy"
+            "copy": "agy --version\nagy --dangerously-skip-permissions"
           }
         ]
       }
@@ -453,6 +454,21 @@
       "action": null
     },
     {
+      "imagePath": "assets/basic/step01/agy_다른_CLI_설치.svg",
+      "goal": "agy 에게 Codex CLI 와 Claude Code 설치, PATH 영구 등록까지 맡긴다.",
+      "topics": [
+        "설치 명령을 사람이 외우지 않는다 — 에이전트가 실행한다",
+        "두 CLI 설치 + 사용자 환경 변수 PATH 영구 등록을 한 번에 요청",
+        "권한 확인 없이 실행했기 때문에 멈추지 않고 끝까지 진행된다",
+        "무엇을 어디에 설치했는지 보고까지 받는다"
+      ],
+      "practice": "프롬프트를 붙여넣고, agy 가 설치와 PATH 등록을 마칠 때까지 기다린다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "Codex CLI 와 Claude Code 를 내 컴퓨터에 설치해줘.\nWindows 면 아래 두 명령을 그대로 실행해줘. 프로필의 StrictMode 때문에 실패하니 반드시 -NoProfile 을 붙여서 실행해.\n  powershell -NoProfile -ExecutionPolicy ByPass -c \"irm https://chatgpt.com/codex/install.ps1 | iex\"\n  powershell -NoProfile -ExecutionPolicy ByPass -c \"irm https://claude.ai/install.ps1 | iex\"\nmacOS 면 아래 두 명령을 실행해줘.\n  curl -fsSL https://chatgpt.com/codex/install.sh | sh\n  curl -fsSL https://claude.ai/install.sh | bash\nClaude Code 설치기는 PATH 를 등록하지 않으니, 두 CLI 의 실행 경로를 사용자 환경 변수 PATH 에 직접 영구 등록해줘. 이미 등록돼 있으면 중복으로 넣지 마.\n마지막으로 각각 어디에 설치됐고 PATH 에 무엇을 추가했는지 알려줘."
+      }
+    },
+    {
       "imagePath": "assets/basic/step01/agy_Ctrl_C_종료.svg",
       "goal": "Ctrl + C로 Antigravity CLI 입력을 종료한다.",
       "topics": [
@@ -471,6 +487,25 @@
       ],
       "practice": null,
       "action": null
+    },
+    {
+      "imagePath": "assets/basic/step01/설치_확인.svg",
+      "goal": "VS Code를 완전히 껐다 켠 뒤, agy 가 설치한 두 CLI 가 실행되는지 확인한다.",
+      "topics": [
+        "File > Exit 로 VS Code 완전 종료 후 다시 실행 (창 ✕ 닫기·Reload Window 는 PATH 를 다시 안 읽는다)",
+        "codex --version · claude --version 으로 설치 확인",
+        "macOS 는 새 터미널만 열면 된다"
+      ],
+      "practice": null,
+      "action": {
+        "label": "설치 확인",
+        "items": [
+          {
+            "desc": "Windows / macOS (새 터미널)",
+            "copy": "codex --version\nclaude --version"
+          }
+        ]
+      }
     },
     {
       "imagePath": "assets/basic/step01/다음_도구_Codex.svg",
@@ -517,34 +552,12 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/codex_설치.svg",
-      "goal": "공식 설치 스크립트로 Codex CLI를 설치한다.",
-      "topics": [
-        "OpenAI 공식 네이티브 설치 스크립트 실행",
-        "Windows: 새 셸(-NoProfile)에서 실행 — 프로필의 StrictMode 가 설치를 막는다",
-        "macOS: curl -fsSL https://chatgpt.com/codex/install.sh | sh"
-      ],
-      "practice": null,
-      "action": {
-        "label": "설치 명령어",
-        "items": [
-          {
-            "desc": "Windows — pwsh 있으면 pwsh, 없으면 Windows PowerShell 로 자동 분기",
-            "copy": "if (Get-Command pwsh -ErrorAction SilentlyContinue) { pwsh -NoProfile -ExecutionPolicy ByPass -c \"irm https://chatgpt.com/codex/install.ps1 | iex\" } else { powershell -NoProfile -ExecutionPolicy ByPass -c \"irm https://chatgpt.com/codex/install.ps1 | iex\" }"
-          },
-          {
-            "desc": "macOS",
-            "copy": "curl -fsSL https://chatgpt.com/codex/install.sh | sh"
-          }
-        ]
-      }
-    },
-    {
       "imagePath": "assets/basic/step01/codex_설치_확인_및_실행.svg",
       "goal": "Codex 버전을 확인하고 codex를 실행한다.",
       "topics": [
         "codex --version 버전 확인",
-        "codex 입력하여 CLI 실행"
+        "codex 입력하여 CLI 실행",
+        "설치와 PATH 등록은 agy 가 이미 끝냈다"
       ],
       "practice": null,
       "action": {
@@ -698,80 +711,24 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/claude_설치.svg",
-      "goal": "공식 네이티브 설치 스크립트로 Claude Code를 설치한다.",
+      "imagePath": "assets/basic/step01/claude_실행.svg",
+      "goal": "Claude Code 버전을 확인하고 claude를 실행한다.",
       "topics": [
-        "공식 설치 스크립트 실행",
-        "Windows: irm https://claude.ai/install.ps1 | iex",
-        "macOS: curl -fsSL https://claude.ai/install.sh | bash"
+        "claude --version 버전 확인",
+        "claude 입력하여 CLI 실행",
+        "설치와 PATH 등록은 agy 가 이미 끝냈다"
       ],
       "practice": null,
       "action": {
-        "label": "설치 명령어",
+        "label": "확인 및 실행",
         "items": [
           {
-            "desc": "Windows",
-            "copy": "irm https://claude.ai/install.ps1 | iex"
+            "desc": "버전 확인",
+            "copy": "claude --version"
           },
           {
-            "desc": "macOS",
-            "copy": "curl -fsSL https://claude.ai/install.sh | bash"
-          }
-        ]
-      }
-    },
-    {
-      "imagePath": "assets/basic/step01/claude_PATH_오류.svg",
-      "goal": "설치 직후 claude 명령을 찾지 못하는 원인을 파악한다.",
-      "topics": [
-        "'claude is not recognized' 오류 화면",
-        "원인: Claude 설치기는 PATH 를 등록하지 않으므로 한 줄 등록이 필요하다(다음 슬라이드)",
-        "등록 뒤에는 VS Code를 완전히 껐다 켠다 — 등록 전에 껐다 켜면 한 번 더 켜야 한다"
-      ],
-      "practice": null,
-      "action": {
-        "label": "확인 명령어",
-        "copy": "claude --version"
-      }
-    },
-    {
-      "imagePath": "assets/basic/step01/claude_PATH_등록.svg",
-      "goal": "Claude Code 설치 경로를 사용자 PATH에 등록한다.",
-      "topics": [
-        "%USERPROFILE%\\.local\bin 경로를 사용자 PATH에 중복 없이 영구 등록",
-        "이 한 줄을 실행한 '다음에' VS Code를 껐다 켠다 (순서가 바뀌면 재시작이 두 번)"
-      ],
-      "practice": null,
-      "action": {
-        "label": "PATH 등록",
-        "items": [
-          {
-            "desc": "Windows",
-            "copy": "$claudeBin = Join-Path $env:USERPROFILE \".local\\bin\"\n$userPath = [Environment]::GetEnvironmentVariable(\"Path\", \"User\")\nif (($userPath -split \";\") -notcontains $claudeBin) {\n  $newUserPath = (($userPath -split \";\") + $claudeBin |\n    Where-Object { $_ } |\n    Select-Object -Unique) -join \";\"\n  [Environment]::SetEnvironmentVariable(\"Path\", $newUserPath, \"User\")\n}"
-          },
-          {
-            "desc": "macOS",
-            "copy": "echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc"
-          }
-        ]
-      }
-    },
-    {
-      "imagePath": "assets/basic/step01/claude_PATH_반영_및_실행.svg",
-      "goal": "VS Code를 완전히 껐다가 다시 켜고 Claude Code를 실행한다.",
-      "topics": [
-        "File > Exit 로 VS Code 완전 종료 (창 ✕ 닫기·Reload Window 는 PATH 를 다시 안 읽는다)",
-        "VS Code 다시 실행 → 같은 폴더 열기 → Terminal > New Terminal",
-        "claude --version 버전 확인 후 claude 실행",
-        "macOS 는 새 터미널만 열면 된다"
-      ],
-      "practice": null,
-      "action": {
-        "label": "재실행 후 확인·실행",
-        "items": [
-          {
-            "desc": "Windows / macOS (새 터미널)",
-            "copy": "claude --version\nclaude"
+            "desc": "실행",
+            "copy": "claude"
           }
         ]
       }

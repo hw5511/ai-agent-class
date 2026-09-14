@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">VS Code 재실행 후 설치 확인</text>
+  <text x="60" y="148" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">agy 가 설치한 두 CLI 가 실제로 실행되는지 직접 확인합니다</text>
+
+  <rect x="60" y="175" width="1160" height="472" rx="10" fill="#1e1e1e" stroke="#333333" stroke-width="1.5"/>
+  <path d="M60 185a10 10 0 0 1 10-10h1140a10 10 0 0 1 10 10v22H60z" fill="#2d2d2d"/>
+  <circle cx="82" cy="191" r="5.5" fill="#ef4444"/>
+  <circle cx="100" cy="191" r="5.5" fill="#f59e0b"/>
+  <circle cx="118" cy="191" r="5.5" fill="#22c55e"/>
+  <text x="640" y="195" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="500" fill="#cccccc">에이전트1 — Visual Studio Code</text>
+  <rect x="60" y="207" width="1160" height="415" fill="#181818"/>
+  <text x="88" y="240" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="12" font-weight="400" fill="#858585">PowerShell · VS Code 를 껐다 켠 뒤의 새 터미널</text>
+  <rect x="88" y="256" width="1104" height="84" rx="6" fill="#252526" stroke="#484848"/>
+  <text x="108" y="284" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="13.5" font-weight="400" fill="#e5e7eb">PS C:\...\에이전트1\agy&gt; codex --version</text>
+  <text x="108" y="312" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="13.5" font-weight="400" fill="#e5e7eb">PS C:\...\에이전트1\agy&gt; claude --version</text>
+  <rect x="88" y="358" width="1104" height="92" rx="6" fill="#0f291e" stroke="#166534" stroke-width="1.2"/>
+  <text x="112" y="386" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14" font-weight="700" fill="#4ade80">codex-cli 0.x.x</text>
+  <text x="112" y="414" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14" font-weight="700" fill="#4ade80">claude 2.x.x</text>
+  <text x="112" y="438" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#86efac">두 줄 다 버전이 찍히면 설치와 PATH 등록이 모두 끝난 것입니다</text>
+  <rect x="88" y="472" width="1104" height="104" rx="6" fill="#2a1f14" stroke="#92400e" stroke-width="1.2"/>
+  <text x="112" y="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#fbbf24">⚠  버전이 안 찍히면</text>
+  <text x="112" y="526" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#fcd34d">File &gt; Exit 로 VS Code 를 완전히 종료했다가 다시 여세요.</text>
+  <text x="112" y="548" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#fcd34d">창 ✕ 닫기나 Reload Window 는 PATH 를 다시 읽지 않습니다. macOS 는 새 터미널만 열면 됩니다.</text>
+  <rect x="88" y="594" width="1104" height="1" fill="#333333"/>
+  <text x="88" y="614" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af">설치한 주체가 에이전트여도, 확인은 사람이 합니다</text>
+
+  <path d="M60 622h1160v15a10 10 0 0 1-10 10H70a10 10 0 0 1-10-10z" fill="#007acc"/>
+  <text x="74" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="500" fill="#ffffff">⑂ main*</text>
+  <text x="910" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#ffffff">PowerShell</text>
+  <text x="640" y="682" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="500" fill="#6b7280">PATH 는 영구 등록됐지만, 켜둔 채로 설치한 VS Code 에는 반영되지 않습니다</text>
+</svg>
