@@ -60,12 +60,12 @@
   <!-- Windows 경로 카드 -->
   <rect x="400" y="260" width="786" height="82" rx="8" fill="#252526" stroke="#333333" stroke-width="1.2"/>
   <text x="424" y="288" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#38bdf8">Windows 작업 폴더</text>
-  <text x="424" y="318" font-family="Consolas,monospace" font-size="15" fill="#e5e7eb">C:\Users\student\에이전트1\codex</text>
+  <text x="424" y="318" font-family="Consolas,monospace" font-size="15" fill="#e5e7eb">C:\Users\student\에이전트1</text>
 
   <!-- macOS 경로 카드 -->
   <rect x="400" y="360" width="786" height="82" rx="8" fill="#252526" stroke="#333333" stroke-width="1.2"/>
   <text x="424" y="388" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#c084fc">macOS 작업 폴더</text>
-  <text x="424" y="418" font-family="Consolas,monospace" font-size="15" fill="#e5e7eb">~/에이전트1/codex</text>
+  <text x="424" y="418" font-family="Consolas,monospace" font-size="15" fill="#e5e7eb">~/에이전트1</text>
 
   <!-- 안내 배너 -->
   <rect x="400" y="460" width="786" height="64" rx="8" fill="#0f2942" stroke="#0284c7" stroke-width="1.2"/>

@@ -26,8 +26,8 @@
   <text x="152" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af">같은 폴더 열기 → Terminal &gt; New Terminal (macOS 는 새 터미널만 열면 됩니다)</text>
   <text x="88" y="410" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="12" font-weight="400" fill="#858585">POWERSHELL · 새 터미널</text>
   <rect x="88" y="426" width="1104" height="96" rx="6" fill="#111827" stroke="#374151"/>
-  <text x="112" y="456" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14" font-weight="400" fill="#e5e7eb">PS C:\...\에이전트1\agy&gt; agy --version</text>
-  <text x="112" y="484" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14" font-weight="700" fill="#fbbf24">PS C:\...\에이전트1\agy&gt; agy --dangerously-skip-permissions</text>
+  <text x="112" y="456" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14" font-weight="400" fill="#e5e7eb">PS C:\...\에이전트1&gt; agy --version</text>
+  <text x="112" y="484" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14" font-weight="700" fill="#fbbf24">PS C:\...\에이전트1&gt; agy --dangerously-skip-permissions</text>
   <text x="112" y="508" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="400" fill="#9ca3af">확인 없이 파일·명령을 실행하는 모드 — 이어서 설치까지 맡기기 위해 씁니다</text>
   <rect x="88" y="546" width="1104" height="48" rx="6" fill="#0f291e" stroke="#166534" stroke-width="1.2"/>
   <text x="112" y="576" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#4ade80">✔  버전이 찍히면 PATH 가 반영된 것입니다 — 안 찍히면 ①번을 다시 하세요</text>

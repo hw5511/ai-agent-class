@@ -55,20 +55,18 @@
   <!-- 하위 폴더들 -->
   <path d="M136 274l3 3-3 3" fill="none" stroke="#858585" stroke-width="1.2"/>
   <path d="M147 271h7l2 2h6v8h-15z" fill="#ca8a04" opacity="0.9"/>
-  <text x="167" y="278" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#cccccc">agy</text>
+  <text x="167" y="278" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#cccccc">introduce</text>
 
-  <path d="M136 296l3 3-3 3" fill="none" stroke="#858585" stroke-width="1.2"/>
-  <path d="M147 293h7l2 2h6v8h-15z" fill="#ca8a04" opacity="0.9"/>
-  <text x="167" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#cccccc">codex</text>
+  <path d="M157 293h8l3 3v8h-11z" fill="#38bdf8" opacity="0.8"/>
+  <text x="177" y="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#cccccc">gemini.txt</text>
 
-  <path d="M136 318l3 3-3 3" fill="none" stroke="#858585" stroke-width="1.2"/>
-  <path d="M147 315h7l2 2h6v8h-15z" fill="#ca8a04" opacity="0.9"/>
-  <text x="167" y="322" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#cccccc">claude</text>
+  <path d="M157 315h8l3 3v8h-11z" fill="#38bdf8" opacity="0.8"/>
+  <text x="177" y="322" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#cccccc">gpt.txt</text>
 
-  <!-- 선택된 파일 (자기소개서.txt) -->
+  <!-- 선택된 파일 (claude.txt) -->
   <rect x="110" y="333" width="216" height="24" rx="3" fill="#37373d"/>
-  <path d="M148 340h8l3 3v8h-11z" fill="#38bdf8" opacity="0.8"/>
-  <text x="167" y="349" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#ffffff">자기소개서.txt</text>
+  <path d="M157 340h8l3 3v8h-11z" fill="#38bdf8" opacity="0.8"/>
+  <text x="177" y="349" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#ffffff">claude.txt</text>
 
   <!-- 일반 파일 (brief.md) -->
   <path d="M148 364h8l3 3v8h-11z" fill="#94a3b8" opacity="0.8"/>
@@ -79,11 +77,11 @@
   <line x1="740" y1="207" x2="740" y2="544" stroke="#2b2b2b" stroke-width="1"/>
   <!-- 에디터 탭 바 -->
   <rect x="330" y="207" width="410" height="31" fill="#252526"/>
-  <!-- 활성 탭: 자기소개서.txt -->
+  <!-- 활성 탭: claude.txt -->
   <rect x="330" y="207" width="145" height="31" fill="#1e1e1e"/>
   <rect x="330" y="207" width="145" height="2" fill="#007acc"/>
   <path d="M344 219h7l2 2v7h-9z" fill="#38bdf8" opacity="0.9"/>
-  <text x="359" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#ffffff">자기소개서.txt</text>
+  <text x="359" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#ffffff">claude.txt</text>
   <text x="460" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#858585">×</text>
   <!-- 비활성 탭: brief.md -->
   <rect x="476" y="207" width="115" height="31" fill="#2d2d2d"/>
@@ -133,8 +131,7 @@
     <text x="756" y="266" fill="#858585">Windows PowerShell · 에이전트1</text>
     <text x="756" y="292" fill="#e5e7eb">PS C:\Users\student\에이전트1&gt; <tspan fill="#38bdf8">Get-Location</tspan></text>
     <text x="756" y="316" fill="#9ca3af">Path: C:\Users\student\에이전트1</text>
-    <text x="756" y="346" fill="#e5e7eb">PS C:\Users\student\에이전트1&gt; <tspan fill="#4ade80">cd agy</tspan></text>
-    <text x="756" y="376" fill="#e5e7eb">PS C:\Users\student\에이전트1\agy&gt; <tspan fill="#fbbf24">agy</tspan></text>
+    <text x="756" y="376" fill="#e5e7eb">PS C:\Users\student\에이전트1&gt; <tspan fill="#fbbf24">agy</tspan></text>
     <!-- CLI 진입 모의 출력 -->
     <rect x="756" y="392" width="440" height="42" rx="4" fill="#1f2430" stroke="#2d3748" stroke-width="1"/>
     <text x="768" y="411" fill="#38bdf8" font-weight="600">● Antigravity CLI (v1.0)</text>

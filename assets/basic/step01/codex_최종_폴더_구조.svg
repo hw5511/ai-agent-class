@@ -15,7 +15,7 @@
   <circle cx="82" cy="191" r="5.5" fill="#ef4444"/>
   <circle cx="100" cy="191" r="5.5" fill="#f59e0b"/>
   <circle cx="118" cy="191" r="5.5" fill="#22c55e"/>
-  <text x="640" y="195" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="500" fill="#cccccc">에이전트1\codex — Visual Studio Code</text>
+  <text x="640" y="195" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="500" fill="#cccccc">에이전트1 — Visual Studio Code</text>
   <rect x="1086" y="181" width="118" height="20" rx="4" fill="#383838" stroke="#484848" stroke-width="1"/>
   <text x="1145" y="195" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="600" fill="#38bdf8">⊞ Panel: Right</text>
 
@@ -38,13 +38,13 @@
   <line x1="330" y1="207" x2="330" y2="622" stroke="#2b2b2b" stroke-width="1"/>
   <text x="124" y="229" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#999999" letter-spacing="0.6">EXPLORER</text>
   <path d="M124 249l4 4 4-4" fill="none" stroke="#cccccc" stroke-width="1.5" stroke-linecap="round"/>
-  <text x="138" y="253" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#e1e1e1">codex</text>
+  <text x="138" y="253" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#e1e1e1">에이전트1</text>
   <path d="M136 274l3 3 3-3" fill="none" stroke="#cccccc" stroke-width="1.3"/>
   <path d="M147 271h6l2 2h5v7h-13z" fill="#dcb67a"/>
   <text x="167" y="278" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#e5e7eb">introduce</text>
   <rect x="136" y="293" width="190" height="24" rx="3" fill="#094771"/>
   <path d="M158 300h7l2 2v7h-9z" fill="#38bdf8"/>
-  <text x="174" y="309" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="600" fill="#ffffff">자기소개서.txt</text>
+  <text x="174" y="309" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="600" fill="#ffffff">gpt.txt</text>
 
   <!-- 중앙 편집기 (Editor) -->
   <rect x="330" y="207" width="410" height="415" fill="#1e1e1e"/>
@@ -58,9 +58,9 @@
   <rect x="350" y="260" width="370" height="130" rx="8" fill="#252526" stroke="#3f3f46"/>
   <text x="370" y="288" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#9ca3af">Codex 실습 완성 구조</text>
   <g font-family="Consolas,monospace" font-size="14">
-    <text x="370" y="320" fill="#e5e7eb">codex\</text>
+    <text x="370" y="320" fill="#e5e7eb">에이전트1\</text>
     <text x="395" y="346" fill="#e5e7eb">└── introduce\</text>
-    <text x="430" y="370" fill="#86efac">└── 자기소개서.txt</text>
+    <text x="430" y="370" fill="#86efac">└── gpt.txt</text>
   </g>
 
   <!-- 우측 패널: 터미널 (Panel Position: Right) -->
@@ -80,7 +80,7 @@
 
   <g font-family="Consolas,monospace" font-size="12">
     <text x="756" y="266" fill="#858585">CODEX CLI</text>
-    <text x="756" y="295" fill="#4ade80" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700">✔ 실습 완료: introduce/자기소개서.txt</text>
+    <text x="756" y="295" fill="#4ade80" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700">✔ 실습 완료: introduce/gpt.txt</text>
     <text x="756" y="322" fill="#9ca3af" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11">요청한 대로 폴더와 파일이 정리되었습니다.</text>
 
     <!-- 안내 카드 -->
@@ -98,5 +98,5 @@
   <text x="1135" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#ffffff">Panel: Right ✓</text>
 
   <!-- 최하단 핵심 팁 -->
-  <text x="640" y="682" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="500" fill="#6b7280">Codex는 agy와 같은 요청을 codex 폴더 안에서 수행했습니다</text>
+  <text x="640" y="682" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="500" fill="#6b7280">Codex 의 결과가 agy 의 결과 옆에 나란히 쌓였습니다</text>
 </svg>
