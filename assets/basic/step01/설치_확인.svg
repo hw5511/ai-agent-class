@@ -16,8 +16,8 @@
   <rect x="60" y="207" width="1160" height="415" fill="#181818"/>
   <text x="88" y="240" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="12" font-weight="400" fill="#858585">PowerShell · VS Code 를 껐다 켠 뒤의 새 터미널</text>
   <rect x="88" y="256" width="1104" height="84" rx="6" fill="#252526" stroke="#484848"/>
-  <text x="108" y="284" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="13.5" font-weight="400" fill="#e5e7eb">PS C:\...\에이전트1\agy&gt; codex --version</text>
-  <text x="108" y="312" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="13.5" font-weight="400" fill="#e5e7eb">PS C:\...\에이전트1\agy&gt; claude --version</text>
+  <text x="108" y="284" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="13.5" font-weight="400" fill="#e5e7eb">PS C:\...\에이전트1&gt; codex --version</text>
+  <text x="108" y="312" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="13.5" font-weight="400" fill="#e5e7eb">PS C:\...\에이전트1&gt; claude --version</text>
   <rect x="88" y="358" width="1104" height="92" rx="6" fill="#0f291e" stroke="#166534" stroke-width="1.2"/>
   <text x="112" y="386" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14" font-weight="700" fill="#4ade80">codex-cli 0.x.x</text>
   <text x="112" y="414" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14" font-weight="700" fill="#4ade80">claude 2.x.x</text>

@@ -15,7 +15,7 @@
   <circle cx="82" cy="191" r="5.5" fill="#ef4444"/>
   <circle cx="100" cy="191" r="5.5" fill="#f59e0b"/>
   <circle cx="118" cy="191" r="5.5" fill="#22c55e"/>
-  <text x="640" y="195" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="500" fill="#cccccc">에이전트1\claude — Visual Studio Code</text>
+  <text x="640" y="195" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="500" fill="#cccccc">에이전트1 — Visual Studio Code</text>
   <rect x="1086" y="181" width="118" height="20" rx="4" fill="#383838" stroke="#484848" stroke-width="1"/>
   <text x="1145" y="195" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="600" fill="#38bdf8">⊞ Panel: Right</text>
 
@@ -38,11 +38,11 @@
   <line x1="330" y1="207" x2="330" y2="622" stroke="#2b2b2b" stroke-width="1"/>
   <text x="124" y="229" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#999999" letter-spacing="0.6">EXPLORER</text>
   <path d="M124 249l4 4 4-4" fill="none" stroke="#cccccc" stroke-width="1.5" stroke-linecap="round"/>
-  <text x="138" y="253" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#e1e1e1">claude</text>
+  <text x="138" y="253" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#e1e1e1">에이전트1</text>
   <!-- 파일 생성됨 -->
   <rect x="110" y="273" width="216" height="24" rx="3" fill="#37373d"/>
   <path d="M148 280h8l3 3v8h-11z" fill="#38bdf8" opacity="0.8"/>
-  <text x="167" y="289" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#ffffff">자기소개서.txt</text>
+  <text x="167" y="289" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#ffffff">claude.txt</text>
 
   <!-- 중앙 편집기 (Editor) -->
   <rect x="330" y="207" width="410" height="415" fill="#1e1e1e"/>
@@ -51,7 +51,7 @@
   <rect x="330" y="207" width="145" height="31" fill="#1e1e1e"/>
   <rect x="330" y="207" width="145" height="2" fill="#007acc"/>
   <path d="M344 219h7l2 2v7h-9z" fill="#38bdf8" opacity="0.9"/>
-  <text x="359" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#ffffff">자기소개서.txt</text>
+  <text x="359" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#ffffff">claude.txt</text>
   <text x="460" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#858585">×</text>
   <line x1="330" y1="238" x2="740" y2="238" stroke="#2b2b2b" stroke-width="1"/>
 
@@ -80,12 +80,12 @@
   <g font-family="Consolas,monospace" font-size="12">
     <text x="756" y="266" fill="#858585">CLAUDE CODE</text>
     <rect x="756" y="280" width="448" height="52" rx="6" fill="#252526" stroke="#484848"/>
-    <text x="770" y="302" fill="#e5e7eb" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5">현재 폴더에 '자기소개서.txt'를 만들어줘.</text>
+    <text x="770" y="302" fill="#e5e7eb" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5">현재 폴더에 'claude.txt'를 만들어줘.</text>
     <text x="770" y="320" fill="#9ca3af" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11">네가 누구이고 무엇을 할 수 있는지 간단히 작성해줘.</text>
 
     <!-- 실행 결과 -->
     <rect x="756" y="346" width="448" height="50" rx="6" fill="#0f291e" stroke="#166534" stroke-width="1.2"/>
-    <text x="770" y="368" fill="#4ade80" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700">✔ 자기소개서.txt 파일을 만들었습니다.</text>
+    <text x="770" y="368" fill="#4ade80" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700">✔ claude.txt 파일을 만들었습니다.</text>
     <text x="770" y="386" fill="#86efac" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11">탐색기에 파일이 추가되고 편집기에서 열렸습니다.</text>
 
     <text x="756" y="425" fill="#858585" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5">좌측 편집기와 탐색기에서 생성 결과를 확인하세요.</text>
