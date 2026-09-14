@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">agy 에게 나머지 CLI 설치 시키기</text>
+  <text x="60" y="148" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">설치도 에이전트의 일입니다. 프롬프트 한 번으로 Codex 와 Claude Code 를 설치합니다</text>
+
+  <rect x="60" y="175" width="1160" height="472" rx="10" fill="#1e1e1e" stroke="#333333" stroke-width="1.5"/>
+  <path d="M60 185a10 10 0 0 1 10-10h1140a10 10 0 0 1 10 10v22H60z" fill="#2d2d2d"/>
+  <circle cx="82" cy="191" r="5.5" fill="#ef4444"/>
+  <circle cx="100" cy="191" r="5.5" fill="#f59e0b"/>
+  <circle cx="118" cy="191" r="5.5" fill="#22c55e"/>
+  <text x="640" y="195" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="500" fill="#cccccc">에이전트1 — Visual Studio Code</text>
+  <rect x="60" y="207" width="1160" height="415" fill="#181818"/>
+  <text x="88" y="240" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="12" font-weight="400" fill="#858585">ANTIGRAVITY CLI · 권한 확인 없이 실행 중</text>
+  <rect x="88" y="256" width="1104" height="112" rx="6" fill="#252526" stroke="#484848"/>
+  <text x="108" y="282" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#e5e7eb">&gt;  Codex CLI 와 Claude Code 를 설치해줘.</text>
+  <text x="108" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#cbd5e1">   설치가 끝나면 두 CLI 의 실행 경로를 사용자 환경 변수 PATH 에</text>
+  <text x="108" y="331" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#cbd5e1">   영구 등록해줘. 이미 등록돼 있으면 중복으로 넣지 마.</text>
+  <text x="108" y="356" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#cbd5e1">   끝나면 각각 어디에 설치됐는지 알려줘.</text>
+  <rect x="88" y="396" width="1104" height="54" rx="6" fill="#0f291e" stroke="#166534" stroke-width="1.2"/>
+  <text x="112" y="420" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14" font-weight="700" fill="#4ade80">✔</text>
+  <text x="136" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#4ade80">codex 설치 완료</text>
+  <text x="136" y="440" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="12.5" font-weight="400" fill="#86efac">C:\Users\&lt;사용자&gt;\.codex\bin\codex.exe</text>
+  <rect x="88" y="462" width="1104" height="54" rx="6" fill="#0f291e" stroke="#166534" stroke-width="1.2"/>
+  <text x="112" y="486" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14" font-weight="700" fill="#4ade80">✔</text>
+  <text x="136" y="486" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#4ade80">claude 설치 완료</text>
+  <text x="136" y="506" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="12.5" font-weight="400" fill="#86efac">C:\Users\&lt;사용자&gt;\.local\bin\claude.exe</text>
+  <rect x="88" y="528" width="1104" height="54" rx="6" fill="#0f291e" stroke="#166534" stroke-width="1.2"/>
+  <text x="112" y="552" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14" font-weight="700" fill="#4ade80">✔</text>
+  <text x="136" y="552" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#4ade80">PATH 영구 등록 완료</text>
+  <text x="136" y="572" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="12.5" font-weight="400" fill="#86efac">사용자 환경 변수 Path 에 2개 경로 추가</text>
+  <rect x="88" y="594" width="1104" height="1" fill="#333333"/>
+  <text x="88" y="614" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#9ca3af">설치 명령을 사람이 외우지 않습니다 — 에이전트가 실행하고 결과를 보고합니다</text>
+
+  <path d="M60 622h1160v15a10 10 0 0 1-10 10H70a10 10 0 0 1-10-10z" fill="#007acc"/>
+  <text x="74" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="500" fill="#ffffff">⑂ main*</text>
+  <text x="910" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#ffffff">PowerShell</text>
+  <text x="640" y="682" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="500" fill="#6b7280">권한 확인 없이 실행했기 때문에 설치·PATH 등록까지 멈추지 않고 진행됩니다</text>
+</svg>
