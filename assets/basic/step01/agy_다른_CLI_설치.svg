@@ -23,11 +23,11 @@
   <rect x="88" y="396" width="1104" height="54" rx="6" fill="#0f291e" stroke="#166534" stroke-width="1.2"/>
   <text x="112" y="420" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14" font-weight="700" fill="#4ade80">✔</text>
   <text x="136" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#4ade80">codex 설치 완료</text>
-  <text x="136" y="440" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="12.5" font-weight="400" fill="#86efac">C:\Users\&lt;사용자&gt;\.codex\bin\codex.exe</text>
+  <text x="136" y="440" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="12.5" font-weight="400" fill="#86efac">%LOCALAPPDATA%\Programs\OpenAI\Codex\bin\codex.exe</text>
   <rect x="88" y="462" width="1104" height="54" rx="6" fill="#0f291e" stroke="#166534" stroke-width="1.2"/>
   <text x="112" y="486" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14" font-weight="700" fill="#4ade80">✔</text>
   <text x="136" y="486" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#4ade80">claude 설치 완료</text>
-  <text x="136" y="506" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="12.5" font-weight="400" fill="#86efac">C:\Users\&lt;사용자&gt;\.local\bin\claude.exe</text>
+  <text x="136" y="506" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="12.5" font-weight="400" fill="#86efac">%USERPROFILE%\.local\bin\claude.exe</text>
   <rect x="88" y="528" width="1104" height="54" rx="6" fill="#0f291e" stroke="#166534" stroke-width="1.2"/>
   <text x="112" y="552" font-family="Consolas,'Cascadia Mono','Courier New',monospace" font-size="14" font-weight="700" fill="#4ade80">✔</text>
   <text x="136" y="552" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#4ade80">PATH 영구 등록 완료</text>

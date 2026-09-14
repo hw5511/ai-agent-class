@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
+  <rect x="228" y="44" width="102" height="24" rx="12" fill="#fef3c7" stroke="#fcd34d" stroke-width="1"/>
+  <text x="279" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#92400e">안 될 때만</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">Codex 경로를 사용자 PATH에 직접 등록</text>
+  <text x="60" y="148" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">codex --version 이 안 찍힐 때만 씁니다. 보통은 설치기가 알아서 등록합니다</text>
+
+  <rect x="60" y="180" width="560" height="330" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="60" y="180" width="560" height="48" rx="12" fill="#f3f4f6"/>
+  <rect x="60" y="214" width="560" height="14" fill="#f3f4f6"/>
+  <text x="88" y="209" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">Windows · PowerShell</text>
+  <text x="88" y="252" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#9ca3af" letter-spacing="0.6">설치 위치</text>
+  <text x="88" y="276" font-family="'Courier New',Courier,monospace" font-size="13" fill="#1d4ed8">%LOCALAPPDATA%\Programs\OpenAI\Codex\bin</text>
+  <rect x="84" y="294" width="512" height="196" rx="8" fill="#1f2937"/>
+  <text x="104" y="320" font-family="'Courier New',Courier,monospace" font-size="11.5" fill="#e5e7eb">$codexBin = Join-Path $env:LOCALAPPDATA `</text>
+  <text x="104" y="340" font-family="'Courier New',Courier,monospace" font-size="11.5" fill="#e5e7eb">  "Programs\OpenAI\Codex\bin"</text>
+  <text x="104" y="366" font-family="'Courier New',Courier,monospace" font-size="11.5" fill="#e5e7eb">$userPath = [Environment]::GetEnvironment`</text>
+  <text x="104" y="386" font-family="'Courier New',Courier,monospace" font-size="11.5" fill="#e5e7eb">  Variable("Path", "User")</text>
+  <text x="104" y="412" font-family="'Courier New',Courier,monospace" font-size="11.5" fill="#93c5fd">if (($userPath -split ";") -notcontains $codexBin) {</text>
+  <text x="104" y="432" font-family="'Courier New',Courier,monospace" font-size="11.5" fill="#e5e7eb">  ... 중복 없이 추가해 사용자 PATH 에 저장</text>
+  <text x="104" y="452" font-family="'Courier New',Courier,monospace" font-size="11.5" fill="#93c5fd">}</text>
+  <text x="104" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">전체 명령은 액션박스에서 복사하세요</text>
+
+  <rect x="660" y="180" width="560" height="330" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="660" y="180" width="560" height="48" rx="12" fill="#f5f3ff"/>
+  <rect x="660" y="214" width="560" height="14" fill="#f5f3ff"/>
+  <text x="688" y="209" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#6d28d9">macOS · zsh</text>
+  <text x="688" y="252" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#9ca3af" letter-spacing="0.6">설치 위치</text>
+  <text x="688" y="276" font-family="'Courier New',Courier,monospace" font-size="13" fill="#6d28d9">~/.local/bin</text>
+  <rect x="684" y="294" width="512" height="196" rx="8" fill="#1f2937"/>
+  <text x="704" y="326" font-family="'Courier New',Courier,monospace" font-size="11.5" fill="#e5e7eb">echo 'export PATH="$HOME/.local/bin:$PATH"' \</text>
+  <text x="704" y="348" font-family="'Courier New',Courier,monospace" font-size="11.5" fill="#e5e7eb">  &gt;&gt; ~/.zshrc</text>
+  <text x="704" y="380" font-family="'Courier New',Courier,monospace" font-size="11.5" fill="#86efac">source ~/.zshrc</text>
+  <text x="704" y="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#9ca3af">Claude Code 도 같은 폴더에 설치되므로</text>
+  <text x="704" y="440" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#9ca3af">이 한 줄이면 둘 다 해결됩니다.</text>
+  <text x="704" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#9ca3af">이미 들어 있으면 다시 추가하지 마세요</text>
+
+  <rect x="60" y="534" width="1160" height="88" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+  <circle cx="89" cy="562" r="12" fill="#f59e0b"/>
+  <text x="89" y="567" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">!</text>
+  <text x="116" y="561" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#92400e">등록한 '다음에' VS Code 를 완전히 껐다 켭니다</text>
+  <text x="116" y="585" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#78350f">File &gt; Exit 로 종료 → 다시 실행. 순서가 바뀌면 재시작을 한 번 더 해야 합니다.</text>
+  <text x="116" y="606" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" fill="#78350f">Codex 설치기는 보통 PATH 를 스스로 등록합니다 — 이 슬라이드는 그게 안 됐을 때의 예비책입니다.</text>
+  <text x="640" y="668" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">등록이 끝나면 codex --version 으로 다시 확인합니다</text>
+</svg>
