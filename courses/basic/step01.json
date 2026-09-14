@@ -547,7 +547,7 @@
       "goal": "공식 설치 스크립트로 Codex CLI를 설치한다.",
       "topics": [
         "OpenAI 공식 네이티브 설치 스크립트 실행",
-        "Windows: irm https://chatgpt.com/codex/install.ps1 | iex",
+        "Windows: 새 셸(-NoProfile)에서 실행 — 프로필의 StrictMode 가 설치를 막는다",
         "macOS: curl -fsSL https://chatgpt.com/codex/install.sh | sh"
       ],
       "practice": null,
@@ -555,8 +555,8 @@
         "label": "설치 명령어",
         "items": [
           {
-            "desc": "Windows",
-            "copy": "pwsh -ExecutionPolicy ByPass -c \"irm https://chatgpt.com/codex/install.ps1 | iex\""
+            "desc": "Windows — pwsh 있으면 pwsh, 없으면 Windows PowerShell 로 자동 분기",
+            "copy": "if (Get-Command pwsh -ErrorAction SilentlyContinue) { pwsh -NoProfile -ExecutionPolicy ByPass -c \"irm https://chatgpt.com/codex/install.ps1 | iex\" } else { powershell -NoProfile -ExecutionPolicy ByPass -c \"irm https://chatgpt.com/codex/install.ps1 | iex\" }"
           },
           {
             "desc": "macOS",
