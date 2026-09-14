@@ -393,23 +393,53 @@
     },
     {
       "imagePath": "assets/basic/step01/agy_데이터_사용_설정.svg",
-      "goal": "약관 및 데이터 사용 옵션을 설정한다.",
+      "goal": "약관 및 데이터 사용 옵션을 설정하고, 방향키로 버튼 줄까지 내려간다.",
       "topics": [
-        "데이터 사용 및 품질 개선 안내",
-        "원하는 설정값 선택 후 진행"
+        "데이터 사용 및 품질 개선 안내 — 체크 상태를 원하는 대로 둔다",
+        "마우스로 누를 수 없다 — 방향키로만 움직인다",
+        "체크 줄에서 방향키 ↓ 를 눌러 아래 버튼 줄([Previous] [Done])로 내려간다"
       ],
       "practice": null,
-      "action": null
+      "action": {
+        "label": "여기서 누를 키",
+        "items": [
+          {
+            "desc": "체크 상태 바꾸기",
+            "copy": "Enter"
+          },
+          {
+            "desc": "버튼 줄로 내려가기",
+            "copy": "↓ (방향키 아래)"
+          }
+        ]
+      }
     },
     {
       "imagePath": "assets/basic/step01/agy_초기_설정_완료.svg",
-      "goal": "초기 설정을 완료하고 메인 화면으로 진입한다.",
+      "goal": "방향키로 Done을 선택해 초기 설정을 끝내고 메인 화면으로 진입한다.",
       "topics": [
-        "초기 설정 완료 항목 점검",
-        "Done 선택하여 대화 모드 시작"
+        "버튼 줄에서 방향키 → 를 눌러 [Previous] 에서 Done 으로 옮긴다",
+        "Done 이 선택된 상태에서 Enter — 대화 화면으로 넘어간다",
+        "정리하면 ↓ 그다음 → 그다음 Enter"
       ],
       "practice": null,
-      "action": null
+      "action": {
+        "label": "여기서 누를 키",
+        "items": [
+          {
+            "desc": "Done 으로 옮기기",
+            "copy": "→ (방향키 오른쪽)"
+          },
+          {
+            "desc": "확정",
+            "copy": "Enter"
+          },
+          {
+            "desc": "앞 화면부터 순서대로",
+            "copy": "↓ → Enter"
+          }
+        ]
+      }
     },
     {
       "imagePath": "assets/basic/step01/agy_작업_폴더_신뢰.svg",
