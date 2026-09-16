@@ -9,7 +9,7 @@
     "권한 모드 (일반·편집자동승인·플랜)",
     "욜로 모드 / /model 모델 선택",
     "주요 슬래시 명령어",
-    "웹 Search 툴 / Task 목록"
+    "웹 Search 툴 / Claude in Chrome"
   ],
   "practice": "개인 환경에 맞는 보안 설정을 직접 구성하고, 권한 모드와 주요 명령어를 순서대로 실행해본다.",
   "slides": [
@@ -239,31 +239,6 @@
           "text": "Claude for Chrome 바로가기"
         }
       }
-    },
-    {
-      "imagePath": "assets/basic/step03/Todos.svg",
-      "goal": "Task 목록 내장 툴을 이해한다.",
-      "topics": [
-        "TaskCreate · TaskList · TaskUpdate 내장 툴",
-        "pending → in_progress → completed",
-        "\"ㅇㅇㅇ 작업을 todo 리스트를 세워서 순차적으로 진행해줘\""
-      ],
-      "practice": null,
-      "action": {
-        "label": "실습 프롬프트",
-        "copy": "오늘 기준 최근 7일 이내에 발행된 AI 에이전트 관련 기사나 글을 웹조사해줘. 각 항목의 주요 내용과 실제 출처 링크(URL)도 함께 정리해줘."
-      }
-    },
-    {
-      "imagePath": "assets/basic/step03/Todos_실습.svg",
-      "goal": "Task 목록 실습 — 다단계 작업을 순차 실행한다.",
-      "topics": [
-        "claude 실행",
-        "폴더 생성·파일 작성·트리 출력 3단계 프롬프트 입력",
-        "각 단계 완료 시 completed 상태 업데이트 확인"
-      ],
-      "practice": "practice 폴더 생성 → readme.txt 작성 → 트리 출력까지 TaskCreate로 순차 실행",
-      "action": null
     }
   ]
 }
