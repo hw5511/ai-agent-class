@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <!-- ========================================================================
+       A. 개념 카드 3장
+       개념·원리를 카드 셋으로 나눠 설명할 때
+       복제해서 쓰는 법: 이 파일을 assets/<과정>/step<NN>/<슬라이드이름>.svg 로
+       복사한 뒤, 아래 [바꾸기] 표시된 곳만 고치면 된다. 좌표는 건드리지 않는다.
+       ======================================================================== -->
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- [바꾸기] 과정 배지: BASIC 01 / ADV 08 / AUTO 03 -->
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <!-- [바꾸기] 단계 칩. 필요 없으면 이 두 줄을 지운다 -->
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
+
+  <!-- [바꾸기] 제목 -->
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">여기에 제목</text>
+  <!-- [바꾸기] 부제 (한 줄). 없으면 지운다 -->
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">여기에 한 줄 설명</text>
+
+  <!-- [바꾸기] 카드 3장. 하나 줄이려면 세 번째 <g> 를 지우고, 늘리려면 x 를 +393 씩 -->
+  <g>
+    <rect x="60" y="180" width="373" height="200" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <circle cx="92" cy="216" r="15" fill="#eff6ff"/>
+    <text x="92" y="221" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">1</text>
+    <text x="118" y="221" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#374151">첫 번째 요점</text>
+    <text x="84" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" fill="#6b7280">설명 첫 줄</text>
+    <text x="84" y="288" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" fill="#6b7280">설명 둘째 줄</text>
+  </g>
+  <g>
+    <rect x="453" y="180" width="373" height="200" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <circle cx="485" cy="216" r="15" fill="#eff6ff"/>
+    <text x="485" y="221" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#2563eb">2</text>
+    <text x="511" y="221" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#374151">두 번째 요점</text>
+    <text x="477" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" fill="#6b7280">설명 첫 줄</text>
+    <text x="477" y="288" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" fill="#6b7280">설명 둘째 줄</text>
+  </g>
+  <g>
+    <rect x="846" y="180" width="374" height="200" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+    <circle cx="878" cy="216" r="15" fill="#dcfce7"/>
+    <text x="878" y="221" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#15803d">3</text>
+    <text x="904" y="221" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#374151">세 번째 요점</text>
+    <text x="870" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" fill="#166534">설명 첫 줄</text>
+    <text x="870" y="288" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" fill="#166534">설명 둘째 줄</text>
+  </g>
+
+  <!-- [바꾸기] 강조 띠. 없으면 지운다 -->
+  <rect x="60" y="410" width="1160" height="72" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="88" y="440" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">한 줄로 요약하면</text>
+  <text x="88" y="466" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#1e40af">여기에 핵심 문장</text>
+
+  <!-- [바꾸기] 각주 한 줄. 없으면 지운다 -->
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">화면 아래 한 줄 메모</text>
+</svg>

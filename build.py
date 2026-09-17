@@ -96,6 +96,16 @@ def build_session_js(session_data, course_key, depth=3):
 
     fields.append(f'{inner}practice: {js_value(session_data.get("practice", ""))}')
 
+    # 사이드바 목차용 파트 (없는 회차는 빈 배열 -> 하위 목록 없이 지금과 동일하게 동작)
+    parts = session_data.get('parts', []) or []
+    part_items = []
+    for p in parts:
+        part_items.append(
+            f'{inner}    {{ title: {js_value(p["title"])}, from: {int(p["from"])}, to: {int(p["to"])} }}'
+        )
+    parts_js = '[\n' + ',\n'.join(part_items) + f'\n{inner}]' if part_items else '[]'
+    fields.append(f'{inner}parts: {parts_js}')
+
     slides_fn_items = [f'{inner}    {js_value(fn)}' for fn in slides_filenames]
     slides_fn_js = '[\n' + ',\n'.join(slides_fn_items) + f'\n{inner}]' if slides_fn_items else '[]'
     fields.append(f'{inner}slides: {slides_fn_js}')

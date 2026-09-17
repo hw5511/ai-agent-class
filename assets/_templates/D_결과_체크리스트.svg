@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <!-- ========================================================================
+       D. 결과 체크리스트
+       여러 항목의 성공/실패를 한눈에 보여줄 때
+       복제해서 쓰는 법: 이 파일을 assets/<과정>/step<NN>/<슬라이드이름>.svg 로
+       복사한 뒤, 아래 [바꾸기] 표시된 곳만 고치면 된다. 좌표는 건드리지 않는다.
+       ======================================================================== -->
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- [바꾸기] 과정 배지: BASIC 01 / ADV 08 / AUTO 03 -->
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
+  <!-- [바꾸기] 단계 칩. 필요 없으면 이 두 줄을 지운다 -->
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
+
+  <!-- [바꾸기] 제목 -->
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">여기에 제목</text>
+  <!-- [바꾸기] 부제 (한 줄). 없으면 지운다 -->
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">여기에 한 줄 설명</text>
+
+  <text x="60" y="190" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">실행하면 이렇게 나옵니다</text>
+  <!-- [바꾸기] 결과 패널. 초록 #4ade80 / 노랑 #fbbf24 / 빨강 #f87171 -->
+  <rect x="60" y="204" width="1160" height="300" rx="10" fill="#1f2937"/>
+  <text x="92" y="240" font-family="'Courier New',Courier,monospace" font-size="14" fill="#4b5563">────────────────────────────────────────────────</text>
+  <text x="92" y="282" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">[v]</text>
+  <text x="140" y="282" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">항목1</text>
+  <text x="248" y="282" font-family="'Courier New',Courier,monospace" font-size="16" fill="#4ade80">성공 메시지  버전 등</text>
+  <text x="92" y="324" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#fbbf24">[!]</text>
+  <text x="140" y="324" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#fbbf24">항목2</text>
+  <text x="248" y="324" font-family="'Courier New',Courier,monospace" font-size="16" fill="#fbbf24">부분 성공 — 이유와 다음 행동</text>
+  <text x="92" y="366" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#f87171">[ ]</text>
+  <text x="140" y="366" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#f87171">항목3</text>
+  <text x="248" y="366" font-family="'Courier New',Courier,monospace" font-size="16" fill="#f87171">아직 안 된 상태</text>
+  <text x="92" y="412" font-family="'Courier New',Courier,monospace" font-size="14" fill="#4b5563">────────────────────────────────────────────────</text>
+  <text x="92" y="450" font-family="'Courier New',Courier,monospace" font-size="15" font-weight="700" fill="#67e8f9">맺음 한 줄 — 몇 개 됐는지 / 다음에 뭘 할지</text>
+
+  <!-- [바꾸기] 해설 띠. 없으면 지운다 -->
+  <rect x="60" y="530" width="1160" height="56" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="88" y="564" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="600" fill="#374151">이 화면에서 무엇을 확인하면 되는지</text>
+  <!-- [바꾸기] 각주 한 줄. 없으면 지운다 -->
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">화면 아래 한 줄 메모</text>
+</svg>
