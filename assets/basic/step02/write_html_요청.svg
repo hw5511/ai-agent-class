@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 4</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">포스터 만들기</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">앞에서 만든 강아지 그림을 재료로 써서 포스터를 요청합니다</text>
+  <text x="60" y="210" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">지금 입력하는 요청</text>
+  <rect x="60" y="250" width="1160" height="40" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="76" y="276" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#4ade80">&gt;</text>
+  <text x="94" y="276" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">그 강아지를 가지고 html 로 간단한 포스터를 만들어서 크롬으로 열어줘</text>
+  <text x="60" y="312" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">Enter 를 누르면 Claude 가 html 파일을 만들고 크롬을 엽니다</text>
+  <rect x="60" y="360" width="1160" height="54" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="88" y="390" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">"그 강아지"는 앞에서 만든 svg 그림을 가리킵니다 — 있는 그림을 재료로 쓰는 것입니다.</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">방금 만든 svg 그림을 새로 그리지 않고 그대로 가져다 씁니다</text>
+</svg>

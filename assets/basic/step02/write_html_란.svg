@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 4</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">html 이 뭔가요?</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">웹페이지를 적어두는 코드입니다 — 크롬으로 열면 그림처럼 보입니다</text>
+  <text x="60" y="200" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">파일 자체는 글자, 여는 도구가 그림으로 바꿔줍니다</text>
+  <rect x="60" y="230" width="357.3333333333333" height="150" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="238.66666666666666" y="295.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#374151">html 파일 작성</text>
+  <text x="238.66666666666666" y="323.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#374151">글자로 된 코드</text>
+  <line x1="427.3333333333333" y1="305.0" x2="442.3333333333333" y2="305.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M438.3333333333333 298.0L451.3333333333333 305.0L438.3333333333333 312.0Z" fill="#6b7280"/>
+  <rect x="461.3333333333333" y="230" width="357.3333333333333" height="150" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="640.0" y="295.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#1d4ed8">크롬으로 열기</text>
+  <text x="640.0" y="323.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#1d4ed8">더블클릭 또는 실행</text>
+  <line x1="828.6666666666666" y1="305.0" x2="843.6666666666666" y2="305.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M839.6666666666666 298.0L852.6666666666666 305.0L839.6666666666666 312.0Z" fill="#6b7280"/>
+  <rect x="862.6666666666666" y="230" width="357.3333333333333" height="150" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="1041.3333333333333" y="295.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#15803d">웹페이지로 보임</text>
+  <text x="1041.3333333333333" y="323.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#15803d">우리가 아는 그 모습</text>
+  <rect x="60" y="410" width="1160" height="78" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="88" y="440" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#1e40af">html 파일을 메모장으로 열면 글자 코드가 보이고, 크롬(웹 브라우저)으로 열면</text>
+  <text x="88" y="464" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#1e40af">우리가 아는 웹페이지 모습으로 그려집니다.</text>
+</svg>

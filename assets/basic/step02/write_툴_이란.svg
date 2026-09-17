@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 4</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">Write 툴이란?</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">Read 가 파일을 읽는 도구였다면, Write 는 파일을 새로 만드는 도구입니다</text>
+  <text x="60" y="190" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">오늘까지 배운 것 vs 오늘 배울 것</text>
+  <rect x="60" y="210" width="552" height="170" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="60" y="210" width="552" height="8" fill="#374151"/>
+  <text x="84" y="250" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#374151" letter-spacing="0.06em">REVIEW</text>
+  <text x="84" y="280" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">Read 툴</text>
+  <text x="84" y="312" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">파일을 열어서</text>
+  <text x="84" y="334" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">내용을 확인했습니다</text>
+  <rect x="668" y="210" width="552" height="170" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="668" y="210" width="552" height="8" fill="#1d4ed8"/>
+  <text x="692" y="250" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1d4ed8" letter-spacing="0.06em">NEW</text>
+  <text x="692" y="280" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">Write 툴</text>
+  <text x="692" y="312" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">없던 파일을 새로</text>
+  <text x="692" y="334" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">만들어 써 넣습니다</text>
+  <text x="60" y="412" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">이렇게 동작합니다</text>
+  <rect x="60" y="434" width="357.3333333333333" height="140" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="238.66666666666666" y="494.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#1d4ed8">말로 지시</text>
+  <text x="238.66666666666666" y="522.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#1d4ed8">"~파일을 만들어줘"</text>
+  <line x1="427.3333333333333" y1="504.0" x2="442.3333333333333" y2="504.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M438.3333333333333 497.0L451.3333333333333 504.0L438.3333333333333 511.0Z" fill="#6b7280"/>
+  <rect x="461.3333333333333" y="434" width="357.3333333333333" height="140" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="640.0" y="494.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#15803d">Claude 가 파일 작성</text>
+  <text x="640.0" y="522.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#15803d">Write 툴을 호출합니다</text>
+  <line x1="828.6666666666666" y1="504.0" x2="843.6666666666666" y2="504.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M839.6666666666666 497.0L852.6666666666666 504.0L839.6666666666666 511.0Z" fill="#6b7280"/>
+  <rect x="862.6666666666666" y="434" width="357.3333333333333" height="140" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="1041.3333333333333" y="494.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#15803d">폴더에 파일이 생김</text>
+  <text x="1041.3333333333333" y="522.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#15803d">탐색기에 바로 보입니다</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">이제부터는 없던 파일을 새로 만드는 실습입니다</text>
+</svg>
