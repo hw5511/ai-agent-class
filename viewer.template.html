@@ -270,14 +270,14 @@
         }
         .nav-part:hover { background: var(--secondary); color: var(--fg); }
         .nav-part.active { color: var(--fg); font-weight: 600; }
-        .nav-part-range {
+        .nav-part-bullet {
             flex: none;
-            font-variant-numeric: tabular-nums;
             font-size: 0.6875rem;
+            line-height: 1.35;
             color: var(--muted-fg);
-            opacity: 0.75;
+            opacity: 0.55;
         }
-        .nav-part.active .nav-part-range { opacity: 1; }
+        .nav-part.active .nav-part-bullet { opacity: 1; }
 
         .nav-item {
             display: flex;
@@ -1386,7 +1386,7 @@
                 const parts = s.parts || [];
                 const partsHtml = parts.length ? `<div class="nav-parts">` + parts.map((p, k) =>
                     `<button class="nav-part" data-index="${i}" data-part="${k}" data-from="${p.from}">
-                        <span class="nav-part-range">${p.from}–${p.to}</span>
+                        <span class="nav-part-bullet">•</span>
                         <span>${p.title}</span>
                     </button>`).join('') + `</div>` : '';
                 return `<div class="nav-group${isActive && parts.length ? ' expanded' : ''}" data-group="${i}">
