@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 3</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">알아볼 수 있는 이름으로</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">파일 내용을 근거로 이름을 다시 짓습니다</text>
+  <text x="60" y="200" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">요청</text>
+  <rect x="60" y="222" width="760" height="40" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="76" y="248" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#4ade80">&gt;</text>
+  <text x="94" y="248" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">바로 알아볼 수 있게 파일명을 바꿔줘</text>
+  <text x="60" y="320" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">Claude 의 변경</text>
+  <rect x="60" y="340" width="1160" height="32" rx="6" fill="#f8fafc"/>
+  <text x="80" y="362" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#6b7280">doc_230928_v3.txt</text>
+  <text x="420" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#9ca3af">→</text>
+  <text x="456" y="362" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#15803d">2026-03-09_Q1실적_회의록.txt</text>
+  <text x="880" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#6b7280">날짜 · 안건이 이름에 담김</text>
+  <rect x="60" y="420" width="1160" height="54" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="88" y="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#1e40af">회의록 내용을 먼저 읽었기 때문에 날짜와 주제를 이름에 담을 수 있었습니다.</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">이름을 바꾸려면 파일 내용을 먼저 이해해야 합니다 — Read 없이는 불가능한 작업입니다</text>
+</svg>

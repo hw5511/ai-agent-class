@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 3</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">사진을 '보고' 설명합니다</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">이미지 파일도 Read 로 직접 열어서 확인합니다</text>
+  <rect x="60" y="205" width="620" height="390" rx="10" fill="#1f2937"/>
+  <text x="92" y="239" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#4ade80">● Read(practice_files/IMG_20260309_134502.jpg)</text>
+  <text x="92" y="263" font-family="'Courier New',Courier,monospace" font-size="11.5" font-weight="400" fill="#6b7280">  └ Read image</text>
+  <line x1="92" y1="277" x2="648" y2="277" stroke="#374151" stroke-dasharray="4 4"/>
+  <text x="92" y="303" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#e5e7eb">나무 도마 위에 적양파를 반으로 잘라</text>
+  <text x="92" y="327" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#e5e7eb">올려두었습니다.</text>
+  <text x="92" y="351" font-family="'Courier New',Courier,monospace" font-size="15" font-weight="400" fill="#e5e7eb"></text>
+  <text x="92" y="375" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#6b7280">뒤쪽에는 파슬리·파스닙·양배추·당근 같은</text>
+  <text x="92" y="399" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#6b7280">채소들이 놓여 있습니다.</text>
+  <text x="92" y="423" font-family="'Courier New',Courier,monospace" font-size="15" font-weight="400" fill="#e5e7eb"></text>
+  <text x="92" y="447" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#e5e7eb">도마 위에는 통후추 알갱이가 흩어져</text>
+  <text x="92" y="471" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#e5e7eb">있습니다.</text>
+  <text x="92" y="495" font-family="'Courier New',Courier,monospace" font-size="15" font-weight="400" fill="#e5e7eb"></text>
+  <text x="92" y="519" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#67e8f9">따뜻한 자연광 아래 찍은 요리 재료</text>
+  <text x="92" y="543" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#67e8f9">사진으로 보입니다.</text>
+  <rect x="720" y="205" width="480" height="390" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="960" y="236" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#6b7280">IMG_20260309_134502.jpg</text>
+  <text x="960" y="256" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#9ca3af">(자리 표시 — 실제 이미지 아님)</text>
+  <ellipse cx="790" cy="300" rx="20" ry="12" fill="#fffbeb" stroke="#fcd34d"/>
+  <ellipse cx="1130" cy="300" rx="20" ry="12" fill="#fffbeb" stroke="#fcd34d"/>
+  <circle cx="850" cy="290" r="10" fill="#fffbeb" stroke="#fcd34d"/>
+  <rect x="800" y="380" width="320" height="130" rx="40" fill="#fffbeb" stroke="#fcd34d" stroke-width="2"/>
+  <circle cx="915" cy="435" r="46" fill="#f87171"/>
+  <circle cx="915" cy="435" r="36" fill="none" stroke="#92400e" stroke-width="1.5"/>
+  <circle cx="915" cy="435" r="26" fill="none" stroke="#92400e" stroke-width="1.5"/>
+  <circle cx="915" cy="435" r="16" fill="none" stroke="#92400e" stroke-width="1.5"/>
+  <circle cx="1005" cy="435" r="40" fill="#f87171"/>
+  <circle cx="1005" cy="435" r="30" fill="none" stroke="#92400e" stroke-width="1.5"/>
+  <circle cx="1005" cy="435" r="20" fill="none" stroke="#92400e" stroke-width="1.5"/>
+  <circle cx="1005" cy="435" r="10" fill="none" stroke="#92400e" stroke-width="1.5"/>
+  <circle cx="840" cy="400" r="2.8" fill="#0a0a0a"/>
+  <circle cx="870" cy="460" r="2.8" fill="#0a0a0a"/>
+  <circle cx="960" cy="480" r="2.8" fill="#0a0a0a"/>
+  <circle cx="1040" cy="405" r="2.8" fill="#0a0a0a"/>
+  <circle cx="1075" cy="450" r="2.8" fill="#0a0a0a"/>
+  <circle cx="955" cy="400" r="2.8" fill="#0a0a0a"/>
+  <circle cx="1000" cy="475" r="2.8" fill="#0a0a0a"/>
+  <circle cx="860" cy="430" r="2.8" fill="#0a0a0a"/>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">파일명에는 'IMG'와 숫자뿐인데 내용을 맞혔습니다</text>
+</svg>

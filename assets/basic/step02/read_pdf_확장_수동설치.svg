@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 3</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">알림을 닫아버렸다면</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">확장 아이콘 → 검색 → Install, 3단계로 직접 설치합니다</text>
+  <text x="60" y="190" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">수동 설치 3단계</text>
+  <rect x="60" y="216" width="360" height="300" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="60" y="216" width="360" height="8" fill="#1d4ed8"/>
+  <text x="84" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1d4ed8" letter-spacing="0.06em">①</text>
+  <text x="84" y="286" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">확장 아이콘 클릭</text>
+  <text x="84" y="318" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">왼쪽 액티비티 바의 네모 4개</text>
+  <text x="84" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">아이콘(Extensions)을 클릭</text>
+  <rect x="460" y="216" width="360" height="300" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="460" y="216" width="360" height="8" fill="#15803d"/>
+  <text x="484" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#15803d" letter-spacing="0.06em">②</text>
+  <text x="484" y="286" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">검색창에 입력</text>
+  <text x="484" y="318" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">검색창에 vscode pdf 라고</text>
+  <text x="484" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">입력합니다</text>
+  <rect x="860" y="216" width="360" height="300" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="860" y="216" width="360" height="8" fill="#92400e"/>
+  <text x="884" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#92400e" letter-spacing="0.06em">③</text>
+  <text x="884" y="286" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">첫 항목 Install</text>
+  <text x="884" y="318" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">목록 맨 위 확장 프로그램의</text>
+  <text x="884" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">Install 버튼을 클릭</text>
+  <rect x="330" y="240" width="14" height="14" rx="2" fill="#1d4ed8"/>
+  <rect x="348" y="240" width="14" height="14" rx="2" fill="#1d4ed8"/>
+  <rect x="330" y="258" width="14" height="14" rx="2" fill="#1d4ed8"/>
+  <rect x="348" y="258" width="14" height="14" rx="2" fill="#1d4ed8"/>
+  <circle cx="792" cy="248" r="9" fill="none" stroke="#15803d" stroke-width="2.5"/>
+  <line x1="799" y1="255" x2="808" y2="264" stroke="#15803d" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="1152" y="236" width="52" height="22" rx="4" fill="#92400e"/>
+  <text x="1178" y="251" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="9.5" font-weight="700" fill="#ffffff">Install</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">PDF를 못 열어도 Claude는 읽을 수 있습니다 — 이건 사람이 눈으로 확인하기 위한 준비입니다</text>
+</svg>

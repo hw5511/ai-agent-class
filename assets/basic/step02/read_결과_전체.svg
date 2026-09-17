@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 3</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">8개가 전부 이름을 찾았습니다</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">파일명만 보고는 몰랐던 내용이 전부 이름에 담겼습니다</text>
+  <text x="60" y="190" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">변경 결과 — practice_files 8개 전부</text>
+  <rect x="60" y="200" width="1160" height="32" rx="6" fill="#f8fafc"/>
+  <text x="80" y="222" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#6b7280">doc_230928_v3.txt</text>
+  <text x="420" y="222" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#9ca3af">→</text>
+  <text x="456" y="222" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#15803d">2026-03-09_Q1실적_회의록.txt</text>
+  <text x="880" y="222" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#6b7280">회의록</text>
+  <rect x="60" y="234" width="1160" height="32" rx="6" fill="#f8fafc"/>
+  <text x="80" y="256" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#6b7280">temp_1104.txt</text>
+  <text x="420" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#9ca3af">→</text>
+  <text x="456" y="256" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#15803d">업무메모_거래처_경비정산.txt</text>
+  <text x="880" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#6b7280">업무 메모</text>
+  <rect x="60" y="268" width="1160" height="32" rx="6" fill="#f8fafc"/>
+  <text x="80" y="290" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#6b7280">report_final_v2.pdf</text>
+  <text x="420" y="290" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#9ca3af">→</text>
+  <text x="456" y="290" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#15803d">2026_1분기_영업실적_보고서.pdf</text>
+  <text x="880" y="290" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#6b7280">영업 보고서</text>
+  <rect x="60" y="302" width="1160" height="32" rx="6" fill="#f8fafc"/>
+  <text x="80" y="324" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#6b7280">IMG_20260309_134502.jpg</text>
+  <text x="420" y="324" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#9ca3af">→</text>
+  <text x="456" y="324" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#15803d">요리재료_적양파_도마.jpg</text>
+  <text x="880" y="324" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#6b7280">요리 사진</text>
+  <rect x="60" y="336" width="1160" height="32" rx="6" fill="#f8fafc"/>
+  <text x="80" y="358" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#6b7280">IMG_20260311_092341.jpg</text>
+  <text x="420" y="358" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#9ca3af">→</text>
+  <text x="456" y="358" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#15803d">풍경_여름_계곡_숲.jpg</text>
+  <text x="880" y="358" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#6b7280">풍경 사진</text>
+  <rect x="60" y="370" width="1160" height="32" rx="6" fill="#f8fafc"/>
+  <text x="80" y="392" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#6b7280">KakaoTalk_20260312_175159585.jpg</text>
+  <text x="420" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#9ca3af">→</text>
+  <text x="456" y="392" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#15803d">청첩장_김민준_이지은_2026-05-16.jpg</text>
+  <text x="880" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#6b7280">청첩장</text>
+  <rect x="60" y="404" width="1160" height="32" rx="6" fill="#f8fafc"/>
+  <text x="80" y="426" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#6b7280">KakaoTalk_20260312_175159586.jpg</text>
+  <text x="420" y="426" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#9ca3af">→</text>
+  <text x="456" y="426" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#15803d">동물_코요테_설원.jpg</text>
+  <text x="880" y="426" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#6b7280">동물 사진</text>
+  <rect x="60" y="438" width="1160" height="32" rx="6" fill="#f8fafc"/>
+  <text x="80" y="460" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#6b7280">KakaoTalk_20260312_175159587.jpg</text>
+  <text x="420" y="460" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#9ca3af">→</text>
+  <text x="456" y="460" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#15803d">풍경_폭포_계곡.jpg</text>
+  <text x="880" y="460" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#6b7280">풍경 사진</text>
+  <rect x="60" y="506" width="1160" height="54" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="88" y="536" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#166534">이제는 파일을 열어보지 않아도, 이름만 보고 안에 뭐가 있는지 알 수 있습니다.</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">읽었기 때문에 이런 이름을 지을 수 있었습니다</text>
+</svg>

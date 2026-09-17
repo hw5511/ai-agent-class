@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 3</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">사진도 이름을 바꿔줍니다</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">사진도 내용을 근거로 새 이름을 받습니다</text>
+  <text x="60" y="200" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">요청</text>
+  <rect x="60" y="222" width="800" height="40" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="76" y="248" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#4ade80">&gt;</text>
+  <text x="94" y="248" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">이 사진도 알아볼 수 있게 이름을 바꿔줘</text>
+  <text x="60" y="320" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">Claude 의 변경</text>
+  <rect x="60" y="340" width="1160" height="32" rx="6" fill="#f8fafc"/>
+  <text x="80" y="362" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#6b7280">IMG_20260309_134502.jpg</text>
+  <text x="420" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#9ca3af">→</text>
+  <text x="456" y="362" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#15803d">요리재료_적양파_도마.jpg</text>
+  <rect x="60" y="420" width="1160" height="104" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="88" y="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#15803d">지금까지 한 일</text>
+  <text x="88" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#166534">텍스트 파일 1개 · 이미지 파일 1개를 각각 Read 로 읽고 이름을 정리했습니다.</text>
+  <text x="88" y="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#166534">다음은 나머지 파일 전부를 한 번에 처리합니다.</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">다음 장에서 남은 파일 전부를 한 번에 처리합니다</text>
+</svg>

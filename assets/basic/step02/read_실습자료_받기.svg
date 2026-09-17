@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 3</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">실습 자료 받기</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">뷰어 화면의 '실습 자료 다운로드' 버튼을 눌러 받습니다</text>
+  <text x="60" y="190" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">실습 페이지에서</text>
+  <rect x="60" y="212" width="1160" height="110" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="92" y="244" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#0a0a0a">Read 실습 페이지</text>
+  <text x="92" y="270" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">맨 아래 "실습 자료 다운로드" 버튼을 클릭합니다</text>
+  <rect x="860" y="234" width="300" height="52" rx="8" fill="#2563eb"/>
+  <text x="1010" y="266" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff">⬇  실습 자료 다운로드</text>
+  <text x="845" y="264" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1d4ed8">← 여기를 클릭</text>
+  <line x1="1010" y1="332" x2="1010" y2="367" stroke="#1d4ed8" stroke-width="2.5"/>
+  <path d="M1003 363L1010 378L1017 363Z" fill="#1d4ed8"/>
+  <text x="1028" y="360.0" font-family="'Courier New',Courier,monospace" font-size="13.5" font-weight="700" fill="#1d4ed8">다운로드</text>
+  <text x="60" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">zip 안에 든 파일 8개 (미리보기)</text>
+  <rect x="60" y="414" width="1160" height="210" rx="10" fill="#1f2937"/>
+  <text x="92" y="442" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">doc_230928_v3.txt</text>
+  <text x="92" y="464" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">temp_1104.txt</text>
+  <text x="92" y="486" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">report_final_v2.pdf</text>
+  <text x="92" y="508" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">KakaoTalk_20260312_175159585.jpg</text>
+  <text x="92" y="530" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">KakaoTalk_20260312_175159586.jpg</text>
+  <text x="92" y="552" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">KakaoTalk_20260312_175159587.jpg</text>
+  <text x="92" y="574" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">IMG_20260309_134502.jpg</text>
+  <text x="92" y="596" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">IMG_20260311_092341.jpg</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">agent1 폴더에 저장하세요 — 오늘 실습 내내 이 폴더를 씁니다</text>
+</svg>

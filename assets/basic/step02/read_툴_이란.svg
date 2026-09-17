@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 3</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">Read 툴이란?</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">Claude가 내 컴퓨터의 파일을 직접 열어 읽는 도구입니다</text>
+  <text x="60" y="190" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">세 단계</text>
+  <rect x="60" y="212" width="357.3333333333333" height="150" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="238.66666666666666" y="277.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#374151">파일 지목</text>
+  <text x="238.66666666666666" y="305.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#374151">"이 파일 읽어줘"</text>
+  <text x="238.66666666666666" y="324.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#374151">또는 필요할 때 알아서 찾음</text>
+  <line x1="427.3333333333333" y1="287.0" x2="442.3333333333333" y2="287.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M438.3333333333333 280.0L451.3333333333333 287.0L438.3333333333333 294.0Z" fill="#6b7280"/>
+  <rect x="461.3333333333333" y="212" width="357.3333333333333" height="150" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="640.0" y="277.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#1d4ed8">Claude가 읽음</text>
+  <text x="640.0" y="305.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#1d4ed8">파일을 직접 열어서</text>
+  <text x="640.0" y="324.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#1d4ed8">전체 내용을 확인</text>
+  <line x1="828.6666666666666" y1="287.0" x2="843.6666666666666" y2="287.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M839.6666666666666 280.0L852.6666666666666 287.0L839.6666666666666 294.0Z" fill="#6b7280"/>
+  <rect x="862.6666666666666" y="212" width="357.3333333333333" height="150" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="1041.3333333333333" y="277.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#15803d">이해하고 답함</text>
+  <text x="1041.3333333333333" y="305.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#15803d">복사·붙여넣기 없이</text>
+  <text x="1041.3333333333333" y="324.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#15803d">바로 질문에 답변</text>
+  <rect x="60" y="422" width="1160" height="104" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="88" y="452" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">핵심</text>
+  <text x="88" y="478" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#1e40af">지금까지는 파일 내용을 직접 복사해서 채팅창에 붙여넣어야 했습니다.</text>
+  <text x="88" y="502" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#1e40af">Read 툴을 쓰면 파일 경로(또는 이름)만 알려줘도 Claude가 직접 열어봅니다.</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">채팅창에 내용을 복사·붙여넣기 할 필요가 없습니다</text>
+</svg>
