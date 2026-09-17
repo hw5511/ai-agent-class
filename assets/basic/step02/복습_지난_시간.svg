@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 1</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">지난 시간에 한 것</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">1회차에서 여기까지 왔습니다 — 오늘은 이걸 다시 세팅합니다</text>
+  <text x="60" y="190" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">1회차 체크리스트</text>
+  <text x="92" y="232" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">[v]</text>
+  <text x="140" y="232" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">VS Code</text>
+  <text x="248" y="232" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="400" fill="#4ade80">설치 완료</text>
+  <text x="92" y="274" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">[v]</text>
+  <text x="140" y="274" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">실습 폴더</text>
+  <text x="248" y="274" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="400" fill="#4ade80">만들고 열었음</text>
+  <text x="92" y="316" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">[v]</text>
+  <text x="140" y="316" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">터미널</text>
+  <text x="248" y="316" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="400" fill="#4ade80">Ctrl + J 로 열기</text>
+  <text x="92" y="358" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">[v]</text>
+  <text x="140" y="358" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">CLI 설치</text>
+  <text x="248" y="358" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="400" fill="#4ade80">claude 명령 사용 가능</text>
+  <text x="92" y="400" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">[v]</text>
+  <text x="140" y="400" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">로그인</text>
+  <text x="248" y="400" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="400" fill="#4ade80">브라우저로 계정 연결</text>
+  <rect x="60" y="478" width="1160" height="78" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="88" y="508" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">오늘은 새 폴더 agent1 으로 이 과정을 처음부터 한 번 더 따라갑니다.</text>
+  <text x="88" y="532" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">이미 익숙해졌다면 빠르게, 처음이라면 천천히 따라오면 됩니다.</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">기억이 안 나도 괜찮습니다, 오늘 처음부터 다시 해봅니다</text>
+</svg>

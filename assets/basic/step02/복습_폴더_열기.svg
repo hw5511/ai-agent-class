@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 1</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">작업 폴더 열기</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">VS Code 메뉴에서 File &gt; Open Folder 를 고릅니다</text>
+  <rect x="60" y="190" width="1160" height="420" rx="10" fill="#1e1e1e" stroke="#333333" stroke-width="1.5"/>
+  <rect x="60" y="190" width="1160" height="34" rx="10" fill="#2d2d2d"/>
+  <text x="90" y="212" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="500" fill="#cccccc">Visual Studio Code</text>
+  <rect x="60" y="224" width="90" height="26" fill="#3a3a3a"/>
+  <text x="105" y="241" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="600" fill="#ffffff">File</text>
+  <text x="240" y="241" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="400" fill="#cccccc">Edit</text>
+  <text x="330" y="241" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="400" fill="#cccccc">Selection</text>
+  <text x="420" y="241" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="400" fill="#cccccc">View</text>
+  <text x="510" y="241" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="400" fill="#cccccc">Go</text>
+  <rect x="60" y="250" width="300" height="224" fill="#252526" stroke="#3c3c3c" stroke-width="1"/>
+  <text x="80" y="272" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#e0e0e0">New Text File</text>
+  <text x="348" y="272" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#9d9d9d">Ctrl+N</text>
+  <text x="80" y="306" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#e0e0e0">New Window</text>
+  <text x="348" y="306" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#9d9d9d">Ctrl+Shift+N</text>
+  <text x="80" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#e0e0e0">Open File...</text>
+  <text x="348" y="340" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#9d9d9d">Ctrl+O</text>
+  <rect x="60" y="352" width="300" height="34" fill="#094771"/>
+  <text x="80" y="374" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#ffffff">Open Folder...</text>
+  <text x="348" y="374" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#9d9d9d">Ctrl+K Ctrl+O</text>
+  <text x="80" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#e0e0e0">Open Workspace from File...</text>
+  <text x="400" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#1d4ed8">← 이 항목을 클릭</text>
+  <text x="400" y="368" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="400" fill="#6b7280">agent1 폴더를 찾아 선택 → "폴더 선택" 버튼</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">반드시 agent1 폴더 자체를 선택해서 엽니다</text>
+</svg>
