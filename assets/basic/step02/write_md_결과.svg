@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 4</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">파일이 생겼습니다</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">Write 툴이 자기소개서를 만들고, 탐색기에 새 파일이 나타납니다</text>
+  <rect x="60" y="175" width="1160" height="472" rx="10" fill="#1e1e1e" stroke="#333333" stroke-width="1.5"/>
+  <path d="M60 185a10 10 0 0 1 10-10h1140a10 10 0 0 1 10 10v22H60z" fill="#2d2d2d"/>
+  <circle cx="82" cy="191" r="5.5" fill="#ef4444"/>
+  <circle cx="100" cy="191" r="5.5" fill="#f59e0b"/>
+  <circle cx="118" cy="191" r="5.5" fill="#22c55e"/>
+  <text x="640" y="195" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="500" fill="#cccccc">에이전트1 — Visual Studio Code</text>
+  <rect x="1086" y="181" width="118" height="20" rx="4" fill="#383838" stroke="#484848" stroke-width="1"/>
+  <text x="1145" y="195" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="600" fill="#38bdf8">⊞ Panel: Right</text>
+  <rect x="60" y="207" width="46" height="415" fill="#252526"/>
+  <line x1="106" y1="207" x2="106" y2="622" stroke="#2b2b2b" stroke-width="1"/>
+  <rect x="60" y="217" width="2.5" height="28" fill="#007acc"/>
+  <path d="M76 223h12v15H76z" fill="none" stroke="#ffffff" stroke-width="1.6"/>
+  <path d="M79 220h12v15H79z" fill="none" stroke="#ffffff" stroke-width="1.6"/>
+  <circle cx="82" cy="265" r="5.5" fill="none" stroke="#858585" stroke-width="1.6"/>
+  <line x1="86" y1="269" x2="91" y2="274" stroke="#858585" stroke-width="1.8" stroke-linecap="round"/>
+  <rect x="106" y="207" width="224" height="415" fill="#1e1e1e"/>
+  <line x1="330" y1="207" x2="330" y2="622" stroke="#2b2b2b" stroke-width="1"/>
+  <text x="124" y="229" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#999999" letter-spacing="0.6">EXPLORER</text>
+  <path d="M128 244l3 3-3 3" fill="none" stroke="#cccccc" stroke-width="1.3"/>
+  <path d="M138 241h6l2 2h5v7h-13z" fill="#dcb67a"/>
+  <text x="156" y="253" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#e5e7eb">agent1</text>
+  <rect x="112" y="263" width="208" height="22" rx="3" fill="#094771"/>
+  <path d="M152 267h7l2 2v7h-9z" fill="#38bdf8" opacity="0.85"/>
+  <text x="170" y="278" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">자기소개.md</text>
+  <rect x="330" y="207" width="410" height="415" fill="#1e1e1e"/>
+  <line x1="740" y1="207" x2="740" y2="622" stroke="#2b2b2b" stroke-width="1"/>
+  <rect x="330" y="207" width="410" height="31" fill="#252526"/>
+  <rect x="330" y="207" width="160" height="31" fill="#1e1e1e"/>
+  <rect x="330" y="207" width="160" height="2" fill="#007acc"/>
+  <path d="M344 219h7l2 2v7h-9z" fill="#38bdf8" opacity="0.9"/>
+  <text x="359" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="400" fill="#ffffff">자기소개.md</text>
+  <line x1="330" y1="238" x2="740" y2="238" stroke="#2b2b2b" stroke-width="1"/>
+  <text x="345" y="265" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#6e7681">1</text>
+  <text x="368" y="265" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#67e8f9"># 안녕하세요, 'ㅇㅇ' 입니다</text>
+  <text x="345" y="291" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#6e7681">2</text>
+  <text x="368" y="291" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#e6edf3"></text>
+  <text x="345" y="317" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#6e7681">3</text>
+  <text x="368" y="317" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#67e8f9">## 저는 이런 도우미예요</text>
+  <text x="345" y="343" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#6e7681">4</text>
+  <text x="368" y="343" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#e6edf3">- ai 에이전트 수업을 도와드려요</text>
+  <text x="345" y="369" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#6e7681">5</text>
+  <text x="368" y="369" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#e6edf3">- 말투는 '~요'를 '~용용'으로 붙여요</text>
+  <rect x="740" y="207" width="480" height="415" fill="#181818"/>
+  <rect x="740" y="207" width="480" height="31" fill="#252526"/>
+  <line x1="740" y1="238" x2="1220" y2="238" stroke="#2b2b2b" stroke-width="1"/>
+  <text x="758" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.5">TERMINAL</text>
+  <rect x="756" y="236" width="62" height="2" fill="#007acc"/>
+  <text x="836" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#858585">OUTPUT</text>
+  <text x="898" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#858585">PORTS</text>
+  <text x="758" y="266" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#4ade80">● Write(자기소개.md)</text>
+  <text x="758" y="288" font-family="'Courier New',Courier,monospace" font-size="11.5" font-weight="400" fill="#6b7280">  └ 파일 생성 완료</text>
+  <text x="758" y="310" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#e5e7eb">--</text>
+  <text x="758" y="332" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#4ade80">자기소개서를 만들었어용용!</text>
+  <path d="M60 622h1160v15a10 10 0 0 1-10 10H70a10 10 0 0 1-10-10z" fill="#007acc"/>
+  <text x="74" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="500" fill="#ffffff">⑂ main*</text>
+  <text x="910" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#ffffff">PowerShell</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">CLAUDE.md 로 정한 이름 "ㅇㅇ" 과 말투(~요→~용용)가 자기소개에 그대로 반영됩니다</text>
+</svg>

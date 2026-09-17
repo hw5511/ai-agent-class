@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 3</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">무엇을 읽을 수 있나</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">텍스트 · 이미지 · PDF — 세 가지를 모두 읽습니다</text>
+  <text x="60" y="190" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">읽을 수 있는 파일</text>
+  <rect x="60" y="216" width="360" height="300" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="60" y="216" width="360" height="8" fill="#1d4ed8"/>
+  <text x="84" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1d4ed8" letter-spacing="0.06em">TEXT</text>
+  <text x="84" y="286" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">텍스트</text>
+  <text x="84" y="318" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">.txt · .md · .py · .html · .json 등</text>
+  <text x="84" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">글자로 된 파일은 전부 읽습니다</text>
+  <rect x="460" y="216" width="360" height="300" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="460" y="216" width="360" height="8" fill="#15803d"/>
+  <text x="484" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#15803d" letter-spacing="0.06em">IMAGE</text>
+  <text x="484" y="286" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">이미지</text>
+  <text x="484" y="318" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">.jpg · .png · .gif · .webp</text>
+  <text x="484" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">그림을 직접 '보고' 설명합니다</text>
+  <rect x="860" y="216" width="360" height="300" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="860" y="216" width="360" height="8" fill="#92400e"/>
+  <text x="884" y="256" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#92400e" letter-spacing="0.06em">PDF</text>
+  <text x="884" y="286" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">PDF</text>
+  <text x="884" y="318" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">문서를 페이지째 읽습니다</text>
+  <text x="884" y="340" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">최대 100페이지 · 20MB</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">이미지를 '본다'는 게 핵심 — 파일명이 아니라 실제 그림 내용을 이해합니다</text>
+</svg>

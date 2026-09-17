@@ -19,6 +19,8 @@
 좌표계는 1280x720 고정. 본문은 y=168 부터 y=636 까지 쓴다.
 """
 
+import math
+
 W, H = 1280, 720
 BODY_TOP, BODY_BOTTOM = 168, 636
 
@@ -186,3 +188,227 @@ def two_col(y, left, right, height=300):
 def section(y, label, x=60):
     """본문 구역 제목 (작은 회색 라벨)."""
     return [text(x, y, label, 13, FAINT, '700', spacing='0.08em')]
+
+
+# ── VS Code 창 목업 ─────────────────────────────────────────────
+# 1회차 실습 슬라이드들이 쓰는 그 창이다. 직접 그리지 말고 이 함수를 쓴다.
+
+def vscode(title='에이전트1 — Visual Studio Code', tree=None, tab=None,
+           editor=None, term_label='TERMINAL', term=None, panel_right=True):
+    """VS Code 창 한 벌.
+
+    tree   : [(깊이, 이름, 종류, 강조)]  종류 = 'folder' | 'file'
+             깊이 0 = 루트. 강조 True 면 파란 선택 막대가 깔린다.
+    tab    : 편집기 탭에 뜰 파일 이름 (None 이면 편집기 영역이 빈다)
+    editor : 편집기 본문 [(줄번호, 텍스트, 색)]
+    term   : 터미널 본문 [(텍스트, 색, 크기)] — 색·크기는 생략 가능
+    """
+    o = [rect(60, 175, 1160, 472, '#1e1e1e', rx=10, stroke='#333333'),
+         '  <path d="M60 185a10 10 0 0 1 10-10h1140a10 10 0 0 1 10 10v22H60z" fill="#2d2d2d"/>',
+         '  <circle cx="82" cy="191" r="5.5" fill="#ef4444"/>',
+         '  <circle cx="100" cy="191" r="5.5" fill="#f59e0b"/>',
+         '  <circle cx="118" cy="191" r="5.5" fill="#22c55e"/>',
+         text(640, 195, title, 12, '#cccccc', '500', anchor='middle')]
+    if panel_right:
+        o.append(rect(1086, 181, 118, 20, '#383838', rx=4, stroke='#484848', sw=1))
+        o.append(text(1145, 195, '⊞ Panel: Right', 10.5, '#38bdf8', '600', anchor='middle'))
+    # 액티비티 바
+    o += [rect(60, 207, 46, 415, '#252526'),
+          '  <line x1="106" y1="207" x2="106" y2="622" stroke="#2b2b2b" stroke-width="1"/>',
+          rect(60, 217, 2.5, 28, '#007acc'),
+          '  <path d="M76 223h12v15H76z" fill="none" stroke="#ffffff" stroke-width="1.6"/>',
+          '  <path d="M79 220h12v15H79z" fill="none" stroke="#ffffff" stroke-width="1.6"/>',
+          '  <circle cx="82" cy="265" r="5.5" fill="none" stroke="#858585" stroke-width="1.6"/>',
+          '  <line x1="86" y1="269" x2="91" y2="274" stroke="#858585" stroke-width="1.8" stroke-linecap="round"/>']
+    # 탐색기
+    o += [rect(106, 207, 224, 415, '#1e1e1e'),
+          '  <line x1="330" y1="207" x2="330" y2="622" stroke="#2b2b2b" stroke-width="1"/>',
+          text(124, 229, 'EXPLORER', 11, '#999999', '700', spacing='0.6')]
+    y = 253
+    for depth, name, kind, hot in (tree or []):
+        x = 124 + depth * 14
+        if hot:
+            o.append(rect(112, y - 15, 208, 22, '#094771', rx=3))
+        if kind == 'folder':
+            o.append(f'  <path d="M{x+4} {y-9}l3 3-3 3" fill="none" stroke="#cccccc" stroke-width="1.3"/>')
+            o.append(f'  <path d="M{x+14} {y-12}h6l2 2h5v7h-13z" fill="#dcb67a"/>')
+        else:
+            o.append(f'  <path d="M{x+14} {y-11}h7l2 2v7h-9z" fill="#38bdf8" opacity="0.85"/>')
+        label = _fit(name, 324 - (x + 32), 11.5)
+        o.append(text(x + 32, y, label, 11.5, '#ffffff' if hot else '#e5e7eb',
+                      '700' if kind == 'folder' or hot else '400'))
+        y += 25
+    # 편집기
+    o += [rect(330, 207, 410, 415, '#1e1e1e'),
+          '  <line x1="740" y1="207" x2="740" y2="622" stroke="#2b2b2b" stroke-width="1"/>',
+          rect(330, 207, 410, 31, '#252526')]
+    if tab:
+        o += [rect(330, 207, 160, 31, '#1e1e1e'), rect(330, 207, 160, 2, '#007acc'),
+              '  <path d="M344 219h7l2 2v7h-9z" fill="#38bdf8" opacity="0.9"/>',
+              text(359, 226, tab, 11.5, '#ffffff')]
+    o.append('  <line x1="330" y1="238" x2="740" y2="238" stroke="#2b2b2b" stroke-width="1"/>')
+    yy = 265
+    for n, s, col in (editor or []):
+        o.append(text(345, yy, n, 12, '#6e7681', mono=True))
+        o.append(text(368, yy, s, 12, col or '#e6edf3', mono=True))
+        yy += 26
+    # 터미널
+    o += [rect(740, 207, 480, 415, '#181818'), rect(740, 207, 480, 31, '#252526'),
+          '  <line x1="740" y1="238" x2="1220" y2="238" stroke="#2b2b2b" stroke-width="1"/>',
+          text(758, 226, term_label, 11, '#ffffff', '700', spacing='0.5'),
+          rect(756, 236, 62, 2, '#007acc'),
+          text(836, 226, 'OUTPUT', 11, '#858585'),
+          text(898, 226, 'PORTS', 11, '#858585')]
+    yy = 266
+    for item in (term or []):
+        s = item[0]
+        col = item[1] if len(item) > 1 else None
+        size = item[2] if len(item) > 2 else 12
+        o.append(text(758, yy, s, size, col or '#e5e7eb', mono=True))
+        yy += 22
+    # 상태바
+    o += ['  <path d="M60 622h1160v15a10 10 0 0 1-10 10H70a10 10 0 0 1-10-10z" fill="#007acc"/>',
+          text(74, 638, '⑂ main*', 11, '#ffffff', '500'),
+          text(910, 638, 'PowerShell', 11, '#ffffff')]
+    return o
+
+
+# ── 흐름·카드 공통 블록 ──────────────────────────────────────────
+# 2회차 슬라이드들이 공유한다. 파트별 생성 스크립트에서 따로 정의하지 말 것.
+
+TINTS = {
+    'info':  (BLUE_BG, BLUE_EDGE, BLUE_DEEP),
+    'ok':    (OK_BG, OK_EDGE, OK_DEEP),
+    'warn':  (WARN_BG, WARN_EDGE, WARN_DEEP),
+    'plain': (PANEL_BG, LINE, '#374151'),
+}
+
+
+def flow_row(y, steps, height=120, x=60, width=1160, gap=44):
+    """가로 흐름도. steps = [(라벨, [설명줄], kind)]. kind 는 TINTS 키."""
+    n = len(steps)
+    bw = (width - gap * (n - 1)) / n
+    o = []
+    cx = x
+    for i, (label, sub, kind) in enumerate(steps):
+        bg, edge, fg = TINTS[kind]
+        o.append(rect(cx, y, bw, height, bg, rx=14, stroke=edge))
+        cy = y + (height / 2 - 10 if sub else height / 2 + 6)
+        o.append(text(cx + bw / 2, cy, label, 16.5, fg, '800', anchor='middle'))
+        if sub:
+            yy = y + height / 2 + 18
+            for ln in sub:
+                o.append(text(cx + bw / 2, yy, ln, 12.5, fg, '500', anchor='middle'))
+                yy += 19
+        if i < n - 1:
+            ax1 = cx + bw + 10
+            ax2 = cx + bw + gap - 10
+            midy = y + height / 2
+            o.append(f'  <line x1="{ax1}" y1="{midy}" x2="{ax2-9}" y2="{midy}" '
+                     f'stroke="{MUTED}" stroke-width="2.5"/>')
+            o.append(f'  <path d="M{ax2-13} {midy-7}L{ax2} {midy}L{ax2-13} {midy+7}Z" '
+                     f'fill="{MUTED}"/>')
+        cx += bw + gap
+    return o
+
+
+def down_arrow(x, y1, y2, label=None, color=BLUE_DEEP):
+    """세로 아래 방향 화살표. label 은 화살표 오른쪽에 붙는다."""
+    o = [f'  <line x1="{x}" y1="{y1}" x2="{x}" y2="{y2-11}" '
+         f'stroke="{color}" stroke-width="2.5"/>',
+         f'  <path d="M{x-7} {y2-15}L{x} {y2}L{x+7} {y2-15}Z" fill="{color}"/>']
+    if label:
+        o.append(text(x + 18, (y1 + y2) / 2 + 5, label, 13.5, color, '700', mono=True))
+    return o
+
+
+def card(x, y, w, h, tag, tagcol, title, lines):
+    """윗면에 색 띠가 있는 흰 카드. tagcol 은 TINTS 키."""
+    tint = TINTS[tagcol]
+    o = [rect(x, y, w, h, '#ffffff', rx=12, stroke='#d1d5db'),
+         rect(x, y, w, 8, tint[2], rx=0),
+         text(x + 24, y + 40, tag, 12, tint[2], '700', spacing='0.06em'),
+         text(x + 24, y + 70, title, 19, INK, '800')]
+    yy = y + 102
+    for ln in lines:
+        o.append(text(x + 24, yy, ln, 13.5, '#4b5563'))
+        yy += 22
+    return o
+
+
+def arrow(x1, y1, x2, y2, color=BLUE_DEEP, sw=3, dashed=False, head=15):
+    """임의 각도 화살표. 드래그 & 드롭처럼 '무엇을 어디로' 를 보여줄 때 쓴다."""
+    ang = math.atan2(y2 - y1, x2 - x1)
+    bx, by = x2 - head * math.cos(ang), y2 - head * math.sin(ang)
+    px, py = -math.sin(ang) * head * 0.46, math.cos(ang) * head * 0.46
+    dash = ' stroke-dasharray="8 6"' if dashed else ''
+    return [f'  <line x1="{x1:.1f}" y1="{y1:.1f}" x2="{bx:.1f}" y2="{by:.1f}" '
+            f'stroke="{color}" stroke-width="{sw}" stroke-linecap="round"{dash}/>',
+            f'  <path d="M{bx+px:.1f} {by+py:.1f}L{x2:.1f} {y2:.1f}'
+            f'L{bx-px:.1f} {by-py:.1f}Z" fill="{color}"/>']
+
+
+def callout(x, y, label, color=BLUE_DEEP, size=15, anchor=None):
+    """화면 위에 겹쳐 붙이는 파란 설명 꼬리표 (← 여기를 클릭 같은 것)."""
+    return [text(x, y, label, size, color, '700', anchor=anchor)]
+
+
+def prompt_bar(x, y, value, width=460, hint=None, color=CODE):
+    """Claude 입력줄. 학생이 실제로 칠 프롬프트를 보여줄 때 쓴다."""
+    o = [rect(x, y, width, 40, '#0f172a', rx=8, stroke='#334155', sw=1.5),
+         text(x + 16, y + 26, '>', 14, OK, '700', mono=True),
+         text(x + 34, y + 26, value, 13, color, mono=True)]
+    if hint:
+        o.append(text(x, y + 62, hint, 13, MUTED))
+    return o
+
+
+def rename_rows(y, rows, x=60, width=1160, gap=38, size=14):
+    """파일명 before → after 대비. rows = (전, 후, 설명 또는 None)."""
+    o = []
+    yy = y
+    for before, after, note in rows:
+        o.append(rect(x, yy - 22, width, 32, PANEL_BG, rx=6))
+        o.append(text(x + 20, yy, before, size, MUTED, mono=True))
+        o.append(text(x + 360, yy, '→', size, FAINT, '700'))
+        o.append(text(x + 396, yy, after, size, OK_DEEP, '700', mono=True))
+        if note:
+            o.append(text(x + 820, yy, note, size - 1.5, MUTED))
+        yy += gap
+    return o
+
+
+def _fit(s, avail, size):
+    """폭에 안 들어가면 VS Code 처럼 말줄임(…) 한다."""
+    def w(t):
+        return sum(size * (1.0 if ord(c) > 0x2500 else 0.56) for c in t)
+    if w(s) <= avail:
+        return s
+    cut = s
+    while cut and w(cut + '…') > avail:
+        cut = cut[:-1]
+    return cut + '…'
+
+
+def drag_chip(x, y, name, color=BLUE_DEEP):
+    """드래그 중인 파일·폴더 이름표. 끌려가는 중임을 보여줄 때 쓴다."""
+    w = 26 + sum(12 * (1.0 if ord(c) > 0x2500 else 0.56) for c in name) + 18
+    return [rect(x, y, w, 30, '#ffffff', rx=6, stroke=color, sw=1.5),
+            f'  <path d="M{x+14} {y+9}h7l2 2v9h-9z" fill="{color}" opacity="0.85"/>',
+            text(x + 32, y + 20, name, 12, color, '600', mono=True)]
+
+
+def notification(x, y, lines, button=None, width=340):
+    """VS Code 우하단 알림 토스트. 확장 설치 안내 같은 팝업에 쓴다."""
+    h = 26 + 22 * len(lines) + (40 if button else 12)
+    o = [rect(x, y, width, h, '#252526', rx=6, stroke='#454545', sw=1)]
+    yy = y + 30
+    for i, ln in enumerate(lines):
+        o.append(text(x + 18, yy, ln, 12, '#e5e7eb' if i == 0 else '#b0b0b0'))
+        yy += 22
+    if button:
+        bw = 24 + sum(12 * (1.0 if ord(c) > 0x2500 else 0.56) for c in button)
+        o += [rect(x + width - bw - 18, yy - 2, bw, 26, '#0e639c', rx=4),
+              text(x + width - bw / 2 - 18, yy + 15, button, 12, '#ffffff',
+                   '600', anchor='middle')]
+    return o

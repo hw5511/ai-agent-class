@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 3</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">읽고 분석해달라고 하기</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">드롭된 파일 경로 뒤에 이어서 요청을 입력합니다</text>
+  <text x="60" y="200" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">지금 이 순간 — 입력 중</text>
+  <rect x="60" y="222" width="18" height="18" rx="4" fill="#2563eb"/>
+  <text x="88" y="236" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">1번에서 드롭으로 자동 입력된 경로</text>
+  <rect x="400" y="222" width="18" height="18" rx="4" fill="#4ade80"/>
+  <text x="428" y="236" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">지금 입력하고 있는 요청</text>
+  <rect x="60" y="280" width="1160" height="40" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="76" y="306" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#4ade80">&gt;</text>
+  <text x="94" y="306" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">practice_files/doc_230928_v3.txt 이 파일을 읽고 분석해줘</text>
+  <text x="60" y="342" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">경로는 이미 들어가 있습니다 — 뒤에 요청만 적으면 됩니다</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">Enter 를 누르면 Claude 가 파일을 엽니다 — 결과는 다음 장에서 확인합니다</text>
+</svg>

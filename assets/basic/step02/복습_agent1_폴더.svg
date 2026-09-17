@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 1</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">실습 폴더 만들기</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">바탕화면(또는 다운로드)에 agent1 폴더를 새로 만듭니다</text>
+  <text x="60" y="190" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">파일 탐색기</text>
+  <rect x="60" y="210" width="1160" height="150" rx="12" fill="#f8fafc"/>
+  <rect x="60" y="210" width="1160" height="150" rx="12" fill="none" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="96" y="234" width="150" height="96" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <path d="M112 258h20l6 8h34v40h-60z" fill="#dcb67a"/>
+  <text x="171" y="348" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="400" fill="#6b7280">바탕화면</text>
+  <rect x="276" y="234" width="150" height="96" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <path d="M292 258h20l6 8h34v40h-60z" fill="#60a5fa"/>
+  <text x="351" y="348" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1d4ed8">agent1  (신규)</text>
+  <text x="500" y="275" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#0a0a0a">→  마우스 우클릭 → 새로 만들기 → 폴더</text>
+  <text x="500" y="305" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#0a0a0a">→  이름을 agent1 으로 입력하고 Enter</text>
+  <text x="60" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">어느 위치든 상관없습니다</text>
+  <rect x="60" y="414" width="1160" height="146" rx="10" fill="#1f2937"/>
+  <text x="92" y="452" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#e5e7eb">바탕화면에 두거나, 다운로드 폴더 안에 두어도 됩니다.</text>
+  <text x="92" y="480" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#e5e7eb">중요한 건 폴더 이름이 agent1 이라는 것, 그리고</text>
+  <text x="92" y="508" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#67e8f9">내가 이 폴더 위치를 기억하고 있다는 것뿐입니다.</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">이름은 꼭 agent1 — 오늘 실습 내내 이 폴더를 씁니다</text>
+</svg>

@@ -151,30 +151,24 @@
   <text x="885" y="560" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#ffffff">PowerShell</text>
   <text x="1135" y="560" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#ffffff">Panel: Right ✓</text>
 
-  <!-- 하단 4개 구성 요소 안내 범례 (Legend) -->
-  <!-- 1. 탐색기 -->
-  <circle cx="78" cy="600" r="13" fill="#171717"/>
-  <text x="78" y="605" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">1</text>
-  <text x="99" y="605" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#171717">좌측 탐색기</text>
-  <text x="99" y="625" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">실습 폴더와 생성된 파일 확인</text>
+  <!-- 하단 범례 — 창 안의 3단(탐색기·편집기·터미널) 경계에 맞춰 배치한다 -->
+  <line x1="119" y1="574" x2="119" y2="585" stroke="#d1d5db" stroke-width="1.5"/>
+  <circle cx="119" cy="600" r="13" fill="#171717"/>
+  <text x="119" y="605" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">1</text>
+  <text x="140" y="605" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#171717">좌측 탐색기</text>
+  <text x="140" y="625" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">실습 폴더와 생성된 파일 확인</text>
 
-  <!-- 2. 편집기 -->
-  <circle cx="365" cy="600" r="13" fill="#171717"/>
-  <text x="365" y="605" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">2</text>
-  <text x="386" y="605" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#171717">중앙 편집기</text>
-  <text x="386" y="625" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">선택한 코드와 문서 열람·수정</text>
+  <line x1="343" y1="574" x2="343" y2="585" stroke="#d1d5db" stroke-width="1.5"/>
+  <circle cx="343" cy="600" r="13" fill="#171717"/>
+  <text x="343" y="605" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">2</text>
+  <text x="364" y="605" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#171717">중앙 편집기</text>
+  <text x="364" y="625" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">선택한 코드와 문서 열람·수정</text>
 
-  <!-- 3. 우측 패널 (터미널) - 핵심 강조 -->
-  <circle cx="680" cy="600" r="13" fill="#007acc"/>
-  <text x="680" y="605" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">3</text>
-  <text x="701" y="605" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#007acc">우측 패널 (터미널)</text>
-  <text x="701" y="625" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">Panel Position: Right로 에이전트 실행</text>
-
-  <!-- 4. 작업 폴더 -->
-  <circle cx="985" cy="600" r="13" fill="#171717"/>
-  <text x="985" y="605" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">4</text>
-  <text x="1006" y="605" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#171717">작업 공간 (에이전트1)</text>
-  <text x="1006" y="625" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">파일과 터미널을 좌우 나란히 배치</text>
+  <line x1="753" y1="574" x2="753" y2="585" stroke="#d1d5db" stroke-width="1.5"/>
+  <circle cx="753" cy="600" r="13" fill="#007acc"/>
+  <text x="753" y="605" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">3</text>
+  <text x="774" y="605" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#007acc">우측 패널 (터미널)</text>
+  <text x="774" y="625" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#6b7280">Panel Position: Right 로 실행</text>
 
   <!-- 최하단 핵심 팁 -->
   <text x="640" y="675" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="500" fill="#6b7280">💡 터미널 탭 우클릭 → <tspan font-weight="700" fill="#111827">Move Panel Right</tspan> 또는 레이아웃 메뉴에서 패널 위치를 우측으로 이동할 수 있습니다.</text>

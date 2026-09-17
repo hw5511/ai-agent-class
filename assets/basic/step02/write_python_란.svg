@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 4</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">이번엔 프로그램</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">문서·그림·웹페이지에 이어, 이번엔 실행되는 프로그램을 만듭니다</text>
+  <rect x="60" y="200" width="558.0" height="140" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="339.0" y="260.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#374151">지금까지</text>
+  <text x="339.0" y="288.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#374151">문서(md) · 그림(svg) · 웹페이지(html)</text>
+  <line x1="628.0" y1="270.0" x2="643.0" y2="270.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M639.0 263.0L652.0 270.0L639.0 277.0Z" fill="#6b7280"/>
+  <rect x="662.0" y="200" width="558.0" height="140" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="941.0" y="260.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#1d4ed8">이번엔</text>
+  <text x="941.0" y="288.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#1d4ed8">눌러서 실행하는 프로그램</text>
+  <text x="60" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">이번에 새로 쓰는 두 가지</text>
+  <rect x="60" y="384" width="552" height="170" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="60" y="384" width="552" height="8" fill="#1d4ed8"/>
+  <text x="84" y="424" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1d4ed8" letter-spacing="0.06em">언어</text>
+  <text x="84" y="454" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">파이썬 (Python)</text>
+  <text x="84" y="486" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">프로그램을 만들 때 쓰는</text>
+  <text x="84" y="508" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">프로그래밍 언어입니다</text>
+  <rect x="668" y="384" width="552" height="170" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="668" y="384" width="552" height="8" fill="#15803d"/>
+  <text x="692" y="424" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#15803d" letter-spacing="0.06em">도구</text>
+  <text x="692" y="454" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">tkinter</text>
+  <text x="692" y="486" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">파이썬으로 창이 뜨는</text>
+  <text x="692" y="508" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">프로그램을 만들 때 쓰는 도구입니다</text>
+</svg>

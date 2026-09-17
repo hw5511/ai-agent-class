@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">고치는 방법이 다릅니다</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">Write 는 새로 쓰고, Edit 는 있는 파일에서 필요한 부분만 바꿉니다</text>
+  <text x="60" y="186" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">두 툴의 차이</text>
+  <rect x="60" y="206" width="560" height="248" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="60" y="206" width="560" height="8" fill="#92400e"/>
+  <text x="84" y="246" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#92400e" letter-spacing="0.06em">WRITE 툴</text>
+  <text x="84" y="276" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">새로 쓰거나 통째로 덮어쓰기</text>
+  <text x="84" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">파일이 없으면 새로 만듭니다</text>
+  <text x="84" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">파일이 있으면 전체 내용을 다시 씁니다</text>
+  <text x="84" y="352" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">이미 있던 내용은 사라집니다</text>
+  <rect x="660" y="206" width="560" height="248" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="660" y="206" width="560" height="8" fill="#15803d"/>
+  <text x="684" y="246" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#15803d" letter-spacing="0.06em">EDIT 툴</text>
+  <text x="684" y="276" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">필요한 부분만 고치기</text>
+  <text x="684" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">파일이 이미 있어야 합니다</text>
+  <text x="684" y="330" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">달라지는 부분만 바꿉니다</text>
+  <text x="684" y="352" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">나머지 내용은 그대로 남습니다</text>
+  <text x="60" y="486" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">한 단계씩 진행합니다</text>
+  <rect x="60" y="506" width="357.3333333333333" height="110" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="238.66666666666666" y="551.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#1d4ed8">파일 읽기</text>
+  <text x="238.66666666666666" y="579.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#1d4ed8">먼저 지금 내용을 확인합니다</text>
+  <line x1="427.3333333333333" y1="561.0" x2="442.3333333333333" y2="561.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M438.3333333333333 554.0L451.3333333333333 561.0L438.3333333333333 568.0Z" fill="#6b7280"/>
+  <rect x="461.3333333333333" y="506" width="357.3333333333333" height="110" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="640.0" y="551.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#1d4ed8">고칠 부분 찾기</text>
+  <text x="640.0" y="579.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#1d4ed8">바뀌어야 할 곳만 짚어냅니다</text>
+  <line x1="828.6666666666666" y1="561.0" x2="843.6666666666666" y2="561.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M839.6666666666666 554.0L852.6666666666666 561.0L839.6666666666666 568.0Z" fill="#6b7280"/>
+  <rect x="862.6666666666666" y="506" width="357.3333333333333" height="110" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="1041.3333333333333" y="551.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#15803d">그 부분만 교체</text>
+  <text x="1041.3333333333333" y="579.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#15803d">나머지는 그대로 둡니다</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">파일 전체가 아니라 달라지는 부분만 바뀝니다</text>
+</svg>

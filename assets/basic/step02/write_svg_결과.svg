@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 4</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">코드가 그림이 됩니다</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">svg 코드 몇 줄이 그대로 그림으로 그려집니다</text>
+  <rect x="60" y="205" width="480" height="380" rx="10" fill="#1f2937"/>
+  <text x="84" y="235" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="700" fill="#9ca3af">자전거_강아지.svg</text>
+  <text x="84" y="273" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">&lt;svg width="200" height="200"&gt;</text>
+  <text x="84" y="299" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">  &lt;circle cx="50" cy="150" r="30"/&gt;</text>
+  <text x="84" y="325" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">  &lt;circle cx="150" cy="150" r="30"/&gt;</text>
+  <text x="84" y="351" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">  &lt;rect x="65" y="95" width="70" height="35"/&gt;</text>
+  <text x="84" y="377" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">  &lt;circle cx="100" cy="60" r="22"/&gt;</text>
+  <text x="84" y="403" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">&lt;/svg&gt;</text>
+  <rect x="620" y="205" width="560" height="380" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="640" y="235" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#6b7280">결과 — 브라우저가 그린 그림</text>
+  <circle cx="820" cy="465" r="46" fill="none" stroke="#1d4ed8" stroke-width="4.0"/>
+  <circle cx="980" cy="465" r="46" fill="none" stroke="#1d4ed8" stroke-width="4.0"/>
+  <rect x="814.0" y="435.0" width="172.0" height="14.0" rx="4.0" fill="#6b7280"/>
+  <circle cx="900" cy="409" r="44" fill="#fffbeb" stroke="#fcd34d" stroke-width="2"/>
+  <circle cx="900" cy="339" r="28" fill="#fffbeb" stroke="#fcd34d" stroke-width="2"/>
+  <path d="M880 321 L870 297 L894 315 Z" fill="#fcd34d"/>
+  <path d="M920 321 L930 297 L906 315 Z" fill="#fcd34d"/>
+  <circle cx="944" cy="403" r="8" fill="#fcd34d"/>
+  <text x="900.0" y="555" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="400" fill="#6b7280">자전거 탄 강아지</text>
+  <line x1="552.0" y1="395.0" x2="593.0" y2="395.0" stroke="#1d4ed8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M593.0 401.9L608.0 395.0L593.0 388.1Z" fill="#1d4ed8"/>
+</svg>
