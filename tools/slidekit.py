@@ -186,3 +186,85 @@ def two_col(y, left, right, height=300):
 def section(y, label, x=60):
     """본문 구역 제목 (작은 회색 라벨)."""
     return [text(x, y, label, 13, FAINT, '700', spacing='0.08em')]
+
+
+# ── VS Code 창 목업 ─────────────────────────────────────────────
+# 1회차 실습 슬라이드들이 쓰는 그 창이다. 직접 그리지 말고 이 함수를 쓴다.
+
+def vscode(title='에이전트1 — Visual Studio Code', tree=None, tab=None,
+           editor=None, term_label='TERMINAL', term=None, panel_right=True):
+    """VS Code 창 한 벌.
+
+    tree   : [(깊이, 이름, 종류, 강조)]  종류 = 'folder' | 'file'
+             깊이 0 = 루트. 강조 True 면 파란 선택 막대가 깔린다.
+    tab    : 편집기 탭에 뜰 파일 이름 (None 이면 편집기 영역이 빈다)
+    editor : 편집기 본문 [(줄번호, 텍스트, 색)]
+    term   : 터미널 본문 [(텍스트, 색, 크기)] — 색·크기는 생략 가능
+    """
+    o = [rect(60, 175, 1160, 472, '#1e1e1e', rx=10, stroke='#333333'),
+         '  <path d="M60 185a10 10 0 0 1 10-10h1140a10 10 0 0 1 10 10v22H60z" fill="#2d2d2d"/>',
+         '  <circle cx="82" cy="191" r="5.5" fill="#ef4444"/>',
+         '  <circle cx="100" cy="191" r="5.5" fill="#f59e0b"/>',
+         '  <circle cx="118" cy="191" r="5.5" fill="#22c55e"/>',
+         text(640, 195, title, 12, '#cccccc', '500', anchor='middle')]
+    if panel_right:
+        o.append(rect(1086, 181, 118, 20, '#383838', rx=4, stroke='#484848', sw=1))
+        o.append(text(1145, 195, '⊞ Panel: Right', 10.5, '#38bdf8', '600', anchor='middle'))
+    # 액티비티 바
+    o += [rect(60, 207, 46, 415, '#252526'),
+          '  <line x1="106" y1="207" x2="106" y2="622" stroke="#2b2b2b" stroke-width="1"/>',
+          rect(60, 217, 2.5, 28, '#007acc'),
+          '  <path d="M76 223h12v15H76z" fill="none" stroke="#ffffff" stroke-width="1.6"/>',
+          '  <path d="M79 220h12v15H79z" fill="none" stroke="#ffffff" stroke-width="1.6"/>',
+          '  <circle cx="82" cy="265" r="5.5" fill="none" stroke="#858585" stroke-width="1.6"/>',
+          '  <line x1="86" y1="269" x2="91" y2="274" stroke="#858585" stroke-width="1.8" stroke-linecap="round"/>']
+    # 탐색기
+    o += [rect(106, 207, 224, 415, '#1e1e1e'),
+          '  <line x1="330" y1="207" x2="330" y2="622" stroke="#2b2b2b" stroke-width="1"/>',
+          text(124, 229, 'EXPLORER', 11, '#999999', '700', spacing='0.6')]
+    y = 253
+    for depth, name, kind, hot in (tree or []):
+        x = 124 + depth * 14
+        if hot:
+            o.append(rect(112, y - 15, 208, 22, '#094771', rx=3))
+        if kind == 'folder':
+            o.append(f'  <path d="M{x+4} {y-9}l3 3-3 3" fill="none" stroke="#cccccc" stroke-width="1.3"/>')
+            o.append(f'  <path d="M{x+14} {y-12}h6l2 2h5v7h-13z" fill="#dcb67a"/>')
+        else:
+            o.append(f'  <path d="M{x+14} {y-11}h7l2 2v7h-9z" fill="#38bdf8" opacity="0.85"/>')
+        o.append(text(x + 32, y, name, 11.5, '#ffffff' if hot else '#e5e7eb',
+                      '700' if kind == 'folder' or hot else '400'))
+        y += 25
+    # 편집기
+    o += [rect(330, 207, 410, 415, '#1e1e1e'),
+          '  <line x1="740" y1="207" x2="740" y2="622" stroke="#2b2b2b" stroke-width="1"/>',
+          rect(330, 207, 410, 31, '#252526')]
+    if tab:
+        o += [rect(330, 207, 160, 31, '#1e1e1e'), rect(330, 207, 160, 2, '#007acc'),
+              '  <path d="M344 219h7l2 2v7h-9z" fill="#38bdf8" opacity="0.9"/>',
+              text(359, 226, tab, 11.5, '#ffffff')]
+    o.append('  <line x1="330" y1="238" x2="740" y2="238" stroke="#2b2b2b" stroke-width="1"/>')
+    yy = 265
+    for n, s, col in (editor or []):
+        o.append(text(345, yy, n, 12, '#6e7681', mono=True))
+        o.append(text(368, yy, s, 12, col or '#e6edf3', mono=True))
+        yy += 26
+    # 터미널
+    o += [rect(740, 207, 480, 415, '#181818'), rect(740, 207, 480, 31, '#252526'),
+          '  <line x1="740" y1="238" x2="1220" y2="238" stroke="#2b2b2b" stroke-width="1"/>',
+          text(758, 226, term_label, 11, '#ffffff', '700', spacing='0.5'),
+          rect(756, 236, 62, 2, '#007acc'),
+          text(836, 226, 'OUTPUT', 11, '#858585'),
+          text(898, 226, 'PORTS', 11, '#858585')]
+    yy = 266
+    for item in (term or []):
+        s = item[0]
+        col = item[1] if len(item) > 1 else None
+        size = item[2] if len(item) > 2 else 12
+        o.append(text(758, yy, s, size, col or '#e5e7eb', mono=True))
+        yy += 22
+    # 상태바
+    o += ['  <path d="M60 622h1160v15a10 10 0 0 1-10 10H70a10 10 0 0 1-10-10z" fill="#007acc"/>',
+          text(74, 638, '⑂ main*', 11, '#ffffff', '500'),
+          text(910, 638, 'PowerShell', 11, '#ffffff')]
+    return o
