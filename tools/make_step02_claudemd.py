@@ -6,68 +6,11 @@ from slidekit import (Slide, vscode, terminal, check_rows, box, two_col, section
                       text, rect, OK, OK_DEEP, OK_BG, OK_EDGE,
                       BAD, WARN, WARN_DEEP, WARN_BG, WARN_EDGE,
                       CYAN, BLUE, BLUE_DEEP, BLUE_BG, BLUE_EDGE,
-                      MUTED, FAINT, INK, PANEL_BG, LINE, DARK_RULE, CODE)
+                      MUTED, FAINT, INK, PANEL_BG, LINE, DARK_RULE, CODE,
+                      TINTS, flow_row, down_arrow, card)
 
 A = 'assets/basic/step02'
 B, S = 'BASIC 02', 'STEP 2'
-
-TINTS = {
-    'info':  (BLUE_BG, BLUE_EDGE, BLUE_DEEP),
-    'ok':    (OK_BG, OK_EDGE, OK_DEEP),
-    'warn':  (WARN_BG, WARN_EDGE, WARN_DEEP),
-    'plain': (PANEL_BG, LINE, '#374151'),
-}
-
-
-def flow_row(y, steps, height=120, x=60, width=1160, gap=44):
-    """가로 흐름도. steps = [(라벨, [설명줄], kind)]."""
-    n = len(steps)
-    bw = (width - gap * (n - 1)) / n
-    o = []
-    cx = x
-    for i, (label, sub, kind) in enumerate(steps):
-        bg, edge, fg = TINTS[kind]
-        o.append(rect(cx, y, bw, height, bg, rx=14, stroke=edge))
-        cy = y + (height / 2 - 10 if sub else height / 2 + 6)
-        o.append(text(cx + bw / 2, cy, label, 16.5, fg, '800', anchor='middle'))
-        if sub:
-            yy = y + height / 2 + 18
-            for ln in sub:
-                o.append(text(cx + bw / 2, yy, ln, 12.5, fg, '500', anchor='middle'))
-                yy += 19
-        if i < n - 1:
-            ax1 = cx + bw + 10
-            ax2 = cx + bw + gap - 10
-            midy = y + height / 2
-            o.append(f'  <line x1="{ax1}" y1="{midy}" x2="{ax2-9}" y2="{midy}" '
-                      f'stroke="{MUTED}" stroke-width="2.5"/>')
-            o.append(f'  <path d="M{ax2-13} {midy-7}L{ax2} {midy}L{ax2-13} {midy+7}Z" '
-                      f'fill="{MUTED}"/>')
-        cx += bw + gap
-    return o
-
-
-def down_arrow(x, y1, y2, label=None, color=BLUE_DEEP):
-    o = [f'  <line x1="{x}" y1="{y1}" x2="{x}" y2="{y2-11}" '
-         f'stroke="{color}" stroke-width="2.5"/>',
-         f'  <path d="M{x-7} {y2-15}L{x} {y2}L{x+7} {y2-15}Z" fill="{color}"/>']
-    if label:
-        o.append(text(x + 18, (y1 + y2) / 2 + 5, label, 13.5, color, '700', mono=True))
-    return o
-
-
-def card(x, y, w, h, tag, tagcol, title, lines):
-    tint = TINTS[tagcol]
-    o = [rect(x, y, w, h, '#ffffff', rx=12, stroke='#d1d5db'),
-         rect(x, y, w, 8, tint[2], rx=0),
-         text(x + 24, y + 40, tag, 12, tint[2], '700', spacing='0.06em'),
-         text(x + 24, y + 70, title, 19, INK, '800')]
-    yy = y + 102
-    for ln in lines:
-        o.append(text(x + 24, yy, ln, 13.5, '#4b5563'))
-        yy += 22
-    return o
-
 
 # ── 1. CLAUDE.md 란? ─────────────────────────────────────────────
 s = Slide(B, S, 'CLAUDE.md 란?', '에이전트에게 매번 말하지 않아도 되는 상시 지시서',

@@ -19,6 +19,8 @@
 좌표계는 1280x720 고정. 본문은 y=168 부터 y=636 까지 쓴다.
 """
 
+import math
+
 W, H = 1280, 720
 BODY_TOP, BODY_BOTTOM = 168, 636
 
@@ -267,4 +269,109 @@ def vscode(title='에이전트1 — Visual Studio Code', tree=None, tab=None,
     o += ['  <path d="M60 622h1160v15a10 10 0 0 1-10 10H70a10 10 0 0 1-10-10z" fill="#007acc"/>',
           text(74, 638, '⑂ main*', 11, '#ffffff', '500'),
           text(910, 638, 'PowerShell', 11, '#ffffff')]
+    return o
+
+
+# ── 흐름·카드 공통 블록 ──────────────────────────────────────────
+# 2회차 슬라이드들이 공유한다. 파트별 생성 스크립트에서 따로 정의하지 말 것.
+
+TINTS = {
+    'info':  (BLUE_BG, BLUE_EDGE, BLUE_DEEP),
+    'ok':    (OK_BG, OK_EDGE, OK_DEEP),
+    'warn':  (WARN_BG, WARN_EDGE, WARN_DEEP),
+    'plain': (PANEL_BG, LINE, '#374151'),
+}
+
+
+def flow_row(y, steps, height=120, x=60, width=1160, gap=44):
+    """가로 흐름도. steps = [(라벨, [설명줄], kind)]. kind 는 TINTS 키."""
+    n = len(steps)
+    bw = (width - gap * (n - 1)) / n
+    o = []
+    cx = x
+    for i, (label, sub, kind) in enumerate(steps):
+        bg, edge, fg = TINTS[kind]
+        o.append(rect(cx, y, bw, height, bg, rx=14, stroke=edge))
+        cy = y + (height / 2 - 10 if sub else height / 2 + 6)
+        o.append(text(cx + bw / 2, cy, label, 16.5, fg, '800', anchor='middle'))
+        if sub:
+            yy = y + height / 2 + 18
+            for ln in sub:
+                o.append(text(cx + bw / 2, yy, ln, 12.5, fg, '500', anchor='middle'))
+                yy += 19
+        if i < n - 1:
+            ax1 = cx + bw + 10
+            ax2 = cx + bw + gap - 10
+            midy = y + height / 2
+            o.append(f'  <line x1="{ax1}" y1="{midy}" x2="{ax2-9}" y2="{midy}" '
+                     f'stroke="{MUTED}" stroke-width="2.5"/>')
+            o.append(f'  <path d="M{ax2-13} {midy-7}L{ax2} {midy}L{ax2-13} {midy+7}Z" '
+                     f'fill="{MUTED}"/>')
+        cx += bw + gap
+    return o
+
+
+def down_arrow(x, y1, y2, label=None, color=BLUE_DEEP):
+    """세로 아래 방향 화살표. label 은 화살표 오른쪽에 붙는다."""
+    o = [f'  <line x1="{x}" y1="{y1}" x2="{x}" y2="{y2-11}" '
+         f'stroke="{color}" stroke-width="2.5"/>',
+         f'  <path d="M{x-7} {y2-15}L{x} {y2}L{x+7} {y2-15}Z" fill="{color}"/>']
+    if label:
+        o.append(text(x + 18, (y1 + y2) / 2 + 5, label, 13.5, color, '700', mono=True))
+    return o
+
+
+def card(x, y, w, h, tag, tagcol, title, lines):
+    """윗면에 색 띠가 있는 흰 카드. tagcol 은 TINTS 키."""
+    tint = TINTS[tagcol]
+    o = [rect(x, y, w, h, '#ffffff', rx=12, stroke='#d1d5db'),
+         rect(x, y, w, 8, tint[2], rx=0),
+         text(x + 24, y + 40, tag, 12, tint[2], '700', spacing='0.06em'),
+         text(x + 24, y + 70, title, 19, INK, '800')]
+    yy = y + 102
+    for ln in lines:
+        o.append(text(x + 24, yy, ln, 13.5, '#4b5563'))
+        yy += 22
+    return o
+
+
+def arrow(x1, y1, x2, y2, color=BLUE_DEEP, sw=3, dashed=False, head=15):
+    """임의 각도 화살표. 드래그 & 드롭처럼 '무엇을 어디로' 를 보여줄 때 쓴다."""
+    ang = math.atan2(y2 - y1, x2 - x1)
+    bx, by = x2 - head * math.cos(ang), y2 - head * math.sin(ang)
+    px, py = -math.sin(ang) * head * 0.46, math.cos(ang) * head * 0.46
+    dash = ' stroke-dasharray="8 6"' if dashed else ''
+    return [f'  <line x1="{x1:.1f}" y1="{y1:.1f}" x2="{bx:.1f}" y2="{by:.1f}" '
+            f'stroke="{color}" stroke-width="{sw}" stroke-linecap="round"{dash}/>',
+            f'  <path d="M{bx+px:.1f} {by+py:.1f}L{x2:.1f} {y2:.1f}'
+            f'L{bx-px:.1f} {by-py:.1f}Z" fill="{color}"/>']
+
+
+def callout(x, y, label, color=BLUE_DEEP, size=15, anchor=None):
+    """화면 위에 겹쳐 붙이는 파란 설명 꼬리표 (← 여기를 클릭 같은 것)."""
+    return [text(x, y, label, size, color, '700', anchor=anchor)]
+
+
+def prompt_bar(x, y, value, width=460, hint=None, color=CODE):
+    """Claude 입력줄. 학생이 실제로 칠 프롬프트를 보여줄 때 쓴다."""
+    o = [rect(x, y, width, 40, '#0f172a', rx=8, stroke='#334155', sw=1.5),
+         text(x + 16, y + 26, '>', 14, OK, '700', mono=True),
+         text(x + 34, y + 26, value, 13, color, mono=True)]
+    if hint:
+        o.append(text(x, y + 62, hint, 13, MUTED))
+    return o
+
+
+def rename_rows(y, rows, x=60, width=1160, gap=38, size=14):
+    """파일명 before → after 대비. rows = (전, 후, 설명 또는 None)."""
+    o = []
+    yy = y
+    for before, after, note in rows:
+        o.append(rect(x, yy - 22, width, 32, PANEL_BG, rx=6))
+        o.append(text(x + 20, yy, before, size, MUTED, mono=True))
+        o.append(text(x + 360, yy, '→', size, FAINT, '700'))
+        o.append(text(x + 396, yy, after, size, OK_DEEP, '700', mono=True))
+        if note:
+            o.append(text(x + 820, yy, note, size - 1.5, MUTED))
+        yy += gap
     return o
