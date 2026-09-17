@@ -41,11 +41,11 @@
   <text x="898" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#858585">PORTS</text>
   <text x="758" y="266" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="400" fill="#67e8f9">&gt; /login</text>
   <text x="758" y="288" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#e5e7eb"></text>
-  <text x="758" y="310" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#6b7280">  브라우저를 열어 로그인을 진행합니다...</text>
+  <text x="758" y="310" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#6b7280">브라우저를 열어 로그인을</text>
+  <text x="758" y="332" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#6b7280">진행합니다...</text>
   <path d="M60 622h1160v15a10 10 0 0 1-10 10H70a10 10 0 0 1-10-10z" fill="#007acc"/>
   <text x="74" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="500" fill="#ffffff">⑂ main*</text>
   <text x="910" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#ffffff">PowerShell</text>
-  <rect x="756" y="258" width="90" height="26" rx="6" fill="none" stroke="#4ade80" stroke-width="2"/>
-  <text x="950" y="250" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">← 맨 앞의 "/" 가 핵심 — 일반 대화와 다르게 처리됩니다</text>
+  <rect x="752" y="251" width="96" height="28" rx="6" fill="none" stroke="#4ade80" stroke-width="2"/>
   <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">슬래시( / )로 시작하면 대화가 아니라 "명령"입니다</text>
 </svg>

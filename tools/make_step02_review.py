@@ -244,7 +244,7 @@ s.add(rect(140, 220, 1000, 44, '#f3f4f6', rx=10))
 s.add(rect(140, 250, 1000, 14, '#f3f4f6'))
 s.add(text(168, 248, 'claude.ai/login', 12.5, MUTED, mono=True))
 s.add(text(640, 312, 'Google 계정으로 계속하기', 18, INK, '700', anchor='middle'))
-accounts = [('내 계정 · yangheewoo5511@gmail.com', True), ('다른 계정 사용', False)]
+accounts = [('내 계정 · you@gmail.com', True), ('다른 계정 사용', False)]
 yy = 360
 for label, hot in accounts:
     s.add(rect(240, yy, 800, 56, '#eff6ff' if hot else '#ffffff', rx=8,
@@ -268,9 +268,6 @@ s.add(vscode(
         ('  모델이 Sonnet 으로 설정되었습니다.', OK, 13),
     ],
 ))
-s.add(box(650, None, [
-    'Opus 는 더 강력하지만 느리고 비쌉니다. 실습·반복 작업에는 Sonnet 추천.',
-], kind='plain'))
 save('복습_model_sonnet.svg', s)
 
 
