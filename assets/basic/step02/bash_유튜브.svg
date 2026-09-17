@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 6</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">브라우저 열기</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">설치된 크롬을 실행해서, 유튜브까지 띄우게 시킵니다</text>
+  <text x="60" y="188" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">학생이 입력하는 프롬프트</text>
+  <rect x="60" y="210" width="1160" height="40" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="76" y="236" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#4ade80">&gt;</text>
+  <text x="94" y="236" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">크롬으로 유튜브 실행해줘</text>
+  <line x1="640" y1="262" x2="640" y2="295" stroke="#1d4ed8" stroke-width="2.5"/>
+  <path d="M633 291L640 306L647 291Z" fill="#1d4ed8"/>
+  <text x="60" y="326" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">크롬이 유튜브를 띄웁니다</text>
+  <rect x="190" y="348" width="900" height="246" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="190" y="348" width="900" height="34" rx="10" fill="#f3f4f6"/>
+  <circle cx="212" cy="365" r="5.5" fill="#ef4444"/>
+  <circle cx="230" cy="365" r="5.5" fill="#f59e0b"/>
+  <circle cx="248" cy="365" r="5.5" fill="#22c55e"/>
+  <rect x="230" y="388" width="700" height="26" rx="13" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="250" y="406" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#6b7280">https://www.youtube.com</text>
+  <rect x="230" y="436" width="620" height="150" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <circle cx="540" cy="511" r="34" fill="#f87171"/>
+  <path d="M528 496L528 526L556 511Z" fill="#ffffff"/>
+  <rect x="870" y="436" width="180" height="46" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="870" y="492" width="180" height="46" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="870" y="548" width="180" height="46" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">프로그램 실행 + 웹사이트 접속 — 두 단계가 한 번에 됩니다</text>
+</svg>

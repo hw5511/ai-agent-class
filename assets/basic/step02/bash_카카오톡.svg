@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 6</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">설치된 프로그램 실행하기</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">컴퓨터에 이미 깔려 있는 프로그램도 Claude 가 찾아서 켭니다</text>
+  <text x="60" y="188" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">학생이 입력하는 프롬프트</text>
+  <rect x="60" y="210" width="1160" height="40" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="76" y="236" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#4ade80">&gt;</text>
+  <text x="94" y="236" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">컴퓨터에 설치된 PC 카카오톡 찾아서 실행해줘</text>
+  <line x1="640" y1="262" x2="640" y2="295" stroke="#1d4ed8" stroke-width="2.5"/>
+  <path d="M633 291L640 306L647 291Z" fill="#1d4ed8"/>
+  <text x="60" y="326" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">터미널에서 일어나는 일</text>
+  <rect x="60" y="348" width="1160" height="240" rx="10" fill="#1f2937"/>
+  <text x="92" y="386" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#4ade80">● Bash(설치된 프로그램 목록에서 카카오톡 검색)</text>
+  <text x="92" y="414" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#6b7280">  └ KakaoTalk.exe 를 찾았습니다</text>
+  <line x1="92" y1="432" x2="1188" y2="432" stroke="#374151" stroke-dasharray="4 4"/>
+  <text x="92" y="462" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#4ade80">● Bash(KakaoTalk.exe 실행)</text>
+  <text x="92" y="490" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#6b7280">  └ 카카오톡이 실행되었습니다</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">파일을 만든 게 아니라 이미 있는 프로그램을 찾아서 켰습니다</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 6</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">바탕화면에 살아있습니다</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">슬라임이 바탕화면 위에 떠 있습니다 — 들었다 놓으면 중력으로 떨어집니다</text>
+  <defs><linearGradient id="slimebg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#1d4ed8"/></linearGradient></defs>
+  <rect x="60" y="196" width="1160" height="400" rx="16" fill="url(#slimebg)"/>
+  <rect x="100" y="224" width="10" height="4" fill="#c9a26a"/>
+  <rect x="96" y="228" width="40" height="26" rx="3" fill="#dcb67a"/>
+  <text x="90" y="272" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#eff6ff">문서</text>
+  <path d="M190 226h20l6 6v20h-26z" fill="#2563eb" opacity="0.85"/>
+  <text x="203" y="272" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#eff6ff">사진</text>
+  <ellipse cx="440" cy="306" rx="46" ry="42" fill="#4ade80"/>
+  <ellipse cx="424" cy="290" rx="14" ry="9" fill="#ffffff" opacity="0.35"/>
+  <circle cx="424" cy="300" r="9" fill="#ffffff"/>
+  <circle cx="426" cy="302" r="4" fill="#0a0a0a"/>
+  <circle cx="456" cy="300" r="9" fill="#ffffff"/>
+  <circle cx="458" cy="302" r="4" fill="#0a0a0a"/>
+  <path d="M428 322q12 10 24 0" fill="none" stroke="#15803d" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="440" cy="242" r="7" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="3 3"/>
+  <text x="510" y="246" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#ffffff">클릭한 채 끌어 올리면</text>
+  <text x="510" y="266" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#ffffff">슬라임이 손을 따라옵니다</text>
+  <line x1="440.0" y1="362.0" x2="440.0" y2="481.0" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6"/>
+  <path d="M433.1 481.0L440.0 496.0L446.9 481.0Z" fill="#ffffff"/>
+  <line x1="406" y1="406" x2="390" y2="402" stroke="#ffffff" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <line x1="416" y1="424" x2="400" y2="420" stroke="#ffffff" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <line x1="426" y1="442" x2="410" y2="438" stroke="#ffffff" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <ellipse cx="440" cy="566" rx="62" ry="34" fill="#4ade80"/>
+  <ellipse cx="420" cy="554" rx="18" ry="8" fill="#ffffff" opacity="0.35"/>
+  <circle cx="420" cy="562" r="8" fill="#ffffff"/>
+  <circle cx="422" cy="564" r="3.5" fill="#0a0a0a"/>
+  <circle cx="460" cy="562" r="8" fill="#ffffff"/>
+  <circle cx="462" cy="564" r="3.5" fill="#0a0a0a"/>
+  <path d="M426 578q14 8 28 0" fill="none" stroke="#15803d" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="370" cy="596" rx="10" ry="3" fill="#ffffff" opacity="0.3"/>
+  <ellipse cx="390" cy="596" rx="10" ry="3" fill="#ffffff" opacity="0.3"/>
+  <ellipse cx="490" cy="596" rx="10" ry="3" fill="#ffffff" opacity="0.3"/>
+  <ellipse cx="510" cy="596" rx="10" ry="3" fill="#ffffff" opacity="0.3"/>
+  <text x="440" y="632" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="800" fill="#ffffff">놓으면 중력으로 툭!</text>
+  <rect x="720" y="406" width="190" height="90" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="740" y="436" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="500" fill="#374151">슬라임 정보</text>
+  <line x1="720" y1="451" x2="910" y2="451" stroke="#e2e8f0"/>
+  <rect x="724" y="455" width="182" height="34" rx="6" fill="#fef2f2"/>
+  <text x="740" y="477" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#f87171">종료</text>
+  <text x="928" y="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#ffffff">← 우클릭 메뉴에서도</text>
+  <text x="928" y="498" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#ffffff">   바로 종료됩니다</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">방금 만든 프로그램이 지금 이 순간 실제로 실행되고 있습니다</text>
+</svg>

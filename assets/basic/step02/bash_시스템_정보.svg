@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 6</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">내 컴퓨터를 조사시키기</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">컴퓨터 사양과 GPU 온도까지, 시스템 정보를 조사해서 설명해달라고 합니다</text>
+  <text x="60" y="186" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">학생이 입력하는 프롬프트</text>
+  <rect x="60" y="206" width="1160" height="40" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="76" y="232" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#4ade80">&gt;</text>
+  <text x="94" y="232" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">현재 컴퓨터 사양과 현재 GPU 온도 등을 조사해서 설명해줘</text>
+  <line x1="640" y1="256" x2="640" y2="285" stroke="#1d4ed8" stroke-width="2.5"/>
+  <path d="M633 281L640 296L647 281Z" fill="#1d4ed8"/>
+  <text x="60" y="316" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">컴퓨터를 조사하고, 결과를 설명합니다</text>
+  <rect x="60" y="336" width="1160" height="280" rx="10" fill="#1f2937"/>
+  <text x="92" y="374" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#4ade80">● Bash(시스템 정보 조회)</text>
+  <text x="92" y="402" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#6b7280">  └ CPU · 메모리 · GPU 정보를 확인했습니다</text>
+  <line x1="92" y1="420" x2="1188" y2="420" stroke="#374151" stroke-dasharray="4 4"/>
+  <text x="92" y="450" font-family="'Courier New',Courier,monospace" font-size="13.5" font-weight="400" fill="#67e8f9">CPU         ○○○○○○ (모델명)</text>
+  <text x="92" y="478" font-family="'Courier New',Courier,monospace" font-size="13.5" font-weight="400" fill="#67e8f9">메모리       ○○ GB</text>
+  <text x="92" y="506" font-family="'Courier New',Courier,monospace" font-size="13.5" font-weight="400" fill="#67e8f9">GPU         ○○○○○○</text>
+  <text x="92" y="534" font-family="'Courier New',Courier,monospace" font-size="13.5" font-weight="400" fill="#67e8f9">GPU 온도     ○○ °C</text>
+  <line x1="92" y1="552" x2="1188" y2="552" stroke="#374151" stroke-dasharray="4 4"/>
+  <text x="92" y="582" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#9ca3af"># 실제 사양·온도는 컴퓨터마다 다릅니다 (위 값은 예시 형태)</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">실제 사양·온도는 컴퓨터마다 다릅니다 — 화면의 값은 예시 형태입니다</text>
+</svg>

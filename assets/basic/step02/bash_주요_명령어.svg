@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 6</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">AI 가 쓰는 명령어들</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">터미널에서 자주 보게 될 대표 명령을 정리합니다</text>
+  <text x="60" y="188" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">앞으로 터미널에서 보게 될 명령어</text>
+  <rect x="60" y="192" width="1160" height="32" rx="6" fill="#f8fafc"/>
+  <text x="84" y="214" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#0a0a0a">ls  /  dir</text>
+  <text x="420" y="214" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">목록 보기 — 지금 폴더에 뭐가 있는지</text>
+  <rect x="60" y="240" width="1160" height="32" rx="6" fill="#f8fafc"/>
+  <text x="84" y="262" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#0a0a0a">cd</text>
+  <text x="420" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">폴더 이동 — 다른 폴더로 들어가기</text>
+  <rect x="60" y="288" width="1160" height="32" rx="6" fill="#f8fafc"/>
+  <text x="84" y="310" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#0a0a0a">mkdir</text>
+  <text x="420" y="310" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">폴더 만들기</text>
+  <rect x="60" y="336" width="1160" height="32" rx="6" fill="#f8fafc"/>
+  <text x="84" y="358" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#0a0a0a">copy  /  cp</text>
+  <text x="420" y="358" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">파일 복사</text>
+  <rect x="60" y="384" width="1160" height="32" rx="6" fill="#f8fafc"/>
+  <text x="84" y="406" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#0a0a0a">move  /  mv</text>
+  <text x="420" y="406" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">이름 바꾸기 · 파일 이동</text>
+  <rect x="60" y="432" width="1160" height="32" rx="6" fill="#f8fafc"/>
+  <text x="84" y="454" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#0a0a0a">start / open,  python</text>
+  <text x="420" y="454" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">실행하기 — 프로그램이나 파일 열기</text>
+  <rect x="60" y="534" width="1160" height="54" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="88" y="564" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">외울 필요는 없습니다 — 알아두면 터미널에서 Claude 가 뭘 하는지 읽힙니다.</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">외울 필요는 없습니다 — 알아두면 Claude 가 뭘 하는지 읽힙니다</text>
+</svg>

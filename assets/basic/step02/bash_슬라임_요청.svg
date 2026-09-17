@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 6</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">바탕화면 위젯 만들기</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">이번엔 파일 하나가 아니라, 프로그램을 통째로 만들고 실행까지 시킵니다</text>
+  <text x="60" y="186" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">학생이 입력하는 프롬프트 (조금 깁니다)</text>
+  <rect x="60" y="208" width="1160" height="66" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="76" y="234" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#4ade80">&gt;</text>
+  <text x="94" y="234" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">svg 로 귀여운 슬라임 같은 캐릭터를 간단하게 디자인해서, 바탕화면에 떠서 마우스로 들었다 놓을 수 있는(중력 적용) 프로그램을 파이썬으로 만들어서 실행해줄래? 슬라임</text>
+  <text x="94" y="258" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#a5f3fc">우클릭 또는 트레이 아이콘에 "종료" 메뉴를 넣어줘</text>
+  <line x1="640" y1="286" x2="640" y2="315" stroke="#1d4ed8" stroke-width="2.5"/>
+  <path d="M633 311L640 326L647 311Z" fill="#1d4ed8"/>
+  <text x="658" y="311.0" font-family="'Courier New',Courier,monospace" font-size="13.5" font-weight="700" fill="#1d4ed8">요청 안에 담긴 다섯 가지</text>
+  <text x="60" y="346" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">이 한 줄에 담긴 요소 다섯 가지</text>
+  <rect x="60" y="368" width="216" height="170" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="60" y="368" width="216" height="8" fill="#1d4ed8"/>
+  <text x="84" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1d4ed8" letter-spacing="0.06em">①</text>
+  <text x="84" y="438" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">캐릭터 디자인</text>
+  <text x="84" y="470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">SVG 로 그린</text>
+  <text x="84" y="492" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">귀여운 슬라임 모양</text>
+  <rect x="296" y="368" width="216" height="170" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="296" y="368" width="216" height="8" fill="#1d4ed8"/>
+  <text x="320" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1d4ed8" letter-spacing="0.06em">②</text>
+  <text x="320" y="438" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">바탕화면에 표시</text>
+  <text x="320" y="470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">다른 창 위에</text>
+  <text x="320" y="492" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">항상 떠 있음</text>
+  <rect x="532" y="368" width="216" height="170" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="532" y="368" width="216" height="8" fill="#15803d"/>
+  <text x="556" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#15803d" letter-spacing="0.06em">③</text>
+  <text x="556" y="438" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">마우스로 집기</text>
+  <text x="556" y="470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">클릭한 채</text>
+  <text x="556" y="492" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">끌 수 있음</text>
+  <rect x="768" y="368" width="216" height="170" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="768" y="368" width="216" height="8" fill="#15803d"/>
+  <text x="792" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#15803d" letter-spacing="0.06em">④</text>
+  <text x="792" y="438" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">중력 적용</text>
+  <text x="792" y="470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">놓으면 아래로</text>
+  <text x="792" y="492" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">툭 떨어짐</text>
+  <rect x="1004" y="368" width="216" height="170" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <rect x="1004" y="368" width="216" height="8" fill="#92400e"/>
+  <text x="1028" y="408" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#92400e" letter-spacing="0.06em">⑤</text>
+  <text x="1028" y="438" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="19" font-weight="800" fill="#0a0a0a">종료 메뉴</text>
+  <text x="1028" y="470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">우클릭 또는</text>
+  <text x="1028" y="492" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="400" fill="#4b5563">트레이에서 종료</text>
+  <rect x="60" y="556" width="1160" height="54" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="88" y="586" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#1e40af">AI 가 요청 하나를 디자인 · 코드 작성 · 실행까지 한 번에 처리합니다.</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">요청 하나가 디자인·코딩·실행까지 전부를 담고 있습니다</text>
+</svg>
