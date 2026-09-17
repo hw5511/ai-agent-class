@@ -27,6 +27,15 @@ AI 에이전트 강의 수업자료.
 - 슬라이드 이미지 교체 시 `slides.json` 순서와 `stepNN.json` 의 `imagePath` 가 일치해야 함(어긋나면 404·순서 뒤바뀜).
 - 배포 링크: 수업자료 `…/ai-agent-class/`, 상담자료 `…/ai-agent-class/consultation/`.
 - 폐기된 일회성 스크립트는 `_archive/` 에 격리됨 — 재사용 금지. 현역 빌드는 루트 `build.py` 하나.
+- 흐름에서 뺀 슬라이드는 지우지 말고 같은 폴더의 `_archive/` 로 옮긴다
+  (예: `assets/basic/step01/_archive/`). 빌드·뷰어는 이 폴더를 보지 않는다.
+  예전 `z_archive_` 접두사 방식은 폐기됨 — 폴더로 통일.
+- 새 슬라이드를 만들 땐 `tools/slidekit.py` 를 쓴다. 프레임(배지·제목·부제·각주)과
+  자주 쓰는 블록(터미널 패널 · 결과 체크줄 · 안내 상자 · Win/Mac 2열)이 함수로 있다.
+  좌표를 다른 SVG 에서 눈으로 베끼지 말 것. 예시는 `tools/make_step01_install.py`.
+- 사이드바 목차: `stepNN.json` 의 `parts`(`title`/`from`/`to`, 1-based·양끝 포함)로
+  회차를 파트로 나눈다. 없는 회차는 하위 목차 없이 동작한다. 슬라이드를 넣거나 빼면
+  `from`/`to` 를 다시 계산해야 한다.
 
 ## 로컬 작업 에스컬레이션 (필수)
 
