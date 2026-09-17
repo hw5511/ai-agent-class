@@ -234,7 +234,8 @@ def vscode(title='에이전트1 — Visual Studio Code', tree=None, tab=None,
             o.append(f'  <path d="M{x+14} {y-12}h6l2 2h5v7h-13z" fill="#dcb67a"/>')
         else:
             o.append(f'  <path d="M{x+14} {y-11}h7l2 2v7h-9z" fill="#38bdf8" opacity="0.85"/>')
-        o.append(text(x + 32, y, name, 11.5, '#ffffff' if hot else '#e5e7eb',
+        label = _fit(name, 324 - (x + 32), 11.5)
+        o.append(text(x + 32, y, label, 11.5, '#ffffff' if hot else '#e5e7eb',
                       '700' if kind == 'folder' or hot else '400'))
         y += 25
     # 편집기
@@ -374,4 +375,40 @@ def rename_rows(y, rows, x=60, width=1160, gap=38, size=14):
         if note:
             o.append(text(x + 820, yy, note, size - 1.5, MUTED))
         yy += gap
+    return o
+
+
+def _fit(s, avail, size):
+    """폭에 안 들어가면 VS Code 처럼 말줄임(…) 한다."""
+    def w(t):
+        return sum(size * (1.0 if ord(c) > 0x2500 else 0.56) for c in t)
+    if w(s) <= avail:
+        return s
+    cut = s
+    while cut and w(cut + '…') > avail:
+        cut = cut[:-1]
+    return cut + '…'
+
+
+def drag_chip(x, y, name, color=BLUE_DEEP):
+    """드래그 중인 파일·폴더 이름표. 끌려가는 중임을 보여줄 때 쓴다."""
+    w = 26 + sum(12 * (1.0 if ord(c) > 0x2500 else 0.56) for c in name) + 18
+    return [rect(x, y, w, 30, '#ffffff', rx=6, stroke=color, sw=1.5),
+            f'  <path d="M{x+14} {y+9}h7l2 2v9h-9z" fill="{color}" opacity="0.85"/>',
+            text(x + 32, y + 20, name, 12, color, '600', mono=True)]
+
+
+def notification(x, y, lines, button=None, width=340):
+    """VS Code 우하단 알림 토스트. 확장 설치 안내 같은 팝업에 쓴다."""
+    h = 26 + 22 * len(lines) + (40 if button else 12)
+    o = [rect(x, y, width, h, '#252526', rx=6, stroke='#454545', sw=1)]
+    yy = y + 30
+    for i, ln in enumerate(lines):
+        o.append(text(x + 18, yy, ln, 12, '#e5e7eb' if i == 0 else '#b0b0b0'))
+        yy += 22
+    if button:
+        bw = 24 + sum(12 * (1.0 if ord(c) > 0x2500 else 0.56) for c in button)
+        o += [rect(x + width - bw - 18, yy - 2, bw, 26, '#0e639c', rx=4),
+              text(x + width - bw / 2 - 18, yy + 15, button, 12, '#ffffff',
+                   '600', anchor='middle')]
     return o

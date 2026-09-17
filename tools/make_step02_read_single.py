@@ -29,13 +29,13 @@ def save(name, s):
 TREE_FILES = [
     (0, 'practice_files', 'folder', False),
     (1, 'doc_230928_v3.txt', 'file', False),
+    (1, 'temp_1104.txt', 'file', False),
+    (1, 'report_final_v2.pdf', 'file', False),
+    (1, 'KakaoTalk_20260312_175159585.jpg', 'file', False),
+    (1, 'KakaoTalk_20260312_175159586.jpg', 'file', False),
+    (1, 'KakaoTalk_20260312_175159587.jpg', 'file', False),
     (1, 'IMG_20260309_134502.jpg', 'file', False),
-    (1, 'IMG_20260309_134510.jpg', 'file', False),
-    (1, 'scan_0091.pdf', 'file', False),
-    (1, 'notes_final_v2.txt', 'file', False),
-    (1, 'file(3).txt', 'file', False),
-    (1, 'untitled_1.txt', 'file', False),
-    (1, 'DSC_04421.jpg', 'file', False),
+    (1, 'IMG_20260311_092341.jpg', 'file', False),
 ]
 
 
