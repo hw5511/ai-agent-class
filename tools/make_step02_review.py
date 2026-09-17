@@ -8,7 +8,9 @@ import sys
 sys.path.insert(0, 'tools')
 from slidekit import (
     Slide, vscode, terminal, check_rows, box, two_col, section, text, rect,
-    OK, BAD, WARN, CYAN, MUTED, INK, FAINT, BLUE_DEEP,
+    flow_row,
+    OK, OK_BG, OK_EDGE, OK_DEEP, BAD, WARN, CYAN, CODE, DARK,
+    MUTED, INK, FAINT, LINE, BLUE, BLUE_BG, BLUE_EDGE, BLUE_DEEP,
 )
 
 BADGE = 'BASIC 02'
@@ -21,21 +23,106 @@ def save(name, s):
 
 
 # 1. 복습_지난_시간 ----------------------------------------------------
+# 회차를 여는 장이다. 체크 목록만 늘어놓지 말고 1회차에서 지나온 다섯 장면을
+# 작은 그림으로 되살려 "아 맞아 이거 했지" 가 한눈에 오게 한다.
+
+CARD_W, CARD_GAP = 216, 20
+CARD_Y, CARD_H = 200, 244
+ART_Y, LABEL_Y = 226, 352
+
+
+def art_vscode(ax, ay):
+    """VS Code 창 — 설치를 마친 장면."""
+    return [rect(ax + 8, ay, 160, 96, '#1e1e1e', rx=6, stroke='#333333', sw=1),
+            rect(ax + 8, ay, 160, 18, '#2d2d2d', rx=6),
+            rect(ax + 8, ay + 12, 160, 6, '#2d2d2d'),
+            f'  <circle cx="{ax+20}" cy="{ay+9}" r="3" fill="#ef4444"/>',
+            f'  <circle cx="{ax+30}" cy="{ay+9}" r="3" fill="#f59e0b"/>',
+            f'  <circle cx="{ax+40}" cy="{ay+9}" r="3" fill="#22c55e"/>',
+            rect(ax + 8, ay + 18, 32, 78, '#252526'),
+            rect(ax + 52, ay + 32, 76, 5, '#3f3f46', rx=2),
+            rect(ax + 52, ay + 46, 100, 5, '#3f3f46', rx=2),
+            rect(ax + 52, ay + 60, 62, 5, '#3f3f46', rx=2),
+            rect(ax + 52, ay + 74, 88, 5, '#3f3f46', rx=2)]
+
+
+def art_folder(ax, ay):
+    """작업 폴더 — 폴더를 만들어 열었던 장면."""
+    return [rect(ax + 34, ay + 16, 44, 12, '#c9a26a', rx=3),
+            rect(ax + 30, ay + 24, 116, 58, '#dcb67a', rx=6),
+            text(ax + 88, ay + 60, 'agent1', 14, '#7c5c2e', '800',
+                 anchor='middle', mono=True)]
+
+
+def art_terminal(ax, ay):
+    """터미널을 오른쪽 패널로 — 오늘 내내 쓰는 배치."""
+    return [rect(ax + 8, ay, 160, 96, '#1e1e1e', rx=6, stroke='#333333', sw=1),
+            rect(ax + 8, ay, 96, 96, '#252526', rx=6),
+            rect(ax + 96, ay, 8, 96, '#252526'),
+            rect(ax + 104, ay, 64, 96, '#181818'),
+            rect(ax + 104, ay, 2, 96, '#007acc'),
+            rect(ax + 22, ay + 24, 60, 5, '#3f3f46', rx=2),
+            rect(ax + 22, ay + 38, 44, 5, '#3f3f46', rx=2),
+            rect(ax + 22, ay + 52, 66, 5, '#3f3f46', rx=2),
+            text(ax + 114, ay + 30, '>', 13, OK, '700', mono=True),
+            rect(ax + 126, ay + 22, 26, 9, '#3f3f46', rx=2),
+            rect(ax + 114, ay + 40, 40, 6, '#3f3f46', rx=2)]
+
+
+def art_cli(ax, ay):
+    """CLI 설치 — 명령 한 줄로 claude 가 손에 들어온 장면."""
+    return [rect(ax + 8, ay + 14, 160, 68, DARK, rx=6),
+            text(ax + 22, ay + 40, '> claude', 12, CODE, mono=True),
+            text(ax + 22, ay + 62, 'v1.0 준비됨', 11.5, OK, mono=True)]
+
+
+def art_login(ax, ay):
+    """로그인 — 브라우저에서 계정을 연결한 장면."""
+    return [rect(ax + 8, ay, 160, 96, '#ffffff', rx=6, stroke='#d1d5db', sw=1),
+            rect(ax + 8, ay, 160, 16, '#f3f4f6', rx=6),
+            rect(ax + 8, ay + 10, 160, 6, '#f3f4f6'),
+            rect(ax + 44, ay + 4, 96, 8, '#ffffff', rx=4, stroke='#e2e8f0', sw=1),
+            rect(ax + 24, ay + 30, 128, 26, BLUE_BG, rx=6, stroke=BLUE_EDGE, sw=1),
+            f'  <circle cx="{ax+42}" cy="{ay+43}" r="8" fill="{BLUE}"/>',
+            text(ax + 60, ay + 47, '내 계정', 11.5, BLUE_DEEP, '700'),
+            rect(ax + 24, ay + 64, 128, 22, OK_BG, rx=6, stroke=OK_EDGE, sw=1),
+            text(ax + 40, ay + 79, '연결 완료', 11, OK_DEEP, '700')]
+
+
+def milestone(i, num, label, note, art):
+    """1회차 이정표 카드 한 장."""
+    x = 60 + i * (CARD_W + CARD_GAP)
+    o = [rect(x, CARD_Y, CARD_W, CARD_H, '#ffffff', rx=14, stroke=LINE),
+         rect(x, CARD_Y, CARD_W, 6, OK)]
+    o += art(x + 20, ART_Y)
+    o += [rect(x + 20, LABEL_Y - 16, 24, 24, OK_BG, rx=12, stroke=OK_EDGE, sw=1),
+          text(x + 32, LABEL_Y + 1, num, 12, OK_DEEP, '800', anchor='middle'),
+          text(x + 54, LABEL_Y + 1, label, 14.5, INK, '800')]
+    yy = LABEL_Y + 30
+    for ln in note:
+        o.append(text(x + 20, yy, ln, 12, MUTED))
+        yy += 19
+    return o
+
+
 s = Slide(BADGE, STEP, '지난 시간에 한 것',
-          '1회차에서 여기까지 왔습니다 — 오늘은 이걸 다시 세팅합니다',
-          '기억이 안 나도 괜찮습니다, 오늘 처음부터 다시 해봅니다')
-s.add(section(190, '1회차 체크리스트'))
-s.add(check_rows(232, [
-    ('[v]', 'VS Code', '설치 완료', OK),
-    ('[v]', '실습 폴더', '만들고 열었음', OK),
-    ('[v]', '터미널', 'Ctrl + J 로 열기', OK),
-    ('[v]', 'CLI 설치', 'claude 명령 사용 가능', OK),
-    ('[v]', '로그인', '브라우저로 계정 연결', OK),
-]))
-s.add(box(478, None, [
-    '오늘은 새 폴더 agent1 으로 이 과정을 처음부터 한 번 더 따라갑니다.',
-    '이미 익숙해졌다면 빠르게, 처음이라면 천천히 따라오면 됩니다.',
-], kind='plain'))
+          '1회차에서 여기까지 왔습니다 — 오늘은 같은 길을 한 번 더 걷습니다',
+          '기억이 안 나도 괜찮습니다 — 지금부터 하나씩 다시 해봅니다')
+s.add(section(186, '1회차에서 마친 것'))
+for args in (
+        (0, '1', 'VS Code',  ['편집기를 설치하고', '한글 환경으로 맞췄습니다'],   art_vscode),
+        (1, '2', '작업 폴더', ['폴더를 만들고', 'VS Code 로 열었습니다'],        art_folder),
+        (2, '3', '터미널',   ['Ctrl + J 로 열어', '오른쪽에 붙였습니다'],        art_terminal),
+        (3, '4', 'CLI 설치', ['명령 한 줄로 설치하고', 'PATH 를 잡았습니다'],    art_cli),
+        (4, '5', '로그인',   ['브라우저에서', '계정을 연결했습니다'],            art_login),
+):
+    s.add(milestone(*args))
+s.add(section(486, '오늘'))
+s.add(flow_row(504, [
+    ('agent1 폴더 새로', ['바탕화면 또는 다운로드에 새 폴더'], 'info'),
+    ('같은 세팅 반복', ['터미널 · 설치 · 로그인 · /model · /ide'], 'info'),
+    ('그 위에서 실습', ['CLAUDE.md · Read · Write · Edit · Bash'], 'ok'),
+], height=110))
 save('복습_지난_시간.svg', s)
 
 
