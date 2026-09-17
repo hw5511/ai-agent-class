@@ -12,7 +12,64 @@
     "Claude Code 로그인 및 실습",
     "3대 에이전트 실습 결과 비교"
   ],
-  "practice": "Antigravity 만 손으로 설치하고, 나머지 두 CLI 는 agy 에게 설치시킨다. 폴더를 옮기지 않고 '에이전트1' 에서 세 에이전트에 같은 4단계 실습(자기소개 → 모델 이름 txt 생성 → introduce 폴더 → 파일 이동)을 시켜 결과를 비교한다.",
+  "practice": "Antigravity 를 설치해 PATH 를 잡고, 이어서 Claude Code 와 Codex 를 설치한 뒤 같은 명령으로 셋을 한 번에 잡는다. '에이전트1' 폴더에서 세 에이전트에 같은 4단계 실습을 시킨다.",
+  "parts": [
+    {
+      "title": "AI 에이전트 이해",
+      "from": 1,
+      "to": 8
+    },
+    {
+      "title": "개발 환경 준비",
+      "from": 9,
+      "to": 16
+    },
+    {
+      "title": "Antigravity 설치와 PATH",
+      "from": 17,
+      "to": 20
+    },
+    {
+      "title": "Antigravity 로그인",
+      "from": 21,
+      "to": 24
+    },
+    {
+      "title": "Antigravity 초기 설정",
+      "from": 25,
+      "to": 29
+    },
+    {
+      "title": "Antigravity 실습 4단계",
+      "from": 30,
+      "to": 35
+    },
+    {
+      "title": "Claude Code · Codex 설치",
+      "from": 36,
+      "to": 39
+    },
+    {
+      "title": "Codex 시작과 실습",
+      "from": 40,
+      "to": 49
+    },
+    {
+      "title": "Claude Code 로그인과 세팅",
+      "from": 50,
+      "to": 60
+    },
+    {
+      "title": "Claude Code 실습",
+      "from": 61,
+      "to": 68
+    },
+    {
+      "title": "마무리",
+      "from": 69,
+      "to": 70
+    }
+  ],
   "slides": [
     {
       "imagePath": "assets/basic/step01/AI_에이전트란.svg",
@@ -295,44 +352,48 @@
     },
     {
       "imagePath": "assets/basic/step01/agy_PATH_등록.svg",
-      "goal": "자동 등록이 안 됐을 때, Antigravity 설치 폴더를 사용자 PATH에 직접 등록한다.",
+      "goal": "설치한 자리를 자동으로 찾아 PATH 에 등록한다. 지금 이 터미널에 바로 반영된다.",
       "topics": [
-        "예비책 — 보통은 설치기가 알아서 등록한다",
-        "설치 위치: Windows %LOCALAPPDATA%\\agy\\bin · macOS ~/.agy/bin",
-        "사용자 환경 변수 PATH 에 중복 없이 영구 등록",
-        "등록한 '다음에' VS Code 를 완전히 껐다 켠다"
+        "경로를 외우지 않는다 — 스크립트가 설치 위치를 찾아낸다",
+        "지금 이 터미널에 즉시 반영 + 사용자 환경 변수에 영구 등록",
+        "버전을 실제로 찍어봐서 진짜 실행되는지까지 확인한다",
+        "지금은 agy 하나만 초록이면 된다 — 나머지는 곧 설치한다"
       ],
-      "practice": null,
+      "practice": "명령을 붙여넣고 agy 가 [v] 로 바뀌는지 확인한다.",
       "action": {
-        "label": "PATH 직접 등록 (안 될 때만)",
+        "label": "PATH 한 번에 잡기",
         "items": [
           {
-            "desc": "Windows",
-            "copy": "$agyBin = \"$env:LOCALAPPDATA\\agy\\bin\"\n$userPath = [Environment]::GetEnvironmentVariable(\"Path\", \"User\")\nif (($userPath -split \";\") -notcontains $agyBin) {\n  $newUserPath = (($userPath -split \";\") + $agyBin |\n    Where-Object { $_ } |\n    Select-Object -Unique) -join \";\"\n  [Environment]::SetEnvironmentVariable(\"Path\", $newUserPath, \"User\")\n}"
+            "desc": "Windows — PowerShell 에 통째로 붙여넣기",
+            "copy": "$names = 'agy','codex','claude'\n$guess = @{\n  agy    = @(\"$env:LOCALAPPDATA\\agy\\bin\")\n  codex  = @(\"$env:LOCALAPPDATA\\Programs\\OpenAI\\Codex\\bin\", \"$env:USERPROFILE\\.codex\\bin\")\n  claude = @(\"$env:USERPROFILE\\.local\\bin\")\n}\n$roots = @(@($env:LOCALAPPDATA, $env:APPDATA, $env:USERPROFILE) | Where-Object { $_ -and (Test-Path $_) } | Select-Object -Unique)\n$where = @{}\nforeach ($n in $names) {\n  $dir = $null\n  $pre = Get-Command $n -ErrorAction SilentlyContinue\n  if ($pre -and $pre.Source) { $dir = Split-Path $pre.Source -Parent }\n  if (-not $dir) { foreach ($g in $guess[$n]) { if (Test-Path (Join-Path $g \"$n.exe\")) { $dir = $g; break } } }\n  if (-not $dir) {\n    foreach ($r in $roots) {\n      $hit = Get-ChildItem -Path $r -Filter \"$n.exe\" -Recurse -File -Depth 5 -ErrorAction SilentlyContinue | Select-Object -First 1\n      if ($hit) { $dir = $hit.DirectoryName; break }\n    }\n  }\n  if ($dir) { $where[$n] = $dir }\n}\n$found = @($where.Values | Select-Object -Unique)\nif ($found.Count -gt 0) {\n  $have = @([Environment]::GetEnvironmentVariable('Path','User') -split ';' | Where-Object { $_ })\n  $new  = @($found | Where-Object { $have -notcontains $_ })\n  if ($new.Count -gt 0) { [Environment]::SetEnvironmentVariable('Path', (($have + $new) -join ';'), 'User') }\n  $cur = @($env:Path -split ';' | Where-Object { $_ })\n  $now = @($found | Where-Object { $cur -notcontains $_ })\n  if ($now.Count -gt 0) { $env:Path = (($cur + $now) -join ';') }\n}\nWrite-Host \"\"\nWrite-Host \"  ────────────────────────────────────────────────────────────\"\n$ok = 0\nforeach ($n in $names) {\n  if (-not $where.ContainsKey($n)) {\n    Write-Host \"   [ ] \" -NoNewline -ForegroundColor Red\n    Write-Host (\"{0,-8}\" -f $n) -NoNewline -ForegroundColor Red\n    Write-Host \"아직 설치되지 않았습니다\" -ForegroundColor Red\n    continue\n  }\n  $exe = Join-Path $where[$n] \"$n.exe\"\n  $ver = $null\n  try { $ver = (& $exe --version 2>&1 | Select-Object -First 1) } catch { $ver = $null }\n  if ($ver) { $ver = ($ver -replace '\\s+', ' ').Trim() }\n  $byName = [bool](Get-Command $n -ErrorAction SilentlyContinue)\n  if ($ver -and $byName) {\n    Write-Host \"   [v] \" -NoNewline -ForegroundColor Green\n    Write-Host (\"{0,-8}\" -f $n) -NoNewline -ForegroundColor Green\n    Write-Host (\"사용 가능!  \" + $ver) -ForegroundColor Green\n    $ok++\n  } elseif ($ver) {\n    Write-Host \"   [!] \" -NoNewline -ForegroundColor Yellow\n    Write-Host (\"{0,-8}\" -f $n) -NoNewline -ForegroundColor Yellow\n    Write-Host ($ver + \"  — 설치는 됐지만 이 터미널이 아직 이름으로 못 찾습니다\") -ForegroundColor Yellow\n  } else {\n    Write-Host \"   [!] \" -NoNewline -ForegroundColor Yellow\n    Write-Host (\"{0,-8}\" -f $n) -NoNewline -ForegroundColor Yellow\n    Write-Host \"파일은 있는데 실행이 안 됩니다 — 설치를 다시 하세요\" -ForegroundColor Yellow\n  }\n}\nWrite-Host \"  ────────────────────────────────────────────────────────────\"\nif ($ok -eq 3) {\n  Write-Host \"   세 개 다 버전이 찍혔습니다. VS Code 껐다 켤 필요 없습니다.\" -ForegroundColor Cyan\n} else {\n  Write-Host (\"   \" + $ok + \"/3 확인됨. [!] 는 새 터미널을 열면 대개 해결됩니다.\") -ForegroundColor Yellow\n}\nWrite-Host \"\""
           },
           {
-            "desc": "macOS",
-            "copy": "echo 'export PATH=\"$HOME/.agy/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc"
+            "desc": "macOS — 터미널에 통째로 붙여넣기",
+            "copy": "rc=\"$HOME/.zshrc\"; [ -n \"$BASH_VERSION\" ] && rc=\"$HOME/.bash_profile\"\nAGY=\"\"; CODEX=\"\"; CLAUDE=\"\"\nfor n in agy codex claude; do\n  d=\"\"\n  p=$(command -v \"$n\" 2>/dev/null) && d=$(dirname \"$p\")\n  [ -z \"$d\" ] && [ -x \"$HOME/.local/bin/$n\" ] && d=\"$HOME/.local/bin\"\n  if [ -z \"$d\" ]; then\n    f=$(find \"$HOME\" -maxdepth 6 -type f -name \"$n\" -perm -u+x 2>/dev/null | head -1)\n    [ -n \"$f\" ] && d=$(dirname \"$f\")\n  fi\n  [ -z \"$d\" ] && continue\n  case \"$n\" in agy) AGY=\"$d\";; codex) CODEX=\"$d\";; claude) CLAUDE=\"$d\";; esac\n  case \":$PATH:\" in *\":$d:\"*) ;; *) export PATH=\"$d:$PATH\";; esac\n  grep -qsF \"export PATH=\\\"$d:\\$PATH\\\"\" \"$rc\" || printf 'export PATH=\"%s:$PATH\"\\n' \"$d\" >> \"$rc\"\ndone\nhash -r 2>/dev/null || true\necho \"\"\necho \"  ────────────────────────────────────────────────────────────\"\nok=0\nfor n in agy codex claude; do\n  case \"$n\" in agy) d=\"$AGY\";; codex) d=\"$CODEX\";; claude) d=\"$CLAUDE\";; esac\n  if [ -z \"$d\" ]; then\n    printf \"   \\033[31m[ ] %-8s아직 설치되지 않았습니다\\033[0m\\n\" \"$n\"; continue\n  fi\n  v=$(\"$d/$n\" --version 2>&1 | head -1 | tr -s ' ')\n  if [ -z \"$v\" ]; then\n    printf \"   \\033[33m[!] %-8s파일은 있는데 실행이 안 됩니다 — 설치를 다시 하세요\\033[0m\\n\" \"$n\"\n  elif command -v \"$n\" >/dev/null 2>&1; then\n    printf \"   \\033[32m[v] %-8s사용 가능!  %s\\033[0m\\n\" \"$n\" \"$v\"; ok=$((ok+1))\n  else\n    printf \"   \\033[33m[!] %-8s%s  — 이 터미널이 아직 이름으로 못 찾습니다\\033[0m\\n\" \"$n\" \"$v\"\n  fi\ndone\necho \"  ────────────────────────────────────────────────────────────\"\nif [ \"$ok\" -eq 3 ]; then\n  printf \"   \\033[36m세 개 다 버전이 찍혔습니다. VS Code 껐다 켤 필요 없습니다.\\033[0m\\n\"\nelse\n  printf \"   \\033[33m%s/3 확인됨. [!] 는 새 터미널을 열면 대개 해결됩니다.\\033[0m\\n\" \"$ok\"\nfi\necho \"\""
           }
         ]
       }
     },
     {
       "imagePath": "assets/basic/step01/agy_PATH_반영_및_실행.svg",
-      "goal": "VS Code를 완전히 껐다가 다시 켜고, 권한 확인 없이 agy를 실행한다.",
+      "goal": "권한 확인 없이 agy 를 실행한다.",
       "topics": [
-        "File > Exit 로 VS Code 완전 종료 (창 ✕ 닫기·Reload Window 는 PATH 를 다시 안 읽는다)",
-        "VS Code 다시 실행 → 같은 폴더 열기 → Terminal > New Terminal",
-        "agy --version 확인 후 agy --dangerously-skip-permissions 로 실행",
-        "확인 없이 파일·명령을 실행하는 모드 — 이어서 설치까지 맡기기 위해 쓴다"
+        "PATH 가 이미 잡혔으므로 VS Code 를 껐다 켤 필요가 없다",
+        "agy --version 으로 한 번 더 확인",
+        "agy --dangerously-skip-permissions 로 실행",
+        "확인 없이 파일·명령을 실행하는 모드다"
       ],
       "practice": null,
       "action": {
-        "label": "재실행 후 확인·실행",
+        "label": "확인하고 실행",
         "items": [
           {
-            "desc": "Windows / macOS (새 터미널)",
-            "copy": "agy --version\nagy --dangerously-skip-permissions"
+            "desc": "버전 확인",
+            "copy": "agy --version"
+          },
+          {
+            "desc": "실행",
+            "copy": "agy --dangerously-skip-permissions"
           }
         ]
       }
@@ -537,133 +598,82 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/agy_다른_CLI_설치.svg",
-      "goal": "agy 에게 Codex CLI 와 Claude Code 설치, PATH 영구 등록까지 맡긴다.",
+      "imagePath": "assets/basic/step01/agy_Ctrl_C_종료.svg",
+      "goal": "Ctrl + C 로 Antigravity 를 종료하고 일반 터미널로 돌아온다.",
       "topics": [
-        "설치 명령을 사람이 외우지 않는다 — 에이전트가 실행한다",
-        "두 CLI 설치 + 사용자 환경 변수 PATH 영구 등록을 한 번에 요청",
-        "권한 확인 없이 실행했기 때문에 멈추지 않고 끝까지 진행된다",
-        "무엇을 어디에 설치했는지 보고까지 받는다"
+        "Ctrl + C 로 AI CLI 를 빠져나온다",
+        "프롬프트가 PS …&gt; 로 돌아왔는지 확인",
+        "여기서부터는 일반 터미널 명령을 친다 — 다음은 나머지 CLI 설치"
       ],
-      "practice": "프롬프트를 붙여넣고, agy 가 설치와 PATH 등록을 마칠 때까지 기다린다.",
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step01/claude_설치.svg",
+      "goal": "공식 설치 스크립트로 Claude Code 를 설치한다.",
+      "topics": [
+        "설치 명령 한 줄",
+        "설치가 끝나도 아직 claude 라고 치면 안 된다",
+        "이 터미널은 아직 새 경로를 모른다 — PATH 는 나중에 한 번에 잡는다"
+      ],
+      "practice": null,
       "action": {
-        "label": "프롬프트 복사",
-        "copy": "Codex CLI 와 Claude Code 를 내 컴퓨터에 설치해줘.\nWindows 면 아래 두 명령을 그대로 실행해줘. 프로필의 StrictMode 때문에 실패하니 반드시 -NoProfile 을 붙여서 실행해.\n  powershell -NoProfile -ExecutionPolicy ByPass -c \"irm https://chatgpt.com/codex/install.ps1 | iex\"\n  powershell -NoProfile -ExecutionPolicy ByPass -c \"irm https://claude.ai/install.ps1 | iex\"\nmacOS 면 아래 두 명령을 실행해줘.\n  curl -fsSL https://chatgpt.com/codex/install.sh | sh\n  curl -fsSL https://claude.ai/install.sh | bash\nClaude Code 설치기는 PATH 를 등록하지 않으니, 두 CLI 의 실행 경로를 사용자 환경 변수 PATH 에 직접 영구 등록해줘. 이미 등록돼 있으면 중복으로 넣지 마.\n마지막으로 각각 어디에 설치됐고 PATH 에 무엇을 추가했는지 알려줘."
+        "label": "설치 명령어",
+        "items": [
+          {
+            "desc": "Windows",
+            "copy": "irm https://claude.ai/install.ps1 | iex"
+          },
+          {
+            "desc": "macOS",
+            "copy": "curl -fsSL https://claude.ai/install.sh | bash"
+          }
+        ]
       }
     },
     {
-      "imagePath": "assets/basic/step01/agy_Ctrl_C_종료.svg",
-      "goal": "Ctrl + C로 Antigravity CLI 입력을 종료한다.",
+      "imagePath": "assets/basic/step01/codex_설치.svg",
+      "goal": "공식 설치 스크립트로 Codex CLI 를 설치한다.",
       "topics": [
-        "Ctrl + C 단축키로 AI CLI 종료",
-        "작업 취소 또는 CLI 나가기"
-      ],
-      "practice": null,
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step01/agy_일반_터미널_복귀.svg",
-      "goal": "일반 터미널 프롬프트로 복귀했음을 확인한다.",
-      "topics": [
-        "PowerShell 또는 zsh 프롬프트 복귀 확인",
-        "AI CLI와 일반 터미널 상태의 전환 감각 습득"
-      ],
-      "practice": null,
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step01/설치_확인.svg",
-      "goal": "VS Code를 완전히 껐다 켠 뒤, agy 가 설치한 두 CLI 가 실행되는지 확인한다.",
-      "topics": [
-        "File > Exit 로 VS Code 완전 종료 후 다시 실행 (창 ✕ 닫기·Reload Window 는 PATH 를 다시 안 읽는다)",
-        "codex --version · claude --version 으로 설치 확인",
-        "macOS 는 새 터미널만 열면 된다"
+        "-NoProfile 을 빼지 않는다",
+        "프로필의 StrictMode 가 켜져 있으면 설치가 중간에 멈춘다",
+        "이것까지 끝나면 PATH 를 한 번에 정리한다"
       ],
       "practice": null,
       "action": {
-        "label": "설치 확인",
+        "label": "설치 명령어",
         "items": [
           {
-            "desc": "Windows / macOS (새 터미널)",
-            "copy": "codex --version\nclaude --version"
+            "desc": "Windows",
+            "copy": "powershell -NoProfile -ExecutionPolicy ByPass -c \"irm https://chatgpt.com/codex/install.ps1 | iex\""
+          },
+          {
+            "desc": "macOS",
+            "copy": "curl -fsSL https://chatgpt.com/codex/install.sh | sh"
           }
         ]
       }
     },
     {
       "imagePath": "assets/basic/step01/PATH_자동_등록.svg",
-      "goal": "경로를 외우지 않고, 세 CLI 를 직접 찾아 사용자 PATH 에 등록한다.",
+      "goal": "조금 전과 같은 명령으로 세 CLI 를 한 번에 잡는다.",
       "topics": [
-        "예비책 — 버전이 안 찍힐 때 먼저 시도하는 한 방",
-        "이미 PATH 에 있는 것은 건너뛴다",
-        "기본 설치 위치를 먼저 보고, 없으면 홈 폴더를 뒤져서 찾는다",
-        "여러 번 실행해도 같은 경로가 중복 등록되지 않는다",
-        "마지막 줄이 DONE 이면 더 할 일이 없다는 뜻이다",
-        "실행한 '다음에' VS Code 를 완전히 껐다 켠다"
+        "똑같은 명령을 한 번 더 — 이번에는 셋 다 초록이어야 한다",
+        "새로 설치한 codex 와 claude 의 자리를 찾아 함께 등록",
+        "버전이 찍히면 진짜 실행되는 것까지 확인된 것이다",
+        "VS Code 를 껐다 켤 필요가 없다"
       ],
-      "practice": null,
+      "practice": "명령을 한 번 더 붙여넣고 셋 다 [v] 인지 확인한다.",
       "action": {
-        "label": "자동 탐색·등록 (안 될 때만)",
+        "label": "PATH 한 번에 잡기",
         "items": [
           {
             "desc": "Windows — PowerShell 에 통째로 붙여넣기",
-            "copy": "$names = 'agy','codex','claude'\n$guess = @{\n  agy    = @(\"$env:LOCALAPPDATA\\agy\\bin\")\n  codex  = @(\"$env:LOCALAPPDATA\\Programs\\OpenAI\\Codex\\bin\", \"$env:USERPROFILE\\.codex\\bin\")\n  claude = @(\"$env:USERPROFILE\\.local\\bin\")\n}\n$roots = @(@($env:LOCALAPPDATA, $env:APPDATA, $env:USERPROFILE) | Where-Object { $_ -and (Test-Path $_) } | Select-Object -Unique)\n$add = @()\nforeach ($n in $names) {\n  if (Get-Command $n -ErrorAction SilentlyContinue) { Write-Host \"OK   $n - 이미 PATH 에 있습니다\"; continue }\n  $dir = $null\n  foreach ($g in $guess[$n]) { if (Test-Path (Join-Path $g \"$n.exe\")) { $dir = $g; break } }\n  if (-not $dir) {\n    foreach ($r in $roots) {\n      $hit = Get-ChildItem -Path $r -Filter \"$n.exe\" -Recurse -File -Depth 5 -ErrorAction SilentlyContinue | Select-Object -First 1\n      if ($hit) { $dir = $hit.DirectoryName; break }\n    }\n  }\n  if ($dir) { Write-Host \"FIND $n - $dir\"; $add += $dir }\n  else      { Write-Host \"MISS $n - 찾지 못했습니다. 설치부터 다시 하세요\" }\n}\n$add = @($add | Select-Object -Unique)\nif ($add.Count -eq 0) {\n  Write-Host \"DONE 새로 등록할 경로가 없습니다\"\n} else {\n  $have = @([Environment]::GetEnvironmentVariable('Path','User') -split ';' | Where-Object { $_ })\n  $new  = @($add | Where-Object { $have -notcontains $_ })\n  if ($new.Count -eq 0) {\n    Write-Host \"DONE 이미 모두 등록돼 있습니다\"\n  } else {\n    [Environment]::SetEnvironmentVariable('Path', (($have + $new) -join ';'), 'User')\n    Write-Host (\"ADDED \" + ($new -join ' | '))\n  }\n}"
+            "copy": "$names = 'agy','codex','claude'\n$guess = @{\n  agy    = @(\"$env:LOCALAPPDATA\\agy\\bin\")\n  codex  = @(\"$env:LOCALAPPDATA\\Programs\\OpenAI\\Codex\\bin\", \"$env:USERPROFILE\\.codex\\bin\")\n  claude = @(\"$env:USERPROFILE\\.local\\bin\")\n}\n$roots = @(@($env:LOCALAPPDATA, $env:APPDATA, $env:USERPROFILE) | Where-Object { $_ -and (Test-Path $_) } | Select-Object -Unique)\n$where = @{}\nforeach ($n in $names) {\n  $dir = $null\n  $pre = Get-Command $n -ErrorAction SilentlyContinue\n  if ($pre -and $pre.Source) { $dir = Split-Path $pre.Source -Parent }\n  if (-not $dir) { foreach ($g in $guess[$n]) { if (Test-Path (Join-Path $g \"$n.exe\")) { $dir = $g; break } } }\n  if (-not $dir) {\n    foreach ($r in $roots) {\n      $hit = Get-ChildItem -Path $r -Filter \"$n.exe\" -Recurse -File -Depth 5 -ErrorAction SilentlyContinue | Select-Object -First 1\n      if ($hit) { $dir = $hit.DirectoryName; break }\n    }\n  }\n  if ($dir) { $where[$n] = $dir }\n}\n$found = @($where.Values | Select-Object -Unique)\nif ($found.Count -gt 0) {\n  $have = @([Environment]::GetEnvironmentVariable('Path','User') -split ';' | Where-Object { $_ })\n  $new  = @($found | Where-Object { $have -notcontains $_ })\n  if ($new.Count -gt 0) { [Environment]::SetEnvironmentVariable('Path', (($have + $new) -join ';'), 'User') }\n  $cur = @($env:Path -split ';' | Where-Object { $_ })\n  $now = @($found | Where-Object { $cur -notcontains $_ })\n  if ($now.Count -gt 0) { $env:Path = (($cur + $now) -join ';') }\n}\nWrite-Host \"\"\nWrite-Host \"  ────────────────────────────────────────────────────────────\"\n$ok = 0\nforeach ($n in $names) {\n  if (-not $where.ContainsKey($n)) {\n    Write-Host \"   [ ] \" -NoNewline -ForegroundColor Red\n    Write-Host (\"{0,-8}\" -f $n) -NoNewline -ForegroundColor Red\n    Write-Host \"아직 설치되지 않았습니다\" -ForegroundColor Red\n    continue\n  }\n  $exe = Join-Path $where[$n] \"$n.exe\"\n  $ver = $null\n  try { $ver = (& $exe --version 2>&1 | Select-Object -First 1) } catch { $ver = $null }\n  if ($ver) { $ver = ($ver -replace '\\s+', ' ').Trim() }\n  $byName = [bool](Get-Command $n -ErrorAction SilentlyContinue)\n  if ($ver -and $byName) {\n    Write-Host \"   [v] \" -NoNewline -ForegroundColor Green\n    Write-Host (\"{0,-8}\" -f $n) -NoNewline -ForegroundColor Green\n    Write-Host (\"사용 가능!  \" + $ver) -ForegroundColor Green\n    $ok++\n  } elseif ($ver) {\n    Write-Host \"   [!] \" -NoNewline -ForegroundColor Yellow\n    Write-Host (\"{0,-8}\" -f $n) -NoNewline -ForegroundColor Yellow\n    Write-Host ($ver + \"  — 설치는 됐지만 이 터미널이 아직 이름으로 못 찾습니다\") -ForegroundColor Yellow\n  } else {\n    Write-Host \"   [!] \" -NoNewline -ForegroundColor Yellow\n    Write-Host (\"{0,-8}\" -f $n) -NoNewline -ForegroundColor Yellow\n    Write-Host \"파일은 있는데 실행이 안 됩니다 — 설치를 다시 하세요\" -ForegroundColor Yellow\n  }\n}\nWrite-Host \"  ────────────────────────────────────────────────────────────\"\nif ($ok -eq 3) {\n  Write-Host \"   세 개 다 버전이 찍혔습니다. VS Code 껐다 켤 필요 없습니다.\" -ForegroundColor Cyan\n} else {\n  Write-Host (\"   \" + $ok + \"/3 확인됨. [!] 는 새 터미널을 열면 대개 해결됩니다.\") -ForegroundColor Yellow\n}\nWrite-Host \"\""
           },
           {
             "desc": "macOS — 터미널에 통째로 붙여넣기",
-            "copy": "for n in agy codex claude; do\n  if command -v \"$n\" >/dev/null 2>&1; then echo \"OK   $n - 이미 PATH 에 있습니다\"; continue; fi\n  d=\"\"\n  for c in \"$HOME/.local/bin\" \"$HOME/.agy/bin\" \"$HOME/.codex/bin\"; do\n    [ -x \"$c/$n\" ] && { d=\"$c\"; break; }\n  done\n  if [ -z \"$d\" ]; then\n    f=$(find \"$HOME\" -maxdepth 6 -type f -name \"$n\" -perm -u+x 2>/dev/null | head -1)\n    [ -n \"$f\" ] && d=$(dirname \"$f\")\n  fi\n  if [ -z \"$d\" ]; then echo \"MISS $n - 찾지 못했습니다. 설치부터 다시 하세요\"; continue; fi\n  echo \"FIND $n - $d\"\n  if grep -qsF \"\\\"$d:\\$PATH\\\"\" \"$HOME/.zshrc\"; then echo \"SKIP $d - 이미 등록돼 있습니다\"; else\n    printf 'export PATH=\"%s:$PATH\"\\n' \"$d\" >> \"$HOME/.zshrc\"; echo \"ADDED $d\"; fi\ndone"
-          },
-          {
-            "desc": "끝나고 다시 확인",
-            "copy": "codex --version\nclaude --version"
-          }
-        ]
-      }
-    },
-    {
-      "imagePath": "assets/basic/step01/codex_PATH_등록.svg",
-      "goal": "codex --version 이 안 찍힐 때, Codex 설치 폴더를 사용자 PATH에 직접 등록한다.",
-      "topics": [
-        "예비책 — Codex 설치기는 보통 PATH 를 스스로 등록한다",
-        "설치 위치: Windows %LOCALAPPDATA%\\Programs\\OpenAI\\Codex\\bin · macOS ~/.local/bin",
-        "사용자 환경 변수 PATH 에 중복 없이 영구 등록",
-        "등록한 '다음에' VS Code 를 완전히 껐다 켠다"
-      ],
-      "practice": null,
-      "action": {
-        "label": "PATH 직접 등록 (안 될 때만)",
-        "items": [
-          {
-            "desc": "Windows",
-            "copy": "$codexBin = Join-Path $env:LOCALAPPDATA \"Programs\\OpenAI\\Codex\\bin\"\n$userPath = [Environment]::GetEnvironmentVariable(\"Path\", \"User\")\nif (($userPath -split \";\") -notcontains $codexBin) {\n  $newUserPath = (($userPath -split \";\") + $codexBin |\n    Where-Object { $_ } |\n    Select-Object -Unique) -join \";\"\n  [Environment]::SetEnvironmentVariable(\"Path\", $newUserPath, \"User\")\n}"
-          },
-          {
-            "desc": "macOS — Claude Code 도 같은 폴더라 이 한 줄이면 둘 다 해결",
-            "copy": "echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc"
-          }
-        ]
-      }
-    },
-    {
-      "imagePath": "assets/basic/step01/claude_PATH_등록.svg",
-      "goal": "claude --version 이 안 찍힐 때, Claude Code 설치 폴더를 사용자 PATH에 직접 등록한다.",
-      "topics": [
-        "Claude 설치기는 PATH 를 등록하지 않는다 — 셋 중 이것만 직접 등록이 필요할 수 있다",
-        "설치 위치: Windows %USERPROFILE%\\.local\\bin · macOS ~/.local/bin",
-        "사용자 환경 변수 PATH 에 중복 없이 영구 등록",
-        "등록한 '다음에' VS Code 를 완전히 껐다 켠다 (순서가 바뀌면 재시작이 두 번)"
-      ],
-      "practice": null,
-      "action": {
-        "label": "PATH 직접 등록 (안 될 때만)",
-        "items": [
-          {
-            "desc": "Windows",
-            "copy": "$claudeBin = Join-Path $env:USERPROFILE \".local\\bin\"\n$userPath = [Environment]::GetEnvironmentVariable(\"Path\", \"User\")\nif (($userPath -split \";\") -notcontains $claudeBin) {\n  $newUserPath = (($userPath -split \";\") + $claudeBin |\n    Where-Object { $_ } |\n    Select-Object -Unique) -join \";\"\n  [Environment]::SetEnvironmentVariable(\"Path\", $newUserPath, \"User\")\n}"
-          },
-          {
-            "desc": "macOS",
-            "copy": "echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc"
+            "copy": "rc=\"$HOME/.zshrc\"; [ -n \"$BASH_VERSION\" ] && rc=\"$HOME/.bash_profile\"\nAGY=\"\"; CODEX=\"\"; CLAUDE=\"\"\nfor n in agy codex claude; do\n  d=\"\"\n  p=$(command -v \"$n\" 2>/dev/null) && d=$(dirname \"$p\")\n  [ -z \"$d\" ] && [ -x \"$HOME/.local/bin/$n\" ] && d=\"$HOME/.local/bin\"\n  if [ -z \"$d\" ]; then\n    f=$(find \"$HOME\" -maxdepth 6 -type f -name \"$n\" -perm -u+x 2>/dev/null | head -1)\n    [ -n \"$f\" ] && d=$(dirname \"$f\")\n  fi\n  [ -z \"$d\" ] && continue\n  case \"$n\" in agy) AGY=\"$d\";; codex) CODEX=\"$d\";; claude) CLAUDE=\"$d\";; esac\n  case \":$PATH:\" in *\":$d:\"*) ;; *) export PATH=\"$d:$PATH\";; esac\n  grep -qsF \"export PATH=\\\"$d:\\$PATH\\\"\" \"$rc\" || printf 'export PATH=\"%s:$PATH\"\\n' \"$d\" >> \"$rc\"\ndone\nhash -r 2>/dev/null || true\necho \"\"\necho \"  ────────────────────────────────────────────────────────────\"\nok=0\nfor n in agy codex claude; do\n  case \"$n\" in agy) d=\"$AGY\";; codex) d=\"$CODEX\";; claude) d=\"$CLAUDE\";; esac\n  if [ -z \"$d\" ]; then\n    printf \"   \\033[31m[ ] %-8s아직 설치되지 않았습니다\\033[0m\\n\" \"$n\"; continue\n  fi\n  v=$(\"$d/$n\" --version 2>&1 | head -1 | tr -s ' ')\n  if [ -z \"$v\" ]; then\n    printf \"   \\033[33m[!] %-8s파일은 있는데 실행이 안 됩니다 — 설치를 다시 하세요\\033[0m\\n\" \"$n\"\n  elif command -v \"$n\" >/dev/null 2>&1; then\n    printf \"   \\033[32m[v] %-8s사용 가능!  %s\\033[0m\\n\" \"$n\" \"$v\"; ok=$((ok+1))\n  else\n    printf \"   \\033[33m[!] %-8s%s  — 이 터미널이 아직 이름으로 못 찾습니다\\033[0m\\n\" \"$n\" \"$v\"\n  fi\ndone\necho \"  ────────────────────────────────────────────────────────────\"\nif [ \"$ok\" -eq 3 ]; then\n  printf \"   \\033[36m세 개 다 버전이 찍혔습니다. VS Code 껐다 켤 필요 없습니다.\\033[0m\\n\"\nelse\n  printf \"   \\033[33m%s/3 확인됨. [!] 는 새 터미널을 열면 대개 해결됩니다.\\033[0m\\n\" \"$ok\"\nfi\necho \"\""
           }
         ]
       }

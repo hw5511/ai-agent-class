@@ -244,6 +244,41 @@
         .sidebar-nav::-webkit-scrollbar-track { background: transparent; }
         .sidebar-nav::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
+        /* 회차 안의 파트 목록 (parts 가 있는 회차에만 나타난다) */
+        .nav-parts {
+            display: none;
+            margin: 0.125rem 0 0.375rem 2.125rem;
+            padding-left: 0.625rem;
+            border-left: 1px solid var(--border);
+        }
+        .nav-group.expanded .nav-parts { display: block; }
+        .nav-part {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 0.3rem 0.5rem;
+            border: none;
+            background: transparent;
+            border-radius: var(--radius);
+            cursor: pointer;
+            text-align: left;
+            color: var(--muted-fg);
+            font-size: 0.75rem;
+            line-height: 1.35;
+            transition: background 0.13s, color 0.13s;
+        }
+        .nav-part:hover { background: var(--secondary); color: var(--fg); }
+        .nav-part.active { color: var(--fg); font-weight: 600; }
+        .nav-part-range {
+            flex: none;
+            font-variant-numeric: tabular-nums;
+            font-size: 0.6875rem;
+            color: var(--muted-fg);
+            opacity: 0.75;
+        }
+        .nav-part.active .nav-part-range { opacity: 1; }
+
         .nav-item {
             display: flex;
             align-items: flex-start;
@@ -1348,7 +1383,13 @@
             const nav = document.getElementById('sidebar-nav');
             nav.innerHTML = data.sessions.map((s, i) => {
                 const isActive = i === currentSession;
-                return `<div class="nav-group" data-group="${i}">
+                const parts = s.parts || [];
+                const partsHtml = parts.length ? `<div class="nav-parts">` + parts.map((p, k) =>
+                    `<button class="nav-part" data-index="${i}" data-part="${k}" data-from="${p.from}">
+                        <span class="nav-part-range">${p.from}–${p.to}</span>
+                        <span>${p.title}</span>
+                    </button>`).join('') + `</div>` : '';
+                return `<div class="nav-group${isActive && parts.length ? ' expanded' : ''}" data-group="${i}">
                     <button class="nav-item${isActive ? ' active' : ''}" data-index="${i}">
                         <span class="nav-num">${String(s.num).padStart(2, '0')}</span>
                         <span class="nav-info">
@@ -1356,6 +1397,7 @@
                             <span class="nav-hours">${s.hours}</span>
                         </span>
                     </button>
+                    ${partsHtml}
                 </div>`;
             }).join('');
 
@@ -1364,12 +1406,46 @@
                     goToSession(parseInt(item.dataset.index));
                 });
             });
+
+            nav.querySelectorAll('.nav-part').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const si = parseInt(btn.dataset.index);
+                    const from = parseInt(btn.dataset.from);
+                    goToSession(si, from - 1);
+                });
+            });
+
+            updateSidebarParts();
+        }
+
+        // 지금 보고 있는 슬라이드가 속한 파트를 표시하고, 해당 회차만 펼친다
+        function updateSidebarParts() {
+            document.querySelectorAll('.nav-group').forEach(g => {
+                const i = parseInt(g.dataset.group);
+                const has = g.querySelector('.nav-parts');
+                if (has) g.classList.toggle('expanded', i === currentSession);
+            });
+            const s = COURSES[currentCourse].sessions[currentSession];
+            const parts = (s && s.parts) || [];
+            const cur = currentSlide + 1;
+            document.querySelectorAll('.nav-group').forEach(g => {
+                if (parseInt(g.dataset.group) !== currentSession) {
+                    g.querySelectorAll('.nav-part').forEach(b => b.classList.remove('active'));
+                    return;
+                }
+                g.querySelectorAll('.nav-part').forEach(b => {
+                    const p = parts[parseInt(b.dataset.part)];
+                    b.classList.toggle('active', !!p && cur >= p.from && cur <= p.to);
+                });
+            });
         }
 
         function updateSidebarActive() {
             document.querySelectorAll('.nav-item').forEach((item, i) => {
                 item.classList.toggle('active', i === currentSession);
             });
+            updateSidebarParts();
         }
 
         /* ============================================
