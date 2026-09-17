@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 2</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">언제 읽히나</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">세션이 시작될 때 자동으로 읽힙니다 — 따로 불러올 필요가 없습니다</text>
+  <rect x="60" y="210" width="357.3333333333333" height="150" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="238.66666666666666" y="275.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#374151">새 대화 시작</text>
+  <text x="238.66666666666666" y="303.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#374151">이 폴더에서 세션을 연다</text>
+  <line x1="427.3333333333333" y1="285.0" x2="442.3333333333333" y2="285.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M438.3333333333333 278.0L451.3333333333333 285.0L438.3333333333333 292.0Z" fill="#6b7280"/>
+  <rect x="461.3333333333333" y="210" width="357.3333333333333" height="150" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="640.0" y="275.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#1d4ed8">CLAUDE.md 자동 로드</text>
+  <text x="640.0" y="303.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#1d4ed8">agent1/.claude/CLAUDE.md 를 읽는다</text>
+  <line x1="828.6666666666666" y1="285.0" x2="843.6666666666666" y2="285.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M839.6666666666666 278.0L852.6666666666666 285.0L839.6666666666666 292.0Z" fill="#6b7280"/>
+  <rect x="862.6666666666666" y="210" width="357.3333333333333" height="150" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="1041.3333333333333" y="275.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#15803d">그 규칙대로 답변</text>
+  <text x="1041.3333333333333" y="303.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#15803d">이름·역할·말투가 반영된다</text>
+  <rect x="60" y="420" width="1160" height="104" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="88" y="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">기억할 것</text>
+  <text x="88" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#1e40af">- 사람이 "CLAUDE.md 읽어" 라고 시키지 않아도 됩니다. 세션 시작이 방아쇠입니다.</text>
+  <text x="88" y="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#1e40af">- 단, "지금 이미 열려 있는" 대화방에는 적용되지 않습니다 (다음 슬라이드에서 다룹니다).</text>
+</svg>

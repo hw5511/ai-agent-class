@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 2</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">/clear 를 왜 하나</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">CLAUDE.md 를 고쳐도, 지금 대화방은 옛 내용을 그대로 기억합니다</text>
+  <rect x="60" y="178" width="558.0" height="104" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="339.0" y="220.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#374151">CLAUDE.md 작성/수정</text>
+  <text x="339.0" y="248.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#374151">방금 파일을 저장했다</text>
+  <line x1="628.0" y1="230.0" x2="643.0" y2="230.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M639.0 223.0L652.0 230.0L639.0 237.0Z" fill="#6b7280"/>
+  <rect x="662.0" y="178" width="558.0" height="104" rx="14" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="941.0" y="220.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#92400e">지금 대화방</text>
+  <text x="941.0" y="248.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#92400e">옛 내용이 남아있다</text>
+  <text x="941.0" y="267.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#92400e">파일을 고쳐도 즉시 안 바뀐다</text>
+  <line x1="640" y1="292" x2="640" y2="329" stroke="#1d4ed8" stroke-width="2.5"/>
+  <path d="M633 325L640 340L647 325Z" fill="#1d4ed8"/>
+  <text x="658" y="321.0" font-family="'Courier New',Courier,monospace" font-size="13.5" font-weight="700" fill="#1d4ed8">/clear</text>
+  <rect x="60" y="348" width="357.3333333333333" height="104" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="238.66666666666666" y="390.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#1d4ed8">/clear 실행</text>
+  <text x="238.66666666666666" y="418.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#1d4ed8">"이 채팅방 나가기"</text>
+  <line x1="427.3333333333333" y1="400.0" x2="442.3333333333333" y2="400.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M438.3333333333333 393.0L451.3333333333333 400.0L438.3333333333333 407.0Z" fill="#6b7280"/>
+  <rect x="461.3333333333333" y="348" width="357.3333333333333" height="104" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="640.0" y="390.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#1d4ed8">새 대화방 시작</text>
+  <text x="640.0" y="418.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#1d4ed8">처음부터 다시 연다</text>
+  <line x1="828.6666666666666" y1="400.0" x2="843.6666666666666" y2="400.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M839.6666666666666 393.0L852.6666666666666 400.0L839.6666666666666 407.0Z" fill="#6b7280"/>
+  <rect x="862.6666666666666" y="348" width="357.3333333333333" height="104" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="1041.3333333333333" y="390.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#15803d">CLAUDE.md 다시 읽음</text>
+  <text x="1041.3333333333333" y="418.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#15803d">새 규칙이 반영된다</text>
+  <rect x="60" y="470" width="1160" height="104" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="88" y="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#15803d">핵심</text>
+  <text x="88" y="526" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#166534">/clear = 지금 채팅방을 나가고, 새 채팅방으로 가는 것.</text>
+  <text x="88" y="550" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#166534">새 채팅방은 시작하면서 CLAUDE.md 를 다시 읽습니다.</text>
+</svg>
