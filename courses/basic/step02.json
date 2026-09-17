@@ -5,10 +5,10 @@
   "goal": "에이전트에 메모리를 설정하고 이름을 부여하는 방법을 익히며, 파일과 폴더를 에이전트로 직접 제어한다.",
   "topics": [
     "CLAUDE.md — 에이전트 이름·말투·역할 정의",
-    "Read 툴 — 파일·이미지·PDF 를 직접 읽기",
-    "Write / Edit / Bash 툴 실습"
+    "Read · Write · Edit · Bash 네 가지 툴 실습",
+    "AI 에이전트의 동작 루프와 지시하는 프롬프트"
   ],
-  "practice": "나만의 에이전트에 이름을 부여하고, 각 툴(Read/Write/Edit/Bash)을 직접 실습한다.",
+  "practice": "나만의 에이전트에 이름을 부여하고, 네 가지 툴로 파일을 읽고 만들고 고치고 실행해본다.",
   "slides": [
     {
       "imagePath": "assets/basic/step02/Claude_에이전트_메모리와_파일_폴더_제어.svg",
@@ -526,79 +526,451 @@
       }
     },
     {
-      "imagePath": "assets/basic/step02/Write_툴.svg",
-      "goal": "Write 툴의 역할을 이해한다.",
+      "imagePath": "assets/basic/step02/write_툴_이란.svg",
+      "goal": "Write 툴이 무엇인지 이해한다.",
       "topics": [
-        "새 파일 생성·작성",
-        "기존 파일 덮어쓰기 주의",
-        "Write vs Edit 차이"
+        "새 파일을 만들어 내용을 써 넣는다",
+        "Read 가 읽기였다면 Write 는 쓰기"
       ],
       "practice": null,
       "action": null
     },
     {
-      "imagePath": "assets/basic/step02/Write_실습.svg",
-      "goal": "Write 실습 — 새 파일을 만들어본다.",
+      "imagePath": "assets/basic/step02/write_md_란.svg",
+      "goal": "md(마크다운) 파일이 무엇인지 이해한다.",
       "topics": [
-        "자기소개 txt 파일 생성 요청",
-        "VS Code에서 파일 생성 확인",
-        "Read로 내용 검증"
-      ],
-      "practice": "에이전트에게 자기소개 파일을 만들어달라고 요청한다.",
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step02/Edit_툴.svg",
-      "goal": "Edit 툴의 역할을 이해한다.",
-      "topics": [
-        "기존 파일 일부 수정",
-        "수정 전 내용 → 수정 후 내용",
-        "Read 후 Edit 순서"
+        "메모장(.txt)은 글자만 담는다",
+        "마크다운은 # 과 - 로 글의 구조를 표시한다"
       ],
       "practice": null,
       "action": null
     },
     {
-      "imagePath": "assets/basic/step02/Edit_실습.svg",
-      "goal": "Edit 실습 — 기존 파일의 일부를 수정해본다.",
+      "imagePath": "assets/basic/step02/write_md_요청.svg",
+      "goal": "자기소개서를 md 파일로 만들어 달라고 요청한다.",
       "topics": [
-        "파일 특정 줄 수정 요청",
-        "수정 결과 Read로 확인",
-        "CLAUDE.md에 규칙 추가"
+        "현재 폴더에 만들도록 지시한다"
       ],
-      "practice": "파일의 특정 내용을 변경해달라고 요청한다.",
-      "action": null
+      "practice": "자기소개서를 md 파일로 만들어 달라고 한다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "간단한 너의 자기소개서를 md 파일로 현재 폴더에 작성해줘"
+      }
     },
     {
-      "imagePath": "assets/basic/step02/Bash_툴.svg",
-      "goal": "Bash 툴의 역할을 이해한다.",
+      "imagePath": "assets/basic/step02/write_md_결과.svg",
+      "goal": "파일이 실제로 만들어진 것을 확인한다.",
       "topics": [
-        "컴퓨터 명령어 직접 실행",
-        "폴더 생성·이름변경·복사·삭제",
-        "프로그램 실행·패키지 설치"
+        "탐색기에 새 파일이 생긴다",
+        "CLAUDE.md 로 준 이름·말투가 그대로 반영된다"
       ],
       "practice": null,
       "action": null
     },
     {
-      "imagePath": "assets/basic/step02/Bash_실습.svg",
-      "goal": "Bash 실습 — 폴더 생성·이동·복사·제거·프로그램 실행을 실습한다.",
+      "imagePath": "assets/basic/step02/write_svg_란.svg",
+      "goal": "svg 가 무엇인지 이해한다.",
       "topics": [
-        "폴더 생성: work + docs 서브폴더",
-        "이동·복사·제거: note.txt 조작",
-        "크롬 실행 — 네이버 뉴스 열기",
-        "탐색기로 특정 폴더 열기"
+        "사진(jpg·png)은 점을 찍어 만든 그림 — 키우면 깨진다",
+        "svg 는 도형을 그리라고 적어둔 코드 — 키워도 안 깨진다",
+        "이 수업 슬라이드도 svg 다"
       ],
-      "practice": "폴더 만들기 → 파일 이동 → 크롬 실행 순서로 실습",
+      "practice": null,
       "action": null
     },
     {
-      "imagePath": "assets/basic/step02/Bash_주요_명령어.svg",
-      "goal": "Bash 주요 명령어를 파악한다.",
+      "imagePath": "assets/basic/step02/write_svg_요청.svg",
+      "goal": "svg 그림을 만들어 달라고 요청한다.",
       "topics": [
-        "mkdir · cp · mv · rm",
-        "start 명령으로 파일 실행",
-        "python · node 스크립트 실행"
+        "그림도 말로 지시한다"
+      ],
+      "practice": "강아지 그림을 svg 로 만들어 달라고 한다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "자전거 타는 강아지를 svg 코드로 만들어줘"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step02/write_svg_결과.svg",
+      "goal": "코드가 그림이 되는 것을 확인한다.",
+      "topics": [
+        "코드의 도형 하나하나가 그림의 한 부분",
+        "브라우저나 VS Code 로 열어 확인한다"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/write_html_란.svg",
+      "goal": "html 이 무엇인지 이해한다.",
+      "topics": [
+        "웹페이지를 적는 코드",
+        "브라우저로 열어야 웹페이지 모습이 된다"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/write_html_요청.svg",
+      "goal": "앞서 만든 그림으로 포스터를 만든다.",
+      "topics": [
+        "만든 svg 를 재료로 쓴다",
+        "만들고 여는 것까지 한 줄로 지시한다"
+      ],
+      "practice": "강아지로 html 포스터를 만들어 크롬으로 연다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "그 강아지를 가지고 html 로 간단한 포스터를 만들어서 크롬으로 열어줘"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step02/write_html_결과.svg",
+      "goal": "크롬에서 포스터가 열리는 것을 확인한다.",
+      "topics": [
+        "만들기와 열기가 이어서 처리된다"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/write_python_란.svg",
+      "goal": "이번엔 실행되는 프로그램을 만든다는 것을 안다.",
+      "topics": [
+        "지금까지는 문서·그림·웹페이지",
+        "파이썬은 프로그래밍 언어, tkinter 는 창을 만드는 도구"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/write_계산기_요청.svg",
+      "goal": "계산기 프로그램을 만들어 달라고 요청한다.",
+      "topics": [
+        "Windows 는 프롬프트 그대로",
+        "macOS 는 python3 --version 으로 버전 확인 후 맞는 python-tk 설치",
+        "버전 숫자는 학생마다 다르다"
+      ],
+      "practice": "계산기 프로그램을 만든다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "파이썬과 tkinter 를 설치해서 간단한 계산기 프로그램 만들어줘"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step02/write_계산기_결과.svg",
+      "goal": "만든 프로그램의 창이 뜨는 것을 확인한다.",
+      "topics": [
+        "말 한 줄로 실행되는 프로그램이 생겼다"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/write_테트리스.svg",
+      "goal": "같은 방식으로 게임을 만들어본다.",
+      "topics": [
+        "방식은 계산기와 똑같다",
+        "이 테트리스는 다음 파트에서 이어서 고친다"
+      ],
+      "practice": "테트리스를 만든다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "같은 방식으로 간단한 테트리스 만들어줘"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step02/edit_툴_이란.svg",
+      "goal": "Edit 툴이 무엇인지 이해한다.",
+      "topics": [
+        "Write 는 새로 쓰거나 통째로 덮어쓰기",
+        "Edit 는 필요한 부분만 고치기"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/edit_왜_중요한가.svg",
+      "goal": "고쳐가며 완성하는 리듬을 이해한다.",
+      "topics": [
+        "한 번에 완벽한 결과는 나오지 않는다",
+        "만들고 → 보고 → 고치고 를 반복한다"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/edit_테트리스_요청.svg",
+      "goal": "만든 테트리스를 개선해 달라고 요청한다.",
+      "topics": [
+        "시작 버튼 추가",
+        "블록에 입체감",
+        "화면을 키우고 디자인 다듬기"
+      ],
+      "practice": "테트리스를 개선해 달라고 요청한다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "테트리스에 시작 버튼을 추가하고, 블록을 좀 더 입체적이게 만들고, 화면을 좀 더 키워서 전체적으로 세련되게 디자인해줘"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step02/edit_테트리스_진행.svg",
+      "goal": "Edit 가 파일의 일부만 고치는 것을 확인한다.",
+      "topics": [
+        "읽고 → 고칠 곳을 찾고 → 그 부분만 교체",
+        "파일 전체를 다시 쓰지 않는다"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/edit_테트리스_결과.svg",
+      "goal": "고치기 전과 후를 비교한다.",
+      "topics": [
+        "시작 버튼이 생겼다",
+        "블록이 입체적으로 바뀌었다",
+        "화면이 커졌다"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/edit_포스터_요청.svg",
+      "goal": "만든 포스터의 색을 바꿔본다.",
+      "topics": [
+        "새로 만드는 게 아니라 있던 파일을 고친다"
+      ],
+      "practice": "포스터를 초록 테마로 바꾼다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "강아지 포스터에서 색상을 초록색 테마로 바꾸고 크롬으로 열어줘"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step02/edit_정리.svg",
+      "goal": "Edit 툴로 배운 것을 정리한다.",
+      "topics": [
+        "Write 는 만들기, Edit 는 고치기",
+        "말로 고칠 수 있으니 코드를 몰라도 다듬는다"
+      ],
+      "practice": "/clear 를 입력한다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "/clear"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step02/bash_툴_이란.svg",
+      "goal": "Bash 툴이 무엇인지 이해한다.",
+      "topics": [
+        "1회차에 직접 치던 터미널 명령어를 AI 가 대신 쓴다",
+        "폴더 만들기 · 복사 · 이름 바꾸기 · 설치 · 실행"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/bash_왜_핵심인가.svg",
+      "goal": "Bash 가 다른 툴과 무엇이 다른지 안다.",
+      "topics": [
+        "Read·Write·Edit 는 파일 안에서 일어나는 일",
+        "Bash 는 컴퓨터 자체를 다룬다"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/bash_카카오톡.svg",
+      "goal": "설치된 프로그램을 찾아 실행시킨다.",
+      "topics": [
+        "파일을 만드는 게 아니라 있는 프로그램을 켠다"
+      ],
+      "practice": "카카오톡을 찾아 실행시킨다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "컴퓨터에 설치된 PC 카카오톡 찾아서 실행해줘"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step02/bash_유튜브.svg",
+      "goal": "브라우저로 특정 사이트를 열게 한다.",
+      "topics": [
+        "프로그램 실행과 주소 열기가 한 번에"
+      ],
+      "practice": "크롬으로 유튜브를 연다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "크롬으로 유튜브 실행해줘"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step02/bash_메모장_자기소개서.svg",
+      "goal": "만들기와 폴더 열기를 한 번에 시킨다.",
+      "topics": [
+        "파일 작성 + 탐색기 열기",
+        "두 가지 일이 한 줄로 처리된다"
+      ],
+      "practice": "바탕화면에 자기소개서를 만들고 폴더를 연다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "바탕화면에 메모장으로 자기소개서를 만들고 저장된 폴더를 열어줘"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step02/bash_파일_목록.svg",
+      "goal": "폴더 안을 조회하고 설명하게 한다.",
+      "topics": [
+        "명령 결과를 사람 말로 풀어 설명한다"
+      ],
+      "practice": "현재 폴더의 파일 목록을 설명하게 한다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "현재 폴더의 파일 목록을 설명해줘"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step02/bash_테트리스_실행.svg",
+      "goal": "만든 프로그램을 찾아 실행시킨다.",
+      "topics": [
+        "찾기와 실행이 한 줄로"
+      ],
+      "practice": "테트리스를 찾아 실행시킨다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "현재 폴더에 테트리스 파일 찾아서 실행해줘"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step02/bash_슬라임_요청.svg",
+      "goal": "바탕화면 위젯을 만들어 달라고 요청한다.",
+      "topics": [
+        "캐릭터 디자인 · 바탕화면에 띄우기",
+        "마우스로 집기 · 중력 · 종료 메뉴"
+      ],
+      "practice": "슬라임 위젯을 만든다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "svg 로 귀여운 슬라임 같은 캐릭터를 간단하게 디자인해서, 바탕화면에 떠서 마우스로 들었다 놓을 수 있는(중력 적용) 프로그램을 파이썬으로 만들어서 실행해줄래? 슬라임 우클릭 또는 트레이 아이콘에 \"종료\" 메뉴를 넣어줘"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step02/bash_슬라임_결과.svg",
+      "goal": "바탕화면에서 동작하는 프로그램을 확인한다.",
+      "topics": [
+        "마우스로 들었다 놓으면 떨어진다",
+        "우클릭 메뉴로 종료한다"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/bash_시스템_정보.svg",
+      "goal": "내 컴퓨터를 조사하게 시킨다.",
+      "topics": [
+        "CPU · 메모리 · GPU · 온도 조회",
+        "결과는 컴퓨터마다 다르다"
+      ],
+      "practice": "컴퓨터 사양과 GPU 온도를 조사시킨다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "현재 컴퓨터 사양과 현재 GPU 온도 등을 조사해서 설명해줘"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step02/bash_웹캠.svg",
+      "goal": "카메라로 촬영하고 그 사진을 읽게 한다.",
+      "topics": [
+        "Bash 로 캡처 → Read 로 설명",
+        "툴이 이어져 하나의 일을 해낸다"
+      ],
+      "practice": "웹캠으로 지금 보이는 것을 설명하게 한다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "현재 컴퓨터에 연결된 웹캠 인식해볼래? 그걸로 지금 뭐가 보이는지 캡처해서 설명해봐"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step02/bash_툴_조합.svg",
+      "goal": "네 가지 툴이 어떻게 맞물리는지 정리한다.",
+      "topics": [
+        "Read 읽기 · Write 만들기 · Edit 고치기 · Bash 실행하기",
+        "한 작업이 여러 툴을 거친다"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/bash_주요_명령어.svg",
+      "goal": "AI 가 쓰는 대표 명령어를 눈에 익힌다.",
+      "topics": [
+        "목록 · 이동 · 만들기 · 복사 · 이름 바꾸기 · 실행",
+        "외울 필요는 없다"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/bash_정리.svg",
+      "goal": "Bash 툴로 배운 것을 정리한다.",
+      "topics": [
+        "컴퓨터 자체를 다루는 툴",
+        "설치 · 실행 · 조회까지"
+      ],
+      "practice": "/clear 를 입력한다.",
+      "action": {
+        "label": "프롬프트 복사",
+        "copy": "/clear"
+      }
+    },
+    {
+      "imagePath": "assets/basic/step02/wrap_오늘_한_것.svg",
+      "goal": "오늘 네 가지 툴로 한 일을 돌아본다.",
+      "topics": [
+        "Read 로 파일 8개를 정리했다",
+        "Write 로 문서·그림·웹페이지·프로그램을 만들었다",
+        "Edit 로 고치고 Bash 로 실행했다"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/wrap_동작_원리.svg",
+      "goal": "AI 에이전트가 움직이는 방식을 이해한다.",
+      "topics": [
+        "지시 → 코드·명령어 작성 → 실행 → 결과 확인",
+        "안 되면 고쳐서 다시 — 될 때까지 반복하는 루프",
+        "오늘 실습이 실제로 이 루프였다"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/wrap_챗gpt와_다르다.svg",
+      "goal": "ChatGPT 와 무엇이 다른지 안다.",
+      "topics": [
+        "ChatGPT 는 답을 글로 준다 — 실행은 내가 한다",
+        "에이전트는 내 컴퓨터에서 직접 만들고 실행한다",
+        "결과가 실물로 남는다"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/wrap_질문에서_지시로.svg",
+      "goal": "질문이 아니라 지시하는 프롬프트를 쓸 줄 안다.",
+      "topics": [
+        "\"어떻게 만들어?\" → 설명만 돌아온다",
+        "\"만들어서 실행해줘\" → 결과물이 남는다",
+        "무엇을 · 어떤 형태로 · 어디에 · 그다음 무엇을"
+      ],
+      "practice": null,
+      "action": null
+    },
+    {
+      "imagePath": "assets/basic/step02/wrap_마무리.svg",
+      "goal": "2회차를 정리하고 다음 회차를 예고한다.",
+      "topics": [
+        "에이전트에 정체성을 줬다",
+        "네 가지 툴로 읽고 만들고 고치고 실행했다"
       ],
       "practice": null,
       "action": null
@@ -621,9 +993,24 @@
       "to": 46
     },
     {
-      "title": "Write · Edit · Bash",
+      "title": "Write 툴",
       "from": 47,
-      "to": 53
+      "to": 60
+    },
+    {
+      "title": "Edit 툴",
+      "from": 61,
+      "to": 67
+    },
+    {
+      "title": "Bash 툴",
+      "from": 68,
+      "to": 81
+    },
+    {
+      "title": "마무리 — 에이전트 동작 원리",
+      "from": 82,
+      "to": 86
     }
   ]
 }
