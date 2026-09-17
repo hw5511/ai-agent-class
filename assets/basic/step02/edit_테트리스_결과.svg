@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">전과 후</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">왼쪽은 고치기 전, 오른쪽은 고친 뒤입니다</text>
+  <text x="270.0" y="206" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#6b7280">이전</text>
+  <rect x="90" y="220" width="360" height="300" rx="10" fill="#e5e7eb" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="90" y="220" width="360" height="26" rx="10" fill="#d1d5db"/>
+  <rect x="90" y="234" width="360" height="12" fill="#d1d5db"/>
+  <circle cx="108" cy="233" r="4" fill="#ef4444"/>
+  <circle cx="122" cy="233" r="4" fill="#f59e0b"/>
+  <circle cx="136" cy="233" r="4" fill="#22c55e"/>
+  <rect x="98" y="254" width="344" height="258" rx="4" fill="#1f2937"/>
+  <rect x="178.4" y="268.0" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="225.2" y="268.0" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="272.0" y="268.0" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="318.79999999999995" y="268.0" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="178.4" y="314.8" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="225.2" y="314.8" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="272.0" y="314.8" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="318.79999999999995" y="314.8" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="178.4" y="361.6" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="225.2" y="361.6" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="272.0" y="361.6" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="318.79999999999995" y="361.6" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="178.4" y="408.4" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="225.2" y="408.4" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="272.0" y="408.4" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="318.79999999999995" y="408.4" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="178.4" y="455.2" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="225.2" y="455.2" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="272.0" y="455.2" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <rect x="318.79999999999995" y="455.2" width="42.8" height="42.8" rx="2" fill="#3b556e"/>
+  <text x="270.0" y="542" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">버튼 없음 · 밋밋한 사각형 · 작은 화면</text>
+  <text x="905.0" y="186" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="700" fill="#15803d">이후</text>
+  <rect x="620" y="200" width="570" height="380" rx="10" fill="#e5e7eb" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="620" y="200" width="570" height="26" rx="10" fill="#d1d5db"/>
+  <rect x="620" y="214" width="570" height="12" fill="#d1d5db"/>
+  <circle cx="638" cy="213" r="4" fill="#ef4444"/>
+  <circle cx="652" cy="213" r="4" fill="#f59e0b"/>
+  <circle cx="666" cy="213" r="4" fill="#22c55e"/>
+  <rect x="630" y="236" width="550" height="280" rx="6" fill="#1f2937"/>
+  <rect x="753.0" y="255.0" width="56.0" height="56.0" rx="3" fill="#f87171"/>
+  <rect x="755.0" y="257.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="815.0" y="255.0" width="56.0" height="56.0" rx="3" fill="#fbbf24"/>
+  <rect x="817.0" y="257.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="877.0" y="255.0" width="56.0" height="56.0" rx="3" fill="#4ade80"/>
+  <rect x="879.0" y="257.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="939.0" y="255.0" width="56.0" height="56.0" rx="3" fill="#60a5fa"/>
+  <rect x="941.0" y="257.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="1001.0" y="255.0" width="56.0" height="56.0" rx="3" fill="#c084fc"/>
+  <rect x="1003.0" y="257.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="753.0" y="317.0" width="56.0" height="56.0" rx="3" fill="#fbbf24"/>
+  <rect x="755.0" y="319.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="815.0" y="317.0" width="56.0" height="56.0" rx="3" fill="#4ade80"/>
+  <rect x="817.0" y="319.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="877.0" y="317.0" width="56.0" height="56.0" rx="3" fill="#60a5fa"/>
+  <rect x="879.0" y="319.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="939.0" y="317.0" width="56.0" height="56.0" rx="3" fill="#c084fc"/>
+  <rect x="941.0" y="319.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="1001.0" y="317.0" width="56.0" height="56.0" rx="3" fill="#f87171"/>
+  <rect x="1003.0" y="319.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="753.0" y="379.0" width="56.0" height="56.0" rx="3" fill="#4ade80"/>
+  <rect x="755.0" y="381.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="815.0" y="379.0" width="56.0" height="56.0" rx="3" fill="#60a5fa"/>
+  <rect x="817.0" y="381.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="877.0" y="379.0" width="56.0" height="56.0" rx="3" fill="#c084fc"/>
+  <rect x="879.0" y="381.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="939.0" y="379.0" width="56.0" height="56.0" rx="3" fill="#f87171"/>
+  <rect x="941.0" y="381.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="1001.0" y="379.0" width="56.0" height="56.0" rx="3" fill="#fbbf24"/>
+  <rect x="1003.0" y="381.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="753.0" y="441.0" width="56.0" height="56.0" rx="3" fill="#60a5fa"/>
+  <rect x="755.0" y="443.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="815.0" y="441.0" width="56.0" height="56.0" rx="3" fill="#c084fc"/>
+  <rect x="817.0" y="443.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="877.0" y="441.0" width="56.0" height="56.0" rx="3" fill="#f87171"/>
+  <rect x="879.0" y="443.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="939.0" y="441.0" width="56.0" height="56.0" rx="3" fill="#fbbf24"/>
+  <rect x="941.0" y="443.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="1001.0" y="441.0" width="56.0" height="56.0" rx="3" fill="#4ade80"/>
+  <rect x="1003.0" y="443.0" width="52.0" height="19.0" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="830.0" y="526" width="150" height="40" rx="8" fill="#4ade80"/>
+  <text x="905.0" y="552" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="800" fill="#0a2e12">▶ 시작</text>
+  <text x="905.0" y="602" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#15803d">시작 버튼 · 입체감 있는 블록 · 커진 화면</text>
+  <line x1="464.0" y1="370.0" x2="591.1" y2="387.9" stroke="#1d4ed8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M590.2 394.7L606.0 390.0L592.1 381.1Z" fill="#1d4ed8"/>
+  <text x="535.0" y="354.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">Edit</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">같은 테트리스인데 달라진 부분이 한눈에 보입니다</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
+  <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
+  <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 02</text>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 7</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">에이전트는 이렇게 움직입니다</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">ChatGPT 와 다른 점 — 멈춰있지 않고 스스로 반복합니다</text>
+  <rect x="60" y="250" width="257.0" height="140" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="188.5" y="310.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#374151">사용자 지시</text>
+  <text x="188.5" y="338.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#374151">무엇을 만들지 말한다</text>
+  <line x1="327.0" y1="320.0" x2="342.0" y2="320.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M338.0 313.0L351.0 320.0L338.0 327.0Z" fill="#6b7280"/>
+  <rect x="361.0" y="250" width="257.0" height="140" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="489.5" y="310.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#1d4ed8">작성</text>
+  <text x="489.5" y="338.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#1d4ed8">Write·Edit 로</text>
+  <text x="489.5" y="357.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#1d4ed8">코드·명령어를 만든다</text>
+  <line x1="628.0" y1="320.0" x2="643.0" y2="320.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M639.0 313.0L652.0 320.0L639.0 327.0Z" fill="#6b7280"/>
+  <rect x="662.0" y="250" width="257.0" height="140" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="790.5" y="310.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#1d4ed8">실행</text>
+  <text x="790.5" y="338.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#1d4ed8">Bash 로</text>
+  <text x="790.5" y="357.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#1d4ed8">직접 실행한다</text>
+  <line x1="929.0" y1="320.0" x2="944.0" y2="320.0" stroke="#6b7280" stroke-width="2.5"/>
+  <path d="M940.0 313.0L953.0 320.0L940.0 327.0Z" fill="#6b7280"/>
+  <rect x="963.0" y="250" width="257.0" height="140" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="1091.5" y="310.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16.5" font-weight="800" fill="#15803d">확인</text>
+  <text x="1091.5" y="338.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#15803d">Read 로</text>
+  <text x="1091.5" y="357.0" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#15803d">결과를 확인한다</text>
+  <line x1="1091.5" y1="250.0" x2="1091.5" y2="200.0" stroke="#92400e" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6"/>
+  <path d="M1091.5 200.0L1091.5 200.0L1091.5 200.0Z" fill="#92400e"/>
+  <line x1="1091.5" y1="200.0" x2="489.5" y2="200.0" stroke="#92400e" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6"/>
+  <path d="M489.5 200.0L489.5 200.0L489.5 200.0Z" fill="#92400e"/>
+  <line x1="489.5" y1="200.0" x2="489.5" y2="236.0" stroke="#92400e" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6"/>
+  <path d="M483.1 236.0L489.5 250.0L495.9 236.0Z" fill="#92400e"/>
+  <text x="790.5" y="190" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13.5" font-weight="700" fill="#92400e">안 되면 다시 고쳐서 — 될 때까지 반복</text>
+  <rect x="60" y="420" width="1160" height="80" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="88" y="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#92400e">핵심</text>
+  <text x="88" y="476" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#78350f">안 되면 다시 고치는 것을 답이 나올 때까지 반복합니다</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">테트리스를 만들고 → 실행하고 → 고친 것, 오늘의 그 루프였습니다</text>
+</svg>
