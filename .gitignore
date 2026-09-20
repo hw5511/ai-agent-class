@@ -12,3 +12,6 @@ __pycache__/
 
 # Understand-Anything 코드맵 (로컬 전용 — 노트북에서만 생성/사용)
 .understand-anything/
+
+# 슬라이드 제작용 임시 초안 — 저장소에 올리지 않는다 (2026-09-20)
+_drafts/

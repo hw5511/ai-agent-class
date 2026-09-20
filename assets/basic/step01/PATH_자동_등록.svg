@@ -4,26 +4,39 @@
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
   <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
   <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
-  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">세 개를 한 번에 잡기</text>
-  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">조금 전과 똑같은 명령입니다. 이번에는 셋 다 초록이 되어야 합니다</text>
-  <rect x="60" y="168" width="1160" height="80" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
-  <text x="88" y="198" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1d4ed8">설치가 끝났으면 아까 그 명령을 한 번 더 붙여넣으세요</text>
-  <text x="88" y="224" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#1e40af">새로 설치한 codex 와 claude 의 자리를 찾아 함께 등록합니다</text>
-  <text x="60" y="278" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">실행하면 이렇게 나옵니다</text>
-  <rect x="60" y="292" width="1160" height="268" rx="10" fill="#1f2937"/>
-  <text x="92" y="330" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#4b5563">────────────────────────────────────────────────</text>
-  <text x="92" y="364" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">[v]</text>
-  <text x="140" y="364" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">agy</text>
-  <text x="248" y="364" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="400" fill="#4ade80">사용 가능!  1.2.5</text>
-  <text x="92" y="406" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">[v]</text>
-  <text x="140" y="406" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">codex</text>
-  <text x="248" y="406" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="400" fill="#4ade80">사용 가능!  codex-cli 0.154.0</text>
-  <text x="92" y="448" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">[v]</text>
-  <text x="140" y="448" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="700" fill="#4ade80">claude</text>
-  <text x="248" y="448" font-family="'Courier New',Courier,monospace" font-size="16" font-weight="400" fill="#4ade80">사용 가능!  2.1.274 (Claude Code)</text>
-  <text x="92" y="490" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#4b5563">────────────────────────────────────────────────</text>
-  <text x="92" y="532" font-family="'Courier New',Courier,monospace" font-size="15" font-weight="700" fill="#67e8f9">세 개 다 버전이 찍혔습니다. VS Code 껐다 켤 필요 없습니다.</text>
-  <rect x="60" y="578" width="1160" height="54" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
-  <text x="88" y="608" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">초록이 아닌 것이 있으면 그 CLI 의 설치 명령부터 다시 실행하세요.</text>
-  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">여기까지 되면 환경 준비는 끝입니다</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">세 개 마저 잡기</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">조금 전과 같은 방식입니다 — 새로 설치한 codex, claude 몫만 추가합니다</text>
+  <rect x="60" y="168" width="1160" height="78" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="88" y="198" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#1e40af">Windows 는 같은 명령을 한 번 더 실행해 codex, claude 자리까지 함께 등록합니다</text>
+  <text x="88" y="222" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#1e40af">macOS 는 codex·claude 설치가 끝나며 각각 찍어준 Run: 줄을 그대로 복사해 붙여넣습니다</text>
+  <text x="60" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">이번엔 OS 마다 방법이 다릅니다</text>
+  <text x="60" y="286" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#374151">Windows — 자동으로 잡습니다</text>
+  <rect x="60" y="300" width="560" height="268" rx="10" fill="#1f2937"/>
+  <text x="86" y="332" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#4b5563">────────────────────────────────</text>
+  <text x="86" y="356" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#4ade80">[v]</text>
+  <text x="134" y="356" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#4ade80">agy</text>
+  <text x="242" y="356" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#4ade80">사용 가능!  1.2.5</text>
+  <text x="86" y="390" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#4ade80">[v]</text>
+  <text x="134" y="390" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#4ade80">codex</text>
+  <text x="242" y="390" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#4ade80">사용 가능!  codex-cli 0.154.0</text>
+  <text x="86" y="424" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#4ade80">[v]</text>
+  <text x="134" y="424" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#4ade80">claude</text>
+  <text x="242" y="424" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="400" fill="#4ade80">사용 가능!  2.1.274 (Claude Code)</text>
+  <text x="86" y="478" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#4b5563">────────────────────────────────</text>
+  <text x="86" y="508" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="700" fill="#67e8f9">세 개 다 버전이 찍혔습니다.</text>
+  <text x="660" y="286" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#6d28d9">macOS — 설치가 알려준 줄을 그대로</text>
+  <rect x="660" y="300" width="560" height="268" rx="10" fill="#1f2937"/>
+  <text x="684" y="330" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#4ade80">... 설치 완료!</text>
+  <text x="684" y="356" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#9ca3af">Run:</text>
+  <rect x="680" y="363" width="520" height="24" rx="5" fill="#3f3a10"/>
+  <text x="692" y="378" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="700" fill="#fde68a">echo 'export PATH="$HOME/.codex/bin:$PATH"' &gt;&gt; ~/.zshrc</text>
+  <text x="684" y="412" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#fbbf24">◀ 이 줄 그대로 복사</text>
+  <text x="684" y="442" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#4b5563">────────────────────────────────</text>
+  <text x="684" y="468" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#e5e7eb">$ echo 'export PATH="$HOME/.codex/bin:$PATH"' &gt;&gt; ~/.zshrc</text>
+  <text x="684" y="492" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#e5e7eb">$ source ~/.zshrc</text>
+  <text x="684" y="516" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#e5e7eb">$ codex --version &amp;&amp; claude --version</text>
+  <text x="684" y="540" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="700" fill="#4ade80">codex 0.154.0 / claude 2.1.274</text>
+  <rect x="60" y="586" width="1160" height="54" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="88" y="616" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#6b7280">이미 넣은 줄은 다시 넣지 않아도 됩니다 — 새로 찍힌 줄만 추가하면 됩니다</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">설치 스크립트마다 안내하는 줄이 다릅니다 — 항상 지금 화면에 찍힌 그대로 복사하세요</text>
 </svg>

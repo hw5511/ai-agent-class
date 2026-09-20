@@ -1,16 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
-  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
   <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
   <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
   <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">첫 대화: 너는 누구니?</text>
-  <text x="60" y="148" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">Claude Code에 자연어로 질문하고 응답을 확인합니다</text>
-
-  <!-- VS Code 창 프레임 (다크 테마) -->
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">Claude Code에 자연어로 질문하고 응답을 확인합니다</text>
   <rect x="60" y="175" width="1160" height="472" rx="10" fill="#1e1e1e" stroke="#333333" stroke-width="1.5"/>
-
-  <!-- 타이틀바 -->
   <path d="M60 185a10 10 0 0 1 10-10h1140a10 10 0 0 1 10 10v22H60z" fill="#2d2d2d"/>
   <circle cx="82" cy="191" r="5.5" fill="#ef4444"/>
   <circle cx="100" cy="191" r="5.5" fill="#f59e0b"/>
@@ -18,8 +14,6 @@
   <text x="640" y="195" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="500" fill="#cccccc">에이전트1 — Visual Studio Code</text>
   <rect x="1086" y="181" width="118" height="20" rx="4" fill="#383838" stroke="#484848" stroke-width="1"/>
   <text x="1145" y="195" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="600" fill="#38bdf8">⊞ Panel: Right</text>
-
-  <!-- 액티비티 바 -->
   <rect x="60" y="207" width="46" height="415" fill="#252526"/>
   <line x1="106" y1="207" x2="106" y2="622" stroke="#2b2b2b" stroke-width="1"/>
   <rect x="60" y="217" width="2.5" height="28" fill="#007acc"/>
@@ -27,74 +21,45 @@
   <path d="M79 220h12v15H79z" fill="none" stroke="#ffffff" stroke-width="1.6"/>
   <circle cx="82" cy="265" r="5.5" fill="none" stroke="#858585" stroke-width="1.6"/>
   <line x1="86" y1="269" x2="91" y2="274" stroke="#858585" stroke-width="1.8" stroke-linecap="round"/>
-  <circle cx="80" cy="298" r="2.5" fill="none" stroke="#858585" stroke-width="1.5"/>
-  <circle cx="87" cy="309" r="2.5" fill="none" stroke="#858585" stroke-width="1.5"/>
-  <path d="M80 300v8a3 3 0 0 0 3 3h4" fill="none" stroke="#858585" stroke-width="1.5"/>
-  <circle cx="83" cy="595" r="3.5" fill="none" stroke="#858585" stroke-width="1.5"/>
-  <path d="M83 589v2M83 599v2M77 595h2M87 595h2" stroke="#858585" stroke-width="1.5" stroke-linecap="round"/>
-
-  <!-- 좌측 탐색기 사이드바 -->
   <rect x="106" y="207" width="224" height="415" fill="#1e1e1e"/>
   <line x1="330" y1="207" x2="330" y2="622" stroke="#2b2b2b" stroke-width="1"/>
   <text x="124" y="229" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#999999" letter-spacing="0.6">EXPLORER</text>
-  <path d="M124 249l4 4 4-4" fill="none" stroke="#cccccc" stroke-width="1.5" stroke-linecap="round"/>
-  <text x="138" y="253" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#e1e1e1">에이전트1</text>
-  <text x="167" y="278" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#858585">폴더에 파일이 없습니다.</text>
-
-  <!-- 중앙 편집기 (Editor) -->
+  <path d="M128 244l3 3-3 3" fill="none" stroke="#cccccc" stroke-width="1.3"/>
+  <path d="M138 241h6l2 2h5v7h-13z" fill="#dcb67a"/>
+  <text x="156" y="253" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#e5e7eb">에이전트1</text>
   <rect x="330" y="207" width="410" height="415" fill="#1e1e1e"/>
   <line x1="740" y1="207" x2="740" y2="622" stroke="#2b2b2b" stroke-width="1"/>
   <rect x="330" y="207" width="410" height="31" fill="#252526"/>
-  <rect x="330" y="207" width="120" height="31" fill="#1e1e1e"/>
-  <rect x="330" y="207" width="120" height="2" fill="#007acc"/>
-  <text x="350" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" fill="#ffffff">환영합니다</text>
-  <text x="435" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#858585">×</text>
   <line x1="330" y1="238" x2="740" y2="238" stroke="#2b2b2b" stroke-width="1"/>
-  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif">
-    <text x="365" y="295" font-size="18" font-weight="700" fill="#e5e7eb">Claude Code 실습 시작</text>
-    <text x="365" y="330" font-size="13" fill="#9ca3af">현재 작업 폴더: 에이전트1</text>
-    <text x="365" y="360" font-size="13" fill="#6e7681">우측 터미널 패널에서 자연어로 질문하세요.</text>
-  </g>
-
-  <!-- 우측 패널: 터미널 (Panel Position: Right) -->
   <rect x="740" y="207" width="480" height="415" fill="#181818"/>
   <rect x="740" y="207" width="480" height="31" fill="#252526"/>
   <line x1="740" y1="238" x2="1220" y2="238" stroke="#2b2b2b" stroke-width="1"/>
   <text x="758" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.5">TERMINAL</text>
   <rect x="756" y="236" width="62" height="2" fill="#007acc"/>
-  <text x="836" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#858585">OUTPUT</text>
-  <text x="898" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#858585">PORTS</text>
-  <rect x="1038" y="213" width="92" height="19" rx="3" fill="#1e1e1e" stroke="#333333" stroke-width="1"/>
-  <text x="1048" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10.5" fill="#38bdf8">1: pwsh</text>
-  <text x="1115" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" fill="#858585">▾</text>
-  <text x="1144" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#858585">+</text>
-  <text x="1165" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#858585">⌸</text>
-  <text x="1185" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#858585">×</text>
-
-  <g font-family="Consolas,monospace" font-size="12">
-    <text x="756" y="266" fill="#858585">Windows PowerShell · claude</text>
-    <text x="756" y="295" fill="#e5e7eb">PS C:\Users\student\에이전트1&gt; <tspan fill="#38bdf8">claude</tspan></text>
-    <rect x="756" y="315" width="448" height="52" rx="6" fill="#1f2430" stroke="#2d3748" stroke-width="1"/>
-    <text x="772" y="338" fill="#38bdf8" font-weight="600">● Claude Code (v1.0)</text>
-    <text x="772" y="354" fill="#94a3b8" font-size="11">&gt; 무엇을 도와드릴까요?</text>
-
-    <!-- 질문 상자 -->
-    <rect x="756" y="385" width="448" height="46" rx="6" fill="#252526" stroke="#007acc" stroke-width="1.5"/>
-    <text x="772" y="413" fill="#ffffff" font-size="13" font-weight="600">&gt; 너는 누구니?</text>
-    <rect x="872" y="401" width="7" height="15" fill="#38bdf8"/>
-
-    <text x="756" y="460" fill="#9ca3af" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12">Enter를 누르면 Claude가 응답합니다.</text>
-  </g>
-
-  <!-- 하단 상태 표시줄 (Status Bar) -->
+  <text x="836" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#858585">OUTPUT</text>
+  <text x="898" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#858585">PORTS</text>
   <path d="M60 622h1160v15a10 10 0 0 1-10 10H70a10 10 0 0 1-10-10z" fill="#007acc"/>
   <text x="74" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="500" fill="#ffffff">⑂ main*</text>
-  <text x="135" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#ffffff">⊗ 0  ⚠ 0</text>
-  <text x="640" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#ffffff">Ln 1, Col 1</text>
-  <text x="825" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#ffffff">UTF-8</text>
-  <text x="910" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" fill="#ffffff">PowerShell</text>
-  <text x="1135" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#ffffff">Panel: Right ✓</text>
-
-  <!-- 최하단 핵심 팁 -->
-  <text x="640" y="682" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="500" fill="#6b7280">먼저 질문만 해보고 에이전트의 역할을 살펴봅니다</text>
+  <text x="910" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#ffffff">PowerShell</text>
+  <rect x="740" y="238" width="480" height="384" rx="10" fill="#111827"/>
+  <rect x="740" y="238" width="480" height="68" rx="10" fill="#0b1220"/>
+  <rect x="740" y="286" width="480" height="20" fill="#0b1220"/>
+  <rect x="756" y="249" width="36" height="36" rx="5.3999999999999995" fill="#d97757"/>
+  <rect x="758.25" y="246.3" width="6.3" height="6.3" rx="1.3499999999999999" fill="#d97757"/>
+  <rect x="783.45" y="246.3" width="6.3" height="6.3" rx="1.3499999999999999" fill="#d97757"/>
+  <rect x="765.9" y="262.5" width="4.95" height="6.3" fill="#2a1608"/>
+  <rect x="777.15" y="262.5" width="4.95" height="6.3" fill="#2a1608"/>
+  <rect x="766.8" y="273.3" width="14.400000000000002" height="4.05" fill="#2a1608"/>
+  <text x="804" y="265" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#f9fafb">Claude Code v2.1.278</text>
+  <text x="804" y="284" font-family="'Courier New',Courier,monospace" font-size="11.5" font-weight="400" fill="#9ca3af">~\에이전트1</text>
+  <line x1="740" y1="296" x2="1220" y2="296" stroke="#1f2937" stroke-width="1"/>
+  <text x="760" y="324" font-family="'Courier New',Courier,monospace" font-size="13.5" font-weight="700" fill="#d97757">&gt;</text>
+  <text x="780" y="324" font-family="'Courier New',Courier,monospace" font-size="13.5" font-weight="400" fill="#e5e7eb">너는 누구니?</text>
+  <text x="760" y="348" font-family="'Courier New',Courier,monospace" font-size="13.5" font-weight="400" fill="#e5e7eb">저는 Claude Code입니다. 파일을 읽고 쓰고</text>
+  <text x="760" y="372" font-family="'Courier New',Courier,monospace" font-size="13.5" font-weight="400" fill="#e5e7eb">터미널 명령까지 실행할 수 있는 AI 코딩</text>
+  <text x="760" y="396" font-family="'Courier New',Courier,monospace" font-size="13.5" font-weight="400" fill="#e5e7eb">에이전트예요.</text>
+  <rect x="756" y="566" width="448" height="40" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="772" y="592" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#d97757">&gt;</text>
+  <text x="792" y="592" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#6b7280">메시지를 입력하세요...</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">먼저 질문만 해보고 에이전트의 역할을 살펴봅니다</text>
 </svg>

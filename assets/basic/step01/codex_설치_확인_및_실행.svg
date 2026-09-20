@@ -1,30 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
-  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="0" y="0" width="1280" height="720" fill="#ffffff"/>
   <rect x="60" y="44" width="78" height="24" rx="12" fill="#171717"/>
   <text x="99" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#fafafa" letter-spacing="0.8">BASIC 01</text>
-  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+  <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
   <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
-  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a">Codex 설치 확인 및 실행</text>
-  <text x="60" y="148" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" fill="#6b7280">버전이 출력되면 설치가 끝난 것입니다. 이어서 CLI를 시작합니다</text>
-
-  <rect x="100" y="180" width="1080" height="386" rx="12" fill="#1f2937"/>
-  <rect x="100" y="180" width="1080" height="46" rx="12" fill="#111827"/>
-  <rect x="100" y="212" width="1080" height="14" fill="#111827"/>
-  <circle cx="127" cy="203" r="6" fill="#6b7280"/><circle cx="147" cy="203" r="6" fill="#6b7280"/><circle cx="167" cy="203" r="6" fill="#6b7280"/>
-  <text x="640" y="208" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#d1d5db">VS Code Terminal · 에이전트1</text>
-  <text x="136" y="263" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="#9ca3af" letter-spacing="0.6">POWERSHELL 예시</text>
-  <text x="136" y="306" font-family="'Courier New',Courier,monospace" font-size="15" fill="#e5e7eb">PS C:\Users\student\에이전트1&gt; codex --version</text>
-  <rect x="136" y="326" width="600" height="42" rx="6" fill="#374151"/>
-  <text x="156" y="353" font-family="'Courier New',Courier,monospace" font-size="13" fill="#86efac">Codex CLI 버전이 표시됩니다</text>
-  <circle cx="153" cy="401" r="14" fill="#1d4ed8"/>
-  <text x="153" y="406" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">1</text>
-  <text x="180" y="406" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#d1d5db">버전 명령으로 설치를 확인합니다</text>
-  <text x="136" y="457" font-family="'Courier New',Courier,monospace" font-size="15" fill="#e5e7eb">PS C:\Users\student\에이전트1&gt; codex</text>
-  <circle cx="153" cy="499" r="14" fill="#1d4ed8"/>
-  <text x="153" y="504" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">2</text>
-  <text x="180" y="504" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#d1d5db">codex를 입력해 대화형 CLI를 시작합니다</text>
-
-  <rect x="100" y="586" width="1080" height="48" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
-  <text x="640" y="616" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1d4ed8">macOS에서도 codex --version을 확인한 뒤 codex를 실행합니다</text>
-  <text x="640" y="674" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" fill="#9ca3af">로그인 선택 화면이 나타나면 ChatGPT 계정 인증으로 진행합니다</text>
+  <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">Codex 설치 확인 및 실행</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">버전이 출력되면 설치가 끝난 것입니다. 이어서 CLI를 시작합니다</text>
+  <text x="60" y="190" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9ca3af" letter-spacing="0.08em">VS CODE</text>
+  <rect x="60" y="175" width="1160" height="472" rx="10" fill="#1e1e1e" stroke="#333333" stroke-width="1.5"/>
+  <path d="M60 185a10 10 0 0 1 10-10h1140a10 10 0 0 1 10 10v22H60z" fill="#2d2d2d"/>
+  <circle cx="82" cy="191" r="5.5" fill="#ef4444"/>
+  <circle cx="100" cy="191" r="5.5" fill="#f59e0b"/>
+  <circle cx="118" cy="191" r="5.5" fill="#22c55e"/>
+  <text x="640" y="195" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="500" fill="#cccccc">에이전트1 — Visual Studio Code</text>
+  <rect x="1086" y="181" width="118" height="20" rx="4" fill="#383838" stroke="#484848" stroke-width="1"/>
+  <text x="1145" y="195" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="600" fill="#38bdf8">⊞ Panel: Right</text>
+  <rect x="60" y="207" width="46" height="415" fill="#252526"/>
+  <line x1="106" y1="207" x2="106" y2="622" stroke="#2b2b2b" stroke-width="1"/>
+  <rect x="60" y="217" width="2.5" height="28" fill="#007acc"/>
+  <path d="M76 223h12v15H76z" fill="none" stroke="#ffffff" stroke-width="1.6"/>
+  <path d="M79 220h12v15H79z" fill="none" stroke="#ffffff" stroke-width="1.6"/>
+  <circle cx="82" cy="265" r="5.5" fill="none" stroke="#858585" stroke-width="1.6"/>
+  <line x1="86" y1="269" x2="91" y2="274" stroke="#858585" stroke-width="1.8" stroke-linecap="round"/>
+  <rect x="106" y="207" width="224" height="415" fill="#1e1e1e"/>
+  <line x1="330" y1="207" x2="330" y2="622" stroke="#2b2b2b" stroke-width="1"/>
+  <text x="124" y="229" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#999999" letter-spacing="0.6">EXPLORER</text>
+  <path d="M128 244l3 3-3 3" fill="none" stroke="#cccccc" stroke-width="1.3"/>
+  <path d="M138 241h6l2 2h5v7h-13z" fill="#dcb67a"/>
+  <text x="156" y="253" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#e5e7eb">에이전트1</text>
+  <rect x="330" y="207" width="410" height="415" fill="#1e1e1e"/>
+  <line x1="740" y1="207" x2="740" y2="622" stroke="#2b2b2b" stroke-width="1"/>
+  <rect x="330" y="207" width="410" height="31" fill="#252526"/>
+  <line x1="330" y1="238" x2="740" y2="238" stroke="#2b2b2b" stroke-width="1"/>
+  <rect x="740" y="207" width="480" height="415" fill="#181818"/>
+  <rect x="740" y="207" width="480" height="31" fill="#252526"/>
+  <line x1="740" y1="238" x2="1220" y2="238" stroke="#2b2b2b" stroke-width="1"/>
+  <text x="758" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.5">TERMINAL</text>
+  <rect x="756" y="236" width="62" height="2" fill="#007acc"/>
+  <text x="836" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#858585">OUTPUT</text>
+  <text x="898" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#858585">PORTS</text>
+  <path d="M60 622h1160v15a10 10 0 0 1-10 10H70a10 10 0 0 1-10-10z" fill="#007acc"/>
+  <text x="74" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="500" fill="#ffffff">⑂ main*</text>
+  <text x="910" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#ffffff">PowerShell</text>
+  <rect x="740" y="238" width="480" height="384" rx="10" fill="#111827"/>
+  <rect x="740" y="238" width="480" height="68" rx="10" fill="#0b1220"/>
+  <rect x="740" y="286" width="480" height="20" fill="#0b1220"/>
+  <rect x="756" y="249" width="36" height="36" rx="7.92" fill="#e6f7f1" stroke="#b6e8d8" stroke-width="1.5"/>
+  <circle cx="774.0" cy="276.4" r="7.2" fill="#10a37f"/>
+  <circle cx="765.9" cy="271.7" r="7.2" fill="#10a37f"/>
+  <circle cx="765.9" cy="262.3" r="7.2" fill="#10a37f"/>
+  <circle cx="774.0" cy="257.6" r="7.2" fill="#10a37f"/>
+  <circle cx="782.1" cy="262.3" r="7.2" fill="#10a37f"/>
+  <circle cx="782.1" cy="271.7" r="7.2" fill="#10a37f"/>
+  <circle cx="774.0" cy="267.0" r="6.5" fill="#10a37f"/>
+  <text x="804" y="265" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#f9fafb">Codex v0.154.0</text>
+  <text x="804" y="284" font-family="'Courier New',Courier,monospace" font-size="11.5" font-weight="400" fill="#9ca3af">에이전트1</text>
+  <line x1="740" y1="296" x2="1220" y2="296" stroke="#1f2937" stroke-width="1"/>
+  <text x="780" y="324" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#6b7280">PS 에이전트1&gt; codex --version</text>
+  <text x="780" y="348" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#4ade80">codex-cli 0.154.0</text>
+  <text x="780" y="372" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#6b7280">PS 에이전트1&gt; codex</text>
+  <text x="760" y="396" font-family="'Courier New',Courier,monospace" font-size="13.5" font-weight="400" fill="#e5e7eb">✔ Codex CLI가 시작되었습니다.</text>
+  <text x="780" y="420" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#6b7280">무엇을 도와드릴지 물어봅니다.</text>
+  <rect x="756" y="566" width="448" height="40" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="772" y="592" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="700" fill="#10a37f">&gt;</text>
+  <text x="792" y="592" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#6b7280">무엇을 도와드릴까요?</text>
+  <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">로그인 선택 화면이 나타나면 ChatGPT 계정 인증으로 진행합니다</text>
 </svg>

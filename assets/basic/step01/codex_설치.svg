@@ -5,23 +5,60 @@
   <rect x="150" y="44" width="66" height="24" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
   <text x="183" y="60" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#6b7280">STEP 5</text>
   <text x="60" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="26" font-weight="800" fill="#0a0a0a" letter-spacing="-0.02em">Codex CLI 설치</text>
-  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">두 번째 설치입니다. 이것까지 끝나면 PATH 를 한 번에 정리합니다</text>
-  <rect x="60" y="172" width="560" height="300" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
-  <rect x="60" y="172" width="560" height="48" rx="12" fill="#f3f4f6"/>
-  <rect x="60" y="206" width="560" height="14" fill="#f3f4f6"/>
-  <text x="88" y="201" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#374151">Windows · PowerShell</text>
-  <rect x="84" y="244" width="512" height="82" rx="8" fill="#1f2937"/>
-  <text x="104" y="272" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#a5f3fc">powershell -NoProfile -ExecutionPolicy ByPass -c `</text>
-  <text x="104" y="296" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#a5f3fc">  "irm https://chatgpt.com/codex/install.ps1 | iex"</text>
-  <rect x="660" y="172" width="560" height="300" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
-  <rect x="660" y="172" width="560" height="48" rx="12" fill="#f5f3ff"/>
-  <rect x="660" y="206" width="560" height="14" fill="#f5f3ff"/>
-  <text x="688" y="201" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#6d28d9">macOS · 터미널</text>
-  <rect x="684" y="244" width="512" height="58" rx="8" fill="#1f2937"/>
-  <text x="704" y="272" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#a5f3fc">curl -fsSL https://chatgpt.com/codex/install.sh | sh</text>
-  <rect x="60" y="508" width="1160" height="104" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
-  <text x="88" y="538" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#92400e">-NoProfile 을 빼지 마세요</text>
-  <text x="88" y="564" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#78350f">프로필에 StrictMode 가 켜져 있으면 설치 스크립트가 중간에 멈춥니다.</text>
-  <text x="88" y="588" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#78350f">(OSArchitecture 속성을 찾을 수 없습니다 — 실제로 수업에서 났던 오류입니다)</text>
+  <text x="60" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6b7280">두 번째 설치입니다 — 이것까지 끝나면 PATH 를 한 번에 정리합니다</text>
+  <rect x="60" y="175" width="1160" height="472" rx="10" fill="#1e1e1e" stroke="#333333" stroke-width="1.5"/>
+  <path d="M60 185a10 10 0 0 1 10-10h1140a10 10 0 0 1 10 10v22H60z" fill="#2d2d2d"/>
+  <circle cx="82" cy="191" r="5.5" fill="#ef4444"/>
+  <circle cx="100" cy="191" r="5.5" fill="#f59e0b"/>
+  <circle cx="118" cy="191" r="5.5" fill="#22c55e"/>
+  <text x="640" y="195" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="12" font-weight="500" fill="#cccccc">에이전트1 — Visual Studio Code</text>
+  <rect x="1086" y="181" width="118" height="20" rx="4" fill="#383838" stroke="#484848" stroke-width="1"/>
+  <text x="1145" y="195" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="10.5" font-weight="600" fill="#38bdf8">⊞ Panel: Right</text>
+  <rect x="60" y="207" width="46" height="415" fill="#252526"/>
+  <line x1="106" y1="207" x2="106" y2="622" stroke="#2b2b2b" stroke-width="1"/>
+  <rect x="60" y="217" width="2.5" height="28" fill="#007acc"/>
+  <path d="M76 223h12v15H76z" fill="none" stroke="#ffffff" stroke-width="1.6"/>
+  <path d="M79 220h12v15H79z" fill="none" stroke="#ffffff" stroke-width="1.6"/>
+  <circle cx="82" cy="265" r="5.5" fill="none" stroke="#858585" stroke-width="1.6"/>
+  <line x1="86" y1="269" x2="91" y2="274" stroke="#858585" stroke-width="1.8" stroke-linecap="round"/>
+  <rect x="106" y="207" width="224" height="415" fill="#1e1e1e"/>
+  <line x1="330" y1="207" x2="330" y2="622" stroke="#2b2b2b" stroke-width="1"/>
+  <text x="124" y="229" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#999999" letter-spacing="0.6">EXPLORER</text>
+  <path d="M128 244l3 3-3 3" fill="none" stroke="#cccccc" stroke-width="1.3"/>
+  <path d="M138 241h6l2 2h5v7h-13z" fill="#dcb67a"/>
+  <text x="156" y="253" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="700" fill="#e5e7eb">에이전트1</text>
+  <rect x="330" y="207" width="410" height="415" fill="#1e1e1e"/>
+  <line x1="740" y1="207" x2="740" y2="622" stroke="#2b2b2b" stroke-width="1"/>
+  <rect x="330" y="207" width="410" height="31" fill="#252526"/>
+  <line x1="330" y1="238" x2="740" y2="238" stroke="#2b2b2b" stroke-width="1"/>
+  <rect x="740" y="207" width="480" height="415" fill="#181818"/>
+  <rect x="740" y="207" width="480" height="31" fill="#252526"/>
+  <line x1="740" y1="238" x2="1220" y2="238" stroke="#2b2b2b" stroke-width="1"/>
+  <text x="758" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" letter-spacing="0.5">TERMINAL</text>
+  <rect x="756" y="236" width="62" height="2" fill="#007acc"/>
+  <text x="836" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#858585">OUTPUT</text>
+  <text x="898" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#858585">PORTS</text>
+  <text x="758" y="266" font-family="'Courier New',Courier,monospace" font-size="11" font-weight="400" fill="#fbbf24"># -NoProfile 빼지 마세요 (StrictMode 오류 방지)</text>
+  <text x="758" y="288" font-family="'Courier New',Courier,monospace" font-size="11" font-weight="400" fill="#e5e7eb">PS C:\...&gt; powershell -NoProfile -ExecutionPolicy ByPass -c `</text>
+  <text x="758" y="310" font-family="'Courier New',Courier,monospace" font-size="11" font-weight="400" fill="#a5f3fc">  "irm https://chatgpt.com/codex/install.ps1 | iex"</text>
+  <text x="758" y="332" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#e5e7eb"></text>
+  <text x="758" y="354" font-family="'Courier New',Courier,monospace" font-size="11.5" font-weight="400" fill="#4ade80">Codex CLI installed (Programs\OpenAI\Codex\bin)</text>
+  <text x="758" y="376" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#e5e7eb"></text>
+  <text x="758" y="398" font-family="'Courier New',Courier,monospace" font-size="11.5" font-weight="400" fill="#6b7280">( codex 는 이 터미널에서 아직 안 됨 )</text>
+  <path d="M60 622h1160v15a10 10 0 0 1-10 10H70a10 10 0 0 1-10-10z" fill="#007acc"/>
+  <text x="74" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="500" fill="#ffffff">⑂ main*</text>
+  <text x="910" y="638" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11" font-weight="400" fill="#ffffff">PowerShell</text>
+  <rect x="120" y="420" width="580" height="170" rx="10" fill="#1e1e1e" stroke="#8b5cf6" stroke-width="1.5"/>
+  <rect x="120" y="420" width="580" height="24" rx="10" fill="#2d2d2d"/>
+  <rect x="120" y="436" width="580" height="8" fill="#2d2d2d"/>
+  <circle cx="136" cy="432" r="4.5" fill="#ef4444"/>
+  <circle cx="150" cy="432" r="4.5" fill="#f59e0b"/>
+  <circle cx="164" cy="432" r="4.5" fill="#22c55e"/>
+  <text x="410.0" y="436" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="11.5" font-weight="600" fill="#c4b5fd">macOS — Terminal</text>
+  <text x="138" y="468" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#a5f3fc">$ curl -fsSL https://chatgpt.com/codex/install.sh | sh</text>
+  <text x="138" y="494" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#e5e7eb"></text>
+  <text x="138" y="520" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#4ade80">Codex CLI installed successfully!</text>
+  <text x="138" y="546" font-family="'Courier New',Courier,monospace" font-size="12.5" font-weight="400" fill="#e5e7eb"></text>
+  <text x="138" y="572" font-family="'Courier New',Courier,monospace" font-size="11" font-weight="400" fill="#fbbf24">Run: echo 'export PATH="$HOME/.local/bin:$PATH"' &gt;&gt; ~/.zshrc</text>
   <text x="640" y="672" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#9ca3af">설치 위치 — Windows %LOCALAPPDATA%\Programs\OpenAI\Codex\bin · macOS ~/.local/bin</text>
 </svg>

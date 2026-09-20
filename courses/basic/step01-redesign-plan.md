@@ -1,8 +1,9 @@
 # Basic Step 1 재설계 계획
 
-> 상태: 구조·액션 조사 완료, SVG 1차 제작 중
-> 대상: `courses/basic/step01.json` 9장 이후
-> 원칙: 1~8장은 이번 작업에서 유지하고, VS Code를 공통 작업 공간으로 먼저 가르친다.
+> 상태: 반영 완료 (2026-09-20). 1회차는 67장·11개 파트로 운영 중이다.
+> 정본: `courses/basic/step01.json` + `assets/basic/step01/slides.json`. 이 문서는 재설계 당시의 계획이고,
+> 아래 3절의 72장 표는 초안 기록으로만 남긴다 — 실제 장수·순서와 다르다.
+> 원칙: 1~8장은 유지하고, VS Code를 공통 작업 공간으로 먼저 가르친다.
 
 ## 1. 확정된 방향
 
@@ -17,7 +18,9 @@
 - 사용자 이미지가 없는 파일 생성·폴더 생성·파일 이동·종료 화면은 기존 Step 1 SVG 스타일을 유지한 목업 SVG로 제작한다.
 - Antigravity 실습 종료는 `Ctrl + C`를 사용한다. 종료 후 PowerShell 또는 zsh 프롬프트가 다시 보이는 상태를 확인한다.
 - 세 CLI에 같은 네 단계 실습을 반복한다: 자기소개 질문 → `자기소개서.txt` 생성 → `introduce` 폴더 생성 → 파일 이동.
-- 결과 충돌을 피하기 위해 각 CLI는 `에이전트1/agy`, `에이전트1/codex`, `에이전트1/claude`에서 실행한다.
+- ~~각 CLI는 `에이전트1/agy`, `에이전트1/codex`, `에이전트1/claude`에서 실행한다.~~ → 폐기(`042b969`, 2026-09-14).
+  세 CLI 모두 `에이전트1` 한 폴더에서 실행하고, 결과 충돌은 파일 이름으로 구분한다 —
+  agy는 `gemini.txt`, Codex는 `gpt.txt`, Claude Code는 `claude.txt`.
 - Codex는 설치 단계가 짧으므로 설치·확인·로그인 뒤 바로 같은 실습으로 들어간다.
 - Claude는 로컬 참조 폴더 `clis/claude`의 화면을 근거로 설치·PATH·초기 설정·로그인·신뢰 과정을 설명한다.
 
@@ -27,15 +30,10 @@
 
 ```text
 에이전트1/
-├── agy/
-│   └── introduce/
-│       └── 자기소개서.txt
-├── codex/
-│   └── introduce/
-│       └── 자기소개서.txt
-└── claude/
-    └── introduce/
-        └── 자기소개서.txt
+└── introduce/
+    ├── gemini.txt   (Antigravity)
+    ├── gpt.txt      (Codex)
+    └── claude.txt   (Claude Code)
 ```
 
 수강생은 다음 차이를 설명할 수 있어야 한다.
@@ -136,10 +134,10 @@
 너는 누구니?
 ```
 
-각 CLI의 파일 생성:
+각 CLI의 파일 생성 (파일 이름만 도구별로 다르다 — `gemini.txt` · `gpt.txt` · `claude.txt`):
 
 ```text
-현재 폴더에 '자기소개서.txt'를 만들어줘.
+현재 폴더에 'gemini.txt'를 만들어줘.
 네가 누구이고 무엇을 할 수 있는지 간단히 작성해줘.
 ```
 
@@ -149,10 +147,10 @@
 현재 폴더에 'introduce' 폴더를 만들어줘.
 ```
 
-각 CLI의 파일 이동:
+각 CLI의 파일 이동 (파일 이름만 도구별로 다르다):
 
 ```text
-'자기소개서.txt'를 'introduce' 폴더로 옮겨줘.
+'gemini.txt'를 'introduce' 폴더로 옮겨줘.
 ```
 
 ## 5. PATH 본문 흐름
@@ -226,9 +224,27 @@ if (($userPath -split ";") -notcontains $claudeBin) {
 }
 ```
 
-## 8. 남은 결정·검증 항목
+## 8. 남은 결정·검증 항목 — 정리 (2026-09-20)
 
-- 72장 상세안을 실제 수업 시간에 맞춰 어디까지 합칠지 SVG 1차 시안 후 결정한다.
-- Codex 로그인·폴더 신뢰 화면은 실제 캡처 없이 버전 변화에 덜 민감한 일반 목업으로 만든다.
-- 모든 SVG XML 파싱, JSON 유효성, 이미지 경로, 뷰어 렌더를 검증한다.
-- 세 결과 파일을 비교하는 마지막 실습 질문과 평가 기준을 확정한다.
+- ~~72장 상세안을 실제 수업 시간에 맞춰 어디까지 합칠지 결정한다.~~ → 결정됨.
+  `d93687b`(#51)로 70장 구성이 배포됐고, 2026-09-20 수업 후 피드백으로 전환용 3장
+  (`현재_작업_폴더_확인` · `다음_도구_Codex` · `다음_도구_Claude`)을 `_archive/` 로 보내 67장이 됐다.
+  사이드바 목차(`parts`) 11개 구간으로 나눠 길이를 관리한다.
+- ~~Codex 로그인·폴더 신뢰 화면은 실제 캡처 없이 일반 목업으로 만든다.~~ → 반영됨.
+  `assets/basic/step01/codex_로그인_및_실행_화면.svg` 에 임베드된 캡처가 없다(base64 0건).
+  실제 캡처를 쓰는 22장은 모두 agy·claude 구간이다.
+- ~~모든 SVG XML 파싱, JSON 유효성, 이미지 경로, 뷰어 렌더를 검증한다.~~ → 상시 검증으로 전환.
+  67장 전부 XML 파싱 통과, `courses/basic/step01.json` JSON 유효, `imagePath` 67건 모두 실존,
+  `slides.json` 순서와 일치. 뷰어 렌더는 `python build.py` 후 실제 페이지에서 확인한다.
+- 세 결과 파일을 비교하는 마지막 실습 질문과 평가 기준 — **미정, CEO 결정 사항.**
+  `세_에이전트_결과_비교` 슬라이드는 세 파일(`gemini.txt` · `gpt.txt` · `claude.txt`)과
+  '비교 메모' 칸까지 그려져 있으나, 수강생에게 던질 질문과 평가 기준 문구는 아직 없다.
+
+## 9. 2026-09-20 수업 후 반영
+
+- 맥 PATH: 설치 스크립트가 출력하는 `Run: echo 'export PATH=...' >> ~/.zshrc` 줄을 복사해
+  실행하는 흐름으로 바꿨다(`agy_PATH_등록` · `PATH_자동_등록`). 액션박스의 macOS 항목은 제거했다 —
+  윈도우 자동 등록 스크립트만 남는다.
+- 설치·실습 슬라이드는 VS Code 창 목업 안에서 진행한다. 에이전트 실행 상태는
+  `slidekit.agent_panel()` + `logo_antigravity` · `logo_codex` · `logo_claude` 로 그린다.
+- `/ide` 설정은 실제 캡처(`assets/clis/claude/model_ide_select_none.png`)로 교체했다.

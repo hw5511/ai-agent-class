@@ -398,6 +398,113 @@ def drag_chip(x, y, name, color=BLUE_DEEP):
             text(x + 32, y + 20, name, 12, color, '600', mono=True)]
 
 
+# ── 에이전트 CLI 패널 ────────────────────────────────────────────
+# VS Code 터미널(또는 단독) 안에서 도는 에이전트 CLI 세션 화면.
+# 로고는 logo_*() 로 따로 그리고, 본문은 agent_panel() 하나로 조립한다.
+
+def logo_antigravity(x, y, size):
+    """Antigravity 마크. agy_실행_화면.svg 의 배지 색(#3b5bdb 계열)을 그대로 쓴다."""
+    s = size
+    cx = x + s / 2
+    o = [rect(x, y, s, s, '#eef1ff', rx=s * 0.22, stroke='#c7d7ff', sw=1.5),
+         f'  <path d="M{cx:.1f} {y + s * 0.2:.1f}L{x + s * 0.72:.1f} {y + s * 0.62:.1f}'
+         f'L{x + s * 0.28:.1f} {y + s * 0.62:.1f}Z" fill="#3b5bdb"/>',
+         rect(x + s * 0.28, y + s * 0.68, s * 0.44, s * 0.08, '#3b5bdb')]
+    return o
+
+
+def logo_codex(x, y, size):
+    """Codex(OpenAI 계열) 마크. 매듭/꽃 실루엣을 원으로 근사한 모노톤 마크."""
+    s = size
+    cx, cy = x + s / 2, y + s / 2
+    color = '#10a37f'
+    r_petal = s * 0.2
+    orbit = s * 0.26
+    o = [rect(x, y, s, s, '#e6f7f1', rx=s * 0.22, stroke='#b6e8d8', sw=1.5)]
+    for i in range(6):
+        ang = math.pi / 2 + i * (math.pi / 3)
+        px = cx + orbit * math.cos(ang)
+        py = cy + orbit * math.sin(ang)
+        o.append(f'  <circle cx="{px:.1f}" cy="{py:.1f}" r="{r_petal:.1f}" fill="{color}"/>')
+    o.append(f'  <circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r_petal * 0.9:.1f}" fill="{color}"/>')
+    return o
+
+
+def logo_claude(x, y, size):
+    """Claude 오렌지 픽셀아트 마스코트를 rect 만으로 재현한 것."""
+    s = size
+    u = s / 8.0
+    orange, dark = '#d97757', '#2a1608'
+    o = [rect(x, y, s, s, orange, rx=u * 1.2),
+         rect(x + u * 0.5, y - u * 0.6, u * 1.4, u * 1.4, orange, rx=u * 0.3),
+         rect(x + s - u * 1.9, y - u * 0.6, u * 1.4, u * 1.4, orange, rx=u * 0.3),
+         rect(x + u * 2.2, y + u * 3.0, u * 1.1, u * 1.4, dark),
+         rect(x + s - u * 3.3, y + u * 3.0, u * 1.1, u * 1.4, dark),
+         rect(x + u * 2.4, y + u * 5.4, s - u * 4.8, u * 0.9, dark)]
+    return o
+
+
+AGENT_THEMES = {
+    'antigravity': {'name': 'Antigravity', 'accent': '#3b5bdb', 'prompt': '>',
+                     'logo': logo_antigravity},
+    'codex':       {'name': 'Codex',       'accent': '#10a37f', 'prompt': '>',
+                     'logo': logo_codex},
+    'claude':      {'name': 'Claude Code', 'accent': '#d97757', 'prompt': '>',
+                     'logo': logo_claude},
+}
+
+
+def agent_panel(x, y, width, height, agent='claude', version=None, cwd=None,
+                 lines=None, input_value=None, placeholder=None, caret=True):
+    """실행 중인 에이전트 CLI 세션 화면 (vscode() 의 term 자리에 넣거나 단독으로 쓴다).
+
+    agent   : AGENT_THEMES 키 ('antigravity' | 'codex' | 'claude')
+    lines   : [(kind, 텍스트, 색?)] kind = 'user'(입력, > 붙음) | 'agent'(출력) | 'tool'(보조 회색줄)
+    input_value / placeholder : 하단 입력창에 채울 값 / 흐리게 보여줄 안내문 (둘 다 없으면 캐럿만)
+    """
+    theme = AGENT_THEMES[agent]
+    accent, logo_fn = theme['accent'], theme['logo']
+    o = [rect(x, y, width, height, '#111827', rx=10)]
+
+    head_h = 58
+    o.append(rect(x, y, width, head_h + 10, '#0b1220', rx=10))
+    o.append(rect(x, y + head_h - 10, width, 20, '#0b1220'))
+    o += logo_fn(x + 16, y + 11, 36)
+    name_line = theme['name'] + (f' v{version}' if version else '')
+    o.append(text(x + 64, y + 27, name_line, 14, '#f9fafb', '700'))
+    if cwd:
+        o.append(text(x + 64, y + 46, cwd, 11.5, '#9ca3af', mono=True))
+    o.append(f'  <line x1="{x}" y1="{y + head_h}" x2="{x + width}" y2="{y + head_h}" '
+             f'stroke="#1f2937" stroke-width="1"/>')
+
+    box_h = 40
+    box_y = y + height - box_h - 16
+    yy = y + head_h + 28
+    for item in (lines or []):
+        kind, s = item[0], item[1]
+        col = item[2] if len(item) > 2 else None
+        if yy > box_y - 14:
+            break
+        if kind == 'user':
+            o.append(text(x + 20, yy, theme['prompt'], 13.5, accent, '700', mono=True))
+            o.append(text(x + 40, yy, s, 13.5, col or '#e5e7eb', mono=True))
+        elif kind == 'tool':
+            o.append(text(x + 40, yy, s, 12.5, col or '#6b7280', mono=True))
+        else:
+            o.append(text(x + 20, yy, s, 13.5, col or '#e5e7eb', mono=True))
+        yy += 24
+
+    o.append(rect(x + 16, box_y, width - 32, box_h, '#0f172a', rx=8, stroke='#334155', sw=1.5))
+    o.append(text(x + 32, box_y + 26, theme['prompt'], 14, accent, '700', mono=True))
+    if input_value:
+        o.append(text(x + 52, box_y + 26, input_value, 13, '#e5e7eb', mono=True))
+    elif placeholder:
+        o.append(text(x + 52, box_y + 26, placeholder, 13, '#6b7280', mono=True))
+    if caret and not input_value and not placeholder:
+        o.append(rect(x + 52, box_y + 12, 7, 16, accent))
+    return o
+
+
 def notification(x, y, lines, button=None, width=340):
     """VS Code 우하단 알림 토스트. 확장 설치 안내 같은 팝업에 쓴다."""
     h = 26 + 22 * len(lines) + (40 if button else 12)
