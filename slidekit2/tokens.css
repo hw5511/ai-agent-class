@@ -1,0 +1,110 @@
+/* ============================================================
+   Claude Code 기초 — 슬라이드 영상 템플릿 · 디자인 토큰
+   1920x1080 프레임 기준. Remotion 프레임 안과 woohee.me/class
+   블로그 본문 양쪽에서 같은 클래스로 재사용한다.
+   ============================================================ */
+
+/* --- 웹폰트 (전부 CDN) ------------------------------------- */
+/* 제목/키워드 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+/* 본문/설명 */
+@import url("https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/css/SpoqaHanSansNeo.css");
+/* 자막 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;900&display=swap");
+/* 코드 (Latin 우선) */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap");
+/* 터미널 (한글 2셀 정렬) */
+@import url("https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-full.css");
+
+:root {
+  /* --- 서체 역할 ---
+     display : 제목 · 큰 키워드 · 챕터 번호            → Pretendard
+     body    : 본문 · 설명 · 라벨                      → Spoqa Han Sans Neo
+     caption : 영상 하단 한국어 자막                   → Noto Sans KR
+     code    : 코드 카드 (라틴 위주)                   → JetBrains Mono
+     term    : 터미널 재현 (한글 섞임, 셀 정렬 필요)   → D2Coding ligature */
+  --font-display: "Pretendard", "Pretendard Variable", sans-serif;
+  --font-body: "Spoqa Han Sans Neo", "Pretendard", sans-serif;
+  --font-caption: "Noto Sans KR", "Pretendard", sans-serif;
+  --font-code: "JetBrains Mono", "D2Coding ligature", "D2Coding", monospace;
+  --font-term: "D2Coding ligature", "D2Coding", "JetBrains Mono", monospace;
+
+  /* --- 색 ---
+     무채색이 지면을 지배하고 액센트는 "지점"에만 쓴다.
+     근거: research/awwwards/analysis/color_palette.md (배경 무채색 70.7%,
+     유채색은 배경 4.8% / 텍스트 2.6% — CTA·식별지점·히어로 1개 한정) */
+  --ink: #101113;          /* 본문 먹색 (순흑 아님) */
+  --ink-2: #43474b;        /* 보조 텍스트 */
+  --ink-3: #7c8288;        /* 약한 텍스트 · 캡션 부기 */
+  --paper: #f0efec;        /* 밝은 슬라이드 바탕 (중성 오프화이트) */
+  --paper-2: #ffffff;      /* 카드면 */
+  --void: #15181a;         /* 어두운 슬라이드 바탕 (오프블랙) */
+  --void-2: #0c0d0e;       /* 터미널 바탕 */
+  --line: #d5d2cc;         /* 밝은 면 구분선 */
+  --line-dark: #2c3033;    /* 어두운 면 구분선 */
+  --accent: #1273c4;       /* 유리·프리즘 블루 = 유일한 유채색 액센트 (백문 세계관, CEO 2026-09-07) */
+  --accent-deep: #0a568f;
+  --accent-wash: #e8f2fb;
+
+  /* --- 타입 스케일 (1920x1080 프레임 기준, 한 번만 정의) --- */
+  --fs-mega: 168px;   /* 타이틀 슬라이드 대제목 */
+  --fs-xxl: 116px;    /* 개념 카드 키워드 */
+  --fs-xl: 76px;      /* 슬라이드 제목 */
+  --fs-lg: 54px;      /* 한 줄 정의 · 비교 헤드 */
+  --fs-md: 40px;      /* 본문 */
+  --fs-sm: 30px;      /* 라벨 · 부기 */
+  --fs-xs: 24px;      /* 메타 · 출처 */
+  --fs-caption: 52px; /* 자막 */
+  --fs-term: 26px;    /* 터미널 한 줄 */
+
+  /* --- 여백 --- */
+  --pad-frame: 120px;
+  --radius: 14px;
+}
+
+/* --- 프레임 기본 ------------------------------------------- */
+.frame {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+.frame *,
+.frame *::before,
+.frame *::after { box-sizing: border-box; }
+.frame--dark { background: var(--void); color: #f2f0ed; }
+
+/* 프레임 좌상단 챕터/회차 러너 — 전 슬라이드 공통 고정 위치 */
+.runner {
+  position: absolute;
+  top: 64px;
+  left: var(--pad-frame);
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  font-family: var(--font-code);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.frame--dark .runner { color: #7d858c; }
+.runner__no { color: var(--accent); font-weight: 700; }
+
+/* 우하단 강의 워터마크 */
+.stamp {
+  position: absolute;
+  right: var(--pad-frame);
+  bottom: 56px;
+  font-family: var(--font-code);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+}
+.frame--dark .stamp { color: #666e75; }

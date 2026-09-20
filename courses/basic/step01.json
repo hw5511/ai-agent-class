@@ -17,62 +17,62 @@
     {
       "title": "AI 에이전트 이해",
       "from": 1,
-      "to": 8
+      "to": 7
     },
     {
       "title": "개발 환경 준비",
-      "from": 9,
-      "to": 15
+      "from": 8,
+      "to": 14
     },
     {
       "title": "Antigravity 설치와 PATH",
-      "from": 16,
-      "to": 19
+      "from": 15,
+      "to": 18
     },
     {
       "title": "Antigravity 로그인",
-      "from": 20,
-      "to": 23
+      "from": 19,
+      "to": 22
     },
     {
       "title": "Antigravity 초기 설정",
-      "from": 24,
-      "to": 28
+      "from": 23,
+      "to": 27
     },
     {
       "title": "Antigravity 실습 4단계",
-      "from": 29,
-      "to": 34
+      "from": 28,
+      "to": 33
     },
     {
       "title": "Claude Code · Codex 설치",
-      "from": 35,
-      "to": 38
+      "from": 34,
+      "to": 37
     },
     {
       "title": "Codex 시작과 실습",
-      "from": 39,
-      "to": 47
+      "from": 38,
+      "to": 46
     },
     {
       "title": "Claude Code 로그인과 세팅",
-      "from": 48,
-      "to": 57
+      "from": 47,
+      "to": 56
     },
     {
       "title": "Claude Code 실습",
-      "from": 58,
-      "to": 65
+      "from": 57,
+      "to": 64
     },
     {
       "title": "마무리",
-      "from": 66,
-      "to": 67
+      "from": 65,
+      "to": 66
     }
   ],
   "slides": [
     {
-      "imagePath": "assets/basic/step01/AI_에이전트란.svg",
+      "imagePath": "assets/basic/step01/AI_에이전트란.png",
       "goal": "AI 에이전트의 개념과 SEE-THINK-PLAN-DO-FIX 동작 루프를 이해한다.",
       "topics": [
         "에이전트(Agent)란 무엇인가?",
@@ -84,7 +84,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/AI_에이전트_현황.svg",
+      "imagePath": "assets/basic/step01/AI_에이전트_현황.png",
       "goal": "글로벌 AI 기업 3종의 CLI 에이전트 특징을 파악한다.",
       "topics": [
         "GPT CLI (Codex) - OpenAI",
@@ -96,7 +96,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/에이전트_동작_방식_①.svg",
+      "imagePath": "assets/basic/step01/에이전트_동작_방식_①.png",
       "goal": "사람이 직접 수행하는 기존 방식의 한계를 이해한다.",
       "topics": [
         "웹 검색으로 명령어 찾기",
@@ -108,7 +108,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/에이전트_동작_방식_②.svg",
+      "imagePath": "assets/basic/step01/에이전트_동작_방식_②.png",
       "goal": "AI에게 질문하는 방식과 그 한계를 파악한다.",
       "topics": [
         "ChatGPT에 자연어로 질문",
@@ -120,7 +120,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/에이전트_동작_방식_③.svg",
+      "imagePath": "assets/basic/step01/에이전트_동작_방식_③.png",
       "goal": "에이전트 프로그램이 명령을 자동 감지·실행하는 원리를 이해한다.",
       "topics": [
         "시스템 프롬프트로 출력 형식 지정",
@@ -132,7 +132,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/에이전트를_잘_다루려면.svg",
+      "imagePath": "assets/basic/step01/에이전트를_잘_다루려면.png",
       "goal": "에이전트를 잘 다루려면 무엇이 필요한지 개발자/비개발자 관점으로 이해한다.",
       "topics": [
         "개발자 — 기존 코드 능력 + 에이전트로 생산성 극대화",
@@ -143,19 +143,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/AI_동작원리를_알면_달라진다.svg",
-      "goal": "AI 동작원리 4가지(컨텍스트/프롬프트/툴/토큰)를 이해하면 에이전트 활용 능력이 달라짐을 학습한다.",
-      "topics": [
-        "컨텍스트 윈도우 — 대화 관리",
-        "프롬프트 구조 — 정확한 요청",
-        "도구(Tool) 개념 — 권한 설계",
-        "토큰과 사용량 — 비용 효율"
-      ],
-      "practice": null,
-      "action": null
-    },
-    {
-      "imagePath": "assets/basic/step01/어떤_AI로_진행하나요.svg",
+      "imagePath": "assets/basic/step01/어떤_AI로_진행하나요.png",
       "goal": "이 강의에서 사용하는 Claude Pro 플랜의 특징과 효율적인 사용법을 이해한다.",
       "topics": [
         "Claude Pro — 월 약 $20, 5시간 세션 초기화",
@@ -172,7 +160,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/오늘_완성할_환경.svg",
+      "imagePath": "assets/basic/step01/오늘_완성할_환경.png",
       "goal": "VS Code 안에서 CLI 3종을 사용하는 전체 실습 환경을 이해한다.",
       "topics": [
         "VS Code를 공통 작업 공간으로 사용",
@@ -184,7 +172,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/VS_Code_설치.svg",
+      "imagePath": "assets/basic/step01/VS_Code_설치.png",
       "goal": "공식 사이트에서 VS Code를 다운로드하여 설치한다.",
       "topics": [
         "code.visualstudio.com 다운로드",
@@ -201,7 +189,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/VS_Code_화면_구성.svg",
+      "imagePath": "assets/basic/step01/VS_Code_화면_구성.png",
       "goal": "VS Code의 다크모드 화면 구성과 우측 터미널 패널(Panel: Right) 배치를 파악한다.",
       "topics": [
         "좌측 탐색기(파일 및 폴더 목록)",
@@ -213,7 +201,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/실습_폴더_에이전트1.svg",
+      "imagePath": "assets/basic/step01/실습_폴더_에이전트1.png",
       "goal": "실습 폴더 '에이전트1'을 만들고 VS Code에서 연다.",
       "topics": [
         "에이전트1 폴더 생성 후 VS Code에서 열기",
@@ -227,7 +215,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/Ctrl_J로_터미널_열기.svg",
+      "imagePath": "assets/basic/step01/Ctrl_J로_터미널_열기.png",
       "goal": "Ctrl + J 단축키로 패널(우측 터미널)을 열고 터미널 탭을 확인한다.",
       "topics": [
         "Ctrl + J로 패널(터미널) 열기/닫기 토글",
@@ -250,7 +238,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/터미널과_AI_CLI_상태.svg",
+      "imagePath": "assets/basic/step01/터미널과_AI_CLI_상태.png",
       "goal": "일반 터미널 상태와 AI CLI 실행 상태의 차이를 이해한다.",
       "topics": [
         "일반 터미널 프롬프트(PS C:\\...> / %)",
@@ -262,7 +250,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/터미널_기본_명령어.svg",
+      "imagePath": "assets/basic/step01/터미널_기본_명령어.png",
       "goal": "설치 전에 터미널에 명령을 직접 쳐보고, 반응하는 것을 확인한다.",
       "topics": [
         "echo 안녕하세요 — 친 대로 받아 그대로 돌려준다",
@@ -290,7 +278,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/agy_설치.svg",
+      "imagePath": "assets/basic/step01/agy_설치.png",
       "goal": "공식 네이티브 설치 스크립트로 Antigravity CLI를 설치한다.",
       "topics": [
         "공식 설치 스크립트 실행",
@@ -314,7 +302,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/agy_PATH_오류.svg",
+      "imagePath": "assets/basic/step01/agy_PATH_오류.png",
       "goal": "설치 직후 agy 명령을 찾지 못하는 원인을 파악한다.",
       "topics": [
         "'agy is not recognized' 오류 화면",
@@ -328,7 +316,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/agy_PATH_등록.svg",
+      "imagePath": "assets/basic/step01/agy_PATH_등록.png",
       "goal": "PATH 를 반영한다. Windows 는 스크립트로 자동, macOS 는 설치가 알려준 줄을 그대로 붙여넣는다.",
       "topics": [
         "Windows — 액션박스 스크립트가 설치 위치를 자동으로 찾아 PATH 에 등록한다",
@@ -348,7 +336,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/agy_PATH_반영_및_실행.svg",
+      "imagePath": "assets/basic/step01/agy_PATH_반영_및_실행.png",
       "goal": "권한 확인 없이 agy 를 실행한다.",
       "topics": [
         "PATH 가 이미 잡혔으므로 VS Code 를 껐다 켤 필요가 없다",
@@ -372,7 +360,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/agy_Google_로그인_선택.svg",
+      "imagePath": "assets/basic/step01/agy_Google_로그인_선택.png",
       "goal": "로그인 방식으로 Google OAuth를 선택한다.",
       "topics": [
         "로그인 옵션 메뉴 확인",
@@ -383,7 +371,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/agy_Google_계정_선택.svg",
+      "imagePath": "assets/basic/step01/agy_Google_계정_선택.png",
       "goal": "브라우저에서 Antigravity에 연결할 Google 계정을 선택한다.",
       "topics": [
         "브라우저 자동 열림 확인",
@@ -394,7 +382,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/agy_브라우저_인증.svg",
+      "imagePath": "assets/basic/step01/agy_브라우저_인증.png",
       "goal": "브라우저에서 인증 코드를 확인하고 복사한다.",
       "topics": [
         "인증 완료 화면 확인",
@@ -405,7 +393,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/agy_인증_코드_입력.svg",
+      "imagePath": "assets/basic/step01/agy_인증_코드_입력.png",
       "goal": "터미널로 돌아와 인증 코드를 입력하고 로그인을 완료한다.",
       "topics": [
         "터미널 입력창에 복사한 코드 붙여넣기",
@@ -416,7 +404,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/agy_테마_선택.svg",
+      "imagePath": "assets/basic/step01/agy_테마_선택.png",
       "goal": "Antigravity CLI 화면의 테마(색상)를 선택한다.",
       "topics": [
         "터미널 테마 목록 확인",
@@ -426,7 +414,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/agy_데이터_사용_설정.svg",
+      "imagePath": "assets/basic/step01/agy_데이터_사용_설정.png",
       "goal": "약관 및 데이터 사용 옵션을 설정하고, 방향키로 버튼 줄까지 내려간다.",
       "topics": [
         "데이터 사용 및 품질 개선 안내 — 체크 상태를 원하는 대로 둔다",
@@ -449,7 +437,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/agy_초기_설정_완료.svg",
+      "imagePath": "assets/basic/step01/agy_초기_설정_완료.png",
       "goal": "방향키로 Done을 선택해 초기 설정을 끝내고 메인 화면으로 진입한다.",
       "topics": [
         "버튼 줄에서 방향키 → 를 눌러 [Previous] 에서 Done 으로 옮긴다",
@@ -476,7 +464,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/agy_작업_폴더_신뢰.svg",
+      "imagePath": "assets/basic/step01/agy_작업_폴더_신뢰.png",
       "goal": "에이전트1 폴더에 대한 읽기·수정 권한을 허용한다.",
       "topics": [
         "작업 폴더 신뢰(Trust workspace) 안내",
@@ -486,7 +474,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/agy_실행_화면.svg",
+      "imagePath": "assets/basic/step01/agy_실행_화면.png",
       "goal": "Antigravity 실행 화면의 계정, 모델, 현재 폴더, 입력창을 확인한다.",
       "topics": [
         "상단 계정 및 모델명 표시",
@@ -497,7 +485,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/agy_첫_대화_자기소개.svg",
+      "imagePath": "assets/basic/step01/agy_첫_대화_자기소개.png",
       "goal": "첫 대화로 '너는 누구니?'를 입력하고 AI의 정체를 확인한다.",
       "topics": [
         "프롬프트 입력창에 자연어 질문 입력",
@@ -510,7 +498,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/agy_자기소개서_생성.svg",
+      "imagePath": "assets/basic/step01/agy_자기소개서_생성.png",
       "goal": "현재 폴더에 'gemini.txt'를 만들도록 요청한다.",
       "topics": [
         "파일 이름은 뒤에 있는 모델 이름으로 — Antigravity 는 Gemini 을 씁니다",
@@ -524,7 +512,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/agy_파일_생성_확인.svg",
+      "imagePath": "assets/basic/step01/agy_파일_생성_확인.png",
       "goal": "VS Code 탐색기에서 Antigravity가 만든 gemini.txt를 확인한다.",
       "topics": [
         "에이전트1 폴더에 gemini.txt 생성 확인",
@@ -535,7 +523,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/agy_introduce_폴더_생성.svg",
+      "imagePath": "assets/basic/step01/agy_introduce_폴더_생성.png",
       "goal": "Antigravity에 introduce 폴더 생성을 요청한다.",
       "topics": [
         "새 폴더 생성 자연어 요청",
@@ -548,7 +536,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/agy_자기소개서_이동.svg",
+      "imagePath": "assets/basic/step01/agy_자기소개서_이동.png",
       "goal": "gemini.txt를 introduce 폴더로 이동하도록 요청한다.",
       "topics": [
         "파일 이동 작업 자연어 지시",
@@ -561,7 +549,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/agy_최종_폴더_구조.svg",
+      "imagePath": "assets/basic/step01/agy_최종_폴더_구조.png",
       "goal": "에이전트1/introduce/gemini.txt 최종 트리 구조를 확인한다.",
       "topics": [
         "introduce 폴더 안에 gemini.txt 가 들어갔는지 확인",
@@ -571,7 +559,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/agy_Ctrl_C_종료.svg",
+      "imagePath": "assets/basic/step01/agy_Ctrl_C_종료.png",
       "goal": "Ctrl + C 로 Antigravity 를 종료하고 일반 터미널로 돌아온다.",
       "topics": [
         "Ctrl + C 로 AI CLI 를 빠져나온다",
@@ -582,7 +570,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/claude_설치.svg",
+      "imagePath": "assets/basic/step01/claude_설치.png",
       "goal": "공식 설치 스크립트로 Claude Code 를 설치한다.",
       "topics": [
         "설치 명령 한 줄",
@@ -605,7 +593,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/codex_설치.svg",
+      "imagePath": "assets/basic/step01/codex_설치.png",
       "goal": "공식 설치 스크립트로 Codex CLI 를 설치한다.",
       "topics": [
         "-NoProfile 을 빼지 않는다",
@@ -628,7 +616,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/PATH_자동_등록.svg",
+      "imagePath": "assets/basic/step01/PATH_자동_등록.png",
       "goal": "codex, claude 몫까지 PATH 를 마저 반영한다. Windows 는 같은 스크립트, macOS 는 새로 찍힌 줄을 그대로 붙여넣는다.",
       "topics": [
         "Windows — 같은 명령을 한 번 더 실행해 codex, claude 자리까지 함께 등록한다",
@@ -648,7 +636,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/codex_설치_확인_및_실행.svg",
+      "imagePath": "assets/basic/step01/codex_설치_확인_및_실행.png",
       "goal": "Codex 버전을 확인하고 codex를 실행한다.",
       "topics": [
         "codex --version 버전 확인",
@@ -671,7 +659,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/codex_로그인_및_실행_화면.svg",
+      "imagePath": "assets/basic/step01/codex_로그인_및_실행_화면.png",
       "goal": "ChatGPT 계정으로 로그인하고 Codex 실행 화면을 확인한다.",
       "topics": [
         "브라우저 연동 로그인 완료",
@@ -681,7 +669,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/codex_첫_대화_자기소개.svg",
+      "imagePath": "assets/basic/step01/codex_첫_대화_자기소개.png",
       "goal": "Codex CLI에 '너는 누구니?'를 입력하고 응답을 확인한다.",
       "topics": [
         "첫 대화 질문 입력",
@@ -694,7 +682,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/codex_자기소개서_생성.svg",
+      "imagePath": "assets/basic/step01/codex_자기소개서_생성.png",
       "goal": "현재 폴더에 'gpt.txt'를 만들도록 요청한다.",
       "topics": [
         "파일 이름은 뒤에 있는 모델 이름으로 — Codex 는 GPT 을 씁니다",
@@ -708,7 +696,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/codex_파일_생성_확인.svg",
+      "imagePath": "assets/basic/step01/codex_파일_생성_확인.png",
       "goal": "VS Code 탐색기에서 Codex가 만든 gpt.txt를 확인한다.",
       "topics": [
         "에이전트1 폴더에 gpt.txt 생성 확인",
@@ -719,7 +707,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/codex_introduce_폴더_생성.svg",
+      "imagePath": "assets/basic/step01/codex_introduce_폴더_생성.png",
       "goal": "Codex에 introduce 폴더 생성을 요청한다.",
       "topics": [
         "이미 앞 에이전트가 만들어 둔 폴더다",
@@ -733,7 +721,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/codex_자기소개서_이동.svg",
+      "imagePath": "assets/basic/step01/codex_자기소개서_이동.png",
       "goal": "gpt.txt를 introduce 폴더로 이동하도록 요청한다.",
       "topics": [
         "파일 이동 작업 자연어 지시",
@@ -746,7 +734,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/codex_최종_폴더_구조.svg",
+      "imagePath": "assets/basic/step01/codex_최종_폴더_구조.png",
       "goal": "에이전트1/introduce/gpt.txt 최종 트리 구조를 확인한다.",
       "topics": [
         "introduce 폴더 안에 gpt.txt 가 추가됐는지 확인",
@@ -756,7 +744,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/codex_Ctrl_C_종료.svg",
+      "imagePath": "assets/basic/step01/codex_Ctrl_C_종료.png",
       "goal": "Ctrl + C로 Codex CLI 입력을 종료하고 일반 터미널로 복귀한다.",
       "topics": [
         "Ctrl + C로 Codex CLI 종료",
@@ -766,7 +754,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/claude_실행.svg",
+      "imagePath": "assets/basic/step01/claude_실행.png",
       "goal": "Claude Code 버전을 확인하고 claude를 실행한다.",
       "topics": [
         "claude --version 버전 확인",
@@ -789,7 +777,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/claude_터미널_모양_선택.svg",
+      "imagePath": "assets/basic/step01/claude_터미널_모양_선택.png",
       "goal": "Claude Code 최초 실행 시 터미널 테마를 선택한다.",
       "topics": [
         "Dark / Light 테마 선택",
@@ -799,7 +787,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/claude_로그인_방식_선택.svg",
+      "imagePath": "assets/basic/step01/claude_로그인_방식_선택.png",
       "goal": "Claude 구독 계정 또는 해당 로그인 방식을 선택한다.",
       "topics": [
         "Claude Pro / Team / Console 옵션 확인",
@@ -809,7 +797,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/claude_브라우저_권한_확인.svg",
+      "imagePath": "assets/basic/step01/claude_브라우저_권한_확인.png",
       "goal": "브라우저에서 Claude 계정 권한을 확인하고 승인한다.",
       "topics": [
         "브라우저 승인 페이지 확인",
@@ -819,7 +807,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/claude_로그인_완료.svg",
+      "imagePath": "assets/basic/step01/claude_로그인_완료.png",
       "goal": "Claude Code 로그인 완료 상태를 확인한다.",
       "topics": [
         "로그인 성공 메시지 확인",
@@ -829,7 +817,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/claude_보안_안내.svg",
+      "imagePath": "assets/basic/step01/claude_보안_안내.png",
       "goal": "Claude Code의 보안 및 권한 모델 안내를 숙지한다.",
       "topics": [
         "명령 실행 권한 및 보안 안내",
@@ -839,7 +827,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/claude_터미널_입력_설정.svg",
+      "imagePath": "assets/basic/step01/claude_터미널_입력_설정.png",
       "goal": "권장 터미널 입력 설정을 적용한다.",
       "topics": [
         "터미널 입력 및 단축키 모드 설정",
@@ -849,7 +837,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/claude_작업_폴더_신뢰.svg",
+      "imagePath": "assets/basic/step01/claude_작업_폴더_신뢰.png",
       "goal": "에이전트1 작업 폴더에 대한 신뢰 권한을 부여한다.",
       "topics": [
         "작업 디렉토리 접근 권한 확인",
@@ -859,7 +847,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/claude_실행_화면.svg",
+      "imagePath": "assets/basic/step01/claude_실행_화면.png",
       "goal": "Claude Code 실행 화면과 대화형 입력창을 확인한다.",
       "topics": [
         "모델 및 버전 정보 확인",
@@ -870,7 +858,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/claude_기본_세팅.svg",
+      "imagePath": "assets/basic/step01/claude_기본_세팅.png",
       "goal": "모델을 Sonnet 으로 고정하고 /ide 에서 none 을 골라 VS Code 연동을 끊는다.",
       "topics": [
         "슬래시(/)로 시작하면 대화가 아니라 설정 명령이다",
@@ -894,7 +882,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/claude_첫_대화_자기소개.svg",
+      "imagePath": "assets/basic/step01/claude_첫_대화_자기소개.png",
       "goal": "Claude Code에 '너는 누구니?'를 입력하고 응답을 확인한다.",
       "topics": [
         "첫 대화 질문 입력",
@@ -907,7 +895,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/claude_자기소개서_생성.svg",
+      "imagePath": "assets/basic/step01/claude_자기소개서_생성.png",
       "goal": "현재 폴더에 'claude.txt'를 만들도록 요청한다.",
       "topics": [
         "파일 이름은 뒤에 있는 모델 이름으로 — Claude Code 는 Claude 을 씁니다",
@@ -921,7 +909,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/claude_파일_생성_확인.svg",
+      "imagePath": "assets/basic/step01/claude_파일_생성_확인.png",
       "goal": "VS Code 탐색기에서 Claude Code가 만든 claude.txt를 확인한다.",
       "topics": [
         "에이전트1 폴더에 claude.txt 생성 확인",
@@ -932,7 +920,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/claude_introduce_폴더_생성.svg",
+      "imagePath": "assets/basic/step01/claude_introduce_폴더_생성.png",
       "goal": "Claude Code에 introduce 폴더 생성을 요청한다.",
       "topics": [
         "이미 앞 에이전트가 만들어 둔 폴더다",
@@ -946,7 +934,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/claude_자기소개서_이동.svg",
+      "imagePath": "assets/basic/step01/claude_자기소개서_이동.png",
       "goal": "claude.txt를 introduce 폴더로 이동하도록 요청한다.",
       "topics": [
         "파일 이동 작업 자연어 지시",
@@ -959,7 +947,7 @@
       }
     },
     {
-      "imagePath": "assets/basic/step01/claude_최종_폴더_구조.svg",
+      "imagePath": "assets/basic/step01/claude_최종_폴더_구조.png",
       "goal": "에이전트1/introduce/claude.txt 최종 트리 구조를 확인한다.",
       "topics": [
         "introduce 폴더 안에 claude.txt 가 추가됐는지 확인",
@@ -969,7 +957,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/claude_Ctrl_C_종료.svg",
+      "imagePath": "assets/basic/step01/claude_Ctrl_C_종료.png",
       "goal": "Ctrl + C로 Claude Code를 종료하고 일반 터미널로 복귀한다.",
       "topics": [
         "Ctrl + C로 Claude Code CLI 종료",
@@ -979,7 +967,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/claude_일반_터미널_복귀.svg",
+      "imagePath": "assets/basic/step01/claude_일반_터미널_복귀.png",
       "goal": "일반 터미널 프롬프트로 완전히 복귀했음을 확인한다.",
       "topics": [
         "일반 터미널 프롬프트 복귀 확인",
@@ -989,7 +977,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/세_에이전트_결과_비교.svg",
+      "imagePath": "assets/basic/step01/세_에이전트_결과_비교.png",
       "goal": "한 폴더에 나란히 쌓인 세 파일을 열어 에이전트별 차이를 비교한다.",
       "topics": [
         "에이전트1/introduce 안의 gemini.txt · gpt.txt · claude.txt 를 나란히 연다",
@@ -1000,7 +988,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/Step1_완료.svg",
+      "imagePath": "assets/basic/step01/Step1_완료.png",
       "goal": "Step 1의 모든 학습 목표(설치, 로그인, 파일 작업, CLI 전환)를 완수했음을 점검한다.",
       "topics": [
         "VS Code 터미널 제어 숙달",

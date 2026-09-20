@@ -1,0 +1,22 @@
+{
+  "name": "slidekit2",
+  "private": true,
+  "type": "module",
+  "description": "Slide renderer for ai-agent-class. Cloned from ax-site class/claude-code-basics/video/src/slides (2026-09-20) so slide building lives in this repo. Renders 1920x1080 React slides to PNG.",
+  "scripts": {
+    "render": "node render.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.522",
+    "@remotion/renderer": "4.0.522",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.522"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "typescript": "5.9.3"
+  },
+  "sideEffects": ["*.css"]
+}

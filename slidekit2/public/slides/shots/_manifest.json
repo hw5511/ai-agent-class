@@ -1,0 +1,191 @@
+[
+ {
+  "part": "s1-agent",
+  "slide": "AI_에이전트_현황",
+  "file": "slides/shots/AI_에이전트_현황_1.png",
+  "w": "366",
+  "h": "300"
+ },
+ {
+  "part": "s1-agent",
+  "slide": "AI_에이전트_현황",
+  "file": "slides/shots/AI_에이전트_현황_2.png",
+  "w": "36",
+  "h": "36"
+ },
+ {
+  "part": "s1-agent",
+  "slide": "AI_에이전트_현황",
+  "file": "slides/shots/AI_에이전트_현황_3.png",
+  "w": "366",
+  "h": "300"
+ },
+ {
+  "part": "s1-agent",
+  "slide": "AI_에이전트_현황",
+  "file": "slides/shots/AI_에이전트_현황_4.png",
+  "w": "36",
+  "h": "36"
+ },
+ {
+  "part": "s1-agent",
+  "slide": "AI_에이전트_현황",
+  "file": "slides/shots/AI_에이전트_현황_5.png",
+  "w": "366",
+  "h": "300"
+ },
+ {
+  "part": "s1-agent",
+  "slide": "AI_에이전트_현황",
+  "file": "slides/shots/AI_에이전트_현황_6.png",
+  "w": "36",
+  "h": "36"
+ },
+ {
+  "part": "s1-agent",
+  "slide": "AI_동작원리를_알면_달라진다",
+  "file": "slides/shots/AI_동작원리를_알면_달라진다.png",
+  "w": "530",
+  "h": "420"
+ },
+ {
+  "part": "s1-agy-install",
+  "slide": "agy_설치",
+  "file": "slides/shots/agy_설치.png",
+  "w": "998",
+  "h": "485"
+ },
+ {
+  "part": "s1-agy-install",
+  "slide": "agy_PATH_오류",
+  "file": "slides/shots/agy_PATH_오류.png",
+  "w": "998",
+  "h": "485"
+ },
+ {
+  "part": "s1-agy-login",
+  "slide": "agy_Google_로그인_선택",
+  "file": "slides/shots/agy_Google_로그인_선택.png",
+  "w": "669",
+  "h": "484"
+ },
+ {
+  "part": "s1-agy-login",
+  "slide": "agy_Google_계정_선택",
+  "file": "slides/shots/agy_Google_계정_선택.png",
+  "w": "630",
+  "h": "484"
+ },
+ {
+  "part": "s1-agy-login",
+  "slide": "agy_브라우저_인증",
+  "file": "slides/shots/agy_브라우저_인증.png",
+  "w": "570",
+  "h": "484"
+ },
+ {
+  "part": "s1-agy-login",
+  "slide": "agy_인증_코드_입력",
+  "file": "slides/shots/agy_인증_코드_입력.png",
+  "w": "721",
+  "h": "484"
+ },
+ {
+  "part": "s1-agy-setup",
+  "slide": "agy_테마_선택",
+  "file": "slides/shots/agy_테마_선택.png",
+  "w": "600",
+  "h": "484"
+ },
+ {
+  "part": "s1-agy-setup",
+  "slide": "agy_데이터_사용_설정",
+  "file": "slides/shots/agy_데이터_사용_설정.png",
+  "w": "664",
+  "h": "484"
+ },
+ {
+  "part": "s1-agy-setup",
+  "slide": "agy_초기_설정_완료",
+  "file": "slides/shots/agy_초기_설정_완료.png",
+  "w": "685",
+  "h": "484"
+ },
+ {
+  "part": "s1-agy-setup",
+  "slide": "agy_작업_폴더_신뢰",
+  "file": "slides/shots/agy_작업_폴더_신뢰.png",
+  "w": "657",
+  "h": "484"
+ },
+ {
+  "part": "s1-agy-setup",
+  "slide": "agy_실행_화면",
+  "file": "slides/shots/agy_실행_화면.png",
+  "w": "747",
+  "h": "484"
+ },
+ {
+  "part": "s1-claude-login",
+  "slide": "claude_터미널_모양_선택",
+  "file": "slides/shots/claude_터미널_모양_선택.png",
+  "w": "998",
+  "h": "485"
+ },
+ {
+  "part": "s1-claude-login",
+  "slide": "claude_로그인_방식_선택",
+  "file": "slides/shots/claude_로그인_방식_선택.png",
+  "w": "998",
+  "h": "485"
+ },
+ {
+  "part": "s1-claude-login",
+  "slide": "claude_브라우저_권한_확인",
+  "file": "slides/shots/claude_브라우저_권한_확인.png",
+  "w": "418",
+  "h": "485"
+ },
+ {
+  "part": "s1-claude-login",
+  "slide": "claude_로그인_완료",
+  "file": "slides/shots/claude_로그인_완료.png",
+  "w": "998",
+  "h": "485"
+ },
+ {
+  "part": "s1-claude-login",
+  "slide": "claude_보안_안내",
+  "file": "slides/shots/claude_보안_안내.png",
+  "w": "998",
+  "h": "485"
+ },
+ {
+  "part": "s1-claude-login",
+  "slide": "claude_터미널_입력_설정",
+  "file": "slides/shots/claude_터미널_입력_설정.png",
+  "w": "998",
+  "h": "485"
+ },
+ {
+  "part": "s1-claude-login",
+  "slide": "claude_작업_폴더_신뢰",
+  "file": "slides/shots/claude_작업_폴더_신뢰.png",
+  "w": "998",
+  "h": "485"
+ },
+ {
+  "part": "s1-claude-login",
+  "slide": "claude_실행_화면",
+  "file": "slides/shots/claude_실행_화면.png",
+  "w": "998",
+  "h": "485"
+ },
+ {
+  "part": "s1-claude-login",
+  "slide": "claude_기본_세팅",
+  "file": "slides/shots/claude_기본_세팅.png",
+  "w": "680",
+  "h": "471"
+ }
+]
