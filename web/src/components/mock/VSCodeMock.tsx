@@ -108,7 +108,7 @@ export function VSCodeMock({ s }: { s: VSCodeScreen }) {
             ))}
           </div>
         ) : (
-          <div className={cn("flex shrink-0 flex-col gap-1 border-r border-[#2b2b2b] bg-[#181818] px-3 pt-3 font-display text-[19px] text-[#cccccc]", s.explorerAction ? "w-[380px]" : "w-[260px]")}>
+          <div className={cn("flex shrink-0 flex-col gap-1 border-r border-[#2b2b2b] bg-[#181818] px-3 pt-3 font-display text-[19px] text-[#cccccc]", s.explorerAction ? "w-[380px]" : "w-[340px]")}>
             <span className="px-1 text-[15px] font-semibold tracking-wide text-[#9d9d9d]">EXPLORER</span>
             <span className="flex items-center gap-1 font-bold">
               <ChevronDownIcon className="size-5 shrink-0" />

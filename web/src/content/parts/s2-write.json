@@ -222,25 +222,8 @@
     },
     {
       "id": "s2-write-05",
-      "template": "cards",
+      "template": "illustration",
       "title": "SVG 벡터 그림",
-      "cards": [
-        {
-          "label": "사진 (jpg·png)",
-          "tags": [
-            "점(픽셀)을 촘촘히 찍음",
-            "확대하면 흐려짐"
-          ]
-        },
-        {
-          "label": "벡터 그림 (svg)",
-          "tags": [
-            "좌표와 도형 코드",
-            "확대해도 안 깨짐"
-          ],
-          "highlight": true
-        }
-      ],
       "notes": [
         {
           "n": 1,
@@ -252,7 +235,8 @@
           "head": "벡터 = 좌표와 도형",
           "body": "circle·rect 같은 도형 코드로 그림을 그립니다."
         }
-      ]
+      ],
+      "illustration": "/illustrations/raster-vs-vector.svg"
     },
     {
       "id": "s2-write-06",

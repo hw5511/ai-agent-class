@@ -209,29 +209,8 @@
     },
     {
       "id": "s2-edit-05",
-      "template": "cards",
+      "template": "illustration",
       "title": "테트리스 개선 전후",
-      "cards": [
-        {
-          "label": "이전",
-          "tags": [
-            "시작 버튼 없음",
-            "밋밋한 사각형",
-            "작은 화면"
-          ],
-          "badge": 1
-        },
-        {
-          "label": "이후",
-          "tags": [
-            "시작 버튼 있음",
-            "입체 블록",
-            "커진 화면"
-          ],
-          "badge": 2,
-          "highlight": true
-        }
-      ],
       "notes": [
         {
           "n": 1,
@@ -243,7 +222,8 @@
           "head": "이후 — 시작 버튼·입체 블록·커진 화면",
           "body": "같은 테트리스인데 달라진 부분이 한눈에 보인다."
         }
-      ]
+      ],
+      "illustration": "/illustrations/tetris-before-after.svg"
     },
     {
       "id": "s2-edit-06",

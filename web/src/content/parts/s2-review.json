@@ -435,38 +435,6 @@
       }
     },
     {
-      "id": "s2-review-11",
-      "template": "screen",
-      "title": "브라우저에서 계정 선택",
-      "screen": {
-        "kind": "browser",
-        "url": "accounts.google.com/signin/choose",
-        "results": [
-          {
-            "site": "Google 계정 선택",
-            "title": "내 계정 (name@gmail.com)",
-            "badge": 1
-          },
-          {
-            "site": "다른 계정 사용",
-            "title": "수업용 계정은 선택하지 않는다"
-          }
-        ]
-      },
-      "notes": [
-        {
-          "n": 1,
-          "head": "본인 계정 선택",
-          "body": "수업용이 아닌 내 계정을 클릭한다."
-        },
-        {
-          "n": 2,
-          "head": "연결 완료까지 대기",
-          "body": "창을 닫지 말고 터미널로 돌아올 때까지 기다린다."
-        }
-      ]
-    },
-    {
       "id": "s2-review-12",
       "template": "screen",
       "title": "/model sonnet 입력",

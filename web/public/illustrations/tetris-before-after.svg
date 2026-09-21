@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700">
+<rect x="170" y="110" width="420" height="520" rx="16" fill="#fff" stroke="#e3e5e8" stroke-width="2"/>
+<rect x="170" y="110" width="420" height="44" rx="16" fill="#f3f4f6"/><rect x="170" y="138" width="420" height="16" fill="#f3f4f6"/>
+<text x="190" y="140" font-family="Pretendard, Malgun Gothic, sans-serif" font-size="22" fill="#101113">tetris.py</text>
+<rect x="230" y="190" width="300" height="360" fill="#fafafa" stroke="#e3e5e8"/>
+<rect x="350" y="490" width="30" height="30" fill="#9aa0a6" stroke="#fff" stroke-width="1"/>
+<rect x="380" y="490" width="30" height="30" fill="#9aa0a6" stroke="#fff" stroke-width="1"/>
+<rect x="410" y="490" width="30" height="30" fill="#9aa0a6" stroke="#fff" stroke-width="1"/>
+<rect x="380" y="460" width="30" height="30" fill="#9aa0a6" stroke="#fff" stroke-width="1"/>
+<rect x="230" y="520" width="30" height="30" fill="#9aa0a6" stroke="#fff" stroke-width="1"/>
+<rect x="260" y="520" width="30" height="30" fill="#9aa0a6" stroke="#fff" stroke-width="1"/>
+<rect x="290" y="520" width="30" height="30" fill="#9aa0a6" stroke="#fff" stroke-width="1"/>
+<rect x="320" y="520" width="30" height="30" fill="#9aa0a6" stroke="#fff" stroke-width="1"/>
+<rect x="440" y="520" width="30" height="30" fill="#9aa0a6" stroke="#fff" stroke-width="1"/>
+<rect x="470" y="520" width="30" height="30" fill="#9aa0a6" stroke="#fff" stroke-width="1"/>
+<rect x="500" y="520" width="30" height="30" fill="#9aa0a6" stroke="#fff" stroke-width="1"/>
+<rect x="470" y="490" width="30" height="30" fill="#9aa0a6" stroke="#fff" stroke-width="1"/>
+<rect x="350" y="280" width="30" height="30" fill="#9aa0a6" stroke="#fff" stroke-width="1"/>
+<rect x="350" y="310" width="30" height="30" fill="#9aa0a6" stroke="#fff" stroke-width="1"/>
+<rect x="380" y="310" width="30" height="30" fill="#9aa0a6" stroke="#fff" stroke-width="1"/>
+<rect x="380" y="340" width="30" height="30" fill="#9aa0a6" stroke="#fff" stroke-width="1"/>
+<circle cx="590" cy="110" r="26" fill="#1a73e8"/><text x="590" y="120" text-anchor="middle" font-family="Pretendard, Malgun Gothic, sans-serif" font-size="28" font-weight="700" fill="#fff">1</text>
+<path d="M660 370h120m-24-20 24 20-24 20" fill="none" stroke="#1a73e8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="850" y="50" width="600" height="640" rx="16" fill="#fff" stroke="#1a73e8" stroke-width="3"/>
+<rect x="850" y="50" width="600" height="44" rx="16" fill="#f3f4f6"/><rect x="850" y="78" width="600" height="16" fill="#f3f4f6"/>
+<text x="870" y="80" font-family="Pretendard, Malgun Gothic, sans-serif" font-size="22" fill="#101113">tetris.py</text>
+<rect x="900" y="120" width="400" height="480" fill="#1f2430" rx="6"/>
+<rect x="1061" y="521" width="38" height="38" fill="#9334e6"/><path d="M1061 521h38l-8 8h-22v22l-8 8z" fill="#fff" opacity=".35"/><path d="M1099 559h-38l8-8h22v-22l8-8z" fill="#000" opacity=".25"/>
+<rect x="1101" y="521" width="38" height="38" fill="#9334e6"/><path d="M1101 521h38l-8 8h-22v22l-8 8z" fill="#fff" opacity=".35"/><path d="M1139 559h-38l8-8h22v-22l8-8z" fill="#000" opacity=".25"/>
+<rect x="1141" y="521" width="38" height="38" fill="#9334e6"/><path d="M1141 521h38l-8 8h-22v22l-8 8z" fill="#fff" opacity=".35"/><path d="M1179 559h-38l8-8h22v-22l8-8z" fill="#000" opacity=".25"/>
+<rect x="1101" y="481" width="38" height="38" fill="#9334e6"/><path d="M1101 481h38l-8 8h-22v22l-8 8z" fill="#fff" opacity=".35"/><path d="M1139 519h-38l8-8h22v-22l8-8z" fill="#000" opacity=".25"/>
+<rect x="901" y="561" width="38" height="38" fill="#1a73e8"/><path d="M901 561h38l-8 8h-22v22l-8 8z" fill="#fff" opacity=".35"/><path d="M939 599h-38l8-8h22v-22l8-8z" fill="#000" opacity=".25"/>
+<rect x="941" y="561" width="38" height="38" fill="#1a73e8"/><path d="M941 561h38l-8 8h-22v22l-8 8z" fill="#fff" opacity=".35"/><path d="M979 599h-38l8-8h22v-22l8-8z" fill="#000" opacity=".25"/>
+<rect x="981" y="561" width="38" height="38" fill="#1a73e8"/><path d="M981 561h38l-8 8h-22v22l-8 8z" fill="#fff" opacity=".35"/><path d="M1019 599h-38l8-8h22v-22l8-8z" fill="#000" opacity=".25"/>
+<rect x="1021" y="561" width="38" height="38" fill="#1a73e8"/><path d="M1021 561h38l-8 8h-22v22l-8 8z" fill="#fff" opacity=".35"/><path d="M1059 599h-38l8-8h22v-22l8-8z" fill="#000" opacity=".25"/>
+<rect x="1181" y="561" width="38" height="38" fill="#e8710a"/><path d="M1181 561h38l-8 8h-22v22l-8 8z" fill="#fff" opacity=".35"/><path d="M1219 599h-38l8-8h22v-22l8-8z" fill="#000" opacity=".25"/>
+<rect x="1221" y="561" width="38" height="38" fill="#e8710a"/><path d="M1221 561h38l-8 8h-22v22l-8 8z" fill="#fff" opacity=".35"/><path d="M1259 599h-38l8-8h22v-22l8-8z" fill="#000" opacity=".25"/>
+<rect x="1261" y="561" width="38" height="38" fill="#e8710a"/><path d="M1261 561h38l-8 8h-22v22l-8 8z" fill="#fff" opacity=".35"/><path d="M1299 599h-38l8-8h22v-22l8-8z" fill="#000" opacity=".25"/>
+<rect x="1261" y="521" width="38" height="38" fill="#e8710a"/><path d="M1261 521h38l-8 8h-22v22l-8 8z" fill="#fff" opacity=".35"/><path d="M1299 559h-38l8-8h22v-22l8-8z" fill="#000" opacity=".25"/>
+<rect x="1061" y="241" width="38" height="38" fill="#188038"/><path d="M1061 241h38l-8 8h-22v22l-8 8z" fill="#fff" opacity=".35"/><path d="M1099 279h-38l8-8h22v-22l8-8z" fill="#000" opacity=".25"/>
+<rect x="1061" y="281" width="38" height="38" fill="#188038"/><path d="M1061 281h38l-8 8h-22v22l-8 8z" fill="#fff" opacity=".35"/><path d="M1099 319h-38l8-8h22v-22l8-8z" fill="#000" opacity=".25"/>
+<rect x="1101" y="281" width="38" height="38" fill="#188038"/><path d="M1101 281h38l-8 8h-22v22l-8 8z" fill="#fff" opacity=".35"/><path d="M1139 319h-38l8-8h22v-22l8-8z" fill="#000" opacity=".25"/>
+<rect x="1101" y="321" width="38" height="38" fill="#188038"/><path d="M1101 321h38l-8 8h-22v22l-8 8z" fill="#fff" opacity=".35"/><path d="M1139 359h-38l8-8h22v-22l8-8z" fill="#000" opacity=".25"/>
+<rect x="1320" y="120" width="140" height="56" rx="12" fill="#1a73e8"/><text x="1390" y="157" text-anchor="middle" font-family="Pretendard, Malgun Gothic, sans-serif" font-size="26" font-weight="700" fill="#fff">START</text>
+<text x="1320" y="230" font-family="Pretendard, Malgun Gothic, sans-serif" font-size="22" fill="#7c8288">SCORE</text><text x="1320" y="266" font-family="Consolas, monospace" font-size="32" font-weight="700" fill="#101113">1200</text>
+<circle cx="1450" cy="50" r="26" fill="#1a73e8"/><text x="1450" y="60" text-anchor="middle" font-family="Pretendard, Malgun Gothic, sans-serif" font-size="28" font-weight="700" fill="#fff">2</text>
+</svg>

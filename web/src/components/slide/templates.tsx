@@ -145,22 +145,26 @@ export function PartCoverT({ s }: { s: PartCoverSlide }) {
 }
 
 // Visual cards: each thing shown by its logo and/or a real picture, with a label and short tags.
+// Cards with pictures fill the body height; icon-only cards are a compact centred group (icon, label,
+// tags stacked) so a tall card never leaves an empty gap between icon and label.
 function CardsT({ s }: { s: CardsSlide }) {
   const withImages = s.cards.some((c) => c.image)
   return (
-    <div className="flex h-full min-h-0 items-stretch gap-8">
+    <div className="flex h-full min-h-0 items-center">
+    <div className={cn("flex w-full min-h-0 items-stretch gap-8", withImages && "h-full")}>
       {s.cards.map((c, i) => (
         <div
           key={i}
           className={cn(
             "relative flex min-w-0 flex-1 flex-col overflow-hidden rounded-3xl border bg-white",
+            !withImages && "items-center justify-center gap-8 px-8 py-16 text-center",
             c.highlight ? "border-2 border-slide-accent" : "border-neutral-200",
           )}
         >
           {c.badge ? <span className="absolute top-5 right-5 z-10"><NumberBadge n={c.badge} /></span> : null}
           {c.logo && (
-            <div className={cn("flex shrink-0 items-center justify-center px-8", withImages ? "h-28" : "flex-1")}>
-              <Mark src={c.logo} px={withImages ? 56 : 128} />
+            <div className={cn("flex shrink-0 items-center justify-center", withImages ? "h-28 px-8" : "")}>
+              <Mark src={c.logo} px={withImages ? 56 : 120} />
             </div>
           )}
           {c.image && (
@@ -168,18 +172,19 @@ function CardsT({ s }: { s: CardsSlide }) {
               <img src={c.image} alt="" className="size-full object-cover object-top" />
             </div>
           )}
-          <div className="flex shrink-0 flex-col gap-3 px-8 py-6">
-            <span className="font-display text-[34px] font-bold text-[#101113] break-keep">{c.label}</span>
+          <div className={cn("flex shrink-0 flex-col gap-3", withImages ? "px-8 py-6" : "items-center")}>
+            <span className="font-display text-[36px] font-bold text-[#101113] break-keep">{c.label}</span>
             {c.tags?.length ? (
-              <div className="flex flex-wrap gap-2">
+              <div className={cn("flex flex-wrap gap-2", !withImages && "justify-center")}>
                 {c.tags.map((t, ti) => (
-                  <span key={ti} className="rounded-full border border-neutral-200 px-4 py-1.5 font-body text-[20px] text-[#43474b]">{t}</span>
+                  <span key={ti} className="rounded-full border border-neutral-200 px-4 py-1.5 font-body text-[22px] break-keep text-[#43474b]">{t}</span>
                 ))}
               </div>
             ) : null}
           </div>
         </div>
       ))}
+    </div>
     </div>
   )
 }
