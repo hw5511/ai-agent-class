@@ -205,7 +205,7 @@ export interface VSCodeScreen {
   editorNotice?: { file: string; text: string } // editor tab that cannot show the file (a PDF without the extension)
   toast?: { text: string; buttons: { label: string; primary?: boolean; badge?: number }[] } // bottom-right notification
   explorerAction?: { icon: "newFile" | "newFolder"; badge?: number } // the icons on the explorer header
-  keycap?: { keys: string[]; badge?: number } // a shortcut drawn over the window, e.g. ["Ctrl", "J"]
+  keycap?: { keys: string[]; times?: number; badge?: number } // a shortcut drawn over the window, e.g. ["Ctrl", "J"]
 }
 
 export interface TerminalScreen {
@@ -225,10 +225,14 @@ export interface Terminal {
   cwd?: string
   prompt?: string // shell only: replaces the "PS <cwd>>" prompt, e.g. "student@MacBook ~ %" on macOS
   /** conversation, oldest first; `badge` pins a numbered badge next to that line */
-  turns: { role: "user" | "assistant" | "tool"; text: string; badge?: number }[]
+  turns: { role: "user" | "assistant" | "tool"; text: string; badge?: number; mark?: string }[] // mark = substring drawn as drag-selected text
   usage?: { label: string; pct: number; resets: string; badge?: number }[] // /usage bar gauges after the turns
   // a slash-command panel drawn under a rule line (e.g. /chrome); each row is segments with an optional colour
-  panel?: { title: string; rows: { seg: { t: string; c?: "green" | "dim" | "accent" | "bold" }[]; badge?: number }[] }
+  panel?: { title: string; rows: { seg: { t: string; c?: "green" | "dim" | "accent" | "bold" | "tab" }[]; badge?: number }[] }
+  // /resume session picker: optional search box, the folder it lists, sessions newest first
+  picker?: { title?: string; search?: boolean; folder?: string; folderBadge?: number; items: { name: string; meta: string; selected?: boolean; badge?: number }[] }
+  sessionTag?: { name: string; badge?: number } // session name shown as a light-blue tag on the input box
+  footer?: { text: string; badge?: number } // status line under the input box, e.g. "bypass permissions on"
   input?: { text?: string; placeholder?: string; badge?: number }
 }
 

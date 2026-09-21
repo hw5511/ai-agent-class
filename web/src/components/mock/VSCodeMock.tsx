@@ -297,6 +297,7 @@ export function VSCodeMock({ s }: { s: VSCodeScreen }) {
               <span className="rounded-xl border-2 border-b-[5px] border-white bg-[#2b2b2b] px-5 py-2 font-display text-[28px] font-bold text-white">{k}</span>
             </span>
           ))}
+          {s.keycap.times ? <span className="font-display text-[30px] font-bold text-white">× {s.keycap.times}</span> : null}
           {s.keycap.badge ? <NumberBadge n={s.keycap.badge} /> : null}
         </div>
       )}

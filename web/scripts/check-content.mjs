@@ -37,6 +37,8 @@ function badgesOfScreen(s, out) {
     if (t.input?.badge) out.push(t.input.badge)
     for (const u of t.usage ?? []) if (u.badge) out.push(u.badge)
     for (const r of t.panel?.rows ?? []) if (r.badge) out.push(r.badge)
+    for (const x of t.picker?.items ?? []) if (x.badge) out.push(x.badge)
+    for (const b of [t.picker?.folderBadge, t.sessionTag?.badge, t.footer?.badge]) if (b) out.push(b)
   }
 }
 
