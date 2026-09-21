@@ -23,7 +23,6 @@
     "s1-cli-install",
     "s1-codex",
     "s1-claude-login",
-    "s1-claude-practice",
-    "s1-wrap"
+    "s1-claude-practice"
   ]
 }

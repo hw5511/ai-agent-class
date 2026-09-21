@@ -15,7 +15,6 @@
     "s2-read",
     "s2-write",
     "s2-edit",
-    "s2-bash",
-    "s2-wrap"
+    "s2-bash"
   ]
 }
