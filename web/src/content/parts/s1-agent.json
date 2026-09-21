@@ -184,46 +184,57 @@
     {
       "id": "s1-agent-05",
       "title": "명령 자동 감지·실행 방식",
-      "template": "compare",
-      "left": {
-        "label": "출력 규칙이 있는 AI",
-        "screen": {
-          "kind": "chat",
-          "app": "system.md — command{명령어} 로만 출력",
-          "messages": [
-            {
-              "role": "user",
-              "text": "30분 뒤에 컴퓨터 종료 예약해줘"
-            },
-            {
-              "role": "assistant",
-              "text": "command{shutdown -s -t 1800}",
-              "badge": 1
-            }
-          ]
-        }
-      },
-      "right": {
-        "label": "프로그램이 자동 실행",
-        "screen": {
-          "kind": "terminal",
-          "terminal": {
-            "vendor": "shell",
-            "cwd": "C:\\Users\\woohee",
-            "turns": [
+      "template": "stack",
+      "frame": "에이전트 프로그램",
+      "items": [
+        {
+          "screen": {
+            "kind": "file",
+            "name": "system.md — 출력 규칙",
+            "lines": [
+              "명령어를 실행할 때는 반드시 command{명령어} 형식으로만 출력하시오."
+            ],
+            "mark": "command{명령어}"
+          }
+        },
+        {
+          "grow": true,
+          "screen": {
+            "kind": "chat",
+            "app": "ChatGPT",
+            "logo": "/logos/openai.svg",
+            "messages": [
               {
                 "role": "user",
-                "text": "shutdown -s -t 1800",
-                "badge": 2
+                "text": "30분 뒤에 컴퓨터 종료 예약해줘"
               },
               {
                 "role": "assistant",
-                "text": "예약 종료가 설정되었습니다."
+                "code": "shutdown -s -t 1800",
+                "mark": "command{shutdown -s -t 1800}",
+                "markLabel": "command{} 자동 감지",
+                "badge": 1
               }
             ]
           }
+        },
+        {
+          "screen": {
+            "kind": "terminal",
+            "terminal": {
+              "vendor": "shell",
+              "cwd": "C:\\Users\\woohee",
+              "turns": [
+                {
+                  "role": "user",
+                  "text": "shutdown -s -t 1800",
+                  "badge": 2
+                }
+              ]
+            }
+          }
         }
-      },
+      ],
       "notes": [
         {
           "n": 1,

@@ -1,7 +1,7 @@
 // Slide templates. The slide area shows visuals only (CEO 2026-09-21): screens, tables, diagrams,
 // illustrations and a keyword title. Explanations live in slide.notes and render in the right panel
 // (NotesPanel), numbered to match the badges drawn on the visual. Everything is flex; no coordinates.
-import type { CardsSlide, CompareSlide, FlowSlide, IllustrationSlide, ImageSlide, OverviewSlide, PartCoverSlide, ScreenSlide, Slide, TableSlide } from "@/content/schema"
+import type { StackSlide, CardsSlide, CompareSlide, FlowSlide, IllustrationSlide, ImageSlide, OverviewSlide, PartCoverSlide, ScreenSlide, Slide, TableSlide } from "@/content/schema"
 import { NumberBadge } from "./NumberBadge"
 import { Mark } from "./Mark"
 import { ScreenView } from "./ScreenView"
@@ -27,6 +27,8 @@ export function SlideBody({ slide }: { slide: Slide }) {
       return <CardsT s={slide} />
     case "flow":
       return <FlowT s={slide} />
+    case "stack":
+      return <StackT s={slide} />
   }
 }
 
@@ -211,6 +213,32 @@ function FlowT({ s }: { s: FlowSlide }) {
           <svg viewBox="0 0 20 16" className="absolute -top-1 left-[calc(1.5%-10px)] h-4 w-5 text-slide-accent"><path d="M10 0 20 16H0Z" fill="currentColor" /></svg>
         </div>
       )}
+    </div>
+  )
+}
+
+// Screens top to bottom with a down arrow between them; `frame` wraps them in one labelled thin-bordered
+// box (the program that owns the whole pipeline).
+function StackT({ s }: { s: StackSlide }) {
+  const body = (
+    <div className="flex h-full min-h-0 flex-col">
+      {s.items.map((it, i) => (
+        <div key={i} className={cn("flex min-h-0 flex-col", it.grow ? "flex-1" : "shrink-0")}>
+          <div className={cn("min-h-0", it.grow && "flex-1")}><ScreenView screen={it.screen} /></div>
+          {i < s.items.length - 1 && (
+            <svg viewBox="0 0 24 40" className="mx-auto my-2 h-10 w-6 shrink-0 text-slide-accent">
+              <path d="M12 2v32m-9-9 9 9 9-9" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          )}
+        </div>
+      ))}
+    </div>
+  )
+  if (!s.frame) return body
+  return (
+    <div className="relative h-full min-h-0 rounded-3xl border-2 border-slide-accent px-8 pt-10 pb-8">
+      <span className="absolute -top-5 left-8 rounded-full bg-slide-accent px-5 py-1.5 font-display text-[22px] font-bold text-white">{s.frame}</span>
+      {body}
     </div>
   )
 }

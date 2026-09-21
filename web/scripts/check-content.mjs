@@ -6,8 +6,8 @@ import { fileURLToPath } from "node:url"
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..")
 const partsDir = join(root, "src/content/parts")
-const TEMPLATES = new Set(["screen", "compare", "table", "illustration", "overview", "cards", "flow"])
-const SCREENS = new Set(["vscode", "terminal", "shot", "chat", "browser"])
+const TEMPLATES = new Set(["screen", "compare", "table", "illustration", "overview", "cards", "flow", "stack"])
+const SCREENS = new Set(["vscode", "terminal", "shot", "chat", "browser", "file"])
 const VENDORS = new Set(["claude", "antigravity", "codex", "shell"])
 const KINDS = new Set(["copy", "link", "download"])
 
@@ -79,6 +79,12 @@ for (const f of files) {
       for (const src of [c.logo, c.image]) if (src && !src.startsWith("icon:") && !existsSync(join(root, "public", src))) err(w, `missing ${src}`)
     }
     for (const st of s.steps ?? []) if (st.badge) badges.push(st.badge)
+    for (const it of s.items ?? []) {
+      if (!it.screen) continue
+      checkScreen(w, it.screen)
+      badgesOfScreen(it.screen, badges)
+      if (it.screen.badge) badges.push(it.screen.badge)
+    }
     const notes = s.notes ?? []
     if (notes.length > 3) err(w, `${notes.length} notes (max 3)`)
     const nums = new Set(notes.map((n) => n.n))

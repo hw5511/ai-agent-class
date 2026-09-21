@@ -48,6 +48,7 @@ export type Slide =
   | PartCoverSlide
   | CardsSlide
   | FlowSlide
+  | StackSlide
 
 interface SlideBase {
   id: string
@@ -102,6 +103,14 @@ export interface FlowSlide extends SlideBase {
   loop?: boolean
 }
 
+/** Screens stacked top to bottom with an arrow between each, optionally inside one labelled frame
+ *  (e.g. "에이전트 프로그램" wrapping a rule file, a chat and the terminal it drives). */
+export interface StackSlide extends SlideBase {
+  template: "stack"
+  frame?: string
+  items: { screen: Screen; grow?: boolean }[]
+}
+
 /** A diagram or illustration from the illustration library. */
 export interface IllustrationSlide extends SlideBase {
   template: "illustration"
@@ -130,14 +139,30 @@ export interface Note {
 
 // ---- screens: the mockups a slide can show ------------------------------------------------------
 
-export type Screen = VSCodeScreen | ShotScreen | TerminalScreen | ChatScreen | BrowserScreen
+export type Screen = VSCodeScreen | ShotScreen | TerminalScreen | ChatScreen | BrowserScreen | FileScreen
+
+/** A small file card: a tab with the file name and a few lines; `mark` highlights a substring. */
+export interface FileScreen {
+  kind: "file"
+  name: string
+  lines: string[]
+  mark?: string
+  badge?: number
+}
 
 /** A chat-assistant window (ChatGPT, Claude.ai, Gemini) — the "ask and copy" way of working. */
 export interface ChatScreen {
   kind: "chat"
   app: string // window title, e.g. "ChatGPT"
   logo?: string
-  messages: { role: "user" | "assistant"; text: string; badge?: number }[]
+  messages: {
+    role: "user" | "assistant"
+    text?: string
+    code?: string // shown as a dark code block inside the answer
+    mark?: string // a line shown highlighted under the answer (e.g. the detected command{...})
+    markLabel?: string // small tag next to the mark (e.g. "자동 감지")
+    badge?: number
+  }[]
 }
 
 /** A browser window: a search results page or a simple page with a heading and lines. */
