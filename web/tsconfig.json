@@ -1,6 +1,6 @@
 {
   "files": [],
-  "compilerOptions": { "paths": { "@/*": ["./src/*"] } },
+  "compilerOptions": { "paths": { "@/*": ["./src/*"], "remotion": ["./src/illustrations/motion.ts"] } },
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }

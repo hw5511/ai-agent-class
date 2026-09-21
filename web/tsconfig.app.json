@@ -14,7 +14,7 @@
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": true,
-    "paths": { "@/*": ["./src/*"] },
+    "paths": { "@/*": ["./src/*"], "remotion": ["./src/illustrations/motion.ts"] },
     "jsx": "react-jsx",
 
     /* Linting */

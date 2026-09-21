@@ -33,7 +33,7 @@ course -> session (goal, practice) -> part (table of contents) -> slide -> actio
 | `screen` | `screen` (vscode / terminal / shot) |
 | `compare` | `left`, `right`: `{ label, screen }` |
 | `table` | `columns`, `rows: { cells, highlight? }` |
-| `illustration` | `illustration` (library id) |
+| `illustration` | `illustration` (component in `src/illustrations/lib`), `props` (its text labels), `seconds?` — a live, looping vector animation |
 | `overview` | `items: { label, meta?, current? }` |
 | `cards` | `cards: { label, logo?, image?, tags?, badge?, highlight? }` — products/tools/options side by side |
 | `flow` | `steps: { label, sub?, logo?, badge? }`, `loop?` — a process as boxes and arrows |
@@ -58,3 +58,12 @@ Screens also include `chat` (`app`, `logo?`, `messages`) and `browser` (`url`, `
 - Surfaces are pure white. Anything that needs to stand apart gets a thin neutral border
   (`border-neutral-200`), not a fill. The one exception is the dark product mockups (terminal, VS Code).
 - Emphasis = the blue accent as a border or badge, never a tinted background.
+
+## Illustrations
+
+`src/illustrations/lib/` holds the ax-site vector-illustration library (93 components, generated with agy
+against ax-site `templates/STYLE.md` and reviewed there) plus new ones generated the same way for this site.
+They animate on loop in the slide. All visible text is passed through `props`. They run on a 4-function
+motion shim (`src/illustrations/motion.ts`, aliased as "remotion") — no Remotion dependency.
+A concept that no component explains is generated with agy (ax-site `tools/agy_illustrate.py` prompt and
+contract), not hand-drawn.

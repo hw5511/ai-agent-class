@@ -6,33 +6,18 @@
     {
       "id": "s1-agent-01",
       "title": "AI에이전트란?",
-      "template": "flow",
-      "loop": true,
-      "steps": [
-        {
-          "label": "SEE",
-          "sub": "환경 인식",
-          "badge": 1
-        },
-        {
-          "label": "THINK",
-          "sub": "자율 판단",
-          "badge": 2
-        },
-        {
-          "label": "PLAN",
-          "sub": "계획"
-        },
-        {
-          "label": "DO",
-          "sub": "도구 실행",
-          "badge": 3
-        },
-        {
-          "label": "FIX",
-          "sub": "결과 확인·수정"
-        }
-      ],
+      "template": "illustration",
+      "illustration": "AgentFiveStepLoop",
+      "seconds": 14,
+      "props": {
+        "step1Text": "SEE · 보기",
+        "step2Text": "THINK · 판단",
+        "step3Text": "PLAN · 계획",
+        "step4Text": "DO · 실행",
+        "step5Text": "FIX · 수정",
+        "loopText": "목표까지 반복",
+        "badgeText": "AI 에이전트"
+      },
       "notes": [
         {
           "n": 1,

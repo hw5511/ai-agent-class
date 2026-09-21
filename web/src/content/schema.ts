@@ -105,7 +105,9 @@ export interface FlowSlide extends SlideBase {
 /** A diagram or illustration from the illustration library. */
 export interface IllustrationSlide extends SlideBase {
   template: "illustration"
-  illustration: string // id in the illustration library
+  illustration: string // component name in src/illustrations/lib (e.g. "SubagentDelegation")
+  props?: Record<string, unknown> // the component's text props (labels), all visible text comes from here
+  seconds?: number // loop length, default 12
 }
 
 /** Generated, never written in JSON: the viewer puts one in front of every part of a multi-part session. */
