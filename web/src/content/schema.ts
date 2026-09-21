@@ -205,6 +205,7 @@ export interface VSCodeScreen {
   noSidebar?: boolean // hide the explorer column (activity bar stays)
   preview?: { file: string; md: string[]; badge?: number } // VS Code's Markdown preview next to the editor
   editorNotice?: { file: string; text: string } // editor tab that cannot show the file (a PDF without the extension)
+  imageEditor?: { file: string; src: string; meta?: string; badge?: number } // VS Code image viewer tab showing a real picture
   toast?: { text: string; buttons: { label: string; primary?: boolean; badge?: number }[] } // bottom-right notification
   explorerAction?: { icon: "newFile" | "newFolder"; badge?: number } // the icons on the explorer header
   keycap?: { keys: string[]; times?: number; badge?: number } // a shortcut drawn over the window, e.g. ["Ctrl", "J"]
@@ -230,7 +231,7 @@ export interface Terminal {
   turns: { role: "user" | "assistant" | "tool"; text: string; badge?: number; mark?: string }[] // mark = substring drawn as drag-selected text
   usage?: { label: string; pct: number; resets: string; badge?: number }[] // /usage bar gauges after the turns
   // a slash-command panel drawn under a rule line (e.g. /chrome); each row is segments with an optional colour
-  panel?: { title: string; rows: { seg: { t: string; c?: "green" | "dim" | "accent" | "bold" | "tab" }[]; badge?: number }[] }
+  panel?: { title: string; tone?: "danger"; rows: { seg: { t: string; c?: "green" | "dim" | "accent" | "bold" | "tab" | "red" }[]; badge?: number }[] }
   // /resume session picker: optional search box, the folder it lists, sessions newest first
   picker?: { title?: string; search?: boolean; folder?: string; folderBadge?: number; items: { name: string; meta: string; selected?: boolean; badge?: number }[] }
   sessionTag?: { name: string; badge?: number } // session name shown as a light-blue tag on the input box

@@ -57,7 +57,7 @@ export function AgentTerminal({ t, className }: { t: Terminal; className?: strin
             </Row>
           ))}
           {t.panel && (
-            <div className="flex flex-col gap-1 border-t border-[#3a3d40] pt-3 text-[19px]">
+            <div className={cn("flex flex-col gap-1 text-[19px]", t.panel.tone === "danger" ? "rounded-md border-2 border-[#e5534b] px-2 py-3" : "border-t border-[#3a3d40] pt-3")}>
               {t.panel.title ? <Row gutter={hasBadges}><span className="font-bold text-[#e8eaec]">{t.panel.title}</span></Row> : null}
               {t.panel.rows.map((r, i) => (
                 <Row key={`p${i}`} gutter={hasBadges} badge={r.badge}>
@@ -68,6 +68,7 @@ export function AgentTerminal({ t, className }: { t: Terminal; className?: strin
                         g.c === "dim" && "text-[#767c81]",
                         g.c === "accent" && "text-[#d97757]",
                         g.c === "bold" && "font-bold",
+                        g.c === "red" && "font-bold text-[#ff6b61]",
                         g.c === "tab" && "rounded bg-[#e8eaec] px-1.5 font-bold text-[#0c0d0e]",
                         !g.c && "text-[#b8bcc0]",
                       )}>{g.t}</span>

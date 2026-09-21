@@ -97,7 +97,7 @@ export function VSCodeMock({ s }: { s: VSCodeScreen }) {
   const ext = s.sidebar === "extensions"
 
   const terminal = showTerm && (
-    <div className={cn("relative flex min-w-0 flex-col", bottom ? "h-[45%] shrink-0 border-t border-[#2b2b2b]" : s.editor ? "flex-[1.4]" : "flex-1")}>
+    <div className={cn("relative flex min-w-0 flex-col", bottom ? "h-[45%] shrink-0 border-t border-[#2b2b2b]" : s.editor || s.imageEditor ? "flex-[1.4]" : "flex-1")}>
       <div className="flex h-11 shrink-0 items-center gap-3 border-b border-[#2b2b2b] bg-[#181818] px-4">
         <span className="border-b-2 border-slide-accent pb-1 font-display text-[16px] font-bold text-[#e8e8e8]">터미널</span>
         {s.terminalTabBadge ? <NumberBadge n={s.terminalTabBadge} size="sm" /> : null}
@@ -230,7 +230,20 @@ export function VSCodeMock({ s }: { s: VSCodeScreen }) {
                 <div className="flex flex-1 items-center justify-center px-10 text-center font-body text-[19px] break-keep text-[#9d9d9d]">{s.editorNotice.text}</div>
               </div>
             )}
-            {!s.editor && !s.editorNotice && !s.preview && (bottom || !showTerm) && <div className="flex-1 bg-[#1f1f1f]" />}
+            {s.imageEditor && (
+              <div className="relative flex min-w-0 flex-1 flex-col border-r border-[#2b2b2b] bg-[#1f1f1f]">
+                <div className="flex h-11 shrink-0 items-center gap-2 border-b border-[#2b2b2b] px-4 font-display text-[18px] text-[#e8e8e8]">
+                  <FileTypeIcon name={s.imageEditor.file} /><span className="min-w-0 flex-1 truncate">{s.imageEditor.file}</span>
+                  {s.imageEditor.badge ? <NumberBadge n={s.imageEditor.badge} size="sm" /> : null}
+                </div>
+                <div className="flex min-h-0 flex-1 items-center justify-center p-6"
+                  style={{ backgroundColor: "#2a2a2a", backgroundImage: "linear-gradient(45deg,#333 25%,transparent 25%,transparent 75%,#333 75%),linear-gradient(45deg,#333 25%,transparent 25%,transparent 75%,#333 75%)", backgroundSize: "24px 24px", backgroundPosition: "0 0,12px 12px" }}>
+                  <img src={s.imageEditor.src} alt={s.imageEditor.file} className="max-h-full max-w-full object-contain shadow-[0_6px_24px_rgba(0,0,0,.5)]" />
+                </div>
+                {s.imageEditor.meta ? <div className="flex h-8 shrink-0 items-center justify-end border-t border-[#2b2b2b] px-4 font-term text-[15px] text-[#9d9d9d]">{s.imageEditor.meta}</div> : null}
+              </div>
+            )}
+            {!s.editor && !s.imageEditor && !s.editorNotice && !s.preview && (bottom || !showTerm) && <div className="flex-1 bg-[#1f1f1f]" />}
             {s.chatPanel ? (
               <div className="flex w-[40%] shrink-0 flex-col border-l border-[#2b2b2b] bg-[#181818]">
                 <div className="flex h-11 items-center gap-3 border-b border-[#2b2b2b] px-4 font-display text-[16px] font-bold text-[#e8e8e8]">

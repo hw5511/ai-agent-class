@@ -278,33 +278,108 @@
             {
               "role": "user",
               "text": "claude --dangerously-skip-permissions"
-            },
-            {
-              "role": "tool",
-              "text": "권한 검사를 전부 끌까요? > Yes, clear context and bypass permissions",
-              "badge": 1
             }
           ],
-          "input": {
-            "placeholder": "메시지를 입력하세요..."
+          "panel": {
+            "title": "",
+            "tone": "danger",
+            "rows": [
+              {
+                "seg": [
+                  {
+                    "t": "WARNING: Claude Code running in Bypass Permissions mode",
+                    "c": "red"
+                  }
+                ],
+                "badge": 1
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "In Bypass Permissions mode, Claude Code will not ask for your approval before running potentially dangerous commands."
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "This mode should only be used in a sandboxed container/VM that has restricted internet access and can easily be restored if damaged."
+                  }
+                ]
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "By proceeding, you accept all responsibility for actions taken while running in Bypass Permissions mode."
+                  }
+                ]
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "https://code.claude.com/docs/en/security",
+                    "c": "dim"
+                  }
+                ]
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "  1. No, exit"
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "❯ 2. Yes, I accept",
+                    "c": "accent"
+                  }
+                ],
+                "badge": 2
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "Enter to confirm · Esc to exit",
+                    "c": "dim"
+                  }
+                ]
+              }
+            ]
           }
         }
       },
       "notes": [
         {
           "n": 1,
-          "head": "모든 확인 끄기",
-          "body": "권한 검사 없이 전부 바로 실행"
+          "head": "빨간 WARNING 안내",
+          "body": "권한 확인 없이 명령 실행 경고"
         },
         {
           "n": 2,
-          "head": "실습 폴더에서만",
-          "body": "인터넷 없는 격리 환경 권장"
+          "head": "2. Yes, I accept",
+          "body": "↓ 로 2번 고르고 Enter"
         },
         {
           "n": "!",
-          "head": "auto 와 차이",
-          "body": "감시자 판정 단계 자체가 없음"
+          "head": "실습 폴더에서만",
+          "body": "인터넷 없는 격리 환경 권장"
         }
       ],
       "action": {
