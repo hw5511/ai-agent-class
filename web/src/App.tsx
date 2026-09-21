@@ -135,14 +135,14 @@ export default function App() {
         </header>
 
         <div className="flex min-h-0 flex-1">
-          <div className="min-w-0 flex-1 bg-neutral-200/70 p-5">
+          <div className="min-w-0 flex-1 bg-white p-5">
             {cur && <SlideStage slide={cur.slide} eyebrow={`${cur.part.title.toUpperCase()} · ${String(posInPart).padStart(2, "0")}/${String(inPart.length).padStart(2, "0")}`} />}
           </div>
           <aside className="flex w-[340px] shrink-0 flex-col gap-6 overflow-y-auto border-l bg-background px-5 py-6">
-            <NotesPanel notes={cur?.slide.notes} />
             <ActionPanel action={cur?.slide.action} />
             <section className="flex flex-col gap-4">
               <PanelLabel>회차 정보</PanelLabel>
+              <NotesPanel notes={cur?.slide.notes} />
               <div className="flex flex-col gap-1.5">
                 <h3 className="text-sm font-semibold text-foreground">목표</h3>
                 <p className="text-sm leading-6 break-keep text-muted-foreground">{session.goal}</p>

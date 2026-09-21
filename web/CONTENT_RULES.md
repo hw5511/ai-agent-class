@@ -36,3 +36,11 @@ course -> session (goal, practice) -> part (table of contents) -> slide -> actio
 | `illustration` | `illustration` (library id) |
 | `overview` | `items: { label, meta?, current? }` |
 | `image` | `src` — legacy rendered slides only |
+
+## Colour (CEO 2026-09-21)
+
+- No warm off-white. The old ax-site "paper" token `#f0efec` (and its cousins `#f6f6f4`, `#f3f3f1`,
+  `#d5d2cc`) read as yellowish grey and are banned.
+- Surfaces are pure white. Anything that needs to stand apart gets a thin neutral border
+  (`border-neutral-200`), not a fill. The one exception is the dark product mockups (terminal, VS Code).
+- Emphasis = the blue accent as a border or badge, never a tinted background.

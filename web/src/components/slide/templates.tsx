@@ -62,7 +62,7 @@ function TableT({ s }: { s: TableSlide }) {
         </thead>
         <tbody>
           {s.rows.map((r, ri) => (
-            <tr key={ri} className={cn("border-b border-[#d5d2cc]", r.highlight && "bg-[#e8f2fb]")}>
+            <tr key={ri} className={cn("border-b border-neutral-200", r.highlight && "outline-2 -outline-offset-2 outline-slide-accent")}>
               {r.cells.map((c, ci) => (
                 <td key={ci} className={cn("px-8 py-6 break-keep text-[#43474b]", ci === 0 ? "font-term font-bold text-[#101113]" : "text-center")}>{c}</td>
               ))}
@@ -76,7 +76,7 @@ function TableT({ s }: { s: TableSlide }) {
 
 function IllustrationT({ s }: { s: IllustrationSlide }) {
   return (
-    <div className="flex h-full items-center justify-center rounded-2xl border-2 border-dashed border-[#d5d2cc] font-display text-[30px] text-[#7c8288]">
+    <div className="flex h-full items-center justify-center rounded-2xl border-2 border-dashed border-neutral-300 font-display text-[30px] text-[#7c8288]">
       일러스트 라이브러리 · {s.illustration}
     </div>
   )
@@ -86,7 +86,7 @@ function OverviewT({ s }: { s: OverviewSlide }) {
   return (
     <div className="flex h-full flex-col justify-center gap-5">
       {s.items.map((it, i) => (
-        <div key={i} className={cn("flex items-center gap-8 rounded-2xl px-10 py-7", it.current ? "bg-[#e8f2fb]" : "bg-[#f6f6f4]")}>
+        <div key={i} className={cn("flex items-center gap-8 rounded-2xl border bg-white px-10 py-7", it.current ? "border-2 border-slide-accent" : "border-neutral-200")}>
           <NumberBadge n={i + 1} />
           <span className="flex-1 font-display text-[40px] font-bold text-[#101113]">{it.label}</span>
           {it.meta && <span className="font-term text-[28px] text-[#7c8288]">{it.meta}</span>}
@@ -104,7 +104,7 @@ export function PartCoverT({ s }: { s: PartCoverSlide }) {
       <div className="flex gap-3">
         {s.parts.map((p, i) => (
           <div key={i} className="flex min-w-0 flex-1 flex-col gap-3">
-            <div className={cn("h-2 rounded-full", i < s.partIndex ? "bg-[#9cc3e6]" : i === s.partIndex ? "bg-slide-accent" : "bg-[#e6e6e3]")} />
+            <div className={cn("h-2 rounded-full", i < s.partIndex ? "bg-neutral-400" : i === s.partIndex ? "bg-slide-accent" : "bg-neutral-200")} />
             <span className={cn("truncate font-display text-[18px]", i === s.partIndex ? "font-bold text-[#101113]" : "text-[#9a9ea3]")}>{p.title}</span>
           </div>
         ))}
@@ -115,7 +115,7 @@ export function PartCoverT({ s }: { s: PartCoverSlide }) {
       </div>
       <div className="flex flex-wrap gap-4">
         {s.slideTitles.map((t, i) => (
-          <span key={i} className="flex items-center gap-3 rounded-full bg-[#f3f3f1] py-3 pr-7 pl-4 font-display text-[26px] text-[#43474b]">
+          <span key={i} className="flex items-center gap-3 rounded-full border border-neutral-200 bg-white py-3 pr-7 pl-4 font-display text-[26px] text-[#43474b]">
             <span className="font-num text-[22px] text-[#9a9ea3]">{String(i + 1).padStart(2, "0")}</span>
             {t}
           </span>

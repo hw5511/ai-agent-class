@@ -1,12 +1,12 @@
 import type { Note } from "@/content/schema"
 import { cn } from "@/lib/utils"
 
-// The explanation for the slide on screen. Numbers match the badges drawn on the slide's visual.
+// The explanation for the slide on screen, shown inside the session-info group under the action box. Numbers match the badges drawn on the slide's visual.
 export function NotesPanel({ notes }: { notes?: Note[] }) {
   if (!notes?.length) return null
   return (
-    <section className="flex flex-col gap-3">
-      <span className="text-[11px] font-semibold tracking-[0.08em] text-muted-foreground uppercase">설명</span>
+    <div className="flex flex-col gap-3">
+      <h3 className="text-sm font-semibold text-foreground">설명</h3>
       <ol className="flex flex-col gap-4">
         {notes.map((n, i) => (
           <li key={i} className="flex gap-3">
@@ -25,6 +25,6 @@ export function NotesPanel({ notes }: { notes?: Note[] }) {
           </li>
         ))}
       </ol>
-    </section>
+    </div>
   )
 }
