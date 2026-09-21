@@ -28,10 +28,18 @@ import { S2_WRITE_PART } from "./s2-write";
 import { S2_EDIT_PART } from "./s2-edit";
 import { S2_BASH_PART } from "./s2-bash";
 import { S2_WRAP_PART } from "./s2-wrap";
+import { S3_ACCOUNT_PART } from "./s3-account";
+import { S3_SETTINGS_PART } from "./s3-settings";
+import { S3_PERMISSION_PART } from "./s3-permission";
+import { S3_CONFIG_PART } from "./s3-config";
+import { S3_MODEL_PART } from "./s3-model";
+import { S3_WEBSEARCH_PART } from "./s3-websearch";
+import { S3_CHROME_PART } from "./s3-chrome";
 
 export const STEP02_PARTS: PartSpec[] = [
   STEP02_REVIEW_PART, STEP02_CLAUDEMD_PART, STEP02_READ_PART, STEP02_WRITE_PART, STEP02_BASH_PART, STEP02_SAMPLE_PART,
   S1_AGENT_PART, S1_ENV_PART, S1_AGY_INSTALL_PART, S1_AGY_LOGIN_PART, S1_AGY_SETUP_PART, S1_AGY_PRACTICE_PART, S1_CLI_INSTALL_PART, S1_CODEX_PART, S1_CLAUDE_LOGIN_PART, S1_CLAUDE_PRACTICE_PART, S1_WRAP_PART, S2_REVIEW_PART, S2_CLAUDEMD_PART, S2_READ_PART, S2_WRITE_PART, S2_EDIT_PART, S2_BASH_PART, S2_WRAP_PART,
+  S3_ACCOUNT_PART, S3_SETTINGS_PART, S3_PERMISSION_PART, S3_CONFIG_PART, S3_MODEL_PART, S3_WEBSEARCH_PART, S3_CHROME_PART,
 ];
 
 export const getPart = (id: string): PartSpec => {
