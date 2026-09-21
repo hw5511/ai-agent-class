@@ -46,6 +46,8 @@ export type Slide =
   | IllustrationSlide
   | OverviewSlide
   | PartCoverSlide
+  | CardsSlide
+  | FlowSlide
 
 interface SlideBase {
   id: string
@@ -80,6 +82,26 @@ export interface TableSlide extends SlideBase {
   rows: { cells: string[]; highlight?: boolean }[]
 }
 
+/** Side-by-side visual cards: a product, tool or option each, with its logo and/or a picture of it. */
+export interface CardsSlide extends SlideBase {
+  template: "cards"
+  cards: {
+    label: string
+    logo?: string // /logos/<name>.svg (monochrome brand mark) or /brand/<x>.png (full-colour wordmark)
+    image?: string // a real screenshot or picture of the thing
+    tags?: string[] // 1-3 short keywords
+    badge?: number
+    highlight?: boolean
+  }[]
+}
+
+/** A process as boxes and arrows; `loop` draws the return arrow from the last step to the first. */
+export interface FlowSlide extends SlideBase {
+  template: "flow"
+  steps: { label: string; sub?: string; logo?: string; badge?: number }[]
+  loop?: boolean
+}
+
 /** A diagram or illustration from the illustration library. */
 export interface IllustrationSlide extends SlideBase {
   template: "illustration"
@@ -108,7 +130,23 @@ export interface Note {
 
 // ---- screens: the mockups a slide can show ------------------------------------------------------
 
-export type Screen = VSCodeScreen | ShotScreen | TerminalScreen
+export type Screen = VSCodeScreen | ShotScreen | TerminalScreen | ChatScreen | BrowserScreen
+
+/** A chat-assistant window (ChatGPT, Claude.ai, Gemini) — the "ask and copy" way of working. */
+export interface ChatScreen {
+  kind: "chat"
+  app: string // window title, e.g. "ChatGPT"
+  logo?: string
+  messages: { role: "user" | "assistant"; text: string; badge?: number }[]
+}
+
+/** A browser window: a search results page or a simple page with a heading and lines. */
+export interface BrowserScreen {
+  kind: "browser"
+  url: string
+  results?: { site: string; title: string; snippet?: string; badge?: number }[]
+  page?: { heading: string; lines?: string[]; button?: string }
+}
 
 export interface VSCodeScreen {
   kind: "vscode"

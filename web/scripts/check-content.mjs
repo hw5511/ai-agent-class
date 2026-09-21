@@ -6,8 +6,8 @@ import { fileURLToPath } from "node:url"
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..")
 const partsDir = join(root, "src/content/parts")
-const TEMPLATES = new Set(["screen", "compare", "table", "illustration", "overview"])
-const SCREENS = new Set(["vscode", "terminal", "shot"])
+const TEMPLATES = new Set(["screen", "compare", "table", "illustration", "overview", "cards", "flow"])
+const SCREENS = new Set(["vscode", "terminal", "shot", "chat", "browser"])
 const VENDORS = new Set(["claude", "antigravity", "codex", "shell"])
 const KINDS = new Set(["copy", "link", "download"])
 
@@ -23,6 +23,8 @@ function badgesOfScreen(s, out) {
     for (const f of s.files ?? []) if (f.badge) out.push(f.badge)
     if (s.editor?.badge) out.push(s.editor.badge)
   }
+  for (const m of s.messages ?? []) if (m.badge) out.push(m.badge)
+  for (const r of s.results ?? []) if (r.badge) out.push(r.badge)
   const t = s.terminal
   if (t) {
     for (const x of t.turns ?? []) if (x.badge) out.push(x.badge)
@@ -33,7 +35,7 @@ function badgesOfScreen(s, out) {
 function checkScreen(where, s) {
   if (!s || !SCREENS.has(s.kind)) return err(where, `bad screen.kind ${s?.kind}`)
   if (s.kind === "shot" && !existsSync(join(root, "public", s.src ?? ""))) err(where, `missing shot ${s.src}`)
-  if (s.kind !== "shot") {
+  if (s.kind === "vscode" || s.kind === "terminal") {
     if (!s.terminal || !VENDORS.has(s.terminal.vendor)) err(where, `bad terminal.vendor ${s.terminal?.vendor}`)
     if (!Array.isArray(s.terminal?.turns)) err(where, "terminal.turns missing")
   }
@@ -72,6 +74,11 @@ for (const f of files) {
         for (const c of r.cells ?? []) if (String(c).length > 40) err(w, `table cell too long: ${c}`)
       }
     }
+    for (const c of s.cards ?? []) {
+      if (c.badge) badges.push(c.badge)
+      for (const src of [c.logo, c.image]) if (src && !existsSync(join(root, "public", src))) err(w, `missing ${src}`)
+    }
+    for (const st of s.steps ?? []) if (st.badge) badges.push(st.badge)
     const notes = s.notes ?? []
     if (notes.length > 3) err(w, `${notes.length} notes (max 3)`)
     const nums = new Set(notes.map((n) => n.n))

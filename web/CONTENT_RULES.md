@@ -35,7 +35,21 @@ course -> session (goal, practice) -> part (table of contents) -> slide -> actio
 | `table` | `columns`, `rows: { cells, highlight? }` |
 | `illustration` | `illustration` (library id) |
 | `overview` | `items: { label, meta?, current? }` |
+| `cards` | `cards: { label, logo?, image?, tags?, badge?, highlight? }` — products/tools/options side by side |
+| `flow` | `steps: { label, sub?, logo?, badge? }`, `loop?` — a process as boxes and arrows |
 | `image` | `src` — legacy rendered slides only |
+
+Screens also include `chat` (`app`, `logo?`, `messages`) and `browser` (`url`, `results?` or `page?`).
+
+## Visuals first (CEO 2026-09-21: "시각적인게 약하다")
+
+- A slide about products, tools or brands shows them: `cards` with the brand logo (`/logos/*.svg`,
+  `/brand/*-wordmark.png`) and a real screenshot when one exists (`/brand/*-screen.png`, `/shots/*`).
+- A process is a `flow`, not a table. A "ask a chatbot / search the web" step is a `chat` / `browser` screen.
+- Tools and concepts without a brand use `logo: "icon:<Name>"` (Read, Write, Edit, Bash, Folder, Terminal,
+  Globe, Search, Settings, Shield, Lock, Cpu, Brain, Bot, Chat, Keyboard, Click, Book, Zap).
+- `table` only for genuinely tabular facts (mode x permission, setting x value). Never as the only visual
+  of a concept slide.
 
 ## Colour (CEO 2026-09-21)
 

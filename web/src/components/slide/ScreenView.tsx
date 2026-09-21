@@ -1,10 +1,13 @@
 import type { Screen } from "@/content/schema"
 import { VSCodeMock } from "@/components/mock/VSCodeMock"
 import { AgentTerminal } from "@/components/mock/AgentTerminal"
+import { BrowserMock, ChatMock } from "@/components/mock/WebMocks"
 
 // One switch from screen data to mockup. New screen kinds are added here and in the schema only.
 export function ScreenView({ screen }: { screen: Screen }) {
   if (screen.kind === "vscode") return <VSCodeMock s={screen} />
+  if (screen.kind === "chat") return <ChatMock s={screen} />
+  if (screen.kind === "browser") return <BrowserMock s={screen} />
   if (screen.kind === "terminal")
     return (
       <div className="h-full min-h-0 overflow-hidden rounded-2xl shadow-[0_18px_40px_rgba(16,17,19,0.16)]">

@@ -10,7 +10,7 @@ export function AgentTerminal({ t, className }: { t: Terminal; className?: strin
   const shell = t.vendor === "shell"
   const hasBadges = t.turns.some((x) => x.badge) || !!t.input?.badge
   return (
-    <div className={cn("flex h-full min-h-0 flex-col bg-[#0c0d0e] font-term text-[22px] leading-[1.6] text-[#e8eaec]", className)}>
+    <div className={cn("flex h-full min-h-0 flex-col bg-[#0c0d0e] font-term leading-[1.6] text-[#e8eaec]", shell ? "text-[26px]" : "text-[22px]", className)}>
       <div className={cn("flex min-h-0 flex-1 flex-col gap-5 overflow-hidden px-5 pt-4", hasBadges && "pl-2")}>
         {!shell && <Row gutter={hasBadges}><VendorBanner vendor={t.vendor} cwd={t.cwd} /></Row>}
         <div className={cn("flex min-h-0 flex-1 flex-col gap-4 overflow-hidden pb-2", !shell && "justify-end")}>

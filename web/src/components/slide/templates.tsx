@@ -1,8 +1,9 @@
 // Slide templates. The slide area shows visuals only (CEO 2026-09-21): screens, tables, diagrams,
 // illustrations and a keyword title. Explanations live in slide.notes and render in the right panel
 // (NotesPanel), numbered to match the badges drawn on the visual. Everything is flex; no coordinates.
-import type { CompareSlide, IllustrationSlide, ImageSlide, OverviewSlide, PartCoverSlide, ScreenSlide, Slide, TableSlide } from "@/content/schema"
+import type { CardsSlide, CompareSlide, FlowSlide, IllustrationSlide, ImageSlide, OverviewSlide, PartCoverSlide, ScreenSlide, Slide, TableSlide } from "@/content/schema"
 import { NumberBadge } from "./NumberBadge"
+import { Mark } from "./Mark"
 import { ScreenView } from "./ScreenView"
 import { cn } from "@/lib/utils"
 
@@ -22,6 +23,10 @@ export function SlideBody({ slide }: { slide: Slide }) {
       return <OverviewT s={slide} />
     case "part-cover":
       return <PartCoverT s={slide} />
+    case "cards":
+      return <CardsT s={slide} />
+    case "flow":
+      return <FlowT s={slide} />
   }
 }
 
@@ -125,6 +130,79 @@ export function PartCoverT({ s }: { s: PartCoverSlide }) {
           </span>
         ))}
       </div>
+    </div>
+  )
+}
+
+// Visual cards: each thing shown by its logo and/or a real picture, with a label and short tags.
+function CardsT({ s }: { s: CardsSlide }) {
+  const withImages = s.cards.some((c) => c.image)
+  return (
+    <div className="flex h-full min-h-0 items-stretch gap-8">
+      {s.cards.map((c, i) => (
+        <div
+          key={i}
+          className={cn(
+            "relative flex min-w-0 flex-1 flex-col overflow-hidden rounded-3xl border bg-white",
+            c.highlight ? "border-2 border-slide-accent" : "border-neutral-200",
+          )}
+        >
+          {c.badge ? <span className="absolute top-5 right-5 z-10"><NumberBadge n={c.badge} /></span> : null}
+          {c.logo && (
+            <div className={cn("flex shrink-0 items-center justify-center px-8", withImages ? "h-28" : "flex-1")}>
+              <Mark src={c.logo} className={cn("max-w-full", withImages ? "h-14" : "h-32")} />
+            </div>
+          )}
+          {c.image && (
+            <div className="min-h-0 flex-1 border-y border-neutral-200 bg-white">
+              <img src={c.image} alt="" className="size-full object-cover object-top" />
+            </div>
+          )}
+          <div className="flex shrink-0 flex-col gap-3 px-8 py-6">
+            <span className="font-display text-[34px] font-bold text-[#101113] break-keep">{c.label}</span>
+            {c.tags?.length ? (
+              <div className="flex flex-wrap gap-2">
+                {c.tags.map((t, ti) => (
+                  <span key={ti} className="rounded-full border border-neutral-200 px-4 py-1.5 font-body text-[20px] text-[#43474b]">{t}</span>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+// Boxes and arrows. With `loop`, a return arrow runs under the row from the last step back to the first.
+function FlowT({ s }: { s: FlowSlide }) {
+  return (
+    <div className="flex h-full min-h-0 flex-col justify-center gap-10">
+      <div className="flex items-stretch">
+        {s.steps.map((st, i) => (
+          <div key={i} className="flex flex-1 items-center">
+            <div className="relative flex min-h-[220px] flex-1 flex-col items-center justify-center gap-4 rounded-3xl border-2 border-neutral-200 bg-white px-6 py-8 text-center">
+              {st.badge ? <span className="absolute -top-5"><NumberBadge n={st.badge} /></span> : null}
+              {st.logo && <Mark src={st.logo} className="h-14" />}
+              <span className="font-display text-[40px] font-bold text-[#101113] break-keep">{st.label}</span>
+              {st.sub && <span className="font-body text-[22px] text-[#7c8288] break-keep">{st.sub}</span>}
+            </div>
+            {i < s.steps.length - 1 && (
+              <svg viewBox="0 0 60 24" className="mx-3 h-8 w-16 shrink-0 text-slide-accent">
+                <path d="M2 12h50m-10-9 10 9-10 9" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            )}
+          </div>
+        ))}
+      </div>
+      {s.loop && (
+        <div className="relative mx-[6%] h-16">
+          <svg viewBox="0 0 1000 60" preserveAspectRatio="none" className="absolute inset-0 size-full text-slide-accent">
+            <path d="M985 0 V40 Q985 55 970 55 H30 Q15 55 15 40 V0" fill="none" stroke="currentColor" strokeWidth="3" strokeDasharray="10 8" vectorEffect="non-scaling-stroke" />
+          </svg>
+          <svg viewBox="0 0 20 16" className="absolute -top-1 left-[calc(1.5%-10px)] h-4 w-5 text-slide-accent"><path d="M10 0 20 16H0Z" fill="currentColor" /></svg>
+        </div>
+      )}
     </div>
   )
 }
