@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#101113" flood-opacity="0.12"/></filter></defs>
+<text x="280" y="120" font-size="34" font-weight="800" fill="#101113" text-anchor="middle">인터넷 속도</text>
+<text x="280" y="160" font-size="22" fill="#8b9095" text-anchor="middle">설치 · 다운로드</text>
+<g filter="url(#sh)"><rect x="40" y="200" width="480" height="560" rx="16" fill="#0c0d0e"/></g>
+<path d="M40 216a16 16 0 0 1 16-16h448a16 16 0 0 1 16 16v26H40z" fill="#1f2124"/>
+<circle cx="66" cy="221" r="6" fill="#ff5f57"/><circle cx="86" cy="221" r="6" fill="#febc2e"/><circle cx="106" cy="221" r="6" fill="#28c840"/>
+<text x="280.0" y="227" font-size="15" fill="#8b9095" text-anchor="middle">터미널</text>
+<circle cx="510" cy="204" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="510" y="213" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<text x="800" y="120" font-size="34" font-weight="800" fill="#101113" text-anchor="middle">컴퓨터 성능</text>
+<text x="800" y="160" font-size="22" fill="#8b9095" text-anchor="middle">CPU 계산</text>
+<g filter="url(#sh)"><rect x="560" y="200" width="480" height="560" rx="16" fill="#0c0d0e"/></g>
+<path d="M560 216a16 16 0 0 1 16-16h448a16 16 0 0 1 16 16v26H560z" fill="#1f2124"/>
+<circle cx="586" cy="221" r="6" fill="#ff5f57"/><circle cx="606" cy="221" r="6" fill="#febc2e"/><circle cx="626" cy="221" r="6" fill="#28c840"/>
+<text x="800.0" y="227" font-size="15" fill="#8b9095" text-anchor="middle">터미널</text>
+<circle cx="1030" cy="204" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1030" y="213" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<text x="1320" y="120" font-size="34" font-weight="800" fill="#101113" text-anchor="middle">명시적 대기</text>
+<text x="1320" y="160" font-size="22" fill="#8b9095" text-anchor="middle">정해진 딜레이</text>
+<g filter="url(#sh)"><rect x="1080" y="200" width="480" height="560" rx="16" fill="#0c0d0e"/></g>
+<path d="M1080 216a16 16 0 0 1 16-16h448a16 16 0 0 1 16 16v26H1080z" fill="#1f2124"/>
+<circle cx="1106" cy="221" r="6" fill="#ff5f57"/><circle cx="1126" cy="221" r="6" fill="#febc2e"/><circle cx="1146" cy="221" r="6" fill="#28c840"/>
+<text x="1320.0" y="227" font-size="15" fill="#8b9095" text-anchor="middle">터미널</text>
+<circle cx="1550" cy="204" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1550" y="213" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<text x="64" y="280" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#767c81">PS C:\agent1&gt;</text>
+<text x="64" y="312" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#e8eaec">winget install Python.Python.3.13</text>
+<text x="64" y="360" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#b8bcc0">Downloading python-3.13.exe</text>
+<rect x="64" y="380" width="432" height="22" rx="4" fill="#2a2d30"/><rect x="64" y="380" width="180" height="22" rx="4" fill="#4ec27a"/>
+<text x="64" y="432" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#b8bcc0">12.3 MB / 29.1 MB</text>
+<text x="64" y="464" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#d97757">속도 1.2 MB/s · 남은 시간 14초</text>
+<text x="64" y="540" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#e8eaec">npm install</text>
+<text x="64" y="572" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#b8bcc0">⠙ reify: fetching 412 packages</text>
+<text x="64" y="604" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#767c81">  added 118 · 294 남음</text>
+<text x="584" y="280" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#767c81">PS C:\agent1&gt;</text>
+<text x="584" y="312" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#e8eaec">python render_video.py</text>
+<text x="584" y="360" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#b8bcc0">Rendering frame  312 / 1800</text>
+<rect x="584" y="380" width="432" height="22" rx="4" fill="#2a2d30"/><rect x="584" y="380" width="75" height="22" rx="4" fill="#d97757"/>
+<text x="584" y="432" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#b8bcc0">17%  ·  8.4 fps</text>
+<text x="584" y="464" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#d97757">CPU 98%  ·  남은 시간 2분 57초</text>
+<rect x="600" y="600" width="44" height="120" rx="4" fill="#3a2a22" stroke="#d97757" stroke-width="2"/>
+<rect x="670" y="570" width="44" height="150" rx="4" fill="#3a2a22" stroke="#d97757" stroke-width="2"/>
+<rect x="740" y="582" width="44" height="138" rx="4" fill="#3a2a22" stroke="#d97757" stroke-width="2"/>
+<rect x="810" y="560" width="44" height="160" rx="4" fill="#3a2a22" stroke="#d97757" stroke-width="2"/>
+<rect x="880" y="565" width="44" height="155" rx="4" fill="#3a2a22" stroke="#d97757" stroke-width="2"/>
+<rect x="950" y="562" width="44" height="158" rx="4" fill="#3a2a22" stroke="#d97757" stroke-width="2"/>
+<text x="800" y="745" font-size="15" fill="#767c81" text-anchor="middle">CPU 코어 사용률</text>
+<text x="1104" y="280" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#767c81">PS C:\agent1&gt;</text>
+<text x="1104" y="312" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#e8eaec">Start-Sleep -Seconds 60</text>
+<text x="1104" y="360" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#b8bcc0">기다리는 중…</text>
+<circle cx="1320" cy="520" r="90" fill="none" stroke="#2a2d30" stroke-width="18"/>
+<path d="M1320 430a90 90 0 0 1 77.9 135" fill="none" stroke="#1273c4" stroke-width="18" stroke-linecap="round"/>
+<text x="1320" y="532" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="40" font-weight="700" fill="#e8eaec" text-anchor="middle">20s</text>
+<text x="1320" y="566" font-size="17" fill="#767c81" text-anchor="middle">/ 60초</text>
+<text x="1104" y="690" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="19" font-weight="400" fill="#d97757">결과 = 기다려야만 나옴</text>
+</svg>

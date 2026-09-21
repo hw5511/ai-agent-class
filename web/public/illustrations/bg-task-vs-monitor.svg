@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#101113" flood-opacity="0.12"/></filter></defs>
+<g filter="url(#sh)"><rect x="60" y="80" width="720" height="740" rx="24" fill="#fff" stroke="#e5e5e5" stroke-width="2"/></g>
+<text x="108" y="160" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="44" font-weight="800" fill="#101113">task</text>
+<rect x="108" y="190" width="170" height="44" rx="22" fill="#e7f0fb"/>
+<text x="128" y="220" font-size="22" font-weight="700" fill="#1273c4">완료 조건</text>
+<circle cx="760" cy="84" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="760" y="93" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<g filter="url(#sh)"><rect x="820" y="80" width="720" height="740" rx="24" fill="#fff" stroke="#e5e5e5" stroke-width="2"/></g>
+<text x="868" y="160" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="44" font-weight="800" fill="#101113">monitor</text>
+<rect x="868" y="190" width="170" height="44" rx="22" fill="#e7f0fb"/>
+<text x="888" y="220" font-size="22" font-weight="700" fill="#1273c4">감지 조건</text>
+<circle cx="1520" cy="84" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1520" y="93" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<text x="108" y="320" font-size="22" fill="#43474b">countA.md 에 1부터 100까지</text>
+<rect x="108" y="350" width="560" height="36" rx="18" fill="#eef1f4"/>
+<rect x="108" y="350" width="560" height="36" rx="18" fill="#1273c4"/>
+<text x="388" y="376" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="20" font-weight="700" fill="#fff" text-anchor="middle">100 / 100</text>
+<circle cx="708" cy="368" r="26" fill="#188038"/><path d="M696 368l9 9 17-18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="108" y1="470" x2="620" y2="470" stroke="#101113" stroke-width="4"/>
+<circle cx="108" cy="470" r="10" fill="#101113"/><text x="108" y="510" font-size="19" fill="#8b9095" text-anchor="middle">시작</text>
+<circle cx="620" cy="470" r="14" fill="#188038"/><text x="620" y="510" font-size="19" font-weight="700" fill="#188038" text-anchor="middle">끝</text>
+<rect x="108" y="590" width="600" height="150" rx="16" fill="#0c0d0e"/>
+<text x="136" y="640" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="20" font-weight="400" fill="#e8eaec">● Background command completed</text>
+<text x="136" y="680" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="20" font-weight="400" fill="#767c81">  (exit code 0)</text>
+<text x="136" y="716" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="20" font-weight="400" fill="#d97757">끝나면 알림 1번</text>
+<text x="868" y="320" font-size="22" fill="#43474b">test 폴더 · 10초마다 · 사용량 90%</text>
+<ellipse cx="1150" cy="372" rx="64" ry="34" fill="none" stroke="#1273c4" stroke-width="5"/>
+<circle cx="1150" cy="372" r="16" fill="#1273c4"/>
+<line x1="868" y1="470" x2="1460" y2="470" stroke="#101113" stroke-width="4" stroke-dasharray="14 10"/>
+<circle cx="868" cy="470" r="10" fill="#101113"/><text x="868" y="510" font-size="19" fill="#8b9095" text-anchor="middle">시작</text>
+<text x="1440" y="510" font-size="19" font-weight="700" fill="#1273c4" text-anchor="middle">끄거나 만료될 때까지</text>
+<path d="M950 470l-14-34h28z" fill="#d97757"/>
+<path d="M1050 470l-14-34h28z" fill="#d97757"/>
+<path d="M1150 470l-14-34h28z" fill="#d97757"/>
+<path d="M1250 470l-14-34h28z" fill="#d97757"/>
+<path d="M1350 470l-14-34h28z" fill="#d97757"/>
+<rect x="868" y="590" width="600" height="150" rx="16" fill="#0c0d0e"/>
+<text x="896" y="640" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="20" font-weight="400" fill="#e8eaec">● Monitor event: "tick #1"</text>
+<text x="896" y="680" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="20" font-weight="400" fill="#e8eaec">● Monitor event: "tick #2"</text>
+<text x="896" y="716" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="20" font-weight="400" fill="#d97757">감지할 때마다 알림</text>
+</svg>
