@@ -62,10 +62,24 @@ export default function App() {
     location.hash = `${n.course}/${n.step}/${n.slide}`
   }
 
+  // Past the last slide of a session goes to the next session's first slide; before the first slide
+  // goes to the previous session's last slide (CEO 2026-09-22).
+  const si = course.sessions.findIndex((s) => s.step === session.step)
+  const next = () => {
+    if (idx + 1 < slides.length) return go({ slide: idx + 2 })
+    const ns = course.sessions[si + 1]
+    if (ns) go({ step: ns.step, slide: 1 })
+  }
+  const prev = () => {
+    if (idx > 0) return go({ slide: idx })
+    const ps = course.sessions[si - 1]
+    if (ps) go({ step: ps.step, slide: flatSlides(ps).length })
+  }
+
   useEffect(() => {
     const on = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight" || e.key === "PageDown") go({ slide: Math.min(idx + 2, slides.length) })
-      if (e.key === "ArrowLeft" || e.key === "PageUp") go({ slide: Math.max(idx, 1) })
+      if (e.key === "ArrowRight" || e.key === "PageDown") next()
+      if (e.key === "ArrowLeft" || e.key === "PageUp") prev()
     }
     addEventListener("keydown", on)
     return () => removeEventListener("keydown", on)
@@ -128,8 +142,8 @@ export default function App() {
           <span className="truncate text-sm text-muted-foreground">· {cur?.part.title}</span>
           <div className="ml-auto flex items-center gap-2">
             <span className="font-num text-sm tabular-nums text-muted-foreground">{idx + 1} / {slides.length}</span>
-            <Button size="icon-sm" variant="outline" onClick={() => go({ slide: Math.max(idx, 1) })} aria-label="이전"><ChevronLeftIcon /></Button>
-            <Button size="icon-sm" variant="outline" onClick={() => go({ slide: Math.min(idx + 2, slides.length) })} aria-label="다음"><ChevronRightIcon /></Button>
+            <Button size="icon-sm" variant="outline" onClick={() => prev()} aria-label="이전"><ChevronLeftIcon /></Button>
+            <Button size="icon-sm" variant="outline" onClick={() => next()} aria-label="다음"><ChevronRightIcon /></Button>
           </div>
         </header>
 
