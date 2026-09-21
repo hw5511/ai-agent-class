@@ -132,6 +132,17 @@ export function PartCoverT({ s }: { s: PartCoverSlide }) {
         <span className="font-num text-[40px] font-medium tracking-[0.1em] text-slide-accent">PART {String(s.partIndex + 1).padStart(2, "0")}</span>
         <h1 className="font-display text-[120px] leading-[1.05] font-bold tracking-[-0.03em] break-keep text-balance text-[#101113]">{s.title}</h1>
       </div>
+      {s.sections?.length ? (
+        <div className="grid grid-cols-2 gap-x-12 gap-y-4">
+          {s.sections.map((sec, i) => (
+            <div key={i} className="flex items-center gap-5 border-b border-neutral-200 pb-4">
+              <span className="font-num text-[26px] font-medium text-slide-accent">{String(i + 1).padStart(2, "0")}</span>
+              <span className="min-w-0 flex-1 truncate font-display text-[32px] font-bold text-[#101113]">{sec.title}</span>
+              <span className="font-num text-[24px] text-[#9a9ea3]">{sec.count}</span>
+            </div>
+          ))}
+        </div>
+      ) : s.slideTitles.length <= 12 ? (
       <div className="flex flex-wrap gap-4">
         {s.slideTitles.map((t, i) => (
           <span key={i} className="flex items-center gap-3 rounded-full border border-neutral-200 bg-white py-3 pr-7 pl-4 font-display text-[26px] text-[#43474b]">
@@ -140,6 +151,7 @@ export function PartCoverT({ s }: { s: PartCoverSlide }) {
           </span>
         ))}
       </div>
+      ) : null}
     </div>
   )
 }

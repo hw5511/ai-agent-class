@@ -2,6 +2,32 @@
   "id": "s4-background",
   "title": "백그라운드 작업",
   "summary": "오래 걸리는 명령을 백그라운드로 보내고, monitor 로 변화를 감지해 Claude 를 움직이는 방법을 익힌다.",
+  "sections": [
+    {
+      "title": "task 란",
+      "count": 2
+    },
+    {
+      "title": "포어그라운드",
+      "count": 2
+    },
+    {
+      "title": "백그라운드로 보내기",
+      "count": 4
+    },
+    {
+      "title": "병렬 실행 · 완료 알림",
+      "count": 6
+    },
+    {
+      "title": "monitor",
+      "count": 7
+    },
+    {
+      "title": "사용량 90% 알림",
+      "count": 2
+    }
+  ],
   "slides": [
     {
       "id": "s4-background-01",

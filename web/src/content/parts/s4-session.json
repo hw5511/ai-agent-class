@@ -2,6 +2,28 @@
   "id": "s4-session",
   "title": "세션 관리",
   "summary": "세션을 저장하고 이름을 붙여, 닫았던 대화로 다시 돌아가는 방법을 익힌다.",
+  "sections": [
+    {
+      "title": "세션이란",
+      "count": 2
+    },
+    {
+      "title": "세션 ID로 이어하기 · 플래그",
+      "count": 6
+    },
+    {
+      "title": "세션 이름 붙이기",
+      "count": 4
+    },
+    {
+      "title": "세션 찾아 돌아가기",
+      "count": 6
+    },
+    {
+      "title": "마지막 세션 바로 열기",
+      "count": 5
+    }
+  ],
   "slides": [
     {
       "id": "s4-session-01",

@@ -2,6 +2,40 @@
   "id": "s4-context",
   "title": "context 관리",
   "summary": "LLM 이 대화를 읽는 방식과 context 한계를 이해하고, /clear · /rewind · /compact 로 관리한다.",
+  "sections": [
+    {
+      "title": "LLM 이란",
+      "count": 4
+    },
+    {
+      "title": "Context 란",
+      "count": 2
+    },
+    {
+      "title": "/context 들여다보기",
+      "count": 4
+    },
+    {
+      "title": "왜 관리해야 하나",
+      "count": 2
+    },
+    {
+      "title": "관리법 1 · /clear",
+      "count": 1
+    },
+    {
+      "title": "관리법 2 · /rewind",
+      "count": 10
+    },
+    {
+      "title": "관리법 3 · /compact",
+      "count": 8
+    },
+    {
+      "title": "기억 나누어 관리하기",
+      "count": 1
+    }
+  ],
   "slides": [
     {
       "id": "s4-context-01",

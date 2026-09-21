@@ -30,6 +30,7 @@ export interface Part {
   id: string
   title: string // "개발 환경 준비"
   summary?: string // one line: what this part is for — shown on the part cover's right panel
+  sections?: { title: string; count: number }[] // detailed table of contents shown on the part cover instead of every slide title
   slides: Slide[]
 }
 
@@ -123,6 +124,7 @@ export interface PartCoverSlide extends SlideBase {
   partIndex: number // 0-based
   parts: { title: string; count: number }[] // the whole session's table of contents
   slideTitles: string[] // what this part covers
+  sections?: { title: string; count: number }[]
 }
 
 /** Part opener / session outline. */
