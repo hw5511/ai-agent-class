@@ -355,7 +355,7 @@
         },
         {
           "n": 2,
-          "head": "다음은 CLI 종료",
+          "head": "다음은 종료",
           "body": "Ctrl + C 로 Antigravity 를 빠져나간다."
         }
       ]

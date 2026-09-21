@@ -14,8 +14,8 @@
       "notes": [
         {
           "n": 1,
-          "head": "로그인 방법 목록에서 Google 선택",
-          "body": "로그인 방법 목록이 뜨면 Google OAuth 를 고른다."
+          "head": "Google 로 로그인 선택",
+          "body": "로그인 방법 목록에서 Google 을 고른다."
         },
         {
           "n": 2,
