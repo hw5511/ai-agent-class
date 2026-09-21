@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { CheckIcon, CopyIcon, DownloadIcon, ExternalLinkIcon } from "lucide-react"
+import { CheckIcon, CopyIcon, DownloadIcon, LinkIcon } from "lucide-react"
 import type { ActionBox, ActionItem } from "@/content/schema"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -32,7 +32,7 @@ function Item({ it }: { it: ActionItem }) {
       <div className="flex flex-col gap-1">
         {it.desc && <span className="text-sm text-muted-foreground">{it.desc}</span>}
         <div className="flex items-center gap-2 rounded-md bg-muted p-2">
-          <code className="min-w-0 flex-1 font-term text-sm break-all">{it.value}</code>
+          <code className="min-w-0 flex-1 truncate font-term text-sm" title={it.value}>{it.value}</code>
           <Button
             size="sm"
             variant="outline"
@@ -49,12 +49,11 @@ function Item({ it }: { it: ActionItem }) {
       </div>
     )
   }
-  const Icon = it.kind === "download" ? DownloadIcon : ExternalLinkIcon
+  const Icon = it.kind === "download" ? DownloadIcon : LinkIcon
   return (
-    <Button variant="outline" className="justify-start" render={<a href={it.href} target="_blank" rel="noopener" />}>
+    <Button variant="outline" className="min-w-0 justify-start" render={<a href={it.href} target="_blank" rel="noopener" title={it.href} />}>
       <Icon data-icon="inline-start" />
-      {it.desc ? `${it.desc} — ` : ""}
-      {it.text}
+      <span className="min-w-0 truncate">{it.desc ? `${it.desc} — ` : ""}{it.text}</span>
     </Button>
   )
 }
