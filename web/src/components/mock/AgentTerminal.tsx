@@ -17,7 +17,7 @@ function live(text: string) {
 
 export function AgentTerminal({ t, className }: { t: Terminal; className?: string }) {
   const shell = t.vendor === "shell"
-  const hasBadges = t.turns.some((x) => x.badge) || !!t.input?.badge || !!t.usage?.some((u) => u.badge)
+  const hasBadges = t.turns.some((x) => x.badge) || !!t.input?.badge || !!t.usage?.some((u) => u.badge) || !!t.panel?.rows.some((r) => r.badge)
   return (
     <div className={cn("flex h-full min-h-0 flex-col bg-[#0c0d0e] font-term leading-[1.6] text-[#e8eaec]", shell ? "text-[26px]" : "text-[22px]", className)}>
       <div className={cn("flex min-h-0 flex-1 flex-col gap-5 overflow-hidden px-5 pt-4", hasBadges && "pl-2")}>
@@ -42,6 +42,27 @@ export function AgentTerminal({ t, className }: { t: Terminal; className?: strin
               )}
             </Row>
           ))}
+          {t.panel && (
+            <div className="flex flex-col gap-1 border-t border-[#3a3d40] pt-3 text-[19px]">
+              <Row gutter={hasBadges}><span className="font-bold text-[#e8eaec]">{t.panel.title}</span></Row>
+              {t.panel.rows.map((r, i) => (
+                <Row key={`p${i}`} gutter={hasBadges} badge={r.badge}>
+                  <span className="whitespace-pre-wrap">
+                    {r.seg.map((g, j) => (
+                      <span key={j} className={cn(
+                        g.c === "green" && "font-bold text-[#4ec27a]",
+                        g.c === "dim" && "text-[#767c81]",
+                        g.c === "accent" && "text-[#d97757]",
+                        g.c === "bold" && "font-bold",
+                        !g.c && "text-[#b8bcc0]",
+                      )}>{g.t}</span>
+                    ))}
+                    {r.seg.length === 0 ? " " : null}
+                  </span>
+                </Row>
+              ))}
+            </div>
+          )}
           {t.usage?.map((u, i) => (
             <Row key={`u${i}`} gutter={hasBadges} badge={u.badge}>
               <div className="flex flex-col gap-1.5 pl-6">

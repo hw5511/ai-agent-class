@@ -36,6 +36,7 @@ function badgesOfScreen(s, out) {
     for (const x of t.turns ?? []) if (x.badge) out.push(x.badge)
     if (t.input?.badge) out.push(t.input.badge)
     for (const u of t.usage ?? []) if (u.badge) out.push(u.badge)
+    for (const r of t.panel?.rows ?? []) if (r.badge) out.push(r.badge)
   }
 }
 

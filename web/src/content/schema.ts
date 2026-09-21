@@ -227,6 +227,8 @@ export interface Terminal {
   /** conversation, oldest first; `badge` pins a numbered badge next to that line */
   turns: { role: "user" | "assistant" | "tool"; text: string; badge?: number }[]
   usage?: { label: string; pct: number; resets: string; badge?: number }[] // /usage bar gauges after the turns
+  // a slash-command panel drawn under a rule line (e.g. /chrome); each row is segments with an optional colour
+  panel?: { title: string; rows: { seg: { t: string; c?: "green" | "dim" | "accent" | "bold" }[]; badge?: number }[] }
   input?: { text?: string; placeholder?: string; badge?: number }
 }
 

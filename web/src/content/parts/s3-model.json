@@ -9,7 +9,7 @@
       "title": "/model 선택 화면",
       "screen": {
         "kind": "vscode",
-        "folder": "에이전트1",
+        "folder": "agent1",
         "files": [],
         "terminal": {
           "vendor": "claude",
