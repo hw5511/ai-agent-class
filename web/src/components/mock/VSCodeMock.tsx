@@ -200,13 +200,14 @@ export function VSCodeMock({ s }: { s: VSCodeScreen }) {
             {s.editor && (
               <div className="relative flex min-w-0 flex-1 flex-col border-r border-[#2b2b2b] bg-[#1f1f1f]">
                 <div className="flex h-11 shrink-0 items-center gap-2 border-b border-[#2b2b2b] px-4 font-display text-[18px] text-[#e8e8e8]">
-                  <FileIcon className="size-5 text-slide-accent" />{s.editor.file}
+                  <FileTypeIcon name={s.editor.file} /><span className="flex-1">{s.editor.file}</span>
+                  {s.editor.badge ? <NumberBadge n={s.editor.badge} size="sm" /> : null}
                 </div>
                 <div className="flex flex-col gap-2 p-4 font-term text-[20px] leading-[1.5] text-[#d4d4d4]">
                   {s.editor.lines.map((ln, i) => (
                     <div key={i} className="flex gap-4">
                       <span className="w-6 shrink-0 text-right text-[#6e7681]">{i + 1}</span>
-                      <span className="min-w-0 break-keep [overflow-wrap:anywhere]">{ln}</span>
+                      <span className="min-w-0 whitespace-pre-wrap break-keep [overflow-wrap:anywhere]">{ln}</span>
                     </div>
                   ))}
                 </div>
