@@ -301,6 +301,41 @@ def git_deploy(message=None):
     print('Push complete. GitHub Actions will deploy to GitHub Pages.')
 
 
+def sync_slides_json():
+    """Rewrite assets/<course>/stepNN/slides.json from courses/<course>/stepNN.json.
+
+    The viewer fetches slides.json at load time and lets it OVERRIDE the list baked into index.html.
+    It used to be hand-maintained, so after the PNG migration step02/03 kept pointing at the old SVG
+    decks and the live site silently showed the old slides. The course JSON is the only source now.
+    """
+    base = os.path.dirname(os.path.abspath(__file__))
+    courses_dir = os.path.join(base, 'courses')
+    for course in sorted(os.listdir(courses_dir)):
+        cdir = os.path.join(courses_dir, course)
+        if not os.path.isdir(cdir):
+            continue
+        for fname in sorted(os.listdir(cdir)):
+            if not (fname.startswith('step') and fname.endswith('.json')):
+                continue
+            with open(os.path.join(cdir, fname), encoding='utf-8') as f:
+                data = json.load(f)
+            names = [os.path.basename(s.get('imagePath', '')) for s in data.get('slides', [])]
+            out_dir = os.path.join(base, 'assets', course, fname[:-5])
+            if not names or not os.path.isdir(out_dir):
+                continue
+            out = os.path.join(out_dir, 'slides.json')
+            text = json.dumps({'slides': names}, ensure_ascii=False, indent=2) + '\n'
+            try:
+                with open(out, encoding='utf-8') as f:
+                    old = json.load(f).get('slides')
+            except (OSError, ValueError):
+                old = None
+            if old != names:
+                with open(out, 'w', encoding='utf-8') as f:
+                    f.write(text)
+                print(f'synced {os.path.relpath(out, base)} ({len(names)} slides)')
+
+
 def main():
     dry_run = '--dry-run' in sys.argv
     deploy = '--deploy' in sys.argv
@@ -320,6 +355,8 @@ def main():
     with open(HTML_PATH, 'w', encoding='utf-8') as f:
         f.write(new_html)
     print(f'Done. Wrote {HTML_PATH}')
+
+    sync_slides_json()
 
     build_overview()
 
