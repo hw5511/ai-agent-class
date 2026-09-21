@@ -49,14 +49,18 @@ function CompareT({ s }: { s: CompareSlide }) {
   )
 }
 
+// Type steps down as rows grow so a long table (a /config list) still fits the body; my-auto centres a
+// short table without pushing a tall one above the frame.
 function TableT({ s }: { s: TableSlide }) {
+  const n = s.rows.length
+  const size = n <= 5 ? "text-[34px] [&_td]:py-6 [&_th]:py-6" : n <= 8 ? "text-[28px] [&_td]:py-4 [&_th]:py-4" : n <= 12 ? "text-[22px] [&_td]:py-2.5 [&_th]:py-3" : "text-[18px] [&_td]:py-1.5 [&_th]:py-2"
   return (
-    <div className="flex h-full min-h-0 flex-col justify-center">
-      <table className="w-full border-collapse font-display text-[34px]">
+    <div className="flex h-full min-h-0 flex-col overflow-hidden">
+      <table className={cn("my-auto w-full border-collapse font-display", size)}>
         <thead>
           <tr className="border-b-2 border-[#101113]">
             {s.columns.map((c, i) => (
-              <th key={i} className={cn("px-8 py-6 text-left font-bold text-[#101113]", i > 0 && "text-center")}>{c}</th>
+              <th key={i} className={cn("px-8 text-left font-bold text-[#101113]", i > 0 && "text-center")}>{c}</th>
             ))}
           </tr>
         </thead>
@@ -64,7 +68,7 @@ function TableT({ s }: { s: TableSlide }) {
           {s.rows.map((r, ri) => (
             <tr key={ri} className={cn("border-b border-neutral-200", r.highlight && "outline-2 -outline-offset-2 outline-slide-accent")}>
               {r.cells.map((c, ci) => (
-                <td key={ci} className={cn("px-8 py-6 break-keep text-[#43474b]", ci === 0 ? "font-term font-bold text-[#101113]" : "text-center")}>{c}</td>
+                <td key={ci} className={cn("px-8 break-keep text-[#43474b]", ci === 0 ? "font-term font-bold text-[#101113]" : "text-center")}>{c}</td>
               ))}
             </tr>
           ))}

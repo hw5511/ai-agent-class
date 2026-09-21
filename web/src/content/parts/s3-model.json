@@ -1,0 +1,56 @@
+{
+  "id": "s3-model",
+  "title": "/MODEL",
+  "summary": "/model 로 모델 목록을 보고 속도와 성능의 방향을 이해한다.",
+  "slides": [
+    {
+      "id": "s3-model-01",
+      "template": "screen",
+      "title": "/model 선택 화면",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            { "role": "user", "text": "/model", "badge": 1 },
+            { "role": "assistant", "text": "Opus 5 — For complex tasks", "badge": 2 },
+            { "role": "assistant", "text": "Sonnet 5 — Most efficient for everyday tasks", "badge": 3 },
+            { "role": "assistant", "text": "Haiku 4.5 — Fastest for quick answers" },
+            { "role": "assistant", "text": "Fable 5" }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "/model 명령", "body": "터미널에 /model 이라고 입력하면 고를 수 있는 모델 목록이 뜬다." },
+        { "n": 2, "head": "Opus 5 · Sonnet 5", "body": "Opus 5 는 복잡한 작업에, Sonnet 5 는 일상 작업에 가장 효율적이다." },
+        { "n": 3, "head": "Haiku 4.5 · Fable 5", "body": "Haiku 4.5 는 빠른 답변에 최적. Fable 5 는 설명 문구가 아직 확인되지 않아 이름만 표시했다." }
+      ],
+      "action": {
+        "label": "터미널에 입력",
+        "items": [
+          { "kind": "copy", "value": "/model" }
+        ]
+      }
+    },
+    {
+      "id": "s3-model-02",
+      "template": "table",
+      "title": "haiku → sonnet → opus → fable",
+      "columns": ["모델", "방향"],
+      "rows": [
+        { "cells": ["Haiku 4.5", "빠르고 저렴 — 구독 사용량을 덜 쓴다"] },
+        { "cells": ["Sonnet 5", "빠르고 저렴 ↔ 똑똑함 사이"] },
+        { "cells": ["Opus 5", "더 똑똑함 ↔ 빠르고 저렴 사이"] },
+        { "cells": ["Fable 5", "더 똑똑함 — 구독 사용량을 더 쓴다"] }
+      ],
+      "notes": [
+        { "n": 1, "head": "왼쪽 = 빠르고 저렴", "body": "성능은 상대적으로 낮지만 응답이 빠르고, 같은 시간에 구독 사용량을 덜 쓴다." },
+        { "n": 2, "head": "오른쪽 = 더 똑똑함", "body": "더 복잡한 작업을 더 잘 해내지만, 같은 시간에 구독 사용량을 더 많이 쓴다." },
+        { "n": "!", "head": "가격·배수는 다루지 않는다", "body": "구체적인 숫자는 여기서 다루지 않는다 — 방향(왼쪽↔오른쪽)만 기억하면 된다." }
+      ]
+    }
+  ]
+}

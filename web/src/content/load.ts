@@ -20,7 +20,16 @@ type LegacyMeta = { label: string; title: string }
 
 const legacy = import.meta.glob<LegacySession>("../../../courses/*/step*.json", { eager: true, import: "default" })
 const metas = import.meta.glob<LegacyMeta>("../../../courses/*/_meta.json", { eager: true, import: "default" })
-const native = import.meta.glob<Session>("./sessions/*/step*.json", { eager: true, import: "default" })
+type NativeSession = Omit<Session, "parts"> & { parts: (Part | string)[] }
+const native = import.meta.glob<NativeSession>("./sessions/*/step*.json", { eager: true, import: "default" })
+// A session may list its parts by id; each id resolves to ./parts/<id>.json (one Part per file, so
+// parts can be written independently and reordered by editing one list).
+const partFiles = import.meta.glob<Part>("./parts/*.json", { eager: true, import: "default" })
+const partById = (id: string): Part => {
+  const hit = Object.entries(partFiles).find(([p]) => p.endsWith(`/${id}.json`))?.[1]
+  return hit ?? { id, title: `${id} (missing)`, slides: [] }
+}
+const resolveSession = (s: NativeSession): Session => ({ ...s, parts: s.parts.map((p) => (typeof p === "string" ? partById(p) : p)) })
 
 const COURSE_ORDER: CourseId[] = ["basic", "advanced", "automation"]
 
@@ -57,8 +66,9 @@ export function loadSite(): Site {
     const sessions = Object.entries(legacy)
       .filter(([p]) => p.includes(`/courses/${id}/`))
       .map(([, s]) => adaptLegacy(id, s))
-    for (const [p, s] of Object.entries(native)) {
+    for (const [p, raw] of Object.entries(native)) {
       if (!p.includes(`/sessions/${id}/`)) continue
+      const s = resolveSession(raw)
       const at = sessions.findIndex((x) => x.step === s.step)
       if (at >= 0) sessions[at] = s
       else sessions.push(s)

@@ -1,0 +1,268 @@
+{
+  "id": "s1-claude-practice",
+  "title": "Claude Code 실습",
+  "summary": "Claude Code 로 자기소개 파일 생성부터 폴더 이동까지 실습한다.",
+  "slides": [
+    {
+      "id": "s1-claude-practice-01",
+      "template": "screen",
+      "title": "첫 대화 — 자기소개 확인",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [
+            { "role": "user", "text": "너는 누구니?", "badge": 1 },
+            { "role": "assistant", "text": "저는 Claude Code입니다. 파일을 읽고 쓰고 터미널 명령까지 실행할 수 있는 AI 코딩 에이전트예요.", "badge": 2 }
+          ],
+          "input": { "placeholder": "메시지를 입력하세요..." }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "질문 입력", "body": "입력창에 '너는 누구니?'라고 적고 Enter 를 누른다." },
+        { "n": 2, "head": "자기소개 확인", "body": "Claude Code 가 자신의 역할과 특징을 설명한다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [{ "kind": "copy", "value": "너는 누구니?" }]
+      }
+    },
+    {
+      "id": "s1-claude-practice-02",
+      "template": "screen",
+      "title": "자기소개서 파일 만들기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [{ "name": "claude.txt", "depth": 0, "active": true }],
+        "editor": {
+          "file": "claude.txt",
+          "lines": [
+            "# 자기소개서",
+            "안녕하세요! 저는 Claude Code입니다.",
+            "프로젝트 전반을 이해하고 대규모 리팩터링 및",
+            "문서 작성을 주도할 수 있습니다."
+          ]
+        },
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [
+            { "role": "user", "text": "현재 폴더에 'claude.txt'를 만들어줘.\n네가 누구이고 무엇을 할 수 있는지 간단히 작성해줘.", "badge": 1 },
+            { "role": "tool", "text": "Write(claude.txt)", "badge": 2 },
+            { "role": "assistant", "text": "claude.txt 파일을 만들었습니다." }
+          ],
+          "input": { "placeholder": "메시지를 입력하세요..." }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "파일 이름과 내용 요청", "body": "파일 이름은 모델 이름을 따라 claude.txt 로 짓는다." },
+        { "n": 2, "head": "Write 도구 실행", "body": "Claude Code 가 파일을 생성하고 완료를 알린다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [{ "kind": "copy", "value": "현재 폴더에 'claude.txt'를 만들어줘.\n네가 누구이고 무엇을 할 수 있는지 간단히 작성해줘." }]
+      }
+    },
+    {
+      "id": "s1-claude-practice-03",
+      "template": "screen",
+      "title": "탐색기에서 파일 확인하기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [{ "name": "claude.txt", "depth": 0, "active": true, "badge": 1 }],
+        "editor": {
+          "file": "claude.txt",
+          "lines": [
+            "# 자기소개서",
+            "안녕하세요! 저는 Claude Code입니다.",
+            "프로젝트 전반을 이해하고 대규모 리팩터링 및",
+            "문서 작성을 주도할 수 있습니다."
+          ]
+        },
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [
+            { "role": "tool", "text": "Write(claude.txt)" },
+            { "role": "assistant", "text": "완료했습니다. claude.txt 를 생성했습니다.", "badge": 2 },
+            { "role": "assistant", "text": "왼쪽 탐색기에서 파일을 선택해 내용을 확인할 수 있습니다." }
+          ],
+          "input": { "placeholder": "메시지를 입력하세요..." }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "탐색기에 생성됨", "body": "에이전트1 폴더에 claude.txt 가 실제로 생겼는지 확인한다." },
+        { "n": 2, "head": "내용 열람", "body": "응답만 보지 말고 편집기에서 실제 내용도 확인한다." }
+      ]
+    },
+    {
+      "id": "s1-claude-practice-04",
+      "template": "screen",
+      "title": "introduce 폴더 만들기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [
+          { "name": "introduce", "folder": true, "depth": 0 },
+          { "name": "claude.txt", "depth": 0 }
+        ],
+        "editor": {
+          "file": "claude.txt",
+          "lines": [
+            "# 자기소개서",
+            "안녕하세요! 저는 Claude Code입니다.",
+            "프로젝트 전반을 이해하고 대규모 리팩터링 및",
+            "문서 작성을 주도할 수 있습니다."
+          ]
+        },
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [
+            { "role": "user", "text": "'introduce' 폴더를 만들어줘.", "badge": 1 },
+            { "role": "tool", "text": "Bash(mkdir introduce)" },
+            { "role": "assistant", "text": "'introduce' 폴더를 생성했습니다.", "badge": 2 }
+          ],
+          "input": { "placeholder": "메시지를 입력하세요..." }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "폴더 생성 요청", "body": "현재 폴더에 introduce 폴더를 만들어달라고 요청한다." },
+        { "n": 2, "head": "있으면 그대로 진행", "body": "이미 있다면 에이전트가 '이미 있습니다'라고 답하고 넘어간다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [{ "kind": "copy", "value": "현재 폴더에 'introduce' 폴더를 만들어줘." }]
+      }
+    },
+    {
+      "id": "s1-claude-practice-05",
+      "template": "screen",
+      "title": "자기소개서를 폴더로 옮기기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [
+          { "name": "introduce", "folder": true, "depth": 0 },
+          { "name": "claude.txt", "depth": 1, "active": true }
+        ],
+        "editor": {
+          "file": "claude.txt",
+          "lines": [
+            "# 자기소개서 (이동 완료)",
+            "안녕하세요! 저는 Claude Code입니다.",
+            "프로젝트 전반을 이해하고 대규모 리팩터링 및",
+            "문서 작성을 주도할 수 있습니다."
+          ]
+        },
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [
+            { "role": "user", "text": "'claude.txt'를 'introduce' 폴더로 옮겨줘.", "badge": 1 },
+            { "role": "tool", "text": "Bash(mv claude.txt introduce/)" },
+            { "role": "assistant", "text": "파일을 introduce 폴더로 이동했습니다. introduce\\claude.txt 로 이동 완료.", "badge": 2 }
+          ],
+          "input": { "placeholder": "메시지를 입력하세요..." }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "이동 지시", "body": "자연어로 파일 이동을 요청한다." },
+        { "n": 2, "head": "새 경로 확인", "body": "introduce\\claude.txt 로 이동됐는지 확인한다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [{ "kind": "copy", "value": "'claude.txt'를 'introduce' 폴더로 옮겨줘." }]
+      }
+    },
+    {
+      "id": "s1-claude-practice-06",
+      "template": "screen",
+      "title": "최종 폴더 구조 확인",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [
+          { "name": "introduce", "folder": true, "depth": 0, "active": true },
+          { "name": "claude.txt", "depth": 1, "badge": 1 }
+        ],
+        "editor": {
+          "file": "claude.txt",
+          "lines": [
+            "# 자기소개서 (이동 완료)",
+            "안녕하세요! 저는 Claude Code입니다.",
+            "프로젝트 전반을 이해하고 대규모 리팩터링 및",
+            "문서 작성을 주도할 수 있습니다."
+          ]
+        },
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [
+            { "role": "assistant", "text": "실습을 마쳤습니다. 파일과 폴더 구조가 완성되었습니다.", "badge": 2 },
+            { "role": "assistant", "text": "에이전트1 > introduce > claude.txt" }
+          ],
+          "input": { "placeholder": "메시지를 입력하세요..." }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "introduce 안 claude.txt", "body": "introduce 폴더 안에 claude.txt 가 추가됐는지 확인한다." },
+        { "n": 2, "head": "완료 메시지 확인", "body": "앞 에이전트의 파일과 나란히 쌓인다." }
+      ]
+    },
+    {
+      "id": "s1-claude-practice-07",
+      "template": "screen",
+      "title": "Ctrl + C 로 CLI 종료",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [
+          { "name": "introduce", "folder": true, "depth": 0 },
+          { "name": "claude.txt", "depth": 1 }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [],
+          "input": { "placeholder": "무엇을 도와드릴까요? [입력 대기]", "badge": 1 }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "입력 대기 상태", "body": "빈 입력창에서 Ctrl + C 를 누른다." },
+        { "n": "!", "head": "세션 종료", "body": "^C 가 표시되며 대화형 세션이 끝난다." }
+      ],
+      "action": {
+        "label": "종료 단축키",
+        "items": [{ "kind": "copy", "value": "Ctrl + C", "desc": "세션 종료" }]
+      }
+    },
+    {
+      "id": "s1-claude-practice-08",
+      "template": "screen",
+      "title": "일반 터미널 복귀 확인",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [
+          { "name": "introduce", "folder": true, "depth": 0 },
+          { "name": "claude.txt", "depth": 1 }
+        ],
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [{ "role": "user", "text": "" }]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "PowerShell 프롬프트 확인", "body": "PS ...\\에이전트1> 만 보이면 정상 종료된 것이다." },
+        { "n": 2, "head": "3대 CLI 실습 완료", "body": "Antigravity · Codex · Claude Code 실습을 모두 마쳤다." }
+      ]
+    }
+  ]
+}

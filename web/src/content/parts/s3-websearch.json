@@ -1,0 +1,184 @@
+{
+  "id": "s3-websearch",
+  "title": "웹서치 툴",
+  "summary": "WebSearch·WebFetch 로 학습 마감 이후의 정보를 직접 확인한다.",
+  "slides": [
+    {
+      "id": "s3-websearch-01",
+      "template": "screen",
+      "title": "할루시네이션",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "turns": [
+            {
+              "role": "user",
+              "text": "이번 주에 발표된 AI 관련 뉴스 3가지를 알려줘",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "이번 주 AI 뉴스는 알려드릴 수 없습니다. 웹 검색 도구가 없고, 제 학습 데이터는 2026년 1월까지라 이번 주 소식은 모릅니다.",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "기억에 의존해 지어내면 사실과 다른 내용을 전하게 되어 그렇게 하지 않겠습니다.",
+              "badge": 3
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "학습 마감 이후 = 모르는 구간",
+          "body": "모델은 학습 데이터가 마감된 시점까지만 안다."
+        },
+        {
+          "n": 2,
+          "head": "확인 없이 답하면 위험",
+          "body": "모르는 구간을 기억만으로 채우면 그럴듯한 오답이 나올 수 있다 — 이것이 할루시네이션이다."
+        },
+        {
+          "n": 3,
+          "head": "실제 실행 (웹서치 도구 끔)",
+          "body": "오답을 지어내는 대신 정직하게 거절한 실제 응답이다."
+        }
+      ]
+    },
+    {
+      "id": "s3-websearch-02",
+      "template": "table",
+      "title": "웹서치 툴",
+      "columns": [
+        "도구",
+        "하는 일"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "WebSearch",
+            "검색어로 웹을 검색해 최신 결과 목록(제목·요약·출처)을 가져온다."
+          ]
+        },
+        {
+          "cells": [
+            "WebFetch",
+            "특정 URL 페이지를 열어 그 안의 내용을 읽어온다."
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "학습 마감 이후 정보도 확인",
+          "body": "지금 이 순간의 웹 페이지를 직접 찾아서 읽는다."
+        },
+        {
+          "n": 2,
+          "head": "검색(WebSearch) → 열람(WebFetch)",
+          "body": "먼저 검색으로 후보를 찾고, 필요하면 특정 페이지를 열어 자세히 읽는다."
+        },
+        {
+          "n": "!",
+          "head": "출처가 함께 붙는다",
+          "body": "찾아온 내용에는 어느 페이지에서 가져왔는지 출처가 같이 표시된다."
+        }
+      ]
+    },
+    {
+      "id": "s3-websearch-03",
+      "template": "screen",
+      "title": "최근 7일 AI 트렌드",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "input": {
+            "text": "현재 시스템 시간 날짜를 확인해서, 'ai트렌드'에 관해 최근 7일 이내에 발행된 것으로만 해서 관련 뉴스들을 웹서치해서 주요 뉴스 3가지를 알려줘",
+            "badge": 1
+          },
+          "turns": []
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "현재 날짜부터 확인",
+          "body": "\"현재 시스템 시간 날짜를 확인해서\" — 기준 날짜를 먼저 잡는다."
+        },
+        {
+          "n": 2,
+          "head": "최근 7일로 범위 제한",
+          "body": "너무 오래된 뉴스가 섞이지 않도록 발행일 범위를 좁힌다."
+        },
+        {
+          "n": "!",
+          "head": "\"주요 뉴스 3가지\"로 개수 제한",
+          "body": "결과가 너무 길어지지 않게 핵심만 3건으로 정리해달라고 요청한다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "현재 시스템 시간 날짜를 확인해서, 'ai트렌드'에 관해 최근 7일 이내에 발행된 것으로만 해서 관련 뉴스들을 웹서치해서 주요 뉴스 3가지를 알려줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3-websearch-04",
+      "template": "screen",
+      "title": "주요 뉴스 3건",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "현재 시스템 시간 날짜를 확인해서, 'ai트렌드'에 관해 최근 7일 이내에 발행된 것으로만 해서 관련 뉴스들을 웹서치해서 주요 뉴스 3가지를 알려줘"
+            },
+            {
+              "role": "tool",
+              "text": "WebSearch(ai트렌드 최근 뉴스, 최근 7일)",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "기준일 2026-09-21, 주요 뉴스 3가지를 정리했습니다.",
+              "badge": 2
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "트럼프 \"AI Force\" 창설 발표",
+          "body": "9월 19일(토) 트럼프 대통령이 우주군을 본뜬 \"AI Force\"를 만들고 AI 차르를 임명하겠다고 밝혔다."
+        },
+        {
+          "n": 2,
+          "head": "Apple, 재설계한 Siri 공개 베타",
+          "body": "Google Gemini와 공동 개발한 맞춤형 모델 사용. 처리는 기기 내부와 Apple Private Cloud Compute로 분담."
+        },
+        {
+          "n": 3,
+          "head": "AI 안전성 논쟁",
+          "body": "Google 은 Gemini 의 외부 시스템 무단 접근을 공개했고, Anthropic CEO 는 개발 속도 조절(\"pacing\")을 주장했다."
+        }
+      ]
+    }
+  ]
+}

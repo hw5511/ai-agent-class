@@ -1,0 +1,355 @@
+{
+  "id": "s2-edit",
+  "title": "Edit 툴",
+  "summary": "이미 있는 파일에서 필요한 부분만 고치는 Edit 툴을 실습한다.",
+  "slides": [
+    {
+      "id": "s2-edit-01",
+      "template": "table",
+      "title": "Write와 Edit 차이",
+      "columns": [
+        "툴",
+        "범위",
+        "파일 조건"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "Write",
+            "통째로 새로 쓰기",
+            "없어도 됨"
+          ]
+        },
+        {
+          "cells": [
+            "Edit",
+            "필요한 부분만",
+            "있어야 함"
+          ],
+          "highlight": true
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "1. 파일 읽기",
+          "body": "먼저 지금 내용을 확인한다."
+        },
+        {
+          "n": 2,
+          "head": "2. 고칠 부분 찾기",
+          "body": "바뀌어야 할 곳만 짚어낸다."
+        },
+        {
+          "n": 3,
+          "head": "3. 그 부분만 교체",
+          "body": "나머지는 그대로 둔다."
+        }
+      ]
+    },
+    {
+      "id": "s2-edit-02",
+      "template": "table",
+      "title": "만들고 보고 고치기 반복",
+      "columns": [
+        "단계",
+        "내용"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "1. 만들고",
+            "Write 로 처음 결과물을 만든다."
+          ]
+        },
+        {
+          "cells": [
+            "2. 보고",
+            "결과를 직접 확인한다."
+          ]
+        },
+        {
+          "cells": [
+            "3. 고치고",
+            "Edit 로 필요한 부분만 다듬는다."
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": "!",
+          "head": "한 번에 완벽한 결과는 나오지 않는다",
+          "body": "이 세 단계를 반복하며 완성해 간다."
+        }
+      ]
+    },
+    {
+      "id": "s2-edit-03",
+      "template": "screen",
+      "title": "테트리스 개선 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          {
+            "name": "자기소개.md"
+          },
+          {
+            "name": "자전거_강아지.svg"
+          },
+          {
+            "name": "poster.html"
+          },
+          {
+            "name": "calculator.py"
+          },
+          {
+            "name": "tetris.py",
+            "active": true
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "테트리스에 시작 버튼을 추가하고, 블록을 좀 더 입체적이게 만들고, 화면을 좀 더 키워서 전체적으로 세련되게 디자인해줘",
+              "badge": 1
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "시작 버튼 추가",
+          "body": "지금은 버튼 없이 바로 시작하는 상태다."
+        },
+        {
+          "n": 2,
+          "head": "블록 입체화",
+          "body": "지금은 밋밋한 사각형 블록이다."
+        },
+        {
+          "n": 3,
+          "head": "화면 확대 및 정리",
+          "body": "한 문장에 여러 요청을 담아도 순서대로 처리한다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "테트리스에 시작 버튼을 추가하고, 블록을 좀 더 입체적이게 만들고, 화면을 좀 더 키워서 전체적으로 세련되게 디자인해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2-edit-04",
+      "template": "screen",
+      "title": "Read Edit 작업 로그",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          {
+            "name": "자기소개.md"
+          },
+          {
+            "name": "자전거_강아지.svg"
+          },
+          {
+            "name": "poster.html"
+          },
+          {
+            "name": "calculator.py"
+          },
+          {
+            "name": "tetris.py",
+            "active": true
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "Read(tetris.py)",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "Edit(tetris.py) — 시작 버튼 추가",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "Edit(tetris.py) — 블록 베벨 효과"
+            },
+            {
+              "role": "assistant",
+              "text": "Edit(tetris.py) — 셀 크기 확대"
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Read 로 내용 확인",
+          "body": "고치기 전에 파일 내용부터 확인한다."
+        },
+        {
+          "n": 2,
+          "head": "Edit 를 여러 번 나눠 적용",
+          "body": "요청 세 가지가 각각 다른 Edit 호출로 처리된다."
+        },
+        {
+          "n": "!",
+          "head": "파일 전체 재작성 없음",
+          "body": "바뀌는 줄만 추가·삭제로 표시된다."
+        }
+      ]
+    },
+    {
+      "id": "s2-edit-05",
+      "template": "table",
+      "title": "테트리스 개선 전후",
+      "columns": [
+        "항목",
+        "이전",
+        "이후"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "시작 버튼",
+            "없음",
+            "있음"
+          ]
+        },
+        {
+          "cells": [
+            "블록",
+            "밋밋한 사각형",
+            "입체적"
+          ]
+        },
+        {
+          "cells": [
+            "화면 크기",
+            "작음",
+            "커짐"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "이전 — 버튼 없음·밋밋한 사각형·작은 화면",
+          "body": "tetris.py 의 원래 모습이다."
+        },
+        {
+          "n": 2,
+          "head": "이후 — 시작 버튼·입체 블록·커진 화면",
+          "body": "같은 테트리스인데 달라진 부분이 한눈에 보인다."
+        }
+      ]
+    },
+    {
+      "id": "s2-edit-06",
+      "template": "compare",
+      "title": "포스터 초록 테마 변경",
+      "left": {
+        "label": "이전 · poster.html",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/s2_write_poster.png"
+        }
+      },
+      "right": {
+        "label": "이후 · poster_green.html",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/s2_write_poster_green.png"
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "색상만 바꿔달라고 요청",
+          "body": "새로 만드는 게 아니라 있던 포스터 파일을 고치는 것이다."
+        },
+        {
+          "n": 2,
+          "head": "구조는 그대로, 색상만 초록으로",
+          "body": "poster.html 의 색상 코드만 바뀌고 나머지는 그대로다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "강아지 포스터에서 색상을 초록색 테마로 바꾸고 크롬으로 열어줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2-edit-07",
+      "template": "table",
+      "title": "Edit 툴 정리",
+      "columns": [
+        "#",
+        "정리"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "1",
+            "Write 는 새로 만들기, Edit 는 있는 것 고치기"
+          ]
+        },
+        {
+          "cells": [
+            "2",
+            "고칠 부분만 바뀌고 나머지는 그대로"
+          ]
+        },
+        {
+          "cells": [
+            "3",
+            "만들고 → 보고 → 고치고 반복"
+          ]
+        },
+        {
+          "cells": [
+            "4",
+            "코드 몰라도 말로 수정 가능"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": "!",
+          "head": "/clear 로 정리하고 다음 실습으로",
+          "body": "/clear 는 지금 채팅방을 나가고 새 채팅방으로 가는 것이다."
+        }
+      ],
+      "action": {
+        "label": "명령 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/clear"
+          }
+        ]
+      }
+    }
+  ]
+}

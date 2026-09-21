@@ -1,0 +1,121 @@
+{
+  "id": "s1-agy-install",
+  "title": "Antigravity 설치와 PATH",
+  "summary": "Antigravity CLI 를 설치하고 PATH 문제를 해결해 실행까지 확인한다.",
+  "slides": [
+    {
+      "id": "s1-agy-install-01",
+      "template": "screen",
+      "title": "Antigravity CLI 설치",
+      "screen": { "kind": "shot", "src": "/shots/agy_설치.png" },
+      "notes": [
+        { "n": 1, "head": "설치 스크립트 한 줄 실행", "body": "Windows 는 irm ... | iex, macOS 는 curl ... | bash 한 줄로 설치한다." },
+        { "n": 2, "head": "PATH 미반영", "body": "설치가 끝나도 지금 열어 둔 터미널이 새 경로를 바로 못 찾을 수 있다." }
+      ],
+      "action": {
+        "label": "설치 명령어",
+        "items": [
+          { "kind": "copy", "value": "irm https://antigravity.google/cli/install.ps1 | iex", "desc": "Windows" },
+          { "kind": "copy", "value": "curl -fsSL https://antigravity.google/cli/install.sh | bash", "desc": "macOS" }
+        ]
+      }
+    },
+    {
+      "id": "s1-agy-install-02",
+      "template": "screen",
+      "title": "agy 명령어 인식 오류",
+      "screen": { "kind": "shot", "src": "/shots/agy_PATH_오류.png" },
+      "notes": [
+        { "n": 1, "head": "agy --version 으로 확인", "body": "설치 직후 새 명령이 이 터미널에서 바로 인식되는지 확인한다." },
+        { "n": 2, "head": "'agy' 인식 오류", "body": "VS Code 는 켜질 때의 PATH 를 그대로 쓰기 때문에 방금 설치한 경로를 모른다." },
+        { "n": "!", "head": "해결은 다음 슬라이드", "body": "명령어로 PATH 를 만지지 않는다 — VS Code 를 완전히 껐다 켠다." }
+      ],
+      "action": {
+        "label": "확인 명령어",
+        "items": [{ "kind": "copy", "value": "agy --version" }]
+      }
+    },
+    {
+      "id": "s1-agy-install-03",
+      "template": "compare",
+      "title": "PATH 등록하기",
+      "left": {
+        "label": "Windows · PowerShell 스크립트 결과",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "shell",
+            "turns": [
+              { "role": "assistant", "text": "[v] agy      사용 가능!  1.2.5", "badge": 1 },
+              { "role": "assistant", "text": "[ ] codex    아직 설치되지 않았습니다" },
+              { "role": "assistant", "text": "[ ] claude   아직 설치되지 않았습니다" },
+              { "role": "assistant", "text": "1/3 확인됨." }
+            ]
+          }
+        }
+      },
+      "right": {
+        "label": "macOS · zsh",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "shell",
+            "turns": [
+              { "role": "user", "text": "echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc", "badge": 2 },
+              { "role": "user", "text": "source ~/.zshrc" },
+              { "role": "user", "text": "agy --version" },
+              { "role": "assistant", "text": "agy 1.2.5" }
+            ]
+          }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "Windows — 스크립트가 자동 등록", "body": "액션박스 스크립트를 붙여넣으면 agy 위치를 찾아 PATH 에 자동으로 등록한다." },
+        { "n": 2, "head": "macOS — 설치가 알려준 줄 그대로", "body": "agy 설치가 끝나며 찍어준 Run: 줄을 그대로 복사해 붙여넣는다. 화면에 뜬 경로는 사람마다 다르다." },
+        { "n": "!", "head": "지금은 agy 만 확인", "body": "codex 와 claude 는 곧 설치한다." }
+      ],
+      "action": {
+        "label": "PATH 한 번에 잡기",
+        "items": [
+          {
+            "kind": "copy",
+            "desc": "Windows — PowerShell 에 통째로 붙여넣기",
+            "value": "$names = 'agy','codex','claude'\n$guess = @{\n  agy    = @(\"$env:LOCALAPPDATA\\agy\\bin\")\n  codex  = @(\"$env:LOCALAPPDATA\\Programs\\OpenAI\\Codex\\bin\", \"$env:USERPROFILE\\.codex\\bin\")\n  claude = @(\"$env:USERPROFILE\\.local\\bin\")\n}\n$roots = @(@($env:LOCALAPPDATA, $env:APPDATA, $env:USERPROFILE) | Where-Object { $_ -and (Test-Path $_) } | Select-Object -Unique)\n$where = @{}\nforeach ($n in $names) {\n  $dir = $null\n  $pre = Get-Command $n -ErrorAction SilentlyContinue\n  if ($pre -and $pre.Source) { $dir = Split-Path $pre.Source -Parent }\n  if (-not $dir) { foreach ($g in $guess[$n]) { if (Test-Path (Join-Path $g \"$n.exe\")) { $dir = $g; break } } }\n  if (-not $dir) {\n    foreach ($r in $roots) {\n      $hit = Get-ChildItem -Path $r -Filter \"$n.exe\" -Recurse -File -Depth 5 -ErrorAction SilentlyContinue | Select-Object -First 1\n      if ($hit) { $dir = $hit.DirectoryName; break }\n    }\n  }\n  if ($dir) { $where[$n] = $dir }\n}\n$found = @($where.Values | Select-Object -Unique)\nif ($found.Count -gt 0) {\n  $have = @([Environment]::GetEnvironmentVariable('Path','User') -split ';' | Where-Object { $_ })\n  $new  = @($found | Where-Object { $have -notcontains $_ })\n  if ($new.Count -gt 0) { [Environment]::SetEnvironmentVariable('Path', (($have + $new) -join ';'), 'User') }\n  $cur = @($env:Path -split ';' | Where-Object { $_ })\n  $now = @($found | Where-Object { $cur -notcontains $_ })\n  if ($now.Count -gt 0) { $env:Path = (($cur + $now) -join ';') }\n}\nWrite-Host \"\"\nWrite-Host \"  ────────────────────────────────────────────────────────────\"\n$ok = 0\nforeach ($n in $names) {\n  if (-not $where.ContainsKey($n)) {\n    Write-Host \"   [ ] \" -NoNewline -ForegroundColor Red\n    Write-Host (\"{0,-8}\" -f $n) -NoNewline -ForegroundColor Red\n    Write-Host \"아직 설치되지 않았습니다\" -ForegroundColor Red\n    continue\n  }\n  $exe = Join-Path $where[$n] \"$n.exe\"\n  $ver = $null\n  try { $ver = (& $exe --version 2>&1 | Select-Object -First 1) } catch { $ver = $null }\n  if ($ver) { $ver = ($ver -replace '\\s+', ' ').Trim() }\n  $byName = [bool](Get-Command $n -ErrorAction SilentlyContinue)\n  if ($ver -and $byName) {\n    Write-Host \"   [v] \" -NoNewline -ForegroundColor Green\n    Write-Host (\"{0,-8}\" -f $n) -NoNewline -ForegroundColor Green\n    Write-Host (\"사용 가능!  \" + $ver) -ForegroundColor Green\n    $ok++\n  } elseif ($ver) {\n    Write-Host \"   [!] \" -NoNewline -ForegroundColor Yellow\n    Write-Host (\"{0,-8}\" -f $n) -NoNewline -ForegroundColor Yellow\n    Write-Host ($ver + \"  — 설치는 됐지만 이 터미널이 아직 이름으로 못 찾습니다\") -ForegroundColor Yellow\n  } else {\n    Write-Host \"   [!] \" -NoNewline -ForegroundColor Yellow\n    Write-Host (\"{0,-8}\" -f $n) -NoNewline -ForegroundColor Yellow\n    Write-Host \"파일은 있는데 실행이 안 됩니다 — 설치를 다시 하세요\" -ForegroundColor Yellow\n  }\n}\nWrite-Host \"  ────────────────────────────────────────────────────────────\"\nif ($ok -eq 3) {\n  Write-Host \"   세 개 다 버전이 찍혔습니다. VS Code 껐다 켤 필요 없습니다.\" -ForegroundColor Cyan\n} else {\n  Write-Host (\"   \" + $ok + \"/3 확인됨. [!] 는 새 터미널을 열면 대개 해결됩니다.\") -ForegroundColor Yellow\n}\nWrite-Host \"\""
+          }
+        ]
+      }
+    },
+    {
+      "id": "s1-agy-install-04",
+      "template": "screen",
+      "title": "VS Code 재실행 후 Antigravity 실행",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [{ "name": "(비어 있음)", "depth": 0 }],
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [
+            { "role": "user", "text": "agy --version", "badge": 1 },
+            { "role": "assistant", "text": "agy 1.2.5" },
+            { "role": "user", "text": "agy --dangerously-skip-permissions", "badge": 2 },
+            { "role": "assistant", "text": "확인 없이 파일·명령을 실행하는 모드입니다." }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "agy --version 으로 재확인", "body": "VS Code 를 완전히 껐다 켠 뒤 새 터미널에서 버전이 찍히는지 본다." },
+        { "n": 2, "head": "--dangerously-skip-permissions 로 실행", "body": "확인 없이 파일·명령을 실행하는 모드 — 이어서 설치까지 agy 에게 맡기기 위해 쓴다." },
+        { "n": "!", "head": "버전 미출력 시", "body": "창 ✕ 닫기나 Reload Window 로는 안 된다 — File > Exit 로 완전히 종료했다가 다시 연다." }
+      ],
+      "action": {
+        "label": "확인하고 실행",
+        "items": [
+          { "kind": "copy", "value": "agy --version", "desc": "버전 확인" },
+          { "kind": "copy", "value": "agy --dangerously-skip-permissions", "desc": "실행" }
+        ]
+      }
+    }
+  ]
+}

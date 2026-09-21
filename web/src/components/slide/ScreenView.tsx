@@ -13,7 +13,7 @@ export function ScreenView({ screen }: { screen: Screen }) {
     )
   return (
     <div className="flex h-full min-h-0 items-center justify-center">
-      <img src={screen.src} alt="" className="max-h-full max-w-full rounded-2xl border border-neutral-200 object-contain shadow-[0_18px_40px_rgba(16,17,19,0.12)]" />
+      <img src={screen.src} alt="" className="size-full object-contain drop-shadow-[0_12px_28px_rgba(16,17,19,0.14)]" />
     </div>
   )
 }

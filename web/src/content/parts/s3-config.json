@@ -1,0 +1,151 @@
+{
+  "id": "s3-config",
+  "title": "/CONFIG",
+  "summary": "/config·/status·/usage 로 설정과 계정, 사용량을 확인한다.",
+  "slides": [
+    {
+      "id": "s3-config-01",
+      "template": "table",
+      "title": "/config",
+      "columns": ["설정 항목", "값"],
+      "rows": [
+        { "cells": ["Auto-update channel", "—"], "highlight": true },
+        { "cells": ["Theme", "—"] },
+        { "cells": ["Notifications", "—"] },
+        { "cells": ["Output style", "—"] },
+        { "cells": ["Language", "Default (English)"] },
+        { "cells": ["Model", "Default (recommended)"] },
+        { "cells": ["Diff tool", "—"] },
+        { "cells": ["Auto-scroll", "—"] }
+      ],
+      "notes": [
+        { "n": 1, "head": "/config 로 진입", "body": "터미널에 /config 라고 입력하면 이 설정 패널이 뜬다." },
+        { "n": 2, "head": "스크롤해서 더 보기", "body": "한 화면에 다 안 들어가서 아래로 내려야 나머지 항목이 보인다." },
+        { "n": "!", "head": "테마·알림·모델처럼 자주 바꾸는 항목", "body": "전부 이 패널 안에 모여 있다." }
+      ],
+      "action": {
+        "label": "터미널에 입력",
+        "items": [
+          { "kind": "copy", "value": "/config" }
+        ]
+      }
+    },
+    {
+      "id": "s3-config-02",
+      "template": "table",
+      "title": "설정 항목 한눈에",
+      "columns": ["설정 항목", "종류", "값"],
+      "rows": [
+        { "cells": ["Auto-update channel", "선택", "—"] },
+        { "cells": ["Theme", "선택", "—"] },
+        { "cells": ["Notifications", "선택", "—"] },
+        { "cells": ["Push when actions required", "ON/OFF", "—"] },
+        { "cells": ["Push when Claude decides", "ON/OFF", "—"] },
+        { "cells": ["Output style", "선택", "—"] },
+        { "cells": ["Default view", "선택", "—"] },
+        { "cells": ["Language", "선택", "Default (English)"] },
+        { "cells": ["Editor mode", "선택", "—"] },
+        { "cells": ["Question auto-continue timeout", "선택", "—"] },
+        { "cells": ["Claude-proposed goals", "선택", "—"] },
+        { "cells": ["Show last response in external editor", "ON/OFF", "—"] },
+        { "cells": ["Show PR status footer", "ON/OFF", "—"] },
+        { "cells": ["Model", "선택", "Default (recommended)"] },
+        { "cells": ["Diff tool", "선택", "—"] },
+        { "cells": ["Auto-connect to IDE (external terminal)", "ON/OFF", "—"] },
+        { "cells": ["Use auto mode during plan", "ON/OFF", "—"] },
+        { "cells": ["Respect .gitignore in file picker", "ON/OFF", "—"] },
+        { "cells": ["Skip the /copy picker", "ON/OFF", "—"] },
+        { "cells": ["Copy on select", "ON/OFF", "—"] },
+        { "cells": ["Auto-scroll", "ON/OFF", "—"] },
+        { "cells": ["Agents view", "선택", "—"] },
+        { "cells": ["Open agents view by default", "ON/OFF", "—"] },
+        { "cells": ["← opens agents", "ON/OFF", "—"] },
+        { "cells": ["Session recap", "ON/OFF", "—"] }
+      ]
+    },
+    {
+      "id": "s3-config-03",
+      "template": "table",
+      "title": "Language 한국어",
+      "columns": ["설정 항목", "값"],
+      "rows": [
+        { "cells": ["Language", "한국어 (입력 중)"], "highlight": true }
+      ],
+      "notes": [
+        { "n": 1, "head": "Language 항목에 직접 입력", "body": "언어 이름 그대로(예: 한국어) 또는 ISO 코드로 입력한다." },
+        { "n": 2, "head": "패널이 보여주는 원문 안내", "body": "Any language name or ISO code (e.g. 'ja'); use 'default' for English." },
+        { "n": "!", "head": "아무것도 안 바꾸면", "body": "Default (English) 로 그대로 남는다." }
+      ],
+      "action": {
+        "label": "Language 항목에 입력",
+        "items": [
+          { "kind": "copy", "value": "한국어" }
+        ]
+      }
+    },
+    {
+      "id": "s3-config-04",
+      "template": "table",
+      "title": "/status · Organization 확인",
+      "columns": ["항목", "값"],
+      "rows": [
+        { "cells": ["Version", "2.1.273 (Claude Code)"] },
+        { "cells": ["Session name", "/rename to add a name"] },
+        { "cells": ["cwd", "C:\\agent1"] },
+        { "cells": ["Organization", "Example Org (예시)"], "highlight": true },
+        { "cells": ["Email", "student@example.com (예시)"] }
+      ],
+      "notes": [
+        { "n": 1, "head": "/status 로 확인", "body": "터미널에 /status 라고 입력하면 계정 정보가 나온다." },
+        { "n": 2, "head": "Organization 행", "body": "지금 로그인된 조직 계정 이름이 여기 나온다." },
+        { "n": "!", "head": "이메일·조직명은 예시로 대체", "body": "실제 화면엔 로그인 계정 값이 나오지만, 슬라이드에는 더미 값을 넣고 '예시' 표시를 했다." }
+      ],
+      "action": {
+        "label": "터미널에 입력",
+        "items": [
+          { "kind": "copy", "value": "/status" }
+        ]
+      }
+    },
+    {
+      "id": "s3-config-05",
+      "template": "illustration",
+      "title": "/login 으로 본인 계정",
+      "illustration": "login-account-picker",
+      "notes": [
+        { "n": 1, "head": "/login 명령", "body": "터미널에 /login 이라고 입력하면 계정 선택 화면이 뜬다." },
+        { "n": 2, "head": "본인 계정으로 로그인", "body": "여러 계정을 오갈 때 이 화면에서 바꿔 들어간다." },
+        { "n": "!", "head": "실제 화면 확보 전", "body": "이 화면의 정확한 문구가 아직 없어 자리표시자로 남겨둔다." }
+      ],
+      "action": {
+        "label": "터미널에 입력",
+        "items": [
+          { "kind": "copy", "value": "/login" }
+        ]
+      }
+    },
+    {
+      "id": "s3-config-06",
+      "template": "table",
+      "title": "/usage · 터미널 사용량",
+      "columns": ["항목", "값"],
+      "rows": [
+        { "cells": ["Current session", "—"], "highlight": true },
+        { "cells": ["Current week (all models)", "—"] },
+        { "cells": ["Current week (Sonnet only)", "—"] },
+        { "cells": ["Spend limit", "—"] }
+      ],
+      "notes": [
+        { "n": 1, "head": "Current session", "body": "지금 진행 중인 5시간 세션 동안 쓴 양." },
+        { "n": 2, "head": "Current week (all models)", "body": "이번 주 전체 모델 사용량 합계." },
+        { "n": "!", "head": "Spend limit", "body": "지출 한도를 설정해둔 계정에서만 표시된다 — 숫자는 계정마다 달라 슬라이드엔 넣지 않는다." }
+      ],
+      "action": {
+        "label": "터미널에 입력",
+        "items": [
+          { "kind": "copy", "value": "/usage" }
+        ]
+      }
+    }
+  ]
+}

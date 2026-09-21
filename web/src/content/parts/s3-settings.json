@@ -1,0 +1,237 @@
+{
+  "id": "s3-settings",
+  "title": "settings.json",
+  "summary": "settings.json 으로 도구 권한을 직접 설정하고, 규칙이 실제로 적용되는지 확인한다.",
+  "slides": [
+    {
+      "id": "s3-settings-01",
+      "template": "screen",
+      "title": "settings.json",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          { "name": ".claude", "folder": true, "badge": 1 },
+          { "name": "settings.json", "depth": 1, "badge": 2 }
+        ],
+        "editor": {
+          "file": "settings.json",
+          "lines": ["{", "  \"permissions\": {", "    \"allow\": [],", "    \"deny\": []", "  }", "}"]
+        },
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": { "placeholder": "메시지를 입력하세요..." }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "숨김 폴더 .claude 안", "body": "settings.json 도 CLAUDE.md 처럼 .claude 폴더 안에 둔다." },
+        { "n": 2, "head": "파일 이름 settings.json", "body": "이 파일 하나가 도구 실행 규칙·모델·환경변수를 담는다." },
+        { "n": "!", "head": "두 군데에 존재", "body": "프로젝트: .claude/settings.json (팀과 공유) / 사용자: ~/.claude/settings.json (나에게만, 모든 프로젝트 적용)." }
+      ]
+    },
+    {
+      "id": "s3-settings-02",
+      "template": "table",
+      "title": "주요 설정 항목",
+      "columns": ["키", "예시"],
+      "rows": [
+        { "cells": ["permissions", "\"deny\": [\"Bash(rm:*)\"]"], "highlight": true },
+        { "cells": ["model", "\"model\": \"claude-sonnet-5\""] },
+        { "cells": ["env", "\"env\": { \"MY_VAR\": \"value\" }"] },
+        { "cells": ["hooks", "\"hooks\": { \"PreToolUse\": [...] }"] }
+      ],
+      "notes": [
+        { "n": 1, "head": "permissions", "body": "allow / deny / ask 세 목록으로 도구 실행 허용 여부를 정한다." },
+        { "n": 2, "head": "model", "body": "이 세션이 기본으로 쓸 모델을 지정한다." },
+        { "n": "!", "head": "오늘은 permissions 위주", "body": "네 가지 다 확실한 키 이름만 — 오늘 실습은 permissions 위주로 다룬다." }
+      ]
+    },
+    {
+      "id": "s3-settings-03",
+      "template": "screen",
+      "title": "삭제 명령어 금지",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": { "text": "현재 폴더의 .claude 폴더에 settings.json 파일을 만들어서 모든 삭제 명령어를 금지시켜줘", "badge": 1 }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "말로 그대로 요청", "body": "존댓말 문장 하나로 만들 파일과 금지할 대상을 다 말한다." },
+        { "n": "!", "head": "위치까지 지정", "body": ".claude 폴더 안 settings.json 이라고 경로까지 콕 집었다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "현재 폴더의 .claude 폴더에 settings.json 파일을 만들어서 모든 삭제 명령어를 금지시켜줘" }
+        ]
+      }
+    },
+    {
+      "id": "s3-settings-04",
+      "template": "screen",
+      "title": "생성된 deny 규칙",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          { "name": ".claude", "folder": true },
+          { "name": "settings.json", "depth": 1, "active": true }
+        ],
+        "editor": {
+          "file": ".claude/settings.json",
+          "lines": [
+            "{",
+            "  \"permissions\": {",
+            "    \"deny\": [",
+            "      \"Bash(rm:*)\",",
+            "      \"Bash(rmdir:*)\",",
+            "      \"Bash(unlink:*)\",",
+            "      \"Bash(shred:*)\",",
+            "      \"Bash(find:* -delete*)\",",
+            "      \"Bash(git rm:*)\",",
+            "      \"Bash(git clean:*)\",",
+            "      \"PowerShell(Remove-Item:*)\",",
+            "      \"PowerShell(ri:*)\",",
+            "      \"PowerShell(rm:*)\",",
+            "      \"PowerShell(rmdir:*)\",",
+            "      \"PowerShell(del:*)\",",
+            "      \"PowerShell(erase:*)\",",
+            "      \"PowerShell(rd:*)\",",
+            "      \"PowerShell(Clear-Content:*)\",",
+            "      \"PowerShell(git rm:*)\",",
+            "      \"PowerShell(git clean:*)\"",
+            "    ]",
+            "  }",
+            "}"
+          ]
+        },
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": { "placeholder": "메시지를 입력하세요..." }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "Bash·PowerShell 양쪽 다", "body": "rm / Remove-Item 계열 명령을 두 셸 모두에서 deny 에 넣었다." },
+        { "n": 2, "head": "이름 패턴으로 차단", "body": "\"PowerShell(rm:*)\" 처럼 명령 이름 + 별표 패턴으로 막는다." },
+        { "n": "!", "head": "한계도 있다", "body": "Write/Edit 툴로 파일을 덮어써서 비우는 것까지는 막지 못한다." }
+      ]
+    },
+    {
+      "id": "s3-settings-05",
+      "template": "screen",
+      "title": "/clear 로 대화 비우기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          { "name": ".claude", "folder": true },
+          { "name": "settings.json", "depth": 1, "active": true }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            { "role": "user", "text": "현재 폴더의 .claude 폴더에 settings.json 파일을 만들어서 모든 삭제 명령어를 금지시켜줘" },
+            { "role": "assistant", "text": "settings.json 을 만들고 삭제 명령어를 모두 deny 에 넣었어요." }
+          ],
+          "input": { "text": "/clear", "badge": 1 }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "/clear", "body": "지금 대화방을 나가고 새 대화방으로 간다." },
+        { "n": "!", "head": "새 규칙은 다음 세션부터", "body": "settings.json 은 새 세션이 시작될 때 다시 읽힌다." }
+      ],
+      "action": {
+        "label": "터미널에 입력",
+        "items": [
+          { "kind": "copy", "value": "/clear" }
+        ]
+      }
+    },
+    {
+      "id": "s3-settings-06",
+      "template": "screen",
+      "title": "파일 삭제 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          { "name": ".claude", "folder": true },
+          { "name": "settings.json", "depth": 1 },
+          { "name": "test.txt", "badge": 1, "active": true }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            { "role": "user", "text": "test.txt 파일을 삭제해줘", "badge": 2 }
+          ],
+          "input": { "placeholder": "메시지를 입력하세요..." }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "지우려는 파일", "body": "방금 만든 test.txt 다." },
+        { "n": 2, "head": "삭제해줘", "body": "터미널에 그대로 입력하고 Enter 를 누른다." }
+      ],
+      "action": {
+        "label": "터미널에 입력",
+        "items": [
+          { "kind": "copy", "value": "test.txt 파일을 삭제해줘" }
+        ]
+      }
+    },
+    {
+      "id": "s3-settings-07",
+      "template": "screen",
+      "title": "Permission denied",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          { "name": ".claude", "folder": true },
+          { "name": "settings.json", "depth": 1 },
+          { "name": "test.txt" }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            { "role": "user", "text": "test.txt 파일을 삭제해줘" },
+            { "role": "assistant", "text": "Permission to use PowerShell with command Remove-Item -LiteralPath .\\test.txt -Confirm:$false; Test-Path -LiteralPath .\\test.txt has been denied.", "badge": 1 }
+          ],
+          "input": { "placeholder": "메시지를 입력하세요..." }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "명령 패턴으로 차단", "body": "settings.json 의 \"PowerShell(rm:*)\" 규칙에 걸려 도구 호출 자체가 거부됐다." },
+        { "n": "!", "head": "파일은 그대로 남는다", "body": "거부된 명령은 실행되지 않는다 — test.txt 는 지워지지 않았다." }
+      ]
+    },
+    {
+      "id": "s3-settings-08",
+      "template": "table",
+      "title": "settings.json 이 생기는 다른 길",
+      "columns": ["경로", "실제 흔적"],
+      "rows": [
+        { "cells": ["플러그인 설치", "enabledPlugins"] },
+        { "cells": ["권한 프롬프트 \"항상 허용\"", "settings.local.json"] },
+        { "cells": ["MCP 서버 (예외)", ".mcp.json"], "highlight": true }
+      ],
+      "notes": [
+        { "n": 1, "head": "플러그인 설치", "body": "플러그인을 설치하면 settings.json 에 활성화 목록이 추가·갱신된다." },
+        { "n": 2, "head": "권한 프롬프트 \"항상 허용\"", "body": "도구 실행을 승인할 때 항상 허용을 고르면 규칙이 settings.local.json 에 쌓인다." },
+        { "n": "!", "head": "MCP 서버는 예외", "body": "MCP 서버 설정은 settings.json 이 아니라 별도의 .mcp.json 에 저장된다 — 헷갈리지 말 것." }
+      ]
+    }
+  ]
+}

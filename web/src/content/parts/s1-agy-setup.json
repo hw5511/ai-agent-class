@@ -1,0 +1,90 @@
+{
+  "id": "s1-agy-setup",
+  "title": "Antigravity 초기 설정",
+  "summary": "Antigravity CLI 를 처음 실행할 때 나오는 설정 화면들을 순서대로 통과한다.",
+  "slides": [
+    {
+      "id": "s1-agy-setup-01",
+      "template": "screen",
+      "title": "화면 테마 선택",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/agy_테마_선택.png"
+      },
+      "notes": [
+        { "n": 1, "head": "방향키로 테마 목록 이동", "body": "위아래 화살표로 읽기 편한 테마를 고른다." },
+        { "n": "!", "head": "Enter 로 확정", "body": "원하는 테마에서 Enter 를 누르면 다음 화면으로 넘어간다." }
+      ]
+    },
+    {
+      "id": "s1-agy-setup-02",
+      "template": "screen",
+      "title": "약관 및 데이터 사용 설정",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/agy_데이터_사용_설정.png"
+      },
+      "notes": [
+        { "n": 1, "head": "Enter — 체크 상태 바꾸기", "body": "체크 줄에서 Enter 를 누르면 데이터 사용 동의 상태가 바뀐다." },
+        { "n": 2, "head": "↓ — 버튼 줄로 내려가기", "body": "체크 상태를 정했으면 방향키 ↓ 로 [Previous] [Done] 줄로 내려간다." },
+        { "n": "!", "head": "마우스 입력 불가", "body": "이 화면은 방향키로만 움직인다." }
+      ],
+      "action": {
+        "label": "여기서 누를 키",
+        "items": [
+          { "kind": "copy", "value": "Enter", "desc": "체크 상태 바꾸기" },
+          { "kind": "copy", "value": "↓ (방향키 아래)", "desc": "버튼 줄로 내려가기" }
+        ]
+      }
+    },
+    {
+      "id": "s1-agy-setup-03",
+      "template": "screen",
+      "title": "초기 설정 완료",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/agy_초기_설정_완료.png"
+      },
+      "notes": [
+        { "n": 1, "head": "→ 로 Done 으로 이동, Enter 로 확정", "body": "버튼 줄에서 → 를 눌러 [Previous] 에서 Done 으로 옮기고 Enter 를 누른다." },
+        { "n": 2, "head": "대화 화면으로 진입", "body": "Enter 를 누르면 초기 설정이 끝나고 메인 화면으로 넘어간다." },
+        { "n": "!", "head": "정리하면 ↓ → Enter", "body": "앞 화면부터 순서대로 하면 ↓ 그다음 → 그다음 Enter 다." }
+      ],
+      "action": {
+        "label": "여기서 누를 키",
+        "items": [
+          { "kind": "copy", "value": "→ (방향키 오른쪽)", "desc": "Done 으로 옮기기" },
+          { "kind": "copy", "value": "Enter", "desc": "확정" },
+          { "kind": "copy", "value": "↓ → Enter", "desc": "앞 화면부터 순서대로" }
+        ]
+      }
+    },
+    {
+      "id": "s1-agy-setup-04",
+      "template": "screen",
+      "title": "실습 폴더 신뢰 확인",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/agy_작업_폴더_신뢰.png"
+      },
+      "notes": [
+        { "n": 1, "head": "작업 폴더 경로 확인", "body": "지금 열려 있는 에이전트1 경로가 맞는지 본다." },
+        { "n": 2, "head": "Trust folder 선택", "body": "신뢰해야 에이전트에게 파일 읽기·수정 권한이 생긴다." }
+      ]
+    },
+    {
+      "id": "s1-agy-setup-05",
+      "template": "screen",
+      "title": "Antigravity CLI 실행 화면",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/agy_실행_화면.png"
+      },
+      "notes": [
+        { "n": 1, "head": "계정 표시", "body": "상단에 로그인된 내 계정 이메일이 보인다." },
+        { "n": 2, "head": "현재 작업 폴더 확인", "body": "에이전트1 이 맞는지 확인한다." },
+        { "n": 3, "head": "입력창 — 자연어로 요청", "body": "여기부터 사람 말로 지시를 적는다." }
+      ]
+    }
+  ]
+}

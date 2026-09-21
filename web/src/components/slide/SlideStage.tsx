@@ -23,7 +23,7 @@ export function SlideStage({ slide, eyebrow }: { slide: Slide; eyebrow: string }
   const legacy = slide.template === "image" || slide.template === "part-cover"
   return (
     <div ref={box} className="relative flex size-full items-center justify-center overflow-hidden">
-      <div className="shrink-0 overflow-hidden rounded-xl bg-white shadow-[0_1px_3px_rgba(0,0,0,0.06)] ring-1 ring-neutral-200" style={{ width: W * scale, height: H * scale }}>
+      <div data-stage className="shrink-0 overflow-hidden rounded-xl bg-white shadow-[0_1px_3px_rgba(0,0,0,0.06)] ring-1 ring-neutral-200" style={{ width: W * scale, height: H * scale }}>
         <div className="origin-top-left" style={{ width: W, height: H, transform: `scale(${scale})` }}>
           {legacy ? (
             <SlideBody slide={slide} />

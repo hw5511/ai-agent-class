@@ -1,0 +1,211 @@
+{
+  "id": "s1-env",
+  "title": "개발 환경 준비",
+  "summary": "VS Code 를 설치하고 실습 폴더를 열어 터미널 사용법을 익힌다.",
+  "slides": [
+    {
+      "id": "s1-env-01",
+      "template": "screen",
+      "title": "VS Code에서 CLI 3종 실습",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [
+          { "name": "brief.md", "depth": 0 },
+          { "name": "introduce", "depth": 0, "folder": true },
+          { "name": "gemini.txt", "depth": 1 },
+          { "name": "gpt.txt", "depth": 1 },
+          { "name": "claude.txt", "depth": 1 }
+        ],
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [
+            { "role": "assistant", "text": "PS C:\\Users\\student\\에이전트1>" },
+            { "role": "assistant", "text": "# 여기서 설치 명령과 CLI 실행 명령을 입력합니다" }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "Antigravity — agy", "body": "대화하고 파일을 만들고 옮겨본다." },
+        { "n": 2, "head": "Codex — codex", "body": "같은 작업을 다시 요청하고 비교한다." },
+        { "n": 3, "head": "Claude Code — claude", "body": "같은 폴더와 실습 결과를 이어서 쓴다." }
+      ]
+    },
+    {
+      "id": "s1-env-02",
+      "template": "illustration",
+      "title": "VS Code 설치",
+      "illustration": "vscode-download-page",
+      "notes": [
+        { "n": 1, "head": "VS Code 소개", "body": "코드 편집기이지만 비개발자도 생성된 파일 확인·수정·폴더 관리에 활용한다." },
+        { "n": 2, "head": "code.visualstudio.com 접속", "body": "Download for Windows 클릭 후 설치 파일을 실행한다." },
+        { "n": 3, "head": "설치 완료 확인", "body": "VS Code 실행을 확인하고 다음 슬라이드에서 작업 폴더를 설정한다." }
+      ],
+      "action": {
+        "label": "다운로드",
+        "items": [
+          { "kind": "download", "href": "https://code.visualstudio.com/download", "text": "VS Code 다운로드 페이지" }
+        ]
+      }
+    },
+    {
+      "id": "s1-env-03",
+      "template": "screen",
+      "title": "VS Code 화면 구성",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [
+          { "name": "brief.md", "depth": 0 },
+          { "name": "introduce", "depth": 0, "folder": true },
+          { "name": "gemini.txt", "depth": 1 },
+          { "name": "gpt.txt", "depth": 1 },
+          { "name": "claude.txt", "depth": 1, "active": true, "badge": 1 }
+        ],
+        "editor": {
+          "file": "claude.txt",
+          "lines": [
+            "# AI 에이전트 실습",
+            "안녕하세요. 저는 AI 에이전트입니다.",
+            "질문에 답변하고 파일 조작을 돕습니다",
+            "// 결과 파일은 좌측 탐색기에 생성됩니다.",
+            "실습 명령은 우측 터미널에서 실행합니다."
+          ],
+          "badge": 2
+        },
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [
+            { "role": "user", "text": "Get-Location" },
+            { "role": "assistant", "text": "Path: C:\\Users\\student\\에이전트1" },
+            { "role": "user", "text": "agy" },
+            { "role": "assistant", "text": "● Antigravity CLI (v1.0)" },
+            { "role": "assistant", "text": "> 무엇을 도와드릴까요? [입력 대기]", "badge": 3 }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "좌측 탐색기", "body": "실습 폴더와 생성된 파일을 확인한다." },
+        { "n": 2, "head": "중앙 편집기", "body": "선택한 코드와 문서를 열람·수정한다." },
+        { "n": 3, "head": "우측 패널(터미널)", "body": "Panel Position: Right 로 실행한다." }
+      ]
+    },
+    {
+      "id": "s1-env-04",
+      "template": "table",
+      "title": "실습 폴더 에이전트1",
+      "columns": ["단계", "동작"],
+      "rows": [
+        { "cells": ["1", "새 폴더 만들기 — 이름: 에이전트1"], "highlight": true },
+        { "cells": ["2", "VS Code 실행"] },
+        { "cells": ["3", "File > Open Folder"] },
+        { "cells": ["4", "에이전트1 폴더 선택"] }
+      ],
+      "notes": [
+        { "n": 1, "head": "새 폴더 만들기", "body": "이름은 '에이전트1'. Windows는 C:\\Users\\student\\에이전트1, macOS는 ~/에이전트1 예시." },
+        { "n": 2, "head": "File → Open Folder", "body": "VS Code 메뉴에서 방금 만든 폴더를 연다." },
+        { "n": 3, "head": "작업 기준 폴더", "body": "열린 폴더가 에이전트가 파일을 찾고 작업할 기준이 된다." }
+      ],
+      "action": {
+        "label": "폴더 이름",
+        "items": [{ "kind": "copy", "value": "에이전트1" }]
+      }
+    },
+    {
+      "id": "s1-env-05",
+      "template": "screen",
+      "title": "Ctrl+J로 터미널 열기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [{ "name": "(비어 있음)", "depth": 0, "badge": 1 }],
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [{ "role": "assistant", "text": "PS C:\\Users\\student\\에이전트1>", "badge": 2 }],
+          "input": { "placeholder": "다음 명령 입력...", "badge": 3 }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "좌측 탐색기 확인", "body": "실습 폴더가 열려 있고 아직 파일이 없다." },
+        { "n": 2, "head": "PowerShell 프롬프트 확인", "body": "우측 패널에 경로와 프롬프트가 보이면 명령을 입력할 수 있다." },
+        { "n": 3, "head": "명령은 터미널에 입력", "body": "위쪽 검색창이 아니라 우측 터미널에 입력한다." }
+      ],
+      "action": {
+        "label": "터미널 열기 단축키",
+        "items": [
+          { "kind": "copy", "value": "Ctrl + J", "desc": "Windows" },
+          { "kind": "copy", "value": "Cmd + J", "desc": "macOS" }
+        ]
+      }
+    },
+    {
+      "id": "s1-env-06",
+      "template": "compare",
+      "title": "터미널과 AI CLI 상태",
+      "left": {
+        "label": "일반 터미널 · PowerShell",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "shell",
+            "cwd": "C:\\Users\\student\\에이전트1",
+            "turns": [{ "role": "user", "text": "agy" }]
+          }
+        }
+      },
+      "right": {
+        "label": "AI CLI 실행 중 · Antigravity",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "antigravity",
+            "cwd": "C:\\Users\\student\\에이전트1",
+            "turns": [{ "role": "user", "text": "현재 폴더에 자기소개서를 만들어줘" }],
+            "input": { "placeholder": "메시지를 입력하세요..." }
+          }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "일반 터미널", "body": "경로와 프롬프트가 보이면 명령을 입력하는 출발점이다." },
+        { "n": 2, "head": "AI CLI 실행 중", "body": "자연어로 요청하고 응답을 확인하는 에이전트 화면이다." },
+        { "n": "!", "head": "종료 방법", "body": "Ctrl + C 를 누르면 일반 터미널 프롬프트로 돌아온다." }
+      ]
+    },
+    {
+      "id": "s1-env-07",
+      "template": "screen",
+      "title": "터미널 기본 명령어",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [{ "name": "(비어 있음)", "depth": 0 }],
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [
+            { "role": "user", "text": "echo 안녕하세요", "badge": 1 },
+            { "role": "assistant", "text": "안녕하세요" },
+            { "role": "user", "text": "clear", "badge": 2 },
+            { "role": "assistant", "text": "(화면이 비워지고 프롬프트만 남는다)" }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "echo — 입력 그대로 출력", "body": "한 줄 치고 Enter → 한 줄로 답한다. AI CLI 대화창과 다른 점이다." },
+        { "n": 2, "head": "clear — 화면 초기화", "body": "지워지는 것은 화면뿐, 파일·폴더는 사라지지 않는다. Windows는 cls도 가능." },
+        { "n": 3, "head": "다음은 작업 폴더 확인", "body": "터미널이 반응하는 것을 확인했으니 이제 설치를 시작한다." }
+      ],
+      "action": {
+        "label": "터미널 기본 명령어",
+        "items": [
+          { "kind": "copy", "value": "echo 안녕하세요", "desc": "① 출력해 보기" },
+          { "kind": "copy", "value": "clear", "desc": "② 화면 비우기" },
+          { "kind": "copy", "value": "cls", "desc": "Windows 는 이것도 됩니다" }
+        ]
+      }
+    }
+  ]
+}

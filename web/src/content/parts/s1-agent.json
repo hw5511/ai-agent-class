@@ -1,0 +1,80 @@
+{
+  "id": "s1-agent",
+  "title": "AI 에이전트 이해",
+  "summary": "AI 에이전트가 무엇이고 어떻게 동작하는지, 이 강의가 어떤 CLI 로 진행되는지 이해한다.",
+  "slides": [
+    {
+      "id": "s1-agent-01",
+      "template": "illustration",
+      "title": "AI에이전트란?",
+      "illustration": "agent-loop",
+      "notes": [
+        { "n": 1, "head": "환경 인식", "body": "파일, 웹, API 등 외부 환경을 스스로 탐색하고 정보를 수집한다." },
+        { "n": 2, "head": "자율 판단", "body": "수집한 정보를 바탕으로 다음 행동을 스스로 결정한다." },
+        { "n": 3, "head": "도구 활용과 반복", "body": "코드 실행·파일 편집 등 실제 작업을 수행하고, 결과를 확인해 부족하면 스스로 수정하며 반복한다." }
+      ]
+    },
+    {
+      "id": "s1-agent-02",
+      "template": "table",
+      "title": "3대 CLI 에이전트 비교",
+      "columns": ["CLI", "제작사", "특징"],
+      "rows": [
+        { "cells": ["GPT CLI (Codex)", "OpenAI", "코드 생성 · 파일 편집 특화"] },
+        { "cells": ["Claude Code", "Anthropic", "파일 편집 · CLAUDE.md 메모리 특화"] },
+        { "cells": ["Antigravity CLI", "Google", "웹 검색 · Google 생태계 연동"] }
+      ],
+      "notes": [
+        { "n": 1, "head": "3대 CLI 비교", "body": "OpenAI, Anthropic, Google 이 만든 CLI 에이전트를 이번 강의에서 모두 설치한다." },
+        { "n": "!", "head": "동일 명령으로 비교", "body": "같은 프롬프트를 세 CLI 에 주고 응답 방식 차이를 직접 비교한다." }
+      ]
+    },
+    {
+      "id": "s1-agent-03",
+      "template": "illustration",
+      "title": "웹 검색으로 명령어 찾기",
+      "illustration": "web-search-command",
+      "notes": [
+        { "n": 1, "head": "검색 결과에서 명령어 찾기", "body": "검색 결과 중 하나를 판단해 명령어를 고른다." },
+        { "n": 2, "head": "터미널에 직접 실행", "body": "찾은 명령어를 사람이 직접 복사해 붙여넣고 실행한다." }
+      ]
+    },
+    {
+      "id": "s1-agent-04",
+      "template": "illustration",
+      "title": "AI 채팅 질문 → 직접 실행",
+      "illustration": "ai-chat-command",
+      "notes": [
+        { "n": 1, "head": "AI 에게 질문", "body": "채팅창에 자연어로 원하는 작업을 묻는다." },
+        { "n": 2, "head": "여전히 사람이 직접 실행", "body": "AI 가 알려준 명령어를 사람이 복사해 터미널에 실행한다." }
+      ]
+    },
+    {
+      "id": "s1-agent-05",
+      "template": "illustration",
+      "title": "명령 자동 감지·실행 방식",
+      "illustration": "agent-auto-exec",
+      "notes": [
+        { "n": 1, "head": "command{} 패턴 자동 감지", "body": "시스템 프롬프트로 출력 형식을 지정하면 AI 가 명령을 command{} 형식으로만 낸다." },
+        { "n": 2, "head": "터미널이 자동 실행", "body": "에이전트 프로그램이 command{} 를 감지해 사람 손 없이 직접 실행한다." }
+      ]
+    },
+    {
+      "id": "s1-agent-06",
+      "template": "table",
+      "title": "이 강의의 기준 — Claude Pro 플랜",
+      "columns": ["항목", "내용"],
+      "rows": [
+        { "cells": ["가격", "월 약 $20 (한화 약 3만원)"] },
+        { "cells": ["세션", "5시간 단위로 사용 한도 초기화"] },
+        { "cells": ["포함 기능", "Claude Code, Artifacts, Projects"] },
+        { "cells": ["모델", "최신 Claude 모델(Sonnet/Opus) 우선 사용"] }
+      ],
+      "notes": [
+        { "n": 1, "head": "매일 사용 한도 체크", "body": "꾸준히 활용하는 습관을 만든다. 한도 초과 시 5시간 뒤 자동 초기화." },
+        { "n": 2, "head": "자기 분야에 적용", "body": "예: '경쟁사 분석 보고서를 에이전트로 자동화' — 무엇이든 내 직무에 적용하는 연습이 핵심." },
+        { "n": 3, "head": "AI 전문가가 되는 공식", "body": "매일 사용 + 꾸준한 질문 + 내 분야에 적용 = 6개월 안에 팀 내 AI 전문가" }
+      ]
+    }
+  ]
+}

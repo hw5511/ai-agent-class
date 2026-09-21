@@ -1,0 +1,29 @@
+{
+  "step": 1,
+  "title": "AI 에이전트 이해와 CLI 환경 구축",
+  "hours": "2시간",
+  "goal": "AI 에이전트의 개념을 이해하고, VS Code 환경에서 Antigravity CLI 를 직접 설치한 뒤 그 에이전트에게 나머지 두 CLI(Codex · Claude Code) 설치를 맡긴다. '에이전트1' 폴더 하나에서 세 에이전트로 같은 실습을 완수하고 결과를 비교한다.",
+  "topics": [
+    "AI 에이전트란? / 설치형 AI란?",
+    "VS Code 환경 설정 및 터미널 기초",
+    "Antigravity CLI 설치 · VS Code 재실행 · 로그인",
+    "agy 에게 Codex · Claude Code 설치와 PATH 등록 맡기기",
+    "Codex CLI 로그인 및 실습",
+    "Claude Code 로그인 및 실습",
+    "3대 에이전트 실습 결과 비교"
+  ],
+  "practice": "Antigravity 를 설치해 PATH 를 잡고, 이어서 Claude Code 와 Codex 를 설치한 뒤 같은 명령으로 셋을 한 번에 잡는다. '에이전트1' 폴더에서 세 에이전트에 같은 4단계 실습을 시킨다.",
+  "parts": [
+    "s1-agent",
+    "s1-env",
+    "s1-agy-install",
+    "s1-agy-login",
+    "s1-agy-setup",
+    "s1-agy-practice",
+    "s1-cli-install",
+    "s1-codex",
+    "s1-claude-login",
+    "s1-claude-practice",
+    "s1-wrap"
+  ]
+}

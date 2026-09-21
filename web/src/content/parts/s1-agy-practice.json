@@ -1,0 +1,258 @@
+{
+  "id": "s1-agy-practice",
+  "title": "Antigravity 실습 4단계",
+  "summary": "Antigravity CLI 로 대화, 파일 생성, 폴더 생성, 파일 이동까지 한 번씩 해본다.",
+  "slides": [
+    {
+      "id": "s1-agy-practice-01",
+      "template": "screen",
+      "title": "Antigravity 자기소개 확인",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [],
+        "terminal": {
+          "vendor": "antigravity",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "안녕하세요, Antigravity입니다. 현재 작업 폴더를 기준으로 파일을 읽고 쓰거나 명령을 실행할 수 있습니다.",
+              "badge": 1
+            }
+          ],
+          "input": {
+            "text": "너는 누구니?",
+            "badge": 2
+          }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "자기소개 안내문", "body": "무엇을 할 수 있는지 먼저 알려준다." },
+        { "n": 2, "head": "질문 입력 후 Enter", "body": "\"너는 누구니?\"를 입력해 정체를 확인한다." },
+        { "n": "!", "head": "Antigravity 실행 확인", "body": "터미널에 agy 를 실행하면 이 화면이 뜬다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "너는 누구니?" }
+        ]
+      }
+    },
+    {
+      "id": "s1-agy-practice-02",
+      "template": "screen",
+      "title": "자기소개서 파일 만들기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [
+          { "name": "gemini.txt", "active": true, "badge": 1 }
+        ],
+        "editor": {
+          "file": "gemini.txt",
+          "lines": [
+            "# 자기소개서",
+            "안녕하세요!",
+            "저는 Antigravity입니다.",
+            "작업 폴더의 파일을 읽고, 요청에 따라",
+            "파일을 만들거나 수정할 수 있습니다."
+          ],
+          "badge": 2
+        },
+        "terminal": {
+          "vendor": "antigravity",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "현재 폴더에 'gemini.txt'를 만들어줘.\n네가 누구이고 무엇을 할 수 있는지 간단히 작성해줘."
+            },
+            {
+              "role": "assistant",
+              "text": "gemini.txt 파일을 만들었습니다. 탐색기에 파일이 추가되고 편집기에서 내용이 열렸습니다.",
+              "badge": 3
+            }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "탐색기에 파일 추가", "body": "요청한 이름 그대로 gemini.txt 가 생긴다." },
+        { "n": 2, "head": "편집기 내용 표시", "body": "생성과 동시에 내용까지 확인할 수 있다." },
+        { "n": 3, "head": "완료 응답으로 확인", "body": "무엇을 했는지 문장으로 알려준다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "현재 폴더에 'gemini.txt'를 만들어줘.\n네가 누구이고 무엇을 할 수 있는지 간단히 작성해줘." }
+        ]
+      }
+    },
+    {
+      "id": "s1-agy-practice-03",
+      "template": "screen",
+      "title": "탐색기에서 파일 확인하기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [
+          { "name": "gemini.txt", "active": true, "badge": 1 }
+        ],
+        "editor": {
+          "file": "gemini.txt",
+          "lines": [
+            "# 자기소개서",
+            "안녕하세요!",
+            "저는 Antigravity입니다.",
+            "작업 폴더의 파일을 읽고, 요청에 따라",
+            "파일을 만들거나 수정할 수 있습니다."
+          ],
+          "badge": 2
+        },
+        "terminal": {
+          "vendor": "antigravity",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "완료했습니다. gemini.txt를 생성했습니다. 왼쪽 탐색기에서 파일을 선택해 내용을 확인할 수 있습니다.",
+              "badge": 3
+            },
+            {
+              "role": "assistant",
+              "text": "확인 포인트: 파일 이름과 저장 위치가 요청과 같은지 직접 확인하세요."
+            }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "탐색기에서 이름 확인", "body": "gemini.txt 가 원하는 위치에 있는지 본다." },
+        { "n": 2, "head": "편집기에서 내용 확인", "body": "실제로 열어서 내용을 읽어본다." },
+        { "n": 3, "head": "직접 눈으로 검증", "body": "확인 포인트를 직접 눈으로 검증한다." }
+      ]
+    },
+    {
+      "id": "s1-agy-practice-04",
+      "template": "screen",
+      "title": "introduce 폴더 만들기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [
+          { "name": "introduce", "folder": true, "badge": 1 },
+          { "name": "gemini.txt" }
+        ],
+        "editor": {
+          "file": "gemini.txt",
+          "lines": [
+            "# 자기소개서",
+            "안녕하세요! 저는 Antigravity입니다.",
+            "작업 폴더의 파일을 읽고 수정할 수 있습니다."
+          ]
+        },
+        "terminal": {
+          "vendor": "antigravity",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "현재 폴더에 'introduce' 폴더를 만들어줘."
+            },
+            {
+              "role": "assistant",
+              "text": "'introduce' 폴더를 생성했습니다. 탐색기에서 새로 만들어진 폴더를 확인할 수 있습니다.",
+              "badge": 2
+            }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "폴더도 자연어로 요청", "body": "파일과 같은 방식으로 폴더 생성을 시킨다." },
+        { "n": 2, "head": "새 폴더 생성 확인", "body": "탐색기에 introduce 폴더가 새로 생긴다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "현재 폴더에 'introduce' 폴더를 만들어줘." }
+        ]
+      }
+    },
+    {
+      "id": "s1-agy-practice-05",
+      "template": "screen",
+      "title": "자기소개서를 폴더로 옮기기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [
+          { "name": "introduce", "folder": true },
+          { "name": "gemini.txt", "depth": 1, "active": true, "badge": 1 }
+        ],
+        "editor": {
+          "file": "introduce/gemini.txt",
+          "lines": [
+            "# 자기소개서 (경로 이동 완료)",
+            "안녕하세요!",
+            "저는 Antigravity입니다.",
+            "작업 폴더의 파일을 읽고 수정할 수 있습니다."
+          ],
+          "badge": 2
+        },
+        "terminal": {
+          "vendor": "antigravity",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "'gemini.txt'를 'introduce' 폴더로 옮겨줘."
+            },
+            {
+              "role": "assistant",
+              "text": "파일을 introduce 폴더로 이동했습니다. introduce\\gemini.txt 로 이동 완료.",
+              "badge": 3
+            }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "폴더 아래로 이동", "body": "gemini.txt 가 introduce 밑으로 들어갔다." },
+        { "n": 2, "head": "경로가 바뀐 탭 제목", "body": "introduce/gemini.txt 로 표시된다." },
+        { "n": 3, "head": "이동 후 원래 자리 확인", "body": "루트에는 더 이상 파일이 남아있지 않은지 본다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "'gemini.txt'를 'introduce' 폴더로 옮겨줘." }
+        ]
+      }
+    },
+    {
+      "id": "s1-agy-practice-06",
+      "template": "screen",
+      "title": "최종 폴더 구조 확인",
+      "screen": {
+        "kind": "vscode",
+        "folder": "에이전트1",
+        "files": [
+          { "name": "introduce", "folder": true, "active": true, "badge": 1 },
+          { "name": "gemini.txt", "depth": 1 }
+        ],
+        "terminal": {
+          "vendor": "antigravity",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "실습을 마쳤습니다. 파일과 폴더 구조가 요청한 대로입니다.\nintroduce\\gemini.txt\n다음 단계: Ctrl + C로 Antigravity CLI 종료",
+              "badge": 2
+            }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "introduce 안에 gemini.txt", "body": "요청한 폴더 구조가 그대로 만들어졌다." },
+        { "n": 2, "head": "다음은 CLI 종료", "body": "Ctrl + C 로 Antigravity 를 빠져나간다." }
+      ]
+    }
+  ]
+}
