@@ -1,4 +1,4 @@
-// s1-agent — basic 1회차 슬라이드 1~8 (8장), "AI 에이전트 이해".
+// s1-agent — basic 1회차 슬라이드 1~6 (6장), "AI 에이전트 이해".
 // Rebuilt from the shipped deck (ai-agent-class/assets/basic/step01/*.svg) + courses/basic/step01.json.
 // These are concept/orientation slides — no VS Code mockup here except where the source itself shows one.
 // Every slide is a real vector drawing (loop diagram, browser/chat mockups, tool-use pipeline, radial
@@ -15,7 +15,7 @@ import { colX, colW, BODY_Y, BODY_BOTTOM, BODY_H } from "../grid";
 import type { SlideEntry, PartSpec } from "./types";
 
 const EYEBROW = "AI 에이전트";
-const TOTAL = 7;
+const TOTAL = 6;
 
 // ------------------------------------------------------------------------------------------------
 // Small local helpers shared across this file's slides only (no other spec file touched).
@@ -190,7 +190,7 @@ const Slide01: React.FC = () => {
   const quoteH = BODY_BOTTOM - quoteY;
 
   return (
-    <SlideFrame index={1} total={TOTAL} eyebrow={EYEBROW} title="SEE-THINK-PLAN-DO-FIX 동작 루프">
+    <SlideFrame index={1} total={TOTAL} eyebrow={EYEBROW} title="AI에이전트란?">
       {labels.map((label, i) => (
         <React.Fragment key={label}>
           <LoopNode cx={nodeX(i)} cy={loopY} r={r} label={label} />
@@ -561,138 +561,7 @@ const Slide05: React.FC = () => {
 };
 
 // ------------------------------------------------------------------------------------------------
-// 6 · 에이전트를_잘_다루려면 — 개발자·비개발자 활용 포인트
-// ------------------------------------------------------------------------------------------------
-
-const PersonPanel: React.FC<{ x: number; width: number; icon: React.ReactNode; role: string; have: string[]; add: string[]; closing: string }> = ({
-  x,
-  width,
-  icon,
-  role,
-  have,
-  add,
-  closing,
-}) => {
-  const y = BODY_Y + 10;
-  const h = 680;
-  return (
-    <div
-      style={{
-        position: "absolute",
-        left: x,
-        top: y,
-        width,
-        height: h,
-        borderRadius: RADIUS.base,
-        background: COLORS.paper2,
-        border: `1px solid ${COLORS.line}`,
-        boxSizing: "border-box",
-        padding: "32px 36px",
-        display: "flex",
-        flexDirection: "column",
-        gap: 18,
-      }}
-    >
-      <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-        <div style={{ width: 60, height: 60, borderRadius: "50%", background: COLORS.accentWash, border: `2px solid ${COLORS.accent}`, display: "flex", alignItems: "center", justifyContent: "center", flex: "0 0 auto" }}>
-          {icon}
-        </div>
-        <span style={{ fontFamily: FONTS.display, fontWeight: 700, fontSize: 34, color: COLORS.ink }}>{role}</span>
-      </div>
-
-      <div>
-        <div style={{ fontFamily: FONTS.display, fontWeight: 700, fontSize: 20, color: COLORS.ink3, marginBottom: 8 }}>기존에 이미 갖춘 것</div>
-        {have.map((t) => (
-          <div key={t} style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 6 }}>
-            <div style={{ width: 6, height: 6, borderRadius: "50%", background: COLORS.ink3, marginTop: 10, flex: "0 0 auto" }} />
-            <span style={{ fontFamily: FONTS.body, fontWeight: 500, fontSize: 21, color: COLORS.ink2, wordBreak: "keep-all" }}>{t}</span>
-          </div>
-        ))}
-      </div>
-
-      <div>
-        <div style={{ fontFamily: FONTS.display, fontWeight: 700, fontSize: 20, color: COLORS.accentDeep, marginBottom: 8 }}>에이전트 추가 시</div>
-        {add.map((t) => (
-          <div key={t} style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 6 }}>
-            <div style={{ width: 6, height: 6, borderRadius: "50%", background: COLORS.accent, marginTop: 10, flex: "0 0 auto" }} />
-            <span style={{ fontFamily: FONTS.body, fontWeight: 500, fontSize: 21, color: COLORS.ink, wordBreak: "keep-all" }}>{t}</span>
-          </div>
-        ))}
-      </div>
-
-      <div style={{ marginTop: "auto", fontFamily: FONTS.body, fontWeight: 700, fontSize: 20, color: COLORS.accentDeep, wordBreak: "keep-all" }}>{closing}</div>
-    </div>
-  );
-};
-
-const Slide06: React.FC = () => {
-  const illoX = colX(0);
-  const illoW = colW(12);
-  const gap = 40;
-  const colWidth = (illoW - gap) / 2;
-
-  return (
-    <SlideFrame index={6} total={TOTAL} eyebrow={EYEBROW} title="개발자·비개발자 활용 포인트">
-      <PersonPanel
-        x={illoX}
-        width={colWidth}
-        icon={<span style={{ fontFamily: FONTS.term, fontWeight: 800, fontSize: 26, color: COLORS.accentDeep }}>{"</>"}</span>}
-        role="개발자"
-        have={["코드 작성 능력, 터미널 사용 경험", "라이브러리, API 활용 경험"]}
-        add={["반복 코드 자동 생성 + 리뷰", "에이전트를 '도구'로 개발 생산성 극대화", "기술 스택 확장, 전체 워크플로우 자동화"]}
-        closing="AI 동작 원리 이해 → 에이전트에게 정확한 지시 가능"
-      />
-      <PersonPanel
-        x={illoX + colWidth + gap}
-        width={colWidth}
-        icon={
-          <svg width={26} height={26} viewBox="0 0 26 26">
-            <circle cx="13" cy="9" r="6" fill="none" stroke={COLORS.accentDeep} strokeWidth={2.4} />
-            <path d="M3 24c1.6-6 6-9 10-9s8.4 3 10 9" fill="none" stroke={COLORS.accentDeep} strokeWidth={2.4} strokeLinecap="round" />
-          </svg>
-        }
-        role="비개발자"
-        have={["도메인 전문 지식 (마케팅, 법무, 디자인 등)", "문제를 정의하고 기획하는 능력"]}
-        add={["코드 없이 업무 자동화 가능", "에이전트를 '비서'로 반복 작업 위임", "문서 작성, 조사, 아이디어 실행 자동화"]}
-        closing="AI 동작 원리 이해 → 원하는 것을 정확히 요청 가능"
-      />
-
-      <div
-        style={{
-          position: "absolute",
-          left: illoX,
-          top: BODY_BOTTOM - 8,
-          width: illoW,
-          transform: "translateY(-100%)",
-          textAlign: "center",
-          fontFamily: FONTS.display,
-          fontWeight: 700,
-          fontSize: 24,
-          color: COLORS.ink,
-          wordBreak: "keep-all",
-        }}
-      >
-        공통 핵심 — AI가 어떻게 동작하는지 알면, 누구든 에이전트를 제대로 활용할 수 있다
-      </div>
-    </SlideFrame>
-  );
-};
-
-// ------------------------------------------------------------------------------------------------
-// 7 · AI_동작원리를_알면_달라진다 — AI 동작 원리 4가지
-// UNRESOLVED CONTENT DISAGREEMENT (flagged for the CEO, not resolved here per this pass's brief):
-// the shipped SVG's own body is a real news-article screenshot (a dog-cancer research anecdote —
-// "Tech boss uses AI and ChatGPT to create cancer vaccine for his dying dog"), but this slide's lesson
-// goal in courses/basic/step01.json is "컨텍스트 윈도우 / 프롬프트 구조 / 도구 개념 / 토큰과 사용량" (the
-// four concepts this class actually teaches under this title). A prior pass here already sided with the
-// JSON and drew a 4-concept radial diagram instead of the article. This pass shows the REAL screenshot
-// (per the CEO's real-screenshot review — a redrawn mock is worse than the real image) but does NOT
-// pick a side on which story this slide should tell: the four concept labels/bodies below are kept
-// verbatim from the prior version, unchanged, sitting next to an image whose actual content is the dog
-// story, not those four concepts. See this task's report for the flag to the CEO.
-
-// ------------------------------------------------------------------------------------------------
-// 8 · 어떤_AI로_진행하나요 — 이 강의의 기준: Claude Pro 플랜
+// 6 · 어떤_AI로_진행하나요 — 이 강의의 기준: Claude Pro 플랜
 // ------------------------------------------------------------------------------------------------
 
 const Slide08: React.FC = () => {
@@ -702,8 +571,8 @@ const Slide08: React.FC = () => {
   const rightW = colW(5);
 
   const cardW = leftW;
-  const cardH = 500;
-  const cardY = BODY_Y + 10;
+  const cardH = BODY_H;
+  const cardY = BODY_Y;
 
   const rows: Array<{ label: string; value: string }> = [
     { label: "가격", value: "월 약 $20 (한화 약 3만원)" },
@@ -712,11 +581,8 @@ const Slide08: React.FC = () => {
     { label: "모델", value: "최신 Claude 모델 (Sonnet / Opus) 우선 사용" },
   ];
 
-  const urlY = cardY + cardH + 40;
-  const urlH = BODY_BOTTOM - urlY;
-
   return (
-    <SlideFrame index={8} total={TOTAL} eyebrow={EYEBROW} title="이 강의의 기준 — Claude Pro 플랜">
+    <SlideFrame index={6} total={TOTAL} eyebrow={EYEBROW} title="이 강의의 기준 — Claude Pro 플랜">
       <div
         style={{
           position: "absolute",
@@ -728,37 +594,43 @@ const Slide08: React.FC = () => {
           border: `2px solid ${COLORS.line}`,
           borderRadius: 18,
           boxShadow: "0 18px 40px rgba(16,17,19,0.10)",
-          padding: "36px 40px",
+          padding: "52px 56px",
           boxSizing: "border-box",
           display: "flex",
           flexDirection: "column",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 28 }}>
-          <div style={{ width: 44, height: 44, borderRadius: 9, background: COLORS.accentWash, display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <span style={{ fontFamily: FONTS.term, fontWeight: 800, fontSize: 20, color: COLORS.accentDeep }}>Pro</span>
+        <div style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: 40 }}>
+          <div style={{ width: 56, height: 56, borderRadius: 9, background: COLORS.accentWash, display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <span style={{ fontFamily: FONTS.term, fontWeight: 800, fontSize: 24, color: COLORS.accentDeep }}>Pro</span>
           </div>
-          <span style={{ fontFamily: FONTS.term, fontWeight: 700, fontSize: 30, color: COLORS.accentDeep }}>Claude Pro 플랜</span>
+          <span style={{ fontFamily: FONTS.term, fontWeight: 700, fontSize: 38, color: COLORS.accentDeep }}>Claude Pro 플랜</span>
         </div>
-        <div style={{ flex: "1 1 0", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+        <div style={{ flex: "1 1 0", display: "flex", flexDirection: "column", gap: 16 }}>
           {rows.map((r) => (
-            <div key={r.label} style={{ display: "flex", alignItems: "baseline", gap: 16 }}>
-              <div style={{ width: 10, height: 10, borderRadius: "50%", background: COLORS.accent, flex: "0 0 auto" }} />
-              <span style={{ fontFamily: FONTS.display, fontWeight: 700, fontSize: 26, color: COLORS.ink, flex: "0 0 auto" }}>{r.label}</span>
-              <span style={{ fontFamily: FONTS.body, fontWeight: 500, fontSize: 22, color: COLORS.ink2, wordBreak: "keep-all" }}>{r.value}</span>
+            <div
+              key={r.label}
+              style={{
+                flex: "1 1 0",
+                display: "flex",
+                alignItems: "center",
+                gap: 24,
+                padding: "0 28px",
+                background: COLORS.paper,
+                border: `1.5px solid ${COLORS.line}`,
+                borderRadius: 12,
+              }}
+            >
+              <div style={{ width: 6, alignSelf: "stretch", margin: "22px 0", borderRadius: 3, background: COLORS.accent, flex: "0 0 auto" }} />
+              <span style={{ fontFamily: FONTS.display, fontWeight: 700, fontSize: 32, color: COLORS.ink, flex: "0 0 150px" }}>{r.label}</span>
+              <span style={{ fontFamily: FONTS.body, fontWeight: 500, fontSize: 28, color: COLORS.ink2, wordBreak: "keep-all" }}>{r.value}</span>
             </div>
           ))}
         </div>
-        <div style={{ marginTop: 20, fontFamily: FONTS.body, fontWeight: 500, fontSize: 19, color: COLORS.ink3, wordBreak: "keep-all" }}>
+        <div style={{ marginTop: 32, fontFamily: FONTS.body, fontWeight: 500, fontSize: 23, color: COLORS.ink3, wordBreak: "keep-all" }}>
           * 무료 플랜도 기본 실습 가능 (사용량 제한 있음)
         </div>
       </div>
-
-      <BrowserWindow x={leftX} y={urlY} width={cardW} height={urlH} tabLabel="사용량 확인" url="claude.ai/settings/usage">
-        <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONTS.body, fontWeight: 600, fontSize: 20, color: COLORS.ink2, wordBreak: "keep-all", textAlign: "center", padding: "0 24px" }}>
-          매일 사용 한도를 여기서 확인합니다
-        </div>
-      </BrowserWindow>
 
       <AnnotationColumn
         x={rightX}
@@ -776,13 +648,12 @@ const Slide08: React.FC = () => {
 };
 
 export const S1_AGENT: SlideEntry[] = [
-  { index: 1, name: "AI_에이전트란", title: "SEE-THINK-PLAN-DO-FIX 동작 루프", render: () => React.createElement(Slide01) },
+  { index: 1, name: "AI_에이전트란", title: "AI에이전트란?", render: () => React.createElement(Slide01) },
   { index: 2, name: "AI_에이전트_현황", title: "3대 CLI 에이전트 비교", render: () => React.createElement(Slide02) },
   { index: 3, name: "에이전트_동작_방식_①", title: "웹 검색으로 명령어 찾기", render: () => React.createElement(Slide03) },
   { index: 4, name: "에이전트_동작_방식_②", title: "AI 채팅 질문 → 직접 실행", render: () => React.createElement(Slide04) },
   { index: 5, name: "에이전트_동작_방식_③", title: "명령 자동 감지·실행 방식", render: () => React.createElement(Slide05) },
-  { index: 6, name: "에이전트를_잘_다루려면", title: "개발자·비개발자 활용 포인트", render: () => React.createElement(Slide06) },
-  { index: 7, name: "어떤_AI로_진행하나요", title: "이 강의의 기준 — Claude Pro 플랜", render: () => React.createElement(Slide08) },
+  { index: 6, name: "어떤_AI로_진행하나요", title: "이 강의의 기준 — Claude Pro 플랜", render: () => React.createElement(Slide08) },
 ];
 
 export const S1_AGENT_PART: PartSpec = { id: "s1-agent", eyebrow: EYEBROW, entries: S1_AGENT };

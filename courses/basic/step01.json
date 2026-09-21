@@ -17,57 +17,57 @@
     {
       "title": "AI 에이전트 이해",
       "from": 1,
-      "to": 7
+      "to": 6
     },
     {
       "title": "개발 환경 준비",
-      "from": 8,
-      "to": 14
+      "from": 7,
+      "to": 13
     },
     {
       "title": "Antigravity 설치와 PATH",
-      "from": 15,
-      "to": 18
+      "from": 14,
+      "to": 17
     },
     {
       "title": "Antigravity 로그인",
-      "from": 19,
-      "to": 22
+      "from": 18,
+      "to": 21
     },
     {
       "title": "Antigravity 초기 설정",
-      "from": 23,
-      "to": 27
+      "from": 22,
+      "to": 26
     },
     {
       "title": "Antigravity 실습 4단계",
-      "from": 28,
-      "to": 33
+      "from": 27,
+      "to": 32
     },
     {
       "title": "Claude Code · Codex 설치",
-      "from": 34,
-      "to": 37
+      "from": 33,
+      "to": 36
     },
     {
       "title": "Codex 시작과 실습",
-      "from": 38,
-      "to": 46
+      "from": 37,
+      "to": 45
     },
     {
       "title": "Claude Code 로그인과 세팅",
-      "from": 47,
-      "to": 56
+      "from": 46,
+      "to": 55
     },
     {
       "title": "Claude Code 실습",
-      "from": 57,
-      "to": 64
+      "from": 56,
+      "to": 63
     },
     {
       "title": "마무리",
-      "from": 65,
-      "to": 66
+      "from": 64,
+      "to": 65
     }
   ],
   "slides": [
@@ -132,17 +132,6 @@
       "action": null
     },
     {
-      "imagePath": "assets/basic/step01/에이전트를_잘_다루려면.png",
-      "goal": "에이전트를 잘 다루려면 무엇이 필요한지 개발자/비개발자 관점으로 이해한다.",
-      "topics": [
-        "개발자 — 기존 코드 능력 + 에이전트로 생산성 극대화",
-        "비개발자 — 도메인 지식 + 에이전트로 업무 자동화",
-        "AI 동작 원리 이해가 공통 핵심 역량"
-      ],
-      "practice": null,
-      "action": null
-    },
-    {
       "imagePath": "assets/basic/step01/어떤_AI로_진행하나요.png",
       "goal": "이 강의에서 사용하는 Claude Pro 플랜의 특징과 효율적인 사용법을 이해한다.",
       "topics": [
@@ -151,13 +140,7 @@
         "현재 사용량 확인: claude.ai/settings/usage"
       ],
       "practice": null,
-      "action": {
-        "label": "사용량 확인",
-        "download": {
-          "href": "https://claude.ai/settings/usage",
-          "text": "Claude 사용량 대시보드"
-        }
-      }
+      "action": null
     },
     {
       "imagePath": "assets/basic/step01/오늘_완성할_환경.png",
