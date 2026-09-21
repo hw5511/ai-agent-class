@@ -1,0 +1,646 @@
+{
+  "id": "s4-bg-task",
+  "title": "task 와 백그라운드",
+  "summary": "task 가 무엇인지 알고 Ctrl + B 로 오래 걸리는 작업을 백그라운드로 보낸다.",
+  "slides": [
+    {
+      "id": "s4-background-01",
+      "template": "compare",
+      "title": "task · 명령어가 돌아가는 프로세스",
+      "left": {
+        "label": "Claude 창",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "패키지 설치해줘"
+              },
+              {
+                "role": "tool",
+                "text": "Bash(npm install)",
+                "badge": 1
+              }
+            ],
+            "input": {
+              "placeholder": "메시지를 입력하세요..."
+            },
+            "panel": {
+              "title": "",
+              "rows": [
+                {
+                  "seg": [
+                    {
+                      "t": "  ⎿  Running… (12s · timeout 2m)",
+                      "c": "dim"
+                    }
+                  ]
+                }
+              ]
+            },
+            "footer": {
+              "text": "⏵⏵ bypass permissions on · esc to interrupt"
+            }
+          }
+        }
+      },
+      "right": {
+        "label": "그 안에서 도는 task",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "shell",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "npm install",
+                "badge": 2
+              },
+              {
+                "role": "assistant",
+                "text": "npm warn deprecated inflight@1.0.6"
+              },
+              {
+                "role": "assistant",
+                "text": "⠙ reify: fetching 412 packages"
+              },
+              {
+                "role": "assistant",
+                "text": "added 118 packages · 294 남음"
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Bash 도구",
+          "body": "Claude 가 터미널 명령 실행"
+        },
+        {
+          "n": 2,
+          "head": "task",
+          "body": "그 명령어가 돌아가는 프로세스 하나"
+        }
+      ]
+    },
+    {
+      "id": "s4-background-02",
+      "template": "screen",
+      "title": "오래 걸리는 task",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/bg-slow-reasons.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "인터넷 속도",
+          "body": "설치 · 다운로드 속도 차이"
+        },
+        {
+          "n": 2,
+          "head": "컴퓨터 성능",
+          "body": "CPU 성능에 따른 계산 속도 차이"
+        },
+        {
+          "n": 3,
+          "head": "명시적 대기",
+          "body": "정해진 시간만큼 기다리는 명령"
+        }
+      ]
+    },
+    {
+      "id": "s4-background-03",
+      "template": "screen",
+      "title": "포어그라운드 · 끝날 때까지 대기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "포어그라운드로 60초 대기 후 완료되는 작업 실행해줘"
+            },
+            {
+              "role": "tool",
+              "text": "PowerShell($s = Get-Date; Start-Sleep -Seconds 60; \"완료: $([int]((Get-Date) - $s).TotalSeconds)초 경과\")",
+              "badge": 1
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "panel": {
+            "title": "",
+            "rows": [
+              {
+                "seg": [
+                  {
+                    "t": "  ⎿  Running… (6s · timeout 2m)",
+                    "c": "dim"
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "     (ctrl+b to run in background)",
+                    "c": "dim"
+                  }
+                ],
+                "badge": 2
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "✽ Philosophizing… (13s · ↓ 520 tokens)",
+                    "c": "accent"
+                  }
+                ]
+              }
+            ]
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on · esc to interrupt"
+          }
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "포어그라운드",
+          "body": "명령어 결과가 나올 때까지 대기"
+        },
+        {
+          "n": 2,
+          "head": "ctrl+b 안내",
+          "body": "백그라운드로 보내는 단축키"
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "포어그라운드로 60초 대기 후 완료되는 작업 실행해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-background-04",
+      "template": "screen",
+      "title": "기다리는 동안 막힌 대화",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "포어그라운드로 60초 대기 후 완료되는 작업 실행해줘"
+            },
+            {
+              "role": "tool",
+              "text": "PowerShell($s = Get-Date; Start-Sleep -Seconds 60; \"완료: $([int]((Get-Date) - $s).TotalSeconds)초 경과\")"
+            }
+          ],
+          "input": {
+            "text": "지금 시스템 시간 몇시 몇분 몇초야?",
+            "badge": 2
+          },
+          "panel": {
+            "title": "",
+            "rows": [
+              {
+                "seg": [
+                  {
+                    "t": "  ⎿  Running… (41s · timeout 2m)",
+                    "c": "dim"
+                  }
+                ],
+                "badge": 1
+              },
+              {
+                "seg": [
+                  {
+                    "t": "     (ctrl+b to run in background)",
+                    "c": "dim"
+                  }
+                ]
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "✽ Philosophizing… (48s · ↓ 520 tokens)",
+                    "c": "accent"
+                  }
+                ]
+              }
+            ]
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on · esc to interrupt"
+          }
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "결과는 그대로",
+          "body": "기다려도 60초 뒤 같은 결과"
+        },
+        {
+          "n": 2,
+          "head": "새 메시지도 대기",
+          "body": "작업이 끝나야 다음 대화"
+        }
+      ]
+    },
+    {
+      "id": "s4-background-05",
+      "template": "screen",
+      "title": "실습 · count.md 포어그라운드",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "count.md 파일을 만들고, 거기에 1부터 100까지 1초마다 입력하는 명령어를 포어그라운드로 실행해줘"
+            },
+            {
+              "role": "tool",
+              "text": "PowerShell(1..100 | ForEach-Object { Add-Content count.md $_; Start-Sleep -Seconds 1 })",
+              "badge": 1
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "panel": {
+            "title": "",
+            "rows": [
+              {
+                "seg": [
+                  {
+                    "t": "  ⎿  Running… (4s · timeout 2m)",
+                    "c": "dim"
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "     (ctrl+b to run in background)",
+                    "c": "dim"
+                  }
+                ],
+                "badge": 2
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "✽ Counting… (9s · ↓ 310 tokens)",
+                    "c": "accent"
+                  }
+                ]
+              }
+            ]
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on · esc to interrupt"
+          }
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "100초 걸리는 명령",
+          "body": "1초마다 숫자 하나씩 추가"
+        },
+        {
+          "n": 2,
+          "head": "ctrl+b 안내",
+          "body": "지금 누르면 백그라운드로 전환"
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "count.md 파일을 만들고, 거기에 1부터 100까지 1초마다 입력하는 명령어를 포어그라운드로 실행해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-background-06",
+      "template": "screen",
+      "title": "Ctrl + B · 백그라운드로 전환",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          {
+            "name": "count.md"
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "count.md 파일을 만들고, 거기에 1부터 100까지 1초마다 입력하는 명령어를 포어그라운드로 실행해줘"
+            },
+            {
+              "role": "tool",
+              "text": "PowerShell(1..100 | ForEach-Object { Add-Content count.md $_; Start-Sleep -Seconds 1 })"
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "panel": {
+            "title": "",
+            "rows": [
+              {
+                "seg": [
+                  {
+                    "t": "  ⎿  Running in the background (↓ to manage)",
+                    "c": "dim"
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "  ⎿  (timeout 2m)",
+                    "c": "dim"
+                  }
+                ]
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "● count 작업을 백그라운드로 전환했어요(ID [작업 id]). 실행 중이고, 끝나면 알림이 와요."
+                  }
+                ]
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "✻ Sautéed for 7s · 1 shell still running",
+                    "c": "dim"
+                  }
+                ]
+              }
+            ]
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on · 1 shell · ↓ to manage",
+            "badge": 2
+          }
+        },
+        "keycap": {
+          "keys": [
+            "Ctrl",
+            "B"
+          ],
+          "badge": 1
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Ctrl + B",
+          "body": "실행 중인 명령어를 백그라운드로"
+        },
+        {
+          "n": 2,
+          "head": "1 shell",
+          "body": "뒤에서 도는 task 1개"
+        }
+      ]
+    },
+    {
+      "id": "s4-background-07",
+      "template": "screen",
+      "title": "count.md 숫자 증가",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          {
+            "name": "count.md",
+            "active": true
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "count.md 파일을 만들고, 거기에 1부터 100까지 1초마다 입력하는 명령어를 포어그라운드로 실행해줘"
+            },
+            {
+              "role": "tool",
+              "text": "PowerShell(1..100 | ForEach-Object { Add-Content count.md $_; Start-Sleep -Seconds 1 })"
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "panel": {
+            "title": "",
+            "rows": [
+              {
+                "seg": [
+                  {
+                    "t": "  ⎿  Running in the background (↓ to manage)",
+                    "c": "dim"
+                  }
+                ]
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "● count 작업을 백그라운드로 전환했어요. 끝나면 알림이 와요."
+                  }
+                ]
+              }
+            ]
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on · 1 shell · ↓ to manage",
+            "badge": 2
+          }
+        },
+        "editor": {
+          "file": "count.md",
+          "lines": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17"
+          ],
+          "badge": 1
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "count.md",
+          "body": "1초마다 한 줄씩 늘어나는 숫자"
+        },
+        {
+          "n": 2,
+          "head": "1 shell",
+          "body": "백그라운드에서 계속 실행 중"
+        }
+      ]
+    },
+    {
+      "id": "s4-background-08",
+      "template": "screen",
+      "title": "백그라운드 중 대화",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          {
+            "name": "count.md",
+            "active": true
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "count 작업을 백그라운드로 전환했어요. 끝나면 알림이 와요."
+            },
+            {
+              "role": "user",
+              "text": "지금 시스템 시간 몇시 몇분 몇초야?",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "PowerShell(Get-Date -Format 'HH:mm:ss')"
+            },
+            {
+              "role": "assistant",
+              "text": "지금은 오후 3시 42분 18초예요."
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on · 1 shell · ↓ to manage"
+          }
+        },
+        "editor": {
+          "file": "count.md",
+          "lines": [
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38"
+          ],
+          "badge": 1
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "숫자 계속 증가",
+          "body": "대화 중에도 task 는 그대로 진행"
+        },
+        {
+          "n": 2,
+          "head": "바로 대답",
+          "body": "기다림 없이 다음 질문 처리"
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "지금 시스템 시간 몇시 몇분 몇초야?"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -10,8 +10,15 @@
   ],
   "practice": "Claude 를 종료하고 다시 실행하면서 세션 ID · 이름 · 목록 · -c 로 이전 대화에 돌아가본다.",
   "parts": [
-    "s4-session",
-    "s4-context",
-    "s4-background"
+    "s4-session-id",
+    "s4-session-name",
+    "s4-session-resume",
+    "s4-context-llm",
+    "s4-context-usage",
+    "s4-context-rewind",
+    "s4-context-compact",
+    "s4-bg-task",
+    "s4-bg-parallel",
+    "s4-bg-monitor"
   ]
 }

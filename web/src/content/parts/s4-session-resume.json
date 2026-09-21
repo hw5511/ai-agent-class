@@ -1,0 +1,662 @@
+{
+  "id": "s4-session-resume",
+  "title": "세션 찾아 돌아가기",
+  "summary": "--resume 이름 · /resume 목록과 검색 · --continue · -c 로 이전 대화를 연다.",
+  "slides": [
+    {
+      "id": "s4-session-13",
+      "template": "screen",
+      "title": "--resume \"이름\" 으로 실행",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "claude --dangerously-skip-permissions --name \"네임테스트\""
+            },
+            {
+              "role": "assistant",
+              "text": "Resume this session with:"
+            },
+            {
+              "role": "assistant",
+              "text": "claude --resume [세션 id]"
+            },
+            {
+              "role": "user",
+              "text": "claude --dangerously-skip-permissions --resume \"리네임테스트\"",
+              "mark": "--resume \"리네임테스트\"",
+              "badge": 1
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "--resume \"이름\"",
+          "body": "세션 ID 대신 세션 이름으로 복귀"
+        },
+        {
+          "n": "!",
+          "head": "큰따옴표 필수",
+          "body": "이름은 항상 \"\" 로 감싸기"
+        }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "claude --dangerously-skip-permissions --resume \"리네임테스트\""
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-session-14",
+      "template": "screen",
+      "title": "대화 복귀 · 세션 이름",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "현재 시스템시간 몇시니?"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(Get-Date)"
+            },
+            {
+              "role": "assistant",
+              "text": "지금 시스템 시간은 오후 3시 42분이에요.",
+              "badge": 2
+            },
+            {
+              "role": "user",
+              "text": "/rename 리네임테스트"
+            },
+            {
+              "role": "assistant",
+              "text": "Session renamed to: 리네임테스트"
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "sessionTag": {
+            "name": "리네임테스트",
+            "badge": 1
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "리네임테스트 태그",
+          "body": "이름 붙인 세션으로 복귀"
+        },
+        {
+          "n": 2,
+          "head": "이전 대화 그대로",
+          "body": "시스템시간 대화 복원"
+        }
+      ]
+    },
+    {
+      "id": "s4-session-15",
+      "template": "screen",
+      "title": "/resume · 세션 목록",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/rename 리네임테스트"
+            },
+            {
+              "role": "assistant",
+              "text": "Session renamed to: 리네임테스트"
+            },
+            {
+              "role": "user",
+              "text": "/resume"
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "sessionTag": {
+            "name": "리네임테스트"
+          },
+          "picker": {
+            "title": "Resume session (1 of 12)",
+            "search": true,
+            "folder": "agent1",
+            "folderBadge": 1,
+            "items": [
+              {
+                "name": "리네임테스트",
+                "meta": "2 seconds ago · 8.1KB"
+              },
+              {
+                "name": "간단하게 자기소개 해볼래?",
+                "meta": "9 minutes ago · 5.4KB",
+                "selected": true,
+                "badge": 2
+              },
+              {
+                "name": "/chrome",
+                "meta": "1 day ago · 423.3KB"
+              },
+              {
+                "name": "/model",
+                "meta": "1 day ago · 6.3KB"
+              },
+              {
+                "name": "바탕화면에 메모.txt 만들어줘",
+                "meta": "2 days ago · 12.8KB"
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "현재 폴더 기준",
+          "body": "지금 폴더(agent1)에서 나눈 세션만 표시"
+        },
+        {
+          "n": 2,
+          "head": "↑ ↓ 로 고르고 Enter",
+          "body": "자기소개 세션 선택"
+        },
+        {
+          "n": "!",
+          "head": "시간 · 용량 표시",
+          "body": "최근 세션이 맨 위"
+        }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/resume"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-session-16",
+      "template": "screen",
+      "title": "대화 복귀 · /resume 목록",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "간단하게 자기소개 해볼래?"
+            },
+            {
+              "role": "assistant",
+              "text": "안녕하세요! 저는 Anthropic 이 만든 AI 코딩 도우미 Claude 예요. 이 폴더의 파일을 읽고 고치거나, 터미널 명령을 대신 실행하는 일을 도와드려요. 무엇부터 해볼까요?",
+              "badge": 1
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "자기소개 대화로 복귀",
+          "body": "목록에서 고른 세션"
+        },
+        {
+          "n": "!",
+          "head": "태그 없음",
+          "body": "이름 안 붙인 세션"
+        }
+      ]
+    },
+    {
+      "id": "s4-session-17",
+      "template": "screen",
+      "title": "/resume 검색",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "간단하게 자기소개 해볼래?"
+            },
+            {
+              "role": "assistant",
+              "text": "안녕하세요! 저는 Anthropic 이 만든 AI 코딩 도우미 Claude 예요. 이 폴더의 파일을 읽고 고치거나, 터미널 명령을 대신 실행하는 일을 도와드려요. 무엇부터 해볼까요?"
+            },
+            {
+              "role": "user",
+              "text": "/resume 리네임",
+              "badge": 1
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "picker": {
+            "items": [
+              {
+                "name": "리네임테스트",
+                "meta": "3 minutes ago · 8.1KB",
+                "selected": true,
+                "badge": 2
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "/resume 검색어",
+          "body": "세션 이름 · 대화 키워드로 찾기"
+        },
+        {
+          "n": 2,
+          "head": "Enter 로 선택",
+          "body": "리네임테스트 세션 열기"
+        }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/resume 리네임"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-session-18",
+      "template": "screen",
+      "title": "대화 복귀 · /resume 검색",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "현재 시스템시간 몇시니?"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(Get-Date)"
+            },
+            {
+              "role": "assistant",
+              "text": "지금 시스템 시간은 오후 3시 42분이에요.",
+              "badge": 2
+            },
+            {
+              "role": "user",
+              "text": "/rename 리네임테스트"
+            },
+            {
+              "role": "assistant",
+              "text": "Session renamed to: 리네임테스트"
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "sessionTag": {
+            "name": "리네임테스트",
+            "badge": 1
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "리네임테스트 태그",
+          "body": "검색으로 고른 세션"
+        },
+        {
+          "n": 2,
+          "head": "이전 대화 그대로",
+          "body": "시스템시간 대화 복원"
+        }
+      ]
+    },
+    {
+      "id": "s4-session-19",
+      "template": "screen",
+      "title": "--continue",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "claude --dangerously-skip-permissions --resume \"리네임테스트\""
+            },
+            {
+              "role": "assistant",
+              "text": "Resume this session with:"
+            },
+            {
+              "role": "assistant",
+              "text": "claude --resume [세션 id]"
+            },
+            {
+              "role": "user",
+              "text": "claude --dangerously-skip-permissions --continue",
+              "mark": "--continue",
+              "badge": 1
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "--continue",
+          "body": "마지막에 닫힌 세션 자동 실행"
+        },
+        {
+          "n": "!",
+          "head": "현재 폴더 기준",
+          "body": "지금 폴더(agent1)의 마지막 세션"
+        }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "claude --dangerously-skip-permissions --continue"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-session-20",
+      "template": "screen",
+      "title": "대화 복귀 · --continue",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "현재 시스템시간 몇시니?"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(Get-Date)"
+            },
+            {
+              "role": "assistant",
+              "text": "지금 시스템 시간은 오후 3시 42분이에요.",
+              "badge": 2
+            },
+            {
+              "role": "user",
+              "text": "/rename 리네임테스트"
+            },
+            {
+              "role": "assistant",
+              "text": "Session renamed to: 리네임테스트"
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "sessionTag": {
+            "name": "리네임테스트",
+            "badge": 1
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "마지막 세션",
+          "body": "방금 닫은 리네임테스트"
+        },
+        {
+          "n": 2,
+          "head": "이전 대화 그대로",
+          "body": "고르는 단계 없이 바로 복귀"
+        }
+      ]
+    },
+    {
+      "id": "s4-session-21",
+      "template": "screen",
+      "title": "-c 로 줄여 쓰기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "claude --dangerously-skip-permissions --continue"
+            },
+            {
+              "role": "assistant",
+              "text": "Resume this session with:"
+            },
+            {
+              "role": "assistant",
+              "text": "claude --resume [세션 id]"
+            },
+            {
+              "role": "user",
+              "text": "claude --dangerously-skip-permissions -c",
+              "mark": "-c",
+              "badge": 1
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "-c",
+          "body": "--continue 의 줄임"
+        },
+        {
+          "n": "!",
+          "head": "현재 폴더 기준",
+          "body": "--continue 와 같은 동작"
+        }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "claude --dangerously-skip-permissions -c"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-session-22",
+      "template": "screen",
+      "title": "대화 복귀 · -c",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "현재 시스템시간 몇시니?"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(Get-Date)"
+            },
+            {
+              "role": "assistant",
+              "text": "지금 시스템 시간은 오후 3시 42분이에요.",
+              "badge": 2
+            },
+            {
+              "role": "user",
+              "text": "/rename 리네임테스트"
+            },
+            {
+              "role": "assistant",
+              "text": "Session renamed to: 리네임테스트"
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "sessionTag": {
+            "name": "리네임테스트",
+            "badge": 1
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "같은 세션",
+          "body": "리네임테스트 그대로"
+        },
+        {
+          "n": 2,
+          "head": "이전 대화 그대로",
+          "body": "--continue 와 같은 결과"
+        }
+      ]
+    },
+    {
+      "id": "s4-session-23",
+      "template": "flow",
+      "title": "세션 유지한 채 재시작",
+      "steps": [
+        {
+          "label": "Ctrl + C 두 번",
+          "sub": "Claude 종료",
+          "badge": 1
+        },
+        {
+          "label": "방향키 ↑",
+          "sub": "이전 명령어 불러오기",
+          "badge": 2
+        },
+        {
+          "label": "-c 붙이고 Enter",
+          "sub": "같은 세션으로 재시작",
+          "badge": 3
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "Ctrl + C 두 번",
+          "body": "대화 중인 Claude 종료"
+        },
+        {
+          "n": 2,
+          "head": "방향키 ↑",
+          "body": "실행 명령어 다시 불러오기"
+        },
+        {
+          "n": 3,
+          "head": "-c",
+          "body": "끝에 붙여서 방금 세션으로 재시작"
+        }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "claude --dangerously-skip-permissions -c"
+          }
+        ]
+      }
+    }
+  ]
+}

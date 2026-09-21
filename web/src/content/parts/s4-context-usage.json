@@ -1,0 +1,201 @@
+{
+  "id": "s4-context-usage",
+  "title": "/context 와 집중력",
+  "summary": "/context 로 사용량을 보고, 대화가 쌓일수록 흐려지는 이유를 이해한다.",
+  "slides": [
+    {
+      "id": "s4-context-07",
+      "template": "screen",
+      "title": "/resume · Chrome 챌린지 세션",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/resume"
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "picker": {
+            "title": "Resume session (1 of 14)",
+            "search": true,
+            "folder": "agent1",
+            "items": [
+              {
+                "name": "리네임테스트",
+                "meta": "1 hour ago · 8.1KB"
+              },
+              {
+                "name": "간단하게 자기소개 해볼래?",
+                "meta": "1 hour ago · 5.4KB"
+              },
+              {
+                "name": "/chrome",
+                "meta": "1 week ago · 423.3KB",
+                "selected": true,
+                "badge": 1
+              },
+              {
+                "name": "/model",
+                "meta": "1 week ago · 6.3KB"
+              }
+            ]
+          }
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "/chrome 세션",
+          "body": "지난 시간 챌린지 풀던 대화"
+        },
+        {
+          "n": "!",
+          "head": "Enter 로 복귀",
+          "body": "이어서 이번 실습 진행"
+        }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/resume"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-context-08",
+      "template": "screen",
+      "title": "/context · Context 사용량",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/ctx-grid-chrome.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "전체 사용량",
+          "body": "47.2k / 200k tokens"
+        },
+        {
+          "n": 2,
+          "head": "Messages 약 10%",
+          "body": "지난 챌린지 대화 분량"
+        }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/context"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-context-09",
+      "template": "screen",
+      "title": "기본으로 채워지는 칸",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/ctx-grid-parts.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "시스템 · 툴 · MCP",
+          "body": "세션 시작부터 차지"
+        },
+        {
+          "n": 2,
+          "head": "Memory files = CLAUDE.md",
+          "body": "CLAUDE.md 가 길수록 커지는 칸"
+        },
+        {
+          "n": 3,
+          "head": "Messages",
+          "body": "대화할수록 쌓이는 칸"
+        }
+      ]
+    },
+    {
+      "id": "s4-context-10",
+      "template": "screen",
+      "title": "보라 칸에 쌓이는 것",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/ctx-messages-fill.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "기본 칸",
+          "body": "세션 시작 시 자동으로 채움"
+        },
+        {
+          "n": 2,
+          "head": "Messages",
+          "body": "프롬프트 · 읽은 문서 · 쓴 내용 · 명령어 · 결과 전부"
+        }
+      ]
+    },
+    {
+      "id": "s4-context-11",
+      "template": "screen",
+      "title": "Context = 집중력",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/ctx-focus.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "새 세션",
+          "body": "짧은 질문만 투입 · 또렷한 답"
+        },
+        {
+          "n": 2,
+          "head": "쌓인 세션",
+          "body": "짧은 질문 + 쌓인 대화 전체 투입 · 흐려지는 답"
+        },
+        {
+          "n": "!",
+          "head": "대화할수록 멍청해지는 AI",
+          "body": "쓸데없는 말이 다음 단어 추측을 방해"
+        }
+      ]
+    },
+    {
+      "id": "s4-context-12",
+      "template": "screen",
+      "title": "CLAUDE.md 희석",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/ctx-dilution.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "작아지는 CLAUDE.md 비율",
+          "body": "대화가 길수록 규칙 비중 감소"
+        },
+        {
+          "n": "!",
+          "head": "규칙 약화",
+          "body": "적어둔 규칙도 점점 흐려짐"
+        }
+      ]
+    }
+  ]
+}

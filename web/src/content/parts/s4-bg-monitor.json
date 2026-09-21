@@ -1,0 +1,687 @@
+{
+  "id": "s4-bg-monitor",
+  "title": "monitor",
+  "summary": "감지 조건을 가진 monitor 로 폴더 변화와 사용량 한도를 지켜본다.",
+  "slides": [
+    {
+      "id": "s4-background-15",
+      "template": "screen",
+      "title": "task 와 monitor",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/bg-task-vs-monitor.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "task · 완료 조건",
+          "body": "끝나면 알림 한 번"
+        },
+        {
+          "n": 2,
+          "head": "monitor · 감지 조건",
+          "body": "끄거나 만료될 때까지 감지할 때마다 알림"
+        }
+      ]
+    },
+    {
+      "id": "s4-background-16",
+      "template": "screen",
+      "title": "실습 · 10초 알림 monitor",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "10초마다 알림이 울리는 monitor를 켜줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Monitor(10초 간격 테스트 알림)"
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "panel": {
+            "title": "",
+            "rows": [
+              {
+                "seg": [
+                  {
+                    "t": "  ⎿  Monitor started · task [작업 id] · timeout 300s",
+                    "c": "dim"
+                  }
+                ],
+                "badge": 2
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "● 10초마다 알림을 보내는 monitor 를 켰어요. tick #N HH:MM:SS 형식으로 알림이 와요."
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "  - 5분 뒤에 자동으로 종료돼요. 더 오래 켜 두려면 다시 켜 달라고 말씀해 주세요."
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "  - 중간에 끄려면 \"monitor 꺼줘\"라고 하시면 돼요."
+                  }
+                ]
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "✻ Sautéed for 9s · 1 monitor still running",
+                    "c": "dim"
+                  }
+                ]
+              }
+            ]
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage"
+          }
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "monitor 켜기",
+          "body": "감지 조건은 10초 간격"
+        },
+        {
+          "n": 2,
+          "head": "timeout 300s",
+          "body": "기본 5분 뒤 자동 종료"
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "10초마다 알림이 울리는 monitor를 켜줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-background-17",
+      "template": "screen",
+      "title": "monitor 이벤트 도착",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "10초마다 알림이 울리는 monitor를 켜줘"
+            },
+            {
+              "role": "assistant",
+              "text": "10초마다 알림을 보내는 monitor 를 켰어요."
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "panel": {
+            "title": "",
+            "rows": [
+              {
+                "seg": [
+                  {
+                    "t": "● Monitor event: \"10초 간격 테스트 알림\"",
+                    "c": "bold"
+                  }
+                ],
+                "badge": 1
+              },
+              {
+                "seg": [
+                  {
+                    "t": "● 첫 알림(tick #1 15:12:53)이 도착했어요. monitor 가 정상 동작하고 있어요."
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "✻ Baked for 1s · 1 monitor still running",
+                    "c": "dim"
+                  }
+                ]
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "● Monitor event: \"10초 간격 테스트 알림\"",
+                    "c": "bold"
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "● tick #2 15:13:03 알림이 왔어요. 10초 간격이 맞게 동작하고 있어요."
+                  }
+                ],
+                "badge": 2
+              },
+              {
+                "seg": [
+                  {
+                    "t": "✻ Worked for 1s · 1 monitor still running",
+                    "c": "dim"
+                  }
+                ]
+              }
+            ]
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage"
+          }
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Monitor event",
+          "body": "10초마다 알림 도착"
+        },
+        {
+          "n": 2,
+          "head": "알림마다 응답",
+          "body": "메시지 없이도 Claude 가 반응"
+        }
+      ]
+    },
+    {
+      "id": "s4-background-18",
+      "template": "screen",
+      "title": "monitor 끄기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "tick #5 15:13:33 알림이 왔어요."
+            },
+            {
+              "role": "user",
+              "text": "모니터 꺼줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Stop Task([작업 id] · 10초 간격 테스트 알림)"
+            },
+            {
+              "role": "assistant",
+              "text": "monitor 를 껐어요. 더 이상 알림이 오지 않아요.",
+              "badge": 2
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+          }
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "모니터 꺼줘",
+          "body": "말로 종료 요청"
+        },
+        {
+          "n": 2,
+          "head": "알림 중단",
+          "body": "하단 1 monitor 표시도 사라짐"
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "모니터 꺼줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-background-19",
+      "template": "screen",
+      "title": "실습 · test 폴더 감시",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          {
+            "name": "test",
+            "folder": true
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "현재폴더에 test폴더를 만들고, 그 폴더에 뭔가 변화가 생기면 알림이 울려서 너한테 변동된걸 확인하라는 메시지가 보내지게 모니터를 켜줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(mkdir test)"
+            },
+            {
+              "role": "tool",
+              "text": "Monitor(test 폴더 변화 감지)"
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "panel": {
+            "title": "",
+            "rows": [
+              {
+                "seg": [
+                  {
+                    "t": "  ⎿  Monitor started · task [작업 id] · timeout 300s",
+                    "c": "dim"
+                  }
+                ],
+                "badge": 2
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "● test 폴더를 만들고 감시를 켰어요. 파일이 들어오거나 지워지면 알려드릴게요."
+                  }
+                ]
+              }
+            ]
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "감지 조건 설명",
+          "body": "test 폴더에 변화가 생기면"
+        },
+        {
+          "n": 2,
+          "head": "monitor 시작",
+          "body": "폴더를 계속 지켜보는 상태"
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "현재폴더에 test폴더를 만들고, 그 폴더에 뭔가 변화가 생기면 알림이 울려서 너한테 변동된걸 확인하라는 메시지가 보내지게 모니터를 켜줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-background-20",
+      "template": "screen",
+      "title": "파일 넣기 · 감지",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          {
+            "name": "test",
+            "folder": true
+          },
+          {
+            "name": "사진.png",
+            "depth": 1,
+            "active": true,
+            "badge": 1
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "현재폴더에 test폴더를 만들고, 그 폴더에 뭔가 변화가 생기면 알림이 울려서 너한테 변동된걸 확인하라는 메시지가 보내지게 모니터를 켜줘"
+            },
+            {
+              "role": "assistant",
+              "text": "test 폴더를 만들고 감시를 켰어요."
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "panel": {
+            "title": "",
+            "rows": [
+              {
+                "seg": [
+                  {
+                    "t": "● Monitor event: \"test 폴더 변화 감지\"",
+                    "c": "bold"
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "  추가됨: test\\사진.png",
+                    "c": "dim"
+                  }
+                ]
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "● test 폴더에 사진.png 가 새로 들어왔어요. 크기는 248KB 예요."
+                  }
+                ],
+                "badge": 2
+              }
+            ]
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "탐색기로 파일 넣기",
+          "body": "test 폴더에 끌어다 놓기"
+        },
+        {
+          "n": 2,
+          "head": "감지 알림",
+          "body": "Claude 가 바뀐 내용 확인 후 보고"
+        }
+      ]
+    },
+    {
+      "id": "s4-background-21",
+      "template": "screen",
+      "title": "파일 삭제 · 감지",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          {
+            "name": "test",
+            "folder": true
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "test 폴더에 사진.png 가 새로 들어왔어요."
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "panel": {
+            "title": "",
+            "rows": [
+              {
+                "seg": [
+                  {
+                    "t": "● Monitor event: \"test 폴더 변화 감지\"",
+                    "c": "bold"
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "  삭제됨: test\\사진.png",
+                    "c": "dim"
+                  }
+                ]
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "● 사진.png 가 test 폴더에서 삭제됐어요. 지금 test 폴더는 비어 있어요."
+                  }
+                ],
+                "badge": 2
+              }
+            ]
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage"
+          }
+        },
+        "keycap": {
+          "keys": [
+            "Delete"
+          ],
+          "badge": 1
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Delete 키",
+          "body": "파일 선택 후 삭제"
+        },
+        {
+          "n": 2,
+          "head": "감지 알림",
+          "body": "삭제도 바로 보고"
+        }
+      ]
+    },
+    {
+      "id": "s4-background-22",
+      "template": "flow",
+      "title": "사용량 감지 알림 원리",
+      "steps": [
+        {
+          "label": "/usage 사용량",
+          "sub": "5시간 · 주간 한도 %",
+          "badge": 1
+        },
+        {
+          "label": "파일에 기록",
+          "sub": "상태줄 스크립트"
+        },
+        {
+          "label": "monitor 감지",
+          "sub": "90% 넘는 순간",
+          "badge": 2
+        },
+        {
+          "label": "Claude 알림",
+          "sub": "⚠️ 한도 도달",
+          "badge": 3
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "사용량 기록",
+          "body": "/usage 와 같은 값을 파일로 저장"
+        },
+        {
+          "n": 2,
+          "head": "monitor 감지",
+          "body": "90% 넘는 순간 포착"
+        },
+        {
+          "n": 3,
+          "head": "Claude 가 움직임",
+          "body": "감지 알림이 프롬프트처럼 동작"
+        }
+      ]
+    },
+    {
+      "id": "s4-background-23",
+      "template": "screen",
+      "title": "실습 · 사용량 90% 알림",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "# 작업: Claude Code 사용량(5시간·주간 한도) 수집 + 90% 알림 Monitor 설정 …",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Monitor(5시간·주간 한도 90% 도달 알림)"
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "panel": {
+            "title": "",
+            "rows": [
+              {
+                "seg": [
+                  {
+                    "t": "  ⎿  Monitor started · task [작업 id] · timeout 1800s",
+                    "c": "dim"
+                  }
+                ]
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "● Monitor event: \"5시간·주간 한도 90% 도달 알림\"",
+                    "c": "bold"
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "  ⚠️  5시간 한도 90% 도달 (임계 90%, 리셋 09-22 17:00)",
+                    "c": "accent"
+                  }
+                ],
+                "badge": 2
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "● 5시간 한도가 90%에 도달했어요. 17시에 초기화되니 큰 작업은 그 뒤로 미루는 게 좋아요."
+                  }
+                ]
+              }
+            ]
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage"
+          }
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "프롬프트 통째로 붙여넣기",
+          "body": "수집 · 감시 스크립트 설정까지 자동"
+        },
+        {
+          "n": 2,
+          "head": "90% 도달 알림",
+          "body": "감지되면 Claude 가 먼저 알림"
+        },
+        {
+          "n": "!",
+          "head": "최대 30분",
+          "body": "만료 알림 오면 같은 명령으로 다시 켜기"
+        }
+      ],
+      "action": {
+        "label": "실습 프롬프트",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "# 작업: Claude Code 사용량(5시간·주간 한도) 수집 + 90% 알림 Monitor 설정\n\n## 배경 (검증된 사실)\n- Claude Code 상태줄(statusLine) 스크립트는 세션 JSON을 stdin으로 받는다.\n  Pro/Max 구독이면 그 안에 `/usage`와 같은 값이 들어 있다:\n  `rate_limits.five_hour` / `rate_limits.seven_day` → `used_percentage`(0~100), `resets_at`(Unix 초)\n- 첫 API 응답 전에는 이 값이 없을 수 있다. 각 창도 따로 빠질 수 있다. 없는 경우를 반드시 처리할 것.\n- 정본 문서: https://code.claude.com/docs/en/statusline (\"rate-limit usage\" 절)\n- 값을 받는 통로는 statusLine뿐이다. 설정을 지우면 수집도 멈춘다.\n  화면에 안 보이게 하려면 스크립트가 아무것도 출력하지 않으면 된다.\n  (단, 커스텀 상태줄이 있으면 `esc to interrupt` 같은 하단 키 안내가 사라진다.)\n\n## 1단계: 수집 스크립트 `~/.claude/statusline.py`\n```python\n\"\"\"Claude Code 상태줄: rate_limits 를 파일에 기록(수집 전용, 기본 표시 끔).\"\"\"\nimport json, sys, time\nfrom datetime import datetime\nfrom pathlib import Path\n\nsys.stdout.reconfigure(encoding=\"utf-8\", errors=\"replace\")\nHOME = Path.home() / \".claude\"\nLATEST = HOME / \"usage-latest.json\"\nLOG = HOME / \"usage-log.jsonl\"\nSTATUSLINE_SHOW = False  # True 로 바꾸면 하단에 표시\n\ndef fmt_reset(ts):\n    return datetime.fromtimestamp(ts).strftime(\"%m-%d %H:%M\") if ts else \"?\"\n\ndef main():\n    try:  # utf-8-sig: PowerShell 파이프가 붙이는 BOM 을 제거한다\n        data = json.loads(sys.stdin.buffer.read().decode(\"utf-8-sig\") or \"{}\")\n    except Exception:\n        data = {}\n    rl = data.get(\"rate_limits\") or {}\n    five, week = rl.get(\"five_hour\") or {}, rl.get(\"seven_day\") or {}\n    ctx = (data.get(\"context_window\") or {}).get(\"used_percentage\")\n    model = (data.get(\"model\") or {}).get(\"display_name\", \"\")\n    if rl:\n        snap = {\"captured_at\": int(time.time()), \"session_id\": data.get(\"session_id\"),\n                \"model\": model, \"rate_limits\": rl}\n        try:\n            LATEST.write_text(json.dumps(snap, ensure_ascii=False), encoding=\"utf-8\")\n            with LOG.open(\"a\", encoding=\"utf-8\") as f:\n                f.write(json.dumps(snap, ensure_ascii=False) + \"\\n\")\n        except Exception:\n            pass\n    parts = [model] if model else []\n    if ctx is not None: parts.append(f\"ctx {int(ctx)}%\")\n    if five: parts.append(f\"5h {five.get('used_percentage', 0):.0f}% (~{fmt_reset(five.get('resets_at'))})\")\n    if week: parts.append(f\"주간 {week.get('used_percentage', 0):.0f}% (~{fmt_reset(week.get('resets_at'))})\")\n    if not rl: parts.append(\"한도: 대기 중\")\n    if STATUSLINE_SHOW:\n        print(\" | \".join(parts))\n\nif __name__ == \"__main__\":\n    main()\n```\n\n## 2단계: `~/.claude/settings.json`에 추가 (먼저 파일을 읽고, 기존 항목은 보존)\n```json\n\"statusLine\": {\n  \"type\": \"command\",\n  \"command\": \"python <홈절대경로>/.claude/statusline.py\",\n  \"refreshInterval\": 60\n}\n```\n- 경로는 절대경로로 쓴다. Windows에서도 `C:/Users/...`처럼 슬래시를 쓴다.\n- macOS/Linux에서 `python`이 없으면 `python3`을 쓴다.\n\n## 3단계: 감시 스크립트 `~/.claude/usage_watch.py`\n```python\n\"\"\"usage-latest.json 을 폴링해 임계값을 넘으면 한 줄 출력(Monitor 이벤트용).\n같은 창·같은 리셋 주기에서는 한 번만 알린다. 사용: python usage_watch.py [임계%=90] [폴링초=30]\"\"\"\nimport json, sys, time\nfrom datetime import datetime\nfrom pathlib import Path\n\nsys.stdout.reconfigure(encoding=\"utf-8\", errors=\"replace\", line_buffering=True)\nLATEST = Path.home() / \".claude\" / \"usage-latest.json\"\nNAMES = {\"five_hour\": \"5시간\", \"seven_day\": \"주간\"}\n\ndef main():\n    threshold = float(sys.argv[1]) if len(sys.argv) > 1 else 90\n    interval = float(sys.argv[2]) if len(sys.argv) > 2 else 30\n    fired = set()\n    print(f\"[usage-watch] 시작: 임계 {threshold:g}%, {interval:g}초 간격\")\n    while True:\n        try:\n            snap = json.loads(LATEST.read_text(encoding=\"utf-8\"))\n            for key, win in (snap.get(\"rate_limits\") or {}).items():\n                pct, reset = win.get(\"used_percentage\"), win.get(\"resets_at\")\n                if pct is None or pct < threshold or (key, reset) in fired:\n                    continue\n                fired.add((key, reset))\n                when = datetime.fromtimestamp(reset).strftime(\"%m-%d %H:%M\") if reset else \"?\"\n                print(f\"⚠️  {NAMES.get(key, key)} 한도 {pct:g}% 도달 (임계 {threshold:g}%, 리셋 {when})\")\n        except Exception:\n            pass\n        time.sleep(interval)\n\nif __name__ == \"__main__\":\n    main()\n```\n\n## 4단계: 검증 (순서대로, 각 단계 결과를 보고)\n1. 설정 후 대화를 한 번 주고받은 다음 `~/.claude/usage-latest.json`을 읽는다.\n   `rate_limits`가 들어 있으면 수집 성공이다. `resets_at`은 사람이 읽는 시각으로 바꿔서 보고한다.\n2. 사용자에게 `/usage`와 숫자가 같은지 확인을 부탁한다.\n3. 출력이 비는지 확인하려고 목업 입력을 넣었다면, `usage-log.jsonl`에서 `session_id`가 null인 테스트 줄을 지운다.\n   목업 입력은 실제 로그를 오염시킨다.\n4. Monitor 알림 테스트: 임계값을 낮춰 짧게 돌려서 이벤트가 오는지 본다.\n   `Monitor(command=\"python <경로>/usage_watch.py 2 5\", description=\"한도 알림 테스트\", timeout_ms=20000)`\n   → 창마다 한 번씩만 알림이 와야 한다. 테스트가 끝나면 이 감시는 만료되거나 TaskStop으로 끈다.\n5. 실제 감시를 건다:\n   `Monitor(command=\"python <경로>/usage_watch.py 90 30\", description=\"5시간·주간 한도 90% 도달 알림\", timeout_ms=1800000)`\n   - 감시는 최대 30분까지만 유지된다(Claude Code 2.1.271부터 만료 없는 옵션이 없어졌다).\n   - 만료 알림(\"Monitor expired\")이 오면 같은 명령으로 다시 건다.\n\n## 운영 규칙\n- 감시는 **하나만** 유지한다. 다시 걸기 전에는 기존 감시를 TaskStop으로 끈다. 두 개가 돌면 알림이 중복된다.\n- **만료 알림(\"Monitor expired\")이 오면 같은 명령으로 즉시 다시 건다.** 감시는 최대 30분마다 끝나므로 이게 기본 규칙이다.\n- 세션이 끝나면 감시도 멈춘다. 새 세션에서는 5단계를 다시 한다.\n- 시작 줄(`[usage-watch] 시작`)은 사용자에게 알리지 않는다.\n  `⚠️  ... 도달` 이벤트가 오면 PushNotification으로 사용자에게 알린다.\n  - 사용자가 터미널을 보고 있으면 PushNotification은 \"Not sent\"로 막힌다. 이건 정상이다.\n    그 경우 대화 출력으로 알린다.\n  - 휴대폰 푸시는 Remote Control이 연결돼 있을 때만 간다.\n- 파일에 있는 값은 마지막으로 상태줄이 갱신된 시점의 값이다(최대 약 1분 지연). 실시간 값이라고 말하지 않는다.\n- 토큰 수를 세서 사용률을 추정하지 않는다. 사용률은 서버가 준 `used_percentage`만 쓴다.",
+            "desc": "통째로 복사해서 Claude 에 붙여넣기"
+          }
+        ]
+      }
+    }
+  ]
+}

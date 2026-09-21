@@ -1,0 +1,509 @@
+{
+  "id": "s4-session-id",
+  "title": "세션 · ID 로 이어하기",
+  "summary": "세션이 무엇인지 알고, 종료할 때 나온 세션 ID 로 대화에 다시 돌아간다.",
+  "slides": [
+    {
+      "id": "s4-session-01",
+      "template": "screen",
+      "title": "세션 = 채팅 하나",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/chatgpt-sessions.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "채팅 하나 = 세션 하나",
+          "body": "ChatGPT 왼쪽 목록의 한 칸"
+        },
+        {
+          "n": 2,
+          "head": "채팅 목록 = 세션 목록",
+          "body": "Claude Code 도 같은 구조"
+        }
+      ]
+    },
+    {
+      "id": "s4-session-02",
+      "template": "compare",
+      "title": "세션 = 단기기억",
+      "left": {
+        "label": "같은 세션",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "내 이름은 홍길동이야"
+              },
+              {
+                "role": "assistant",
+                "text": "반가워요, 홍길동님!"
+              },
+              {
+                "role": "user",
+                "text": "내 이름이 뭐라고 했지?"
+              },
+              {
+                "role": "assistant",
+                "text": "홍길동님이라고 하셨어요.",
+                "badge": 1
+              }
+            ],
+            "input": {
+              "placeholder": "메시지를 입력하세요..."
+            }
+          }
+        }
+      },
+      "right": {
+        "label": "/clear 뒤",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "/clear"
+              },
+              {
+                "role": "assistant",
+                "text": "(no content)"
+              },
+              {
+                "role": "user",
+                "text": "내 이름이 뭐라고 했지?"
+              },
+              {
+                "role": "assistant",
+                "text": "아직 이름을 알려주신 적이 없어요. 이름이 어떻게 되세요?",
+                "badge": 2
+              }
+            ],
+            "input": {
+              "placeholder": "메시지를 입력하세요..."
+            }
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "같은 세션",
+          "body": "앞에서 나눈 대화 기억"
+        },
+        {
+          "n": 2,
+          "head": "세션이 바뀌면",
+          "body": "/clear 뒤에는 이전 대화 기억 없음"
+        }
+      ]
+    },
+    {
+      "id": "s4-session-03",
+      "template": "screen",
+      "title": "bypass 모드로 시작",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "간단하게 자기소개 해볼래?",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "안녕하세요! 저는 Anthropic 이 만든 AI 코딩 도우미 Claude 예요. 이 폴더의 파일을 읽고 고치거나, 터미널 명령을 대신 실행하는 일을 도와드려요. 무엇부터 해볼까요?"
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "badge": 1
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "bypass permissions on",
+          "body": "앞으로 항상 이 명령어로 실행"
+        },
+        {
+          "n": 2,
+          "head": "첫 대화",
+          "body": "자기소개 요청으로 세션 만들기"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "claude --dangerously-skip-permissions",
+            "desc": "Claude 실행"
+          },
+          {
+            "kind": "copy",
+            "value": "간단하게 자기소개 해볼래?",
+            "desc": "첫 프롬프트"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-session-04",
+      "template": "screen",
+      "title": "종료 후 나오는 세션 ID",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "claude --dangerously-skip-permissions"
+            },
+            {
+              "role": "assistant",
+              "text": "Resume this session with:"
+            },
+            {
+              "role": "assistant",
+              "text": "claude --resume [세션 id]",
+              "mark": "--resume [세션 id]",
+              "badge": 2
+            },
+            {
+              "role": "user",
+              "text": ""
+            }
+          ]
+        },
+        "keycap": {
+          "keys": [
+            "Ctrl",
+            "C"
+          ],
+          "times": 2,
+          "badge": 1
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Ctrl + C 두 번",
+          "body": "한 번 누르면 Press Ctrl-C again to exit 표시, 한 번 더 누르면 종료"
+        },
+        {
+          "n": 2,
+          "head": "--resume 세션ID 드래그 복사",
+          "body": "claude 뒤 부분만 선택 후 Ctrl + C"
+        }
+      ]
+    },
+    {
+      "id": "s4-session-05",
+      "template": "screen",
+      "title": "↑ 키 + 붙여넣기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "Resume this session with:"
+            },
+            {
+              "role": "assistant",
+              "text": "claude --resume [세션 id]"
+            },
+            {
+              "role": "user",
+              "text": "claude --dangerously-skip-permissions --resume [세션 id]",
+              "mark": "--resume [세션 id]",
+              "badge": 2
+            }
+          ]
+        },
+        "keycap": {
+          "keys": [
+            "↑"
+          ],
+          "badge": 1
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "방향키 ↑",
+          "body": "직전 실행 명령어 불러오기"
+        },
+        {
+          "n": 2,
+          "head": "한 칸 띄우고 붙여넣기",
+          "body": "Ctrl + V 후 Enter"
+        }
+      ]
+    },
+    {
+      "id": "s4-session-06",
+      "template": "screen",
+      "title": "대화 복귀 · 세션 ID",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "간단하게 자기소개 해볼래?"
+            },
+            {
+              "role": "assistant",
+              "text": "안녕하세요! 저는 Anthropic 이 만든 AI 코딩 도우미 Claude 예요. 이 폴더의 파일을 읽고 고치거나, 터미널 명령을 대신 실행하는 일을 도와드려요. 무엇부터 해볼까요?",
+              "badge": 1
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "이전 대화 그대로",
+          "body": "종료 전 자기소개 대화 복원"
+        },
+        {
+          "n": "!",
+          "head": "이어서 대화 가능",
+          "body": "앞 내용 기억한 상태"
+        }
+      ]
+    },
+    {
+      "id": "s4-session-07",
+      "template": "screen",
+      "title": "플래그 · claude 실행 옵션",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/claude-flags.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "--dangerously-skip-permissions",
+          "body": "권한 확인 없이 실행"
+        },
+        {
+          "n": 2,
+          "head": "--chrome",
+          "body": "Claude in Chrome 켜고 실행"
+        },
+        {
+          "n": 3,
+          "head": "--resume",
+          "body": "지정한 세션 이어서 실행"
+        }
+      ]
+    },
+    {
+      "id": "s4-session-08",
+      "template": "screen",
+      "title": "/status · 세션 정보",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/status"
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "panel": {
+            "title": "",
+            "rows": [
+              {
+                "seg": [
+                  {
+                    "t": "  Settings  "
+                  },
+                  {
+                    "t": "Status",
+                    "c": "tab"
+                  },
+                  {
+                    "t": "  Config   Usage   Stats"
+                  }
+                ]
+              },
+              {
+                "seg": []
+              },
+              {
+                "seg": [
+                  {
+                    "t": "  Version:           ",
+                    "c": "dim"
+                  },
+                  {
+                    "t": "2.1.278"
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "  Session name:      ",
+                    "c": "dim"
+                  },
+                  {
+                    "t": "/rename to add a name",
+                    "c": "dim"
+                  }
+                ],
+                "badge": 1
+              },
+              {
+                "seg": [
+                  {
+                    "t": "  Session ID:        ",
+                    "c": "dim"
+                  },
+                  {
+                    "t": "[세션 id]"
+                  }
+                ],
+                "badge": 2
+              },
+              {
+                "seg": [
+                  {
+                    "t": "  cwd:               ",
+                    "c": "dim"
+                  },
+                  {
+                    "t": "C:\\agent1"
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "  Login method:      ",
+                    "c": "dim"
+                  },
+                  {
+                    "t": "Claude Max account"
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "  Organization:      ",
+                    "c": "dim"
+                  },
+                  {
+                    "t": "student@example.com's Organization"
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "  Email:             ",
+                    "c": "dim"
+                  },
+                  {
+                    "t": "student@example.com"
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "  Model:             ",
+                    "c": "dim"
+                  },
+                  {
+                    "t": "sonnet (claude-sonnet-5)"
+                  }
+                ]
+              },
+              {
+                "seg": [
+                  {
+                    "t": "  Esc to cancel",
+                    "c": "dim"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Session name",
+          "body": "처음엔 비어 있음"
+        },
+        {
+          "n": 2,
+          "head": "Session ID",
+          "body": "종료할 때 나온 번호와 같은 값"
+        }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/status"
+          }
+        ]
+      }
+    }
+  ]
+}

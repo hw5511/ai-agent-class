@@ -1,0 +1,325 @@
+{
+  "id": "s4-context-compact",
+  "title": "/compact · 기억 관리",
+  "summary": "/compact 로 대화를 요약해 Context 를 비우고, 장기 · 단기 기억을 나눠 관리한다.",
+  "slides": [
+    {
+      "id": "s4-context-24",
+      "template": "screen",
+      "title": "관리법 3 · 대화 길이 한도",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/ctx-chatgpt-limit.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "새 채팅 안내",
+          "body": "더 이상 이어갈 수 없는 대화"
+        }
+      ]
+    },
+    {
+      "id": "s4-context-25",
+      "template": "screen",
+      "title": "새 채팅에서 다시 설명",
+      "screen": {
+        "kind": "chat",
+        "app": "ChatGPT",
+        "messages": [
+          {
+            "role": "user",
+            "badge": 1,
+            "text": "내가 이전 대화에서 너랑 제주 여행 일정 얘기했었는데, 2박 3일로 가기로 했고, 첫날은 동쪽 해변이랑 성산일출봉, 둘째 날은 한라산 대신 오름 두 곳, 저녁은 흑돼지 골목으로 정했고, 숙소는 서귀포 쪽으로 하기로 했었어. 그리고 렌터카는…"
+          },
+          {
+            "role": "assistant",
+            "text": "알려주신 내용을 바탕으로 이어서 도와드릴게요. 렌터카는 어떻게 하기로 하셨나요?"
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "지난 대화 일일이 설명",
+          "body": "길고 빠뜨리기 쉬움"
+        }
+      ]
+    },
+    {
+      "id": "s4-context-26",
+      "template": "compare",
+      "title": "요약 md 로 이어가기",
+      "left": {
+        "label": "지난 채팅",
+        "screen": {
+          "kind": "chat",
+          "app": "ChatGPT",
+          "messages": [
+            {
+              "role": "user",
+              "text": "현재 까지 우리가 나눈 대화에서 핵심내용을 요약해서 md파일로 정리해줘",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "요약 파일이에요.",
+              "code": "# 제주 여행 요약\n- 2박 3일 · 숙소 서귀포\n- 1일차: 동쪽 해변 · 성산일출봉\n- 2일차: 오름 두 곳 · 흑돼지 골목\n- 3일차: 공항 근처 카페 · 기념품"
+            }
+          ]
+        }
+      },
+      "right": {
+        "label": "새 채팅",
+        "screen": {
+          "kind": "chat",
+          "app": "ChatGPT",
+          "messages": [
+            {
+              "role": "user",
+              "text": "지난 대화 요약이야. 이어서 3일차 동선 짜줘",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "요약 기준으로 3일차는 공항까지 40분 동선으로 짜볼게요."
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "요약 요청",
+          "body": "핵심 내용만 md 파일로"
+        },
+        {
+          "n": 2,
+          "head": "새 채팅에 투입",
+          "body": "요약만으로 대화 이어가기"
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "현재 까지 우리가 나눈 대화에서 핵심내용을 요약해서 md파일로 정리해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-context-27",
+      "template": "screen",
+      "title": "/compact · 자동 요약",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/ctx-compact.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "긴 대화",
+          "body": "쌓인 Messages 전체"
+        },
+        {
+          "n": 2,
+          "head": "haiku 요약 모듈",
+          "body": "핵심만 남긴 요약문 작성"
+        },
+        {
+          "n": 3,
+          "head": "새 Context",
+          "body": "비운 뒤 요약문만 투입"
+        }
+      ]
+    },
+    {
+      "id": "s4-context-28",
+      "template": "screen",
+      "title": "/compact 실행",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "현재폴더에 test.md 파일에 간단한 인삿말을 남겨줘"
+            },
+            {
+              "role": "tool",
+              "text": "Write(test.md)"
+            },
+            {
+              "role": "assistant",
+              "text": "⎿  Wrote 2 lines to test.md"
+            },
+            {
+              "role": "assistant",
+              "text": "test.md 에 간단한 인삿말을 남겼어요."
+            },
+            {
+              "role": "user",
+              "text": "/compact",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "✻ Compacting conversation…"
+            },
+            {
+              "role": "assistant",
+              "text": "▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ 5%",
+              "badge": 2
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+          }
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "/compact 입력",
+          "body": "먼저 /context 로 Messages 비율 확인"
+        },
+        {
+          "n": 2,
+          "head": "진행 막대",
+          "body": "끝나면 Compacted 표시"
+        }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/context"
+          },
+          {
+            "kind": "copy",
+            "value": "/compact"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-context-29",
+      "template": "compare",
+      "title": "compact 전후 /context",
+      "left": {
+        "label": "compact 전",
+        "screen": {
+          "kind": "shot",
+          "src": "/illustrations/ctx-grid-before-1.svg"
+        }
+      },
+      "right": {
+        "label": "compact 후",
+        "screen": {
+          "kind": "shot",
+          "src": "/illustrations/ctx-grid-after-compact.svg"
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Messages 20.4k",
+          "body": "쌓인 대화 전체"
+        },
+        {
+          "n": 2,
+          "head": "Messages 3.2k",
+          "body": "요약문만 남은 상태"
+        }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/context"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4-context-30",
+      "template": "screen",
+      "title": "Context Rot",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/ctx-rot.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Context Rot",
+          "body": "Context 가 찰수록 답변 품질 하락 · 절반 이후 급락"
+        },
+        {
+          "n": "!",
+          "head": "중간중간 /compact",
+          "body": "세션 처음처럼 똑똑한 상태 유지"
+        }
+      ]
+    },
+    {
+      "id": "s4-context-31",
+      "template": "screen",
+      "title": "Lost in the Middle",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/ctx-lost-middle.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "대화 앞 · 끝",
+          "body": "잘 기억하는 구간"
+        },
+        {
+          "n": 2,
+          "head": "가운데",
+          "body": "놓치기 쉬운 구간"
+        }
+      ]
+    },
+    {
+      "id": "s4-context-32",
+      "template": "screen",
+      "title": "기억 나누어 관리하기",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/ctx-memory.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "장기기억",
+          "body": "CLAUDE.md · docs 문서로 남긴 지식"
+        },
+        {
+          "n": 2,
+          "head": "단기기억",
+          "body": "Context + /compact · /rewind"
+        },
+        {
+          "n": 3,
+          "head": "세션",
+          "body": "주제별로 나눈 대화"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "id": "s4-context-llm",
+  "title": "LLM 과 Context",
+  "summary": "LLM 이 다음 말을 이어 붙이는 방식과 Context 의 뜻을 이해한다.",
+  "slides": [
+    {
+      "id": "s4-context-01",
+      "template": "compare",
+      "title": "LLM = 이어말하기 게임",
+      "left": {
+        "label": "배드 민턴",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/sinseoyugi_1.png"
+        }
+      },
+      "right": {
+        "label": "허리 아퍼",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/sinseoyugi_2.png"
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "이어말하기 게임",
+          "body": "앞사람 말 듣고 이어질 말 붙이기"
+        },
+        {
+          "n": 2,
+          "head": "엉뚱해도 이어지는 말",
+          "body": "앞 말에 그럴듯하게 붙는 다음 말"
+        },
+        {
+          "n": "!",
+          "head": "LLM 도 같은 원리",
+          "body": "앞 글 보고 다음 말 잇기"
+        }
+      ]
+    },
+    {
+      "id": "s4-context-02",
+      "template": "screen",
+      "title": "다음 단어 · 확률로 맞히기",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/ctx-next-word.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "가장 그럴듯한 단어",
+          "body": "확률이 제일 높은 좋네요 선택"
+        },
+        {
+          "n": 2,
+          "head": "후보별 확률",
+          "body": "좋네요 98% · 맛있네요 1% · 친절하네요 0.5%"
+        }
+      ]
+    },
+    {
+      "id": "s4-context-03",
+      "template": "screen",
+      "title": "AI 프린터기",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/ctx-printer.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "질문 투입",
+          "body": "사용자가 보낸 질문"
+        },
+        {
+          "n": 2,
+          "head": "답변 출력",
+          "body": "질문에 이어질 자연스러운 글"
+        }
+      ]
+    },
+    {
+      "id": "s4-context-04",
+      "template": "screen",
+      "title": "대화하는 원리",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/ctx-multiturn.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "질문2 보내기",
+          "body": "앞 대화에 이어서 질문"
+        },
+        {
+          "n": 2,
+          "head": "한 묶음으로 투입",
+          "body": "질문1 + 답변1 + 질문2"
+        },
+        {
+          "n": 3,
+          "head": "답변2 출력",
+          "body": "묶음 전체에 이어질 답변"
+        }
+      ]
+    },
+    {
+      "id": "s4-context-05",
+      "template": "screen",
+      "title": "쌓이는 대화",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/ctx-overflow.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "대화할수록 긴 묶음",
+          "body": "이전 대화 전부 + 지금 질문"
+        },
+        {
+          "n": 2,
+          "head": "최대 텍스트 초과",
+          "body": "프린터기 입구보다 커진 묶음"
+        }
+      ]
+    },
+    {
+      "id": "s4-context-06",
+      "template": "screen",
+      "title": "Context = 최대 텍스트 크기",
+      "screen": {
+        "kind": "shot",
+        "src": "/illustrations/ctx-context-size.svg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Context",
+          "body": "AI 프린터기에 넣을 수 있는 최대 텍스트"
+        }
+      ]
+    }
+  ]
+}
