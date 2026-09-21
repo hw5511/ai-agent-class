@@ -130,7 +130,8 @@
                 "role": "assistant",
                 "text": "agy 1.2.5"
               }
-            ]
+            ],
+            "prompt": "student@MacBook ~ %"
           }
         }
       },
@@ -156,7 +157,7 @@
         "items": [
           {
             "kind": "copy",
-            "desc": "Windows — PowerShell 에 통째로 붙여넣기",
+            "desc": "Windows",
             "value": "$names = 'agy','codex','claude'\n$guess = @{\n  agy    = @(\"$env:LOCALAPPDATA\\agy\\bin\")\n  codex  = @(\"$env:LOCALAPPDATA\\Programs\\OpenAI\\Codex\\bin\", \"$env:USERPROFILE\\.codex\\bin\")\n  claude = @(\"$env:USERPROFILE\\.local\\bin\")\n}\n$roots = @(@($env:LOCALAPPDATA, $env:APPDATA, $env:USERPROFILE) | Where-Object { $_ -and (Test-Path $_) } | Select-Object -Unique)\n$where = @{}\nforeach ($n in $names) {\n  $dir = $null\n  $pre = Get-Command $n -ErrorAction SilentlyContinue\n  if ($pre -and $pre.Source) { $dir = Split-Path $pre.Source -Parent }\n  if (-not $dir) { foreach ($g in $guess[$n]) { if (Test-Path (Join-Path $g \"$n.exe\")) { $dir = $g; break } } }\n  if (-not $dir) {\n    foreach ($r in $roots) {\n      $hit = Get-ChildItem -Path $r -Filter \"$n.exe\" -Recurse -File -Depth 5 -ErrorAction SilentlyContinue | Select-Object -First 1\n      if ($hit) { $dir = $hit.DirectoryName; break }\n    }\n  }\n  if ($dir) { $where[$n] = $dir }\n}\n$found = @($where.Values | Select-Object -Unique)\nif ($found.Count -gt 0) {\n  $have = @([Environment]::GetEnvironmentVariable('Path','User') -split ';' | Where-Object { $_ })\n  $new  = @($found | Where-Object { $have -notcontains $_ })\n  if ($new.Count -gt 0) { [Environment]::SetEnvironmentVariable('Path', (($have + $new) -join ';'), 'User') }\n  $cur = @($env:Path -split ';' | Where-Object { $_ })\n  $now = @($found | Where-Object { $cur -notcontains $_ })\n  if ($now.Count -gt 0) { $env:Path = (($cur + $now) -join ';') }\n}\nWrite-Host \"\"\nWrite-Host \"  ────────────────────────────────────────────────────────────\"\n$ok = 0\nforeach ($n in $names) {\n  if (-not $where.ContainsKey($n)) {\n    Write-Host \"   [ ] \" -NoNewline -ForegroundColor Red\n    Write-Host (\"{0,-8}\" -f $n) -NoNewline -ForegroundColor Red\n    Write-Host \"아직 설치되지 않았습니다\" -ForegroundColor Red\n    continue\n  }\n  $exe = Join-Path $where[$n] \"$n.exe\"\n  $ver = $null\n  try { $ver = (& $exe --version 2>&1 | Select-Object -First 1) } catch { $ver = $null }\n  if ($ver) { $ver = ($ver -replace '\\s+', ' ').Trim() }\n  $byName = [bool](Get-Command $n -ErrorAction SilentlyContinue)\n  if ($ver -and $byName) {\n    Write-Host \"   [v] \" -NoNewline -ForegroundColor Green\n    Write-Host (\"{0,-8}\" -f $n) -NoNewline -ForegroundColor Green\n    Write-Host (\"사용 가능!  \" + $ver) -ForegroundColor Green\n    $ok++\n  } elseif ($ver) {\n    Write-Host \"   [!] \" -NoNewline -ForegroundColor Yellow\n    Write-Host (\"{0,-8}\" -f $n) -NoNewline -ForegroundColor Yellow\n    Write-Host ($ver + \"  — 설치는 됐지만 이 터미널이 아직 이름으로 못 찾습니다\") -ForegroundColor Yellow\n  } else {\n    Write-Host \"   [!] \" -NoNewline -ForegroundColor Yellow\n    Write-Host (\"{0,-8}\" -f $n) -NoNewline -ForegroundColor Yellow\n    Write-Host \"파일은 있는데 실행이 안 됩니다 — 설치를 다시 하세요\" -ForegroundColor Yellow\n  }\n}\nWrite-Host \"  ────────────────────────────────────────────────────────────\"\nif ($ok -eq 3) {\n  Write-Host \"   세 개 다 버전이 찍혔습니다. VS Code 껐다 켤 필요 없습니다.\" -ForegroundColor Cyan\n} else {\n  Write-Host (\"   \" + $ok + \"/3 확인됨. [!] 는 새 터미널을 열면 대개 해결됩니다.\") -ForegroundColor Yellow\n}\nWrite-Host \"\""
           }
         ]
@@ -244,8 +245,7 @@
         "items": [
           {
             "kind": "copy",
-            "value": "echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc",
-            "desc": "화면의 Run: 줄이 이것과 같으면"
+            "value": "echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc"
           }
         ]
       }

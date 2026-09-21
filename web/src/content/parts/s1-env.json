@@ -380,17 +380,17 @@
           {
             "kind": "copy",
             "value": "echo 안녕하세요",
-            "desc": "① 출력해 보기"
+            "desc": "출력"
           },
           {
             "kind": "copy",
             "value": "clear",
-            "desc": "② 화면 비우기"
+            "desc": "화면 비우기"
           },
           {
             "kind": "copy",
             "value": "cls",
-            "desc": "Windows 는 이것도 됩니다"
+            "desc": "Windows"
           }
         ]
       }

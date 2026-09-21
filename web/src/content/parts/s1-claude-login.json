@@ -267,12 +267,12 @@
           {
             "kind": "copy",
             "value": "/model sonnet",
-            "desc": "① 모델 정하기"
+            "desc": "모델"
           },
           {
             "kind": "copy",
             "value": "/ide",
-            "desc": "② 연동 끊기 — 목록에서 2. None 선택"
+            "desc": "IDE 연동 끊기"
           }
         ]
       }

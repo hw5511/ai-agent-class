@@ -629,7 +629,7 @@
           {
             "kind": "copy",
             "value": "맥북에서 tkinter 창이 제대로 안 떠. python3 --version 으로 파이썬 버전을 확인하고, 그 버전에 맞는 python-tk 를 brew 로 설치한 다음(예: brew install python-tk@3.12) 계산기를 다시 실행해줘",
-            "desc": "macOS 미실행 시"
+            "desc": "macOS 오류 시"
           }
         ]
       }

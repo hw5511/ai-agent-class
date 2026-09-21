@@ -12,7 +12,6 @@ import { NotesPanel } from "@/components/NotesPanel"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { Kbd } from "@/components/ui/kbd"
 import {
   Sidebar,
   SidebarContent,
@@ -151,11 +150,6 @@ export default function App() {
                 <h3 className="text-sm font-semibold text-foreground">실습</h3>
                 <p className="text-sm leading-6 break-keep text-muted-foreground">{session.practice}</p>
               </div>
-            </section>
-            <Separator />
-            <section className="flex flex-col gap-2 text-xs text-muted-foreground">
-              <div className="flex items-center gap-2"><Kbd>←</Kbd><Kbd>→</Kbd> 슬라이드 이동</div>
-              <div>템플릿 <code className="font-num text-foreground">{cur?.slide.template}</code></div>
             </section>
           </aside>
         </div>

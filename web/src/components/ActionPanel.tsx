@@ -2,18 +2,16 @@ import { useState } from "react"
 import { CheckIcon, CopyIcon, DownloadIcon, LinkIcon } from "lucide-react"
 import type { ActionBox, ActionItem } from "@/content/schema"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 // The action box: what the student does with this slide. Rendered from slide.action only.
 export function ActionPanel({ action }: { action?: ActionBox }) {
   if (!action) return null
   return (
     <section className="flex flex-col gap-3">
-      <span className="text-[11px] font-semibold tracking-[0.08em] text-muted-foreground uppercase">액션</span>
       <Card size="sm" className="ring-slide-accent/30">
         <CardHeader>
           <CardTitle className="text-base">{action.label}</CardTitle>
-          <CardDescription>이 슬라이드에서 바로 쓰는 것</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-2">
           {action.items.map((it, i) => (

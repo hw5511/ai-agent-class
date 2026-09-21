@@ -551,8 +551,7 @@
         "items": [
           {
             "kind": "copy",
-            "value": "/exit",
-            "desc": "방법 1"
+            "value": "/exit"
           }
         ]
       }
