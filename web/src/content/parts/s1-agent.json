@@ -7,17 +7,7 @@
       "id": "s1-agent-01",
       "title": "AI에이전트란?",
       "template": "illustration",
-      "illustration": "AgentFiveStepLoop",
-      "seconds": 14,
-      "props": {
-        "step1Text": "SEE · 보기",
-        "step2Text": "THINK · 판단",
-        "step3Text": "PLAN · 계획",
-        "step4Text": "DO · 실행",
-        "step5Text": "FIX · 수정",
-        "loopText": "목표까지 반복",
-        "badgeText": "AI 에이전트"
-      },
+      "illustration": "/illustrations/agent-loop.svg",
       "notes": [
         {
           "n": 1,

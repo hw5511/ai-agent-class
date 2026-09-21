@@ -4,7 +4,6 @@
 import type { CardsSlide, CompareSlide, FlowSlide, IllustrationSlide, ImageSlide, OverviewSlide, PartCoverSlide, ScreenSlide, Slide, TableSlide } from "@/content/schema"
 import { NumberBadge } from "./NumberBadge"
 import { Mark } from "./Mark"
-import { IllustrationPlayer } from "@/illustrations/IllustrationPlayer"
 import { ScreenView } from "./ScreenView"
 import { cn } from "@/lib/utils"
 
@@ -84,8 +83,20 @@ function TableT({ s }: { s: TableSlide }) {
   )
 }
 
+// A static vector illustration, centred in the body. No animation in the lecture slides (CEO 2026-09-21).
 function IllustrationT({ s }: { s: IllustrationSlide }) {
-  return <IllustrationPlayer id={s.illustration} props={s.props} seconds={s.seconds} />
+  if (!s.illustration.startsWith("/")) {
+    return (
+      <div className="flex h-full items-center justify-center rounded-2xl border-2 border-dashed border-neutral-300 font-display text-[30px] text-[#7c8288]">
+        일러스트 자리 · {s.illustration}
+      </div>
+    )
+  }
+  return (
+    <div className="flex h-full min-h-0 items-center justify-center">
+      <img src={s.illustration} alt={s.title} className="h-full max-h-full w-auto max-w-full object-contain" />
+    </div>
+  )
 }
 
 function OverviewT({ s }: { s: OverviewSlide }) {
