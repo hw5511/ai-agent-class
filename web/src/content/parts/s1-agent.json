@@ -77,44 +77,7 @@
     {
       "id": "s1-agent-03",
       "title": "웹 검색으로 명령어 찾기",
-      "template": "compare",
-      "left": {
-        "label": "검색",
-        "screen": {
-          "kind": "browser",
-          "url": "google.com/search?q=컴퓨터 예약종료 명령어",
-          "results": [
-            {
-              "site": "blog.naver.com",
-              "title": "윈도우 예약종료 명령어 shutdown 사용법 완벽 정리",
-              "snippet": "30분 뒤 예약은 shutdown -s -t 1800 을 입력하세요.",
-              "badge": 1
-            },
-            {
-              "site": "itbeginner.tistory.com",
-              "title": "컴퓨터 자동 종료 예약하는 방법 (cmd 명령어)",
-              "snippet": "취소하려면 shutdown /a 를 입력합니다."
-            }
-          ]
-        }
-      },
-      "right": {
-        "label": "사람이 직접 실행",
-        "screen": {
-          "kind": "terminal",
-          "terminal": {
-            "vendor": "shell",
-            "cwd": "C:\\Users\\student",
-            "turns": [
-              {
-                "role": "user",
-                "text": "shutdown -s -t 1800",
-                "badge": 2
-              }
-            ]
-          }
-        }
-      },
+      "template": "stack",
       "notes": [
         {
           "n": 1,
@@ -126,48 +89,55 @@
           "head": "터미널에 직접 실행",
           "body": "찾은 명령어를 사람이 직접 복사해 붙여넣고 실행한다."
         }
+      ],
+      "frame": "사람이 직접",
+      "items": [
+        {
+          "grow": true,
+          "screen": {
+            "kind": "browser",
+            "url": "google.com/search?q=컴퓨터 예약종료 명령어",
+            "results": [
+              {
+                "site": "blog.naver.com › TechTip",
+                "title": "윈도우 예약종료 명령어 shutdown 사용법 완벽 정리",
+                "snippet": "30분 예약은 shutdown -s -t 1800 을 입력하세요.",
+                "badge": 1
+              },
+              {
+                "site": "itbeginner.tistory.com › windows",
+                "title": "컴퓨터 자동 종료 예약하는 방법 (cmd 명령어)",
+                "snippet": "취소하려면 shutdown /a 를 입력합니다."
+              },
+              {
+                "site": "ko.wikihow.com",
+                "title": "컴퓨터 종료 예약 설정하는 4가지 방법"
+              }
+            ]
+          }
+        },
+        {
+          "screen": {
+            "kind": "terminal",
+            "terminal": {
+              "vendor": "shell",
+              "cwd": "C:\\Users\\student",
+              "turns": [
+                {
+                  "role": "user",
+                  "text": "shutdown -s -t 1800",
+                  "badge": 2
+                }
+              ]
+            }
+          }
+        }
       ]
     },
     {
       "id": "s1-agent-04",
       "title": "AI 채팅 질문 → 직접 실행",
-      "template": "compare",
-      "left": {
-        "label": "AI 채팅",
-        "screen": {
-          "kind": "chat",
-          "app": "ChatGPT",
-          "logo": "/logos/openai.svg",
-          "messages": [
-            {
-              "role": "user",
-              "text": "컴퓨터 30분 뒤에 예약종료하는 명령어 알려줄래?",
-              "badge": 1
-            },
-            {
-              "role": "assistant",
-              "text": "물론이죠! shutdown -s -t 1800 을 명령 프롬프트에 입력하면 30분 후 종료됩니다. 취소는 shutdown -a 예요."
-            }
-          ]
-        }
-      },
-      "right": {
-        "label": "여전히 사람이 실행",
-        "screen": {
-          "kind": "terminal",
-          "terminal": {
-            "vendor": "shell",
-            "cwd": "C:\\Users\\student",
-            "turns": [
-              {
-                "role": "user",
-                "text": "shutdown -s -t 1800",
-                "badge": 2
-              }
-            ]
-          }
-        }
-      },
+      "template": "stack",
       "notes": [
         {
           "n": 1,
@@ -178,6 +148,45 @@
           "n": 2,
           "head": "여전히 사람이 직접 실행",
           "body": "AI 가 알려준 명령어를 사람이 복사해 터미널에 실행한다."
+        }
+      ],
+      "frame": "사람이 직접",
+      "items": [
+        {
+          "grow": true,
+          "screen": {
+            "kind": "chat",
+            "app": "ChatGPT",
+            "logo": "/logos/openai.svg",
+            "messages": [
+              {
+                "role": "user",
+                "text": "컴퓨터 30분 뒤에 예약종료하는 명령어 알려줄래?"
+              },
+              {
+                "role": "assistant",
+                "text": "물론이죠! 아래 명령어를 실행하시면 됩니다.",
+                "code": "shutdown -s -t 1800",
+                "badge": 1
+              }
+            ]
+          }
+        },
+        {
+          "screen": {
+            "kind": "terminal",
+            "terminal": {
+              "vendor": "shell",
+              "cwd": "C:\\Users\\student",
+              "turns": [
+                {
+                  "role": "user",
+                  "text": "shutdown -s -t 1800",
+                  "badge": 2
+                }
+              ]
+            }
+          }
         }
       ]
     },
