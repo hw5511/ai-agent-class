@@ -28,7 +28,7 @@ export function SlideStage({ slide, eyebrow }: { slide: Slide; eyebrow: string }
           {legacy ? (
             <SlideBody slide={slide} />
           ) : (
-            <div className="flex size-full flex-col gap-10 px-[120px] pt-[60px] pb-[64px]">
+            <div className="flex size-full flex-col gap-8 px-[64px] pt-[44px] pb-[40px]">
               <header className="flex flex-col gap-3">
                 <span className="font-term text-[24px] tracking-[0.12em] text-[#7c8288]"><span className="text-slide-accent">● </span>{eyebrow}</span>
                 <h1 className="font-display text-[68px] leading-[1.1] font-bold tracking-[-0.02em] break-keep text-balance text-[#101113]">{slide.title}</h1>

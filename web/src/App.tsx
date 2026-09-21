@@ -148,10 +148,10 @@ export default function App() {
         </header>
 
         <div className="flex min-h-0 flex-1">
-          <div className="min-w-0 flex-1 bg-white p-5">
+          <div className="min-w-0 flex-1 bg-white p-3">
             {cur && <SlideStage slide={cur.slide} eyebrow={`${cur.part.title.toUpperCase()} · ${String(posInPart).padStart(2, "0")}/${String(inPart.length).padStart(2, "0")}`} />}
           </div>
-          <aside className="flex w-[340px] shrink-0 flex-col gap-6 overflow-y-auto border-l bg-background px-5 py-6">
+          <aside className="flex w-[280px] shrink-0 flex-col gap-6 overflow-y-auto border-l bg-background px-4 py-5">
             <ActionPanel action={cur?.slide.action} />
             <section className="flex flex-col gap-4">
               <PanelLabel>회차 정보</PanelLabel>
