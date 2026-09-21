@@ -5,35 +5,39 @@
   "slides": [
     {
       "id": "s2-wrap-01",
-      "template": "table",
+      "template": "cards",
       "title": "오늘 한 것",
-      "columns": [
-        "툴",
-        "한 일"
-      ],
-      "rows": [
+      "cards": [
         {
-          "cells": [
-            "Read",
-            "파일 8개 열람 · 이름 정리"
+          "label": "Read",
+          "logo": "icon:Read",
+          "tags": [
+            "파일 8개 열람",
+            "이름 정리"
           ]
         },
         {
-          "cells": [
-            "Write",
-            "md · svg · html · 계산기 · 테트리스"
+          "label": "Write",
+          "logo": "icon:Write",
+          "tags": [
+            "md·svg·html",
+            "계산기·테트리스"
           ]
         },
         {
-          "cells": [
-            "Edit",
-            "테트리스 개선 · 포스터 색상"
+          "label": "Edit",
+          "logo": "icon:Edit",
+          "tags": [
+            "테트리스 개선",
+            "포스터 색상"
           ]
         },
         {
-          "cells": [
-            "Bash",
-            "앱 실행 · 시스템 조회 · 위젯 · 웹캠"
+          "label": "Bash",
+          "logo": "icon:Bash",
+          "tags": [
+            "앱 실행·시스템 조회",
+            "위젯·웹캠"
           ],
           "highlight": true
         }
@@ -41,9 +45,32 @@
     },
     {
       "id": "s2-wrap-02",
-      "template": "illustration",
+      "template": "flow",
       "title": "에이전트 동작 루프",
-      "illustration": "agent-work-loop",
+      "loop": true,
+      "steps": [
+        {
+          "label": "지시",
+          "sub": "사용자",
+          "logo": "icon:Chat",
+          "badge": 1
+        },
+        {
+          "label": "작성",
+          "sub": "Write·Edit",
+          "logo": "icon:Edit"
+        },
+        {
+          "label": "실행",
+          "sub": "Bash",
+          "logo": "icon:Bash"
+        },
+        {
+          "label": "확인",
+          "sub": "Read",
+          "logo": "icon:Read"
+        }
+      ],
       "notes": [
         {
           "n": 1,
@@ -119,36 +146,24 @@
     },
     {
       "id": "s2-wrap-04",
-      "template": "table",
+      "template": "flow",
       "title": "'질문' 아닌 '지시'",
-      "columns": [
-        "요소",
-        "내용"
-      ],
-      "rows": [
+      "steps": [
         {
-          "cells": [
-            "무엇을 (테트리스)",
-            "만들 대상을 구체적으로"
-          ]
+          "label": "무엇을",
+          "sub": "테트리스"
         },
         {
-          "cells": [
-            "어떤 형태로 (파이썬으로)",
-            "결과물 형태 지정"
-          ]
+          "label": "어떤 형태로",
+          "sub": "파이썬으로"
         },
         {
-          "cells": [
-            "어디에 (현재 폴더에)",
-            "저장 위치 지정"
-          ]
+          "label": "어디에",
+          "sub": "현재 폴더에"
         },
         {
-          "cells": [
-            "그다음 무엇을 (실행까지)",
-            "다음 행동을 이어 지시"
-          ]
+          "label": "그다음 무엇을",
+          "sub": "실행까지"
         }
       ],
       "notes": [
@@ -171,35 +186,37 @@
     },
     {
       "id": "s2-wrap-05",
-      "template": "table",
+      "template": "cards",
       "title": "2회차 마무리",
-      "columns": [
-        "항목",
-        "내용"
-      ],
-      "rows": [
+      "cards": [
         {
-          "cells": [
-            "정체성",
+          "label": "정체성",
+          "logo": "icon:Bot",
+          "tags": [
             "CLAUDE.md 로 이름·역할·말투"
           ]
         },
         {
-          "cells": [
-            "네 툴",
-            "Read·Write·Edit·Bash — 읽기·만들기·고치기·실행"
+          "label": "네 툴",
+          "logo": "icon:Terminal",
+          "tags": [
+            "Read·Write·Edit·Bash",
+            "읽기·만들기·고치기·실행"
           ]
         },
         {
-          "cells": [
-            "실물 확인",
+          "label": "실물 확인",
+          "logo": "icon:Book",
+          "tags": [
             "결과가 파일과 화면으로 남음"
           ]
         },
         {
-          "cells": [
-            "다음 시간",
-            "환경설정 · 권한 모드 · settings.json"
+          "label": "다음 시간",
+          "logo": "icon:Settings",
+          "tags": [
+            "환경설정·권한 모드",
+            "settings.json"
           ],
           "highlight": true
         }

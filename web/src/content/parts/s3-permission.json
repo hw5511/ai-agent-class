@@ -5,14 +5,14 @@
   "slides": [
     {
       "id": "s3-permission-01",
-      "template": "table",
+      "template": "flow",
       "title": "Shift+Tab 모드 순환",
-      "columns": ["모드", "설명"],
-      "rows": [
-        { "cells": ["manual mode", "편집 전 확인"] },
-        { "cells": ["accept edits", "편집 자동, 명령만 확인"], "highlight": true },
-        { "cells": ["plan mode", "조사만, 편집 차단"] },
-        { "cells": ["auto mode", "클로드 판단"] }
+      "loop": true,
+      "steps": [
+        { "label": "manual mode", "sub": "편집 전 확인", "logo": "icon:Lock", "badge": 1 },
+        { "label": "accept edits", "sub": "편집 자동, 명령만 확인", "logo": "icon:Edit" },
+        { "label": "plan mode", "sub": "조사만, 편집 차단", "logo": "icon:Book" },
+        { "label": "auto mode", "sub": "클로드 판단", "logo": "icon:Bot" }
       ],
       "notes": [
         { "n": 1, "head": "Shift+Tab 으로 순환", "body": "manual → accept edits → plan → auto 순서로 바뀐다." },
@@ -294,13 +294,12 @@
     },
     {
       "id": "s3-permission-12",
-      "template": "table",
+      "template": "flow",
       "title": "위쪽 방향키로 재실행",
-      "columns": ["단계", "키"],
-      "rows": [
-        { "cells": ["1. 세션 종료", "/exit 또는 Ctrl+C ×2"] },
-        { "cells": ["2. 위쪽 방향키", "↑"] },
-        { "cells": ["3. 엔터로 재실행", "Enter"], "highlight": true }
+      "steps": [
+        { "label": "세션 종료", "sub": "/exit 또는 Ctrl+C ×2", "logo": "icon:Terminal" },
+        { "label": "위쪽 방향키", "sub": "↑", "logo": "icon:Keyboard", "badge": 1 },
+        { "label": "엔터로 재실행", "sub": "Enter", "logo": "icon:Click", "badge": 2 }
       ],
       "notes": [
         { "n": 1, "head": "위쪽 방향키", "body": "종료한 뒤 새 claude 세션에서 위쪽 방향키를 누르면 직전 명령이 그대로 올라온다." },

@@ -5,38 +5,30 @@
   "slides": [
     {
       "id": "s2-claudemd-01",
-      "template": "table",
+      "template": "screen",
       "title": "CLAUDE.md 상시 지시서",
-      "columns": [
-        "항목",
-        "값"
-      ],
-      "rows": [
-        {
-          "cells": [
-            "이름",
-            "'ㅇㅇ'"
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          { "name": ".claude", "folder": true, "active": true },
+          { "name": "CLAUDE.md", "depth": 1, "badge": 2 }
+        ],
+        "editor": {
+          "file": "CLAUDE.md",
+          "lines": [
+            "이름: 'ㅇㅇ'",
+            "역할: 'ai 에이전트 수업 도우미'",
+            "말투: '~용용'",
+            "규칙: '답변은 짧게'"
           ]
         },
-        {
-          "cells": [
-            "역할",
-            "'ai 에이전트 수업 도우미'"
-          ]
-        },
-        {
-          "cells": [
-            "말투",
-            "'~용용'"
-          ]
-        },
-        {
-          "cells": [
-            "규칙",
-            "'답변은 짧게'"
-          ]
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\agent1",
+          "turns": []
         }
-      ],
+      },
       "notes": [
         {
           "n": 1,
@@ -175,36 +167,28 @@
     },
     {
       "id": "s2-claudemd-04",
-      "template": "table",
+      "template": "cards",
       "title": "이름·역할·말투·규칙 네 가지",
-      "columns": [
-        "항목",
-        "예시"
-      ],
-      "rows": [
+      "cards": [
         {
-          "cells": [
-            "이름",
-            "'ㅇㅇ' 처럼 부를 이름 하나"
-          ]
+          "label": "이름",
+          "logo": "icon:Bot",
+          "tags": ["'ㅇㅇ' 처럼 부를 이름 하나"]
         },
         {
-          "cells": [
-            "역할",
-            "'ai 에이전트 수업 도우미'"
-          ]
+          "label": "역할",
+          "logo": "icon:Book",
+          "tags": ["'ai 에이전트 수업 도우미'"]
         },
         {
-          "cells": [
-            "말투",
-            "문장 끝마다 '~요' 를 '~용용' 으로"
-          ]
+          "label": "말투",
+          "logo": "icon:Chat",
+          "tags": ["문장 끝 '~요' → '~용용'"]
         },
         {
-          "cells": [
-            "하지 말 것",
-            "모르면 추측하지 말고 되묻기"
-          ]
+          "label": "하지 말 것",
+          "logo": "icon:Shield",
+          "tags": ["모르면 추측하지 말고 되묻기"]
         }
       ],
       "notes": [
@@ -595,32 +579,12 @@
     },
     {
       "id": "s2-claudemd-12",
-      "template": "table",
+      "template": "flow",
       "title": "CLAUDE.md 정리",
-      "columns": [
-        "단계",
-        "내용"
-      ],
-      "rows": [
-        {
-          "cells": [
-            "작성",
-            "agent1/.claude/CLAUDE.md 에 이름·역할·말투를 적었다"
-          ]
-        },
-        {
-          "cells": [
-            "로드",
-            "세션이 시작될 때 자동으로 읽혔다"
-          ]
-        },
-        {
-          "cells": [
-            "반영",
-            "/clear 로 새 대화방을 열자 답변이 바뀌었다"
-          ],
-          "highlight": true
-        }
+      "steps": [
+        { "label": "작성", "sub": "agent1/.claude/CLAUDE.md", "logo": "icon:Edit" },
+        { "label": "로드", "sub": "세션 시작 시 자동", "logo": "icon:Zap" },
+        { "label": "반영", "sub": "/clear 로 새 대화", "logo": "icon:Chat" }
       ],
       "notes": [
         {

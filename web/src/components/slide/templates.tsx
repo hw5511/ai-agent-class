@@ -150,7 +150,7 @@ function CardsT({ s }: { s: CardsSlide }) {
           {c.badge ? <span className="absolute top-5 right-5 z-10"><NumberBadge n={c.badge} /></span> : null}
           {c.logo && (
             <div className={cn("flex shrink-0 items-center justify-center px-8", withImages ? "h-28" : "flex-1")}>
-              <Mark src={c.logo} className={cn("max-w-full", withImages ? "h-14" : "h-32")} />
+              <Mark src={c.logo} px={withImages ? 56 : 128} />
             </div>
           )}
           {c.image && (
@@ -183,7 +183,7 @@ function FlowT({ s }: { s: FlowSlide }) {
           <div key={i} className="flex flex-1 items-center">
             <div className="relative flex min-h-[220px] flex-1 flex-col items-center justify-center gap-4 rounded-3xl border-2 border-neutral-200 bg-white px-6 py-8 text-center">
               {st.badge ? <span className="absolute -top-5"><NumberBadge n={st.badge} /></span> : null}
-              {st.logo && <Mark src={st.logo} className="h-14" />}
+              {st.logo && <Mark src={st.logo} px={72} />}
               <span className="font-display text-[40px] font-bold text-[#101113] break-keep">{st.label}</span>
               {st.sub && <span className="font-body text-[22px] text-[#7c8288] break-keep">{st.sub}</span>}
             </div>

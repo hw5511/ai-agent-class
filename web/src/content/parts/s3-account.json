@@ -113,9 +113,22 @@
     },
     {
       "id": "s3-account-07",
-      "template": "illustration",
+      "template": "cards",
       "title": "5시간 창 · 주간 한도",
-      "illustration": "usage-window-weekly-cap",
+      "cards": [
+        {
+          "label": "5시간 창",
+          "logo": "icon:Zap",
+          "tags": ["사용 시작 → 창 열림", "5시간 후 자동 초기화"],
+          "badge": 1
+        },
+        {
+          "label": "주간 한도",
+          "logo": "icon:Cpu",
+          "tags": ["7일 합계 상한", "5시간 창과는 별도"],
+          "badge": 2
+        }
+      ],
       "notes": [
         { "n": 1, "head": "5시간 창", "body": "사용을 시작하면 창이 열리고, 일정 시간이 지나면 그 창이 초기화된다." },
         { "n": 2, "head": "주간 한도", "body": "5시간 창과는 별도로, 한 주 동안 쓸 수 있는 총량에도 상한이 있다." },

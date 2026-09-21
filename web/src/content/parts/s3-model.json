@@ -37,14 +37,13 @@
     },
     {
       "id": "s3-model-02",
-      "template": "table",
+      "template": "cards",
       "title": "haiku → sonnet → opus → fable",
-      "columns": ["모델", "방향"],
-      "rows": [
-        { "cells": ["Haiku 4.5", "빠르고 저렴 — 구독 사용량을 덜 쓴다"] },
-        { "cells": ["Sonnet 5", "빠르고 저렴 ↔ 똑똑함 사이"] },
-        { "cells": ["Opus 5", "더 똑똑함 ↔ 빠르고 저렴 사이"] },
-        { "cells": ["Fable 5", "더 똑똑함 — 구독 사용량을 더 쓴다"] }
+      "cards": [
+        { "label": "Haiku 4.5", "logo": "/logos/claude.svg", "tags": ["빠르고 저렴", "사용량 덜 쓴다"] },
+        { "label": "Sonnet 5", "logo": "/logos/claude.svg", "tags": ["빠름 ↔ 똑똑함 사이"] },
+        { "label": "Opus 5", "logo": "/logos/claude.svg", "tags": ["똑똑함 ↔ 빠름 사이"] },
+        { "label": "Fable 5", "logo": "/logos/claude.svg", "tags": ["더 똑똑함", "사용량 더 쓴다"], "highlight": true }
       ],
       "notes": [
         { "n": 1, "head": "왼쪽 = 빠르고 저렴", "body": "성능은 상대적으로 낮지만 응답이 빠르고, 같은 시간에 구독 사용량을 덜 쓴다." },

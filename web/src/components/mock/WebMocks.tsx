@@ -68,9 +68,9 @@ export function BrowserMock({ s }: { s: BrowserScreen }) {
       )}
       {s.page && (
         <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-6 px-12">
-          <span className="font-display text-[48px] font-bold text-[#101113] break-keep text-balance text-center">{s.page.heading}</span>
-          {s.page.lines?.map((l, i) => <span key={i} className="font-body text-[24px] text-[#43474b] break-keep">{l}</span>)}
-          {s.page.button && <span className="rounded-full bg-slide-accent px-10 py-4 font-display text-[26px] font-bold text-white">{s.page.button}</span>}
+          <span className="font-display text-[64px] font-bold text-[#101113] break-keep text-balance text-center">{s.page.heading}</span>
+          {s.page.lines?.map((l, i) => <span key={i} className="font-body text-[30px] text-[#43474b] break-keep">{l}</span>)}
+          {s.page.button && <span className="rounded-full bg-slide-accent px-12 py-5 font-display text-[32px] font-bold text-white">{s.page.button}</span>}
         </div>
       )}
     </Window>

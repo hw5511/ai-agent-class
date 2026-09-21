@@ -5,28 +5,26 @@
   "slides": [
     {
       "id": "s2-edit-01",
-      "template": "table",
+      "template": "flow",
       "title": "Write와 Edit 차이",
-      "columns": [
-        "툴",
-        "범위",
-        "파일 조건"
-      ],
-      "rows": [
+      "steps": [
         {
-          "cells": [
-            "Write",
-            "통째로 새로 쓰기",
-            "없어도 됨"
-          ]
+          "label": "파일 읽기",
+          "sub": "지금 내용 확인",
+          "logo": "icon:Read",
+          "badge": 1
         },
         {
-          "cells": [
-            "Edit",
-            "필요한 부분만",
-            "있어야 함"
-          ],
-          "highlight": true
+          "label": "고칠 부분 찾기",
+          "sub": "바뀔 곳만 짚기",
+          "logo": "icon:Search",
+          "badge": 2
+        },
+        {
+          "label": "그 부분만 교체",
+          "sub": "나머지는 그대로",
+          "logo": "icon:Edit",
+          "badge": 3
         }
       ],
       "notes": [
@@ -49,30 +47,24 @@
     },
     {
       "id": "s2-edit-02",
-      "template": "table",
+      "template": "flow",
       "title": "만들고 보고 고치기 반복",
-      "columns": [
-        "단계",
-        "내용"
-      ],
-      "rows": [
+      "loop": true,
+      "steps": [
         {
-          "cells": [
-            "1. 만들고",
-            "Write 로 처음 결과물을 만든다."
-          ]
+          "label": "만들고",
+          "sub": "Write",
+          "logo": "icon:Write"
         },
         {
-          "cells": [
-            "2. 보고",
-            "결과를 직접 확인한다."
-          ]
+          "label": "보고",
+          "sub": "결과 확인",
+          "logo": "icon:Search"
         },
         {
-          "cells": [
-            "3. 고치고",
-            "Edit 로 필요한 부분만 다듬는다."
-          ]
+          "label": "고치고",
+          "sub": "Edit",
+          "logo": "icon:Edit"
         }
       ],
       "notes": [
@@ -217,34 +209,27 @@
     },
     {
       "id": "s2-edit-05",
-      "template": "table",
+      "template": "cards",
       "title": "테트리스 개선 전후",
-      "columns": [
-        "항목",
-        "이전",
-        "이후"
-      ],
-      "rows": [
+      "cards": [
         {
-          "cells": [
-            "시작 버튼",
-            "없음",
-            "있음"
-          ]
-        },
-        {
-          "cells": [
-            "블록",
+          "label": "이전",
+          "tags": [
+            "시작 버튼 없음",
             "밋밋한 사각형",
-            "입체적"
-          ]
+            "작은 화면"
+          ],
+          "badge": 1
         },
         {
-          "cells": [
-            "화면 크기",
-            "작음",
-            "커짐"
-          ]
+          "label": "이후",
+          "tags": [
+            "시작 버튼 있음",
+            "입체 블록",
+            "커진 화면"
+          ],
+          "badge": 2,
+          "highlight": true
         }
       ],
       "notes": [
@@ -302,35 +287,36 @@
     },
     {
       "id": "s2-edit-07",
-      "template": "table",
+      "template": "cards",
       "title": "Edit 툴 정리",
-      "columns": [
-        "#",
-        "정리"
-      ],
-      "rows": [
+      "cards": [
         {
-          "cells": [
-            "1",
-            "Write 는 새로 만들기, Edit 는 있는 것 고치기"
+          "label": "Write vs Edit",
+          "logo": "icon:Write",
+          "tags": [
+            "새로 만들기",
+            "있는 것 고치기"
           ]
         },
         {
-          "cells": [
-            "2",
-            "고칠 부분만 바뀌고 나머지는 그대로"
+          "label": "부분만 변경",
+          "logo": "icon:Edit",
+          "tags": [
+            "나머지는 그대로"
           ]
         },
         {
-          "cells": [
-            "3",
-            "만들고 → 보고 → 고치고 반복"
+          "label": "반복",
+          "logo": "icon:Search",
+          "tags": [
+            "만들고 → 보고 → 고치고"
           ]
         },
         {
-          "cells": [
-            "4",
-            "코드 몰라도 말로 수정 가능"
+          "label": "말로 수정",
+          "logo": "icon:Chat",
+          "tags": [
+            "코드 몰라도 가능"
           ]
         }
       ],

@@ -10,10 +10,10 @@ const ICONS = {
 } as const
 export const ICON_NAMES = Object.keys(ICONS)
 
-export function Mark({ src, className }: { src: string; className?: string }) {
+export function Mark({ src, px, className }: { src: string; px: number; className?: string }) {
   if (src.startsWith("icon:")) {
     const Icon = ICONS[src.slice(5) as keyof typeof ICONS] ?? BotIcon
-    return <Icon className={cn("text-slide-accent", className)} strokeWidth={1.6} />
+    return <Icon width={px} height={px} className={cn("shrink-0 text-slide-accent", className)} strokeWidth={1.6} />
   }
-  return <img src={src} alt="" className={cn("w-auto object-contain", className)} />
+  return <img src={src} alt="" style={{ height: px }} className={cn("w-auto max-w-full object-contain", className)} />
 }

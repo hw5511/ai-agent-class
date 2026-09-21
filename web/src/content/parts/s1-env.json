@@ -34,9 +34,17 @@
     },
     {
       "id": "s1-env-02",
-      "template": "illustration",
+      "template": "screen",
       "title": "VS Code 설치",
-      "illustration": "vscode-download-page",
+      "screen": {
+        "kind": "browser",
+        "url": "code.visualstudio.com/download",
+        "page": {
+          "heading": "Visual Studio Code",
+          "lines": ["macOS · Linux 버전도 같은 페이지에서 받을 수 있다"],
+          "button": "Download for Windows"
+        }
+      },
       "notes": [
         { "n": 1, "head": "VS Code 소개", "body": "코드 편집기이지만 비개발자도 생성된 파일 확인·수정·폴더 관리에 활용한다." },
         { "n": 2, "head": "code.visualstudio.com 접속", "body": "Download for Windows 클릭 후 설치 파일을 실행한다." },
@@ -94,14 +102,13 @@
     },
     {
       "id": "s1-env-04",
-      "template": "table",
+      "template": "flow",
       "title": "실습 폴더 에이전트1",
-      "columns": ["단계", "동작"],
-      "rows": [
-        { "cells": ["1", "새 폴더 만들기 — 이름: 에이전트1"], "highlight": true },
-        { "cells": ["2", "VS Code 실행"] },
-        { "cells": ["3", "File > Open Folder"] },
-        { "cells": ["4", "에이전트1 폴더 선택"] }
+      "steps": [
+        { "label": "새 폴더 만들기", "sub": "이름: 에이전트1", "logo": "icon:Folder", "badge": 1 },
+        { "label": "VS Code 실행", "logo": "/logos/visualstudiocode.svg" },
+        { "label": "Open Folder", "sub": "File > Open Folder", "logo": "icon:Click", "badge": 2 },
+        { "label": "폴더 선택", "sub": "에이전트1", "logo": "icon:Folder", "badge": 3 }
       ],
       "notes": [
         { "n": 1, "head": "새 폴더 만들기", "body": "이름은 '에이전트1'. Windows는 C:\\Users\\student\\에이전트1, macOS는 ~/에이전트1 예시." },

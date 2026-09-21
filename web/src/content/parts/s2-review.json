@@ -78,9 +78,12 @@
     },
     {
       "id": "s2-review-03",
-      "template": "illustration",
+      "template": "flow",
       "title": "agent1 폴더 만들기",
-      "illustration": "new-folder-desktop-menu",
+      "steps": [
+        { "label": "새로 만들기 → 폴더", "sub": "빈 곳에서 우클릭", "logo": "icon:Folder", "badge": 1 },
+        { "label": "이름 입력", "sub": "agent1", "logo": "icon:Keyboard", "badge": 2 }
+      ],
       "notes": [
         {
           "n": 1,
@@ -105,9 +108,12 @@
     },
     {
       "id": "s2-review-04",
-      "template": "illustration",
+      "template": "flow",
       "title": "작업 폴더 열기",
-      "illustration": "vscode-open-folder-dialog",
+      "steps": [
+        { "label": "Open Folder", "sub": "File > Open Folder", "logo": "/logos/visualstudiocode.svg", "badge": 1 },
+        { "label": "agent1 선택", "sub": "폴더 선택", "logo": "icon:Folder", "badge": 2 }
+      ],
       "notes": [
         {
           "n": 1,
@@ -123,9 +129,19 @@
     },
     {
       "id": "s2-review-05",
-      "template": "illustration",
+      "template": "screen",
       "title": "Ctrl+J 로 터미널 열기",
-      "illustration": "vscode-close-chat-ctrl-j",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": { "placeholder": "터미널이 열렸습니다", "badge": 2 }
+        }
+      },
       "notes": [
         {
           "n": 1,
@@ -137,13 +153,23 @@
           "head": "Ctrl + J 로 터미널 열기",
           "body": "이 단축키를 누르면 하단에 터미널 패널이 열린다."
         }
-      ]
+      ],
+      "action": {
+        "label": "터미널 열기 단축키",
+        "items": [
+          { "kind": "copy", "value": "Ctrl + J", "desc": "Windows" },
+          { "kind": "copy", "value": "Cmd + J", "desc": "macOS" }
+        ]
+      }
     },
     {
       "id": "s2-review-06",
-      "template": "illustration",
+      "template": "flow",
       "title": "터미널 패널 오른쪽 배치",
-      "illustration": "terminal-panel-position-menu",
+      "steps": [
+        { "label": "터미널 탭 우클릭", "logo": "icon:Terminal", "badge": 1 },
+        { "label": "패널 위치 → 오른쪽", "logo": "icon:Settings", "badge": 2 }
+      ],
       "notes": [
         {
           "n": 1,
@@ -323,9 +349,16 @@
     },
     {
       "id": "s2-review-11",
-      "template": "illustration",
+      "template": "screen",
       "title": "브라우저에서 계정 선택",
-      "illustration": "google-account-picker",
+      "screen": {
+        "kind": "browser",
+        "url": "accounts.google.com/signin/choose",
+        "results": [
+          { "site": "Google 계정 선택", "title": "내 계정 (name@gmail.com)", "badge": 1 },
+          { "site": "다른 계정 사용", "title": "수업용 계정은 선택하지 않는다" }
+        ]
+      },
       "notes": [
         {
           "n": 1,

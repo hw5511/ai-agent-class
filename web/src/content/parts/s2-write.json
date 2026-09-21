@@ -5,22 +5,20 @@
   "slides": [
     {
       "id": "s2-write-01",
-      "template": "table",
+      "template": "cards",
       "title": "Write 툴",
-      "columns": [
-        "구분",
-        "의미"
-      ],
-      "rows": [
+      "cards": [
         {
-          "cells": [
-            "Read",
+          "label": "Read",
+          "logo": "icon:Read",
+          "tags": [
             "파일 열람·확인"
           ]
         },
         {
-          "cells": [
-            "Write",
+          "label": "Write",
+          "logo": "icon:Write",
+          "tags": [
             "새 파일 생성"
           ],
           "highlight": true
@@ -229,26 +227,21 @@
     },
     {
       "id": "s2-write-05",
-      "template": "table",
+      "template": "cards",
       "title": "SVG 벡터 그림",
-      "columns": [
-        "구분",
-        "표현 방식",
-        "확대 시"
-      ],
-      "rows": [
+      "cards": [
         {
-          "cells": [
-            "사진 (jpg·png)",
+          "label": "사진 (jpg·png)",
+          "tags": [
             "점(픽셀)을 촘촘히 찍음",
-            "흐려지고 깨짐"
+            "확대하면 흐려짐"
           ]
         },
         {
-          "cells": [
-            "벡터 그림 (svg)",
+          "label": "벡터 그림 (svg)",
+          "tags": [
             "좌표와 도형 코드",
-            "안 깨짐"
+            "확대해도 안 깨짐"
           ],
           "highlight": true
         }
@@ -551,24 +544,24 @@
     },
     {
       "id": "s2-write-11",
-      "template": "table",
+      "template": "cards",
       "title": "이번엔 프로그램",
-      "columns": [
-        "구분",
-        "내용"
-      ],
-      "rows": [
+      "cards": [
         {
-          "cells": [
-            "지금까지",
-            "문서(md) · 그림(svg) · 웹페이지(html)"
-          ]
+          "label": "Python",
+          "logo": "/logos/python.svg",
+          "tags": [
+            "프로그래밍 언어"
+          ],
+          "badge": 1
         },
         {
-          "cells": [
-            "이번엔",
-            "눌러서 실행하는 프로그램"
+          "label": "tkinter",
+          "logo": "icon:Settings",
+          "tags": [
+            "창이 뜨는 프로그램 도구"
           ],
+          "badge": 2,
           "highlight": true
         }
       ],

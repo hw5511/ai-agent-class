@@ -33,14 +33,30 @@
     },
     {
       "id": "s3-settings-02",
-      "template": "table",
+      "template": "cards",
       "title": "주요 설정 항목",
-      "columns": ["키", "예시"],
-      "rows": [
-        { "cells": ["permissions", "\"deny\": [\"Bash(rm:*)\"]"], "highlight": true },
-        { "cells": ["model", "\"model\": \"claude-sonnet-5\""] },
-        { "cells": ["env", "\"env\": { \"MY_VAR\": \"value\" }"] },
-        { "cells": ["hooks", "\"hooks\": { \"PreToolUse\": [...] }"] }
+      "cards": [
+        {
+          "label": "permissions",
+          "logo": "icon:Shield",
+          "tags": ["allow / deny / ask", "\"deny\": [\"Bash(rm:*)\"]"],
+          "highlight": true
+        },
+        {
+          "label": "model",
+          "logo": "icon:Cpu",
+          "tags": ["세션 기본 모델", "\"model\": \"claude-sonnet-5\""]
+        },
+        {
+          "label": "env",
+          "logo": "icon:Settings",
+          "tags": ["환경변수 전달", "\"env\": { \"MY_VAR\": \"value\" }"]
+        },
+        {
+          "label": "hooks",
+          "logo": "icon:Zap",
+          "tags": ["도구 전후 실행", "\"hooks\": { \"PreToolUse\": [...] }"]
+        }
       ],
       "notes": [
         { "n": 1, "head": "permissions", "body": "allow / deny / ask 세 목록으로 도구 실행 허용 여부를 정한다." },
@@ -219,13 +235,25 @@
     },
     {
       "id": "s3-settings-08",
-      "template": "table",
+      "template": "cards",
       "title": "settings.json 이 생기는 다른 길",
-      "columns": ["경로", "실제 흔적"],
-      "rows": [
-        { "cells": ["플러그인 설치", "enabledPlugins"] },
-        { "cells": ["권한 프롬프트 \"항상 허용\"", "settings.local.json"] },
-        { "cells": ["MCP 서버 (예외)", ".mcp.json"], "highlight": true }
+      "cards": [
+        {
+          "label": "플러그인 설치",
+          "logo": "icon:Zap",
+          "tags": ["enabledPlugins"]
+        },
+        {
+          "label": "권한 프롬프트 \"항상 허용\"",
+          "logo": "icon:Shield",
+          "tags": ["settings.local.json"]
+        },
+        {
+          "label": "MCP 서버 (예외)",
+          "logo": "icon:Globe",
+          "tags": [".mcp.json"],
+          "highlight": true
+        }
       ],
       "notes": [
         { "n": 1, "head": "플러그인 설치", "body": "플러그인을 설치하면 settings.json 에 활성화 목록이 추가·갱신된다." },

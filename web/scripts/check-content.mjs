@@ -76,7 +76,7 @@ for (const f of files) {
     }
     for (const c of s.cards ?? []) {
       if (c.badge) badges.push(c.badge)
-      for (const src of [c.logo, c.image]) if (src && !existsSync(join(root, "public", src))) err(w, `missing ${src}`)
+      for (const src of [c.logo, c.image]) if (src && !src.startsWith("icon:") && !existsSync(join(root, "public", src))) err(w, `missing ${src}`)
     }
     for (const st of s.steps ?? []) if (st.badge) badges.push(st.badge)
     const notes = s.notes ?? []

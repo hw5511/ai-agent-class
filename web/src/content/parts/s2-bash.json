@@ -5,14 +5,13 @@
   "slides": [
     {
       "id": "s2-bash-01",
-      "template": "table",
+      "template": "cards",
       "title": "터미널 명령어 실행 도구",
-      "columns": ["코드", "기능", "설명"],
-      "rows": [
-        { "cells": ["FILE", "파일·폴더", "폴더 생성, 파일 복사·이름 변경"] },
-        { "cells": ["RUN", "프로그램 실행", "설치된 프로그램 실행"] },
-        { "cells": ["INSTALL", "프로그램 설치", "설치 후 바로 실행"] },
-        { "cells": ["CHECK", "시스템 조회", "사양·상태 확인"] }
+      "cards": [
+        { "label": "FILE", "logo": "icon:Folder", "tags": ["파일·폴더", "생성·복사·이름 변경"] },
+        { "label": "RUN", "logo": "icon:Terminal", "tags": ["프로그램 실행", "설치된 프로그램"] },
+        { "label": "INSTALL", "logo": "icon:Settings", "tags": ["프로그램 설치", "설치 후 바로 실행"] },
+        { "label": "CHECK", "logo": "icon:Search", "tags": ["시스템 조회", "사양·상태 확인"] }
       ],
       "notes": [
         { "n": 1, "head": "터미널 명령어를 Claude가 대신 씀", "body": "1회차에 손으로 치던 터미널 명령어를, 이제 Claude가 대신 친다." },
@@ -21,14 +20,13 @@
     },
     {
       "id": "s2-bash-02",
-      "template": "table",
+      "template": "cards",
       "title": "컴퓨터 자체를 다루는 툴",
-      "columns": ["툴", "설명"],
-      "rows": [
-        { "cells": ["Read", "파일을 열어 읽음"] },
-        { "cells": ["Write", "새 파일을 만듦"] },
-        { "cells": ["Edit", "파일 내용을 고침"] },
-        { "cells": ["Bash", "컴퓨터 자체를 설치·실행·조회"], "highlight": true }
+      "cards": [
+        { "label": "Read", "logo": "icon:Read", "tags": ["파일을 열어 읽음"] },
+        { "label": "Write", "logo": "icon:Write", "tags": ["새 파일을 만듦"] },
+        { "label": "Edit", "logo": "icon:Edit", "tags": ["파일 내용을 고침"] },
+        { "label": "Bash", "logo": "icon:Bash", "tags": ["컴퓨터 자체를 설치·실행·조회"], "highlight": true }
       ],
       "notes": [
         { "n": 1, "head": "파일 안 vs 컴퓨터 자체", "body": "Read·Write·Edit는 파일 안에서 일어나는 일이고, Bash는 컴퓨터 자체를 다룬다." },
@@ -233,14 +231,13 @@
     },
     {
       "id": "s2-bash-08",
-      "template": "table",
+      "template": "cards",
       "title": "바탕화면 위젯 만들기",
-      "columns": ["요소", "내용"],
-      "rows": [
-        { "cells": ["캐릭터 디자인", "SVG로 그린 슬라임 모양"] },
-        { "cells": ["표시 위치", "바탕화면에 항상 떠 있음"] },
-        { "cells": ["동작", "마우스로 집고 놓으면 중력 적용"] },
-        { "cells": ["종료", "우클릭 또는 트레이 메뉴"] }
+      "cards": [
+        { "label": "캐릭터 디자인", "logo": "icon:Zap", "tags": ["SVG로 그린 슬라임 모양"] },
+        { "label": "표시 위치", "logo": "icon:Folder", "tags": ["바탕화면에 항상 떠 있음"] },
+        { "label": "동작", "logo": "icon:Click", "tags": ["마우스로 집고", "놓으면 중력 적용"] },
+        { "label": "종료", "logo": "icon:Lock", "tags": ["우클릭 또는 트레이 메뉴"] }
       ],
       "notes": [
         { "n": "!", "head": "한 줄에 다 담긴 요청", "body": "요청 하나가 디자인·코딩·실행까지 전부를 담고 있다." }
@@ -364,14 +361,13 @@
     },
     {
       "id": "s2-bash-12",
-      "template": "table",
+      "template": "cards",
       "title": "네 가지 툴의 조합",
-      "columns": ["툴", "하는 일"],
-      "rows": [
-        { "cells": ["READ", "파일 안의 내용을 직접 열어봄"] },
-        { "cells": ["WRITE", "새 파일을 만들어냄"] },
-        { "cells": ["EDIT", "기존 파일 내용을 바꿔 넣음"] },
-        { "cells": ["BASH", "컴퓨터에서 명령을 실행함"], "highlight": true }
+      "cards": [
+        { "label": "READ", "logo": "icon:Read", "tags": ["파일 안의 내용을 직접 열어봄"] },
+        { "label": "WRITE", "logo": "icon:Write", "tags": ["새 파일을 만들어냄"] },
+        { "label": "EDIT", "logo": "icon:Edit", "tags": ["기존 파일 내용을 바꿔 넣음"] },
+        { "label": "BASH", "logo": "icon:Bash", "tags": ["컴퓨터에서 명령을 실행함"], "highlight": true }
       ],
       "notes": [
         { "n": 1, "head": "한 작업에 네 툴 모두", "body": "예 — 먼저 읽고 새로 만들고 고치고 실행까지 이어질 수 있다." },
@@ -397,14 +393,13 @@
     },
     {
       "id": "s2-bash-14",
-      "template": "table",
+      "template": "cards",
       "title": "Bash 툴 정리",
-      "columns": ["항목", "설명"],
-      "rows": [
-        { "cells": ["명령 실행", "터미널 명령어를 AI가 대신 씀"] },
-        { "cells": ["컴퓨터 전체", "파일 안이 아니라 컴퓨터 자체를 다룸"] },
-        { "cells": ["설치·실행·조회", "새 프로그램 설치부터 시스템 조회까지"] },
-        { "cells": ["툴 연결", "다른 툴과 이어져 하나의 일을 해냄"] }
+      "cards": [
+        { "label": "명령 실행", "logo": "icon:Terminal", "tags": ["터미널 명령어를 AI가 대신 씀"] },
+        { "label": "컴퓨터 전체", "logo": "icon:Cpu", "tags": ["파일 안이 아니라 컴퓨터 자체를 다룸"] },
+        { "label": "설치·실행·조회", "logo": "icon:Settings", "tags": ["새 프로그램 설치부터 시스템 조회까지"] },
+        { "label": "툴 연결", "logo": "icon:Zap", "tags": ["다른 툴과 이어져 하나의 일을 해냄"], "highlight": true }
       ],
       "notes": [
         { "n": "!", "head": "가장 강력한 툴", "body": "컴퓨터를 직접 다루는 힘 — 오늘 배운 것 중 가장 강력한 툴이다." }
