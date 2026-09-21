@@ -26,6 +26,7 @@ function badgesOfScreen(s, out) {
     walk(s.menu?.items)
     for (const b of [s.dialog?.badge, s.chatPanel?.closeBadge, s.keycap?.badge, s.terminalTabBadge, s.activityBadge, s.explorerAction?.badge, s.extensions?.queryBadge]) if (b) out.push(b)
     for (const x of s.extensions?.items ?? []) if (x.badge) out.push(x.badge)
+    for (const b of s.toast?.buttons ?? []) if (b.badge) out.push(b.badge)
   }
   for (const m of s.messages ?? []) if (m.badge) out.push(m.badge)
   for (const r of s.results ?? []) if (r.badge) out.push(r.badge)

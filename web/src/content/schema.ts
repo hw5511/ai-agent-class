@@ -195,7 +195,13 @@ export interface VSCodeScreen {
   dialog?: { title: string; path?: string; folders: { name: string; selected?: boolean }[]; button: string; badge?: number } // folder picker
   sidebar?: "explorer" | "extensions"
   activityBadge?: number // badge on the extensions icon in the activity bar
-  extensions?: { query: string; queryBadge?: number; items: { name: string; publisher: string; desc: string; badge?: number }[] }
+  extensions?: {
+    query: string
+    queryBadge?: number
+    items: { name: string; publisher: string; desc: string; icon?: "pdf"; installs?: string; badge?: number }[]
+  }
+  editorNotice?: { file: string; text: string } // editor tab that cannot show the file (a PDF without the extension)
+  toast?: { text: string; buttons: { label: string; primary?: boolean; badge?: number }[] } // bottom-right notification
   explorerAction?: { icon: "newFile" | "newFolder"; badge?: number } // the icons on the explorer header
   keycap?: { keys: string[]; badge?: number } // a shortcut drawn over the window, e.g. ["Ctrl", "J"]
 }

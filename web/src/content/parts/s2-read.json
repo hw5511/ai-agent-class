@@ -145,39 +145,26 @@
     },
     {
       "id": "s2-read-04",
-      "template": "screen",
+      "template": "illustration",
       "title": "압축 풀기",
-      "screen": {
-        "kind": "vscode",
-        "folder": "agent1",
-        "files": [
-          {
-            "name": "practice_files",
-            "folder": true,
-            "badge": 1
-          },
-          {
-            "name": "read_practice.zip"
-          }
-        ],
-        "terminal": {
-          "vendor": "shell",
-          "cwd": "C:\\agent1",
-          "turns": []
-        }
-      },
       "notes": [
         {
           "n": 1,
-          "head": "Windows: 우클릭 → 압축 풀기",
-          "body": "read_practice.zip 우클릭 후 '압축 풀기'(또는 '모두 압축 해제')."
+          "head": "zip 파일 우클릭 → 모두 압축 풀기",
+          "body": "파일 탐색기에서 agent1 폴더를 열고 read_practice.zip 을 우클릭한다."
+        },
+        {
+          "n": 2,
+          "head": "practice_files 폴더가 생김",
+          "body": "같은 자리에 압축이 풀린 폴더가 나타난다."
         },
         {
           "n": "!",
-          "head": "macOS: 더블클릭 한 번",
-          "body": "더블클릭하면 자동으로 압축이 풀린다 — 별도 메뉴 없음."
+          "head": "macOS 는 더블클릭",
+          "body": "zip 파일을 더블클릭하면 바로 풀린다."
         }
-      ]
+      ],
+      "illustration": "/illustrations/explorer-unzip.svg"
     },
     {
       "id": "s2-read-05",
@@ -321,7 +308,7 @@
     {
       "id": "s2-read-07",
       "template": "screen",
-      "title": "PDF 확장 설치 안내",
+      "title": "PDF 확장 설치 알림",
       "screen": {
         "kind": "vscode",
         "folder": "agent1",
@@ -369,40 +356,58 @@
           "vendor": "shell",
           "cwd": "C:\\agent1",
           "turns": []
+        },
+        "noTerminal": true,
+        "editorNotice": {
+          "file": "report_final_v2.pdf",
+          "text": "이 파일은 이진 파일이거나 지원되지 않는 텍스트 인코딩을 사용하므로 편집기에 표시되지 않습니다."
+        },
+        "toast": {
+          "text": "report_final_v2.pdf에 권장되는 'vscode-pdf' 확장을 설치하시겠습니까?",
+          "buttons": [
+            {
+              "label": "설치",
+              "primary": true,
+              "badge": 2
+            },
+            {
+              "label": "권장 사항 표시"
+            }
+          ]
         }
       },
       "notes": [
         {
           "n": 1,
-          "head": "report_final_v2.pdf 를 클릭",
-          "body": "PDF 를 열면 확장 설치 안내가 뜬다."
+          "head": "report_final_v2.pdf 클릭",
+          "body": "PDF 는 그냥은 안 보이고, 오른쪽 아래에 설치 알림이 뜬다."
         },
         {
           "n": 2,
-          "head": "Install 클릭",
-          "body": "잠시 후 PDF 미리보기를 볼 수 있게 된다."
+          "head": "알림의 설치 클릭",
+          "body": "잠시 후 PDF 내용이 편집기에 보인다."
         }
       ]
     },
     {
       "id": "s2-read-08",
       "template": "screen",
-      "title": "PDF 확장 수동 설치",
+      "title": "알림을 껐다면 — 확장에서 설치",
       "notes": [
         {
           "n": 1,
-          "head": "확장(Extensions) 아이콘 클릭",
-          "body": "왼쪽 액티비티 바의 네모 아이콘을 누른다."
+          "head": "왼쪽 확장 아이콘 클릭",
+          "body": "네모 네 개가 모인 아이콘을 누른다."
         },
         {
           "n": 2,
-          "head": "검색창에 vscode pdf 입력",
-          "body": "확장 검색창에 입력해 찾는다."
+          "head": "검색창에 pdf 입력",
+          "body": "확장 목록이 바로 나온다."
         },
         {
           "n": 3,
-          "head": "첫 항목의 Install 클릭",
-          "body": "목록 맨 위 확장의 Install 버튼을 누른다."
+          "head": "맨 위 빨간 PDF 아이콘의 Install",
+          "body": "첫 번째 vscode-pdf 를 설치하면 된다."
         }
       ],
       "screen": {
@@ -417,19 +422,28 @@
           "turns": []
         },
         "extensions": {
-          "query": "vscode pdf",
+          "query": "pdf",
           "queryBadge": 2,
           "items": [
             {
               "name": "vscode-pdf",
               "publisher": "tomoki1207",
               "desc": "Display pdf file in VSCode.",
+              "icon": "pdf",
+              "installs": "9.2M",
               "badge": 3
             },
             {
               "name": "PDF Preview",
               "publisher": "Analytic Signal",
-              "desc": "PDF viewer based on PDF.js"
+              "desc": "PDF viewer based on PDF.js",
+              "installs": "1.1M"
+            },
+            {
+              "name": "vscode-pdfviewer",
+              "publisher": "Mathematic Inc",
+              "desc": "PDF viewer based on PDF.js",
+              "installs": "86K"
             }
           ]
         }
@@ -556,7 +570,7 @@
           "cwd": "C:\\agent1",
           "turns": [],
           "input": {
-            "text": "doc_230928_v3.txt 분석해줘",
+            "text": "C:\\agent1\\practice_files\\doc_230928_v3.txt 이 파일 분석해줘",
             "badge": 1
           }
         }
@@ -807,7 +821,7 @@
           "cwd": "C:\\agent1",
           "turns": [],
           "input": {
-            "text": "IMG_20260309_134502.jpg",
+            "text": "C:\\agent1\\practice_files\\IMG_20260309_134502.jpg",
             "badge": 2
           }
         }
@@ -1051,7 +1065,7 @@
           "cwd": "C:\\agent1",
           "turns": [],
           "input": {
-            "text": "나머지 파일들도 모두 읽고 파일명 바꿔줘",
+            "text": "C:\\agent1\\practice_files 나머지 파일들도 모두 읽고 파일명 바꿔줘",
             "badge": 1
           }
         }
@@ -1059,8 +1073,8 @@
       "notes": [
         {
           "n": 1,
-          "head": "'나머지도 모두 읽고 바꿔줘'",
-          "body": "프롬프트 한 줄로 남은 6개 파일을 한 번에 처리한다."
+          "head": "폴더 경로 뒤에 요청 붙이기",
+          "body": "practice_files 폴더를 끌어다 놓으면 경로가 들어간다. 그 뒤에 요청을 이어서 쓴다."
         },
         {
           "n": "!",

@@ -16,11 +16,35 @@ import {
   SearchIcon,
   XIcon,
   ChevronsDownUpIcon,
+  DownloadIcon,
+  ImageIcon,
+  InfoIcon,
+  SettingsIcon,
 } from "lucide-react"
 import type { VSCodeMenuItem, VSCodeScreen } from "@/content/schema"
 import { NumberBadge } from "@/components/slide/NumberBadge"
 import { AgentTerminal } from "./AgentTerminal"
 import { cn } from "@/lib/utils"
+
+// The red "PDF" tile vscode-pdf ships as its icon; small size doubles as the explorer file icon.
+function PdfIcon({ px }: { px: number }) {
+  return (
+    <span
+      className="flex shrink-0 items-center justify-center rounded-[18%] bg-[#e5252a] font-display font-extrabold text-white"
+      style={{ width: px, height: px, fontSize: px * 0.34 }}
+    >
+      PDF
+    </span>
+  )
+}
+
+function FileTypeIcon({ name }: { name: string }) {
+  const ext = name.split(".").pop()?.toLowerCase()
+  if (ext === "pdf") return <PdfIcon px={20} />
+  if (ext === "jpg" || ext === "png" || ext === "jpeg") return <ImageIcon className="size-5 shrink-0 text-[#b180d7]" />
+  if (ext === "md") return <InfoIcon className="size-5 shrink-0 text-[#519aba]" />
+  return <FileIcon className="size-5 shrink-0" />
+}
 
 const MENU_BAR = ["파일", "편집", "선택 영역", "보기", "이동", "실행", "터미널", "도움말"]
 
@@ -89,21 +113,27 @@ export function VSCodeMock({ s }: { s: VSCodeScreen }) {
         </div>
 
         {ext ? (
-          <div className="flex w-[300px] shrink-0 flex-col gap-3 border-r border-[#2b2b2b] bg-[#181818] px-3 pt-3 font-display text-[18px] text-[#cccccc]">
-            <span className="px-1 text-[15px] font-semibold tracking-wide text-[#9d9d9d]">EXTENSIONS</span>
+          <div className="flex w-[420px] shrink-0 flex-col gap-3 border-r border-[#2b2b2b] bg-[#181818] px-3 pt-3 font-display text-[18px] text-[#cccccc]">
+            <span className="px-1 text-[15px] font-semibold tracking-wide text-[#9d9d9d]">EXTENSIONS: MARKETPLACE</span>
             <div className="flex items-center gap-2 rounded border border-slide-accent bg-[#1f1f1f] px-3 py-1.5">
               <span className="flex-1 font-term text-[17px]">{s.extensions?.query}</span>
               {s.extensions?.queryBadge ? <NumberBadge n={s.extensions.queryBadge} size="sm" /> : null}
             </div>
             {s.extensions?.items.map((x, i) => (
-              <div key={i} className={cn("flex flex-col gap-1 rounded px-2 py-2", i === 0 && "bg-[#04395e]")}>
-                <span className="font-bold text-white">{x.name}</span>
-                <span className="text-[15px] text-[#9d9d9d]">{x.publisher}</span>
-                <span className="text-[15px] break-keep text-[#bbbbbb]">{x.desc}</span>
-                <span className="flex items-center gap-2">
-                  <span className="rounded bg-slide-accent px-3 py-0.5 text-[15px] font-bold text-white">Install</span>
-                  {x.badge ? <NumberBadge n={x.badge} size="sm" /> : null}
-                </span>
+              <div key={i} className={cn("flex gap-3 rounded px-2 py-2.5", i === 0 && "bg-[#04395e]")}>
+                {x.icon === "pdf" ? <PdfIcon px={52} /> : <span className="size-[52px] shrink-0 rounded-[18%] bg-[#3a3a3a]" />}
+                <div className="flex min-w-0 flex-1 flex-col gap-0.5">
+                  <span className="flex items-center gap-2">
+                    <span className="min-w-0 flex-1 truncate font-bold text-white">{x.name}</span>
+                    {x.installs && <span className="flex shrink-0 items-center gap-1 text-[14px] text-[#9d9d9d]"><DownloadIcon className="size-4" />{x.installs}</span>}
+                  </span>
+                  <span className="truncate text-[15px] text-[#bbbbbb]">{x.desc}</span>
+                  <span className="flex items-center gap-2">
+                    <span className="min-w-0 flex-1 truncate text-[15px] font-semibold text-[#9d9d9d]">{x.publisher}</span>
+                    <span className="rounded-sm bg-slide-accent px-2.5 py-0.5 text-[14px] font-bold text-white">Install</span>
+                    {x.badge ? <NumberBadge n={x.badge} size="sm" /> : <SettingsIcon className="size-4 text-[#858585]" />}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
@@ -136,7 +166,7 @@ export function VSCodeMock({ s }: { s: VSCodeScreen }) {
                 className={cn("flex items-center gap-2 rounded py-0.5 pr-1", f.active && "bg-[#04395e]", f.editing && "outline-2 outline-slide-accent")}
                 style={{ paddingLeft: 28 + (f.depth ?? 0) * 18 }}
               >
-                {f.folder ? <FolderIcon className="size-5 shrink-0" /> : <FileIcon className="size-5 shrink-0" />}
+                {f.folder ? <FolderIcon className="size-5 shrink-0" /> : <FileTypeIcon name={f.name} />}
                 <span className="min-w-0 flex-1 truncate">{f.name}</span>
                 {f.badge ? <NumberBadge n={f.badge} size="sm" /> : null}
               </span>
@@ -161,7 +191,15 @@ export function VSCodeMock({ s }: { s: VSCodeScreen }) {
                 </div>
               </div>
             )}
-            {!s.editor && (bottom || !showTerm) && <div className="flex-1 bg-[#1f1f1f]" />}
+            {s.editorNotice && (
+              <div className="flex min-w-0 flex-[1.2] flex-col border-r border-[#2b2b2b] bg-[#1f1f1f]">
+                <div className="flex h-11 shrink-0 items-center gap-2 border-b border-[#2b2b2b] px-4 font-display text-[18px] text-[#e8e8e8]">
+                  <FileTypeIcon name={s.editorNotice.file} />{s.editorNotice.file}
+                </div>
+                <div className="flex flex-1 items-center justify-center px-10 text-center font-body text-[19px] break-keep text-[#9d9d9d]">{s.editorNotice.text}</div>
+              </div>
+            )}
+            {!s.editor && !s.editorNotice && (bottom || !showTerm) && <div className="flex-1 bg-[#1f1f1f]" />}
             {s.chatPanel ? (
               <div className="flex w-[40%] shrink-0 flex-col border-l border-[#2b2b2b] bg-[#181818]">
                 <div className="flex h-11 items-center gap-3 border-b border-[#2b2b2b] px-4 font-display text-[16px] font-bold text-[#e8e8e8]">
@@ -198,6 +236,24 @@ export function VSCodeMock({ s }: { s: VSCodeScreen }) {
               <span className="rounded bg-slide-accent px-5 py-1.5 text-[18px] font-bold text-white">{s.dialog.button}</span>
               {s.dialog.badge ? <NumberBadge n={s.dialog.badge} size="sm" /> : null}
             </div>
+          </div>
+        </div>
+      )}
+
+      {s.toast && (
+        <div className="absolute right-6 bottom-6 z-30 flex w-[560px] flex-col gap-4 rounded-lg border border-[#454545] bg-[#252526] p-5 font-display text-[18px] text-[#cccccc] shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+          <div className="flex gap-3">
+            <InfoIcon className="mt-0.5 size-6 shrink-0 text-[#3794ff]" />
+            <span className="flex-1 break-keep">{s.toast.text}</span>
+            <XIcon className="size-5 shrink-0 text-[#9d9d9d]" />
+          </div>
+          <div className="flex items-center justify-end gap-3">
+            {s.toast.buttons.map((b, i) => (
+              <span key={i} className="flex items-center gap-2">
+                <span className={cn("rounded-sm px-4 py-1 text-[16px]", b.primary ? "bg-slide-accent font-bold text-white" : "bg-[#3a3d41] text-[#e8e8e8]")}>{b.label}</span>
+                {b.badge ? <NumberBadge n={b.badge} size="sm" /> : null}
+              </span>
+            ))}
           </div>
         </div>
       )}
