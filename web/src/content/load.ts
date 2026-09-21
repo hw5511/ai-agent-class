@@ -31,7 +31,8 @@ const partById = (id: string): Part => {
 }
 const resolveSession = (s: NativeSession): Session => ({ ...s, parts: s.parts.map((p) => (typeof p === "string" ? partById(p) : p)) })
 
-const COURSE_ORDER: CourseId[] = ["basic", "advanced", "automation"]
+// automation is hidden from the site (CEO 2026-09-22: basic + advanced only); its JSON stays in courses/.
+const COURSE_ORDER: CourseId[] = ["basic", "advanced"]
 
 function normaliseAction(a: LegacyAction | null | undefined): ActionBox | undefined {
   if (!a) return undefined
@@ -68,6 +69,8 @@ export function loadSite(): Site {
       .map(([, s]) => adaptLegacy(id, s))
     for (const [p, raw] of Object.entries(native)) {
       if (!p.includes(`/sessions/${id}/`)) continue
+      // step 0 is the "[목업] 새 슬라이드 구조" demo: shown on the 211 dev server, never on the published site
+      if (import.meta.env.PROD && raw.step === 0) continue
       const s = resolveSession(raw)
       const at = sessions.findIndex((x) => x.step === s.step)
       if (at >= 0) sessions[at] = s

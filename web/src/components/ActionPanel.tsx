@@ -3,6 +3,7 @@ import { CheckIcon, CopyIcon, DownloadIcon, LinkIcon } from "lucide-react"
 import type { ActionBox, ActionItem } from "@/content/schema"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { asset } from "@/lib/utils"
 
 // navigator.clipboard only exists on https/localhost; the class site is served over plain http on the
 // office IP, so fall back to a hidden textarea + execCommand("copy") there.
@@ -73,7 +74,7 @@ function Item({ it }: { it: ActionItem }) {
   }
   const Icon = it.kind === "download" ? DownloadIcon : LinkIcon
   return (
-    <Button variant="outline" className="min-w-0 justify-start" render={<a href={it.href} target="_blank" rel="noopener" title={it.href} />}>
+    <Button variant="outline" className="min-w-0 justify-start" render={<a href={asset(it.href)} target="_blank" rel="noopener" title={it.href} />}>
       <Icon data-icon="inline-start" />
       <span className="min-w-0 truncate">{it.desc ? `${it.desc} — ` : ""}{it.text}</span>
     </Button>

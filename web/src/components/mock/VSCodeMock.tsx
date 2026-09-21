@@ -24,7 +24,7 @@ import {
 import type { VSCodeMenuItem, VSCodeScreen } from "@/content/schema"
 import { NumberBadge } from "@/components/slide/NumberBadge"
 import { AgentTerminal } from "./AgentTerminal"
-import { cn } from "@/lib/utils"
+import { asset, cn } from "@/lib/utils"
 
 // The red "PDF" tile vscode-pdf ships as its icon; small size doubles as the explorer file icon.
 function PdfIcon({ px }: { px: number }) {
@@ -238,7 +238,7 @@ export function VSCodeMock({ s }: { s: VSCodeScreen }) {
                 </div>
                 <div className="flex min-h-0 flex-1 items-center justify-center p-6"
                   style={{ backgroundColor: "#2a2a2a", backgroundImage: "linear-gradient(45deg,#333 25%,transparent 25%,transparent 75%,#333 75%),linear-gradient(45deg,#333 25%,transparent 25%,transparent 75%,#333 75%)", backgroundSize: "24px 24px", backgroundPosition: "0 0,12px 12px" }}>
-                  <img src={s.imageEditor.src} alt={s.imageEditor.file} className="max-h-full max-w-full object-contain shadow-[0_6px_24px_rgba(0,0,0,.5)]" />
+                  <img src={asset(s.imageEditor.src)} alt={s.imageEditor.file} className="max-h-full max-w-full object-contain shadow-[0_6px_24px_rgba(0,0,0,.5)]" />
                 </div>
                 {s.imageEditor.meta ? <div className="flex h-8 shrink-0 items-center justify-end border-t border-[#2b2b2b] px-4 font-term text-[15px] text-[#9d9d9d]">{s.imageEditor.meta}</div> : null}
               </div>

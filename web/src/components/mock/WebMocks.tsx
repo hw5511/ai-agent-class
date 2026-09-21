@@ -3,7 +3,7 @@
 import { GlobeIcon, SearchIcon } from "lucide-react"
 import type { BrowserScreen, ChatScreen, FileScreen } from "@/content/schema"
 import { NumberBadge } from "@/components/slide/NumberBadge"
-import { cn } from "@/lib/utils"
+import { asset, cn } from "@/lib/utils"
 
 function Window({ title, logo, children }: { title: string; logo?: string; children: React.ReactNode }) {
   return (
@@ -12,7 +12,7 @@ function Window({ title, logo, children }: { title: string; logo?: string; child
         <span className="flex gap-2">
           {[0, 1, 2].map((i) => <span key={i} className="size-3.5 rounded-full border-2 border-neutral-300" />)}
         </span>
-        {logo && <img src={logo} alt="" className="h-6 w-auto opacity-80" />}
+        {logo && <img src={asset(logo)} alt="" className="h-6 w-auto opacity-80" />}
         <span className="font-display text-[22px] font-semibold text-[#43474b]">{title}</span>
       </div>
       <div className="flex min-h-0 flex-1 flex-col">{children}</div>

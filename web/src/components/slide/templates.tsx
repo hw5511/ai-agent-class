@@ -5,7 +5,7 @@ import type { StackSlide, CardsSlide, CompareSlide, FlowSlide, IllustrationSlide
 import { NumberBadge } from "./NumberBadge"
 import { Mark } from "./Mark"
 import { ScreenView } from "./ScreenView"
-import { cn } from "@/lib/utils"
+import { asset, cn } from "@/lib/utils"
 
 export function SlideBody({ slide }: { slide: Slide }) {
   switch (slide.template) {
@@ -33,7 +33,7 @@ export function SlideBody({ slide }: { slide: Slide }) {
 }
 
 function ImageT({ s }: { s: ImageSlide }) {
-  return <img src={s.src} alt={s.title} className="size-full object-contain" />
+  return <img src={asset(s.src)} alt={s.title} className="size-full object-contain" />
 }
 
 function ScreenT({ s }: { s: ScreenSlide }) {
@@ -96,7 +96,7 @@ function IllustrationT({ s }: { s: IllustrationSlide }) {
   }
   return (
     <div className="flex h-full min-h-0 items-center justify-center">
-      <img src={s.illustration} alt={s.title} className="h-full max-h-full w-auto max-w-full object-contain" />
+      <img src={asset(s.illustration)} alt={s.title} className="h-full max-h-full w-auto max-w-full object-contain" />
     </div>
   )
 }
@@ -181,7 +181,7 @@ function CardsT({ s }: { s: CardsSlide }) {
           )}
           {c.image && (
             <div className="min-h-0 flex-1 border-y border-neutral-200 bg-white">
-              <img src={c.image} alt="" className="size-full object-cover object-top" />
+              <img src={asset(c.image)} alt="" className="size-full object-cover object-top" />
             </div>
           )}
           <div className={cn("flex shrink-0 flex-col gap-3", withImages ? "px-8 py-6" : "items-center")}>

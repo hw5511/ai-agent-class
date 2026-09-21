@@ -3,39 +3,36 @@
 ## 레포 목적
 AI 에이전트 강의 수업자료.
 
-## 수업자료 수정 워크플로우 (필수)
+## 정본 = `web/` React 뷰어 (shadcn 버전, 2026-09-22 교체)
 
-수업 뷰어 `index.html` 은 **빌드 산출물**이다 — 직접 편집하지 말 것(덮어써짐, git 미추적).
-`build.py` 가 **셸 템플릿 + 강의 데이터**를 조립해 생성한다.
+**hw5511.github.io/ai-agent-class 는 `web/` 을 빌드한 사이트다.** 예전 `viewer.template.html` +
+`build.py` 로 만든 `index.html` 뷰어는 더 이상 배포되지 않는다(`build.py` 는 설명회용
+`overview/index.html` 만 계속 만든다). 공개 과정은 **basic · advanced** 두 개뿐이다
+(automation 은 `courses/automation/` 에 데이터만 남기고 사이트에서 숨김 — `web/src/content/load.ts` 의 `COURSE_ORDER`).
 
-**무엇을 고치냐에 따라 소스가 다르다:**
+**슬라이드는 데이터다.** 두 종류가 한 뷰어에 섞여 나온다:
 
-| 고치려는 것 | 만지는 파일 |
-|---|---|
-| 강의 내용 (제목·목표·토픽·실습 문구·링크) | `courses/{basic,advanced}/stepNN.json` |
-| 슬라이드 이미지 (그림 자체) | `assets/{basic,advanced}/stepNN/*.svg` |
-| 슬라이드 순서 | 해당 폴더의 `slides.json` (순서 권위) |
-| 뷰어 디자인·기능 (색·레이아웃·버튼 동작) | `viewer.template.html` (`//__COURSES__` 마커에 데이터 주입) |
+| 종류 | 위치 | 설명 |
+|---|---|---|
+| 새 슬라이드 (CEO 검수 완료: basic 1~4회차) | `web/src/content/sessions/<course>/stepNN.json` + `web/src/content/parts/<part-id>.json` | 템플릿 + 목업 화면 + 설명(notes) + 액션박스. 회차 파일은 파트 id 목록만 갖는다 |
+| 기존 슬라이드 (basic 5~8회차, advanced 전체) | `courses/<course>/stepNN.json` + `assets/...` 이미지 | 옛 덱을 그대로 이미지 슬라이드로 보여주고 액션박스를 붙인다. 같은 회차에 새 세션 파일이 생기면 그쪽이 대체한다 |
 
-**기본 절차:**
-1. 위 **소스만** 수정한다. (`index.html` 직접 수정 금지)
-2. `python3 build.py` 로 `index.html` 재생성 → 브라우저로 열어 확인.
-3. `courses/`·`assets/`·`viewer.template.html`·`build.py` 변경분을 커밋·push.
-4. `main` push → GitHub Actions 가 `build.py` 실행 후 GitHub Pages 자동 배포.
+**새 슬라이드를 고칠 때:**
+1. 규칙 = `web/CONTENT_RULES.md` (시각요소만 슬라이드에 · 설명은 키워드로 notes 에 · 번호 배지 = notes 번호).
+2. `node web/scripts/check-content.mjs` 가 0 errors 여야 한다 (배지↔설명 짝 · 문장형 제목 · AI 말투 검사).
+3. 확인은 본부 개발 서버 http://211.189.207.75:3080 (PM2 `agentclass-web`, `web/` 의 vite dev) 에서 한다.
+4. 목업 화면 부품 = `web/src/components/mock/` (VSCodeMock · AgentTerminal · WebMocks), 필드 정의 = `web/src/content/schema.ts`.
+5. 공용 그림 = `web/public/illustrations/*.svg`, 캡처 = `web/public/shots/`. JSON 에는 `/illustrations/x.svg` 처럼 루트 경로로 적는다
+   (배포 하위경로 `/ai-agent-class/` 는 `asset()` 이 붙인다 — `web/src/lib/utils.ts`).
 
-**주의:**
-- 슬라이드 이미지 교체 시 `slides.json` 순서와 `stepNN.json` 의 `imagePath` 가 일치해야 함(어긋나면 404·순서 뒤바뀜).
-- 배포 링크: 수업자료 `…/ai-agent-class/`, 상담자료 `…/ai-agent-class/consultation/`.
-- 폐기된 일회성 스크립트는 `_archive/` 에 격리됨 — 재사용 금지. 현역 빌드는 루트 `build.py` 하나.
-- 흐름에서 뺀 슬라이드는 지우지 말고 같은 폴더의 `_archive/` 로 옮긴다
-  (예: `assets/basic/step01/_archive/`). 빌드·뷰어는 이 폴더를 보지 않는다.
-  예전 `z_archive_` 접두사 방식은 폐기됨 — 폴더로 통일.
-- 새 슬라이드를 만들 땐 `tools/slidekit.py` 를 쓴다. 프레임(배지·제목·부제·각주)과
-  자주 쓰는 블록(터미널 패널 · 결과 체크줄 · 안내 상자 · Win/Mac 2열)이 함수로 있다.
-  좌표를 다른 SVG 에서 눈으로 베끼지 말 것. 예시는 `tools/make_step01_install.py`.
-- 사이드바 목차: `stepNN.json` 의 `parts`(`title`/`from`/`to`, 1-based·양끝 포함)로
-  회차를 파트로 나눈다. 없는 회차는 하위 목차 없이 동작한다. 슬라이드를 넣거나 빼면
-  `from`/`to` 를 다시 계산해야 한다.
+**배포:** `main` 에 push → GitHub Actions(`.github/workflows/deploy.yml`) 가 내용 검사 → `web` 빌드(base `/ai-agent-class/`)
+→ `assets/` 를 빌드 옆에 복사 → consultation · playwright_demo · overview 와 함께 Pages 배포.
+- `web/public/assets` 는 로컬 전용 정션(→ `../assets`)이다. CI 에는 없고 워크플로가 `assets/` 를 복사한다.
+- 회차 0(`[목업] 새 슬라이드 구조 시연`)은 개발 서버에만 보이고 배포본에서는 빠진다.
+- 배포 링크: 수업자료 `…/ai-agent-class/`, 상담자료 `…/ai-agent-class/consultation/`, 설명회 `…/ai-agent-class/overview/`.
+
+**기존(이미지) 슬라이드 주의:** 이미지 교체 시 `slides.json` 순서와 `stepNN.json` 의 `imagePath` 가 일치해야 한다.
+흐름에서 뺀 슬라이드는 지우지 말고 같은 폴더의 `_archive/` 로 옮긴다. `tools/slidekit.py`·`slidekit2/` 는 옛 이미지 슬라이드 제작 도구다.
 
 ## 로컬 작업 에스컬레이션 (필수)
 

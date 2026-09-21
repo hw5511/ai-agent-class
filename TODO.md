@@ -1,5 +1,11 @@
 # AI Agent Class — 작업 할 일 목록 (TODO)
 
+## 현재 상태 (2026-09-22)
+- ✅ shadcn 뷰어(`web/`)를 정본으로 교체 — hw5511.github.io/ai-agent-class 가 이 빌드다. 공개 과정 = basic · advanced.
+- ✅ basic 1~4회차 새 슬라이드로 CEO 검수 완료 (4회차 = 세션 · context · 백그라운드, 10개 파트 78장).
+- ⏭ 다음: basic 5회차(Sub Agent와 Hooks)부터 새 슬라이드로 재작성 — 그 전까지 5~8회차와 advanced 는 기존 이미지 슬라이드 + 액션박스로 나간다.
+
+
 ## ~~1. CLI 설치 과정 실제 캡처 이미지로 슬라이드 교체~~ ✅ 완료
 - **완료**: `b6e7394` 커밋에서 처리됨.
 - `assets/clis/agy/` 및 `assets/clis/claude/`의 실제 터미널 캡처 PNG를 base64로 SVG에 인라인 embed.
