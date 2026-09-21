@@ -8,17 +8,20 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 export function ActionPanel({ action }: { action?: ActionBox }) {
   if (!action) return null
   return (
-    <Card size="sm">
-      <CardHeader>
-        <CardTitle>{action.label}</CardTitle>
-        <CardDescription>이 슬라이드에서 바로 쓰는 것</CardDescription>
-      </CardHeader>
-      <CardContent className="flex flex-col gap-2">
-        {action.items.map((it, i) => (
-          <Item key={i} it={it} />
-        ))}
-      </CardContent>
-    </Card>
+    <section className="flex flex-col gap-3">
+      <span className="text-[11px] font-semibold tracking-[0.08em] text-muted-foreground uppercase">액션</span>
+      <Card size="sm" className="ring-slide-accent/30">
+        <CardHeader>
+          <CardTitle className="text-base">{action.label}</CardTitle>
+          <CardDescription>이 슬라이드에서 바로 쓰는 것</CardDescription>
+        </CardHeader>
+        <CardContent className="flex flex-col gap-2">
+          {action.items.map((it, i) => (
+            <Item key={i} it={it} />
+          ))}
+        </CardContent>
+      </Card>
+    </section>
   )
 }
 
