@@ -621,7 +621,6 @@ const Slide08: React.FC = () => {
                 borderRadius: 12,
               }}
             >
-              <div style={{ width: 6, alignSelf: "stretch", margin: "22px 0", borderRadius: 3, background: COLORS.accent, flex: "0 0 auto" }} />
               <span style={{ fontFamily: FONTS.display, fontWeight: 700, fontSize: 32, color: COLORS.ink, flex: "0 0 150px" }}>{r.label}</span>
               <span style={{ fontFamily: FONTS.body, fontWeight: 500, fontSize: 28, color: COLORS.ink2, wordBreak: "keep-all" }}>{r.value}</span>
             </div>
