@@ -5,27 +5,42 @@
   "slides": [
     {
       "id": "s3-websearch-01",
-      "template": "screen",
+      "template": "compare",
       "title": "할루시네이션",
-      "screen": {
-        "kind": "terminal",
-        "terminal": {
-          "vendor": "claude",
-          "turns": [
+      "left": {
+        "label": "없는 사건에 맞장구",
+        "screen": {
+          "kind": "chat",
+          "app": "ChatGPT",
+          "logo": "/logos/openai.svg",
+          "messages": [
             {
               "role": "user",
-              "text": "이번 주에 발표된 AI 관련 뉴스 3가지를 알려줘",
-              "badge": 1
+              "text": "이순신 장군이 메테오를 써서 일본군을 무찌른 사건에 대해 알려줘"
             },
             {
               "role": "assistant",
-              "text": "이번 주 AI 뉴스는 알려드릴 수 없습니다. 웹 검색 도구가 없고, 제 학습 데이터는 2026년 1월까지라 이번 주 소식은 모릅니다.",
-              "badge": 2
+              "badge": 1,
+              "text": "맞습니다! 1597년 명량 해전에서 이순신 장군은 하늘에서 거대한 불덩이를 떨어뜨리는 메테오로 왜선 133척을 한꺼번에 격파했습니다. 이 전투로 조선 수군의 사기는 크게 올랐고, 일본군은 이후 남해안 진출을 포기하게 됩니다."
+            }
+          ]
+        }
+      },
+      "right": {
+        "label": "학습 이후는 모름",
+        "screen": {
+          "kind": "chat",
+          "app": "ChatGPT",
+          "logo": "/logos/openai.svg",
+          "messages": [
+            {
+              "role": "user",
+              "text": "2024년 11월 미국 대선 결과 알려줘"
             },
             {
               "role": "assistant",
-              "text": "기억에 의존해 지어내면 사실과 다른 내용을 전하게 되어 그렇게 하지 않겠습니다.",
-              "badge": 3
+              "badge": 2,
+              "text": "죄송하지만 제 학습 데이터는 2024년 10월까지라서 그 이후에 일어난 일은 알지 못해요. 최신 결과는 뉴스에서 확인해 주세요."
             }
           ]
         }
@@ -33,49 +48,83 @@
       "notes": [
         {
           "n": 1,
-          "head": "학습 마감 이후 = 모르는 구간",
-          "body": "모델은 학습 데이터가 마감된 시점까지만 안다."
+          "head": "그럴싸한 거짓 답변",
+          "body": "없는 사건에도 맞장구치며 지어냄"
         },
         {
           "n": 2,
-          "head": "확인 없이 답하면 위험",
-          "body": "모르는 구간을 기억만으로 채우면 그럴듯한 오답이 나올 수 있다 — 이것이 할루시네이션이다."
-        },
-        {
-          "n": 3,
-          "head": "실제 실행 (웹서치 도구 끔)",
-          "body": "오답을 지어내는 대신 정직하게 거절한 실제 응답이다."
+          "head": "학습 이후 정보",
+          "body": "2024년 10월 이후 일은 모름"
         }
       ]
     },
     {
       "id": "s3-websearch-02",
       "template": "compare",
-      "title": "웹서치 툴",
+      "title": "WebSearch 와 WebFetch",
       "left": {
-        "label": "WebSearch",
+        "label": "WebSearch · 검색 결과 목록",
         "screen": {
-          "kind": "browser",
-          "url": "ai트렌드 최근 뉴스",
-          "results": [
-            {
-              "site": "example.com",
-              "title": "검색 결과 제목",
-              "snippet": "제목·요약·출처가 함께 온다."
-            }
-          ]
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "ai트렌드 최근 뉴스 찾아줘"
+              },
+              {
+                "role": "tool",
+                "text": "Web Search(\"AI 트렌드 뉴스 2026년 9월\")",
+                "badge": 1
+              },
+              {
+                "role": "assistant",
+                "text": "Did 1 search in 2s"
+              },
+              {
+                "role": "assistant",
+                "text": "AI타임스 · 트럼프, 'AI Force' 창설 발표 · 09-19"
+              },
+              {
+                "role": "assistant",
+                "text": "ZDNet · 애플, Gemini 기반 새 Siri 공개 베타 · 09-17"
+              },
+              {
+                "role": "assistant",
+                "text": "전자신문 · 구글, Gemini 외부 시스템 접근 공개 · 09-16"
+              }
+            ]
+          }
         }
       },
       "right": {
-        "label": "WebFetch",
+        "label": "WebFetch · 페이지 본문",
         "screen": {
-          "kind": "browser",
-          "url": "https://example.com/article",
-          "page": {
-            "heading": "기사 본문",
-            "lines": [
-              "특정 URL 페이지를 열어",
-              "그 안의 내용을 그대로 읽어온다."
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "tool",
+                "text": "Fetch(https://www.aitimes.com/news/articleView.html?idxno=201734)",
+                "badge": 2
+              },
+              {
+                "role": "assistant",
+                "text": "Received 148.2KB (200 OK)"
+              },
+              {
+                "role": "assistant",
+                "text": "9월 19일 트럼프 대통령은 우주군을 본뜬 'AI Force'를 만들고 AI 차르를 임명하겠다고 밝혔어요."
+              },
+              {
+                "role": "assistant",
+                "text": "출처: aitimes.com",
+                "badge": 3
+              }
             ]
           }
         }
@@ -83,18 +132,18 @@
       "notes": [
         {
           "n": 1,
-          "head": "학습 마감 이후 정보도 확인",
-          "body": "지금 이 순간의 웹 페이지를 직접 찾아서 읽는다."
+          "head": "WebSearch",
+          "body": "검색어로 제목·주소·날짜 목록 받기"
         },
         {
           "n": 2,
-          "head": "검색(WebSearch) → 열람(WebFetch)",
-          "body": "먼저 검색으로 후보를 찾고, 필요하면 특정 페이지를 열어 자세히 읽는다."
+          "head": "WebFetch",
+          "body": "고른 주소의 기사 본문 읽기"
         },
         {
-          "n": "!",
-          "head": "출처가 함께 붙는다",
-          "body": "찾아온 내용에는 어느 페이지에서 가져왔는지 출처가 같이 표시된다."
+          "n": 3,
+          "head": "출처 표시",
+          "body": "답변 끝에 가져온 페이지 주소"
         }
       ]
     },
@@ -120,17 +169,17 @@
         {
           "n": 1,
           "head": "현재 날짜부터 확인",
-          "body": "\"현재 시스템 시간 날짜를 확인해서\" — 기준 날짜를 먼저 잡는다."
+          "body": "\"현재 시스템 시간 날짜를 확인해서\" 로 기준일 지정"
         },
         {
           "n": 2,
           "head": "최근 7일로 범위 제한",
-          "body": "너무 오래된 뉴스가 섞이지 않도록 발행일 범위를 좁힌다."
+          "body": "오래된 뉴스 섞이지 않게 발행일 제한"
         },
         {
           "n": "!",
           "head": "\"주요 뉴스 3가지\"로 개수 제한",
-          "body": "결과가 길어지지 않게 3건만 달라고 한다."
+          "body": "결과 길어지지 않게 3건만 요청"
         }
       ],
       "action": {
@@ -166,7 +215,7 @@
             },
             {
               "role": "assistant",
-              "text": "기준일 2026-09-21, 주요 뉴스 3가지를 정리했습니다.",
+              "text": "기준일 {{today}}, 주요 뉴스 3가지를 정리했습니다.",
               "badge": 2
             }
           ]
@@ -176,17 +225,17 @@
         {
           "n": 1,
           "head": "트럼프 \"AI Force\" 창설 발표",
-          "body": "9월 19일(토) 트럼프 대통령이 우주군을 본뜬 \"AI Force\"를 만들고 AI 차르를 임명하겠다고 밝혔다."
+          "body": "9월 19일, 우주군 본뜬 AI Force 창설과 AI 차르 임명 발표"
         },
         {
           "n": 2,
           "head": "Apple, 재설계한 Siri 공개 베타",
-          "body": "Google Gemini와 공동 개발한 맞춤형 모델 사용. 처리는 기기 내부와 Apple Private Cloud Compute로 분담."
+          "body": "Google Gemini 공동 개발 모델, 기기 내부와 Private Cloud Compute 분담 처리"
         },
         {
           "n": 3,
           "head": "AI 안전성 논쟁",
-          "body": "Google 은 Gemini 의 외부 시스템 무단 접근을 공개했고, Anthropic CEO 는 개발 속도 조절(\"pacing\")을 주장했다."
+          "body": "Google 은 Gemini 무단 접근 공개, Anthropic CEO 는 속도 조절 주장"
         }
       ]
     }

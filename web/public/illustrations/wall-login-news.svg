@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1000" width="960" height="1000" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#101113" flood-opacity="0.10"/></filter><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".55" stop-color="#fff" stop-opacity=".92"/><stop offset="1" stop-color="#fff"/></linearGradient><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".35" stop-color="#fa7e1e"/><stop offset=".6" stop-color="#d62976"/><stop offset=".85" stop-color="#962fbf"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient><filter id="blur"><feGaussianBlur stdDeviation="3.2"/></filter></defs>
+<rect x="10" y="10" width="940" height="980" rx="18" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
+<path d="M10 28a18 18 0 0 1 18-18h904a18 18 0 0 1 18 18v42H10z" fill="#f3f4f6"/>
+<circle cx="40" cy="40" r="7" fill="#ff5f57"/><circle cx="62" cy="40" r="7" fill="#febc2e"/><circle cx="84" cy="40" r="7" fill="#28c840"/>
+<rect x="120" y="24" width="220" height="34" rx="8" fill="#fff"/><text x="136" y="47" font-size="16" fill="#43474b">데일리테크 · AI</text>
+<rect x="30" y="80" width="900" height="40" rx="20" fill="#f3f4f6"/>
+<path d="M52 95v-3a6 6 0 0 1 12 0v3" fill="none" stroke="#8b9095" stroke-width="2"/><rect x="49" y="95" width="18" height="13" rx="3" fill="#8b9095"/>
+<text x="80" y="106" font-size="18" fill="#43474b">news.example.co.kr/article/20260919-ai-force</text>
+<line x1="10" y1="134" x2="950" y2="134" stroke="#e5e5e5" stroke-width="2"/>
+<rect x="10" y="136" width="940" height="70" fill="#fff"/>
+<text x="40" y="184" font-size="34" font-weight="900" fill="#101113" letter-spacing="-1">데일리테크</text>
+<text x="250" y="180" font-size="19" fill="#1273c4" font-weight="700">AI</text><text x="340" y="180" font-size="19" fill="#43474b" font-weight="400">IT</text><text x="430" y="180" font-size="19" fill="#43474b" font-weight="400">경제</text><text x="520" y="180" font-size="19" fill="#43474b" font-weight="400">산업</text><text x="610" y="180" font-size="19" fill="#43474b" font-weight="400">오피니언</text>
+<rect x="770" y="156" width="150" height="40" rx="20" fill="none" stroke="#101113" stroke-width="2"/><text x="845" y="182" font-size="18" font-weight="700" fill="#101113" text-anchor="middle">로그인</text>
+<line x1="10" y1="210" x2="950" y2="210" stroke="#101113" stroke-width="3"/>
+<text x="40" y="254" font-size="18" font-weight="700" fill="#1273c4">AI · 정책</text>
+<text x="40" y="304" font-size="36" font-weight="800" fill="#101113">트럼프, 우주군 본뜬 'AI Force' 창설 발표</text>
+<text x="40" y="344" font-size="36" font-weight="800" fill="#101113">"AI 차르 임명하겠다"</text>
+<text x="40" y="386" font-size="17" fill="#8b9095">김기자 기자 · 입력 2026.09.19 09:12</text>
+<line x1="40" y1="406" x2="920" y2="406" stroke="#e5e5e5" stroke-width="2"/>
+<rect x="40" y="426" width="880" height="170" rx="10" fill="#dfe8f3"/>
+<text x="480" y="520" font-size="20" fill="#7a8a9c" text-anchor="middle">기사 사진</text>
+<text x="40" y="640" font-size="21" fill="#43474b">도널드 트럼프 미국 대통령이 19일(현지시간) 우주군을 본뜬 인공지능 전담</text>
+<text x="40" y="674" font-size="21" fill="#43474b">조직 'AI Force'를 만들겠다고 밝혔다. 트럼프 대통령은 이날 백악관 연설에서</text>
+<g filter="url(#blur)" opacity=".75">
+<rect x="40" y="700" width="880" height="16" rx="8" fill="#c9ccd0"/>
+<rect x="40" y="734" width="790" height="16" rx="8" fill="#c9ccd0"/>
+<rect x="40" y="768" width="700" height="16" rx="8" fill="#c9ccd0"/>
+<rect x="40" y="802" width="880" height="16" rx="8" fill="#c9ccd0"/>
+<rect x="40" y="836" width="790" height="16" rx="8" fill="#c9ccd0"/>
+</g>
+<rect x="12" y="660" width="936" height="200" fill="url(#fade)"/>
+<g filter="url(#sh)"><rect x="170" y="730" width="620" height="120" rx="16" fill="#fff" stroke="#e5e5e5" stroke-width="2"/></g>
+<path d="M226 772v-8a14 14 0 0 1 28 0v8" fill="none" stroke="#101113" stroke-width="3"/><rect x="220" y="772" width="40" height="30" rx="6" fill="#101113"/>
+<text x="284" y="778" font-size="22" font-weight="800" fill="#101113">이 기사는 회원 전용입니다</text>
+<text x="284" y="810" font-size="18" fill="#8b9095">로그인하면 나머지 기사를 볼 수 있어요</text>
+<rect x="620" y="764" width="150" height="50" rx="25" fill="#1273c4"/><text x="695" y="796" font-size="19" font-weight="700" fill="#fff" text-anchor="middle">로그인하고 보기</text>
+<circle cx="790" cy="730" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="790" y="739" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<rect x="40" y="876" width="880" height="96" rx="14" fill="#0c0d0e"/><text x="64" y="912" font-size="18" fill="#9aa0a6">웹서치가 가져온 내용</text><text x="64" y="948" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="20" fill="#e8eaec">"도널드 트럼프 미국 대통령이 19일… "  (첫 문단까지)</text>
+</svg>

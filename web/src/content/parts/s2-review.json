@@ -24,17 +24,17 @@
         {
           "n": 1,
           "head": "CLAUDE.md",
-          "body": "에이전트에 이름과 성격을 부여한다."
+          "body": "에이전트 이름과 성격 부여"
         },
         {
           "n": 2,
-          "head": "Read · Write · Edit",
-          "body": "파일 읽기·생성·수정."
+          "head": "Read, Write, Edit",
+          "body": "파일 읽기, 생성, 수정"
         },
         {
           "n": 3,
           "head": "Bash",
-          "body": "폴더 생성 · 복사 · 이름 변경 · 실행."
+          "body": "폴더 생성, 복사, 이름 변경, 실행"
         }
       ]
     },
@@ -62,17 +62,17 @@
         {
           "n": 1,
           "head": "VS Code 설치",
-          "body": "편집기를 설치하고 한글 환경으로 맞췄다."
+          "body": "편집기 설치, 한글 환경 설정"
         },
         {
           "n": 2,
           "head": "작업 폴더",
-          "body": "폴더를 만들고 VS Code 로 열었다."
+          "body": "폴더 생성 후 VS Code로 열기"
         },
         {
           "n": 3,
           "head": "터미널",
-          "body": "Ctrl + J 로 열어 오른쪽에 붙였다."
+          "body": "Ctrl+J로 열어 오른쪽 배치"
         }
       ]
     },
@@ -83,13 +83,13 @@
       "notes": [
         {
           "n": 1,
-          "head": "우클릭 → 새로 만들기 → 폴더",
-          "body": "바탕화면이나 다운로드의 빈 곳에서 마우스 오른쪽 버튼을 클릭한다."
+          "head": "우클릭 메뉴에서 새 폴더",
+          "body": "빈 곳에서 마우스 오른쪽 클릭"
         },
         {
           "n": 2,
           "head": "이름 agent1 입력 후 Enter",
-          "body": "오늘 실습 내내 이 폴더 한 곳만 쓴다."
+          "body": "오늘 실습 내내 이 폴더 하나만 사용"
         }
       ],
       "illustration": "/illustrations/explorer-new-folder.svg"
@@ -102,12 +102,12 @@
         {
           "n": 1,
           "head": "File → Open Folder",
-          "body": "메뉴에서 폴더 열기(Open Folder...)를 누른다."
+          "body": "메뉴에서 폴더 열기 클릭"
         },
         {
           "n": 2,
           "head": "agent1 선택 후 폴더 선택",
-          "body": "만들어둔 agent1 폴더를 골라 연다."
+          "body": "agent1 폴더 선택 후 열기"
         }
       ],
       "screen": {
@@ -198,12 +198,12 @@
         {
           "n": 1,
           "head": "채팅 창의 X 눌러 닫기",
-          "body": "오른쪽에 열려 있는 채팅 패널을 닫는다."
+          "body": "오른쪽 채팅 패널 닫기"
         },
         {
           "n": 2,
           "head": "Ctrl + J 로 터미널 열기",
-          "body": "이 단축키를 누르면 하단에 터미널 패널이 열린다."
+          "body": "단축키로 하단에 터미널 패널 열기"
         }
       ]
     },
@@ -215,12 +215,12 @@
         {
           "n": 1,
           "head": "터미널 탭 글자 우클릭",
-          "body": "터미널 패널 위쪽의 '터미널' 글자를 오른쪽 클릭한다."
+          "body": "'터미널' 글자 오른쪽 클릭"
         },
         {
           "n": 2,
           "head": "패널 위치 → 오른쪽",
-          "body": "앞으로 이 세팅(오른쪽 패널)으로 계속 진행한다."
+          "body": "이후 쭉 오른쪽 패널로 진행"
         }
       ],
       "screen": {
@@ -294,12 +294,12 @@
         {
           "n": 1,
           "head": "설치 명령어 입력 후 Enter",
-          "body": "irm https://claude.ai/install.ps1 | iex 를 입력한다."
+          "body": "irm https://claude.ai/install.ps1 | iex 입력"
         },
         {
           "n": "!",
           "head": "설치 완료 대기",
-          "body": "여러 줄의 로그가 지나가고, 오류 없이 다시 프롬프트가 보이면 끝난 것이다."
+          "body": "로그 통과 후 오류 없이 프롬프트 복귀"
         }
       ],
       "action": {
@@ -341,12 +341,12 @@
         {
           "n": 1,
           "head": "claude --version 입력",
-          "body": "버전 숫자가 나오면 설치가 끝난 것이다."
+          "body": "버전 숫자 나오면 설치 완료"
         },
         {
           "n": 2,
           "head": "안 나오면 VS Code 재시작",
-          "body": "VS Code 를 완전히 껐다가 다시 연다."
+          "body": "VS Code 완전 종료 후 재시작"
         }
       ],
       "action": {
@@ -381,12 +381,12 @@
         {
           "n": 1,
           "head": "claude 입력 후 Enter",
-          "body": "Claude Code 가 실행된다."
+          "body": "Claude Code 실행"
         },
         {
           "n": 2,
           "head": "실행 성공 확인",
-          "body": "Welcome to Claude Code! 박스가 보이면 정상 실행된 것이다."
+          "body": "Welcome to Claude Code! 박스 표시"
         }
       ],
       "action": {
@@ -421,7 +421,7 @@
         {
           "n": 1,
           "head": "/login 입력 후 Enter",
-          "body": "브라우저가 열리면 본인 계정으로 다시 로그인한다."
+          "body": "브라우저에서 계정 재로그인"
         }
       ],
       "action": {
@@ -463,12 +463,12 @@
         {
           "n": 1,
           "head": "/model sonnet 입력",
-          "body": "오늘 실습에는 Sonnet 이면 충분하고, 속도도 더 빠르다."
+          "body": "오늘 실습엔 Sonnet으로 충분, 속도 빠름"
         },
         {
           "n": 2,
           "head": "전환 확인",
-          "body": "모델이 바뀌었다는 답을 확인한다."
+          "body": "모델 변경 답변 확인"
         }
       ],
       "action": {
@@ -514,12 +514,12 @@
         {
           "n": 1,
           "head": "vscode 연결 상태 표시",
-          "body": "이미 연결(연결됨)된 상태로 표시된다."
+          "body": "이미 연결됨 상태 표시"
         },
         {
           "n": 2,
           "head": "아래 방향키로 none 선택 후 Enter",
-          "body": "vscode 연결을 해제해 둔다."
+          "body": "vscode 연결 해제"
         }
       ],
       "action": {

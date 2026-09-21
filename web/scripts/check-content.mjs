@@ -35,6 +35,7 @@ function badgesOfScreen(s, out) {
   if (t) {
     for (const x of t.turns ?? []) if (x.badge) out.push(x.badge)
     if (t.input?.badge) out.push(t.input.badge)
+    for (const u of t.usage ?? []) if (u.badge) out.push(u.badge)
   }
 }
 
@@ -93,6 +94,15 @@ for (const f of files) {
     }
     const notes = s.notes ?? []
     if (notes.length > 3) err(w, `${notes.length} notes (max 3)`)
+    // Notes are keywords, not sentences (CEO 2026-09-22): no sentence endings (~다/~요/~니다), no final
+    // period, no dash chains.
+    for (const n of notes) {
+      for (const [k, v] of [["head", n.head], ["body", n.body]]) {
+        const s = (v ?? "").trim()
+        if (/[—–]/.test(s)) err(w, `note ${n.n} ${k} uses a dash: ${s}`)
+        if (/(다|니다|[^필]요)[.!]?$/.test(s) || /[.。]$/.test(s)) err(w, `note ${n.n} ${k} is a sentence, use keywords: ${s}`)
+      }
+    }
     const nums = new Set(notes.map((n) => n.n))
     for (const b of badges) if (!nums.has(b)) err(w, `badge ${b} has no note`)
     for (const it of s.action?.items ?? []) {

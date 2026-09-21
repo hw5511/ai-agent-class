@@ -226,6 +226,7 @@ export interface Terminal {
   prompt?: string // shell only: replaces the "PS <cwd>>" prompt, e.g. "student@MacBook ~ %" on macOS
   /** conversation, oldest first; `badge` pins a numbered badge next to that line */
   turns: { role: "user" | "assistant" | "tool"; text: string; badge?: number }[]
+  usage?: { label: string; pct: number; resets: string; badge?: number }[] // /usage bar gauges after the turns
   input?: { text?: string; placeholder?: string; badge?: number }
 }
 

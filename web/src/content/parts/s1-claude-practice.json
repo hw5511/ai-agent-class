@@ -35,12 +35,12 @@
         {
           "n": 1,
           "head": "질문 입력",
-          "body": "입력창에 '너는 누구니?'라고 적고 Enter 를 누른다."
+          "body": "'너는 누구니?' 입력 후 Enter"
         },
         {
           "n": 2,
           "head": "자기소개 확인",
-          "body": "Claude Code 가 자신의 역할과 특징을 설명한다."
+          "body": "Claude Code 가 역할, 특징 설명"
         }
       ],
       "action": {
@@ -104,12 +104,12 @@
         {
           "n": 1,
           "head": "파일 이름과 내용 요청",
-          "body": "파일 이름은 모델 이름을 따라 claude.txt 로 짓는다."
+          "body": "모델 이름 따라 claude.txt 로 작명"
         },
         {
           "n": 2,
           "head": "Write 도구 실행",
-          "body": "Claude Code 가 파일을 생성하고 완료를 알린다."
+          "body": "Claude Code 가 파일 생성 후 완료 안내"
         }
       ],
       "action": {
@@ -173,12 +173,12 @@
         {
           "n": 1,
           "head": "탐색기에 생성됨",
-          "body": "에이전트1 폴더에 claude.txt 가 실제로 생겼는지 확인한다."
+          "body": "에이전트1 폴더에 claude.txt 실제 생성 확인"
         },
         {
           "n": 2,
           "head": "내용 열람",
-          "body": "응답만 보지 말고 편집기에서 실제 내용도 확인한다."
+          "body": "응답만 보지 말고 편집기에서 내용 확인"
         }
       ]
     },
@@ -237,12 +237,12 @@
         {
           "n": 1,
           "head": "폴더 생성 요청",
-          "body": "현재 폴더에 introduce 폴더를 만들어달라고 요청한다."
+          "body": "현재 폴더에 introduce 폴더 생성 요청"
         },
         {
           "n": 2,
           "head": "있으면 그대로 진행",
-          "body": "이미 있다면 에이전트가 '이미 있습니다'라고 답하고 넘어간다."
+          "body": "이미 있으면 '이미 있습니다' 응답 후 진행"
         }
       ],
       "action": {
@@ -311,12 +311,12 @@
         {
           "n": 1,
           "head": "이동 요청",
-          "body": "파일을 폴더로 옮겨 달라고 한다."
+          "body": "파일 폴더로 이동 요청"
         },
         {
           "n": 2,
           "head": "새 경로 확인",
-          "body": "introduce\\claude.txt 로 이동됐는지 확인한다."
+          "body": "introduce\\claude.txt 로 이동 확인"
         }
       ],
       "action": {
@@ -381,12 +381,12 @@
         {
           "n": 1,
           "head": "introduce 안 claude.txt",
-          "body": "introduce 폴더 안에 claude.txt 가 추가됐는지 확인한다."
+          "body": "introduce 폴더 안에 claude.txt 추가 확인"
         },
         {
           "n": 2,
           "head": "세 에이전트 파일이 한 폴더에",
-          "body": "gemini.txt · gpt.txt · claude.txt 가 나란히 있다."
+          "body": "gemini.txt, gpt.txt, claude.txt 나란히 존재"
         }
       ]
     },
@@ -422,7 +422,7 @@
         {
           "n": 1,
           "head": "입력 대기 상태",
-          "body": "빈 입력창에서 Ctrl + C 를 누른다."
+          "body": "빈 입력창에서 Ctrl + C"
         }
       ]
     },
@@ -459,7 +459,7 @@
         {
           "n": 1,
           "head": "일반 터미널로 복귀",
-          "body": "PS 로 시작하는 줄만 보이면 정상 종료된 것이다."
+          "body": "PS 로 시작하는 줄이면 정상 종료"
         }
       ]
     }

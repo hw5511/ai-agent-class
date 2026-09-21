@@ -82,3 +82,22 @@ Each note says what the student sees or does on this slide, in plain words. Neve
 - navigation or wrap-up: "다음 슬라이드에서", "다음은 종료", "실습 완료"
 - a second note that repeats the first
 If a note has nothing left to say, delete it and the matching badge on the slide.
+
+## Notes tone — keywords, no AI 말투 (CEO 2026-09-22)
+
+"뭐뭐한다 뭐뭐한다. 뭐뭐 했다 이거 ai말투라고" / "문장형태가 아닌 '키워드'식으로 하라 했잖니"
+
+Notes are keywords, not sentences. The 해라체 report voice ("~한다. ~했다.") and dash chains read as
+machine-written, and a 해요체 sentence is still a sentence. The gate (`scripts/check-content.mjs`) fails
+any note head or body that ends in 다 / 요 / 니다, ends with a period, or contains — / –.
+
+- head: a short keyword phrase, what to look at or do. e.g. "확인 없이 계속 진행", "Enter 로 실행"
+- body: a short keyword phrase too (about 30 characters), ending on a noun or noun form. e.g. "요청마다 확인 없이 진행"
+- no dashes, no "A → B → C" chains (a single arrow in a menu path like 파일 → 폴더 열기 is fine)
+- keep the facts, commands, file names and button labels exact
+
+| AI 말투 (금지) | 키워드 |
+| --- | --- |
+| 매번 안 물어본다 / auto mode — 요청마다 확인 없이 이어서 진행한다. | 확인 없이 계속 진행 / 요청마다 묻지 않고 바로 진행 |
+| 그래도 감시자가 있다 / 화면 뒤에서 각 도구 호출을 계속 판정한다 — 위험해 보이면 그 자리에서 멈춘다. | 뒤에서 지켜보는 감시자 / 위험한 작업은 실행 전 정지 |
+| 로그인 성공 메시지 확인 / 성공 메시지가 뜨면 로그인이 끝난 것이다. | 로그인 성공 메시지 / 이 메시지가 뜨면 로그인 완료 |

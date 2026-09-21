@@ -1,5 +1,5 @@
 // A card/step mark: a brand image path (/logos/x.svg, /brand/x.png) or "icon:<Name>" for a lucide icon.
-import { BookOpenIcon, BotIcon, BrainIcon, CpuIcon, FilePenIcon, FilePlusIcon, FileTextIcon, FolderIcon, GlobeIcon, KeyboardIcon, LockIcon, MessageSquareIcon, MousePointerClickIcon, SearchIcon, SettingsIcon, ShieldCheckIcon, SquareTerminalIcon, ZapIcon } from "lucide-react"
+import { BookOpenIcon, BotIcon, BrainIcon, CpuIcon, FilePenIcon, FilePlusIcon, FileTextIcon, FolderIcon, GlobeIcon, KeyboardIcon, LockIcon, MessageSquareIcon, MousePointerClickIcon, SearchIcon, SettingsIcon, ShieldCheckIcon, SquareTerminalIcon, ZapIcon, FeatherIcon, MusicIcon, CrownIcon, SparklesIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const ICONS = {
@@ -7,6 +7,7 @@ const ICONS = {
   File: FileTextIcon, Folder: FolderIcon, Terminal: SquareTerminalIcon, Globe: GlobeIcon, Search: SearchIcon,
   Settings: SettingsIcon, Shield: ShieldCheckIcon, Lock: LockIcon, Cpu: CpuIcon, Brain: BrainIcon, Bot: BotIcon,
   Chat: MessageSquareIcon, Keyboard: KeyboardIcon, Click: MousePointerClickIcon, Book: BookOpenIcon, Zap: ZapIcon,
+  Feather: FeatherIcon, Music: MusicIcon, Crown: CrownIcon, Sparkles: SparklesIcon,
 } as const
 export const ICON_NAMES = Object.keys(ICONS)
 

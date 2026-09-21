@@ -11,17 +11,17 @@
         {
           "n": 1,
           "head": "/config 로 진입",
-          "body": "터미널에 /config 라고 입력하면 이 설정 패널이 뜬다."
+          "body": "입력하면 설정 패널 표시"
         },
         {
           "n": 2,
           "head": "스크롤해서 더 보기",
-          "body": "한 화면에 다 안 들어가서 아래로 내려야 나머지 항목이 보인다."
+          "body": "한 화면에 안 들어가 아래로 스크롤"
         },
         {
           "n": "!",
           "head": "테마·알림·모델처럼 자주 바꾸는 항목",
-          "body": "전부 이 패널 안에 모여 있다."
+          "body": "테마 · 알림 · 모델 등 자주 바꾸는 항목 모음"
         }
       ],
       "action": {
@@ -278,17 +278,17 @@
         {
           "n": 1,
           "head": "Language 항목에 직접 입력",
-          "body": "언어 이름 그대로(예: 한국어) 또는 ISO 코드로 입력한다."
+          "body": "언어 이름 또는 ISO 코드로 입력"
         },
         {
           "n": 2,
           "head": "패널이 보여주는 원문 안내",
-          "body": "Any language name or ISO code (e.g. 'ja'); use 'default' for English."
+          "body": "Any language name or ISO code (e.g. 'ja'); use 'default' for English"
         },
         {
           "n": "!",
           "head": "아무것도 안 바꾸면",
-          "body": "Default (English) 로 그대로 남는다."
+          "body": "Default (English) 로 유지"
         }
       ],
       "screen": {
@@ -321,17 +321,17 @@
         {
           "n": 1,
           "head": "/status 로 확인",
-          "body": "터미널에 /status 라고 입력하면 계정 정보가 나온다."
+          "body": "입력하면 계정 정보 표시"
         },
         {
           "n": 2,
           "head": "Organization 행",
-          "body": "지금 로그인된 조직 계정 이름이 여기 나온다."
+          "body": "로그인된 조직 계정 이름 표시"
         },
         {
           "n": "!",
           "head": "이메일·조직명은 예시",
-          "body": "내 화면에는 내 계정의 실제 이메일과 조직명이 나온다."
+          "body": "실제 화면엔 내 계정 정보로 표시"
         }
       ],
       "action": {
@@ -383,35 +383,79 @@
     },
     {
       "id": "s3-config-05",
-      "template": "screen",
-      "title": "/login 으로 본인 계정",
-      "screen": {
-        "kind": "browser",
-        "url": "claude.ai/login",
-        "page": {
-          "heading": "계정 선택",
-          "lines": [
-            "student@example.com",
-            "다른 계정 사용"
-          ],
-          "button": "이 계정으로 로그인"
+      "template": "compare",
+      "title": "/logout 과 /login",
+      "left": {
+        "label": "/logout",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "/logout"
+              },
+              {
+                "role": "assistant",
+                "text": "Successfully logged out from your Anthropic account.",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "PS C:\\agent1>"
+              }
+            ]
+          }
+        }
+      },
+      "right": {
+        "label": "/login",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "/login"
+              },
+              {
+                "role": "assistant",
+                "text": "Login successful. Press Enter to continue",
+                "badge": 2
+              }
+            ]
+          }
         }
       },
       "notes": [
         {
           "n": 1,
-          "head": "/login 명령",
-          "body": "터미널에 /login 이라고 입력하면 계정 선택 화면이 뜬다."
+          "head": "/logout",
+          "body": "로그아웃 후 Claude 종료, PS 줄로 복귀"
         },
         {
           "n": 2,
-          "head": "본인 계정으로 로그인",
-          "body": "여러 계정을 오갈 때 이 화면에서 바꿔 들어간다."
+          "head": "/login",
+          "body": "브라우저 로그인 후 Login successful 표시"
         }
       ],
       "action": {
         "label": "명령어 복사",
         "items": [
+          {
+            "kind": "copy",
+            "value": "/logout"
+          },
           {
             "kind": "copy",
             "value": "/login"
@@ -427,12 +471,12 @@
         {
           "n": 1,
           "head": "Current session",
-          "body": "지금 진행 중인 5시간 세션 동안 쓴 양."
+          "body": "지금 진행 중인 5시간 세션 사용량"
         },
         {
           "n": 2,
           "head": "Current week (all models)",
-          "body": "이번 주 전체 모델 사용량 합계."
+          "body": "이번 주 전체 모델 사용량 합계"
         }
       ],
       "action": {
@@ -454,25 +498,26 @@
           "turns": [
             {
               "role": "user",
-              "text": "/usage",
+              "text": "/usage"
+            }
+          ],
+          "usage": [
+            {
+              "label": "Current session",
+              "pct": 38,
+              "resets": "5pm (Asia/Seoul)",
               "badge": 1
             },
             {
-              "role": "tool",
-              "text": "Current session",
+              "label": "Current week (all models)",
+              "pct": 12,
+              "resets": "Sep 28, 9am (Asia/Seoul)",
               "badge": 2
             },
             {
-              "role": "assistant",
-              "text": "Current week (all models)"
-            },
-            {
-              "role": "assistant",
-              "text": "Current week (Sonnet only)"
-            },
-            {
-              "role": "assistant",
-              "text": "Spend limit"
+              "label": "Current week (Sonnet only)",
+              "pct": 7,
+              "resets": "Sep 28, 9am (Asia/Seoul)"
             }
           ]
         }
