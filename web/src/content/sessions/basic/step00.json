@@ -1,0 +1,150 @@
+{
+  "step": 0,
+  "title": "[목업] 새 슬라이드 구조 시연",
+  "hours": "—",
+  "goal": "JSON 데이터만으로 목차·슬라이드 템플릿·액션박스가 그려지는지 확인한다.",
+  "topics": ["목차(overview)", "화면 + 설명(screen-notes)", "비교(compare)", "개념(concept)", "실제 화면(shot)"],
+  "practice": "각 템플릿이 어떤 데이터를 받는지 JSON 과 나란히 본다.",
+  "parts": [
+    {
+      "id": "outline",
+      "title": "목차",
+      "slides": [
+        {
+          "id": "demo-outline",
+          "template": "overview",
+          "title": "오늘의 흐름",
+          "items": [
+            { "label": "Claude Code 실행", "meta": "2장", "current": true },
+            { "label": "자기소개서 파일 만들기", "meta": "2장" },
+            { "label": "터미널과 AI CLI 비교", "meta": "1장" },
+            { "label": "사용량 화면", "meta": "1장" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "claude",
+      "title": "Claude Code 실습",
+      "slides": [
+        {
+          "id": "demo-first-chat",
+          "template": "screen-notes",
+          "title": "첫 대화 — 자기소개 확인",
+          "screen": {
+            "kind": "vscode",
+            "folder": "에이전트1",
+            "files": [],
+            "terminal": {
+              "vendor": "claude",
+              "cwd": "C:\\Users\\student\\에이전트1",
+              "turns": [
+                { "role": "user", "text": "너는 누구니?", "badge": 1 },
+                { "role": "assistant", "text": "저는 Claude Code입니다. 파일을 읽고 쓰고 터미널 명령까지 실행할 수 있는 AI 코딩 에이전트예요.", "badge": 2 }
+              ],
+              "input": { "placeholder": "메시지를 입력하세요..." }
+            }
+          },
+          "notes": [
+            { "n": 1, "head": "질문 입력", "body": "입력창에 '너는 누구니?'라고 적고 Enter 를 누른다." },
+            { "n": 2, "head": "자기소개 확인", "body": "Claude Code 가 자신의 역할과 특징을 설명한다." }
+          ],
+          "action": { "label": "프롬프트 복사", "items": [{ "kind": "copy", "value": "너는 누구니?" }] }
+        },
+        {
+          "id": "demo-write",
+          "template": "screen-notes",
+          "title": "자기소개서 파일 만들기",
+          "screen": {
+            "kind": "vscode",
+            "folder": "에이전트1",
+            "files": [{ "name": "claude.txt", "active": true, "badge": 3 }],
+            "editor": { "file": "claude.txt", "lines": ["# 자기소개서", "안녕하세요! 저는 Claude Code입니다.", "프로젝트 전반을 이해하고 문서 작성을 주도할 수 있습니다."] },
+            "terminal": {
+              "vendor": "claude",
+              "cwd": "C:\\Users\\student\\에이전트1",
+              "turns": [
+                { "role": "user", "text": "현재 폴더에 'claude.txt'를 만들어줘. 네가 누구이고 무엇을 할 수 있는지 간단히 작성해줘.", "badge": 1 },
+                { "role": "tool", "text": "Write(claude.txt)", "badge": 2 },
+                { "role": "assistant", "text": "claude.txt 파일을 만들었습니다." }
+              ],
+              "input": { "placeholder": "메시지를 입력하세요..." }
+            }
+          },
+          "notes": [
+            { "n": 1, "head": "파일 이름과 내용 요청", "body": "파일 이름은 모델 이름을 따라 claude.txt 로 짓는다." },
+            { "n": 2, "head": "Write 도구 실행", "body": "Claude Code 가 파일을 만들고 완료를 알린다." },
+            { "n": 3, "head": "탐색기에서 확인", "body": "왼쪽 탐색기에 claude.txt 가 생긴다." }
+          ],
+          "action": {
+            "label": "프롬프트 복사",
+            "items": [{ "kind": "copy", "value": "현재 폴더에 'claude.txt'를 만들어줘. 네가 누구이고 무엇을 할 수 있는지 간단히 작성해줘." }]
+          }
+        }
+      ]
+    },
+    {
+      "id": "compare",
+      "title": "터미널과 AI CLI",
+      "slides": [
+        {
+          "id": "demo-compare",
+          "template": "compare",
+          "title": "터미널과 AI CLI 상태",
+          "left": {
+            "label": "일반 터미널 · PowerShell",
+            "screen": { "kind": "terminal", "terminal": { "vendor": "shell", "cwd": "C:\\Users\\student\\에이전트1", "turns": [{ "role": "user", "text": "agy" }] } },
+            "caption": "경로와 프롬프트가 보이면 명령을 입력하는 출발점"
+          },
+          "right": {
+            "label": "AI CLI 실행 중 · Antigravity",
+            "screen": {
+              "kind": "terminal",
+              "terminal": {
+                "vendor": "antigravity",
+                "cwd": "C:\\Users\\student\\에이전트1",
+                "turns": [{ "role": "user", "text": "현재 폴더에 자기소개서를 만들어줘" }],
+                "input": { "placeholder": "메시지를 입력하세요..." }
+              }
+            },
+            "caption": "자연어로 요청하고 응답을 확인하는 에이전트 화면"
+          }
+        }
+      ]
+    },
+    {
+      "id": "concept",
+      "title": "개념",
+      "slides": [
+        {
+          "id": "demo-concept",
+          "template": "concept",
+          "title": "AI 에이전트 동작 루프",
+          "illustration": "agent-loop",
+          "notes": [
+            { "n": 1, "head": "보고 판단한다", "body": "파일·웹·도구 결과를 읽고 다음 행동을 정한다." },
+            { "n": 2, "head": "도구로 실행한다", "body": "파일을 만들고 명령을 실행한다." },
+            { "n": "!", "head": "일러스트 자리", "body": "실제 그림은 ax-site 일러스트 라이브러리에서 가져온다." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shot",
+      "title": "실제 화면",
+      "slides": [
+        {
+          "id": "demo-shot",
+          "template": "screen-notes",
+          "title": "사용량 화면",
+          "screen": { "kind": "shot", "src": "/shot_usage.png" },
+          "notes": [
+            { "n": 1, "head": "현재 세션", "body": "5시간 창 안에서 쓴 양이 막대로 보인다." },
+            { "n": 2, "head": "주간 한도", "body": "한 주 동안 쓸 수 있는 총량이다." }
+          ],
+          "action": { "label": "바로가기", "items": [{ "kind": "link", "href": "https://claude.ai/settings/usage", "text": "claude.ai 사용량 화면 열기" }] }
+        }
+      ]
+    }
+  ]
+}
