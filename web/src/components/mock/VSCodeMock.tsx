@@ -46,6 +46,27 @@ function FileTypeIcon({ name }: { name: string }) {
   return <FileIcon className="size-5 shrink-0" />
 }
 
+// Minimal Markdown preview: "# " / "## " headings, "- " list items, **bold**; enough to show what the
+// symbols turn into.
+function bold(s: string) {
+  return s.split(/(\*\*[^*]+\*\*)/).map((part, i) =>
+    part.startsWith("**") ? <b key={i} className="font-bold text-white">{part.slice(2, -2)}</b> : <span key={i}>{part}</span>,
+  )
+}
+
+function MdPreview({ md }: { md: string[] }) {
+  return (
+    <div className="flex flex-col gap-3 px-8 py-6 font-body text-[21px] leading-[1.5] text-[#d4d4d4]">
+      {md.map((ln, i) => {
+        if (ln.startsWith("# ")) return <h1 key={i} className="border-b border-[#454545] pb-2 font-display text-[36px] font-bold text-white">{bold(ln.slice(2))}</h1>
+        if (ln.startsWith("## ")) return <h2 key={i} className="mt-2 font-display text-[27px] font-bold text-white">{bold(ln.slice(3))}</h2>
+        if (ln.startsWith("- ")) return <div key={i} className="flex gap-3 pl-3"><span className="text-[#9d9d9d]">•</span><span>{bold(ln.slice(2))}</span></div>
+        return <p key={i}>{bold(ln)}</p>
+      })}
+    </div>
+  )
+}
+
 const MENU_BAR = ["파일", "편집", "선택 영역", "보기", "이동", "실행", "터미널", "도움말"]
 
 function Menu({ items, className }: { items: VSCodeMenuItem[]; className?: string }) {
@@ -72,7 +93,7 @@ function Menu({ items, className }: { items: VSCodeMenuItem[]; className?: strin
 
 export function VSCodeMock({ s }: { s: VSCodeScreen }) {
   const bottom = s.terminalAt === "bottom"
-  const showTerm = !s.noTerminal
+  const showTerm = !s.noTerminal && !s.preview
   const ext = s.sidebar === "extensions"
 
   const terminal = showTerm && (
@@ -112,7 +133,7 @@ export function VSCodeMock({ s }: { s: VSCodeScreen }) {
           </span>
         </div>
 
-        {ext ? (
+        {s.noSidebar ? null : ext ? (
           <div className="flex w-[420px] shrink-0 flex-col gap-3 border-r border-[#2b2b2b] bg-[#181818] px-3 pt-3 font-display text-[18px] text-[#cccccc]">
             <span className="px-1 text-[15px] font-semibold tracking-wide text-[#9d9d9d]">EXTENSIONS: MARKETPLACE</span>
             <div className="flex items-center gap-2 rounded border border-slide-accent bg-[#1f1f1f] px-3 py-1.5">
@@ -177,7 +198,7 @@ export function VSCodeMock({ s }: { s: VSCodeScreen }) {
         <div className="flex min-w-0 flex-1 flex-col">
           <div className="flex min-h-0 flex-1">
             {s.editor && (
-              <div className="flex min-w-0 flex-[1] flex-col border-r border-[#2b2b2b] bg-[#1f1f1f]">
+              <div className="relative flex min-w-0 flex-1 flex-col border-r border-[#2b2b2b] bg-[#1f1f1f]">
                 <div className="flex h-11 shrink-0 items-center gap-2 border-b border-[#2b2b2b] px-4 font-display text-[18px] text-[#e8e8e8]">
                   <FileIcon className="size-5 text-slide-accent" />{s.editor.file}
                 </div>
@@ -191,6 +212,15 @@ export function VSCodeMock({ s }: { s: VSCodeScreen }) {
                 </div>
               </div>
             )}
+            {s.preview && (
+              <div className="relative flex min-w-0 flex-1 flex-col bg-[#1f1f1f]">
+                <div className="flex h-11 shrink-0 items-center gap-2 border-b border-[#2b2b2b] px-4 font-display text-[18px] text-[#e8e8e8]">
+                  <span className="flex-1">미리 보기 {s.preview.file}</span>
+                  {s.preview.badge ? <NumberBadge n={s.preview.badge} size="sm" /> : null}
+                </div>
+                <MdPreview md={s.preview.md} />
+              </div>
+            )}
             {s.editorNotice && (
               <div className="flex min-w-0 flex-[1.2] flex-col border-r border-[#2b2b2b] bg-[#1f1f1f]">
                 <div className="flex h-11 shrink-0 items-center gap-2 border-b border-[#2b2b2b] px-4 font-display text-[18px] text-[#e8e8e8]">
@@ -199,7 +229,7 @@ export function VSCodeMock({ s }: { s: VSCodeScreen }) {
                 <div className="flex flex-1 items-center justify-center px-10 text-center font-body text-[19px] break-keep text-[#9d9d9d]">{s.editorNotice.text}</div>
               </div>
             )}
-            {!s.editor && !s.editorNotice && (bottom || !showTerm) && <div className="flex-1 bg-[#1f1f1f]" />}
+            {!s.editor && !s.editorNotice && !s.preview && (bottom || !showTerm) && <div className="flex-1 bg-[#1f1f1f]" />}
             {s.chatPanel ? (
               <div className="flex w-[40%] shrink-0 flex-col border-l border-[#2b2b2b] bg-[#181818]">
                 <div className="flex h-11 items-center gap-3 border-b border-[#2b2b2b] px-4 font-display text-[16px] font-bold text-[#e8e8e8]">

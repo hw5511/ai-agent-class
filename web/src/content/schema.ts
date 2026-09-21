@@ -200,6 +200,8 @@ export interface VSCodeScreen {
     queryBadge?: number
     items: { name: string; publisher: string; desc: string; icon?: "pdf"; installs?: string; badge?: number }[]
   }
+  noSidebar?: boolean // hide the explorer column (activity bar stays)
+  preview?: { file: string; md: string[]; badge?: number } // VS Code's Markdown preview next to the editor
   editorNotice?: { file: string; text: string } // editor tab that cannot show the file (a PDF without the extension)
   toast?: { text: string; buttons: { label: string; primary?: boolean; badge?: number }[] } // bottom-right notification
   explorerAction?: { icon: "newFile" | "newFolder"; badge?: number } // the icons on the explorer header

@@ -4,6 +4,30 @@ import type { ActionBox, ActionItem } from "@/content/schema"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
+// navigator.clipboard only exists on https/localhost; the class site is served over plain http on the
+// office IP, so fall back to a hidden textarea + execCommand("copy") there.
+function copyText(text: string): boolean {
+  if (window.isSecureContext && navigator.clipboard) {
+    void navigator.clipboard.writeText(text)
+    return true
+  }
+  const ta = document.createElement("textarea")
+  ta.value = text
+  ta.setAttribute("readonly", "")
+  ta.style.position = "fixed"
+  ta.style.opacity = "0"
+  document.body.appendChild(ta)
+  ta.select()
+  let ok = false
+  try {
+    ok = document.execCommand("copy")
+  } catch {
+    ok = false
+  }
+  document.body.removeChild(ta)
+  return ok
+}
+
 // The action box: what the student does with this slide. Rendered from slide.action only.
 export function ActionPanel({ action }: { action?: ActionBox }) {
   if (!action) return null
@@ -35,7 +59,7 @@ function Item({ it }: { it: ActionItem }) {
             size="sm"
             variant="outline"
             onClick={() => {
-              void navigator.clipboard?.writeText(it.value)
+              if (!copyText(it.value)) return
               setDone(true)
               setTimeout(() => setDone(false), 1500)
             }}

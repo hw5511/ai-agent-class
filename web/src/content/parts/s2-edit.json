@@ -46,36 +46,6 @@
       ]
     },
     {
-      "id": "s2-edit-02",
-      "template": "flow",
-      "title": "만들고 보고 고치기 반복",
-      "loop": true,
-      "steps": [
-        {
-          "label": "만들고",
-          "sub": "Write",
-          "logo": "icon:Write"
-        },
-        {
-          "label": "보고",
-          "sub": "결과 확인",
-          "logo": "icon:Search"
-        },
-        {
-          "label": "고치고",
-          "sub": "Edit",
-          "logo": "icon:Edit"
-        }
-      ],
-      "notes": [
-        {
-          "n": "!",
-          "head": "한 번에 완벽한 결과는 나오지 않는다",
-          "body": "이 세 단계를 반복하며 완성해 간다."
-        }
-      ]
-    },
-    {
       "id": "s2-edit-03",
       "template": "screen",
       "title": "테트리스 개선 요청",
