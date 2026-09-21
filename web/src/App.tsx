@@ -8,6 +8,7 @@ import { loadSite, flatSlides } from "@/content/load"
 import type { CourseId } from "@/content/schema"
 import { SlideStage } from "@/components/slide/SlideStage"
 import { ActionPanel } from "@/components/ActionPanel"
+import { NotesPanel } from "@/components/NotesPanel"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
@@ -138,6 +139,7 @@ export default function App() {
             {cur && <SlideStage slide={cur.slide} eyebrow={`${cur.part.title.toUpperCase()} · ${String(posInPart).padStart(2, "0")}/${String(inPart.length).padStart(2, "0")}`} />}
           </div>
           <aside className="flex w-[340px] shrink-0 flex-col gap-6 overflow-y-auto border-l bg-background px-5 py-6">
+            <NotesPanel notes={cur?.slide.notes} />
             <ActionPanel action={cur?.slide.action} />
             <section className="flex flex-col gap-4">
               <PanelLabel>회차 정보</PanelLabel>

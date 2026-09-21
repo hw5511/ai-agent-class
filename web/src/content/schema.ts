@@ -34,16 +34,21 @@ export interface Part {
 
 // ---- slides: one template per slide, each template has its own fields -------------------------
 
+// Rule (CEO 2026-09-21): the slide area carries VISUALS only — screenshot, mockup, diagram, table,
+// illustration — with a short keyword title. Explanations never go on the slide: they go in `notes`,
+// which the right-hand panel shows next to the slide. Numbered badges on the visual match note numbers.
 export type Slide =
   | ImageSlide
-  | ScreenNotesSlide
+  | ScreenSlide
   | CompareSlide
-  | ConceptSlide
+  | TableSlide
+  | IllustrationSlide
   | OverviewSlide
 
 interface SlideBase {
   id: string
-  title: string // keyword noun phrase
+  title: string // keyword noun phrase, the only sentence-like text on the slide
+  notes?: Note[] // shown in the right panel, not on the slide
   action?: ActionBox
 }
 
@@ -53,25 +58,30 @@ export interface ImageSlide extends SlideBase {
   src: string
 }
 
-/** A product screen (the hero) + up to 3 numbered notes on the right. */
-export interface ScreenNotesSlide extends SlideBase {
-  template: "screen-notes"
+/** One product screen (mockup or real capture), as large as the slide allows. */
+export interface ScreenSlide extends SlideBase {
+  template: "screen"
   screen: Screen
-  notes: Note[]
 }
 
-/** Two states side by side, one caption line under each. */
+/** Two states side by side, a short label over each. */
 export interface CompareSlide extends SlideBase {
   template: "compare"
-  left: { label: string; screen: Screen; caption: string }
-  right: { label: string; screen: Screen; caption: string }
+  left: { label: string; screen: Screen }
+  right: { label: string; screen: Screen }
 }
 
-/** A concept explained with a picture from the illustration library + notes. */
-export interface ConceptSlide extends SlideBase {
-  template: "concept"
+/** A table: short cells only (keywords, commands, yes/no). */
+export interface TableSlide extends SlideBase {
+  template: "table"
+  columns: string[]
+  rows: { cells: string[]; highlight?: boolean }[]
+}
+
+/** A diagram or illustration from the illustration library. */
+export interface IllustrationSlide extends SlideBase {
+  template: "illustration"
   illustration: string // id in the illustration library
-  notes: Note[]
 }
 
 /** Part opener / session outline. */
