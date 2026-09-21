@@ -29,6 +29,7 @@ export interface Session {
 export interface Part {
   id: string
   title: string // "개발 환경 준비"
+  summary?: string // one line: what this part is for — shown on the part cover's right panel
   slides: Slide[]
 }
 
@@ -44,6 +45,7 @@ export type Slide =
   | TableSlide
   | IllustrationSlide
   | OverviewSlide
+  | PartCoverSlide
 
 interface SlideBase {
   id: string
@@ -82,6 +84,14 @@ export interface TableSlide extends SlideBase {
 export interface IllustrationSlide extends SlideBase {
   template: "illustration"
   illustration: string // id in the illustration library
+}
+
+/** Generated, never written in JSON: the viewer puts one in front of every part of a multi-part session. */
+export interface PartCoverSlide extends SlideBase {
+  template: "part-cover"
+  partIndex: number // 0-based
+  parts: { title: string; count: number }[] // the whole session's table of contents
+  slideTitles: string[] // what this part covers
 }
 
 /** Part opener / session outline. */

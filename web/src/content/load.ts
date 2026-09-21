@@ -69,4 +69,22 @@ export function loadSite(): Site {
   return { title: "AI 에이전트 수업", courses }
 }
 
-export const flatSlides = (s: Session) => s.parts.flatMap((p) => p.slides.map((slide) => ({ part: p, slide })))
+// Every part of a multi-part session opens with a generated cover (CEO 2026-09-21: 목차가 구분될 때
+// 개요 페이지). Its title list and table-of-contents strip come straight from the part data.
+export const flatSlides = (s: Session) => {
+  const toc = s.parts.map((p) => ({ title: p.title, count: p.slides.length }))
+  return s.parts.flatMap((p, pi) => {
+    const items = p.slides.map((slide) => ({ part: p, slide }))
+    if (s.parts.length < 2) return items
+    const cover: Slide = {
+      id: `${p.id}-cover`,
+      template: "part-cover",
+      title: p.title,
+      partIndex: pi,
+      parts: toc,
+      slideTitles: p.slides.map((x) => x.title),
+      notes: p.summary ? [{ n: pi + 1, head: p.title, body: p.summary }] : undefined,
+    }
+    return [{ part: p, slide: cover }, ...items]
+  })
+}

@@ -20,7 +20,7 @@ export function SlideStage({ slide, eyebrow }: { slide: Slide; eyebrow: string }
     return () => ro.disconnect()
   }, [])
 
-  const legacy = slide.template === "image"
+  const legacy = slide.template === "image" || slide.template === "part-cover"
   return (
     <div ref={box} className="relative flex size-full items-center justify-center overflow-hidden">
       <div className="shrink-0 overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-black/5" style={{ width: W * scale, height: H * scale }}>
