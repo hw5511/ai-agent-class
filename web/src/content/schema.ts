@@ -196,6 +196,7 @@ export type Vendor = "claude" | "antigravity" | "codex" | "shell"
 export interface Terminal {
   vendor: Vendor
   cwd?: string
+  prompt?: string // shell only: replaces the "PS <cwd>>" prompt, e.g. "student@MacBook ~ %" on macOS
   /** conversation, oldest first; `badge` pins a numbered badge next to that line */
   turns: { role: "user" | "assistant" | "tool"; text: string; badge?: number }[]
   input?: { text?: string; placeholder?: string; badge?: number }

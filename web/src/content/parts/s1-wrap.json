@@ -11,22 +11,58 @@
         "kind": "vscode",
         "folder": "에이전트1",
         "files": [
-          { "name": "introduce", "folder": true, "depth": 0 },
-          { "name": "claude.txt", "depth": 1 },
-          { "name": "gemini.txt", "depth": 1, "active": true, "badge": 1 },
-          { "name": "gpt.txt", "depth": 1 }
+          {
+            "name": "introduce",
+            "folder": true,
+            "depth": 0
+          },
+          {
+            "name": "claude.txt",
+            "depth": 1
+          },
+          {
+            "name": "gemini.txt",
+            "depth": 1,
+            "active": true,
+            "badge": 1
+          },
+          {
+            "name": "gpt.txt",
+            "depth": 1
+          }
         ],
         "editor": {
           "file": "gemini.txt",
-          "lines": ["# 자기소개서 (경로 이동 완료)", "안녕하세요!", "저는 Antigravity입니다.", "작업 폴더의 파일을 읽고 수정할 수 있습니다."],
+          "lines": [
+            "# 자기소개서 (경로 이동 완료)",
+            "안녕하세요!",
+            "저는 Antigravity입니다.",
+            "작업 폴더의 파일을 읽고 수정할 수 있습니다."
+          ],
           "badge": 2
         },
-        "terminal": { "vendor": "shell", "cwd": "C:\\Users\\student\\에이전트1", "turns": [] }
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": []
+        }
       },
       "notes": [
-        { "n": 1, "head": "한 폴더에 나란히 남은 세 결과", "body": "에이전트1/introduce 안의 gemini.txt · gpt.txt · claude.txt 를 나란히 연다." },
-        { "n": 2, "head": "문체·길이·설명 방식 비교", "body": "같은 프롬프트에 대한 답이 도구마다 어떻게 다른지 읽어본다." },
-        { "n": "!", "head": "실행 권한을 묻는 방식도 다르다", "body": "파일을 만들거나 옮길 때 확인을 구하는 방식도 도구마다 다르다." }
+        {
+          "n": 1,
+          "head": "한 폴더에 나란히 남은 세 결과",
+          "body": "에이전트1/introduce 안의 gemini.txt · gpt.txt · claude.txt 를 나란히 연다."
+        },
+        {
+          "n": 2,
+          "head": "문체·길이·설명 방식 비교",
+          "body": "같은 프롬프트에 대한 답이 도구마다 어떻게 다른지 읽어본다."
+        },
+        {
+          "n": "!",
+          "head": "실행 권한을 묻는 방식도 다르다",
+          "body": "파일을 만들거나 옮길 때 확인을 구하는 방식도 도구마다 다르다."
+        }
       ]
     },
     {
@@ -37,17 +73,48 @@
         "kind": "vscode",
         "folder": "에이전트1",
         "files": [
-          { "name": "introduce", "folder": true, "depth": 0, "active": true, "badge": 1 },
-          { "name": "claude.txt", "depth": 1 },
-          { "name": "gemini.txt", "depth": 1 },
-          { "name": "gpt.txt", "depth": 1 }
+          {
+            "name": "introduce",
+            "folder": true,
+            "depth": 0,
+            "active": true,
+            "badge": 1
+          },
+          {
+            "name": "claude.txt",
+            "depth": 1
+          },
+          {
+            "name": "gemini.txt",
+            "depth": 1
+          },
+          {
+            "name": "gpt.txt",
+            "depth": 1
+          }
         ],
-        "terminal": { "vendor": "shell", "cwd": "C:\\Users\\student\\에이전트1", "turns": [] }
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\Users\\student\\에이전트1",
+          "turns": []
+        }
       },
       "notes": [
-        { "n": 1, "head": "완성된 실습 폴더", "body": "에이전트1/introduce 안에 세 CLI 결과가 모두 들어있다." },
-        { "n": 2, "head": "3대 CLI 설치·로그인 완료", "body": "Antigravity · Codex · Claude Code 를 모두 설치하고 로그인했다." },
-        { "n": 3, "head": "공통 4단계 + 터미널 제어 숙달", "body": "파일 생성 → 확인 → 폴더 생성 → 이동을 세 도구 모두 해봤고, 일반 터미널과 AI CLI 상태를 구분할 수 있다." }
+        {
+          "n": 1,
+          "head": "완성된 실습 폴더",
+          "body": "에이전트1/introduce 안에 세 CLI 결과가 모두 들어있다."
+        },
+        {
+          "n": 2,
+          "head": "3대 CLI 설치·로그인 완료",
+          "body": "Antigravity · Codex · Claude Code 를 모두 설치하고 로그인했다."
+        },
+        {
+          "n": 3,
+          "head": "공통 4단계 + 터미널 제어 숙달",
+          "body": "파일 생성 → 확인 → 폴더 생성 → 이동을 세 도구 모두 해봤고, 일반 터미널과 AI CLI 상태를 구분할 수 있다."
+        }
       ]
     }
   ]

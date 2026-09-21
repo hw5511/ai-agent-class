@@ -212,15 +212,6 @@
           "body": "열린 폴더가 에이전트가 파일을 찾고 작업할 기준이 된다."
         }
       ],
-      "action": {
-        "label": "폴더 이름",
-        "items": [
-          {
-            "kind": "copy",
-            "value": "에이전트1"
-          }
-        ]
-      },
       "illustration": "/illustrations/explorer-new-folder.svg"
     },
     {
@@ -269,22 +260,7 @@
           "head": "명령은 터미널에 입력",
           "body": "위쪽 검색창이 아니라 우측 터미널에 입력한다."
         }
-      ],
-      "action": {
-        "label": "터미널 열기 단축키",
-        "items": [
-          {
-            "kind": "copy",
-            "value": "Ctrl + J",
-            "desc": "Windows"
-          },
-          {
-            "kind": "copy",
-            "value": "Cmd + J",
-            "desc": "macOS"
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "s1-env-06",
@@ -399,7 +375,7 @@
         }
       ],
       "action": {
-        "label": "터미널 기본 명령어",
+        "label": "명령어 복사",
         "items": [
           {
             "kind": "copy",

@@ -81,8 +81,18 @@
       "template": "flow",
       "title": "agent1 폴더 만들기",
       "steps": [
-        { "label": "새로 만들기 → 폴더", "sub": "빈 곳에서 우클릭", "logo": "icon:Folder", "badge": 1 },
-        { "label": "이름 입력", "sub": "agent1", "logo": "icon:Keyboard", "badge": 2 }
+        {
+          "label": "새로 만들기 → 폴더",
+          "sub": "빈 곳에서 우클릭",
+          "logo": "icon:Folder",
+          "badge": 1
+        },
+        {
+          "label": "이름 입력",
+          "sub": "agent1",
+          "logo": "icon:Keyboard",
+          "badge": 2
+        }
       ],
       "notes": [
         {
@@ -95,24 +105,25 @@
           "head": "이름 agent1 입력 후 Enter",
           "body": "오늘 실습 내내 이 폴더 한 곳만 쓴다."
         }
-      ],
-      "action": {
-        "label": "폴더 이름 복사",
-        "items": [
-          {
-            "kind": "copy",
-            "value": "agent1"
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "s2-review-04",
       "template": "flow",
       "title": "작업 폴더 열기",
       "steps": [
-        { "label": "Open Folder", "sub": "File > Open Folder", "logo": "/logos/visualstudiocode.svg", "badge": 1 },
-        { "label": "agent1 선택", "sub": "폴더 선택", "logo": "icon:Folder", "badge": 2 }
+        {
+          "label": "Open Folder",
+          "sub": "File > Open Folder",
+          "logo": "/logos/visualstudiocode.svg",
+          "badge": 1
+        },
+        {
+          "label": "agent1 선택",
+          "sub": "폴더 선택",
+          "logo": "icon:Folder",
+          "badge": 2
+        }
       ],
       "notes": [
         {
@@ -139,7 +150,10 @@
           "vendor": "shell",
           "cwd": "C:\\agent1",
           "turns": [],
-          "input": { "placeholder": "터미널이 열렸습니다", "badge": 2 }
+          "input": {
+            "placeholder": "터미널이 열렸습니다",
+            "badge": 2
+          }
         }
       },
       "notes": [
@@ -153,22 +167,23 @@
           "head": "Ctrl + J 로 터미널 열기",
           "body": "이 단축키를 누르면 하단에 터미널 패널이 열린다."
         }
-      ],
-      "action": {
-        "label": "터미널 열기 단축키",
-        "items": [
-          { "kind": "copy", "value": "Ctrl + J", "desc": "Windows" },
-          { "kind": "copy", "value": "Cmd + J", "desc": "macOS" }
-        ]
-      }
+      ]
     },
     {
       "id": "s2-review-06",
       "template": "flow",
       "title": "터미널 패널 오른쪽 배치",
       "steps": [
-        { "label": "터미널 탭 우클릭", "logo": "icon:Terminal", "badge": 1 },
-        { "label": "패널 위치 → 오른쪽", "logo": "icon:Settings", "badge": 2 }
+        {
+          "label": "터미널 탭 우클릭",
+          "logo": "icon:Terminal",
+          "badge": 1
+        },
+        {
+          "label": "패널 위치 → 오른쪽",
+          "logo": "icon:Settings",
+          "badge": 2
+        }
       ],
       "notes": [
         {
@@ -216,7 +231,7 @@
         }
       ],
       "action": {
-        "label": "설치 명령 복사",
+        "label": "명령어 복사",
         "items": [
           {
             "kind": "copy",
@@ -338,7 +353,7 @@
         }
       ],
       "action": {
-        "label": "프롬프트 복사",
+        "label": "명령어 복사",
         "items": [
           {
             "kind": "copy",
@@ -355,8 +370,15 @@
         "kind": "browser",
         "url": "accounts.google.com/signin/choose",
         "results": [
-          { "site": "Google 계정 선택", "title": "내 계정 (name@gmail.com)", "badge": 1 },
-          { "site": "다른 계정 사용", "title": "수업용 계정은 선택하지 않는다" }
+          {
+            "site": "Google 계정 선택",
+            "title": "내 계정 (name@gmail.com)",
+            "badge": 1
+          },
+          {
+            "site": "다른 계정 사용",
+            "title": "수업용 계정은 선택하지 않는다"
+          }
         ]
       },
       "notes": [
@@ -410,7 +432,7 @@
         }
       ],
       "action": {
-        "label": "프롬프트 복사",
+        "label": "명령어 복사",
         "items": [
           {
             "kind": "copy",
@@ -461,7 +483,7 @@
         }
       ],
       "action": {
-        "label": "프롬프트 복사",
+        "label": "명령어 복사",
         "items": [
           {
             "kind": "copy",

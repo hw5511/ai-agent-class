@@ -14,7 +14,11 @@
           "app": "ChatGPT",
           "logo": "/logos/openai.svg",
           "messages": [
-            { "role": "user", "text": "(회의록 전체 내용을 복사해서 붙여넣기)", "badge": 2 }
+            {
+              "role": "user",
+              "text": "(회의록 전체 내용을 복사해서 붙여넣기)",
+              "badge": 2
+            }
           ]
         }
       },
@@ -25,30 +29,76 @@
           "terminal": {
             "vendor": "claude",
             "turns": [
-              { "role": "user", "text": "doc_230928_v3.txt 읽어줘" },
-              { "role": "assistant", "text": "Read(doc_230928_v3.txt)", "badge": 1 }
+              {
+                "role": "user",
+                "text": "doc_230928_v3.txt 읽어줘"
+              },
+              {
+                "role": "assistant",
+                "text": "Read(doc_230928_v3.txt)",
+                "badge": 1
+              }
             ]
           }
         }
       },
       "notes": [
-        { "n": 1, "head": "내 컴퓨터 파일 직접 열람", "body": "경로나 이름만 알려주면 Claude가 직접 파일을 연다." },
-        { "n": 2, "head": "복사·붙여넣기 불필요", "body": "지금까지는 내용을 복사해 채팅창에 붙여넣어야 했다." }
+        {
+          "n": 1,
+          "head": "내 컴퓨터 파일 직접 열람",
+          "body": "경로나 이름만 알려주면 Claude가 직접 파일을 연다."
+        },
+        {
+          "n": 2,
+          "head": "복사·붙여넣기 불필요",
+          "body": "지금까지는 내용을 복사해 채팅창에 붙여넣어야 했다."
+        }
       ]
     },
     {
       "id": "s2-read-02",
       "template": "table",
       "title": "읽을 수 있는 파일 종류",
-      "columns": ["종류", "확장자", "비고"],
+      "columns": [
+        "종류",
+        "확장자",
+        "비고"
+      ],
       "rows": [
-        { "cells": ["텍스트", ".txt · .md · .py · .html", "전체 지원"] },
-        { "cells": ["이미지", ".jpg · .png · .gif · .webp", "직접 보기"], "highlight": true },
-        { "cells": ["PDF", "최대 100페이지 · 20MB", "페이지 단위 읽기"] }
+        {
+          "cells": [
+            "텍스트",
+            ".txt · .md · .py · .html",
+            "전체 지원"
+          ]
+        },
+        {
+          "cells": [
+            "이미지",
+            ".jpg · .png · .gif · .webp",
+            "직접 보기"
+          ],
+          "highlight": true
+        },
+        {
+          "cells": [
+            "PDF",
+            "최대 100페이지 · 20MB",
+            "페이지 단위 읽기"
+          ]
+        }
       ],
       "notes": [
-        { "n": 1, "head": "세 가지 형식 모두 지원", "body": "텍스트 · 이미지 · PDF, 파일 형식을 가리지 않는다." },
-        { "n": 2, "head": "이미지를 '본다'는 게 핵심", "body": "파일명이 아니라 실제 그림 내용을 이해한다." }
+        {
+          "n": 1,
+          "head": "세 가지 형식 모두 지원",
+          "body": "텍스트 · 이미지 · PDF, 파일 형식을 가리지 않는다."
+        },
+        {
+          "n": 2,
+          "head": "이미지를 '본다'는 게 핵심",
+          "body": "파일명이 아니라 실제 그림 내용을 이해한다."
+        }
       ]
     },
     {
@@ -59,7 +109,10 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "read_practice.zip", "badge": 1 }
+          {
+            "name": "read_practice.zip",
+            "badge": 1
+          }
         ],
         "terminal": {
           "vendor": "shell",
@@ -68,13 +121,25 @@
         }
       },
       "notes": [
-        { "n": 1, "head": "read_practice.zip 다운로드", "body": "실습 페이지 맨 아래 '실습 자료 다운로드' 버튼을 누른다." },
-        { "n": "!", "head": "agent1 폴더에 저장", "body": "오늘 실습 내내 이 폴더 한 곳만 쓴다." }
+        {
+          "n": 1,
+          "head": "read_practice.zip 다운로드",
+          "body": "실습 페이지 맨 아래 '실습 자료 다운로드' 버튼을 누른다."
+        },
+        {
+          "n": "!",
+          "head": "agent1 폴더에 저장",
+          "body": "오늘 실습 내내 이 폴더 한 곳만 쓴다."
+        }
       ],
       "action": {
         "label": "실습 자료",
         "items": [
-          { "kind": "download", "href": "assets/basic/step02/practice/read_practice.zip", "text": "read_practice.zip 다운로드" }
+          {
+            "kind": "download",
+            "href": "assets/basic/step02/practice/read_practice.zip",
+            "text": "read_practice.zip 다운로드"
+          }
         ]
       }
     },
@@ -86,8 +151,14 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "practice_files", "folder": true, "badge": 1 },
-          { "name": "read_practice.zip" }
+          {
+            "name": "practice_files",
+            "folder": true,
+            "badge": 1
+          },
+          {
+            "name": "read_practice.zip"
+          }
         ],
         "terminal": {
           "vendor": "shell",
@@ -96,8 +167,16 @@
         }
       },
       "notes": [
-        { "n": 1, "head": "Windows: 우클릭 → 압축 풀기", "body": "read_practice.zip 우클릭 후 '압축 풀기'(또는 '모두 압축 해제')." },
-        { "n": "!", "head": "macOS: 더블클릭 한 번", "body": "더블클릭하면 자동으로 압축이 풀린다 — 별도 메뉴 없음." }
+        {
+          "n": 1,
+          "head": "Windows: 우클릭 → 압축 풀기",
+          "body": "read_practice.zip 우클릭 후 '압축 풀기'(또는 '모두 압축 해제')."
+        },
+        {
+          "n": "!",
+          "head": "macOS: 더블클릭 한 번",
+          "body": "더블클릭하면 자동으로 압축이 풀린다 — 별도 메뉴 없음."
+        }
       ]
     },
     {
@@ -108,15 +187,44 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "practice_files", "folder": true, "active": true, "badge": 1 },
-          { "name": "doc_230928_v3.txt", "depth": 1 },
-          { "name": "temp_1104.txt", "depth": 1 },
-          { "name": "report_final_v2.pdf", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159585.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159586.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159587.jpg", "depth": 1 },
-          { "name": "IMG_20260309_134502.jpg", "depth": 1 },
-          { "name": "IMG_20260311_092341.jpg", "depth": 1 }
+          {
+            "name": "practice_files",
+            "folder": true,
+            "active": true,
+            "badge": 1
+          },
+          {
+            "name": "doc_230928_v3.txt",
+            "depth": 1
+          },
+          {
+            "name": "temp_1104.txt",
+            "depth": 1
+          },
+          {
+            "name": "report_final_v2.pdf",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159585.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159586.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159587.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260309_134502.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260311_092341.jpg",
+            "depth": 1
+          }
         ],
         "terminal": {
           "vendor": "shell",
@@ -125,8 +233,16 @@
         }
       },
       "notes": [
-        { "n": 1, "head": "practice_files 폴더 펼치기", "body": "안에 파일이 8개 들어 있다." },
-        { "n": "!", "head": "파일명만으로는 파악 불가", "body": "이름만 보고는 무슨 내용인지 짐작이 안 된다." }
+        {
+          "n": 1,
+          "head": "practice_files 폴더 펼치기",
+          "body": "안에 파일이 8개 들어 있다."
+        },
+        {
+          "n": "!",
+          "head": "파일명만으로는 파악 불가",
+          "body": "이름만 보고는 무슨 내용인지 짐작이 안 된다."
+        }
       ]
     },
     {
@@ -137,15 +253,44 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "practice_files", "folder": true },
-          { "name": "doc_230928_v3.txt", "depth": 1, "active": true, "badge": 1 },
-          { "name": "temp_1104.txt", "depth": 1 },
-          { "name": "report_final_v2.pdf", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159585.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159586.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159587.jpg", "depth": 1 },
-          { "name": "IMG_20260309_134502.jpg", "depth": 1 },
-          { "name": "IMG_20260311_092341.jpg", "depth": 1 }
+          {
+            "name": "practice_files",
+            "folder": true
+          },
+          {
+            "name": "doc_230928_v3.txt",
+            "depth": 1,
+            "active": true,
+            "badge": 1
+          },
+          {
+            "name": "temp_1104.txt",
+            "depth": 1
+          },
+          {
+            "name": "report_final_v2.pdf",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159585.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159586.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159587.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260309_134502.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260311_092341.jpg",
+            "depth": 1
+          }
         ],
         "editor": {
           "file": "doc_230928_v3.txt",
@@ -166,8 +311,16 @@
         }
       },
       "notes": [
-        { "n": 1, "head": "클릭 시 편집기에 표시", "body": "doc_230928_v3.txt 는 사실 회의록이었다." },
-        { "n": "!", "head": "하나씩 열기엔 비효율", "body": "다음 실습부터는 Claude에게 맡긴다." }
+        {
+          "n": 1,
+          "head": "클릭 시 편집기에 표시",
+          "body": "doc_230928_v3.txt 는 사실 회의록이었다."
+        },
+        {
+          "n": "!",
+          "head": "하나씩 열기엔 비효율",
+          "body": "다음 실습부터는 Claude에게 맡긴다."
+        }
       ]
     },
     {
@@ -178,15 +331,44 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "practice_files", "folder": true },
-          { "name": "doc_230928_v3.txt", "depth": 1 },
-          { "name": "temp_1104.txt", "depth": 1 },
-          { "name": "report_final_v2.pdf", "depth": 1, "active": true, "badge": 1 },
-          { "name": "KakaoTalk_20260312_175159585.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159586.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159587.jpg", "depth": 1 },
-          { "name": "IMG_20260309_134502.jpg", "depth": 1 },
-          { "name": "IMG_20260311_092341.jpg", "depth": 1 }
+          {
+            "name": "practice_files",
+            "folder": true
+          },
+          {
+            "name": "doc_230928_v3.txt",
+            "depth": 1
+          },
+          {
+            "name": "temp_1104.txt",
+            "depth": 1
+          },
+          {
+            "name": "report_final_v2.pdf",
+            "depth": 1,
+            "active": true,
+            "badge": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159585.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159586.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159587.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260309_134502.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260311_092341.jpg",
+            "depth": 1
+          }
         ],
         "terminal": {
           "vendor": "shell",
@@ -195,8 +377,16 @@
         }
       },
       "notes": [
-        { "n": 1, "head": "report_final_v2.pdf 를 클릭", "body": "PDF 를 열면 확장 설치 안내가 뜬다." },
-        { "n": 2, "head": "Install 클릭", "body": "잠시 후 PDF 미리보기를 볼 수 있게 된다." }
+        {
+          "n": 1,
+          "head": "report_final_v2.pdf 를 클릭",
+          "body": "PDF 를 열면 확장 설치 안내가 뜬다."
+        },
+        {
+          "n": 2,
+          "head": "Install 클릭",
+          "body": "잠시 후 PDF 미리보기를 볼 수 있게 된다."
+        }
       ]
     },
     {
@@ -205,9 +395,21 @@
       "title": "PDF 확장 수동 설치",
       "illustration": "vscode-extensions-search",
       "notes": [
-        { "n": 1, "head": "확장(Extensions) 아이콘 클릭", "body": "왼쪽 액티비티 바의 네모 아이콘을 누른다." },
-        { "n": 2, "head": "검색창에 vscode pdf 입력", "body": "확장 검색창에 입력해 찾는다." },
-        { "n": 3, "head": "첫 항목의 Install 클릭", "body": "목록 맨 위 확장의 Install 버튼을 누른다." }
+        {
+          "n": 1,
+          "head": "확장(Extensions) 아이콘 클릭",
+          "body": "왼쪽 액티비티 바의 네모 아이콘을 누른다."
+        },
+        {
+          "n": 2,
+          "head": "검색창에 vscode pdf 입력",
+          "body": "확장 검색창에 입력해 찾는다."
+        },
+        {
+          "n": 3,
+          "head": "첫 항목의 Install 클릭",
+          "body": "목록 맨 위 확장의 Install 버튼을 누른다."
+        }
       ]
     },
     {
@@ -218,26 +420,66 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "practice_files", "folder": true },
-          { "name": "doc_230928_v3.txt", "depth": 1, "active": true, "badge": 1 },
-          { "name": "temp_1104.txt", "depth": 1 },
-          { "name": "report_final_v2.pdf", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159585.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159586.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159587.jpg", "depth": 1 },
-          { "name": "IMG_20260309_134502.jpg", "depth": 1 },
-          { "name": "IMG_20260311_092341.jpg", "depth": 1 }
+          {
+            "name": "practice_files",
+            "folder": true
+          },
+          {
+            "name": "doc_230928_v3.txt",
+            "depth": 1,
+            "active": true,
+            "badge": 1
+          },
+          {
+            "name": "temp_1104.txt",
+            "depth": 1
+          },
+          {
+            "name": "report_final_v2.pdf",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159585.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159586.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159587.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260309_134502.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260311_092341.jpg",
+            "depth": 1
+          }
         ],
         "terminal": {
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "turns": [],
-          "input": { "placeholder": "메시지를 입력하세요...", "badge": 2 }
+          "input": {
+            "placeholder": "메시지를 입력하세요...",
+            "badge": 2
+          }
         }
       },
       "notes": [
-        { "n": 1, "head": "EXPLORER 의 파일을 클릭 채로 끌기", "body": "doc_230928_v3.txt 를 오른쪽 Claude 창으로 끌어다 놓는다." },
-        { "n": 2, "head": "입력줄 경로 자동 삽입", "body": "드롭하면 파일 경로가 입력줄에 그대로 채워진다." }
+        {
+          "n": 1,
+          "head": "EXPLORER 의 파일을 클릭 채로 끌기",
+          "body": "doc_230928_v3.txt 를 오른쪽 Claude 창으로 끌어다 놓는다."
+        },
+        {
+          "n": 2,
+          "head": "입력줄 경로 자동 삽입",
+          "body": "드롭하면 파일 경로가 입력줄에 그대로 채워진다."
+        }
       ]
     },
     {
@@ -248,31 +490,73 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "practice_files", "folder": true },
-          { "name": "doc_230928_v3.txt", "depth": 1, "active": true },
-          { "name": "temp_1104.txt", "depth": 1 },
-          { "name": "report_final_v2.pdf", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159585.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159586.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159587.jpg", "depth": 1 },
-          { "name": "IMG_20260309_134502.jpg", "depth": 1 },
-          { "name": "IMG_20260311_092341.jpg", "depth": 1 }
+          {
+            "name": "practice_files",
+            "folder": true
+          },
+          {
+            "name": "doc_230928_v3.txt",
+            "depth": 1,
+            "active": true
+          },
+          {
+            "name": "temp_1104.txt",
+            "depth": 1
+          },
+          {
+            "name": "report_final_v2.pdf",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159585.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159586.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159587.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260309_134502.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260311_092341.jpg",
+            "depth": 1
+          }
         ],
         "terminal": {
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "turns": [],
-          "input": { "text": "doc_230928_v3.txt 분석해줘", "badge": 1 }
+          "input": {
+            "text": "doc_230928_v3.txt 분석해줘",
+            "badge": 1
+          }
         }
       },
       "notes": [
-        { "n": 1, "head": "요청 문장 이어 쓰기", "body": "경로 뒤에 요청 문장만 덧붙인다." },
-        { "n": "!", "head": "Enter → Claude 실행", "body": "결과는 다음 장에서 확인한다." }
+        {
+          "n": 1,
+          "head": "요청 문장 이어 쓰기",
+          "body": "경로 뒤에 요청 문장만 덧붙인다."
+        },
+        {
+          "n": "!",
+          "head": "Enter → Claude 실행",
+          "body": "결과는 다음 장에서 확인한다."
+        }
       ],
       "action": {
         "label": "프롬프트 복사",
         "items": [
-          { "kind": "copy", "value": "이 파일을 읽고 분석해줘" }
+          {
+            "kind": "copy",
+            "value": "이 파일을 읽고 분석해줘"
+          }
         ]
       }
     },
@@ -284,15 +568,43 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "practice_files", "folder": true },
-          { "name": "doc_230928_v3.txt", "depth": 1, "active": true },
-          { "name": "temp_1104.txt", "depth": 1 },
-          { "name": "report_final_v2.pdf", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159585.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159586.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159587.jpg", "depth": 1 },
-          { "name": "IMG_20260309_134502.jpg", "depth": 1 },
-          { "name": "IMG_20260311_092341.jpg", "depth": 1 }
+          {
+            "name": "practice_files",
+            "folder": true
+          },
+          {
+            "name": "doc_230928_v3.txt",
+            "depth": 1,
+            "active": true
+          },
+          {
+            "name": "temp_1104.txt",
+            "depth": 1
+          },
+          {
+            "name": "report_final_v2.pdf",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159585.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159586.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159587.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260309_134502.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260311_092341.jpg",
+            "depth": 1
+          }
         ],
         "editor": {
           "file": "doc_230928_v3.txt",
@@ -310,15 +622,34 @@
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "turns": [
-            { "role": "user", "text": "doc_230928_v3.txt 분석해줘" },
-            { "role": "assistant", "text": "Read(practice_files/doc_230928_v3.txt)", "badge": 1 },
-            { "role": "assistant", "text": "2026년 3월 9일 회의록입니다. 매출 12% 증가, 반품률 3.2% 등 Q1 실적을 담고 있어요.", "badge": 2 }
+            {
+              "role": "user",
+              "text": "doc_230928_v3.txt 분석해줘"
+            },
+            {
+              "role": "assistant",
+              "text": "Read(practice_files/doc_230928_v3.txt)",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "2026년 3월 9일 회의록입니다. 매출 12% 증가, 반품률 3.2% 등 Q1 실적을 담고 있어요.",
+              "badge": 2
+            }
           ]
         }
       },
       "notes": [
-        { "n": 1, "head": "Read 툴 호출 줄 표시", "body": "정말로 파일을 열어봤다는 증거다." },
-        { "n": 2, "head": "요약이 실제 내용과 맞는지 대조", "body": "실제 파일을 열어 답변과 비교해본다." }
+        {
+          "n": 1,
+          "head": "Read 툴 호출 줄 표시",
+          "body": "정말로 파일을 열어봤다는 증거다."
+        },
+        {
+          "n": 2,
+          "head": "요약이 실제 내용과 맞는지 대조",
+          "body": "실제 파일을 열어 답변과 비교해본다."
+        }
       ]
     },
     {
@@ -329,33 +660,80 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "practice_files", "folder": true },
-          { "name": "2026-03-09_Q1실적_회의록.txt", "depth": 1, "active": true },
-          { "name": "temp_1104.txt", "depth": 1 },
-          { "name": "report_final_v2.pdf", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159585.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159586.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159587.jpg", "depth": 1 },
-          { "name": "IMG_20260309_134502.jpg", "depth": 1 },
-          { "name": "IMG_20260311_092341.jpg", "depth": 1 }
+          {
+            "name": "practice_files",
+            "folder": true
+          },
+          {
+            "name": "2026-03-09_Q1실적_회의록.txt",
+            "depth": 1,
+            "active": true
+          },
+          {
+            "name": "temp_1104.txt",
+            "depth": 1
+          },
+          {
+            "name": "report_final_v2.pdf",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159585.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159586.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159587.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260309_134502.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260311_092341.jpg",
+            "depth": 1
+          }
         ],
         "terminal": {
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "turns": [
-            { "role": "user", "text": "바로 알아볼 수 있게 파일명을 바꿔줘", "badge": 1 },
-            { "role": "assistant", "text": "Bash(mv doc_230928_v3.txt → 2026-03-09_Q1실적_회의록.txt)", "badge": 2 }
+            {
+              "role": "user",
+              "text": "바로 알아볼 수 있게 파일명을 바꿔줘",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "Bash(mv doc_230928_v3.txt → 2026-03-09_Q1실적_회의록.txt)",
+              "badge": 2
+            }
           ]
         }
       },
       "notes": [
-        { "n": 1, "head": "'파일명을 바꿔줘' 라고 요청", "body": "doc_230928_v3.txt → 날짜·안건이 담긴 이름으로." },
-        { "n": 2, "head": "내용을 이해해야 가능한 작업", "body": "Read 없이는 알아볼 수 있는 이름을 지을 수 없다." }
+        {
+          "n": 1,
+          "head": "'파일명을 바꿔줘' 라고 요청",
+          "body": "doc_230928_v3.txt → 날짜·안건이 담긴 이름으로."
+        },
+        {
+          "n": 2,
+          "head": "내용을 이해해야 가능한 작업",
+          "body": "Read 없이는 알아볼 수 있는 이름을 지을 수 없다."
+        }
       ],
       "action": {
         "label": "프롬프트 복사",
         "items": [
-          { "kind": "copy", "value": "이 파일을 바로 알아볼 수 있게 파일명을 바꿔줘" }
+          {
+            "kind": "copy",
+            "value": "이 파일을 바로 알아볼 수 있게 파일명을 바꿔줘"
+          }
         ]
       }
     },
@@ -367,26 +745,66 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "practice_files", "folder": true },
-          { "name": "doc_230928_v3.txt", "depth": 1 },
-          { "name": "temp_1104.txt", "depth": 1 },
-          { "name": "report_final_v2.pdf", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159585.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159586.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159587.jpg", "depth": 1 },
-          { "name": "IMG_20260309_134502.jpg", "depth": 1, "active": true, "badge": 1 },
-          { "name": "IMG_20260311_092341.jpg", "depth": 1 }
+          {
+            "name": "practice_files",
+            "folder": true
+          },
+          {
+            "name": "doc_230928_v3.txt",
+            "depth": 1
+          },
+          {
+            "name": "temp_1104.txt",
+            "depth": 1
+          },
+          {
+            "name": "report_final_v2.pdf",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159585.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159586.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159587.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260309_134502.jpg",
+            "depth": 1,
+            "active": true,
+            "badge": 1
+          },
+          {
+            "name": "IMG_20260311_092341.jpg",
+            "depth": 1
+          }
         ],
         "terminal": {
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "turns": [],
-          "input": { "text": "IMG_20260309_134502.jpg", "badge": 2 }
+          "input": {
+            "text": "IMG_20260309_134502.jpg",
+            "badge": 2
+          }
         }
       },
       "notes": [
-        { "n": 1, "head": "1번과 똑같은 방식", "body": "IMG_20260309_134502.jpg 를 오른쪽 Claude 창으로 끌어다 놓는다." },
-        { "n": 2, "head": "파일·사진 동일한 방법", "body": "끌어다 놓고 물어본다." }
+        {
+          "n": 1,
+          "head": "1번과 똑같은 방식",
+          "body": "IMG_20260309_134502.jpg 를 오른쪽 Claude 창으로 끌어다 놓는다."
+        },
+        {
+          "n": 2,
+          "head": "파일·사진 동일한 방법",
+          "body": "끌어다 놓고 물어본다."
+        }
       ]
     },
     {
@@ -397,34 +815,84 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "practice_files", "folder": true },
-          { "name": "doc_230928_v3.txt", "depth": 1 },
-          { "name": "temp_1104.txt", "depth": 1 },
-          { "name": "report_final_v2.pdf", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159585.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159586.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159587.jpg", "depth": 1 },
-          { "name": "IMG_20260309_134502.jpg", "depth": 1, "active": true },
-          { "name": "IMG_20260311_092341.jpg", "depth": 1 }
+          {
+            "name": "practice_files",
+            "folder": true
+          },
+          {
+            "name": "doc_230928_v3.txt",
+            "depth": 1
+          },
+          {
+            "name": "temp_1104.txt",
+            "depth": 1
+          },
+          {
+            "name": "report_final_v2.pdf",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159585.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159586.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159587.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260309_134502.jpg",
+            "depth": 1,
+            "active": true
+          },
+          {
+            "name": "IMG_20260311_092341.jpg",
+            "depth": 1
+          }
         ],
         "terminal": {
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "turns": [
-            { "role": "user", "text": "IMG_20260309_134502.jpg 이 파일을 읽고 분석해줘" },
-            { "role": "assistant", "text": "Read(practice_files/IMG_20260309_134502.jpg)", "badge": 1 },
-            { "role": "assistant", "text": "나무 도마 위에 적양파를 반으로 잘라 올려두었고, 통후추가 흩어져 있는 요리 재료 사진이에요.", "badge": 2 }
+            {
+              "role": "user",
+              "text": "IMG_20260309_134502.jpg 이 파일을 읽고 분석해줘"
+            },
+            {
+              "role": "assistant",
+              "text": "Read(practice_files/IMG_20260309_134502.jpg)",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "나무 도마 위에 적양파를 반으로 잘라 올려두었고, 통후추가 흩어져 있는 요리 재료 사진이에요.",
+              "badge": 2
+            }
           ]
         }
       },
       "notes": [
-        { "n": 1, "head": "파일명에는 IMG 와 숫자뿐", "body": "이름만으로는 아무 정보가 없다." },
-        { "n": 2, "head": "설명이 실제 사진과 맞는지 확인", "body": "답변과 실제 사진을 직접 비교해본다." }
+        {
+          "n": 1,
+          "head": "파일명에는 IMG 와 숫자뿐",
+          "body": "이름만으로는 아무 정보가 없다."
+        },
+        {
+          "n": 2,
+          "head": "설명이 실제 사진과 맞는지 확인",
+          "body": "답변과 실제 사진을 직접 비교해본다."
+        }
       ],
       "action": {
         "label": "프롬프트 복사",
         "items": [
-          { "kind": "copy", "value": "이 파일을 읽고 분석해줘" }
+          {
+            "kind": "copy",
+            "value": "이 파일을 읽고 분석해줘"
+          }
         ]
       }
     },
@@ -436,33 +904,79 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "practice_files", "folder": true },
-          { "name": "2026-03-09_Q1실적_회의록.txt", "depth": 1 },
-          { "name": "temp_1104.txt", "depth": 1 },
-          { "name": "report_final_v2.pdf", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159585.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159586.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159587.jpg", "depth": 1 },
-          { "name": "요리재료_적양파_도마.jpg", "depth": 1 },
-          { "name": "IMG_20260311_092341.jpg", "depth": 1 }
+          {
+            "name": "practice_files",
+            "folder": true
+          },
+          {
+            "name": "2026-03-09_Q1실적_회의록.txt",
+            "depth": 1
+          },
+          {
+            "name": "temp_1104.txt",
+            "depth": 1
+          },
+          {
+            "name": "report_final_v2.pdf",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159585.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159586.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159587.jpg",
+            "depth": 1
+          },
+          {
+            "name": "요리재료_적양파_도마.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260311_092341.jpg",
+            "depth": 1
+          }
         ],
         "terminal": {
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "turns": [
-            { "role": "user", "text": "이 사진도 알아볼 수 있게 이름을 바꿔줘", "badge": 1 },
-            { "role": "assistant", "text": "Bash(mv IMG_20260309_134502.jpg → 요리재료_적양파_도마.jpg)", "badge": 2 }
+            {
+              "role": "user",
+              "text": "이 사진도 알아볼 수 있게 이름을 바꿔줘",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "Bash(mv IMG_20260309_134502.jpg → 요리재료_적양파_도마.jpg)",
+              "badge": 2
+            }
           ]
         }
       },
       "notes": [
-        { "n": 1, "head": "텍스트 1개 · 이미지 1개 완료", "body": "각각 Read 로 읽고 이름을 정리했다." },
-        { "n": 2, "head": "다음은 나머지를 한 번에", "body": "남은 6개 파일을 한 번에 처리해본다." }
+        {
+          "n": 1,
+          "head": "텍스트 1개 · 이미지 1개 완료",
+          "body": "각각 Read 로 읽고 이름을 정리했다."
+        },
+        {
+          "n": 2,
+          "head": "다음은 나머지를 한 번에",
+          "body": "남은 6개 파일을 한 번에 처리해본다."
+        }
       ],
       "action": {
         "label": "프롬프트 복사",
         "items": [
-          { "kind": "copy", "value": "이 파일을 바로 알아볼 수 있게 파일명을 바꿔줘" }
+          {
+            "kind": "copy",
+            "value": "이 파일을 바로 알아볼 수 있게 파일명을 바꿔줘"
+          }
         ]
       }
     },
@@ -474,7 +988,12 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "practice_files", "folder": true, "active": true, "badge": 1 }
+          {
+            "name": "practice_files",
+            "folder": true,
+            "active": true,
+            "badge": 1
+          }
         ],
         "terminal": {
           "vendor": "claude",
@@ -483,8 +1002,16 @@
         }
       },
       "notes": [
-        { "n": 1, "head": "practice_files 폴더 전체를 드래그", "body": "파일 하나가 아니라 폴더째로 오른쪽 Claude 창에 드롭한다." },
-        { "n": "!", "head": "폴더 안 파일 전체 확인", "body": "이렇게 넘기면 폴더 안 파일을 Claude 가 전부 확인할 수 있다." }
+        {
+          "n": 1,
+          "head": "practice_files 폴더 전체를 드래그",
+          "body": "파일 하나가 아니라 폴더째로 오른쪽 Claude 창에 드롭한다."
+        },
+        {
+          "n": "!",
+          "head": "폴더 안 파일 전체 확인",
+          "body": "이렇게 넘기면 폴더 안 파일을 Claude 가 전부 확인할 수 있다."
+        }
       ]
     },
     {
@@ -495,23 +1022,41 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "practice_files", "folder": true, "active": true }
+          {
+            "name": "practice_files",
+            "folder": true,
+            "active": true
+          }
         ],
         "terminal": {
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "turns": [],
-          "input": { "text": "나머지 파일들도 모두 읽고 파일명 바꿔줘", "badge": 1 }
+          "input": {
+            "text": "나머지 파일들도 모두 읽고 파일명 바꿔줘",
+            "badge": 1
+          }
         }
       },
       "notes": [
-        { "n": 1, "head": "'나머지도 모두 읽고 바꿔줘'", "body": "프롬프트 한 줄로 남은 6개 파일을 한 번에 처리한다." },
-        { "n": "!", "head": "한 줄 → 여러 단계로 확장", "body": "열기 → 읽기 → 이해 → 이름 바꾸기, 파일마다 반복된다." }
+        {
+          "n": 1,
+          "head": "'나머지도 모두 읽고 바꿔줘'",
+          "body": "프롬프트 한 줄로 남은 6개 파일을 한 번에 처리한다."
+        },
+        {
+          "n": "!",
+          "head": "한 줄 → 여러 단계로 확장",
+          "body": "열기 → 읽기 → 이해 → 이름 바꾸기, 파일마다 반복된다."
+        }
       ],
       "action": {
         "label": "프롬프트 복사",
         "items": [
-          { "kind": "copy", "value": "나머지 파일들도 모두 읽고 파일명 바꿔줘" }
+          {
+            "kind": "copy",
+            "value": "나머지 파일들도 모두 읽고 파일명 바꿔줘"
+          }
         ]
       }
     },
@@ -523,32 +1068,87 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "practice_files", "folder": true },
-          { "name": "2026-03-09_Q1실적_회의록.txt", "depth": 1 },
-          { "name": "업무메모_거래처_경비정산.txt", "depth": 1 },
-          { "name": "2026_1분기_영업실적_보고서.pdf", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159585.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159586.jpg", "depth": 1 },
-          { "name": "KakaoTalk_20260312_175159587.jpg", "depth": 1 },
-          { "name": "요리재료_적양파_도마.jpg", "depth": 1 },
-          { "name": "IMG_20260311_092341.jpg", "depth": 1 }
+          {
+            "name": "practice_files",
+            "folder": true
+          },
+          {
+            "name": "2026-03-09_Q1실적_회의록.txt",
+            "depth": 1
+          },
+          {
+            "name": "업무메모_거래처_경비정산.txt",
+            "depth": 1
+          },
+          {
+            "name": "2026_1분기_영업실적_보고서.pdf",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159585.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159586.jpg",
+            "depth": 1
+          },
+          {
+            "name": "KakaoTalk_20260312_175159587.jpg",
+            "depth": 1
+          },
+          {
+            "name": "요리재료_적양파_도마.jpg",
+            "depth": 1
+          },
+          {
+            "name": "IMG_20260311_092341.jpg",
+            "depth": 1
+          }
         ],
         "terminal": {
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "turns": [
-            { "role": "user", "text": "나머지 파일들도 모두 읽고 파일명 바꿔줘" },
-            { "role": "assistant", "text": "Read(practice_files/temp_1104.txt)", "badge": 1 },
-            { "role": "assistant", "text": "Bash(mv temp_1104.txt → 업무메모_거래처_경비정산.txt)", "badge": 2 },
-            { "role": "assistant", "text": "Read(practice_files/report_final_v2.pdf)" },
-            { "role": "assistant", "text": "Bash(mv report_final_v2.pdf → 2026_1분기_영업실적_보고서.pdf)" },
-            { "role": "assistant", "text": "… 나머지 4개 파일도 같은 방식으로 계속됩니다" }
+            {
+              "role": "user",
+              "text": "나머지 파일들도 모두 읽고 파일명 바꿔줘"
+            },
+            {
+              "role": "assistant",
+              "text": "Read(practice_files/temp_1104.txt)",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "Bash(mv temp_1104.txt → 업무메모_거래처_경비정산.txt)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "Read(practice_files/report_final_v2.pdf)"
+            },
+            {
+              "role": "assistant",
+              "text": "Bash(mv report_final_v2.pdf → 2026_1분기_영업실적_보고서.pdf)"
+            },
+            {
+              "role": "assistant",
+              "text": "… 나머지 4개 파일도 같은 방식으로 계속됩니다"
+            }
           ]
         }
       },
       "notes": [
-        { "n": 1, "head": "Read 로 읽기", "body": "파일마다 먼저 Read 로 열어서 내용을 확인한다." },
-        { "n": 2, "head": "이름 바꾸기", "body": "읽은 내용에 맞춰 파일명을 바꾼다 — 이 과정을 반복한다." }
+        {
+          "n": 1,
+          "head": "Read 로 읽기",
+          "body": "파일마다 먼저 Read 로 열어서 내용을 확인한다."
+        },
+        {
+          "n": 2,
+          "head": "이름 바꾸기",
+          "body": "읽은 내용에 맞춰 파일명을 바꾼다 — 이 과정을 반복한다."
+        }
       ]
     },
     {
@@ -559,15 +1159,44 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "practice_files", "folder": true, "active": true, "badge": 1 },
-          { "name": "2026-03-09_Q1실적_회의록.txt", "depth": 1 },
-          { "name": "업무메모_거래처_경비정산.txt", "depth": 1 },
-          { "name": "2026_1분기_영업실적_보고서.pdf", "depth": 1 },
-          { "name": "요리재료_적양파_도마.jpg", "depth": 1 },
-          { "name": "풍경_여름_계곡_숲.jpg", "depth": 1 },
-          { "name": "청첩장_김민준_이지은_2026-05-16.jpg", "depth": 1 },
-          { "name": "동물_코요테_설원.jpg", "depth": 1 },
-          { "name": "풍경_폭포_계곡.jpg", "depth": 1 }
+          {
+            "name": "practice_files",
+            "folder": true,
+            "active": true,
+            "badge": 1
+          },
+          {
+            "name": "2026-03-09_Q1실적_회의록.txt",
+            "depth": 1
+          },
+          {
+            "name": "업무메모_거래처_경비정산.txt",
+            "depth": 1
+          },
+          {
+            "name": "2026_1분기_영업실적_보고서.pdf",
+            "depth": 1
+          },
+          {
+            "name": "요리재료_적양파_도마.jpg",
+            "depth": 1
+          },
+          {
+            "name": "풍경_여름_계곡_숲.jpg",
+            "depth": 1
+          },
+          {
+            "name": "청첩장_김민준_이지은_2026-05-16.jpg",
+            "depth": 1
+          },
+          {
+            "name": "동물_코요테_설원.jpg",
+            "depth": 1
+          },
+          {
+            "name": "풍경_폭포_계곡.jpg",
+            "depth": 1
+          }
         ],
         "terminal": {
           "vendor": "shell",
@@ -576,8 +1205,16 @@
         }
       },
       "notes": [
-        { "n": 1, "head": "이름만으로 내용 파악 가능", "body": "청첩장 · 회의록 · 보고서까지 이름으로 구분된다." },
-        { "n": "!", "head": "새 이름 8개 완성", "body": "파일명만 보고는 몰랐던 내용이 전부 이름에 담겼다." }
+        {
+          "n": 1,
+          "head": "이름만으로 내용 파악 가능",
+          "body": "청첩장 · 회의록 · 보고서까지 이름으로 구분된다."
+        },
+        {
+          "n": "!",
+          "head": "새 이름 8개 완성",
+          "body": "파일명만 보고는 몰랐던 내용이 전부 이름에 담겼다."
+        }
       ]
     },
     {
@@ -588,25 +1225,45 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "practice_files", "folder": true }
+          {
+            "name": "practice_files",
+            "folder": true
+          }
         ],
         "terminal": {
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "turns": [
-            { "role": "assistant", "text": "나머지 6개 파일도 내용에 맞게 이름을 바꿨어요." }
+            {
+              "role": "assistant",
+              "text": "나머지 6개 파일도 내용에 맞게 이름을 바꿨어요."
+            }
           ],
-          "input": { "text": "/clear", "badge": 1 }
+          "input": {
+            "text": "/clear",
+            "badge": 1
+          }
         }
       },
       "notes": [
-        { "n": 1, "head": "직접 읽기 · 드래그&드롭 · 이름 짓기", "body": "텍스트 · 이미지 · PDF 를 직접 열어 읽고, 내용에 맞는 이름을 지었다." },
-        { "n": "!", "head": "/clear 로 정리하고 다음으로", "body": "다음 시간은 파일을 직접 만드는 Write 툴이다." }
+        {
+          "n": 1,
+          "head": "직접 읽기 · 드래그&드롭 · 이름 짓기",
+          "body": "텍스트 · 이미지 · PDF 를 직접 열어 읽고, 내용에 맞는 이름을 지었다."
+        },
+        {
+          "n": "!",
+          "head": "/clear 로 정리하고 다음으로",
+          "body": "다음 시간은 파일을 직접 만드는 Write 툴이다."
+        }
       ],
       "action": {
-        "label": "프롬프트 복사",
+        "label": "명령어 복사",
         "items": [
-          { "kind": "copy", "value": "/clear" }
+          {
+            "kind": "copy",
+            "value": "/clear"
+          }
         ]
       }
     }

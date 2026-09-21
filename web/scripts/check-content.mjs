@@ -89,7 +89,11 @@ for (const f of files) {
     if (notes.length > 3) err(w, `${notes.length} notes (max 3)`)
     const nums = new Set(notes.map((n) => n.n))
     for (const b of badges) if (!nums.has(b)) err(w, `badge ${b} has no note`)
-    for (const it of s.action?.items ?? []) if (!KINDS.has(it.kind)) err(w, `action kind ${it.kind}`)
+    for (const it of s.action?.items ?? []) {
+      if (!KINDS.has(it.kind)) err(w, `action kind ${it.kind}`)
+      // action boxes: download a file, open a link, copy a prompt/command — never a key press or a bare name
+      if (it.kind === "copy" && /^(Enter|Esc|Space|Tab|Shift\s*\+|Ctrl\s*\+|Cmd\s*\+|[↑↓←→])/i.test(it.value.trim())) err(w, `action is a key press: ${it.value}`)
+    }
     if (s.action && !s.action.label) err(w, "action.label missing")
   }
   console.log(`${f}: ${part.slides?.length ?? 0} slides, ${[...(part.slides ?? [])].filter((s) => s.action).length} actions`)

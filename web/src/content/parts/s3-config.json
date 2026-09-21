@@ -25,7 +25,7 @@
         }
       ],
       "action": {
-        "label": "터미널에 입력",
+        "label": "명령어 복사",
         "items": [
           {
             "kind": "copy",
@@ -291,15 +291,6 @@
           "body": "Default (English) 로 그대로 남는다."
         }
       ],
-      "action": {
-        "label": "Language 항목에 입력",
-        "items": [
-          {
-            "kind": "copy",
-            "value": "한국어"
-          }
-        ]
-      },
       "screen": {
         "kind": "vscode",
         "folder": "agent1",
@@ -344,7 +335,7 @@
         }
       ],
       "action": {
-        "label": "터미널에 입력",
+        "label": "명령어 복사",
         "items": [
           {
             "kind": "copy",
@@ -424,7 +415,7 @@
         }
       ],
       "action": {
-        "label": "터미널에 입력",
+        "label": "명령어 복사",
         "items": [
           {
             "kind": "copy",
@@ -455,7 +446,7 @@
         }
       ],
       "action": {
-        "label": "터미널에 입력",
+        "label": "명령어 복사",
         "items": [
           {
             "kind": "copy",

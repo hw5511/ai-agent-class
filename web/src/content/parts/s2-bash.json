@@ -8,14 +8,50 @@
       "template": "cards",
       "title": "터미널 명령어 실행 도구",
       "cards": [
-        { "label": "FILE", "logo": "icon:Folder", "tags": ["파일·폴더", "생성·복사·이름 변경"] },
-        { "label": "RUN", "logo": "icon:Terminal", "tags": ["프로그램 실행", "설치된 프로그램"] },
-        { "label": "INSTALL", "logo": "icon:Settings", "tags": ["프로그램 설치", "설치 후 바로 실행"] },
-        { "label": "CHECK", "logo": "icon:Search", "tags": ["시스템 조회", "사양·상태 확인"] }
+        {
+          "label": "FILE",
+          "logo": "icon:Folder",
+          "tags": [
+            "파일·폴더",
+            "생성·복사·이름 변경"
+          ]
+        },
+        {
+          "label": "RUN",
+          "logo": "icon:Terminal",
+          "tags": [
+            "프로그램 실행",
+            "설치된 프로그램"
+          ]
+        },
+        {
+          "label": "INSTALL",
+          "logo": "icon:Settings",
+          "tags": [
+            "프로그램 설치",
+            "설치 후 바로 실행"
+          ]
+        },
+        {
+          "label": "CHECK",
+          "logo": "icon:Search",
+          "tags": [
+            "시스템 조회",
+            "사양·상태 확인"
+          ]
+        }
       ],
       "notes": [
-        { "n": 1, "head": "터미널 명령어를 Claude가 대신 씀", "body": "1회차에 손으로 치던 터미널 명령어를, 이제 Claude가 대신 친다." },
-        { "n": 2, "head": "1회차와 다른 점", "body": "그때는 검은 화면에 직접 명령어를 쳤지만, 이제는 말로 시키면 Claude가 대신 친다." }
+        {
+          "n": 1,
+          "head": "터미널 명령어를 Claude가 대신 씀",
+          "body": "1회차에 손으로 치던 터미널 명령어를, 이제 Claude가 대신 친다."
+        },
+        {
+          "n": 2,
+          "head": "1회차와 다른 점",
+          "body": "그때는 검은 화면에 직접 명령어를 쳤지만, 이제는 말로 시키면 Claude가 대신 친다."
+        }
       ]
     },
     {
@@ -23,14 +59,47 @@
       "template": "cards",
       "title": "컴퓨터 자체를 다루는 툴",
       "cards": [
-        { "label": "Read", "logo": "icon:Read", "tags": ["파일을 열어 읽음"] },
-        { "label": "Write", "logo": "icon:Write", "tags": ["새 파일을 만듦"] },
-        { "label": "Edit", "logo": "icon:Edit", "tags": ["파일 내용을 고침"] },
-        { "label": "Bash", "logo": "icon:Bash", "tags": ["컴퓨터 자체를 설치·실행·조회"], "highlight": true }
+        {
+          "label": "Read",
+          "logo": "icon:Read",
+          "tags": [
+            "파일을 열어 읽음"
+          ]
+        },
+        {
+          "label": "Write",
+          "logo": "icon:Write",
+          "tags": [
+            "새 파일을 만듦"
+          ]
+        },
+        {
+          "label": "Edit",
+          "logo": "icon:Edit",
+          "tags": [
+            "파일 내용을 고침"
+          ]
+        },
+        {
+          "label": "Bash",
+          "logo": "icon:Bash",
+          "tags": [
+            "컴퓨터 자체를 설치·실행·조회"
+          ],
+          "highlight": true
+        }
       ],
       "notes": [
-        { "n": 1, "head": "파일 안 vs 컴퓨터 자체", "body": "Read·Write·Edit는 파일 안에서 일어나는 일이고, Bash는 컴퓨터 자체를 다룬다." },
-        { "n": "!", "head": "그래서 달라지는 것", "body": "에이전트가 '대화하는 AI'에서 '일하는 AI'가 된다." }
+        {
+          "n": 1,
+          "head": "파일 안 vs 컴퓨터 자체",
+          "body": "Read·Write·Edit는 파일 안에서 일어나는 일이고, Bash는 컴퓨터 자체를 다룬다."
+        },
+        {
+          "n": "!",
+          "head": "그래서 달라지는 것",
+          "body": "에이전트가 '대화하는 AI'에서 '일하는 AI'가 된다."
+        }
       ]
     },
     {
@@ -41,32 +110,75 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "자기소개서.txt" },
-          { "name": "강아지.svg" },
-          { "name": "포스터.html" },
-          { "name": "계산기.html" },
-          { "name": "테트리스.html" },
-          { "name": "practice_files", "folder": true }
+          {
+            "name": "자기소개서.txt"
+          },
+          {
+            "name": "강아지.svg"
+          },
+          {
+            "name": "포스터.html"
+          },
+          {
+            "name": "계산기.html"
+          },
+          {
+            "name": "테트리스.html"
+          },
+          {
+            "name": "practice_files",
+            "folder": true
+          }
         ],
         "terminal": {
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "turns": [
-            { "role": "user", "text": "컴퓨터에 설치된 PC 카카오톡 찾아서 실행해줘", "badge": 1 },
-            { "role": "tool", "text": "Bash(설치된 프로그램 목록에서 카카오톡 검색 → KakaoTalk.exe 실행)", "badge": 2 },
-            { "role": "assistant", "text": "카카오톡을 찾아서 실행했어요." }
+            {
+              "role": "user",
+              "text": "컴퓨터에 설치된 PC 카카오톡 찾아서 실행해줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(설치된 프로그램 목록에서 카카오톡 검색 → KakaoTalk.exe 실행)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "카카오톡을 찾아서 실행했어요."
+            }
           ],
-          "input": { "placeholder": "메시지를 입력하세요..." }
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
         }
       },
       "notes": [
-        { "n": 1, "head": "설치된 프로그램 실행", "body": "\"컴퓨터에 설치된 PC 카카오톡 찾아서 실행해줘\"라고 지시한다." },
-        { "n": 2, "head": "찾아서 켜는 두 단계", "body": "설치된 프로그램 목록에서 찾은 뒤 바로 실행 명령을 입력한다." },
-        { "n": "!", "head": "기존 프로그램 실행", "body": "새로 만든 게 아니라, 컴퓨터에 이미 깔려 있던 프로그램을 찾아서 켰다." }
+        {
+          "n": 1,
+          "head": "설치된 프로그램 실행",
+          "body": "\"컴퓨터에 설치된 PC 카카오톡 찾아서 실행해줘\"라고 지시한다."
+        },
+        {
+          "n": 2,
+          "head": "찾아서 켜는 두 단계",
+          "body": "설치된 프로그램 목록에서 찾은 뒤 바로 실행 명령을 입력한다."
+        },
+        {
+          "n": "!",
+          "head": "기존 프로그램 실행",
+          "body": "새로 만든 게 아니라, 컴퓨터에 이미 깔려 있던 프로그램을 찾아서 켰다."
+        }
       ],
       "action": {
         "label": "프롬프트 복사",
-        "items": [{ "kind": "copy", "value": "컴퓨터에 설치된 PC 카카오톡 찾아서 실행해줘" }]
+        "items": [
+          {
+            "kind": "copy",
+            "value": "컴퓨터에 설치된 PC 카카오톡 찾아서 실행해줘"
+          }
+        ]
       }
     },
     {
@@ -77,32 +189,75 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "자기소개서.txt" },
-          { "name": "강아지.svg" },
-          { "name": "포스터.html" },
-          { "name": "계산기.html" },
-          { "name": "테트리스.html" },
-          { "name": "practice_files", "folder": true }
+          {
+            "name": "자기소개서.txt"
+          },
+          {
+            "name": "강아지.svg"
+          },
+          {
+            "name": "포스터.html"
+          },
+          {
+            "name": "계산기.html"
+          },
+          {
+            "name": "테트리스.html"
+          },
+          {
+            "name": "practice_files",
+            "folder": true
+          }
         ],
         "terminal": {
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "turns": [
-            { "role": "user", "text": "크롬으로 유튜브 실행해줘", "badge": 1 },
-            { "role": "tool", "text": "Bash(크롬 실행 → https://www.youtube.com 접속)", "badge": 2 },
-            { "role": "assistant", "text": "크롬으로 유튜브를 열었어요." }
+            {
+              "role": "user",
+              "text": "크롬으로 유튜브 실행해줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(크롬 실행 → https://www.youtube.com 접속)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "크롬으로 유튜브를 열었어요."
+            }
           ],
-          "input": { "placeholder": "메시지를 입력하세요..." }
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
         }
       },
       "notes": [
-        { "n": 1, "head": "크롬으로 유튜브 실행 요청", "body": "설치된 크롬을 실행해서 유튜브까지 띄우게 시킨다." },
-        { "n": 2, "head": "실행 + 접속을 한 번에", "body": "프로그램 실행 명령과 웹사이트 접속 명령이 이어서 실행된다." },
-        { "n": "!", "head": "두 단계 완료", "body": "크롬 창이 뜨고 유튜브 화면이 그대로 보인다." }
+        {
+          "n": 1,
+          "head": "크롬으로 유튜브 실행 요청",
+          "body": "설치된 크롬을 실행해서 유튜브까지 띄우게 시킨다."
+        },
+        {
+          "n": 2,
+          "head": "실행 + 접속을 한 번에",
+          "body": "프로그램 실행 명령과 웹사이트 접속 명령이 이어서 실행된다."
+        },
+        {
+          "n": "!",
+          "head": "두 단계 완료",
+          "body": "크롬 창이 뜨고 유튜브 화면이 그대로 보인다."
+        }
       ],
       "action": {
         "label": "프롬프트 복사",
-        "items": [{ "kind": "copy", "value": "크롬으로 유튜브 실행해줘" }]
+        "items": [
+          {
+            "kind": "copy",
+            "value": "크롬으로 유튜브 실행해줘"
+          }
+        ]
       }
     },
     {
@@ -113,32 +268,75 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "자기소개서.txt" },
-          { "name": "강아지.svg" },
-          { "name": "포스터.html" },
-          { "name": "계산기.html" },
-          { "name": "테트리스.html" },
-          { "name": "practice_files", "folder": true }
+          {
+            "name": "자기소개서.txt"
+          },
+          {
+            "name": "강아지.svg"
+          },
+          {
+            "name": "포스터.html"
+          },
+          {
+            "name": "계산기.html"
+          },
+          {
+            "name": "테트리스.html"
+          },
+          {
+            "name": "practice_files",
+            "folder": true
+          }
         ],
         "terminal": {
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "turns": [
-            { "role": "user", "text": "바탕화면에 메모장으로 자기소개서를 만들고 저장된 폴더를 열어줘", "badge": 1 },
-            { "role": "tool", "text": "Bash(메모장으로 자기소개서.txt 작성 → 바탕화면 폴더 열기)", "badge": 2 },
-            { "role": "assistant", "text": "자기소개서를 쓰고, 저장된 바탕화면 폴더를 열었어요." }
+            {
+              "role": "user",
+              "text": "바탕화면에 메모장으로 자기소개서를 만들고 저장된 폴더를 열어줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(메모장으로 자기소개서.txt 작성 → 바탕화면 폴더 열기)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "자기소개서를 쓰고, 저장된 바탕화면 폴더를 열었어요."
+            }
           ],
-          "input": { "placeholder": "메시지를 입력하세요..." }
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
         }
       },
       "notes": [
-        { "n": 1, "head": "작성 + 폴더 열기를 한 번에 요청", "body": "메모장으로 자기소개서 만들고 폴더까지 열어달라고 지시한다." },
-        { "n": 2, "head": "두 가지 일이 한 번에", "body": "자기소개서.txt 작성과 바탕화면 폴더 열기가 순서대로 처리된다." },
-        { "n": "!", "head": "여러 단계도 순서대로 다 처리", "body": "요청 하나에 여러 단계가 들어 있어도 Claude는 순서대로 다 처리한다." }
+        {
+          "n": 1,
+          "head": "작성 + 폴더 열기를 한 번에 요청",
+          "body": "메모장으로 자기소개서 만들고 폴더까지 열어달라고 지시한다."
+        },
+        {
+          "n": 2,
+          "head": "두 가지 일이 한 번에",
+          "body": "자기소개서.txt 작성과 바탕화면 폴더 열기가 순서대로 처리된다."
+        },
+        {
+          "n": "!",
+          "head": "여러 단계도 순서대로 다 처리",
+          "body": "요청 하나에 여러 단계가 들어 있어도 Claude는 순서대로 다 처리한다."
+        }
       ],
       "action": {
         "label": "프롬프트 복사",
-        "items": [{ "kind": "copy", "value": "바탕화면에 메모장으로 자기소개서를 만들고 저장된 폴더를 열어줘" }]
+        "items": [
+          {
+            "kind": "copy",
+            "value": "바탕화면에 메모장으로 자기소개서를 만들고 저장된 폴더를 열어줘"
+          }
+        ]
       }
     },
     {
@@ -151,22 +349,48 @@
           "kind": "vscode",
           "folder": "agent1",
           "files": [
-            { "name": "자기소개서.txt" },
-            { "name": "강아지.svg" },
-            { "name": "포스터.html" },
-            { "name": "계산기.html" },
-            { "name": "테트리스.html" },
-            { "name": "practice_files", "folder": true }
+            {
+              "name": "자기소개서.txt"
+            },
+            {
+              "name": "강아지.svg"
+            },
+            {
+              "name": "포스터.html"
+            },
+            {
+              "name": "계산기.html"
+            },
+            {
+              "name": "테트리스.html"
+            },
+            {
+              "name": "practice_files",
+              "folder": true
+            }
           ],
           "terminal": {
             "vendor": "claude",
             "cwd": "C:\\agent1",
             "turns": [
-              { "role": "user", "text": "현재 폴더의 파일 목록을 설명해줘", "badge": 1 },
-              { "role": "tool", "text": "Bash(dir)", "badge": 2 },
-              { "role": "assistant", "text": "6개 항목을 찾았어요. 지금까지 만든 게 다 있고, practice_files 폴더도 그대로 있어요." }
+              {
+                "role": "user",
+                "text": "현재 폴더의 파일 목록을 설명해줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "Bash(dir)",
+                "badge": 2
+              },
+              {
+                "role": "assistant",
+                "text": "6개 항목을 찾았어요. 지금까지 만든 게 다 있고, practice_files 폴더도 그대로 있어요."
+              }
             ],
-            "input": { "placeholder": "메시지를 입력하세요..." }
+            "input": {
+              "placeholder": "메시지를 입력하세요..."
+            }
           }
         }
       },
@@ -178,19 +402,39 @@
             "vendor": "shell",
             "cwd": "C:\\agent1",
             "turns": [
-              { "role": "assistant", "text": "C:\\agent1 디렉터리\n\n자기소개서.txt\n강아지.svg\n포스터.html\n계산기.html\n테트리스.html\npractice_files  <DIR>" }
+              {
+                "role": "assistant",
+                "text": "C:\\agent1 디렉터리\n\n자기소개서.txt\n강아지.svg\n포스터.html\n계산기.html\n테트리스.html\npractice_files  <DIR>"
+              }
             ]
           }
         }
       },
       "notes": [
-        { "n": 1, "head": "폴더 안을 조회하고 설명 요청", "body": "\"현재 폴더의 파일 목록을 설명해줘\"라고 지시한다." },
-        { "n": 2, "head": "Bash로 실제 목록을 조회", "body": "폴더 안 파일·폴더 목록을 조회하는 명령을 직접 실행한다." },
-        { "n": "!", "head": "목록을 사람 말로 풀어서 설명", "body": "목록만 던지지 않고, 무엇인지 하나씩 풀어서 설명해준다." }
+        {
+          "n": 1,
+          "head": "폴더 안을 조회하고 설명 요청",
+          "body": "\"현재 폴더의 파일 목록을 설명해줘\"라고 지시한다."
+        },
+        {
+          "n": 2,
+          "head": "Bash로 실제 목록을 조회",
+          "body": "폴더 안 파일·폴더 목록을 조회하는 명령을 직접 실행한다."
+        },
+        {
+          "n": "!",
+          "head": "목록을 사람 말로 풀어서 설명",
+          "body": "목록만 던지지 않고, 무엇인지 하나씩 풀어서 설명해준다."
+        }
       ],
       "action": {
         "label": "프롬프트 복사",
-        "items": [{ "kind": "copy", "value": "현재 폴더의 파일 목록을 설명해줘" }]
+        "items": [
+          {
+            "kind": "copy",
+            "value": "현재 폴더의 파일 목록을 설명해줘"
+          }
+        ]
       }
     },
     {
@@ -201,32 +445,75 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": "자기소개서.txt" },
-          { "name": "강아지.svg" },
-          { "name": "포스터.html" },
-          { "name": "계산기.html" },
-          { "name": "테트리스.html" },
-          { "name": "practice_files", "folder": true }
+          {
+            "name": "자기소개서.txt"
+          },
+          {
+            "name": "강아지.svg"
+          },
+          {
+            "name": "포스터.html"
+          },
+          {
+            "name": "계산기.html"
+          },
+          {
+            "name": "테트리스.html"
+          },
+          {
+            "name": "practice_files",
+            "folder": true
+          }
         ],
         "terminal": {
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "turns": [
-            { "role": "user", "text": "현재 폴더에 테트리스 파일 찾아서 실행해줘", "badge": 1 },
-            { "role": "tool", "text": "Bash(dir *테트리스*)", "badge": 2 },
-            { "role": "assistant", "text": "테트리스.html을 찾아서 기본 브라우저로 열었어요." }
+            {
+              "role": "user",
+              "text": "현재 폴더에 테트리스 파일 찾아서 실행해줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(dir *테트리스*)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "테트리스.html을 찾아서 기본 브라우저로 열었어요."
+            }
           ],
-          "input": { "placeholder": "메시지를 입력하세요..." }
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
         }
       },
       "notes": [
-        { "n": 1, "head": "테트리스 파일 찾기·실행 요청", "body": "찾는 것과 실행하는 것을 한 줄로 함께 지시한다." },
-        { "n": 2, "head": "찾기 → 실행, 한 번에", "body": "dir로 파일을 찾고, 찾은 파일을 바로 실행한다." },
-        { "n": "!", "head": "브라우저에서 실행 확인", "body": "write 실습에서 만든 테트리스.html이 기본 브라우저로 그대로 실행된다." }
+        {
+          "n": 1,
+          "head": "테트리스 파일 찾기·실행 요청",
+          "body": "찾는 것과 실행하는 것을 한 줄로 함께 지시한다."
+        },
+        {
+          "n": 2,
+          "head": "찾기 → 실행, 한 번에",
+          "body": "dir로 파일을 찾고, 찾은 파일을 바로 실행한다."
+        },
+        {
+          "n": "!",
+          "head": "브라우저에서 실행 확인",
+          "body": "write 실습에서 만든 테트리스.html이 기본 브라우저로 그대로 실행된다."
+        }
       ],
       "action": {
         "label": "프롬프트 복사",
-        "items": [{ "kind": "copy", "value": "현재 폴더에 테트리스 파일 찾아서 실행해줘" }]
+        "items": [
+          {
+            "kind": "copy",
+            "value": "현재 폴더에 테트리스 파일 찾아서 실행해줘"
+          }
+        ]
       }
     },
     {
@@ -234,13 +521,42 @@
       "template": "cards",
       "title": "바탕화면 위젯 만들기",
       "cards": [
-        { "label": "캐릭터 디자인", "logo": "icon:Zap", "tags": ["SVG로 그린 슬라임 모양"] },
-        { "label": "표시 위치", "logo": "icon:Folder", "tags": ["바탕화면에 항상 떠 있음"] },
-        { "label": "동작", "logo": "icon:Click", "tags": ["마우스로 집고", "놓으면 중력 적용"] },
-        { "label": "종료", "logo": "icon:Lock", "tags": ["우클릭 또는 트레이 메뉴"] }
+        {
+          "label": "캐릭터 디자인",
+          "logo": "icon:Zap",
+          "tags": [
+            "SVG로 그린 슬라임 모양"
+          ]
+        },
+        {
+          "label": "표시 위치",
+          "logo": "icon:Folder",
+          "tags": [
+            "바탕화면에 항상 떠 있음"
+          ]
+        },
+        {
+          "label": "동작",
+          "logo": "icon:Click",
+          "tags": [
+            "마우스로 집고",
+            "놓으면 중력 적용"
+          ]
+        },
+        {
+          "label": "종료",
+          "logo": "icon:Lock",
+          "tags": [
+            "우클릭 또는 트레이 메뉴"
+          ]
+        }
       ],
       "notes": [
-        { "n": "!", "head": "한 줄에 다 담긴 요청", "body": "요청 하나가 디자인·코딩·실행까지 전부를 담고 있다." }
+        {
+          "n": "!",
+          "head": "한 줄에 다 담긴 요청",
+          "body": "요청 하나가 디자인·코딩·실행까지 전부를 담고 있다."
+        }
       ],
       "action": {
         "label": "프롬프트 복사",
@@ -258,9 +574,21 @@
       "title": "바탕화면 위젯 동작 확인",
       "illustration": "desktop-slime-widget",
       "notes": [
-        { "n": 1, "head": "클릭한 채 끌어 올리면", "body": "슬라임이 손을 따라온다." },
-        { "n": 2, "head": "놓으면 중력으로 툭!", "body": "붙잡았던 손을 놓으면 아래로 떨어진다." },
-        { "n": 3, "head": "우클릭 메뉴에서도 종료", "body": "슬라임을 우클릭하면 메뉴에서 바로 종료된다." }
+        {
+          "n": 1,
+          "head": "클릭한 채 끌어 올리면",
+          "body": "슬라임이 손을 따라온다."
+        },
+        {
+          "n": 2,
+          "head": "놓으면 중력으로 툭!",
+          "body": "붙잡았던 손을 놓으면 아래로 떨어진다."
+        },
+        {
+          "n": 3,
+          "head": "우클릭 메뉴에서도 종료",
+          "body": "슬라임을 우클릭하면 메뉴에서 바로 종료된다."
+        }
       ]
     },
     {
@@ -273,22 +601,48 @@
           "kind": "vscode",
           "folder": "agent1",
           "files": [
-            { "name": "자기소개서.txt" },
-            { "name": "강아지.svg" },
-            { "name": "포스터.html" },
-            { "name": "계산기.html" },
-            { "name": "테트리스.html" },
-            { "name": "practice_files", "folder": true }
+            {
+              "name": "자기소개서.txt"
+            },
+            {
+              "name": "강아지.svg"
+            },
+            {
+              "name": "포스터.html"
+            },
+            {
+              "name": "계산기.html"
+            },
+            {
+              "name": "테트리스.html"
+            },
+            {
+              "name": "practice_files",
+              "folder": true
+            }
           ],
           "terminal": {
             "vendor": "claude",
             "cwd": "C:\\agent1",
             "turns": [
-              { "role": "user", "text": "현재 컴퓨터 사양과 현재 GPU 온도 등을 조사해서 설명해줘", "badge": 1 },
-              { "role": "tool", "text": "Bash(시스템 정보 조회)", "badge": 2 },
-              { "role": "assistant", "text": "CPU·메모리·GPU 정보를 확인했습니다." }
+              {
+                "role": "user",
+                "text": "현재 컴퓨터 사양과 현재 GPU 온도 등을 조사해서 설명해줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "Bash(시스템 정보 조회)",
+                "badge": 2
+              },
+              {
+                "role": "assistant",
+                "text": "CPU·메모리·GPU 정보를 확인했습니다."
+              }
             ],
-            "input": { "placeholder": "메시지를 입력하세요..." }
+            "input": {
+              "placeholder": "메시지를 입력하세요..."
+            }
           }
         }
       },
@@ -300,19 +654,39 @@
             "vendor": "shell",
             "cwd": "C:\\agent1",
             "turns": [
-              { "role": "assistant", "text": "CPU         ○○○○○○ (모델명)\n메모리       ○○ GB\nGPU         ○○○○○○\nGPU 온도     ○○ °C\n\n# 실제 사양·온도는 컴퓨터마다 다릅니다" }
+              {
+                "role": "assistant",
+                "text": "CPU         ○○○○○○ (모델명)\n메모리       ○○ GB\nGPU         ○○○○○○\nGPU 온도     ○○ °C\n\n# 실제 사양·온도는 컴퓨터마다 다릅니다"
+              }
             ]
           }
         }
       },
       "notes": [
-        { "n": 1, "head": "사양과 GPU 온도 조사 요청", "body": "\"컴퓨터 사양과 GPU 온도를 조사해서 설명해줘\"라고 지시한다." },
-        { "n": 2, "head": "시스템 정보 조회 명령을 실행", "body": "CPU·메모리·GPU 정보를 확인하는 명령을 직접 실행한다." },
-        { "n": "!", "head": "컴퓨터마다 다른 결과", "body": "실제 사양·온도는 컴퓨터마다 다르며, 화면의 값은 예시 형태다." }
+        {
+          "n": 1,
+          "head": "사양과 GPU 온도 조사 요청",
+          "body": "\"컴퓨터 사양과 GPU 온도를 조사해서 설명해줘\"라고 지시한다."
+        },
+        {
+          "n": 2,
+          "head": "시스템 정보 조회 명령을 실행",
+          "body": "CPU·메모리·GPU 정보를 확인하는 명령을 직접 실행한다."
+        },
+        {
+          "n": "!",
+          "head": "컴퓨터마다 다른 결과",
+          "body": "실제 사양·온도는 컴퓨터마다 다르며, 화면의 값은 예시 형태다."
+        }
       ],
       "action": {
         "label": "프롬프트 복사",
-        "items": [{ "kind": "copy", "value": "현재 컴퓨터 사양과 현재 GPU 온도 등을 조사해서 설명해줘" }]
+        "items": [
+          {
+            "kind": "copy",
+            "value": "현재 컴퓨터 사양과 현재 GPU 온도 등을 조사해서 설명해줘"
+          }
+        ]
       }
     },
     {
@@ -325,38 +699,86 @@
           "kind": "vscode",
           "folder": "agent1",
           "files": [
-            { "name": "자기소개서.txt" },
-            { "name": "강아지.svg" },
-            { "name": "포스터.html" },
-            { "name": "계산기.html" },
-            { "name": "테트리스.html" },
-            { "name": "capture.jpg" },
-            { "name": "practice_files", "folder": true }
+            {
+              "name": "자기소개서.txt"
+            },
+            {
+              "name": "강아지.svg"
+            },
+            {
+              "name": "포스터.html"
+            },
+            {
+              "name": "계산기.html"
+            },
+            {
+              "name": "테트리스.html"
+            },
+            {
+              "name": "capture.jpg"
+            },
+            {
+              "name": "practice_files",
+              "folder": true
+            }
           ],
           "terminal": {
             "vendor": "claude",
             "cwd": "C:\\agent1",
             "turns": [
-              { "role": "user", "text": "현재 컴퓨터에 연결된 웹캠 인식해볼래? 그걸로 지금 뭐가 보이는지 캡처해서 설명해봐", "badge": 1 },
-              { "role": "tool", "text": "Bash(웹캠 인식 → 사진 촬영 → capture.jpg 저장)", "badge": 2 },
-              { "role": "assistant", "text": "Read(capture.jpg)로 지금 보이는 걸 확인했어요." }
+              {
+                "role": "user",
+                "text": "현재 컴퓨터에 연결된 웹캠 인식해볼래? 그걸로 지금 뭐가 보이는지 캡처해서 설명해봐",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "Bash(웹캠 인식 → 사진 촬영 → capture.jpg 저장)",
+                "badge": 2
+              },
+              {
+                "role": "assistant",
+                "text": "Read(capture.jpg)로 지금 보이는 걸 확인했어요."
+              }
             ],
-            "input": { "placeholder": "메시지를 입력하세요..." }
+            "input": {
+              "placeholder": "메시지를 입력하세요..."
+            }
           }
         }
       },
       "right": {
         "label": "capture.jpg",
-        "screen": { "kind": "shot", "src": "/shots/bash-webcam.png" }
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/bash-webcam.png"
+        }
       },
       "notes": [
-        { "n": 1, "head": "웹캠 인식 + 캡처 + 설명 요청", "body": "웹캠을 인식해서 캡처하고 설명해달라고 지시한다." },
-        { "n": 2, "head": "Bash로 찍고, Read로 봄", "body": "Bash로 사진을 찍어 저장하고, Read로 그 사진을 연다." },
-        { "n": "!", "head": "한 가지 일에 두 개의 툴", "body": "찍는 것과 보는 것을 위해 두 개의 툴이 이어졌다." }
+        {
+          "n": 1,
+          "head": "웹캠 인식 + 캡처 + 설명 요청",
+          "body": "웹캠을 인식해서 캡처하고 설명해달라고 지시한다."
+        },
+        {
+          "n": 2,
+          "head": "Bash로 찍고, Read로 봄",
+          "body": "Bash로 사진을 찍어 저장하고, Read로 그 사진을 연다."
+        },
+        {
+          "n": "!",
+          "head": "한 가지 일에 두 개의 툴",
+          "body": "찍는 것과 보는 것을 위해 두 개의 툴이 이어졌다."
+        }
       ],
       "action": {
         "label": "프롬프트 복사",
-        "items": [{ "kind": "copy", "value": "현재 컴퓨터에 연결된 웹캠 인식해볼래? 그걸로 지금 뭐가 보이는지 캡처해서 설명해봐" }]
+        "items": [
+          {
+            "kind": "copy",
+            "value": "현재 컴퓨터에 연결된 웹캠 인식해볼래? 그걸로 지금 뭐가 보이는지 캡처해서 설명해봐"
+          }
+        ]
       }
     },
     {
@@ -364,31 +786,101 @@
       "template": "cards",
       "title": "네 가지 툴의 조합",
       "cards": [
-        { "label": "READ", "logo": "icon:Read", "tags": ["파일 안의 내용을 직접 열어봄"] },
-        { "label": "WRITE", "logo": "icon:Write", "tags": ["새 파일을 만들어냄"] },
-        { "label": "EDIT", "logo": "icon:Edit", "tags": ["기존 파일 내용을 바꿔 넣음"] },
-        { "label": "BASH", "logo": "icon:Bash", "tags": ["컴퓨터에서 명령을 실행함"], "highlight": true }
+        {
+          "label": "READ",
+          "logo": "icon:Read",
+          "tags": [
+            "파일 안의 내용을 직접 열어봄"
+          ]
+        },
+        {
+          "label": "WRITE",
+          "logo": "icon:Write",
+          "tags": [
+            "새 파일을 만들어냄"
+          ]
+        },
+        {
+          "label": "EDIT",
+          "logo": "icon:Edit",
+          "tags": [
+            "기존 파일 내용을 바꿔 넣음"
+          ]
+        },
+        {
+          "label": "BASH",
+          "logo": "icon:Bash",
+          "tags": [
+            "컴퓨터에서 명령을 실행함"
+          ],
+          "highlight": true
+        }
       ],
       "notes": [
-        { "n": 1, "head": "한 작업에 네 툴 모두", "body": "예 — 먼저 읽고 새로 만들고 고치고 실행까지 이어질 수 있다." },
-        { "n": "!", "head": "상황에 맞게 골라 이어 씀", "body": "오늘 배운 네 가지를 상황에 맞게 알아서 골라 이어 쓴다." }
+        {
+          "n": 1,
+          "head": "한 작업에 네 툴 모두",
+          "body": "예 — 먼저 읽고 새로 만들고 고치고 실행까지 이어질 수 있다."
+        },
+        {
+          "n": "!",
+          "head": "상황에 맞게 골라 이어 씀",
+          "body": "오늘 배운 네 가지를 상황에 맞게 알아서 골라 이어 쓴다."
+        }
       ]
     },
     {
       "id": "s2-bash-13",
       "template": "table",
       "title": "AI가 쓰는 대표 명령어",
-      "columns": ["기능", "명령어"],
+      "columns": [
+        "기능",
+        "명령어"
+      ],
       "rows": [
-        { "cells": ["목록 보기", "ls / dir"] },
-        { "cells": ["폴더 이동", "cd"] },
-        { "cells": ["폴더 만들기", "mkdir"] },
-        { "cells": ["파일 복사", "copy / cp"] },
-        { "cells": ["이름 바꾸기 · 이동", "move / mv"] },
-        { "cells": ["실행하기", "start / open, python"] }
+        {
+          "cells": [
+            "목록 보기",
+            "ls / dir"
+          ]
+        },
+        {
+          "cells": [
+            "폴더 이동",
+            "cd"
+          ]
+        },
+        {
+          "cells": [
+            "폴더 만들기",
+            "mkdir"
+          ]
+        },
+        {
+          "cells": [
+            "파일 복사",
+            "copy / cp"
+          ]
+        },
+        {
+          "cells": [
+            "이름 바꾸기 · 이동",
+            "move / mv"
+          ]
+        },
+        {
+          "cells": [
+            "실행하기",
+            "start / open, python"
+          ]
+        }
       ],
       "notes": [
-        { "n": "!", "head": "외울 필요 없음", "body": "외울 필요는 없다 — 알아두면 Claude가 뭘 하는지 읽힌다." }
+        {
+          "n": "!",
+          "head": "외울 필요 없음",
+          "body": "외울 필요는 없다 — 알아두면 Claude가 뭘 하는지 읽힌다."
+        }
       ]
     },
     {
@@ -396,17 +888,51 @@
       "template": "cards",
       "title": "Bash 툴 정리",
       "cards": [
-        { "label": "명령 실행", "logo": "icon:Terminal", "tags": ["터미널 명령어를 AI가 대신 씀"] },
-        { "label": "컴퓨터 전체", "logo": "icon:Cpu", "tags": ["파일 안이 아니라 컴퓨터 자체를 다룸"] },
-        { "label": "설치·실행·조회", "logo": "icon:Settings", "tags": ["새 프로그램 설치부터 시스템 조회까지"] },
-        { "label": "툴 연결", "logo": "icon:Zap", "tags": ["다른 툴과 이어져 하나의 일을 해냄"], "highlight": true }
+        {
+          "label": "명령 실행",
+          "logo": "icon:Terminal",
+          "tags": [
+            "터미널 명령어를 AI가 대신 씀"
+          ]
+        },
+        {
+          "label": "컴퓨터 전체",
+          "logo": "icon:Cpu",
+          "tags": [
+            "파일 안이 아니라 컴퓨터 자체를 다룸"
+          ]
+        },
+        {
+          "label": "설치·실행·조회",
+          "logo": "icon:Settings",
+          "tags": [
+            "새 프로그램 설치부터 시스템 조회까지"
+          ]
+        },
+        {
+          "label": "툴 연결",
+          "logo": "icon:Zap",
+          "tags": [
+            "다른 툴과 이어져 하나의 일을 해냄"
+          ],
+          "highlight": true
+        }
       ],
       "notes": [
-        { "n": "!", "head": "가장 강력한 툴", "body": "컴퓨터를 직접 다루는 힘 — 오늘 배운 것 중 가장 강력한 툴이다." }
+        {
+          "n": "!",
+          "head": "가장 강력한 툴",
+          "body": "컴퓨터를 직접 다루는 힘 — 오늘 배운 것 중 가장 강력한 툴이다."
+        }
       ],
       "action": {
-        "label": "프롬프트 복사",
-        "items": [{ "kind": "copy", "value": "/clear" }]
+        "label": "명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/clear"
+          }
+        ]
       }
     }
   ]

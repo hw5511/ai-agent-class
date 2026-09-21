@@ -14,7 +14,10 @@
           "url": "example.com/dashboard",
           "page": {
             "heading": "로그인이 필요합니다",
-            "lines": ["이 페이지는 로그인 후에만 보입니다.", "여기서 그대로 멈춘다."]
+            "lines": [
+              "이 페이지는 로그인 후에만 보입니다.",
+              "여기서 그대로 멈춘다."
+            ]
           }
         }
       },
@@ -25,14 +28,25 @@
           "url": "example.com/dashboard",
           "page": {
             "heading": "대시보드",
-            "lines": ["환영합니다, student 님", "최근 활동 3건"],
+            "lines": [
+              "환영합니다, student 님",
+              "최근 활동 3건"
+            ],
             "button": "로그아웃"
           }
         }
       },
       "notes": [
-        { "n": 1, "head": "웹서치 = 정적 텍스트", "body": "로그인 뒤 화면·동적으로 그려지는 페이지는 읽지 못하고 벽 앞에서 멈춘다." },
-        { "n": 2, "head": "브라우저 조작 = 직접 클릭", "body": "Claude in Chrome 은 진짜 브라우저를 눌러서 로그인 벽 너머까지 들어간다." }
+        {
+          "n": 1,
+          "head": "웹서치 = 정적 텍스트",
+          "body": "로그인 뒤 화면·동적으로 그려지는 페이지는 읽지 못하고 벽 앞에서 멈춘다."
+        },
+        {
+          "n": 2,
+          "head": "브라우저 조작 = 직접 클릭",
+          "body": "Claude in Chrome 은 진짜 브라우저를 눌러서 로그인 벽 너머까지 들어간다."
+        }
       ]
     },
     {
@@ -40,14 +54,37 @@
       "template": "flow",
       "title": "브라우저를 쥔 AI",
       "steps": [
-        { "label": "탭 열기", "sub": "화면 인식", "logo": "icon:Folder", "badge": 1 },
-        { "label": "클릭", "logo": "icon:Click", "badge": 2 },
-        { "label": "입력", "logo": "icon:Keyboard" },
-        { "label": "스크롤", "logo": "icon:Globe" }
+        {
+          "label": "탭 열기",
+          "sub": "화면 인식",
+          "logo": "icon:Folder",
+          "badge": 1
+        },
+        {
+          "label": "클릭",
+          "logo": "icon:Click",
+          "badge": 2
+        },
+        {
+          "label": "입력",
+          "logo": "icon:Keyboard"
+        },
+        {
+          "label": "스크롤",
+          "logo": "icon:Globe"
+        }
       ],
       "notes": [
-        { "n": 1, "head": "직접 브라우저를 쥔다", "body": "화면을 읽는 게 아니라 진짜 크롬 창을 열고 조작한다." },
-        { "n": 2, "head": "탭을 열고 클릭한다", "body": "탭 전환·클릭·입력·스크롤을 사람처럼 직접 실행한다." }
+        {
+          "n": 1,
+          "head": "직접 브라우저를 쥔다",
+          "body": "화면을 읽는 게 아니라 진짜 크롬 창을 열고 조작한다."
+        },
+        {
+          "n": 2,
+          "head": "탭을 열고 클릭한다",
+          "body": "탭 전환·클릭·입력·스크롤을 사람처럼 직접 실행한다."
+        }
       ]
     },
     {
@@ -59,13 +96,25 @@
         "src": "/shots/chrome_소개_페이지.png"
       },
       "notes": [
-        { "n": 1, "head": "소개 페이지 접속", "body": "claude.com/claude-in-chrome 에서 확장의 역할을 확인한다." },
-        { "n": 2, "head": "Add to Chrome 버튼", "body": "이 버튼이 크롬 웹스토어 설치 페이지로 이어진다." }
+        {
+          "n": 1,
+          "head": "소개 페이지 접속",
+          "body": "claude.com/claude-in-chrome 에서 확장의 역할을 확인한다."
+        },
+        {
+          "n": 2,
+          "head": "Add to Chrome 버튼",
+          "body": "이 버튼이 크롬 웹스토어 설치 페이지로 이어진다."
+        }
       ],
       "action": {
         "label": "페이지 열기",
         "items": [
-          { "kind": "link", "href": "https://claude.com/claude-in-chrome", "text": "claude.com/claude-in-chrome" }
+          {
+            "kind": "link",
+            "href": "https://claude.com/claude-in-chrome",
+            "text": "claude.com/claude-in-chrome"
+          }
         ]
       }
     },
@@ -78,13 +127,25 @@
         "src": "/shots/chrome_웹스토어.png"
       },
       "notes": [
-        { "n": 1, "head": "크롬 웹스토어 진입", "body": "Add to Chrome 을 누르면 이 페이지로 온다." },
-        { "n": 2, "head": "Chrome에 추가", "body": "버튼을 누르고 확인 팝업까지 승인해야 설치가 끝난다." }
+        {
+          "n": 1,
+          "head": "크롬 웹스토어 진입",
+          "body": "Add to Chrome 을 누르면 이 페이지로 온다."
+        },
+        {
+          "n": 2,
+          "head": "Chrome에 추가",
+          "body": "버튼을 누르고 확인 팝업까지 승인해야 설치가 끝난다."
+        }
       ],
       "action": {
         "label": "페이지 열기",
         "items": [
-          { "kind": "link", "href": "https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn", "text": "크롬 웹스토어 · Claude" }
+          {
+            "kind": "link",
+            "href": "https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn",
+            "text": "크롬 웹스토어 · Claude"
+          }
         ]
       }
     },
@@ -97,13 +158,24 @@
         "url": "Claude 확장 팝업",
         "page": {
           "heading": "Claude 로그인",
-          "lines": ["Claude Code 와 같은 계정으로", "로그인해야 연결된다."],
+          "lines": [
+            "Claude Code 와 같은 계정으로",
+            "로그인해야 연결된다."
+          ],
           "button": "로그인"
         }
       },
       "notes": [
-        { "n": 1, "head": "확장 아이콘 클릭", "body": "설치 후 툴바의 Claude 아이콘을 누르면 팝업이 뜬다." },
-        { "n": 2, "head": "계정으로 로그인", "body": "Claude Code 와 같은 계정으로 로그인해야 연결된다." }
+        {
+          "n": 1,
+          "head": "확장 아이콘 클릭",
+          "body": "설치 후 툴바의 Claude 아이콘을 누르면 팝업이 뜬다."
+        },
+        {
+          "n": 2,
+          "head": "계정으로 로그인",
+          "body": "Claude Code 와 같은 계정으로 로그인해야 연결된다."
+        }
       ]
     },
     {
@@ -111,14 +183,41 @@
       "template": "flow",
       "title": "크롬 전부 껐다 켜기",
       "steps": [
-        { "label": "여러 창 열림", "sub": "설치 직후 기존 창들", "logo": "icon:Folder", "badge": 1 },
-        { "label": "완전 종료", "sub": "트레이 아이콘에서", "logo": "icon:Terminal", "badge": 2 },
-        { "label": "다시 실행", "sub": "확장 반영", "logo": "icon:Zap", "badge": 3 }
+        {
+          "label": "여러 창 열림",
+          "sub": "설치 직후 기존 창들",
+          "logo": "icon:Folder",
+          "badge": 1
+        },
+        {
+          "label": "완전 종료",
+          "sub": "트레이 아이콘에서",
+          "logo": "icon:Terminal",
+          "badge": 2
+        },
+        {
+          "label": "다시 실행",
+          "sub": "확장 반영",
+          "logo": "icon:Zap",
+          "badge": 3
+        }
       ],
       "notes": [
-        { "n": 1, "head": "여러 창이 열려 있음", "body": "설치 직후에는 기존 크롬 창들이 그대로 떠 있다." },
-        { "n": 2, "head": "작업 표시줄에서 완전 종료", "body": "창을 닫는 것만으로는 부족하다 — 트레이 아이콘에서 완전히 끝낸다." },
-        { "n": 3, "head": "크롬 다시 실행", "body": "새로 켜야 방금 설치한 확장이 반영된다." }
+        {
+          "n": 1,
+          "head": "여러 창이 열려 있음",
+          "body": "설치 직후에는 기존 크롬 창들이 그대로 떠 있다."
+        },
+        {
+          "n": 2,
+          "head": "작업 표시줄에서 완전 종료",
+          "body": "창을 닫는 것만으로는 부족하다 — 트레이 아이콘에서 완전히 끝낸다."
+        },
+        {
+          "n": 3,
+          "head": "크롬 다시 실행",
+          "body": "새로 켜야 방금 설치한 확장이 반영된다."
+        }
       ]
     },
     {
@@ -133,22 +232,52 @@
           "vendor": "shell",
           "cwd": "C:\\Users\\student\\에이전트1",
           "turns": [
-            { "role": "user", "text": "^C", "badge": 1 },
-            { "role": "user", "text": "^C" },
-            { "role": "user", "text": "claude --dangerously-skip-permissions", "badge": 2 },
-            { "role": "user", "text": "claude --dangerously-skip-permissions --chrome", "badge": 3 }
+            {
+              "role": "user",
+              "text": "^C",
+              "badge": 1
+            },
+            {
+              "role": "user",
+              "text": "^C"
+            },
+            {
+              "role": "user",
+              "text": "claude --dangerously-skip-permissions",
+              "badge": 2
+            },
+            {
+              "role": "user",
+              "text": "claude --dangerously-skip-permissions --chrome",
+              "badge": 3
+            }
           ]
         }
       },
       "notes": [
-        { "n": 1, "head": "Ctrl+C 두 번", "body": "claude 세션을 완전히 종료한다." },
-        { "n": 2, "head": "위쪽 방향키", "body": "직전 명령 claude --dangerously-skip-permissions 를 그대로 불러온다." },
-        { "n": 3, "head": "--chrome 붙이고 실행", "body": "뒤에 --chrome 을 붙여 크롬 확장과 연결된 세션으로 켠다." }
+        {
+          "n": 1,
+          "head": "Ctrl+C 두 번",
+          "body": "claude 세션을 완전히 종료한다."
+        },
+        {
+          "n": 2,
+          "head": "위쪽 방향키",
+          "body": "직전 명령 claude --dangerously-skip-permissions 를 그대로 불러온다."
+        },
+        {
+          "n": 3,
+          "head": "--chrome 붙이고 실행",
+          "body": "뒤에 --chrome 을 붙여 크롬 확장과 연결된 세션으로 켠다."
+        }
       ],
       "action": {
-        "label": "터미널에 입력",
+        "label": "명령어 복사",
         "items": [
-          { "kind": "copy", "value": "claude --dangerously-skip-permissions --chrome" }
+          {
+            "kind": "copy",
+            "value": "claude --dangerously-skip-permissions --chrome"
+          }
         ]
       }
     },
@@ -164,21 +293,46 @@
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "turns": [
-            { "role": "user", "text": "/chrome", "badge": 1 },
-            { "role": "assistant", "text": "Status: Enabled", "badge": 2 },
-            { "role": "assistant", "text": "Extension: Installed" },
-            { "role": "assistant", "text": "Browser / Select browser…" }
+            {
+              "role": "user",
+              "text": "/chrome",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "Status: Enabled",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "Extension: Installed"
+            },
+            {
+              "role": "assistant",
+              "text": "Browser / Select browser…"
+            }
           ]
         }
       },
       "notes": [
-        { "n": 1, "head": "/chrome 명령", "body": "--chrome 으로 켠 세션에서 /chrome 을 입력해 연결 상태를 본다." },
-        { "n": 2, "head": "Status: Enabled 확인", "body": "Enabled 로 나와야 확장이 실제로 붙은 것이다." }
+        {
+          "n": 1,
+          "head": "/chrome 명령",
+          "body": "--chrome 으로 켠 세션에서 /chrome 을 입력해 연결 상태를 본다."
+        },
+        {
+          "n": 2,
+          "head": "Status: Enabled 확인",
+          "body": "Enabled 로 나와야 확장이 실제로 붙은 것이다."
+        }
       ],
       "action": {
-        "label": "터미널에 입력",
+        "label": "명령어 복사",
         "items": [
-          { "kind": "copy", "value": "/chrome" }
+          {
+            "kind": "copy",
+            "value": "/chrome"
+          }
         ]
       }
     },
@@ -191,18 +345,33 @@
         "url": "claude.ai/chrome/installed",
         "page": {
           "heading": "확장 설치 확인",
-          "lines": ["Claude in Chrome 이 설치되어 있습니다.", "아래에 실습용 챌린지가 이어진다."],
+          "lines": [
+            "Claude in Chrome 이 설치되어 있습니다.",
+            "아래에 실습용 챌린지가 이어진다."
+          ],
           "button": "챌린지 시작"
         }
       },
       "notes": [
-        { "n": 1, "head": "설치 확인 페이지", "body": "claude.ai/chrome/installed 로 확장이 붙었는지 확인한다." },
-        { "n": 2, "head": "챌린지 목록 등장", "body": "이 페이지 아래에 실습용 챌린지가 이어진다." }
+        {
+          "n": 1,
+          "head": "설치 확인 페이지",
+          "body": "claude.ai/chrome/installed 로 확장이 붙었는지 확인한다."
+        },
+        {
+          "n": 2,
+          "head": "챌린지 목록 등장",
+          "body": "이 페이지 아래에 실습용 챌린지가 이어진다."
+        }
       ],
       "action": {
         "label": "페이지 열기",
         "items": [
-          { "kind": "link", "href": "https://claude.ai/chrome/installed", "text": "claude.ai/chrome/installed" }
+          {
+            "kind": "link",
+            "href": "https://claude.ai/chrome/installed",
+            "text": "claude.ai/chrome/installed"
+          }
         ]
       }
     },
@@ -211,13 +380,43 @@
       "template": "cards",
       "title": "claude 탭 그룹",
       "cards": [
-        { "label": "claude.ai/chrome/installed", "logo": "icon:Globe", "tags": ["Claude 자동 열림"], "highlight": true, "badge": 1 },
-        { "label": "챌린지 페이지", "logo": "icon:Globe", "tags": ["Claude 자동 열림"], "highlight": true },
-        { "label": "내가 연 탭", "logo": "icon:Globe", "tags": ["일반 탭"], "badge": 2 }
+        {
+          "label": "claude.ai/chrome/installed",
+          "logo": "icon:Globe",
+          "tags": [
+            "Claude 자동 열림"
+          ],
+          "highlight": true,
+          "badge": 1
+        },
+        {
+          "label": "챌린지 페이지",
+          "logo": "icon:Globe",
+          "tags": [
+            "Claude 자동 열림"
+          ],
+          "highlight": true
+        },
+        {
+          "label": "내가 연 탭",
+          "logo": "icon:Globe",
+          "tags": [
+            "일반 탭"
+          ],
+          "badge": 2
+        }
       ],
       "notes": [
-        { "n": 1, "head": "탭 그룹으로 구분", "body": "Claude 가 직접 연 탭은 색깔 있는 탭 그룹으로 묶여 눈에 띈다." },
-        { "n": 2, "head": "무슨 탭인지 한눈에", "body": "여러 탭을 열어도 어떤 게 자동으로 열린 건지 바로 구분된다." }
+        {
+          "n": 1,
+          "head": "탭 그룹으로 구분",
+          "body": "Claude 가 직접 연 탭은 색깔 있는 탭 그룹으로 묶여 눈에 띈다."
+        },
+        {
+          "n": 2,
+          "head": "무슨 탭인지 한눈에",
+          "body": "여러 탭을 열어도 어떤 게 자동으로 열린 건지 바로 구분된다."
+        }
       ]
     },
     {
@@ -229,12 +428,23 @@
         "url": "claude.ai/chrome/installed",
         "page": {
           "heading": "챌린지 2 완료",
-          "lines": ["두 번째 실습을 통과했습니다.", "성공 표시가 나타난다."]
+          "lines": [
+            "두 번째 실습을 통과했습니다.",
+            "성공 표시가 나타난다."
+          ]
         }
       },
       "notes": [
-        { "n": 1, "head": "챌린지 2번 실행", "body": "설치 확인 페이지가 안내하는 두 번째 실습을 그대로 따라 한다." },
-        { "n": 2, "head": "성공 표시 확인", "body": "완료되면 성공 표시가 뜬다 — 그걸로 확장이 실제로 동작함을 확인한다." }
+        {
+          "n": 1,
+          "head": "챌린지 2번 실행",
+          "body": "설치 확인 페이지가 안내하는 두 번째 실습을 그대로 따라 한다."
+        },
+        {
+          "n": 2,
+          "head": "성공 표시 확인",
+          "body": "완료되면 성공 표시가 뜬다 — 그걸로 확장이 실제로 동작함을 확인한다."
+        }
       ]
     },
     {
@@ -246,12 +456,23 @@
         "url": "claude.ai/chrome/installed",
         "page": {
           "heading": "챌린지 3 완료",
-          "lines": ["세 번째 실습까지 통과했습니다.", "조작 범위를 넓혀 확인했다."]
+          "lines": [
+            "세 번째 실습까지 통과했습니다.",
+            "조작 범위를 넓혀 확인했다."
+          ]
         }
       },
       "notes": [
-        { "n": 1, "head": "챌린지 3번 실행", "body": "세 번째 실습까지 마쳐 조작 범위를 넓혀 확인한다." },
-        { "n": 2, "head": "성공 표시 확인", "body": "완료 표시로 실습이 끝났음을 확인한다." }
+        {
+          "n": 1,
+          "head": "챌린지 3번 실행",
+          "body": "세 번째 실습까지 마쳐 조작 범위를 넓혀 확인한다."
+        },
+        {
+          "n": 2,
+          "head": "성공 표시 확인",
+          "body": "완료 표시로 실습이 끝났음을 확인한다."
+        }
       ]
     },
     {
@@ -263,13 +484,24 @@
         "url": "mail.google.com/mail/u/0/#inbox?compose=new",
         "page": {
           "heading": "새 메일",
-          "lines": ["받는사람: me@gmail.com", "제목: (제목 없음)"],
+          "lines": [
+            "받는사람: me@gmail.com",
+            "제목: (제목 없음)"
+          ],
           "button": "보내기"
         }
       },
       "notes": [
-        { "n": 1, "head": "실제 서비스로 확장", "body": "설치 확인 페이지를 넘어 진짜 쓰는 서비스(Gmail)로 넘어간다." },
-        { "n": 2, "head": "편지쓰기 화면 열기", "body": "Claude 가 직접 Gmail 을 열고 편지쓰기 창까지 띄운다." }
+        {
+          "n": 1,
+          "head": "실제 서비스로 확장",
+          "body": "설치 확인 페이지를 넘어 진짜 쓰는 서비스(Gmail)로 넘어간다."
+        },
+        {
+          "n": 2,
+          "head": "편지쓰기 화면 열기",
+          "body": "Claude 가 직접 Gmail 을 열고 편지쓰기 창까지 띄운다."
+        }
       ]
     },
     {
@@ -281,13 +513,24 @@
         "url": "mail.google.com/mail/u/0/#sent",
         "page": {
           "heading": "메일을 보냈습니다",
-          "lines": ["받는사람: me@gmail.com", "제목: 나에게 보내기 테스트"],
+          "lines": [
+            "받는사람: me@gmail.com",
+            "제목: 나에게 보내기 테스트"
+          ],
           "button": "받은편지함 보기"
         }
       },
       "notes": [
-        { "n": 1, "head": "직접 입력하고 전송", "body": "받는 사람·제목·본문을 채우고 보내기 버튼까지 직접 누른다." },
-        { "n": 2, "head": "발송 완료 확인", "body": "받은편지함에서 실제로 도착했는지 확인하면 실습이 끝난다." }
+        {
+          "n": 1,
+          "head": "직접 입력하고 전송",
+          "body": "받는 사람·제목·본문을 채우고 보내기 버튼까지 직접 누른다."
+        },
+        {
+          "n": 2,
+          "head": "발송 완료 확인",
+          "body": "받은편지함에서 실제로 도착했는지 확인하면 실습이 끝난다."
+        }
       ]
     }
   ]

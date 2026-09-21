@@ -17,10 +17,14 @@ export function AgentTerminal({ t, className }: { t: Terminal; className?: strin
           {t.turns.map((turn, i) => (
             <Row key={i} gutter={hasBadges} badge={turn.badge}>
               {shell ? (
-                <span>
-                  <span className="text-[#767c81]">PS {t.cwd ?? "C:\\"}&gt; </span>
-                  {turn.text}
-                </span>
+                turn.role === "user" ? (
+                  <span className="break-all">
+                    <span className="text-[#767c81]">{t.prompt ? `${t.prompt} ` : `PS ${t.cwd ?? "C:\\"}> `}</span>
+                    {turn.text}
+                  </span>
+                ) : (
+                  <span className={cn("break-all", turn.role === "tool" ? "rounded bg-[#1d3a57] px-1 font-bold text-[#cfe6ff]" : "text-[#b8bcc0]")}>{turn.text}</span>
+                )
               ) : (
                 <span className={cn("flex gap-3", turn.role === "user" && "text-[#8b9095]")}>
                   <span className="shrink-0">{turn.role === "user" ? ">" : "●"}</span>

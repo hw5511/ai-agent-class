@@ -65,3 +65,9 @@ Screens also include `chat` (`app`, `logo?`, `messages`) and `browser` (`url`, `
   the lecture slides.
 - First choice: the illustration the original deck already had (`_archive/stepNN-svg/*.svg`), cut out as its
   own SVG with the deck's blue swapped to the accent `#1273c4` and the font to Pretendard.
+
+## Action box (CEO 2026-09-21)
+
+Only three uses: **download a file**, **open a link** (link icon), **copy a prompt or a command**.
+Never a key press (Enter, arrows, Ctrl+C, Shift+Tab, Ctrl+J), never a bare folder/file name — those belong
+in the notes. One line per item; longer values are cut off with an ellipsis and still copy in full.

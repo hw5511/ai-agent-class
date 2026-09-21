@@ -58,7 +58,11 @@
           "kind": "browser",
           "url": "ai트렌드 최근 뉴스",
           "results": [
-            { "site": "example.com", "title": "검색 결과 제목", "snippet": "제목·요약·출처가 함께 온다." }
+            {
+              "site": "example.com",
+              "title": "검색 결과 제목",
+              "snippet": "제목·요약·출처가 함께 온다."
+            }
           ]
         }
       },
@@ -69,7 +73,10 @@
           "url": "https://example.com/article",
           "page": {
             "heading": "기사 본문",
-            "lines": ["특정 URL 페이지를 열어", "그 안의 내용을 그대로 읽어온다."]
+            "lines": [
+              "특정 URL 페이지를 열어",
+              "그 안의 내용을 그대로 읽어온다."
+            ]
           }
         }
       },

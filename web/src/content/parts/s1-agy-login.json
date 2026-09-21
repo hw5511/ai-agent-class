@@ -7,41 +7,89 @@
       "id": "s1-agy-login-01",
       "template": "screen",
       "title": "Google 로그인 방식 선택",
-      "screen": { "kind": "shot", "src": "/shots/agy_Google_로그인_선택.png" },
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/agy_Google_로그인_선택.png"
+      },
       "notes": [
-        { "n": 1, "head": "로그인 방법 목록에서 Google 선택", "body": "로그인 방법 목록이 뜨면 Google OAuth 를 고른다." },
-        { "n": 2, "head": "브라우저 자동 실행", "body": "여기부터는 터미널이 아니라 브라우저 화면에서 진행된다." }
+        {
+          "n": 1,
+          "head": "로그인 방법 목록에서 Google 선택",
+          "body": "로그인 방법 목록이 뜨면 Google OAuth 를 고른다."
+        },
+        {
+          "n": 2,
+          "head": "브라우저 자동 실행",
+          "body": "여기부터는 터미널이 아니라 브라우저 화면에서 진행된다."
+        }
       ]
     },
     {
       "id": "s1-agy-login-02",
       "template": "screen",
       "title": "Google 계정 선택",
-      "screen": { "kind": "shot", "src": "/shots/agy_Google_계정_선택.png" },
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/agy_Google_계정_선택.png"
+      },
       "notes": [
-        { "n": 1, "head": "본인 Google 계정 클릭", "body": "브라우저가 자동으로 열리면 실습에 쓸 계정을 선택한다." },
-        { "n": "!", "head": "권한 요청 내용 확인", "body": "Antigravity 가 요청하는 접근 권한을 확인하고 진행한다." }
+        {
+          "n": 1,
+          "head": "본인 Google 계정 클릭",
+          "body": "브라우저가 자동으로 열리면 실습에 쓸 계정을 선택한다."
+        },
+        {
+          "n": "!",
+          "head": "권한 요청 내용 확인",
+          "body": "Antigravity 가 요청하는 접근 권한을 확인하고 진행한다."
+        }
       ]
     },
     {
       "id": "s1-agy-login-03",
       "template": "screen",
       "title": "브라우저에서 Google 인증",
-      "screen": { "kind": "shot", "src": "/shots/agy_브라우저_인증.png" },
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/agy_브라우저_인증.png"
+      },
       "notes": [
-        { "n": 1, "head": "인증 완료 화면의 코드", "body": "로그인과 권한 승인이 끝나면 일회용 인증 코드가 뜬다. 코드는 사람마다 다르다." },
-        { "n": 2, "head": "코드를 클립보드에 복사", "body": "복사 버튼을 눌러 코드를 복사하고 터미널로 돌아갈 준비를 한다." }
+        {
+          "n": 1,
+          "head": "인증 완료 화면의 코드",
+          "body": "로그인과 권한 승인이 끝나면 일회용 인증 코드가 뜬다. 코드는 사람마다 다르다."
+        },
+        {
+          "n": 2,
+          "head": "코드를 클립보드에 복사",
+          "body": "복사 버튼을 눌러 코드를 복사하고 터미널로 돌아갈 준비를 한다."
+        }
       ]
     },
     {
       "id": "s1-agy-login-04",
       "template": "screen",
       "title": "인증 코드를 터미널에 입력",
-      "screen": { "kind": "shot", "src": "/shots/agy_인증_코드_입력.png" },
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/agy_인증_코드_입력.png"
+      },
       "notes": [
-        { "n": 1, "head": "복사한 코드를 붙여넣기", "body": "터미널 입력창에 복사한 코드를 붙여넣고 Enter 를 누른다." },
-        { "n": 2, "head": "로그인 성공 메시지 확인", "body": "성공 메시지가 뜨면 로그인이 끝난 것이다." },
-        { "n": "!", "head": "인증 코드는 노출 금지", "body": "실제 화면의 인증 코드는 캡처하거나 공유하지 않는다." }
+        {
+          "n": 1,
+          "head": "복사한 코드를 붙여넣기",
+          "body": "터미널 입력창에 복사한 코드를 붙여넣고 Enter 를 누른다."
+        },
+        {
+          "n": 2,
+          "head": "로그인 성공 메시지 확인",
+          "body": "성공 메시지가 뜨면 로그인이 끝난 것이다."
+        },
+        {
+          "n": "!",
+          "head": "인증 코드는 노출 금지",
+          "body": "실제 화면의 인증 코드는 캡처하거나 공유하지 않는다."
+        }
       ]
     }
   ]

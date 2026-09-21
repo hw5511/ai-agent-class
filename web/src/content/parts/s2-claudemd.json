@@ -11,8 +11,16 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [
-          { "name": ".claude", "folder": true, "active": true },
-          { "name": "CLAUDE.md", "depth": 1, "badge": 2 }
+          {
+            "name": ".claude",
+            "folder": true,
+            "active": true
+          },
+          {
+            "name": "CLAUDE.md",
+            "depth": 1,
+            "badge": 2
+          }
         ],
         "editor": {
           "file": "CLAUDE.md",
@@ -173,22 +181,30 @@
         {
           "label": "이름",
           "logo": "icon:Bot",
-          "tags": ["'ㅇㅇ' 처럼 부를 이름 하나"]
+          "tags": [
+            "'ㅇㅇ' 처럼 부를 이름 하나"
+          ]
         },
         {
           "label": "역할",
           "logo": "icon:Book",
-          "tags": ["'ai 에이전트 수업 도우미'"]
+          "tags": [
+            "'ai 에이전트 수업 도우미'"
+          ]
         },
         {
           "label": "말투",
           "logo": "icon:Chat",
-          "tags": ["문장 끝 '~요' → '~용용'"]
+          "tags": [
+            "문장 끝 '~요' → '~용용'"
+          ]
         },
         {
           "label": "하지 말 것",
           "logo": "icon:Shield",
-          "tags": ["모르면 추측하지 말고 되묻기"]
+          "tags": [
+            "모르면 추측하지 말고 되묻기"
+          ]
         }
       ],
       "notes": [
@@ -287,16 +303,7 @@
           "head": "점(.)까지 포함한 이름",
           "body": "맨 앞의 점(.)을 빼먹으면 안 된다."
         }
-      ],
-      "action": {
-        "label": "폴더 이름 복사",
-        "items": [
-          {
-            "kind": "copy",
-            "value": ".claude"
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "s2-claudemd-07",
@@ -339,16 +346,7 @@
           "head": ".claude 폴더 안에 만들기",
           "body": "agent1 바로 아래가 아니라 .claude 안이어야 한다."
         }
-      ],
-      "action": {
-        "label": "파일 이름 복사",
-        "items": [
-          {
-            "kind": "copy",
-            "value": "CLAUDE.md"
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "s2-claudemd-08",
@@ -454,7 +452,7 @@
         }
       ],
       "action": {
-        "label": "프롬프트 복사",
+        "label": "명령어 복사",
         "items": [
           {
             "kind": "copy",
@@ -582,9 +580,21 @@
       "template": "flow",
       "title": "CLAUDE.md 정리",
       "steps": [
-        { "label": "작성", "sub": "agent1/.claude/CLAUDE.md", "logo": "icon:Edit" },
-        { "label": "로드", "sub": "세션 시작 시 자동", "logo": "icon:Zap" },
-        { "label": "반영", "sub": "/clear 로 새 대화", "logo": "icon:Chat" }
+        {
+          "label": "작성",
+          "sub": "agent1/.claude/CLAUDE.md",
+          "logo": "icon:Edit"
+        },
+        {
+          "label": "로드",
+          "sub": "세션 시작 시 자동",
+          "logo": "icon:Zap"
+        },
+        {
+          "label": "반영",
+          "sub": "/clear 로 새 대화",
+          "logo": "icon:Chat"
+        }
       ],
       "notes": [
         {

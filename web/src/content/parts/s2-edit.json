@@ -328,7 +328,7 @@
         }
       ],
       "action": {
-        "label": "명령 복사",
+        "label": "명령어 복사",
         "items": [
           {
             "kind": "copy",
