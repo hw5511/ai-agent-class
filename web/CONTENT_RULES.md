@@ -71,3 +71,14 @@ Screens also include `chat` (`app`, `logo?`, `messages`) and `browser` (`url`, `
 Only three uses: **download a file**, **open a link** (link icon), **copy a prompt or a command**.
 Never a key press (Enter, arrows, Ctrl+C, Shift+Tab, Ctrl+J), never a bare folder/file name — those belong
 in the notes. One line per item; longer values are cut off with an ellipsis and still copy in full.
+
+## Notes text (CEO 2026-09-22: "이런 문장은 대체 왜 넣어두는거야")
+
+Each note says what the student sees or does on this slide, in plain words. Never write:
+- claims that do not match the slide (the prompt is not 존댓말, so do not call it one; a result slide
+  shows the same prompt the slide before typed)
+- jargon a beginner does not need: 자연어, PATH, 패턴, 옵션 names, 시스템 프롬프트
+- filler about the phrasing itself: "한 줄로", "한 문장으로", "직접 눈으로 검증", "한눈에 보인다"
+- navigation or wrap-up: "다음 슬라이드에서", "다음은 종료", "실습 완료"
+- a second note that repeats the first
+If a note has nothing left to say, delete it and the matching badge on the slide.

@@ -356,18 +356,12 @@
           "turns": [
             {
               "role": "user",
-              "text": "claude --dangerously-skip-permissions",
-              "badge": 1
+              "text": "claude --dangerously-skip-permissions"
             }
           ]
         }
       },
       "notes": [
-        {
-          "n": 1,
-          "head": "--allow 옵션도 있다",
-          "body": "--allow-dangerously-skip-permissions 는 기본값으로 켜지 않고 옵션으로만 켤 수 있다."
-        },
         {
           "n": "!",
           "head": "이름 그대로 위험하다",
@@ -418,8 +412,8 @@
       "notes": [
         {
           "n": 1,
-          "head": "한 문장에 두 가지",
-          "body": "설정 되돌리기 + 실제 삭제, 둘 다 한 번에 요청했다."
+          "head": "두 가지를 한 번에 요청",
+          "body": "삭제 금지 풀기와 test.txt 삭제를 함께 시켰다."
         },
         {
           "n": "!",

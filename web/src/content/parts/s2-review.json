@@ -315,7 +315,7 @@
     {
       "id": "s2-review-08",
       "template": "screen",
-      "title": "PATH 자동 등록 확인",
+      "title": "설치 확인",
       "screen": {
         "kind": "vscode",
         "folder": "agent1",
@@ -341,12 +341,12 @@
         {
           "n": 1,
           "head": "claude --version 입력",
-          "body": "PATH 등록이 끝났는지 확인하는 명령이다."
+          "body": "버전 숫자가 나오면 설치가 끝난 것이다."
         },
         {
           "n": 2,
-          "head": "등록 완료 확인",
-          "body": "안 보이면 VS Code 를 완전히 껐다가 다시 연다."
+          "head": "안 나오면 VS Code 재시작",
+          "body": "VS Code 를 완전히 껐다가 다시 연다."
         }
       ],
       "action": {
@@ -381,7 +381,7 @@
         {
           "n": 1,
           "head": "claude 입력 후 Enter",
-          "body": "설치가 끝나면 PATH가 자동 등록되고, claude 명령을 바로 쓸 수 있다."
+          "body": "Claude Code 가 실행된다."
         },
         {
           "n": 2,
