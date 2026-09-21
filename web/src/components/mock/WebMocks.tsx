@@ -20,6 +20,20 @@ function Window({ title, logo, children }: { title: string; logo?: string; child
   )
 }
 
+// An attached document card: above the text in a user message, below it (with a download button) in an answer.
+function FileCard({ file, user }: { file: { name: string; size?: string }; user?: boolean }) {
+  return (
+    <div className={cn("flex items-center gap-4 rounded-2xl border px-5 py-3 text-[#101113]", user ? "mb-3 border-white/40 bg-white" : "mt-3 border-neutral-200 bg-[#f7f7f8]")}>
+      <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#1273c4] font-term text-[16px] font-bold text-white">MD</span>
+      <span className="flex min-w-0 flex-col">
+        <span className="truncate font-display text-[24px] font-bold">{file.name}</span>
+        <span className="font-body text-[18px] text-[#8b9095]">{file.size ? `문서 · ${file.size}` : "문서"}</span>
+      </span>
+      {!user && <span className="ml-auto rounded-full border border-neutral-300 px-4 py-1.5 font-body text-[18px] text-[#43474b]">다운로드</span>}
+    </div>
+  )
+}
+
 export function ChatMock({ s }: { s: ChatScreen }) {
   return (
     <Window title={s.app} logo={s.logo}>
@@ -33,7 +47,9 @@ export function ChatMock({ s }: { s: ChatScreen }) {
                 m.role === "user" ? "bg-slide-accent text-white" : "border border-neutral-200 bg-white text-[#101113]",
               )}
             >
+              {m.file && m.role === "user" && <FileCard file={m.file} user />}
               {m.text && <div>{m.text}</div>}
+              {m.file && m.role === "assistant" && <FileCard file={m.file} />}
               {m.code && <pre className="rounded-xl bg-[#1e1e1e] px-6 py-3 font-term text-[24px] text-[#e8eaec]">{m.code}</pre>}
               {m.mark && (
                 <div className="mt-3 flex flex-wrap items-center gap-3">

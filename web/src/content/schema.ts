@@ -161,6 +161,7 @@ export interface ChatScreen {
     role: "user" | "assistant"
     text?: string
     code?: string // shown as a dark code block inside the answer
+    file?: { name: string; size?: string } // an attached file card (e.g. a .md the assistant made or the user uploads)
     mark?: string // a line shown highlighted under the answer (e.g. the detected command{...})
     markLabel?: string // small tag next to the mark (e.g. "자동 감지")
     badge?: number
