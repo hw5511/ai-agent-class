@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#43474b"/></marker><marker id="arb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#6b7076" stroke-width="3"/></pattern></defs>
+<text x="120" y="250" font-size="30" fill="#101113" font-weight="800" text-anchor="start" >대화 초반</text>
+<rect x="330" y="200" width="690.0" height="80" rx="10" fill="#e8893a"/>
+<text x="675.0" y="250" font-size="24" fill="#fff" font-weight="800" text-anchor="middle" >CLAUDE.md</text>
+<rect x="1020.0" y="200" width="460.0" height="80" rx="10" fill="#8b5cf6"/>
+<text x="1250.0" y="250" font-size="24" fill="#fff" font-weight="800" text-anchor="middle" >대화</text>
+<text x="330" y="324" font-size="24" fill="#e8893a" font-weight="800" text-anchor="start" >CLAUDE.md 비율 60%</text>
+<text x="120" y="470" font-size="30" fill="#101113" font-weight="800" text-anchor="start" >대화 중반</text>
+<rect x="330" y="420" width="202.9" height="80" rx="10" fill="#e8893a"/>
+<text x="431.47058823529414" y="470" font-size="24" fill="#fff" font-weight="800" text-anchor="middle" >CLAUDE.md</text>
+<rect x="532.9411764705883" y="420" width="947.1" height="80" rx="10" fill="#8b5cf6"/>
+<text x="1006.4705882352941" y="470" font-size="24" fill="#fff" font-weight="800" text-anchor="middle" >대화</text>
+<text x="330" y="544" font-size="24" fill="#e8893a" font-weight="800" text-anchor="start" >CLAUDE.md 비율 18%</text>
+<text x="120" y="690" font-size="30" fill="#101113" font-weight="800" text-anchor="start" >대화 후반</text>
+<rect x="330" y="640" width="58.5" height="80" rx="10" fill="#e8893a"/>
+<rect x="388.47457627118644" y="640" width="1091.5" height="80" rx="10" fill="#8b5cf6"/>
+<text x="934.2372881355932" y="690" font-size="24" fill="#fff" font-weight="800" text-anchor="middle" >대화</text>
+<text x="330" y="764" font-size="24" fill="#e8893a" font-weight="800" text-anchor="start" >CLAUDE.md 비율 5%</text>
+<circle cx="395.64516129032256" cy="640" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="395.64516129032256" y="649" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<text x="120" y="110" font-size="26" fill="#8b9095" font-weight="700" text-anchor="start" >CLAUDE.md 크기는 그대로 · 대화만 늘어남</text>
+</svg>

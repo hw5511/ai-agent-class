@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#43474b"/></marker><marker id="arb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#6b7076" stroke-width="3"/></pattern></defs>
+<g filter="url(#sh)"><rect x="60" y="80" width="360" height="740" rx="12" fill="#fff" stroke="#e5e5e5" stroke-width="2"/></g>
+<text x="240" y="124" font-size="22" fill="#8b5cf6" font-weight="800" text-anchor="middle" >긴 대화 (Messages)</text>
+<rect x="84" y="146" width="312" height="44" rx="8" fill="#8b5cf6"/><text x="240.0" y="173.76" font-size="16" fill="#fff" font-weight="700" text-anchor="middle" >내 프롬프트</text>
+<rect x="84" y="200" width="312" height="44" rx="8" fill="#8b5cf6"/><text x="240.0" y="227.76" font-size="16" fill="#fff" font-weight="700" text-anchor="middle" >Claude 답변</text>
+<rect x="84" y="254" width="312" height="44" rx="8" fill="#8b5cf6"/><text x="240.0" y="281.76" font-size="16" fill="#fff" font-weight="700" text-anchor="middle" >Read 문서</text>
+<rect x="84" y="308" width="312" height="44" rx="8" fill="#8b5cf6"/><text x="240.0" y="335.76" font-size="16" fill="#fff" font-weight="700" text-anchor="middle" >명령어 결과</text>
+<rect x="84" y="362" width="312" height="44" rx="8" fill="#8b5cf6"/><text x="240.0" y="389.76" font-size="16" fill="#fff" font-weight="700" text-anchor="middle" >내 프롬프트</text>
+<rect x="84" y="416" width="312" height="44" rx="8" fill="#8b5cf6"/><text x="240.0" y="443.76" font-size="16" fill="#fff" font-weight="700" text-anchor="middle" >Claude 답변</text>
+<rect x="84" y="470" width="312" height="44" rx="8" fill="#8b5cf6"/><text x="240.0" y="497.76" font-size="16" fill="#fff" font-weight="700" text-anchor="middle" >Read 문서</text>
+<rect x="84" y="524" width="312" height="44" rx="8" fill="#8b5cf6"/><text x="240.0" y="551.76" font-size="16" fill="#fff" font-weight="700" text-anchor="middle" >명령어 결과</text>
+<rect x="84" y="578" width="312" height="44" rx="8" fill="#8b5cf6"/><text x="240.0" y="605.76" font-size="16" fill="#fff" font-weight="700" text-anchor="middle" >내 프롬프트</text>
+<rect x="84" y="632" width="312" height="44" rx="8" fill="#8b5cf6"/><text x="240.0" y="659.76" font-size="16" fill="#fff" font-weight="700" text-anchor="middle" >Claude 답변</text>
+<rect x="84" y="686" width="312" height="44" rx="8" fill="#8b5cf6"/><text x="240.0" y="713.76" font-size="16" fill="#fff" font-weight="700" text-anchor="middle" >Read 문서</text>
+<rect x="84" y="740" width="312" height="44" rx="8" fill="#8b5cf6"/><text x="240.0" y="767.76" font-size="16" fill="#fff" font-weight="700" text-anchor="middle" >명령어 결과</text>
+<circle cx="420" cy="80" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="420" y="89" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<path d="M430 450 L560 450" stroke="#43474b" stroke-width="4" marker-end="url(#ar)"/>
+<g filter="url(#sh)"><rect x="580" y="300" width="400" height="300" rx="26" fill="#fff" stroke="#1273c4" stroke-width="4"/></g>
+<text x="780" y="390" font-size="34" fill="#101113" font-weight="900" text-anchor="middle" >요약 모듈</text>
+<rect x="690" y="420" width="180" height="46" rx="23" fill="#e7f0fb"/><text x="780" y="452" font-size="22" fill="#1273c4" font-weight="800" text-anchor="middle" >haiku 모델</text>
+<text x="780" y="520" font-size="22" fill="#8b9095" font-weight="700" text-anchor="middle" >핵심만 남기기</text>
+<circle cx="980" cy="300" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="980" y="309" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<path d="M990 450 L1100 450" stroke="#43474b" stroke-width="4" marker-end="url(#ar)"/>
+<g filter="url(#sh)"><rect x="1120" y="80" width="420" height="740" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="2"/></g>
+<text x="1330" y="124" font-size="22" fill="#101113" font-weight="800" text-anchor="middle" >새로 비운 Context</text>
+<rect x="1146" y="146" width="368" height="56" rx="8" fill="#9aa0a6"/><text x="1330.0" y="180.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >System · Tools</text>
+<rect x="1146" y="210" width="368" height="56" rx="8" fill="#e8893a"/><text x="1330.0" y="244.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >Memory (CLAUDE.md)</text>
+<rect x="1146" y="274" width="368" height="90" rx="8" fill="#8b5cf6"/><text x="1330.0" y="327.64" font-size="24" fill="#fff" font-weight="700" text-anchor="middle" >요약문</text>
+<rect x="1146" y="376" width="368" height="420" rx="10" fill="none" stroke="#c9ccd1" stroke-width="3" stroke-dasharray="10 8"/>
+<text x="1330" y="590" font-size="24" fill="#8b9095" font-weight="700" text-anchor="middle" >빈 공간</text>
+<circle cx="1540" cy="274" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1540" y="283" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+</svg>

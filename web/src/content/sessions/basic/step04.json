@@ -5,11 +5,13 @@
   "goal": "세션과 컨텍스트를 관리하고, 백그라운드 작업으로 여러 일을 동시에 맡기는 방법을 익힌다.",
   "topics": [
     "세션 관리 (--resume · --name · /rename · /resume · --continue)",
-    "context 관리",
-    "백그라운드 작업"
+    "context 관리 (/context · /rewind · /compact)",
+    "백그라운드 작업 (Ctrl+B · 병렬 task · monitor)"
   ],
   "practice": "Claude 를 종료하고 다시 실행하면서 세션 ID · 이름 · 목록 · -c 로 이전 대화에 돌아가본다.",
   "parts": [
-    "s4-session"
+    "s4-session",
+    "s4-context",
+    "s4-background"
   ]
 }

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#43474b"/></marker><marker id="arb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#6b7076" stroke-width="3"/></pattern></defs>
+<g filter="url(#sh)"><rect x="40" y="60" width="700" height="780" rx="22" fill="#fff" stroke="#e5e5e5" stroke-width="2"/></g>
+<text x="70" y="110" font-size="24" fill="#101113" font-weight="800" text-anchor="start" >AI 챗봇</text>
+<line x1="40" y1="134" x2="740" y2="134" stroke="#e5e5e5" stroke-width="2"/>
+<rect x="300" y="170" width="410" height="64" rx="20" fill="#e7f0fb" stroke="none" stroke-width="3"/><text x="322" y="210" font-size="21" fill="#101113" font-weight="600" text-anchor="start" >파일 이름을 memo 로 바꿔줘</text>
+<rect x="70" y="256" width="520" height="64" rx="20" fill="#f3f4f6" stroke="none" stroke-width="3"/><text x="92" y="296" font-size="21" fill="#101113" font-weight="400" text-anchor="start" >note 로 바꿨어요! (실수)</text>
+<rect x="300" y="360" width="410" height="100" rx="20" fill="#e7f0fb"/>
+<text x="322" y="400" font-size="21" fill="#101113" font-weight="700" text-anchor="start" >지금까지 대화한 걸 다 잊고</text>
+<text x="322" y="436" font-size="21" fill="#101113" font-weight="700" text-anchor="start" >새로 대답해!!</text>
+<rect x="70" y="486" width="360" height="64" rx="20" fill="#f3f4f6" stroke="none" stroke-width="3"/><text x="92" y="526" font-size="21" fill="#101113" font-weight="400" text-anchor="start" >네, 다 잊었습니다!</text>
+<circle cx="440" cy="486" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="440" y="495" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<g filter="url(#sh)"><rect x="840" y="60" width="460" height="560" rx="10" fill="#fff" stroke="#e5e5e5" stroke-width="2"/></g>
+<text x="860" y="98" font-size="20" fill="#8b9095" font-weight="700" text-anchor="start" >다음 질문과 함께 실제로 들어가는 글</text>
+<rect x="860" y="120" width="420" height="76" rx="8" fill="#2f7de0"/><text x="1070.0" y="164.84" font-size="19" fill="#fff" font-weight="700" text-anchor="middle" >파일 이름을 memo 로 바꿔줘</text>
+<rect x="860" y="216" width="420" height="76" rx="8" fill="#d93a3a"/><text x="1070.0" y="260.84" font-size="19" fill="#fff" font-weight="700" text-anchor="middle" >note 로 바꿨어요! (실수)</text>
+<rect x="860" y="312" width="420" height="76" rx="8" fill="#2f7de0"/><text x="1070.0" y="356.84" font-size="19" fill="#fff" font-weight="700" text-anchor="middle" >다 잊고 새로 대답해!!</text>
+<rect x="860" y="408" width="420" height="76" rx="8" fill="#12a150"/><text x="1070.0" y="452.84" font-size="19" fill="#fff" font-weight="700" text-anchor="middle" >네, 다 잊었습니다!</text>
+<rect x="860" y="504" width="420" height="76" rx="8" fill="#e0662f"/><text x="1070.0" y="548.84" font-size="19" fill="#fff" font-weight="700" text-anchor="middle" >다음 질문</text>
+<rect x="850" y="206" width="440" height="100" rx="12" fill="none" stroke="#d93a3a" stroke-width="4" stroke-dasharray="12 8"/>
+<text x="1310" y="264" font-size="24" fill="#d93a3a" font-weight="900" text-anchor="start" >그대로 남아 있음</text>
+<circle cx="1300" cy="206" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1300" y="215" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<path d="M1070 622 L1070 670" stroke="#43474b" stroke-width="4" marker-end="url(#ar)"/>
+<g filter="url(#sh)"><rect x="944.0" y="682.0" width="252.0" height="156.0" rx="16.8" fill="#f4f5f7" stroke="#c9ccd1" stroke-width="3"/></g><rect x="980.0" y="673.6" width="180.0" height="15.6" rx="6.0" fill="#2b2e33"/><rect x="968.0" y="796.0" width="204.0" height="13.2" rx="4.8" fill="#2b2e33"/><rect x="964.4" y="706.0" width="72.0" height="42.0" rx="8.4" fill="#101113"/><text x="1000.4" y="734.8" font-size="22.8" fill="#8fd0ff" font-weight="900" text-anchor="middle" >AI</text><circle cx="1160.0" cy="724.0" r="7.199999999999999" fill="#4ec27a"/><circle cx="1136.0" cy="724.0" r="7.199999999999999" fill="#e3e5e8"/><text x="1148.0" y="760.0" font-size="13.2" fill="#8b9095" font-weight="700" text-anchor="middle" >지잉~</text>
+</svg>

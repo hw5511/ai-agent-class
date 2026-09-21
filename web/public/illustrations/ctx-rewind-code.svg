@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1000" width="960" height="1000" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#43474b"/></marker><marker id="arb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#6b7076" stroke-width="3"/></pattern></defs>
+<rect x="10" y="10" width="940" height="980" rx="22" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
+<text x="40" y="64" font-size="24" fill="#101113" font-weight="800" text-anchor="start" >현재 세션 대화</text>
+<g><rect x="330" y="100" width="590" height="70" rx="20" fill="#e7f0fb"/>
+<text x="352" y="144" font-size="20" fill="#101113" font-weight="600" text-anchor="start" >gmail.com 접속해서 계정명 확인해줘</text></g>
+<g><rect x="40" y="184" width="600" height="70" rx="20" fill="#f3f4f6"/>
+<text x="62" y="228" font-size="20" fill="#101113" font-weight="400" text-anchor="start" >로그인된 계정은 student@example.com 이에요</text></g>
+<g><rect x="330" y="268" width="590" height="70" rx="20" fill="#e7f0fb"/>
+<text x="352" y="312" font-size="20" fill="#101113" font-weight="600" text-anchor="start" >현재폴더에 test.md 파일에 간단한 인삿말을 남겨줘</text></g>
+<g><rect x="40" y="352" width="600" height="70" rx="20" fill="#f3f4f6"/>
+<text x="62" y="396" font-size="20" fill="#101113" font-weight="400" text-anchor="start" >test.md 에 인삿말을 남겼어요</text></g>
+<g><rect x="60" y="430" width="240" height="44" rx="22" fill="#fff" stroke="#12a150" stroke-width="3"/><text x="80" y="460" font-size="19" fill="#12a150" font-weight="800" text-anchor="start" >📄 test.md 생성됨</text></g>
+<g><rect x="330" y="494" width="590" height="70" rx="20" fill="#e7f0fb"/>
+<text x="352" y="538" font-size="20" fill="#101113" font-weight="600" text-anchor="start" >그 문서에 아래에 영문버전도 남겨줘</text></g>
+<g><rect x="40" y="578" width="600" height="70" rx="20" fill="#f3f4f6"/>
+<text x="62" y="622" font-size="20" fill="#101113" font-weight="400" text-anchor="start" >아래에 영문 버전을 추가했어요</text></g>
+<g opacity="0.28"><rect x="60" y="656" width="240" height="44" rx="22" fill="#fff" stroke="#e0662f" stroke-width="3"/><text x="80" y="686" font-size="19" fill="#e0662f" font-weight="800" text-anchor="start" >✎ test.md 수정됨</text></g>
+<line x1="30" y1="480" x2="930" y2="480" stroke="#1273c4" stroke-width="4" stroke-dasharray="14 8"/>
+<rect x="600" y="454" width="310" height="52" rx="26" fill="#1273c4"/>
+<text x="755" y="489" font-size="22" fill="#fff" font-weight="800" text-anchor="middle" >여기로 되돌아감</text>
+<text x="40" y="780" font-size="26" fill="#101113" font-weight="900" text-anchor="start" >Write · Edit 기록만 되돌아감 · 대화는 그대로</text>
+<text x="40" y="820" font-size="22" fill="#d93a3a" font-weight="800" text-anchor="start" >Bash 로 바꾼 파일은 되돌리지 않음</text>
+<circle cx="560" cy="480" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="560" y="489" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+</svg>

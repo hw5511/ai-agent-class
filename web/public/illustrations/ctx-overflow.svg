@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#43474b"/></marker><marker id="arb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#6b7076" stroke-width="3"/></pattern></defs>
+<g filter="url(#sh)"><rect x="140" y="30" width="460" height="840" rx="10" fill="#fff" stroke="#e5e5e5" stroke-width="2"/></g>
+<rect x="160" y="44" width="420" height="44" rx="8" fill="#2f7de0"/><text x="370.0" y="72.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >질문1</text>
+<rect x="160" y="98" width="420" height="44" rx="8" fill="#12a150"/><text x="370.0" y="126.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >답변1</text>
+<rect x="160" y="152" width="420" height="44" rx="8" fill="#2f7de0"/><text x="370.0" y="180.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >질문2</text>
+<rect x="160" y="206" width="420" height="44" rx="8" fill="#12a150"/><text x="370.0" y="234.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >답변2</text>
+<rect x="160" y="260" width="420" height="44" rx="8" fill="#2f7de0"/><text x="370.0" y="288.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >질문3</text>
+<rect x="160" y="314" width="420" height="44" rx="8" fill="#12a150"/><text x="370.0" y="342.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >답변3</text>
+<rect x="160" y="368" width="420" height="44" rx="8" fill="#2f7de0"/><text x="370.0" y="396.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >질문4</text>
+<rect x="160" y="422" width="420" height="44" rx="8" fill="#12a150"/><text x="370.0" y="450.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >답변4</text>
+<rect x="160" y="476" width="420" height="44" rx="8" fill="#2f7de0"/><text x="370.0" y="504.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >질문5</text>
+<rect x="160" y="530" width="420" height="44" rx="8" fill="#12a150"/><text x="370.0" y="558.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >답변5</text>
+<rect x="160" y="584" width="420" height="44" rx="8" fill="#2f7de0"/><text x="370.0" y="612.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >질문6</text>
+<rect x="160" y="638" width="420" height="44" rx="8" fill="#12a150"/><text x="370.0" y="666.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >답변6</text>
+<rect x="160" y="692" width="420" height="44" rx="8" fill="#2f7de0"/><text x="370.0" y="720.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >질문7</text>
+<rect x="160" y="746" width="420" height="44" rx="8" fill="#12a150"/><text x="370.0" y="774.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >답변7</text>
+<rect x="160" y="800" width="420" height="44" rx="8" fill="#e0662f"/><text x="370.0" y="828.12" font-size="17" fill="#fff" font-weight="700" text-anchor="middle" >질문8  (지금 보내는 질문)</text>
+<circle cx="600" cy="30" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="600" y="39" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<g filter="url(#sh)"><rect x="869.0" y="417.0" width="462.00000000000006" height="286.0" rx="30.800000000000004" fill="#f4f5f7" stroke="#c9ccd1" stroke-width="3"/></g><rect x="935.0" y="401.6" width="330.00000000000006" height="28.6" rx="11.0" fill="#2b2e33"/><rect x="913.0" y="626.0" width="374.00000000000006" height="24.200000000000003" rx="8.8" fill="#2b2e33"/><rect x="906.4" y="461.0" width="132.0" height="77.0" rx="15.400000000000002" fill="#101113"/><text x="972.4" y="513.8" font-size="41.800000000000004" fill="#8fd0ff" font-weight="900" text-anchor="middle" >AI</text><circle cx="1265.0" cy="494.0" r="13.200000000000001" fill="#4ec27a"/><circle cx="1221.0" cy="494.0" r="13.200000000000001" fill="#e3e5e8"/><text x="1243.0" y="560.0" font-size="24.200000000000003" fill="#8b9095" font-weight="700" text-anchor="middle" >지잉~</text>
+<path d="M600 450 C 760 450, 820 330, 900 330" fill="none" stroke="#43474b" stroke-width="4" marker-end="url(#ar)"/>
+<line x1="935.0" y1="357.0" x2="1265.0" y2="357.0" stroke="#d93a3a" stroke-width="4" marker-start="url(#ar)" marker-end="url(#ar)"/>
+<text x="1100" y="337.0" font-size="24" fill="#d93a3a" font-weight="800" text-anchor="middle" >넣을 수 있는 최대 텍스트</text>
+<g transform="translate(1100 773.0)"><circle r="34" fill="#d93a3a"/><path d="M-14 -14L14 14M14 -14L-14 14" stroke="#fff" stroke-width="7" stroke-linecap="round"/></g>
+<text x="1150" y="783.0" font-size="30" fill="#d93a3a" font-weight="900" text-anchor="start" >초과</text>
+<circle cx="1390" cy="357.0" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1390" y="366" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+</svg>

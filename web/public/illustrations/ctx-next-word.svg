@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#43474b"/></marker><marker id="arb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#6b7076" stroke-width="3"/></pattern></defs>
+<rect x="0" y="0" width="1600" height="900" fill="#fff"/>
+<text x="200" y="300" font-size="88" fill="#101113" font-weight="800" text-anchor="start" >오늘 날씨가</text>
+<rect x="760" y="210" width="360" height="120" rx="18" fill="#e7f0fb" stroke="#1273c4" stroke-width="4" stroke-dasharray="12 8"/>
+<text x="940" y="300" font-size="80" fill="#1273c4" font-weight="900" text-anchor="middle" >좋네요</text>
+<circle cx="1120" cy="210" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1120" y="219" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<g filter="url(#sh)"><rect x="760" y="360" width="700" height="360" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="2"/></g>
+<text x="790" y="408" font-size="22" fill="#8b9095" font-weight="700" text-anchor="start" >다음에 올 단어 후보</text>
+<rect x="776" y="430" width="668" height="60" rx="12" fill="#e7f0fb"/>
+<text x="800" y="470" font-size="30" fill="#101113" font-weight="800" text-anchor="start" >좋네요</text>
+<rect x="1000" y="446" width="360" height="22" rx="11" fill="#eef0f2"/>
+<rect x="1000" y="446" width="352.8" height="22" rx="11" fill="#1273c4"/>
+<text x="1430" y="470" font-size="28" fill="#1273c4" font-weight="800" text-anchor="end" >98%</text>
+<text x="800" y="540" font-size="30" fill="#43474b" font-weight="500" text-anchor="start" >맛있네요</text>
+<rect x="1000" y="516" width="360" height="22" rx="11" fill="#eef0f2"/>
+<rect x="1000" y="516" width="6.0" height="22" rx="11" fill="#9aa0a6"/>
+<text x="1430" y="540" font-size="28" fill="#8b9095" font-weight="800" text-anchor="end" >1%</text>
+<text x="800" y="610" font-size="30" fill="#43474b" font-weight="500" text-anchor="start" >친절하네요</text>
+<rect x="1000" y="586" width="360" height="22" rx="11" fill="#eef0f2"/>
+<rect x="1000" y="586" width="6.0" height="22" rx="11" fill="#9aa0a6"/>
+<text x="1430" y="610" font-size="28" fill="#8b9095" font-weight="800" text-anchor="end" >0.5%</text>
+<text x="800" y="680" font-size="30" fill="#43474b" font-weight="500" text-anchor="start" >…</text>
+<circle cx="1460" cy="360" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1460" y="369" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<path d="M940 330 L940 356" stroke="#1273c4" stroke-width="3" marker-end="url(#arb)"/>
+</svg>

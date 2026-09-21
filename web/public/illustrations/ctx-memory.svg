@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#43474b"/></marker><marker id="arb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#6b7076" stroke-width="3"/></pattern></defs>
+<g filter="url(#sh)"><rect x="80" y="140" width="440" height="660" rx="26" fill="#fff" stroke="#e5e5e5" stroke-width="2"/></g>
+<rect x="80" y="140" width="440" height="120" rx="26" fill="#e8893a"/><rect x="80" y="220" width="440" height="40" fill="#e8893a"/>
+<text x="300" y="200" font-size="40" fill="#fff" font-weight="900" text-anchor="middle" >장기기억</text>
+<text x="300" y="244" font-size="22" fill="#fff" font-weight="700" text-anchor="middle" >문서로 남긴 지식</text>
+<rect x="120" y="330" width="360" height="90" rx="16" fill="#f6f7f9"/>
+<text x="300" y="386" font-size="26" fill="#101113" font-weight="800" text-anchor="middle" >CLAUDE.md</text>
+<rect x="120" y="460" width="360" height="90" rx="16" fill="#f6f7f9"/>
+<text x="300" y="516" font-size="26" fill="#101113" font-weight="800" text-anchor="middle" >docs/README.md</text>
+<rect x="120" y="590" width="360" height="90" rx="16" fill="#f6f7f9"/>
+<text x="300" y="646" font-size="26" fill="#101113" font-weight="800" text-anchor="middle" >작업 기록 문서</text>
+<circle cx="520" cy="140" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="520" y="149" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<g filter="url(#sh)"><rect x="580" y="140" width="440" height="660" rx="26" fill="#fff" stroke="#e5e5e5" stroke-width="2"/></g>
+<rect x="580" y="140" width="440" height="120" rx="26" fill="#8b5cf6"/><rect x="580" y="220" width="440" height="40" fill="#8b5cf6"/>
+<text x="800" y="200" font-size="40" fill="#fff" font-weight="900" text-anchor="middle" >단기기억</text>
+<text x="800" y="244" font-size="22" fill="#fff" font-weight="700" text-anchor="middle" >지금 대화 맥락</text>
+<rect x="620" y="330" width="360" height="90" rx="16" fill="#f6f7f9"/>
+<text x="800" y="386" font-size="26" fill="#101113" font-weight="800" text-anchor="middle" >Context</text>
+<rect x="620" y="460" width="360" height="90" rx="16" fill="#f6f7f9"/>
+<text x="800" y="516" font-size="26" fill="#101113" font-weight="800" text-anchor="middle" >/compact 로 요약</text>
+<rect x="620" y="590" width="360" height="90" rx="16" fill="#f6f7f9"/>
+<text x="800" y="646" font-size="26" fill="#101113" font-weight="800" text-anchor="middle" >/rewind 로 도려내기</text>
+<circle cx="1020" cy="140" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1020" y="149" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<g filter="url(#sh)"><rect x="1080" y="140" width="440" height="660" rx="26" fill="#fff" stroke="#e5e5e5" stroke-width="2"/></g>
+<rect x="1080" y="140" width="440" height="120" rx="26" fill="#1273c4"/><rect x="1080" y="220" width="440" height="40" fill="#1273c4"/>
+<text x="1300" y="200" font-size="40" fill="#fff" font-weight="900" text-anchor="middle" >세션</text>
+<text x="1300" y="244" font-size="22" fill="#fff" font-weight="700" text-anchor="middle" >주제별로 나눈 대화</text>
+<rect x="1120" y="330" width="360" height="90" rx="16" fill="#f6f7f9"/>
+<text x="1300" y="386" font-size="26" fill="#101113" font-weight="800" text-anchor="middle" >/clear 로 새 세션</text>
+<rect x="1120" y="460" width="360" height="90" rx="16" fill="#f6f7f9"/>
+<text x="1300" y="516" font-size="26" fill="#101113" font-weight="800" text-anchor="middle" >--name · /rename</text>
+<rect x="1120" y="590" width="360" height="90" rx="16" fill="#f6f7f9"/>
+<text x="1300" y="646" font-size="26" fill="#101113" font-weight="800" text-anchor="middle" >/resume 로 복귀</text>
+<circle cx="1520" cy="140" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1520" y="149" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<text x="800" y="90" font-size="30" fill="#101113" font-weight="900" text-anchor="middle" >기억은 밖에 맡기고 · 지금 할 일에 집중</text>
+</svg>

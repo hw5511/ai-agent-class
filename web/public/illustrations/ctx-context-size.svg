@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#43474b"/></marker><marker id="arb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#6b7076" stroke-width="3"/></pattern></defs>
+<g filter="url(#sh)"><rect x="506.0" y="378.0" width="588.0" height="364.0" rx="39.199999999999996" fill="#f4f5f7" stroke="#c9ccd1" stroke-width="3"/></g><rect x="590.0" y="358.4" width="420.0" height="36.4" rx="14.0" fill="#2b2e33"/><rect x="562.0" y="644.0" width="476.0" height="30.799999999999997" rx="11.2" fill="#2b2e33"/><rect x="553.6" y="434.0" width="168.0" height="98.0" rx="19.599999999999998" fill="#101113"/><text x="637.6" y="501.2" font-size="53.199999999999996" fill="#8fd0ff" font-weight="900" text-anchor="middle" >AI</text><circle cx="1010.0" cy="476.0" r="16.799999999999997" fill="#4ec27a"/><circle cx="954.0" cy="476.0" r="16.799999999999997" fill="#e3e5e8"/><text x="982.0" y="560.0" font-size="30.799999999999997" fill="#8b9095" font-weight="700" text-anchor="middle" >지잉~</text>
+<rect x="620.0" y="128.0" width="360.0" height="236" rx="8" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
+<rect x="646.0" y="156.0" width="308.0" height="16" rx="8" fill="#dfe3e8"/>
+<rect x="646.0" y="196.0" width="248.0" height="16" rx="8" fill="#dfe3e8"/>
+<rect x="646.0" y="236.0" width="308.0" height="16" rx="8" fill="#dfe3e8"/>
+<rect x="646.0" y="276.0" width="248.0" height="16" rx="8" fill="#dfe3e8"/>
+<rect x="646.0" y="316.0" width="308.0" height="16" rx="8" fill="#dfe3e8"/>
+<line x1="590.0" y1="88.0" x2="1010.0" y2="88.0" stroke="#1273c4" stroke-width="5" marker-start="url(#arb)" marker-end="url(#arb)"/>
+<rect x="690" y="28.0" width="220" height="50" rx="25" fill="#1273c4"/>
+<text x="800" y="63.0" font-size="30" fill="#fff" font-weight="900" text-anchor="middle" >Context</text>
+<circle cx="930" cy="28.0" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="930" y="37" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+</svg>
