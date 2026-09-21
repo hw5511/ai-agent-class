@@ -173,12 +173,31 @@ export interface BrowserScreen {
   page?: { heading: string; lines?: string[]; button?: string }
 }
 
+export interface VSCodeMenuItem {
+  label: string // "-" draws a separator
+  shortcut?: string
+  active?: boolean // highlighted; an active item with `sub` opens its submenu
+  badge?: number
+  sub?: VSCodeMenuItem[]
+}
+
 export interface VSCodeScreen {
   kind: "vscode"
   folder: string // explorer root, e.g. "에이전트1"
-  files: { name: string; depth?: number; folder?: boolean; active?: boolean; badge?: number }[]
+  files: { name: string; depth?: number; folder?: boolean; active?: boolean; editing?: boolean; badge?: number }[]
   editor?: { file: string; lines: string[]; badge?: number }
   terminal: Terminal
+  terminalAt?: "right" | "bottom" // default right
+  noTerminal?: boolean
+  terminalTabBadge?: number // badge on the "터미널" tab
+  chatPanel?: { closeBadge?: number } // VS Code's chat panel on the right (with its X)
+  menu?: { at: "file" | "terminal-tab"; items: VSCodeMenuItem[] } // an open menu
+  dialog?: { title: string; path?: string; folders: { name: string; selected?: boolean }[]; button: string; badge?: number } // folder picker
+  sidebar?: "explorer" | "extensions"
+  activityBadge?: number // badge on the extensions icon in the activity bar
+  extensions?: { query: string; queryBadge?: number; items: { name: string; publisher: string; desc: string; badge?: number }[] }
+  explorerAction?: { icon: "newFile" | "newFolder"; badge?: number } // the icons on the explorer header
+  keycap?: { keys: string[]; badge?: number } // a shortcut drawn over the window, e.g. ["Ctrl", "J"]
 }
 
 export interface TerminalScreen {

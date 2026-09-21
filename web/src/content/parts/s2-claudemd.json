@@ -278,6 +278,7 @@
           {
             "name": ".claude",
             "folder": true,
+            "editing": true,
             "badge": 2
           }
         ],
@@ -285,6 +286,10 @@
           "vendor": "shell",
           "cwd": "C:\\agent1",
           "turns": []
+        },
+        "explorerAction": {
+          "icon": "newFolder",
+          "badge": 1
         }
       },
       "notes": [
@@ -321,6 +326,7 @@
           {
             "name": "CLAUDE.md",
             "depth": 1,
+            "editing": true,
             "badge": 2
           }
         ],
@@ -328,6 +334,10 @@
           "vendor": "shell",
           "cwd": "C:\\agent1",
           "turns": []
+        },
+        "explorerAction": {
+          "icon": "newFile",
+          "badge": 1
         }
       },
       "notes": [

@@ -22,6 +22,10 @@ function badgesOfScreen(s, out) {
   if (s.kind === "vscode") {
     for (const f of s.files ?? []) if (f.badge) out.push(f.badge)
     if (s.editor?.badge) out.push(s.editor.badge)
+    const walk = (items) => { for (const it of items ?? []) { if (it.badge) out.push(it.badge); walk(it.sub) } }
+    walk(s.menu?.items)
+    for (const b of [s.dialog?.badge, s.chatPanel?.closeBadge, s.keycap?.badge, s.terminalTabBadge, s.activityBadge, s.explorerAction?.badge, s.extensions?.queryBadge]) if (b) out.push(b)
+    for (const x of s.extensions?.items ?? []) if (x.badge) out.push(x.badge)
   }
   for (const m of s.messages ?? []) if (m.badge) out.push(m.badge)
   for (const r of s.results ?? []) if (r.badge) out.push(r.badge)

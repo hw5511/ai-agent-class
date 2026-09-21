@@ -386,9 +386,8 @@
     },
     {
       "id": "s2-read-08",
-      "template": "illustration",
+      "template": "screen",
       "title": "PDF 확장 수동 설치",
-      "illustration": "vscode-extensions-search",
       "notes": [
         {
           "n": 1,
@@ -405,7 +404,36 @@
           "head": "첫 항목의 Install 클릭",
           "body": "목록 맨 위 확장의 Install 버튼을 누른다."
         }
-      ]
+      ],
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "sidebar": "extensions",
+        "activityBadge": 1,
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\agent1",
+          "turns": []
+        },
+        "extensions": {
+          "query": "vscode pdf",
+          "queryBadge": 2,
+          "items": [
+            {
+              "name": "vscode-pdf",
+              "publisher": "tomoki1207",
+              "desc": "Display pdf file in VSCode.",
+              "badge": 3
+            },
+            {
+              "name": "PDF Preview",
+              "publisher": "Analytic Signal",
+              "desc": "PDF viewer based on PDF.js"
+            }
+          ]
+        }
+      }
     },
     {
       "id": "s2-read-09",

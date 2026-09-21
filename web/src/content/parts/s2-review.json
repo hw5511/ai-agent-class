@@ -78,22 +78,8 @@
     },
     {
       "id": "s2-review-03",
-      "template": "flow",
+      "template": "illustration",
       "title": "agent1 폴더 만들기",
-      "steps": [
-        {
-          "label": "새로 만들기 → 폴더",
-          "sub": "빈 곳에서 우클릭",
-          "logo": "icon:Folder",
-          "badge": 1
-        },
-        {
-          "label": "이름 입력",
-          "sub": "agent1",
-          "logo": "icon:Keyboard",
-          "badge": 2
-        }
-      ],
       "notes": [
         {
           "n": 1,
@@ -105,26 +91,13 @@
           "head": "이름 agent1 입력 후 Enter",
           "body": "오늘 실습 내내 이 폴더 한 곳만 쓴다."
         }
-      ]
+      ],
+      "illustration": "/illustrations/explorer-new-folder.svg"
     },
     {
       "id": "s2-review-04",
-      "template": "flow",
+      "template": "screen",
       "title": "작업 폴더 열기",
-      "steps": [
-        {
-          "label": "Open Folder",
-          "sub": "File > Open Folder",
-          "logo": "/logos/visualstudiocode.svg",
-          "badge": 1
-        },
-        {
-          "label": "agent1 선택",
-          "sub": "폴더 선택",
-          "logo": "icon:Folder",
-          "badge": 2
-        }
-      ],
       "notes": [
         {
           "n": 1,
@@ -136,7 +109,65 @@
           "head": "agent1 선택 후 폴더 선택",
           "body": "만들어둔 agent1 폴더를 골라 연다."
         }
-      ]
+      ],
+      "screen": {
+        "kind": "vscode",
+        "folder": "Visual Studio Code",
+        "files": [],
+        "noTerminal": true,
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\agent1",
+          "turns": []
+        },
+        "menu": {
+          "at": "file",
+          "items": [
+            {
+              "label": "새 텍스트 파일",
+              "shortcut": "Ctrl+N"
+            },
+            {
+              "label": "새 창",
+              "shortcut": "Ctrl+Shift+N"
+            },
+            {
+              "label": "-"
+            },
+            {
+              "label": "파일 열기...",
+              "shortcut": "Ctrl+O"
+            },
+            {
+              "label": "폴더 열기...",
+              "shortcut": "Ctrl+K Ctrl+O",
+              "active": true,
+              "badge": 1
+            },
+            {
+              "label": "최근 항목 열기"
+            }
+          ]
+        },
+        "dialog": {
+          "title": "폴더 열기",
+          "path": "C:\\Users\\student\\Desktop",
+          "folders": [
+            {
+              "name": "agent1",
+              "selected": true
+            },
+            {
+              "name": "사진"
+            },
+            {
+              "name": "문서"
+            }
+          ],
+          "button": "폴더 선택",
+          "badge": 2
+        }
+      }
     },
     {
       "id": "s2-review-05",
@@ -146,14 +177,21 @@
         "kind": "vscode",
         "folder": "agent1",
         "files": [],
+        "terminalAt": "bottom",
+        "chatPanel": {
+          "closeBadge": 1
+        },
         "terminal": {
           "vendor": "shell",
           "cwd": "C:\\agent1",
-          "turns": [],
-          "input": {
-            "placeholder": "터미널이 열렸습니다",
-            "badge": 2
-          }
+          "turns": []
+        },
+        "keycap": {
+          "keys": [
+            "Ctrl",
+            "J"
+          ],
+          "badge": 2
         }
       },
       "notes": [
@@ -171,20 +209,8 @@
     },
     {
       "id": "s2-review-06",
-      "template": "flow",
+      "template": "screen",
       "title": "터미널 패널 오른쪽 배치",
-      "steps": [
-        {
-          "label": "터미널 탭 우클릭",
-          "logo": "icon:Terminal",
-          "badge": 1
-        },
-        {
-          "label": "패널 위치 → 오른쪽",
-          "logo": "icon:Settings",
-          "badge": 2
-        }
-      ],
       "notes": [
         {
           "n": 1,
@@ -196,7 +222,53 @@
           "head": "패널 위치 → 오른쪽",
           "body": "앞으로 이 세팅(오른쪽 패널)으로 계속 진행한다."
         }
-      ]
+      ],
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminalAt": "bottom",
+        "terminalTabBadge": 1,
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\agent1",
+          "turns": []
+        },
+        "menu": {
+          "at": "terminal-tab",
+          "items": [
+            {
+              "label": "터미널 이동"
+            },
+            {
+              "label": "패널 위치",
+              "active": true,
+              "sub": [
+                {
+                  "label": "위쪽"
+                },
+                {
+                  "label": "아래쪽"
+                },
+                {
+                  "label": "왼쪽"
+                },
+                {
+                  "label": "오른쪽",
+                  "active": true,
+                  "badge": 2
+                }
+              ]
+            },
+            {
+              "label": "-"
+            },
+            {
+              "label": "패널 숨기기"
+            }
+          ]
+        }
+      }
     },
     {
       "id": "s2-review-07",
