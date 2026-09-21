@@ -52,11 +52,6 @@
           "n": 2,
           "head": "파일 이름 settings.json",
           "body": "이 파일 하나가 도구 실행 규칙·모델·환경변수를 담는다."
-        },
-        {
-          "n": "!",
-          "head": "두 군데에 존재",
-          "body": "프로젝트: .claude/settings.json (팀과 공유) / 사용자: ~/.claude/settings.json (나에게만, 모든 프로젝트 적용)."
         }
       ]
     },
@@ -109,11 +104,6 @@
           "n": 2,
           "head": "model",
           "body": "이 세션이 기본으로 쓸 모델을 지정한다."
-        },
-        {
-          "n": "!",
-          "head": "오늘은 permissions 위주",
-          "body": "네 가지 다 확실한 키 이름만 — 오늘 실습은 permissions 위주로 다룬다."
         }
       ]
     },
@@ -438,11 +428,6 @@
           "n": 2,
           "head": "권한 프롬프트 \"항상 허용\"",
           "body": "도구 실행을 승인할 때 항상 허용을 고르면 규칙이 settings.local.json 에 쌓인다."
-        },
-        {
-          "n": "!",
-          "head": "MCP 서버는 예외",
-          "body": "MCP 서버 설정은 settings.json 이 아니라 별도의 .mcp.json 에 저장된다 — 헷갈리지 말 것."
         }
       ]
     }

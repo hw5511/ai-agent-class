@@ -433,11 +433,6 @@
           "n": 2,
           "head": "Current week (all models)",
           "body": "이번 주 전체 모델 사용량 합계."
-        },
-        {
-          "n": "!",
-          "head": "Spend limit",
-          "body": "지출 한도를 설정해둔 계정에서만 표시된다 — 숫자는 계정마다 달라 슬라이드엔 넣지 않는다."
         }
       ],
       "action": {
