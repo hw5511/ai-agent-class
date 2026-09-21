@@ -188,8 +188,8 @@
             },
             {
               "role": "assistant",
-              "text": "claude --resume 3f9c2a1e-7b4d-4c8e-9a61-2d5e8f0b7c34",
-              "mark": "--resume 3f9c2a1e-7b4d-4c8e-9a61-2d5e8f0b7c34",
+              "text": "claude --resume [세션 id]",
+              "mark": "--resume [세션 id]",
               "badge": 2
             },
             {
@@ -239,12 +239,12 @@
             },
             {
               "role": "assistant",
-              "text": "claude --resume 3f9c2a1e-7b4d-4c8e-9a61-2d5e8f0b7c34"
+              "text": "claude --resume [세션 id]"
             },
             {
               "role": "user",
-              "text": "claude --dangerously-skip-permissions --resume 3f9c2a1e-7b4d-4c8e-9a61-2d5e8f0b7c34",
-              "mark": "--resume 3f9c2a1e-7b4d-4c8e-9a61-2d5e8f0b7c34",
+              "text": "claude --dangerously-skip-permissions --resume [세션 id]",
+              "mark": "--resume [세션 id]",
               "badge": 2
             }
           ]
@@ -411,7 +411,7 @@
                     "c": "dim"
                   },
                   {
-                    "t": "3f9c2a1e-7b4d-4c8e-9a61-2d5e8f0b7c34"
+                    "t": "[세션 id]"
                   }
                 ],
                 "badge": 2
@@ -524,7 +524,7 @@
             },
             {
               "role": "user",
-              "text": "claude --dangerously-skip-permissions --resume 3f9c2a1e-7b4d-4c8e-9a61-2d5e8f0b7c34"
+              "text": "claude --dangerously-skip-permissions --resume [세션 id]"
             },
             {
               "role": "user",
@@ -716,7 +716,7 @@
                     "c": "dim"
                   },
                   {
-                    "t": "8b21e6d4-5c3a-4f7e-b09d-6a1f2c8e4d57"
+                    "t": "[세션 id]"
                   }
                 ],
                 "badge": 2
@@ -902,7 +902,7 @@
             },
             {
               "role": "assistant",
-              "text": "claude --resume 8b21e6d4-5c3a-4f7e-b09d-6a1f2c8e4d57"
+              "text": "claude --resume [세션 id]"
             },
             {
               "role": "user",
@@ -1277,7 +1277,7 @@
             },
             {
               "role": "assistant",
-              "text": "claude --resume 8b21e6d4-5c3a-4f7e-b09d-6a1f2c8e4d57"
+              "text": "claude --resume [세션 id]"
             },
             {
               "role": "user",
@@ -1393,7 +1393,7 @@
             },
             {
               "role": "assistant",
-              "text": "claude --resume 8b21e6d4-5c3a-4f7e-b09d-6a1f2c8e4d57"
+              "text": "claude --resume [세션 id]"
             },
             {
               "role": "user",

@@ -22,9 +22,9 @@
 <circle cx="488" cy="456" r="22" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="488" y="464" font-size="22" font-weight="800" fill="#fff" text-anchor="middle">2</text>
 <text x="110" y="670" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="26" fill="#767c81">PS C:\agent1&gt;</text>
 <text x="330" y="670" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="36" font-weight="700" fill="#e8eaec">claude</text>
-<rect x="484" y="630" width="418" height="56" rx="10" fill="#3a2a22" stroke="#d97757" stroke-width="2.5"/>
-<text x="504" y="670" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="34" fill="#f2b8a0">--resume 3f9c2a1e…</text>
-<text x="932" y="668" font-size="24" fill="#b8bcc0">이전 세션 이어서 실행</text>
+<rect x="484" y="630" width="376" height="56" rx="10" fill="#3a2a22" stroke="#d97757" stroke-width="2.5"/>
+<text x="504" y="670" font-family="'D2Coding ligature', D2Coding, Consolas, monospace" font-size="34" fill="#f2b8a0">--resume [세션 id]</text>
+<text x="890" y="668" font-size="24" fill="#b8bcc0">이전 세션 이어서 실행</text>
 <circle cx="488" cy="626" r="22" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="488" y="634" font-size="22" font-weight="800" fill="#fff" text-anchor="middle">3</text>
 <text x="120" y="790" font-size="22" fill="#767c81">claude 뒤에 띄어쓰기 + 플래그 · 여러 개 이어 붙이기 가능</text>
 </svg>
