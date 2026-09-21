@@ -4,45 +4,6 @@
   "summary": "말로 지시해 문서·그림·웹페이지·프로그램을 새로 만드는 Write 툴을 실습한다.",
   "slides": [
     {
-      "id": "s2-write-01",
-      "template": "cards",
-      "title": "Write 툴",
-      "cards": [
-        {
-          "label": "Read",
-          "logo": "icon:Read",
-          "tags": [
-            "파일 열람·확인"
-          ]
-        },
-        {
-          "label": "Write",
-          "logo": "icon:Write",
-          "tags": [
-            "새 파일 생성"
-          ],
-          "highlight": true
-        }
-      ],
-      "notes": [
-        {
-          "n": 1,
-          "head": "말로 지시",
-          "body": "\"~파일을 만들어줘\""
-        },
-        {
-          "n": 2,
-          "head": "Claude가 파일 작성",
-          "body": "Write 툴을 호출합니다."
-        },
-        {
-          "n": 3,
-          "head": "폴더에 파일이 생김",
-          "body": "탐색기에 바로 보입니다."
-        }
-      ]
-    },
-    {
       "id": "s2-write-02",
       "template": "compare",
       "title": "마크다운 파일",
@@ -508,42 +469,6 @@
           "n": "!",
           "head": "만든 그림을 포스터 소재로",
           "body": "직접 그린 자전거 강아지 svg가 포스터 안에 그대로 들어갑니다."
-        }
-      ]
-    },
-    {
-      "id": "s2-write-11",
-      "template": "cards",
-      "title": "이번엔 프로그램",
-      "cards": [
-        {
-          "label": "Python",
-          "logo": "/logos/python.svg",
-          "tags": [
-            "프로그래밍 언어"
-          ],
-          "badge": 1
-        },
-        {
-          "label": "tkinter",
-          "logo": "icon:Settings",
-          "tags": [
-            "창이 뜨는 프로그램 도구"
-          ],
-          "badge": 2,
-          "highlight": true
-        }
-      ],
-      "notes": [
-        {
-          "n": 1,
-          "head": "언어 — 파이썬 (Python)",
-          "body": "프로그램을 만들 때 쓰는 프로그래밍 언어입니다."
-        },
-        {
-          "n": 2,
-          "head": "도구 — tkinter",
-          "body": "파이썬으로 창이 뜨는 프로그램을 만들 때 쓰는 도구입니다."
         }
       ]
     },

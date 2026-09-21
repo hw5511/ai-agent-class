@@ -55,49 +55,6 @@
       ]
     },
     {
-      "id": "s2-bash-02",
-      "template": "cards",
-      "title": "컴퓨터 자체를 다루는 툴",
-      "cards": [
-        {
-          "label": "Read",
-          "logo": "icon:Read",
-          "tags": [
-            "파일을 열어 읽음"
-          ]
-        },
-        {
-          "label": "Write",
-          "logo": "icon:Write",
-          "tags": [
-            "새 파일을 만듦"
-          ]
-        },
-        {
-          "label": "Edit",
-          "logo": "icon:Edit",
-          "tags": [
-            "파일 내용을 고침"
-          ]
-        },
-        {
-          "label": "Bash",
-          "logo": "icon:Bash",
-          "tags": [
-            "컴퓨터 자체를 설치·실행·조회"
-          ],
-          "highlight": true
-        }
-      ],
-      "notes": [
-        {
-          "n": 1,
-          "head": "파일 안 vs 컴퓨터 자체",
-          "body": "Read·Write·Edit는 파일 안에서 일어나는 일이고, Bash는 컴퓨터 자체를 다룬다."
-        }
-      ]
-    },
-    {
       "id": "s2-bash-03",
       "template": "screen",
       "title": "카카오톡 실행",
@@ -336,75 +293,8 @@
     },
     {
       "id": "s2-bash-06",
-      "template": "compare",
+      "template": "screen",
       "title": "파일 목록 확인",
-      "left": {
-        "label": "Claude Code",
-        "screen": {
-          "kind": "vscode",
-          "folder": "agent1",
-          "files": [
-            {
-              "name": "자기소개서.txt"
-            },
-            {
-              "name": "강아지.svg"
-            },
-            {
-              "name": "포스터.html"
-            },
-            {
-              "name": "계산기.html"
-            },
-            {
-              "name": "테트리스.html"
-            },
-            {
-              "name": "practice_files",
-              "folder": true
-            }
-          ],
-          "terminal": {
-            "vendor": "claude",
-            "cwd": "C:\\agent1",
-            "turns": [
-              {
-                "role": "user",
-                "text": "현재 폴더의 파일 목록을 설명해줘",
-                "badge": 1
-              },
-              {
-                "role": "tool",
-                "text": "Bash(dir)",
-                "badge": 2
-              },
-              {
-                "role": "assistant",
-                "text": "6개 항목을 찾았어요. 지금까지 만든 게 다 있고, practice_files 폴더도 그대로 있어요."
-              }
-            ],
-            "input": {
-              "placeholder": "메시지를 입력하세요..."
-            }
-          }
-        }
-      },
-      "right": {
-        "label": "dir 결과",
-        "screen": {
-          "kind": "terminal",
-          "terminal": {
-            "vendor": "shell",
-            "cwd": "C:\\agent1",
-            "turns": [
-              {
-                "role": "assistant",
-                "text": "C:\\agent1 디렉터리\n\n자기소개서.txt\n강아지.svg\n포스터.html\n계산기.html\n테트리스.html\npractice_files  <DIR>"
-              }
-            ]
-          }
-        }
-      },
       "notes": [
         {
           "n": 1,
@@ -430,6 +320,54 @@
             "value": "현재 폴더의 파일 목록을 설명해줘"
           }
         ]
+      },
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          {
+            "name": "자기소개서.txt"
+          },
+          {
+            "name": "강아지.svg"
+          },
+          {
+            "name": "포스터.html"
+          },
+          {
+            "name": "계산기.html"
+          },
+          {
+            "name": "테트리스.html"
+          },
+          {
+            "name": "practice_files",
+            "folder": true
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "현재 폴더의 파일 목록을 설명해줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(파일 목록 보기)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "6개 항목을 찾았어요. 지금까지 만든 게 다 있고, practice_files 폴더도 그대로 있어요."
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
+        }
       }
     },
     {
@@ -471,7 +409,7 @@
             },
             {
               "role": "tool",
-              "text": "Bash(dir *테트리스*)",
+              "text": "Bash(테트리스 파일 찾기)",
               "badge": 2
             },
             {
@@ -493,7 +431,7 @@
         {
           "n": 2,
           "head": "찾기 → 실행, 한 번에",
-          "body": "dir로 파일을 찾고, 찾은 파일을 바로 실행한다."
+          "body": "파일을 찾고, 찾은 파일을 바로 실행한다."
         },
         {
           "n": "!",
@@ -772,143 +710,6 @@
           {
             "kind": "copy",
             "value": "현재 컴퓨터에 연결된 웹캠 인식해볼래? 그걸로 지금 뭐가 보이는지 캡처해서 설명해봐"
-          }
-        ]
-      }
-    },
-    {
-      "id": "s2-bash-12",
-      "template": "cards",
-      "title": "네 가지 툴의 조합",
-      "cards": [
-        {
-          "label": "READ",
-          "logo": "icon:Read",
-          "tags": [
-            "파일 안의 내용을 직접 열어봄"
-          ]
-        },
-        {
-          "label": "WRITE",
-          "logo": "icon:Write",
-          "tags": [
-            "새 파일을 만들어냄"
-          ]
-        },
-        {
-          "label": "EDIT",
-          "logo": "icon:Edit",
-          "tags": [
-            "기존 파일 내용을 바꿔 넣음"
-          ]
-        },
-        {
-          "label": "BASH",
-          "logo": "icon:Bash",
-          "tags": [
-            "컴퓨터에서 명령을 실행함"
-          ],
-          "highlight": true
-        }
-      ],
-      "notes": [
-        {
-          "n": 1,
-          "head": "한 작업에 네 툴 모두",
-          "body": "예 — 먼저 읽고 새로 만들고 고치고 실행까지 이어질 수 있다."
-        }
-      ]
-    },
-    {
-      "id": "s2-bash-13",
-      "template": "table",
-      "title": "AI가 쓰는 대표 명령어",
-      "columns": [
-        "기능",
-        "명령어"
-      ],
-      "rows": [
-        {
-          "cells": [
-            "목록 보기",
-            "ls / dir"
-          ]
-        },
-        {
-          "cells": [
-            "폴더 이동",
-            "cd"
-          ]
-        },
-        {
-          "cells": [
-            "폴더 만들기",
-            "mkdir"
-          ]
-        },
-        {
-          "cells": [
-            "파일 복사",
-            "copy / cp"
-          ]
-        },
-        {
-          "cells": [
-            "이름 바꾸기 · 이동",
-            "move / mv"
-          ]
-        },
-        {
-          "cells": [
-            "실행하기",
-            "start / open, python"
-          ]
-        }
-      ],
-      "notes": []
-    },
-    {
-      "id": "s2-bash-14",
-      "template": "cards",
-      "title": "Bash 툴 정리",
-      "cards": [
-        {
-          "label": "명령 실행",
-          "logo": "icon:Terminal",
-          "tags": [
-            "터미널 명령어를 AI가 대신 씀"
-          ]
-        },
-        {
-          "label": "컴퓨터 전체",
-          "logo": "icon:Cpu",
-          "tags": [
-            "파일 안이 아니라 컴퓨터 자체를 다룸"
-          ]
-        },
-        {
-          "label": "설치·실행·조회",
-          "logo": "icon:Settings",
-          "tags": [
-            "새 프로그램 설치부터 시스템 조회까지"
-          ]
-        },
-        {
-          "label": "툴 연결",
-          "logo": "icon:Zap",
-          "tags": [
-            "다른 툴과 이어져 하나의 일을 해냄"
-          ],
-          "highlight": true
-        }
-      ],
-      "notes": [],
-      "action": {
-        "label": "명령어 복사",
-        "items": [
-          {
-            "kind": "copy",
-            "value": "/clear"
           }
         ]
       }

@@ -264,58 +264,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "s2-edit-07",
-      "template": "cards",
-      "title": "Edit 툴 정리",
-      "cards": [
-        {
-          "label": "Write vs Edit",
-          "logo": "icon:Write",
-          "tags": [
-            "새로 만들기",
-            "있는 것 고치기"
-          ]
-        },
-        {
-          "label": "부분만 변경",
-          "logo": "icon:Edit",
-          "tags": [
-            "나머지는 그대로"
-          ]
-        },
-        {
-          "label": "반복",
-          "logo": "icon:Search",
-          "tags": [
-            "만들고 → 보고 → 고치고"
-          ]
-        },
-        {
-          "label": "말로 수정",
-          "logo": "icon:Chat",
-          "tags": [
-            "코드 몰라도 가능"
-          ]
-        }
-      ],
-      "notes": [
-        {
-          "n": "!",
-          "head": "/clear 로 정리하고 다음 실습으로",
-          "body": "/clear 는 지금 채팅방을 나가고 새 채팅방으로 가는 것이다."
-        }
-      ],
-      "action": {
-        "label": "명령어 복사",
-        "items": [
-          {
-            "kind": "copy",
-            "value": "/clear"
-          }
-        ]
-      }
     }
   ]
 }

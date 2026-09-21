@@ -1234,51 +1234,6 @@
           "body": "파일명만 보고는 몰랐던 내용이 전부 이름에 담겼다."
         }
       ]
-    },
-    {
-      "id": "s2-read-20",
-      "template": "screen",
-      "title": "Read 툴 정리",
-      "screen": {
-        "kind": "vscode",
-        "folder": "agent1",
-        "files": [
-          {
-            "name": "practice_files",
-            "folder": true
-          }
-        ],
-        "terminal": {
-          "vendor": "claude",
-          "cwd": "C:\\agent1",
-          "turns": [
-            {
-              "role": "assistant",
-              "text": "나머지 6개 파일도 내용에 맞게 이름을 바꿨어요."
-            }
-          ],
-          "input": {
-            "text": "/clear",
-            "badge": 1
-          }
-        }
-      },
-      "notes": [
-        {
-          "n": 1,
-          "head": "직접 읽기 · 드래그&드롭 · 이름 짓기",
-          "body": "텍스트 · 이미지 · PDF 를 직접 열어 읽고, 내용에 맞는 이름을 지었다."
-        }
-      ],
-      "action": {
-        "label": "명령어 복사",
-        "items": [
-          {
-            "kind": "copy",
-            "value": "/clear"
-          }
-        ]
-      }
     }
   ]
 }

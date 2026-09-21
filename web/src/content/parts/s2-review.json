@@ -531,50 +531,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "s2-review-14",
-      "template": "screen",
-      "title": "준비 완료",
-      "screen": {
-        "kind": "vscode",
-        "folder": "agent1",
-        "files": [
-          {
-            "name": ".claude",
-            "folder": true
-          },
-          {
-            "name": "CLAUDE.md",
-            "depth": 1
-          }
-        ],
-        "terminal": {
-          "vendor": "claude",
-          "cwd": "C:\\agent1",
-          "turns": [],
-          "input": {
-            "placeholder": "무엇을 도와드릴까요?"
-          }
-        }
-      },
-      "notes": [
-        {
-          "n": 1,
-          "head": "agent1 폴더 생성 및 열기",
-          "body": "터미널은 오른쪽 배치로 열려 있다."
-        },
-        {
-          "n": 2,
-          "head": "Claude Code 설치·실행 확인",
-          "body": "/login 완료, /model sonnet 설정."
-        },
-        {
-          "n": 3,
-          "head": "/ide 로 연동 해제",
-          "body": "이제 CLAUDE.md 파일을 만들어 본다."
-        }
-      ]
     }
   ]
 }
