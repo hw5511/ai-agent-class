@@ -6,6 +6,7 @@
 // 캡처할 URL/상태 한 줄 + AnnotationColumn 으로 이 슬라이드가 짚을 포인트). 캡처가 들어오면 각 슬라이드의
 // CapturePendingBox 를 실제 화면(ShotFrame 류)으로만 교체하면 되도록 자리·포인트를 미리 잡아 둔다.
 import React from "react";
+import { Img, staticFile } from "remotion";
 import { SlideFrame } from "../SlideFrame";
 import { FocusBadge } from "../FocusBadge";
 import { AnnotationColumn } from "../AnnotationColumn";
@@ -22,15 +23,13 @@ const TOTAL = 8;
 // 이 박스 하나만 실제 스크린샷(예: s1-claude-login.tsx 의 ShotFrame 패턴)으로 바꿔치기하면 된다.
 // ------------------------------------------------------------------------------------------------
 
-const CameraGlyph: React.FC<{ size: number; color: string }> = ({ size, color }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-    <path d="M3 8.4C3 7.6 3.6 7 4.4 7H8L9.4 5H14.6L16 7H19.6C20.4 7 21 7.6 21 8.4V17.6C21 18.4 20.4 19 19.6 19H4.4C3.6 19 3 18.4 3 17.6Z" stroke={color} strokeWidth={1.7} strokeLinejoin="round" />
-    <circle cx="12" cy="13" r="4" stroke={color} strokeWidth={1.7} />
-    <circle cx="17.3" cy="9.7" r="0.9" fill={color} />
-  </svg>
-);
 
-const CapturePendingBox: React.FC<{ x: number; y: number; width: number; height: number; url: string; capture: string }> = ({ x, y, width, height, url, capture }) => (
+
+
+// Real claude.ai capture in the same 9-col slot the placeholder used. Taken from the CEO's own
+// logged-in Chrome over OS-level input (browser-native), so nothing here is a mockup. Billing amounts
+// and the card's last four are blurred before the file ever reaches this folder.
+const RealShot: React.FC<{ x: number; y: number; width: number; height: number; src: string }> = ({ x, y, width, height, src }) => (
   <div
     style={{
       position: "absolute",
@@ -38,40 +37,23 @@ const CapturePendingBox: React.FC<{ x: number; y: number; width: number; height:
       top: y,
       width,
       height,
-      boxSizing: "border-box",
-      border: `2.5px dashed ${COLORS.line}`,
-      borderRadius: RADIUS.outer,
-      background: COLORS.paper2,
       display: "flex",
-      flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
-      gap: 26,
-      padding: "40px 56px",
     }}
   >
-    <div style={{ width: 92, height: 92, borderRadius: "50%", background: COLORS.accentWash, display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <CameraGlyph size={44} color={COLORS.accentDeep} />
-    </div>
-    <div
+    <Img
+      src={staticFile(src)}
       style={{
-        fontFamily: FONTS.term,
-        fontWeight: 600,
-        fontSize: 22,
-        color: COLORS.accentDeep,
-        background: COLORS.accentWash,
-        border: `1px solid ${COLORS.accent}`,
-        borderRadius: RADIUS.inner,
-        padding: "9px 22px",
-        wordBreak: "break-all",
-        textAlign: "center",
-        maxWidth: "92%",
+        maxWidth: "100%",
+        maxHeight: "100%",
+        objectFit: "contain",
+        border: `1px solid ${COLORS.line}`,
+        borderRadius: RADIUS.outer,
+        boxShadow: "0 18px 40px rgba(16,17,19,0.10)",
+        background: COLORS.paper2,
       }}
-    >
-      {url}
-    </div>
-    <div style={{ fontFamily: FONTS.display, fontWeight: 700, fontSize: 27, color: COLORS.ink2, textAlign: "center", wordBreak: "keep-all", maxWidth: "88%" }}>{capture}</div>
-    <div style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 19, color: COLORS.ink3, letterSpacing: "0.14em" }}>CAPTURE PENDING</div>
+    />
   </div>
 );
 
@@ -207,21 +189,14 @@ const Slide01: React.FC = () => {
 
 const Slide02: React.FC = () => (
   <SlideFrame index={2} total={TOTAL} eyebrow={EYEBROW} title="설정 메뉴 진입">
-    <CapturePendingBox
-      x={CAP_X}
-      y={BODY_Y}
-      width={CAP_W}
-      height={BODY_H}
-      url="claude.ai/new — 우하단 프로필 클릭"
-      capture="프로필 클릭 → 설정 메뉴가 펼쳐진 상태"
-    />
+    <RealShot x={CAP_X} y={BODY_Y} width={CAP_W} height={BODY_H} src="slides/shots/account_설정_진입.png" />
     <AnnotationColumn
       x={ANNO_X}
       y={BODY_Y}
       width={ANNO_W}
       height={BODY_H}
       items={[
-        { number: 1, head: "프로필 아이콘 위치", body: "화면 우하단 계정 아이콘에서 시작한다." },
+        { number: 1, head: "프로필 아이콘 위치", body: "화면 좌하단 계정 아이콘에서 시작한다." },
         { number: 2, head: "펼쳐지는 메뉴 항목", body: "설정 · 로그아웃 등 하위 항목이 나타난다." },
         { number: 3, head: "설정으로 이동", body: "여기서 데이터/청구/사용량 화면으로 각각 들어간다." },
       ]}
@@ -236,14 +211,7 @@ const Slide02: React.FC = () => (
 
 const Slide03: React.FC = () => (
   <SlideFrame index={3} total={TOTAL} eyebrow={EYEBROW} title="데이터 및 개인정보 보호">
-    <CapturePendingBox
-      x={CAP_X}
-      y={BODY_Y}
-      width={CAP_W}
-      height={BODY_H}
-      url="claude.ai/new#settings/data-privacy-controls"
-      capture="데이터 및 개인정보 보호 화면 전체"
-    />
+    <RealShot x={CAP_X} y={BODY_Y} width={CAP_W} height={BODY_H} src="slides/shots/account_privacy_화면.png" />
     <AnnotationColumn
       x={ANNO_X}
       y={BODY_Y}
@@ -265,14 +233,7 @@ const Slide03: React.FC = () => (
 
 const Slide04: React.FC = () => (
   <SlideFrame index={4} total={TOTAL} eyebrow={EYEBROW} title="AI 모델 개선 돕기 끄기">
-    <CapturePendingBox
-      x={CAP_X}
-      y={BODY_Y}
-      width={CAP_W}
-      height={BODY_H}
-      url="claude.ai/new#settings/data-privacy-controls"
-      capture="'AI 모델 개선 돕기' 토글 off 상태 확대"
-    />
+    <RealShot x={CAP_X} y={BODY_Y} width={CAP_W} height={BODY_H} src="slides/shots/account_privacy_off.png" />
     <AnnotationColumn
       x={ANNO_X}
       y={BODY_Y}
@@ -294,14 +255,7 @@ const Slide04: React.FC = () => (
 
 const Slide05: React.FC = () => (
   <SlideFrame index={5} total={TOTAL} eyebrow={EYEBROW} title="요금 및 청구">
-    <CapturePendingBox
-      x={CAP_X}
-      y={BODY_Y}
-      width={CAP_W}
-      height={BODY_H}
-      url="claude.ai/new#settings/billing"
-      capture="요금 및 청구 화면 전체 (결제수단 마스킹)"
-    />
+    <RealShot x={CAP_X} y={BODY_Y} width={CAP_W} height={BODY_H} src="slides/shots/account_billing_화면.png" />
     <AnnotationColumn
       x={ANNO_X}
       y={BODY_Y}
@@ -323,14 +277,7 @@ const Slide05: React.FC = () => (
 
 const Slide06: React.FC = () => (
   <SlideFrame index={6} total={TOTAL} eyebrow={EYEBROW} title="인보이스 다운로드 · 플랜 변경">
-    <CapturePendingBox
-      x={CAP_X}
-      y={BODY_Y}
-      width={CAP_W}
-      height={BODY_H}
-      url="claude.ai/new#settings/billing"
-      capture="인보이스 목록 + 다운로드 버튼 + 플랜 변경 버튼"
-    />
+    <RealShot x={CAP_X} y={BODY_Y} width={CAP_W} height={BODY_H} src="slides/shots/account_billing_인보이스.png" />
     <AnnotationColumn
       x={ANNO_X}
       y={BODY_Y}
@@ -352,14 +299,7 @@ const Slide06: React.FC = () => (
 
 const Slide07: React.FC = () => (
   <SlideFrame index={7} total={TOTAL} eyebrow={EYEBROW} title="사용량 화면">
-    <CapturePendingBox
-      x={CAP_X}
-      y={BODY_Y}
-      width={CAP_W}
-      height={BODY_H}
-      url="claude.ai/new#settings/usage"
-      capture="사용량 화면 전체"
-    />
+    <RealShot x={CAP_X} y={BODY_Y} width={CAP_W} height={BODY_H} src="slides/shots/account_usage_화면.png" />
     <AnnotationColumn
       x={ANNO_X}
       y={BODY_Y}
