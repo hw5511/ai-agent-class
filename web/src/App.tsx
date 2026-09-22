@@ -90,7 +90,7 @@ export default function App() {
   const posInPart = inPart.findIndex((x) => x.slide.id === cur?.slide.id) + 1
 
   return (
-    <SidebarProvider>
+    <SidebarProvider style={{ "--sidebar-width": "19rem" } as React.CSSProperties}>
       <Sidebar>
         <SidebarHeader>
           <div className="flex flex-col gap-2 px-2 pt-2">
@@ -107,27 +107,55 @@ export default function App() {
         <SidebarContent>
           <SidebarGroup>
             <SidebarGroupLabel>{course.title}</SidebarGroupLabel>
-            <SidebarMenu>
-              {course.sessions.map((s) => (
-                <SidebarMenuItem key={s.step}>
-                  <SidebarMenuButton isActive={s.step === session.step} onClick={() => go({ step: s.step, slide: 1 })}>
-                    <span className={cn("w-6 shrink-0 font-num text-[12px] font-medium tabular-nums tracking-wide", s.step === session.step ? "text-slide-accent" : "text-muted-foreground")}>{String(s.step).padStart(2, "0")}</span>
-                    <span className="truncate">{s.title}</span>
-                  </SidebarMenuButton>
-                  {s.step === session.step && s.parts.length > 1 && (
-                    <SidebarMenuSub>
-                      {s.parts.map((p) => (
-                        <SidebarMenuSubItem key={p.id}>
-                          <SidebarMenuSubButton isActive={p.id === cur?.part.id} onClick={() => go({ slide: partStart(p.id) })}>
-                            <span className="truncate">{p.title}</span>
-                            <span className="ml-auto font-num text-[11px] tabular-nums text-muted-foreground">{p.slides.length}</span>
-                          </SidebarMenuSubButton>
-                        </SidebarMenuSubItem>
-                      ))}
-                    </SidebarMenuSub>
-                  )}
-                </SidebarMenuItem>
-              ))}
+            <SidebarMenu className="gap-1">
+              {course.sessions.map((s) => {
+                const open = s.step === session.step
+                return (
+                  <SidebarMenuItem key={s.step}>
+                    {/* Session row: full title wraps instead of being cut; the open session gets an accent number chip. */}
+                    <SidebarMenuButton
+                      isActive={open}
+                      onClick={() => go({ step: s.step, slide: 1 })}
+                      className={cn("h-auto items-start gap-3 py-2 [&>span:last-child]:whitespace-normal", open && "bg-slide-accent/8 data-active:bg-slide-accent/8")}
+                    >
+                      <span
+                        className={cn(
+                          "mt-px flex h-5 w-7 shrink-0 items-center justify-center rounded font-num text-[11px] font-semibold tabular-nums",
+                          open ? "bg-slide-accent text-white" : "bg-muted text-muted-foreground",
+                        )}
+                      >
+                        {String(s.step).padStart(2, "0")}
+                      </span>
+                      <span className={cn("text-[14px] leading-5 break-keep", open ? "font-semibold text-foreground" : "text-foreground/80")}>{s.title}</span>
+                    </SidebarMenuButton>
+                    {open && s.parts.length > 1 && (
+                      // Parts: smaller, numbered, hung under the session number with an accent guide line.
+                      <SidebarMenuSub className="mx-0 mt-1 mb-2 ml-[22px] gap-0.5 border-l-2 border-slide-accent/20 py-0.5 pr-0 pl-2">
+                        {s.parts.map((p, pi) => {
+                          const here = p.id === cur?.part.id
+                          return (
+                            <SidebarMenuSubItem key={p.id}>
+                              <SidebarMenuSubButton
+                                isActive={here}
+                                onClick={() => go({ slide: partStart(p.id) })}
+                                className={cn(
+                                  "relative h-auto items-start gap-2 py-1.5 text-[13px] leading-[18px]",
+                                  here ? "bg-slide-accent/10 font-semibold text-slide-accent data-active:bg-slide-accent/10 data-active:text-slide-accent" : "text-muted-foreground hover:text-foreground",
+                                )}
+                              >
+                                {here && <span className="absolute top-1.5 bottom-1.5 -left-[12px] w-[2px] rounded bg-slide-accent" />}
+                                <span className="w-4 shrink-0 font-num text-[11px] leading-[18px] tabular-nums opacity-70">{pi + 1}</span>
+                                <span className="min-w-0 flex-1 break-keep">{p.title}</span>
+                                <span className="shrink-0 font-num text-[10px] leading-[18px] tabular-nums opacity-50">{p.slides.length}</span>
+                              </SidebarMenuSubButton>
+                            </SidebarMenuSubItem>
+                          )
+                        })}
+                      </SidebarMenuSub>
+                    )}
+                  </SidebarMenuItem>
+                )
+              })}
             </SidebarMenu>
           </SidebarGroup>
         </SidebarContent>
