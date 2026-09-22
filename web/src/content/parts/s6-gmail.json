@@ -65,9 +65,9 @@
               { "seg": [] },
               { "seg": [{ "t": "claude.ai", "c": "bold" }], "badge": 1 },
               { "seg": [{ "t": "  claude.ai Notion · ✔ connected · 45 tools", "c": "green" }] },
-              { "seg": [{ "t": "  claude.ai Google Calendar · ✔ connected · 12 tools", "c": "green" }] },
-              { "seg": [{ "t": "  claude.ai Google Drive · ✔ connected · 8 tools", "c": "green" }] },
-              { "seg": [{ "t": "  claude.ai Gmail · ✔ connected · 7 tools", "c": "green" }], "badge": 2 }
+              { "seg": [{ "t": "  claude.ai Google Calendar · ✔ connected · 9 tools", "c": "green" }] },
+              { "seg": [{ "t": "  claude.ai Google Drive · ✔ connected · 11 tools", "c": "green" }] },
+              { "seg": [{ "t": "  claude.ai Gmail · ✔ connected · 30 tools", "c": "green" }], "badge": 2 }
             ]
           },
           "fit": true
@@ -75,7 +75,7 @@
       },
       "notes": [
         { "n": 1, "head": "claude.ai 서버 하나", "body": "claude --dangerously-skip-permissions 로 다시 실행한 뒤 /mcp 를 입력하면, claude.ai 서버 하나 아래에 지금까지 연결한 커넥터들이 계속 쌓여 있는 모습을 볼 수 있어요." },
-        { "n": 2, "head": "Gmail 연결됨", "body": "목록 중 claude.ai Gmail 줄 옆에 초록색 connected 표시와 7 tools 라는 숫자가 새로 보이면, 방금 연결한 지메일 도구를 클로드 코드에서도 쓸 수 있다는 뜻입니다." }
+        { "n": 2, "head": "Gmail 연결됨", "body": "목록 중 claude.ai Gmail 줄 옆에 초록색 connected 표시와 30 tools 라는 숫자가 새로 보이면, 방금 연결한 지메일 도구를 클로드 코드에서도 쓸 수 있다는 뜻입니다." }
       ],
       "action": {
         "label": "명령어 복사",
@@ -126,20 +126,20 @@
           "panel": {
             "title": "",
             "rows": [
-              { "seg": [{ "t": "● Gmail MCP 연결 상태: ✔ connected · 7 tools", "c": "bold" }], "badge": 1 },
+              { "seg": [{ "t": "● Gmail MCP 연결 상태: ✔ connected · 30 tools", "c": "bold" }], "badge": 1 },
               { "seg": [] },
               { "seg": [{ "t": "● 사용 가능한 일", "c": "bold" }], "badge": 2 },
               { "seg": [{ "t": "  · 메일 검색 및 조회", "c": "dim" }] },
-              { "seg": [{ "t": "  · 메일 작성 및 전송", "c": "dim" }] },
-              { "seg": [{ "t": "  · 라벨 · 임시보관함 관리", "c": "dim" }] }
+              { "seg": [{ "t": "  · 메일 작성 · 답장 · 전달 · 전송", "c": "dim" }] },
+              { "seg": [{ "t": "  · 라벨 · 임시보관함 · 스팸 · 휴지통 관리", "c": "dim" }] }
             ]
           },
           "fit": true
         }
       },
       "notes": [
-        { "n": 1, "head": "연결 상태 확인", "body": "가장 위 줄에 Gmail MCP 가 connected 상태이고 7 tools 를 쓸 수 있다고 나오면, 방금 연결한 도구들이 실제로 작동 준비가 됐다는 뜻이에요." },
-        { "n": 2, "head": "할 수 있는 일 요약", "body": "그 아래에 메일 검색과 조회, 작성과 전송, 라벨과 임시보관함 관리까지 클로드가 할 수 있는 일들을 목록으로 정리해서 보여줍니다." }
+        { "n": 1, "head": "연결 상태 확인", "body": "가장 위 줄에 Gmail MCP 가 connected 상태이고 30 tools 를 쓸 수 있다고 나오면, 방금 연결한 도구들이 실제로 작동 준비가 됐다는 뜻이에요." },
+        { "n": 2, "head": "할 수 있는 일 요약", "body": "그 아래에 메일 검색과 조회, 작성과 답장, 전달과 전송, 라벨과 임시보관함 관리까지 클로드가 할 수 있는 일들을 목록으로 정리해서 보여줍니다." }
       ]
     },
     {
