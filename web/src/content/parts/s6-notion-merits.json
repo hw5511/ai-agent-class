@@ -7,7 +7,14 @@
       "id": "s6-notion-merits-01",
       "template": "screen",
       "title": "공유 · 초대받은 사용자만",
-      "screen": { "kind": "shot", "src": "/shots/s6/60_1_share.png" },
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/s6/crop/60_1_share.png",
+        "badges": [
+          { "n": 1, "x": 80, "y": 4 },
+          { "n": 2, "x": 41.9, "y": 55.1 }
+        ]
+      },
       "notes": [
         { "n": 1, "head": "우상단 공유 버튼", "body": "페이지 오른쪽 위에 있는 공유 버튼을 눌러보세요. 그러면 이 페이지를 함께 볼 사람을 초대할 수 있는 창이 열립니다." },
         { "n": 2, "head": "기본값은 초대받은 사용자만", "body": "일반 사용 권한 옆을 보면 초대받은 사용자만이라고 적혀 있어요. 그래서 지금은 내가 이메일로 초대한 사람만 이 페이지를 볼 수 있습니다." }
@@ -17,7 +24,14 @@
       "id": "s6-notion-merits-02",
       "template": "screen",
       "title": "링크가 있는 모든 사용자",
-      "screen": { "kind": "shot", "src": "/shots/s6/60_2_access_menu.png" },
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/s6/crop/60_2_access_menu.png",
+        "badges": [
+          { "n": 1, "x": 41.9, "y": 55.1 },
+          { "n": 2, "x": 46.7, "y": 68.9 }
+        ]
+      },
       "notes": [
         { "n": 1, "head": "일반 사용 권한 열기", "body": "초대받은 사용자만이라고 적힌 부분을 클릭하면 드롭다운 메뉴가 열려요. 여기서 공유 범위를 다른 옵션으로 바꿀 수 있습니다." },
         { "n": 2, "head": "링크가 있는 웹의 모든 사용자", "body": "드롭다운에서 링크가 있는 웹의 모든 사용자를 선택하고 링크 복사를 누르면, 그 링크를 가진 사람은 누구나 로그인 없이 페이지를 볼 수 있어요." }
@@ -27,7 +41,14 @@
       "id": "s6-notion-merits-03",
       "template": "screen",
       "title": "더 보기 메뉴 · 내보내기",
-      "screen": { "kind": "shot", "src": "/shots/s6/60_3_more_menu.png" },
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/s6/crop/60_3_more_menu.png",
+        "badges": [
+          { "n": 1, "x": 96, "y": 2.9 },
+          { "n": 2, "x": 80.1, "y": 84.6 }
+        ]
+      },
       "notes": [
         { "n": 1, "head": "우상단 점 세 개", "body": "제목 옆에 있는 점 세 개 아이콘을 눌러보세요. 페이지를 다루는 여러 기능이 담긴 메뉴가 펼쳐집니다." },
         { "n": 2, "head": "내보내기 선택", "body": "펼쳐진 메뉴에서 내보내기를 클릭하면 파일 형식을 고르는 새 창이 열려요. 이 기능으로 노션 페이지를 다른 프로그램에서도 열 수 있는 파일로 바꿀 수 있습니다." }
@@ -37,7 +58,14 @@
       "id": "s6-notion-merits-04",
       "template": "screen",
       "title": "내보내기 형식 선택",
-      "screen": { "kind": "shot", "src": "/shots/s6/60_4_export_dialog.png" },
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/s6/crop/60_4_export_dialog.png",
+        "badges": [
+          { "n": 1, "x": 23.5, "y": 29.2 },
+          { "n": 2, "x": 58.8, "y": 19.4 }
+        ]
+      },
       "notes": [
         { "n": 1, "head": "내보내기 형식", "body": "내보내기 형식, 데이터베이스 보기, 페이지 콘텐츠 세 항목을 각각 눌러서 원하는 값으로 바꿀 수 있어요. 지금은 무엇을 어떻게 내보낼지 정하는 단계입니다." },
         { "n": 2, "head": "기본값 Markdown & CSV", "body": "내보내기 형식 항목이 기본으로 Markdown & CSV 로 되어 있어요. 이 값을 클릭하면 다른 형식으로 바꿀 수 있는 목록이 나타납니다." }
@@ -47,7 +75,14 @@
       "id": "s6-notion-merits-05",
       "template": "screen",
       "title": "형식 드롭다운 · PDF 선택",
-      "screen": { "kind": "shot", "src": "/shots/s6/60_5_format_menu.png" },
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/s6/crop/60_5_format_menu.png",
+        "badges": [
+          { "n": 1, "x": 58.1, "y": 34.7 },
+          { "n": 2, "x": 75, "y": 62.5 }
+        ]
+      },
       "notes": [
         { "n": 1, "head": "PDF, HTML, Markdown & CSV", "body": "형식 값을 클릭하면 PDF, HTML, Markdown & CSV 세 가지 선택지가 나타나요. 상황에 맞는 형식을 여기서 고르면 됩니다." },
         { "n": 2, "head": "PDF 선택 후 내보내기", "body": "PDF 를 선택한 다음 내보내기 버튼을 누르면, 노션 페이지가 그대로 PDF 파일로 만들어져 다운로드됩니다." }

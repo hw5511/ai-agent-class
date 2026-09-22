@@ -87,7 +87,7 @@
               {
                 "seg": [
                   {
-                    "t": "● Notion MCP 연결 상태: ✔ connected · 19 tools",
+                    "t": "● Notion MCP 연결 상태: ✔ connected · 45 tools",
                     "c": "bold"
                   }
                 ],
@@ -170,7 +170,7 @@
         {
           "n": 1,
           "head": "연결 상태 확인",
-          "body": "결과 화면 맨 위에 Notion MCP 연결 상태: connected 와 19 tools 라는 표시가 나타나요. 노션이 정상적으로 연결되어 있고 사용할 수 있는 도구가 19 개라는 뜻입니다."
+          "body": "결과 화면 맨 위에 Notion MCP 연결 상태: connected 와 45 tools 라는 표시가 나타나요. 노션이 정상적으로 연결되어 있고 사용할 수 있는 도구가 19 개라는 뜻입니다."
         },
         {
           "n": 2,

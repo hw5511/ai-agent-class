@@ -137,6 +137,7 @@
     },
     {
       "id": "s6-blender-06",
+      "ratio": [2, 1],
       "template": "compare",
       "title": "결과 · 블렌더 연결 확인",
       "replaceWithCapture": "블렌더 실행 + mcp 연결 상태 체크 실제 결과",
@@ -203,6 +204,7 @@
     },
     {
       "id": "s6-blender-08",
+      "ratio": [2, 1],
       "template": "compare",
       "title": "진행 · 맵 · 카메라 · 렌더링",
       "replaceWithCapture": "'공의 모험' 맵 제작 + 렌더링 진행 실제 결과",

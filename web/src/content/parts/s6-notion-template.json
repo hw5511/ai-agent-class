@@ -22,7 +22,11 @@
       "id": "s6-notion-template-02",
       "template": "screen",
       "title": "여행 일정 & 경비 관리 템플릿",
-      "screen": { "kind": "shot", "src": "/shots/s6/50_tpl_2_bottom.png" },
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/s6/crop/50_tpl_2_bottom.png",
+        "badges": [{ "n": 1, "x": 20.7, "y": 7.6 }]
+      },
       "notes": [
         { "n": 1, "head": "여행 카테고리에서 발견", "body": "화면 아래쪽 여행 카테고리 탭을 누르고 목록을 훑다 보면 여행 일정 & 경비 관리 All in One 템플릿을 찾을 수 있어요." }
       ]
@@ -31,7 +35,14 @@
       "id": "s6-notion-template-03",
       "template": "screen",
       "title": "템플릿 미리보기 · 사용하기",
-      "screen": { "kind": "shot", "src": "/shots/s6/50_tpl_3_modal.png" },
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/s6/crop/50_tpl_3_modal.png",
+        "badges": [
+          { "n": 1, "x": 26.8, "y": 53.3 },
+          { "n": 2, "x": 67.1, "y": 31.5 }
+        ]
+      },
       "notes": [
         { "n": 1, "head": "템플릿 설명 확인", "body": "오른쪽 템플릿 설명 영역에서 이 템플릿이 어떤 기능을 가졌는지 먼저 읽어볼 수 있어요." },
         { "n": 2, "head": "템플릿 사용하기", "body": "설명이 마음에 들면 오른쪽 위 템플릿 사용하기 버튼을 눌러서 이 템플릿을 내 워크스페이스로 가져오세요." }
@@ -41,7 +52,14 @@
       "id": "s6-notion-template-04",
       "template": "screen",
       "title": "워크스페이스 선택",
-      "screen": { "kind": "shot", "src": "/shots/s6/50_tpl_4_add_dialog.png" },
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/s6/crop/50_tpl_4_add_dialog.png",
+        "badges": [
+          { "n": 1, "x": 5.6, "y": 50.7 },
+          { "n": 2, "x": 8.9, "y": 71.1 }
+        ]
+      },
       "notes": [
         { "n": 1, "head": "새 창으로 열림", "body": "템플릿 사용하기를 누르면 새 창이 뜨면서 어느 워크스페이스에 추가할지 물어봐요." },
         { "n": 2, "head": "Add to Private", "body": "개인 워크스페이스를 고른 다음 파란색 Add to Private 버튼을 누르면, 내 개인 페이지 목록에 이 템플릿이 그대로 복제됩니다." }
@@ -51,10 +69,17 @@
       "id": "s6-notion-template-05",
       "template": "screen",
       "title": "개인 페이지에 추가 완료",
-      "screen": { "kind": "shot", "src": "/shots/s6/50_tpl_5_added.png" },
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/s6/crop/60_0_page_tpl05.png",
+        "badges": [
+          { "n": 1, "x": 0.9, "y": 14.3 },
+          { "n": 2, "x": 51.3, "y": 14.8 }
+        ]
+      },
       "notes": [
-        { "n": 1, "head": "Template is ready 알림", "body": "화면 왼쪽 아래에 템플릿이 워크스페이스에 추가됐다는 Template is ready 알림이 나타나요." },
-        { "n": 2, "head": "왼쪽 목록에 새 페이지", "body": "왼쪽 사이드바의 개인 페이지 목록을 보면 방금 복제한 여행 일정 & 경비 관리 All in One 페이지가 새로 나타난 걸 볼 수 있습니다." }
+        { "n": 1, "head": "개인 페이지 목록에 등록", "body": "왼쪽 사이드바의 개인 페이지 목록을 보면 방금 복제한 페이지가 새로 나타난 걸 볼 수 있어요. 이제부터는 이 페이지를 내 워크스페이스에서 언제든 열어볼 수 있습니다." },
+        { "n": 2, "head": "여행 템플릿 제목으로 열림", "body": "새로 생긴 페이지를 열어 보면 여행 일정 & 경비 관리 All in One 이라는 제목 그대로 열려요. 방금 가져온 템플릿이 그대로 복제됐다는 걸 확인할 수 있습니다." }
       ]
     },
     {
