@@ -6,8 +6,8 @@ import { fileURLToPath } from "node:url"
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..")
 const partsDir = join(root, "src/content/parts")
-const TEMPLATES = new Set(["screen", "compare", "table", "illustration", "overview", "cards", "flow", "stack"])
-const SCREENS = new Set(["vscode", "terminal", "shot", "chat", "browser", "file"])
+const TEMPLATES = new Set(["screen", "compare", "table", "illustration", "overview", "cards", "flow", "stack", "lifecycle"])
+const SCREENS = new Set(["vscode", "terminal", "shot", "chat", "browser", "file", "agentview", "office"])
 const VENDORS = new Set(["claude", "antigravity", "codex", "shell"])
 const KINDS = new Set(["copy", "link", "download"])
 
@@ -30,6 +30,17 @@ function badgesOfScreen(s, out) {
     for (const x of s.extensions?.items ?? []) if (x.badge) out.push(x.badge)
     for (const b of s.toast?.buttons ?? []) if (b.badge) out.push(b.badge)
   }
+  if (s.kind === "agentview") {
+    for (const b of [s.countsBadge, s.noticeBadge, s.input?.badge]) if (b) out.push(b)
+    for (const g of s.groups ?? []) for (const r of g.rows ?? []) if (r.badge) out.push(r.badge)
+  }
+  if (s.kind === "office") {
+    for (const b of [s.ribbonMark?.badge, s.excel?.formulaBadge, s.panel?.badge, s.dialog?.badge]) if (b) out.push(b)
+    for (const r of s.excel?.rows ?? []) if (r.badge) out.push(r.badge)
+    for (const pg of s.word?.pages ?? []) if (pg.badge) out.push(pg.badge)
+    for (const sl of s.powerpoint?.slides ?? []) if (sl.badge) out.push(sl.badge)
+    return
+  }
   for (const m of s.messages ?? []) if (m.badge) out.push(m.badge)
   for (const r of s.results ?? []) if (r.badge) out.push(r.badge)
   const t = s.terminal
@@ -39,7 +50,8 @@ function badgesOfScreen(s, out) {
     for (const u of t.usage ?? []) if (u.badge) out.push(u.badge)
     for (const r of t.panel?.rows ?? []) if (r.badge) out.push(r.badge)
     for (const x of t.picker?.items ?? []) if (x.badge) out.push(x.badge)
-    for (const b of [t.picker?.folderBadge, t.sessionTag?.badge, t.footer?.badge]) if (b) out.push(b)
+    for (const b of [t.picker?.folderBadge, t.sessionTag?.badge, t.footer?.badge, t.rule?.badge, t.agents?.badge]) if (b) out.push(b)
+    for (const r of t.agents?.rows ?? []) if (r.badge) out.push(r.badge)
   }
 }
 
@@ -50,6 +62,13 @@ function checkScreen(where, s) {
     if (!s.terminal || !VENDORS.has(s.terminal.vendor)) err(where, `bad terminal.vendor ${s.terminal?.vendor}`)
     if (!Array.isArray(s.terminal?.turns)) err(where, "terminal.turns missing")
   }
+  if (s.kind === "office") {
+    if (!["excel", "word", "powerpoint"].includes(s.app)) err(where, `bad office.app ${s.app}`)
+    if (s.app === "excel" && !s.excel) err(where, "office excel needs excel{}")
+    if (s.app === "word" && !s.word) err(where, "office word needs word{}")
+    if (s.app === "powerpoint" && !s.powerpoint) err(where, "office powerpoint needs powerpoint{}")
+  }
+  if (s.kind === "agentview" && !Array.isArray(s.groups)) err(where, "agentview needs groups[]")
   if (s.kind === "vscode" && (!s.folder || !Array.isArray(s.files))) err(where, "vscode needs folder + files[]")
 }
 
@@ -90,6 +109,10 @@ for (const f of files) {
       for (const src of [c.logo, c.image]) if (src && !src.startsWith("icon:") && !existsSync(join(root, "public", src))) err(w, `missing ${src}`)
     }
     for (const st of s.steps ?? []) if (st.badge) badges.push(st.badge)
+    if (s.template === "lifecycle") {
+      for (const k of ["start", "turnStart", "loop", "turnEnd", "end"]) if (!Array.isArray(s[k])) err(w, `lifecycle needs ${k}[]`)
+      for (const k of ["start", "turnStart", "loop", "turnEnd", "end", "side"]) for (const nd of s[k] ?? []) if (nd.badge) badges.push(nd.badge)
+    }
     for (const it of s.items ?? []) {
       if (!it.screen) continue
       checkScreen(w, it.screen)
@@ -98,13 +121,14 @@ for (const f of files) {
     }
     const notes = s.notes ?? []
     if (notes.length > 3) err(w, `${notes.length} notes (max 3)`)
-    // Notes are keywords, not sentences (CEO 2026-09-22): no sentence endings (~다/~요/~니다), no final
-    // period, no dash chains.
+    // Note head = short keyword title: no sentence endings (~다/~요/~니다), no final period (CEO 2026-09-22).
+    // Note body = detailed spoken explanation to the student in polite Korean, 1-3 sentences, so sentences
+    // are allowed there (CEO 2026-09-22, second revision). Dashes stay banned in both.
     for (const n of notes) {
       for (const [k, v] of [["head", n.head], ["body", n.body]]) {
         const s = (v ?? "").trim()
         if (/[—–]/.test(s)) err(w, `note ${n.n} ${k} uses a dash: ${s}`)
-        if (/(다|니다|[^필]요)[.!]?$/.test(s) || /[.。]$/.test(s)) err(w, `note ${n.n} ${k} is a sentence, use keywords: ${s}`)
+        if (k === "head" && (/(다|니다|[^필]요)[.!]?$/.test(s) || /[.。]$/.test(s))) err(w, `note ${n.n} head is a sentence, use keywords: ${s}`)
       }
     }
     const nums = new Set(notes.map((n) => n.n))

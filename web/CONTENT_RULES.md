@@ -83,6 +83,13 @@ Each note says what the student sees or does on this slide, in plain words. Neve
 - a second note that repeats the first
 If a note has nothing left to say, delete it and the matching badge on the slide.
 
+## Notes body — spoken explanation (CEO 2026-09-22, second revision; overrides the body part below)
+
+- `head` stays a short keyword title (rules below still apply to it).
+- `body` is a detailed explanation spoken to the student in polite Korean, 1-3 sentences, concrete:
+  what to press or type, what they will see, why. e.g. "~해보세요", "~를 ○○하면 ○○하게 할 수 있습니다".
+- No dashes in either. The gate checks the keyword rule on `head` only.
+
 ## Notes tone — keywords, no AI 말투 (CEO 2026-09-22)
 
 "뭐뭐한다 뭐뭐한다. 뭐뭐 했다 이거 ai말투라고" / "문장형태가 아닌 '키워드'식으로 하라 했잖니"
