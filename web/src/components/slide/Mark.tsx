@@ -16,5 +16,8 @@ export function Mark({ src, px, className }: { src: string; px: number; classNam
     const Icon = ICONS[src.slice(5) as keyof typeof ICONS] ?? BotIcon
     return <Icon width={px} height={px} className={cn("shrink-0 text-slide-accent", className)} strokeWidth={1.6} />
   }
-  return <img src={asset(src)} alt="" style={{ height: px }} className={cn("w-auto max-w-full object-contain", className)} />
+  // SVG logos often carry only a viewBox (no intrinsic size); give them an explicit square box so they never
+  // collapse to width 0. Raster wordmarks keep their natural aspect ratio.
+  const svg = src.endsWith(".svg")
+  return <img src={asset(src)} alt="" style={svg ? { height: px, width: px } : { height: px }} className={cn("max-w-full object-contain", !svg && "w-auto", className)} />
 }
