@@ -6,7 +6,7 @@
     {
       "id": "s4-context-13",
       "template": "compare",
-      "title": "관리법 1 · /clear 로 세션 바꾸기",
+      "title": "관리법1. /clear",
       "left": {
         "label": "/clear 전",
         "screen": {
@@ -46,7 +46,7 @@
     {
       "id": "s4-context-14",
       "template": "screen",
-      "title": "관리법 2 · 잊으라고 해도 남는 대화",
+      "title": "관리법2. /rewind",
       "screen": {
         "kind": "shot",
         "src": "/illustrations/ctx-forget.svg"
@@ -578,20 +578,11 @@
       "template": "compare",
       "title": "Restore conversation",
       "left": {
-        "label": "파일은 그대로",
+        "label": "터미널 · 되돌린 뒤 대화",
         "screen": {
           "kind": "vscode",
           "folder": "agent1",
-          "files": [
-            {
-              "name": ".claude",
-              "folder": true
-            },
-            {
-              "name": "test.md",
-              "active": true
-            }
-          ],
+          "files": [],
           "terminal": {
             "vendor": "claude",
             "cwd": "C:\\agent1",
@@ -618,18 +609,10 @@
             },
             "footer": {
               "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
-            }
+            },
+            "fit": true
           },
-          "editor": {
-            "file": "test.md",
-            "lines": [
-              "안녕하세요! 만나서 반가워요.",
-              "오늘도 좋은 하루 보내세요.",
-              "",
-              "Hello! Nice to meet you.",
-              "Have a great day."
-            ]
-          }
+          "noSidebar": true
         }
       },
       "right": {
@@ -657,20 +640,11 @@
       "template": "compare",
       "title": "Restore code",
       "left": {
-        "label": "파일만 되돌아감",
+        "label": "터미널 · 대화 기록 유지",
         "screen": {
           "kind": "vscode",
           "folder": "agent1",
-          "files": [
-            {
-              "name": ".claude",
-              "folder": true
-            },
-            {
-              "name": "test.md",
-              "active": true
-            }
-          ],
+          "files": [],
           "terminal": {
             "vendor": "claude",
             "cwd": "C:\\agent1",
@@ -713,15 +687,10 @@
             },
             "footer": {
               "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
-            }
+            },
+            "fit": true
           },
-          "editor": {
-            "file": "test.md",
-            "lines": [
-              "안녕하세요! 만나서 반가워요.",
-              "오늘도 좋은 하루 보내세요."
-            ]
-          }
+          "noSidebar": true
         }
       },
       "right": {

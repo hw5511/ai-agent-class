@@ -6,7 +6,7 @@
     {
       "id": "s4-context-24",
       "template": "screen",
-      "title": "관리법 3 · 대화 길이 한도",
+      "title": "관리법3. /compact",
       "screen": {
         "kind": "shot",
         "src": "/illustrations/ctx-chatgpt-limit.svg"
