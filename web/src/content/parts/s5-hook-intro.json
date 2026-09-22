@@ -1,0 +1,102 @@
+{
+  "id": "s5-hook-intro",
+  "title": "훅이란?",
+  "summary": "훅이 무엇인지, 언제 실행되는지, 어떤 종류가 있는지 익힌다.",
+  "slides": [
+    {
+      "id": "s5-hook-intro-01",
+      "template": "flow",
+      "title": "이벤트 감지와 실행",
+      "steps": [
+        { "label": "이벤트 감지", "badge": 1 },
+        { "label": "훅 실행", "badge": 2 },
+        { "label": "결과" }
+      ],
+      "notes": [
+        { "n": 1, "head": "이벤트 감지", "body": "클로드가 프롬프트를 받거나 도구를 쓰는 등 특정 행동을 하는 순간을 훅이 지켜보고 있다가 잡아냅니다." },
+        { "n": 2, "head": "훅 실행", "body": "그 순간이 오면 미리 만들어둔 스크립트가 자동으로 실행됩니다." },
+        { "n": "!", "head": "공식", "body": "훅은 '클로드가 ○○할 때 ○○한다'는 규칙 하나로 정리할 수 있습니다." }
+      ]
+    },
+    {
+      "id": "s5-hook-intro-02",
+      "template": "lifecycle",
+      "title": "훅 라이프사이클",
+      "start": [{ "label": "SessionStart" }],
+      "turnStart": [{ "label": "UserPromptSubmit", "highlight": true, "badge": 1 }],
+      "loop": [
+        { "label": "PreToolUse" },
+        { "label": "PermissionRequest" },
+        { "label": "[도구 실행]" },
+        { "label": "PostToolUse", "highlight": true, "badge": 2 }
+      ],
+      "turnEnd": [{ "label": "Stop", "highlight": true, "badge": 3 }],
+      "end": [{ "label": "SessionEnd" }],
+      "side": [
+        { "label": "Notification", "muted": true },
+        { "label": "PreCompact", "muted": true },
+        { "label": "SubagentStart", "muted": true },
+        { "label": "SubagentStop", "muted": true }
+      ],
+      "notes": [
+        { "n": 1, "head": "UserPromptSubmit", "body": "메시지를 보내는 그 순간 실행되는 훅으로, 프롬프트를 검사하거나 문구를 끼워 넣을 때 씁니다." },
+        { "n": 2, "head": "PostToolUse", "body": "도구가 실행을 끝낸 직후 실행되는 훅으로, 방금 무슨 도구를 썼는지 기록하고 싶을 때 씁니다." },
+        { "n": 3, "head": "Stop", "body": "클로드가 응답을 끝내려는 순간 실행되는 훅으로, 정말 끝내도 되는지 한 번 더 확인시킬 때 씁니다." }
+      ],
+      "action": {
+        "label": "자료 보기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://mintcdn.com/claude-code/x7pO8l4XcvAXCoVc/images/hooks-lifecycle.svg?w=1650&fit=max&auto=format&n=x7pO8l4XcvAXCoVc&q=85&s=b9cbc23d0598134cfa97f9252e4e188d",
+            "text": "공식 라이프사이클 이미지"
+          },
+          {
+            "kind": "link",
+            "href": "https://code.claude.com/docs/en/hooks",
+            "text": "공식 훅 문서"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5-hook-intro-03",
+      "template": "table",
+      "title": "자주 쓰는 훅",
+      "columns": ["이벤트", "언제", "예시"],
+      "rows": [
+        { "cells": ["SessionStart", "세션 시작 시 1회", "최초 컨텍스트 주입"] },
+        { "cells": ["SessionEnd", "세션 종료 시 1회", "요약 로그 저장"] },
+        { "cells": ["UserPromptSubmit", "프롬프트 제출 시", "문구 검사·삽입"], "highlight": true },
+        { "cells": ["PreToolUse", "도구 실행 직전", "위험 명령 차단"] },
+        { "cells": ["PermissionRequest", "권한 확인 시점", "자동 승인·거부"] },
+        { "cells": ["PostToolUse", "도구 실행 직후", "결과 로그 기록"], "highlight": true },
+        { "cells": ["Stop", "응답 종료 시도 시", "추가 작업 유도"], "highlight": true },
+        { "cells": ["StopFailure", "API 오류로 중단 시", "오류 알림"] },
+        { "cells": ["Notification", "알림 발생 시", "데스크톱 알림"] },
+        { "cells": ["PreCompact", "컨텍스트 압축 전", "백업 저장"] },
+        { "cells": ["SubagentStart", "서브에이전트 시작 시", "시작 로그"] }
+      ]
+    },
+    {
+      "id": "s5-hook-intro-04",
+      "template": "table",
+      "title": "그 외 훅",
+      "columns": ["이벤트", "언제", "예시"],
+      "rows": [
+        { "cells": ["PermissionDenied", "자동 모드 거부 시", "거부 사유 기록"] },
+        { "cells": ["PostToolUseFailure", "도구 실행 실패 시", "오류 재시도 유도"] },
+        { "cells": ["PostToolBatch", "도구 묶음 종료 시", "배치 결과 요약"] },
+        { "cells": ["SubagentStop", "서브에이전트 종료 시", "결과 수합"] },
+        { "cells": ["TaskCreated", "할 일(Task) 생성 시", "작업 등록 로그"] },
+        { "cells": ["TaskCompleted", "할 일(Task) 완료 시", "완료 알림"] },
+        { "cells": ["PostCompact", "컨텍스트 압축 후", "압축 결과 확인"] },
+        { "cells": ["InstructionsLoaded", "지침 파일 로드 시", "로드 목록 기록"] },
+        { "cells": ["ConfigChange", "설정 변경 시", "변경 내역 기록"] },
+        { "cells": ["FileChanged", "파일 변경 감지 시", "변경 파일 추적"] },
+        { "cells": ["WorktreeCreate", "워크트리 생성 시", "생성 로그"] },
+        { "cells": ["PreModelSwitch", "모델 전환 직전", "전환 사유 기록"] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1760 800" width="1760" height="800" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<text x="200" y="110" font-size="30" fill="#101113" font-weight="800" text-anchor="start">순차 실행 · 메인 혼자</text>
+
+<rect x="200" y="150" width="466" height="90" fill="#101113"/>
+<text x="433" y="203" font-size="24" fill="#ffffff" font-weight="700" text-anchor="middle">조사</text>
+<rect x="666" y="150" width="466" height="90" fill="#43474b"/>
+<text x="899" y="203" font-size="24" fill="#ffffff" font-weight="700" text-anchor="middle">코딩</text>
+<rect x="1132" y="150" width="466" height="90" fill="#9a9ea3"/>
+<text x="1365" y="203" font-size="24" fill="#101113" font-weight="700" text-anchor="middle">정리</text>
+<circle cx="1660" cy="195" r="26" fill="#1273c4"/><text x="1660" y="204" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+<text x="200" y="280" font-size="24" fill="#43474b" font-weight="700" text-anchor="start">하나씩 순서대로 진행 · 총 30분</text>
+
+<line x1="200" y1="330" x2="1600" y2="330" stroke="#e5e5e5" stroke-width="2"/>
+
+<text x="200" y="440" font-size="30" fill="#101113" font-weight="800" text-anchor="start">병렬 실행 · 서브에이전트 배치</text>
+
+<rect x="200" y="480" width="466" height="70" fill="#101113"/>
+<text x="433" y="524" font-size="22" fill="#ffffff" font-weight="700" text-anchor="middle">조사</text>
+<rect x="200" y="565" width="466" height="70" fill="#43474b"/>
+<text x="433" y="609" font-size="22" fill="#ffffff" font-weight="700" text-anchor="middle">코딩</text>
+<rect x="200" y="650" width="466" height="70" fill="#9a9ea3"/>
+<text x="433" y="694" font-size="22" fill="#101113" font-weight="700" text-anchor="middle">정리</text>
+<circle cx="740" cy="595" r="26" fill="#1273c4"/><text x="740" y="604" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+<text x="800" y="524" font-size="24" fill="#43474b" font-weight="700" text-anchor="start">세 서브에이전트가</text>
+<text x="800" y="560" font-size="24" fill="#43474b" font-weight="700" text-anchor="start">동시에 진행 · 총 10분</text>
+</svg>

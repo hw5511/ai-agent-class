@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1760 800" width="1760" height="800" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs>
+  <marker id="s5ns-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="s5ns-arg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#43474b"/></marker>
+</defs>
+
+<rect x="730" y="40" width="300" height="90" rx="16" fill="#1273c4"/>
+<text x="880" y="95" font-size="28" fill="#ffffff" font-weight="800" text-anchor="middle">메인 클로드</text>
+
+<line x1="820" y1="130" x2="330" y2="220" stroke="#1273c4" stroke-width="4" marker-end="url(#s5ns-ar)"/>
+<line x1="880" y1="130" x2="880" y2="220" stroke="#1273c4" stroke-width="4" marker-end="url(#s5ns-ar)"/>
+<line x1="940" y1="130" x2="1430" y2="220" stroke="#1273c4" stroke-width="4" marker-end="url(#s5ns-ar)"/>
+<circle cx="1250" cy="150" r="24" fill="#1273c4"/><text x="1250" y="159" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+<text x="1290" y="159" font-size="22" fill="#1273c4" font-weight="800" text-anchor="start">서브에이전트 3개 배치</text>
+
+<rect x="160" y="220" width="260" height="90" rx="14" fill="#101113"/>
+<text x="290" y="260" font-size="20" fill="#ffffff" font-weight="800" text-anchor="middle">general-purpose</text>
+<text x="290" y="288" font-size="17" fill="#e5e5e5" font-weight="400" text-anchor="middle">진해군항제 심층조사</text>
+
+<rect x="750" y="220" width="260" height="90" rx="14" fill="#43474b"/>
+<text x="880" y="260" font-size="20" fill="#ffffff" font-weight="800" text-anchor="middle">general-purpose</text>
+<text x="880" y="288" font-size="17" fill="#e5e5e5" font-weight="400" text-anchor="middle">여의도 봄꽃축제 심층조사</text>
+
+<rect x="1340" y="220" width="260" height="90" rx="14" fill="#43474b"/>
+<text x="1470" y="260" font-size="20" fill="#ffffff" font-weight="800" text-anchor="middle">general-purpose</text>
+<text x="1470" y="288" font-size="17" fill="#e5e5e5" font-weight="400" text-anchor="middle">경주 대릉원돌담길 심층조사</text>
+
+<line x1="220" y1="310" x2="140" y2="410" stroke="#43474b" stroke-width="3" marker-end="url(#s5ns-arg)"/>
+<line x1="290" y1="310" x2="290" y2="410" stroke="#43474b" stroke-width="3" marker-end="url(#s5ns-arg)"/>
+<line x1="360" y1="310" x2="440" y2="410" stroke="#43474b" stroke-width="3" marker-end="url(#s5ns-arg)"/>
+<circle cx="470" cy="360" r="24" fill="#1273c4"/><text x="470" y="369" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+<text x="510" y="369" font-size="22" fill="#1273c4" font-weight="800" text-anchor="start">하청의 하청</text>
+
+<rect x="70" y="420" width="140" height="70" rx="10" fill="#9a9ea3"/><text x="140" y="461" font-size="16" fill="#101113" font-weight="700" text-anchor="middle">역사 · 유래</text>
+<rect x="220" y="420" width="140" height="70" rx="10" fill="#9a9ea3"/><text x="290" y="461" font-size="16" fill="#101113" font-weight="700" text-anchor="middle">프로그램 · 명소</text>
+<rect x="370" y="420" width="140" height="70" rx="10" fill="#9a9ea3"/><text x="440" y="461" font-size="16" fill="#101113" font-weight="700" text-anchor="middle">방문 · 운영</text>
+
+<line x1="290" y1="490" x2="290" y2="560" stroke="#9a9ea3" stroke-width="3" marker-end="url(#s5ns-arg)"/>
+<line x1="880" y1="310" x2="880" y2="560" stroke="#43474b" stroke-width="3" marker-end="url(#s5ns-arg)"/>
+<line x1="1470" y1="310" x2="1470" y2="560" stroke="#43474b" stroke-width="3" marker-end="url(#s5ns-arg)"/>
+
+<rect x="215" y="570" width="150" height="70" rx="10" fill="#ffffff" stroke="#101113" stroke-width="3"/>
+<text x="290" y="612" font-size="18" fill="#101113" font-weight="800" text-anchor="middle">보고서.md</text>
+<rect x="805" y="570" width="150" height="70" rx="10" fill="#ffffff" stroke="#101113" stroke-width="3"/>
+<text x="880" y="612" font-size="18" fill="#101113" font-weight="800" text-anchor="middle">보고서.md</text>
+<rect x="1395" y="570" width="150" height="70" rx="10" fill="#ffffff" stroke="#101113" stroke-width="3"/>
+<text x="1470" y="612" font-size="18" fill="#101113" font-weight="800" text-anchor="middle">보고서.md</text>
+<circle cx="1000" cy="605" r="24" fill="#1273c4"/><text x="1000" y="614" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+<text x="1040" y="614" font-size="22" fill="#1273c4" font-weight="800" text-anchor="start">md 보고서 3개 생성</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1760 800" width="1760" height="800" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<text x="200" y="150" font-size="30" fill="#101113" font-weight="800" text-anchor="start">메인 혼자 다 처리</text>
+<rect x="200" y="190" width="1360" height="90" rx="10" fill="none" stroke="#e5e5e5" stroke-width="3"/>
+<rect x="200" y="190" width="1224" height="90" rx="10" fill="#101113"/>
+<text x="812" y="245" font-size="24" fill="#ffffff" font-weight="700" text-anchor="middle">조사 내용 + 코딩 로그 + 시행착오 전부 쌓임</text>
+<circle cx="1600" cy="235" r="26" fill="#1273c4"/><text x="1600" y="244" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+<text x="200" y="320" font-size="22" fill="#43474b" font-weight="700" text-anchor="start">context 90% 채움</text>
+
+<line x1="200" y1="400" x2="1560" y2="400" stroke="#e5e5e5" stroke-width="2"/>
+
+<text x="200" y="490" font-size="30" fill="#101113" font-weight="800" text-anchor="start">서브에이전트에게 맡김</text>
+<rect x="200" y="530" width="1360" height="90" rx="10" fill="none" stroke="#e5e5e5" stroke-width="3"/>
+<rect x="200" y="530" width="270" height="90" rx="10" fill="#101113"/>
+<text x="335" y="585" font-size="22" fill="#ffffff" font-weight="700" text-anchor="middle">핵심 보고</text>
+<circle cx="1600" cy="575" r="26" fill="#1273c4"/><text x="1600" y="584" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+<text x="200" y="660" font-size="22" fill="#43474b" font-weight="700" text-anchor="start">context 20% 채움 · 나머지는 서브에이전트 안에서 소모</text>
+</svg>

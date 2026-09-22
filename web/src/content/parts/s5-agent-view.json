@@ -1,0 +1,329 @@
+{
+  "id": "s5-agent-view",
+  "title": "에이전트 뷰",
+  "summary": "메인 세션 전체를 백그라운드로 보내고 여러 세션을 목록으로 관리한다.",
+  "slides": [
+    {
+      "id": "s5-agent-view-01",
+      "template": "flow",
+      "title": "에이전트 뷰란",
+      "steps": [
+        {
+          "label": "메인 세션 진행 중"
+        },
+        {
+          "label": "/background · /bg · ←",
+          "badge": 1
+        },
+        {
+          "label": "에이전트 뷰 목록",
+          "badge": 2
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "/background · /bg · ←",
+          "body": "지금 하고 있는 세션 전체를 백그라운드로 보낼 때 /background, /bg, 또는 왼쪽 화살표를 누릅니다."
+        },
+        {
+          "n": 2,
+          "head": "세션 통째로 이동",
+          "body": "서브에이전트 하나가 아니라 지금 대화 전체가 백그라운드로 옮겨갑니다."
+        }
+      ]
+    },
+    {
+      "id": "s5-agent-view-02",
+      "template": "compare",
+      "title": "실습 · ← 로 세션 배경으로 보내기",
+      "left": {
+        "label": "포어그라운드 실행 중",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "200초 후에 완료되는 명령어를 포어그라운드로 실행해볼래?"
+              },
+              {
+                "role": "tool",
+                "text": "PowerShell($s = Get-Date; Start-Sleep -Seconds 200; \"완료: $([int]((Get-Date) - $s).TotalSeconds)초 경과\")"
+              }
+            ],
+            "input": {
+              "placeholder": "메시지를 입력하세요..."
+            },
+            "panel": {
+              "title": "",
+              "rows": [
+                {
+                  "seg": [
+                    {
+                      "t": "  ⎿  Running… (6s · timeout 2m)",
+                      "c": "dim"
+                    }
+                  ]
+                }
+              ]
+            },
+            "footer": {
+              "text": "⏵⏵ bypass permissions on · esc to interrupt"
+            }
+          }
+        }
+      },
+      "right": {
+        "label": "← 눌러서 백그라운드 이동",
+        "screen": {
+          "kind": "agentview",
+          "version": "Claude Code v2.1.278",
+          "model": "Sonnet 5 · ~\\agent1",
+          "counts": "0 awaiting input · 1 working · 0 completed",
+          "notice": "Your conversation moved to the background — enter opens it · esc returns to it · ctrl+c twice quits",
+          "noticeBadge": 1,
+          "groups": [
+            {
+              "title": "Working",
+              "rows": [
+                {
+                  "icon": "✶",
+                  "name": "korean language support timeout",
+                  "desc": "200초 대기 …",
+                  "time": "6m",
+                  "badge": 2
+                }
+              ]
+            }
+          ],
+          "input": {
+            "placeholder": "describe a task for a new session"
+          },
+          "footer": "⏵⏵ bypass permissions · enter to return · space to r…"
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "왼쪽 화살표",
+          "body": "명령어가 실행되는 중에 왼쪽 화살표를 누르면 이 세션이 통째로 배경으로 넘어갑니다."
+        },
+        {
+          "n": 2,
+          "head": "Working 1건",
+          "body": "Working 목록에 방금 배경으로 보낸 세션이 하나 표시됩니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "200초 후에 완료되는 명령어를 포어그라운드로 실행해볼래?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5-agent-view-03",
+      "template": "screen",
+      "title": "새 세션 만들기 입력",
+      "screen": {
+        "kind": "agentview",
+        "version": "Claude Code v2.1.278",
+        "model": "Sonnet 5 · ~\\agent1",
+        "counts": "0 awaiting input · 2 working · 0 completed",
+        "countsBadge": 2,
+        "notice": "Your conversation moved to the background — enter opens it · esc returns to it · ctrl+c twice quits",
+        "groups": [
+          {
+            "title": "Working",
+            "rows": [
+              {
+                "icon": "✶",
+                "name": "korean language support timeout",
+                "desc": "200초 대기 …",
+                "time": "6m"
+              },
+              {
+                "icon": "✶",
+                "name": "현재 시스템 시간 몇시 몇분 몇초야?",
+                "time": "1s"
+              }
+            ]
+          }
+        ],
+        "input": {
+          "text": "현재 시스템 시간 몇시 몇분 몇초야?",
+          "badge": 1
+        },
+        "footer": "⏵⏵ bypass permissions · enter to return · space to r…"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "새 세션 입력칸",
+          "body": "describe a task for a new session 자리에 새로 시킬 프롬프트를 입력합니다."
+        },
+        {
+          "n": 2,
+          "head": "Working 2건",
+          "body": "기존 세션과 새로 만든 세션이 Working 목록에 함께 표시됩니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "현재 시스템 시간 몇시 몇분 몇초야?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5-agent-view-04",
+      "template": "screen",
+      "title": "완료된 세션 · Completed 로 이동",
+      "screen": {
+        "kind": "agentview",
+        "version": "Claude Code v2.1.278",
+        "model": "Sonnet 5 · ~\\agent1",
+        "counts": "0 awaiting input · 1 working · 1 completed",
+        "groups": [
+          {
+            "title": "Working",
+            "rows": [
+              {
+                "icon": "✶",
+                "name": "korean language support timeout",
+                "desc": "200초 대기 …",
+                "time": "6m"
+              }
+            ]
+          },
+          {
+            "title": "Completed",
+            "rows": [
+              {
+                "icon": "✻",
+                "name": "system time query",
+                "desc": "시스템 시각…",
+                "time": "7s",
+                "selected": true,
+                "badge": 1
+              }
+            ]
+          }
+        ],
+        "input": {
+          "placeholder": "describe a task for a new session"
+        },
+        "footer": "⏵⏵ bypass permissions · enter to return · space to r…"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "system time query",
+          "body": "작업이 끝나면 세션 이름이 자동으로 붙고 Completed 목록으로 옮겨갑니다."
+        }
+      ]
+    },
+    {
+      "id": "s5-agent-view-05",
+      "template": "screen",
+      "title": "완료 세션 대화 확인",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "sessionTag": {
+            "name": "system time query"
+          },
+          "turns": [
+            {
+              "role": "user",
+              "text": "현재 시스템 시간 몇시 몇분 몇초야?"
+            },
+            {
+              "role": "tool",
+              "text": "PowerShell(Get-Date -Format 'yyyy-MM-dd HH:mm:ss K')"
+            },
+            {
+              "role": "assistant",
+              "text": "⎿  2026-09-22 09:16:20 KST",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "지금은 2026년 9월 22일 오전 9시 16분 20초예요."
+            },
+            {
+              "role": "assistant",
+              "text": "※ recap: Get-Date 로 현재 시스템 시각을 확인해 09시 16분 20초로 답변함",
+              "badge": 2
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "실행 결과",
+          "body": "Get-Date 명령으로 확인한 실제 시각이 그대로 나옵니다."
+        },
+        {
+          "n": 2,
+          "head": "recap 줄",
+          "body": "다시 들어온 세션에서 그동안 무엇을 했는지 요약해서 보여주는 줄입니다."
+        }
+      ]
+    },
+    {
+      "id": "s5-agent-view-06",
+      "template": "table",
+      "title": "정리 · 자주 안 쓰는 이유",
+      "columns": [
+        "항목",
+        "내용"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "bypass 모드",
+            "적용 안 됨"
+          ]
+        },
+        {
+          "cells": [
+            "대안",
+            "VS Code 분할 터미널(다음 학습)"
+          ]
+        },
+        {
+          "cells": [
+            "복귀",
+            "Working 세션 선택 후 Enter"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": "!",
+          "head": "드물게 쓰는 기능",
+          "body": "이 방식으로 만든 세션은 bypass 모드가 안 걸리고, 나중에 배우는 VS Code 분할 터미널이 더 편해서 실제로는 잘 안 씁니다."
+        }
+      ]
+    }
+  ]
+}

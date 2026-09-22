@@ -1,0 +1,197 @@
+{
+  "id": "s5-hook-toollog",
+  "title": "훅 실습2 · 툴 기록",
+  "summary": "PostToolUse 훅으로 클로드가 쓰는 도구를 파일 하나에 자동으로 남겨본다.",
+  "slides": [
+    {
+      "id": "s5-hook-toollog-01",
+      "template": "screen",
+      "title": "PostToolUse 훅 요청",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/clear"
+            },
+            {
+              "role": "user",
+              "text": "현재폴더에 toollog.md파일을 만들고 posttooluse훅으로 너가 tool을 사용할때 마다 그 이력이 기록되게 만들어줘",
+              "badge": 1
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "PostToolUse 훅",
+          "body": "도구를 하나 쓸 때마다 실행되는 훅을 걸어서, 언제 어떤 도구를 썼는지 자동으로 남기게 시킵니다."
+        },
+        {
+          "n": 2,
+          "head": "toollog.md",
+          "body": "그 기록이 쌓일 파일을 현재 폴더에 새로 만들어달라고 함께 요청합니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "현재폴더에 toollog.md파일을 만들고 posttooluse훅으로 너가 tool을 사용할때 마다 그 이력이 기록되게 만들어줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5-hook-toollog-02",
+      "template": "screen",
+      "title": "여러 도구 연속 실행",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "툴사용 몇개 해봐"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(dir)",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Read(C:\\agent1\\README.md)"
+            },
+            {
+              "role": "tool",
+              "text": "Glob(**/*.md)"
+            },
+            {
+              "role": "tool",
+              "text": "Grep(TODO)"
+            },
+            {
+              "role": "tool",
+              "text": "Read(C:\\agent1\\package.json)"
+            },
+            {
+              "role": "tool",
+              "text": "Read(C:\\agent1\\toollog.md)"
+            },
+            {
+              "role": "assistant",
+              "text": "Bash, Read, Glob, Grep 을 섞어서 여섯 번 도구를 써봤어요. toollog.md 에 전부 기록됐어요.",
+              "badge": 2
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "도구 여섯 번 실행",
+          "body": "클로드가 Bash, Read, Glob, Grep 을 골고루 섞어서 실제로 도구를 여섯 번 사용해봅니다."
+        },
+        {
+          "n": 2,
+          "head": "매번 훅 실행",
+          "body": "도구를 쓸 때마다 PostToolUse 훅이 뒤에서 조용히 실행되어 toollog.md 에 한 줄씩 쌓입니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "툴사용 몇개 해봐"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5-hook-toollog-03",
+      "template": "screen",
+      "title": "toollog.md 기록 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          {
+            "name": ".claude"
+          },
+          {
+            "name": "settings.json",
+            "depth": 1
+          },
+          {
+            "name": "hooks",
+            "depth": 1,
+            "folder": true
+          },
+          {
+            "name": "log_tool.py",
+            "depth": 2
+          },
+          {
+            "name": "toollog.md",
+            "active": true
+          }
+        ],
+        "editor": {
+          "file": "toollog.md",
+          "lines": [
+            "| 시각 | Tool | 입력 요약 |",
+            "|---|---|---|",
+            "| 09:40:01 | Bash | dir |",
+            "| 09:40:05 | Read | C:\\agent1\\README.md |",
+            "| 09:40:10 | Glob | **/*.md |",
+            "| 09:40:14 | Grep | TODO |",
+            "| 09:40:19 | Read | C:\\agent1\\package.json |",
+            "| 09:40:23 | Read | C:\\agent1\\toollog.md |"
+          ],
+          "badge": 1
+        },
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "toollog.md 에 방금 사용한 도구 여섯 개가 시각 순서대로 기록됐어요.",
+              "badge": 2
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "표로 쌓이는 기록",
+          "body": "시각, Tool, 입력 요약 세 칸으로 된 표에 도구를 쓸 때마다 한 줄씩 자동으로 추가됩니다."
+        },
+        {
+          "n": 2,
+          "head": "09:40:01 부터 09:40:23",
+          "body": "여섯 번의 도구 사용이 22초 사이에 순서대로 기록되어 있는 것을 볼 수 있습니다."
+        }
+      ]
+    }
+  ]
+}

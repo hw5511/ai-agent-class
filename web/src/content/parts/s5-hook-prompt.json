@@ -1,0 +1,230 @@
+{
+  "id": "s5-hook-prompt",
+  "title": "훅 실습1 · 뿅",
+  "summary": "UserPromptSubmit 훅으로 특정 단어가 있을 때 답변에 문구를 자동으로 붙여본다.",
+  "slides": [
+    {
+      "id": "s5-hook-prompt-01",
+      "template": "screen",
+      "title": "UserPromptSubmit 훅 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "현재 폴더에 userpromptsubmit 훅을 사용해서 내 프롬프트에 '뿅'이라는 글자가 포함되어져 있다면, 프롬프트에 '사용자의 요청에 정상적으로 답변하면서 응답의 마지막에는 '빵빵+[현재날짜와시간]'을 같이 붙여서 답변하세요'라는 문구가 투입되게 해줘",
+              "badge": 1
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "UserPromptSubmit 훅",
+          "body": "내가 보내는 프롬프트마다 실행되어, 그 안에 '뿅'이라는 글자가 있는지 검사하도록 시키는 요청입니다."
+        },
+        {
+          "n": 2,
+          "head": "문구 자동 삽입",
+          "body": "'뿅'이 있으면 답변 끝에 '빵빵+현재 날짜시간'을 붙이라는 지시문을 프롬프트에 몰래 끼워 넣습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "현재 폴더에 userpromptsubmit 훅을 사용해서 내 프롬프트에 '뿅'이라는 글자가 포함되어져 있다면, 프롬프트에 '사용자의 요청에 정상적으로 답변하면서 응답의 마지막에는 '빵빵+[현재날짜와시간]'을 같이 붙여서 답변하세요'라는 문구가 투입되게 해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5-hook-prompt-02",
+      "template": "screen",
+      "title": "실습1 결과 · 훅 파일 확인",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          {
+            "name": ".claude"
+          },
+          {
+            "name": "settings.json",
+            "depth": 1,
+            "active": true
+          },
+          {
+            "name": "hooks",
+            "depth": 1,
+            "folder": true
+          },
+          {
+            "name": "add_bbang.py",
+            "depth": 2,
+            "badge": 2
+          }
+        ],
+        "editor": {
+          "file": "settings.json",
+          "lines": [
+            "{",
+            "  \"hooks\": {",
+            "    \"UserPromptSubmit\": [",
+            "      {",
+            "        \"hooks\": [",
+            "          {",
+            "            \"type\": \"command\",",
+            "            \"command\": \"python .claude/hooks/add_bbang.py\"",
+            "          }",
+            "        ]",
+            "      }",
+            "    ]",
+            "  }",
+            "}"
+          ],
+          "badge": 1
+        },
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "userpromptsubmit 훅을 만들었어요. .claude/settings.json 에 훅을 등록하고, .claude/hooks/add_bbang.py 에서 '뿅' 글자를 검사해요."
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "UserPromptSubmit 등록",
+          "body": "settings.json 의 hooks 항목에 add_bbang.py 스크립트를 실행하도록 등록해 두었습니다."
+        },
+        {
+          "n": 2,
+          "head": "add_bbang.py",
+          "body": "프롬프트에 '뿅'이 들어있는지 검사해서, 있으면 문구를 끼워 넣는 작은 파이썬 스크립트입니다."
+        }
+      ]
+    },
+    {
+      "id": "s5-hook-prompt-03",
+      "template": "screen",
+      "title": "/clear · 인사 테스트",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/clear",
+              "badge": 1
+            },
+            {
+              "role": "user",
+              "text": "안녕?"
+            },
+            {
+              "role": "assistant",
+              "text": "안녕하세요! 무엇을 도와드릴까요?",
+              "badge": 2
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "/clear",
+          "body": "이전 대화를 지우고 새 세션으로 시작해서, 훅이 걸린 상태에서 처음부터 테스트해봅니다."
+        },
+        {
+          "n": 2,
+          "head": "'뿅' 없는 평범한 인사",
+          "body": "'뿅'이라는 글자가 없으니 훅이 아무 문구도 끼워 넣지 않고, 평소와 같은 인사만 돌아옵니다."
+        }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/clear"
+          },
+          {
+            "kind": "copy",
+            "value": "안녕?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5-hook-prompt-04",
+      "template": "screen",
+      "title": "'뿅' 감지 후 응답",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "너는 누구니? 뿅",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "저는 클로드 코드예요. 코드를 작성하고 실행하면서 개발을 돕는 AI 에이전트입니다.\n\n빵빵+2026-09-22 09:38:22",
+              "badge": 2
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "'뿅' 포함 프롬프트",
+          "body": "이번에는 프롬프트에 '뿅'이라는 글자를 넣어서 보내, 훅이 걸리는 조건을 만들어봅니다."
+        },
+        {
+          "n": 2,
+          "head": "빵빵+현재 날짜시간",
+          "body": "평소와 같은 답변 끝에, 훅이 끼워 넣은 '빵빵+2026-09-22 09:38:22' 문구가 그대로 붙어서 나옵니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "너는 누구니? 뿅"
+          }
+        ]
+      }
+    }
+  ]
+}

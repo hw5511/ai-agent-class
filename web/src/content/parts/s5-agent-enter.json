@@ -1,0 +1,354 @@
+{
+  "id": "s5-agent-enter",
+  "title": "서브에이전트 화면 들어가기",
+  "summary": "실행 중인 서브에이전트 화면에 직접 들어가 상태를 보고 메시지를 보낸다.",
+  "slides": [
+    {
+      "id": "s5-agent-enter-01",
+      "template": "screen",
+      "title": "↓ 로 서브에이전트 선택",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "진해군항제·여의도·경주 세 곳을 하위 에이전트에게 나눠 맡겼어요."
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on · ↓ to manage"
+          },
+          "agents": {
+            "rows": [
+              {
+                "name": "main",
+                "badge": 2
+              },
+              {
+                "name": "general-purpose",
+                "count": 2,
+                "label": "진해군항제 심층조사(하위 에이전트 …",
+                "meta": "19s · ↓ 63.7k tokens",
+                "selected": true,
+                "badge": 1
+              },
+              {
+                "name": "general-purpose",
+                "label": "여의도 봄꽃축제 심층조사",
+                "meta": "10s · ↓ 67.0k tokens"
+              },
+              {
+                "name": "general-purpose",
+                "label": "경주 대릉원돌담길 심층조사",
+                "meta": "3s · ↓ 67.0k tokens"
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "커서 위치",
+          "body": "↓ 키를 누르면 main 을 지나 첫 번째 서브에이전트로 커서가 이동합니다."
+        },
+        {
+          "n": 2,
+          "head": "main",
+          "body": "맨 위 main 은 메인 세션이고, 지금 커서는 그 아래 서브에이전트에 가 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "s5-agent-enter-02",
+      "template": "screen",
+      "title": "서브에이전트 안으로 진입",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "● 3 background agents launched (↓ to manage)"
+            },
+            {
+              "role": "tool",
+              "text": "├ 진해군항제 역사·유래 조사"
+            },
+            {
+              "role": "tool",
+              "text": "├ 진해군항제 프로그램·명소 조사"
+            },
+            {
+              "role": "tool",
+              "text": "└ 진해군항제 방문·운영 실무 조사"
+            },
+            {
+              "role": "assistant",
+              "text": "● 하위 에이전트 3개(A 역사, B 프로그램·명소, C 방문·운영)가 백그라운드에서 조사 중입니다. 완료 알림을 기다립니다.",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "✻ Waiting for 3 background agents to finish"
+            }
+          ],
+          "rule": {
+            "text": "진해군항제 심층조사(하위 에이전트 수합)",
+            "badge": 2
+          },
+          "input": {
+            "placeholder": "Message @general-purpose…"
+          },
+          "agents": {
+            "hint": "Enter to view · x to stop",
+            "rows": [
+              {
+                "name": "main"
+              },
+              {
+                "name": "general-purpose",
+                "label": "진해군항제 심층조사(하위 에이전트 …",
+                "meta": "27s · ↓ 70.8k tokens",
+                "active": true,
+                "selected": true,
+                "badge": 3
+              },
+              {
+                "name": "general-purpose",
+                "label": "Fetching Jinhae festival sources",
+                "meta": "1m 1s · ↓ 78.3k tokens",
+                "tree": "├"
+              },
+              {
+                "name": "general-purpose",
+                "label": "Fetching Nate news article",
+                "meta": "54s · ↓ 77.6k tokens",
+                "tree": "├"
+              },
+              {
+                "name": "general-purpose",
+                "label": "Fetching jgfestival.or.kr homepage",
+                "meta": "48s · ↓ 77.9k tokens",
+                "tree": "└"
+              },
+              {
+                "name": "general-purpose",
+                "label": "Searching Yeouido festival schedule",
+                "meta": "1m 2s · ↓ 79.0k tokens"
+              }
+            ],
+            "more": "↓ 1 more"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "3개 백그라운드 실행",
+          "body": "이 서브에이전트가 역사, 프로그램·명소, 방문·운영 조사를 하위 에이전트 3개에 나눠 맡겼습니다."
+        },
+        {
+          "n": 2,
+          "head": "현재 세션 이름",
+          "body": "입력창 위 구분선에 지금 들어와 있는 세션 이름이 표시됩니다."
+        },
+        {
+          "n": 3,
+          "head": "진입한 서브에이전트",
+          "body": "지금 들어온 진해군항제 조사 서브에이전트도 자기 밑에 하위 에이전트 3개를 두고 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "s5-agent-enter-03",
+      "template": "screen",
+      "title": "서브에이전트에 중간 메시지",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "하위 에이전트 3개가 백그라운드에서 조사 중입니다."
+            }
+          ],
+          "rule": {
+            "text": "진해군항제 심층조사(하위 에이전트 수합)"
+          },
+          "input": {
+            "text": "지금까지 확인된 내용만 먼저 간단히 알려줘",
+            "badge": 1
+          },
+          "agents": {
+            "hint": "Enter to view · x to stop",
+            "rows": [
+              {
+                "name": "main"
+              },
+              {
+                "name": "general-purpose",
+                "label": "진해군항제 심층조사(하위 에이전트 …",
+                "meta": "41s · ↓ 72.1k tokens",
+                "active": true,
+                "selected": true
+              },
+              {
+                "name": "general-purpose",
+                "label": "Fetching Jinhae festival sources",
+                "meta": "1m 15s · ↓ 79.0k tokens",
+                "tree": "├"
+              },
+              {
+                "name": "general-purpose",
+                "label": "Fetching Nate news article",
+                "meta": "1m 8s · ↓ 78.4k tokens",
+                "tree": "├"
+              },
+              {
+                "name": "general-purpose",
+                "label": "Fetching jgfestival.or.kr homepage",
+                "meta": "1m 2s · ↓ 78.6k tokens",
+                "tree": "└"
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "메시지 보내기",
+          "body": "이렇게 서브에이전트 화면에 들어온 상태에서 메시지를 입력하면 main 을 거치지 않고 그 서브에이전트에 바로 전달됩니다."
+        }
+      ]
+    },
+    {
+      "id": "s5-agent-enter-04",
+      "template": "screen",
+      "title": "main 선택 후 Enter 로 복귀",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "하위 에이전트 3개가 백그라운드에서 조사 중입니다."
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on · ↓ to manage"
+          },
+          "agents": {
+            "hint": "Enter to view · x to stop",
+            "rows": [
+              {
+                "name": "main",
+                "selected": true,
+                "badge": 1
+              },
+              {
+                "name": "general-purpose",
+                "label": "진해군항제 심층조사(하위 에이전트 …",
+                "meta": "1m 2s · ↓ 74.0k tokens"
+              },
+              {
+                "name": "general-purpose",
+                "label": "여의도 봄꽃축제 심층조사",
+                "meta": "52s · ↓ 71.2k tokens"
+              },
+              {
+                "name": "general-purpose",
+                "label": "경주 대릉원돌담길 심층조사",
+                "meta": "45s · ↓ 70.5k tokens"
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "main 선택",
+          "body": "커서를 맨 위 main 줄로 옮기고 Enter 를 누르면 메인 세션 화면으로 돌아갑니다."
+        }
+      ]
+    },
+    {
+      "id": "s5-agent-enter-05",
+      "template": "screen",
+      "title": "main 이 수합한 최종 보고",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "tool",
+              "text": "● Agent \"진해군항제 심층조사(하위 에이전트 수합)\" finished · 3m 12s",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "3개 하위 에이전트(역사·프로그램·운영) 결과를 모아 진해군항제 보고서를 정리했어요.",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "여의도·경주 심층조사도 각각 완료돼 report 폴더에 md 3개가 저장됐어요."
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          },
+          "footer": {
+            "text": "✻ Crunched for 3m 40s"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "하위 에이전트 완료",
+          "body": "하위 에이전트 3개 조사가 모두 끝나 그 결과가 진해군항제 서브에이전트로 모였습니다."
+        },
+        {
+          "n": 2,
+          "head": "main 이 정리",
+          "body": "main 은 각 서브에이전트가 보낸 결과만 모아 최종 보고서로 정리해 보여줍니다."
+        }
+      ]
+    }
+  ]
+}

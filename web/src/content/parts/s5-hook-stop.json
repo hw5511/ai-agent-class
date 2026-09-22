@@ -1,0 +1,210 @@
+{
+  "id": "s5-hook-stop",
+  "title": "훅 실습3 · Stop 3번 막기",
+  "summary": "Stop 훅으로 클로드가 응답을 끝내려 할 때 세 번까지 다시 확인시켜본다.",
+  "slides": [
+    {
+      "id": "s5-hook-stop-01",
+      "template": "screen",
+      "title": "Stop 훅 요청",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/clear"
+            },
+            {
+              "role": "user",
+              "text": "현재폴더에 stop훅을 사용해서 너가 응답을 멈추려고 할때, 무조건 3번을 일단 막아서 '더 할게 있는지 탐색해라'라고 막아세우고 3번이 지나면 멈추게 허용하는 훅을 추가해줘",
+              "badge": 1
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Stop 훅",
+          "body": "클로드가 응답을 끝내려는 순간마다 실행되는 훅을 걸어달라고 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "3번 막고 4번째 허용",
+          "body": "처음 세 번은 '더 할게 있는지 탐색해라'로 막아 세우고, 그 뒤부터는 그대로 끝내도록 만들어달라는 요청입니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "현재폴더에 stop훅을 사용해서 너가 응답을 멈추려고 할때, 무조건 3번을 일단 막아서 '더 할게 있는지 탐색해라'라고 막아세우고 3번이 지나면 멈추게 허용하는 훅을 추가해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5-hook-stop-02",
+      "template": "screen",
+      "title": "Stop 훅 동작 설명",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "stop 훅을 만들었어요. 제가 응답을 끝내려 할 때마다 카운터를 하나씩 올려서, 1번째와 2번째, 3번째 시도까지는 '더 할게 있는지 탐색해라'라는 메시지로 막고, 4번째 시도부터는 그대로 응답을 끝내도록 만들었어요. 이 카운터는 새 턴이 시작될 때마다 다시 0으로 초기화돼요.",
+              "badge": 1
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "카운터 1/3 · 2/3 · 3/3",
+          "body": "응답을 끝내려 시도할 때마다 카운터가 하나씩 올라가고, 3번째까지는 계속 막힙니다."
+        },
+        {
+          "n": 2,
+          "head": "턴마다 초기화",
+          "body": "이 카운터는 새 질문을 할 때마다 0으로 다시 시작해서, 매 턴 똑같이 세 번씩 막힙니다."
+        }
+      ]
+    },
+    {
+      "id": "s5-hook-stop-03",
+      "template": "screen",
+      "title": "Stop 3번 차단 로그",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "이 폴더 구조 좀 정리해줘"
+            },
+            {
+              "role": "tool",
+              "text": "Ran 1 stop hook (ctrl+o to expand)"
+            },
+            {
+              "role": "assistant",
+              "text": "⎿  Stop hook error: 더 할게 있는지 탐색해라 (1/3)",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "혹시 놓친 파일이 있는지 폴더를 한 번 더 살펴볼게요."
+            },
+            {
+              "role": "tool",
+              "text": "Ran 1 stop hook (ctrl+o to expand)"
+            },
+            {
+              "role": "assistant",
+              "text": "⎿  Stop hook error: 더 할게 있는지 탐색해라 (2/3)"
+            },
+            {
+              "role": "assistant",
+              "text": "정리 기준을 다시 한 번 점검해볼게요."
+            },
+            {
+              "role": "tool",
+              "text": "Ran 1 stop hook (ctrl+o to expand)"
+            },
+            {
+              "role": "assistant",
+              "text": "⎿  Stop hook error: 더 할게 있는지 탐색해라 (3/3)"
+            },
+            {
+              "role": "assistant",
+              "text": "마지막으로 결과를 정리해서 답변을 마무리할게요."
+            }
+          ],
+          "footer": {
+            "text": "✻ Cooked for 56s",
+            "badge": 2
+          },
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Stop hook error (1/3 → 3/3)",
+          "body": "응답을 끝내려 할 때마다 훅이 오류를 던지면서 '더 할게 있는지 탐색해라'라는 메시지로 세 번 연속 다시 붙잡습니다."
+        },
+        {
+          "n": 2,
+          "head": "56초 만에 마무리",
+          "body": "세 번의 재탐색을 거친 뒤에야 훅이 통과시켜줘서, 클로드가 최종 답변을 끝맺습니다."
+        }
+      ]
+    },
+    {
+      "id": "s5-hook-stop-04",
+      "template": "screen",
+      "title": "모든 훅 제거",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "모든 훅 제거해줘",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "이번 실습에서 등록한 userpromptsubmit, posttooluse, stop 훅을 전부 settings.json 에서 지웠어요. 이제 프롬프트나 도구 사용, 응답 종료에 더는 훅이 걸리지 않아요.",
+              "badge": 2
+            }
+          ],
+          "input": {
+            "placeholder": "메시지를 입력하세요..."
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "훅 제거 요청",
+          "body": "실습 동안 걸어둔 훅을 전부 지워서 원래 상태로 되돌려달라고 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "settings.json 원복",
+          "body": "뿅, 툴 기록, Stop 3번 막기까지 세 훅이 모두 지워져서 다음부터는 평소처럼 답변합니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "모든 훅 제거해줘"
+          }
+        ]
+      }
+    }
+  ]
+}

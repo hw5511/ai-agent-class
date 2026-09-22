@@ -1,0 +1,139 @@
+{
+  "id": "s5-agent-practice1",
+  "title": "실습1 · 조사 맡기기",
+  "summary": "웹서치 조사를 서브에이전트에게 맡기고, 백그라운드에서 도는 모습과 완료 보고를 확인한다.",
+  "slides": [
+    {
+      "id": "s5-practice1-01",
+      "template": "screen",
+      "title": "프롬프트 · 웹서치 조사 위임",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": {
+            "text": "한국의 벚꽃축제 종류에 대해서 웹서치로 조사하는 작업을 서브에이전트 시켜서 보고해줘",
+            "badge": 1
+          }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "조사를 서브에이전트에게", "body": "지금까지 직접 하던 웹서치 조사를 서브에이전트에게 통째로 맡기는 프롬프트입니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "한국의 벚꽃축제 종류에 대해서 웹서치로 조사하는 작업을 서브에이전트 시켜서 보고해줘" }
+        ]
+      }
+    },
+    {
+      "id": "s5-practice1-02",
+      "template": "screen",
+      "title": "백그라운드로 도는 서브에이전트",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "한국의 벚꽃축제 종류에 대해서 웹서치로 조사하는 작업을 서브에이전트 시켜서 보고해줘"
+            }
+          ],
+          "panel": {
+            "title": "",
+            "rows": [
+              { "seg": [{ "t": "● Agent(한국 벚꽃축제 웹서치 조사)", "c": "bold" }] },
+              { "seg": [{ "t": "  ⎿  Backgrounded agent (↓ to manage · ctrl+o to expand)", "c": "dim" }] },
+              { "seg": [] },
+              { "seg": [{ "t": "● 서브에이전트(sonnet)를 백그라운드로 띄워 한국 벚꽃축제를 웹서치 중입니다. 결과가 도착하면 검토해서 바로 보고드리겠습니다." }], "badge": 1 },
+              { "seg": [] },
+              { "seg": [{ "t": "✻ Waiting for 1 background agent to finish", "c": "dim" }] }
+            ]
+          },
+          "agents": {
+            "rows": [
+              { "name": "main", "active": true },
+              { "name": "general-purpose", "label": "한국 벚꽃축제 웹서치 조사", "meta": "6s · ↓ 66.5k tokens", "badge": 2 }
+            ]
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle) · ← for agents"
+          }
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        { "n": 1, "head": "메인은 대기만", "body": "메인 클로드는 서브에이전트를 백그라운드로 띄워 놓고, 결과가 오면 검토하겠다고만 안내합니다." },
+        { "n": 2, "head": "서브에이전트 목록", "body": "footer 아래에 지금 돌고 있는 서브에이전트 이름과 걸린 시간, 사용한 토큰이 표시됩니다." }
+      ]
+    },
+    {
+      "id": "s5-practice1-03",
+      "template": "screen",
+      "title": "서브에이전트 완료 알림",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "한국의 벚꽃축제 종류에 대해서 웹서치로 조사하는 작업을 서브에이전트 시켜서 보고해줘"
+            }
+          ],
+          "panel": {
+            "title": "",
+            "rows": [
+              { "seg": [{ "t": "● Agent \"한국 벚꽃축제 웹서치 조사\" finished · 2m 29s", "c": "bold" }], "badge": 1 },
+              { "seg": [] },
+              { "seg": [{ "t": "● 조사가 끝났어요. 대표 축제와 유형을 정리해서 보고드릴게요." }], "badge": 2 },
+              { "seg": [] },
+              { "seg": [{ "t": "✻ Crunched for 2m 58s", "c": "dim" }] }
+            ]
+          },
+          "footer": {
+            "text": "/tasks to see subagents · ← for agents"
+          }
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        { "n": 1, "head": "완료 알림", "body": "서브에이전트 작업이 끝나면 완료 알림이 오고, 걸린 시간도 함께 표시됩니다." },
+        { "n": 2, "head": "이어서 보고", "body": "메인 클로드가 알림을 받자마자 이어서 결과를 정리해 보고합니다." }
+      ]
+    },
+    {
+      "id": "s5-practice1-04",
+      "template": "table",
+      "title": "대표 벚꽃축제 조사 결과",
+      "columns": ["축제", "지역", "기간", "유형"],
+      "rows": [
+        { "cells": ["진해군항제", "경남 창원", "3/27~4/5", "대규모 행사형"], "highlight": true },
+        { "cells": ["여의도 봄꽃축제", "서울 영등포", "4/3~4/7", "대규모 행사형"] },
+        { "cells": ["경주 대릉원돌담길", "경북 경주", "4/3~4/5", "벚꽃길형"] },
+        { "cells": ["하동 화개장터", "경남 하동", "3/27~3/29", "벚꽃길형"] },
+        { "cells": ["구례 십리벚꽃길", "전남 구례", "3/28~3/30", "벚꽃길형"] },
+        { "cells": ["강릉 경포", "강원 강릉", "4/4~4/11", "벚꽃길형"] },
+        { "cells": ["제주 전농로", "제주", "3/27~3/29", "벚꽃길형"] },
+        { "cells": ["군산 은파", "전북 군산", "3/28~4/12", "야간형"] }
+      ],
+      "notes": [
+        { "n": 1, "head": "대표 축제 8곳", "body": "서브에이전트가 웹서치로 찾은 대표 벚꽃축제 8곳을 지역과 기간별로 정리해서 보고했습니다." },
+        { "n": 2, "head": "세 가지 유형", "body": "벚꽃길형, 야간형, 대규모 행사형 세 가지로 나눠서 특징을 구분했습니다." },
+        { "n": "!", "head": "공식 일정 재확인 필요", "body": "축제마다 날짜가 매년 바뀌니 방문 전 공식 홈페이지에서 다시 확인하는 게 좋습니다." }
+      ]
+    }
+  ]
+}

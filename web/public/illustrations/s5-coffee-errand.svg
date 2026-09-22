@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1760 800" width="1760" height="800" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<text x="440" y="90" font-size="30" fill="#101113" font-weight="800" text-anchor="middle">비싼 모델 혼자 다 처리</text>
+<rect x="270" y="140" width="340" height="110" rx="16" fill="#101113"/>
+<text x="440" y="185" font-size="26" fill="#ffffff" font-weight="800" text-anchor="middle">고가 모델</text>
+<text x="440" y="220" font-size="20" fill="#e5e5e5" font-weight="400" text-anchor="middle">Fable</text>
+<circle cx="640" cy="150" r="26" fill="#1273c4"/><text x="640" y="159" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+
+<rect x="270" y="320" width="340" height="80" rx="10" fill="#9a9ea3"/><text x="440" y="368" font-size="22" fill="#101113" font-weight="700" text-anchor="middle">어려운 설계 작업</text>
+<rect x="270" y="420" width="340" height="80" rx="10" fill="#9a9ea3"/><text x="440" y="468" font-size="22" fill="#101113" font-weight="700" text-anchor="middle">폴더 정리 심부름</text>
+<rect x="270" y="520" width="340" height="80" rx="10" fill="#9a9ea3"/><text x="440" y="568" font-size="22" fill="#101113" font-weight="700" text-anchor="middle">간단한 문서 작성</text>
+
+<text x="200" y="680" font-size="22" fill="#43474b" font-weight="700" text-anchor="start">쉬운 일도 전부 고가 모델 요금</text>
+
+<line x1="880" y1="60" x2="880" y2="740" stroke="#e5e5e5" stroke-width="2"/>
+
+<text x="1320" y="90" font-size="30" fill="#101113" font-weight="800" text-anchor="middle">쉬운 일은 서브에이전트</text>
+<rect x="1150" y="140" width="340" height="110" rx="16" fill="#101113"/>
+<text x="1320" y="185" font-size="26" fill="#ffffff" font-weight="800" text-anchor="middle">고가 모델</text>
+<text x="1320" y="220" font-size="20" fill="#e5e5e5" font-weight="400" text-anchor="middle">어려운 설계만 담당</text>
+
+<rect x="1150" y="320" width="340" height="80" rx="10" fill="#101113"/><text x="1320" y="368" font-size="22" fill="#ffffff" font-weight="700" text-anchor="middle">어려운 설계 작업</text>
+<rect x="1150" y="420" width="340" height="80" rx="10" fill="#43474b"/><text x="1320" y="468" font-size="22" fill="#ffffff" font-weight="700" text-anchor="middle">폴더 정리 심부름</text>
+<rect x="1150" y="520" width="340" height="80" rx="10" fill="#43474b"/><text x="1320" y="568" font-size="22" fill="#ffffff" font-weight="700" text-anchor="middle">간단한 문서 작성</text>
+<circle cx="1520" cy="440" r="26" fill="#1273c4"/><text x="1520" y="449" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+
+<text x="1080" y="680" font-size="22" fill="#43474b" font-weight="700" text-anchor="start">서브에이전트가 심부름 담당 · 요금 절약</text>
+</svg>

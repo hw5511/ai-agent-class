@@ -1,0 +1,113 @@
+{
+  "id": "s5-agent-intro",
+  "title": "서브에이전트란?",
+  "summary": "메인 클로드가 서브에이전트에게 일을 나눠 맡기는 이유(속도, context, 비용)를 이해한다.",
+  "slides": [
+    {
+      "id": "s5-agent-intro-01",
+      "template": "illustration",
+      "title": "메인 클로드의 하청",
+      "illustration": "/illustrations/s5-subcontract.svg",
+      "notes": [
+        { "n": 1, "head": "작업 지시", "body": "메인 클로드가 서브에이전트에게 작업을 나눠서 맡깁니다." },
+        { "n": 2, "head": "각자 실행", "body": "서브에이전트들이 맡은 일을 각자 알아서 처리합니다." },
+        { "n": 3, "head": "핵심만 보고", "body": "메인 클로드는 서브에이전트 결과 중 핵심만 받아서 정리합니다." }
+      ]
+    },
+    {
+      "id": "s5-agent-intro-02",
+      "template": "cards",
+      "title": "기본 내장 서브에이전트",
+      "cards": [
+        { "label": "general-purpose", "logo": "icon:Bot", "tags": ["범용", "조사 · 코딩"], "highlight": true, "badge": 1 },
+        { "label": "Explore", "logo": "icon:Search", "tags": ["탐색 전용", "읽기만"], "badge": 2 },
+        { "label": "claude-code-guide", "logo": "icon:Book", "tags": ["Claude Code 사용법"] },
+        { "label": "Plan", "logo": "icon:Cpu", "tags": ["계획 전용", "선택 내장"] }
+      ],
+      "notes": [
+        { "n": 1, "head": "general-purpose", "body": "가장 많이 쓰는 범용 서브에이전트로, 조사나 코드 작업처럼 다양한 일을 맡길 수 있습니다." },
+        { "n": 2, "head": "Explore", "body": "파일과 코드를 찾아보기만 하는 탐색 전용 서브에이전트입니다." },
+        { "n": "!", "head": "claude-code-guide · Plan", "body": "Claude Code 사용법을 알려주는 claude-code-guide, 작업 계획을 세우는 Plan 도 기본으로 들어 있습니다." }
+      ]
+    },
+    {
+      "id": "s5-agent-intro-03",
+      "template": "illustration",
+      "title": "병렬 실행 · 속도 비교",
+      "illustration": "/illustrations/s5-parallel-speed.svg",
+      "notes": [
+        { "n": 1, "head": "순차 실행", "body": "메인 클로드 혼자 하면 조사, 코딩, 정리를 순서대로 하나씩 끝내야 해서 시간이 오래 걸립니다." },
+        { "n": 2, "head": "병렬 실행", "body": "서브에이전트 여러 개를 동시에 배치하면 같은 일을 한꺼번에 처리해서 훨씬 빨리 끝납니다." }
+      ]
+    },
+    {
+      "id": "s5-agent-intro-04",
+      "template": "compare",
+      "title": "주의 · 구독 사용량 동시 소모",
+      "left": {
+        "label": "혼자 실행",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [],
+            "usage": [
+              { "label": "Sonnet 5 사용량", "pct": 15, "resets": "5시간마다 초기화" }
+            ]
+          }
+        }
+      },
+      "right": {
+        "label": "서브에이전트 3개 병렬",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [],
+            "usage": [
+              { "label": "Sonnet 5 사용량", "pct": 55, "resets": "5시간마다 초기화", "badge": 1 }
+            ]
+          }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "같은 구독 사용량", "body": "서브에이전트도 메인 클로드와 같은 구독 사용량을 함께 씁니다." },
+        { "n": 2, "head": "병렬일수록 빨리 소모", "body": "여러 서브에이전트를 한꺼번에 돌리면 사용량이 그만큼 더 빨리 줄어듭니다." },
+        { "n": "!", "head": "필요할 때만 병렬", "body": "무작정 여러 개를 띄우기보다 꼭 필요한 만큼만 병렬로 돌리는 게 좋습니다." }
+      ]
+    },
+    {
+      "id": "s5-agent-intro-05",
+      "template": "illustration",
+      "title": "context · 메인 vs 서브에이전트",
+      "illustration": "/illustrations/s5-context-compare.svg",
+      "notes": [
+        { "n": 1, "head": "메인 혼자 처리", "body": "메인 클로드 혼자 다 하면 조사 내용과 시행착오까지 전부 context 에 쌓입니다." },
+        { "n": 2, "head": "서브에이전트에게 위임", "body": "서브에이전트가 대신 일하고 핵심 결과만 보고하면 메인 context 는 훨씬 천천히 채워집니다." }
+      ]
+    },
+    {
+      "id": "s5-agent-intro-06",
+      "template": "illustration",
+      "title": "분업화 비유 · 1인 기업에서 직원 고용",
+      "illustration": "/illustrations/s5-division-labor.svg",
+      "notes": [
+        { "n": 1, "head": "몸은 하나", "body": "사장님 혼자서는 조사, 코딩, 정리, 디자인을 다 챙기다 보니 집중력이 흩어집니다." },
+        { "n": 2, "head": "담당 직원 고용", "body": "일이 늘어나면 담당 직원을 뽑아서 나눠 맡기고, 사장님은 핵심 보고만 받아서 판단합니다." },
+        { "n": "!", "head": "context = 집중력", "body": "서브에이전트도 마찬가지로, 일을 나눠 맡길수록 메인 클로드가 판단에 집중할 수 있습니다." }
+      ]
+    },
+    {
+      "id": "s5-agent-intro-07",
+      "template": "illustration",
+      "title": "토큰 절약 · 비싼 모델의 심부름",
+      "illustration": "/illustrations/s5-coffee-errand.svg",
+      "notes": [
+        { "n": 1, "head": "고가 모델 혼자 처리", "body": "비싼 모델이 어려운 설계부터 폴더 정리 같은 잔심부름까지 혼자 다 하면 그만큼 요금이 듭니다." },
+        { "n": 2, "head": "쉬운 일은 서브에이전트", "body": "간단한 심부름은 서브에이전트에게 맡기고 고가 모델은 어려운 작업에만 집중시키면 토큰을 아낄 수 있습니다." }
+      ]
+    }
+  ]
+}

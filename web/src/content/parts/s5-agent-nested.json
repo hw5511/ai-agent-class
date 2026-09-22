@@ -1,0 +1,126 @@
+{
+  "id": "s5-agent-nested",
+  "title": "실습2 · 하청의 하청",
+  "summary": "서브에이전트 3개를 심층 조사에 배치하고, 그중 하나는 다시 하위 서브에이전트를 부려서 보고서를 만들게 한다.",
+  "slides": [
+    {
+      "id": "s5-nested-01",
+      "template": "screen",
+      "title": "프롬프트 · 심층 조사 3건 배치",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": {
+            "text": "조사한 벚꽃축제 종류중에서 3가지를 골라서 심층 조사하는 서브에이전트 3개를 배치할거야. 그래서 각자 추가 조사를해서 md파일로 보고서를 저장시키게 해서 보고서 3가지가 생성되어야하는데, 서브에이전트 3개중에 한개는 심층 조사를 또다시 하위 서브에이전트를 시켜서 조사시킨다음 그걸 수합해서 보고서를 작성하게 시켜봐",
+            "badge": 1
+          }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "심층 조사 3건 + 하위 위임", "body": "서브에이전트 3개에게 각각 축제 하나씩 심층 조사를 맡기면서, 그중 하나는 하위 서브에이전트를 또 부려서 조사하게 시키는 프롬프트입니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "조사한 벚꽃축제 종류중에서 3가지를 골라서 심층 조사하는 서브에이전트 3개를 배치할거야. 그래서 각자 추가 조사를해서 md파일로 보고서를 저장시키게 해서 보고서 3가지가 생성되어야하는데, 서브에이전트 3개중에 한개는 심층 조사를 또다시 하위 서브에이전트를 시켜서 조사시킨다음 그걸 수합해서 보고서를 작성하게 시켜봐" }
+        ]
+      }
+    },
+    {
+      "id": "s5-nested-02",
+      "template": "screen",
+      "title": "서브에이전트 3개 동시 실행",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "조사한 벚꽃축제 종류중에서 3가지를 골라서 심층 조사하는 서브에이전트 3개를 배치할거야. 그래서 각자 추가 조사를해서 md파일로 보고서를 저장시키게 해서 보고서 3가지가 생성되어야하는데, 서브에이전트 3개중에 한개는 심층 조사를 또다시 하위 서브에이전트를 시켜서 조사시킨다음 그걸 수합해서 보고서를 작성하게 시켜봐"
+            }
+          ],
+          "panel": {
+            "title": "",
+            "rows": [
+              { "seg": [{ "t": "● 3 background agents launched (↓ to manage)", "c": "bold" }] },
+              { "seg": [] },
+              { "seg": [{ "t": "✻ Waiting for 3 background agents to finish", "c": "dim" }] }
+            ]
+          },
+          "agents": {
+            "rows": [
+              { "name": "main", "active": true },
+              { "name": "general-purpose", "count": 2, "label": "진해군항제 심층조사(하위 에이전트 수합)", "meta": "19s · ↓ 63.7k tokens", "badge": 1 },
+              { "name": "general-purpose", "label": "여의도 봄꽃축제 심층조사", "meta": "10s · ↓ 67.0k tokens", "badge": 2 },
+              { "name": "general-purpose", "label": "경주 대릉원돌담길 심층조사", "meta": "3s · ↓ 67.0k tokens" }
+            ]
+          },
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle) · ← for agents"
+          }
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        { "n": 1, "head": "(+2) 하위 에이전트", "body": "첫 번째 서브에이전트 이름 옆에 (+2)가 붙어 있는데, 이 서브에이전트가 자기 밑에 하위 에이전트를 또 부리고 있다는 뜻입니다." },
+        { "n": 2, "head": "나머지 둘은 단독 실행", "body": "나머지 두 서브에이전트는 하위 에이전트 없이 혼자 조사해서 바로 보고서를 씁니다." }
+      ]
+    },
+    {
+      "id": "s5-nested-03",
+      "template": "illustration",
+      "title": "하청의 하청 구조",
+      "illustration": "/illustrations/s5-nested-subagents.svg",
+      "notes": [
+        { "n": 1, "head": "서브에이전트 3개 배치", "body": "메인 클로드가 축제 3곳을 각각 다른 서브에이전트에게 심층 조사로 맡깁니다." },
+        { "n": 2, "head": "하청의 하청", "body": "그중 진해군항제를 맡은 서브에이전트는 역사, 프로그램, 방문 정보를 각각 하위 서브에이전트에게 다시 나눠 맡깁니다." },
+        { "n": "!", "head": "md 보고서 3개 생성", "body": "구조는 다르지만 세 서브에이전트 모두 결국 각자 md 파일로 보고서를 하나씩 저장합니다." }
+      ]
+    },
+    {
+      "id": "s5-nested-04",
+      "template": "screen",
+      "title": "완성된 보고서 3개",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          { "name": "진해군항제_심층조사.md" },
+          { "name": "여의도_봄꽃축제_심층조사.md" },
+          { "name": "경주_대릉원돌담길_심층조사.md", "active": true, "badge": 2 }
+        ],
+        "noTerminal": true,
+        "terminal": { "vendor": "claude", "turns": [] },
+        "editor": {
+          "file": "경주_대릉원돌담길_심층조사.md",
+          "lines": [
+            "# 경주 대릉원돌담길 벚꽃 심층조사",
+            "",
+            "## 개요",
+            "경주 대릉원 돌담길을 따라 이어지는 벚꽃길 소개",
+            "",
+            "## 방문 정보",
+            "추천 방문 시간, 주변 주차, 대중교통 안내",
+            "",
+            "## 사진 명소",
+            "돌담과 고분을 함께 담을 수 있는 촬영 위치"
+          ],
+          "badge": 1
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "보고서 3개 완성", "body": "탐색기에 세 서브에이전트가 각각 저장한 md 보고서 3개가 나란히 생겼습니다." },
+        { "n": 2, "head": "하나씩 열어서 확인", "body": "파일을 클릭해서 열면 서브에이전트가 정리한 내용을 바로 읽어볼 수 있습니다." }
+      ]
+    }
+  ]
+}
