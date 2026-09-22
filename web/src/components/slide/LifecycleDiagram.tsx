@@ -2,6 +2,7 @@
 // frame (turn start -> a labelled loop frame with a dashed return arrow under it -> turn end, plus a
 // return arrow over the top back to turn start) -> session end, with a row of side events under it.
 // Boxes take their natural width (event names never wrap) and the whole diagram is centred; flex only.
+import { useLayoutEffect, useRef, useState } from "react"
 import type { LifecycleNode, LifecycleSlide } from "@/content/schema"
 import { NumberBadge } from "./NumberBadge"
 import { cn } from "@/lib/utils"
@@ -16,19 +17,19 @@ function Node({ node }: { node: LifecycleNode }) {
     return (
       <div className="relative flex shrink-0 items-center">
         {badge}
-        <span className="rounded-full bg-[#101113] px-6 py-4 font-display text-[22px] font-bold whitespace-nowrap text-white">{node.label.replace(/^\[|\]$/g, "")}</span>
+        <span className="rounded-full bg-[#101113] px-7 py-5 font-display text-[26px] font-bold whitespace-nowrap text-white">{node.label.replace(/^\[|\]$/g, "")}</span>
       </div>
     )
   }
   return (
     <div
       className={cn(
-        "relative flex h-[118px] shrink-0 flex-col items-center justify-center gap-1.5 rounded-2xl border-2 bg-white px-4 text-center",
+        "relative flex h-[150px] shrink-0 flex-col items-center justify-center gap-2 rounded-2xl border-2 bg-white px-5 text-center",
         node.highlight ? "border-[3px] border-slide-accent" : node.muted ? "border-dashed border-neutral-300" : "border-neutral-300",
       )}
     >
       {badge}
-      <span className={cn("font-term text-[21px] font-bold whitespace-nowrap", node.muted ? "text-neutral-400" : "text-[#101113]")}>{node.label}</span>
+      <span className={cn("font-term text-[26px] font-bold whitespace-nowrap", node.muted ? "text-neutral-400" : "text-[#101113]")}>{node.label}</span>
       {node.sub && <span className="font-body text-[17px] whitespace-nowrap text-[#7c8288]">{node.sub}</span>}
     </div>
   )
@@ -41,6 +42,29 @@ function Group({ nodes }: { nodes: LifecycleNode[] }) {
         <Node key={i} node={n} />
       ))}
     </div>
+  )
+}
+
+// Session-level events (SessionStart / SessionEnd): a compact pill row above and below the turn frame.
+function Pills({ nodes }: { nodes: LifecycleNode[] }) {
+  return (
+    <div className="flex items-center gap-4">
+      {nodes.map((n, i) => (
+        <span key={i} className={cn("relative flex items-center gap-3 rounded-full border-2 bg-white px-7 py-3", n.highlight ? "border-slide-accent" : "border-neutral-300")}>
+          {n.badge ? <span className="absolute -top-5 left-1/2 -translate-x-1/2"><NumberBadge n={n.badge} size="sm" /></span> : null}
+          <span className="font-term text-[26px] font-bold text-[#101113]">{n.label}</span>
+          {n.sub && <span className="font-body text-[20px] text-[#7c8288]">{n.sub}</span>}
+        </span>
+      ))}
+    </div>
+  )
+}
+
+function DownArrow() {
+  return (
+    <svg viewBox="0 0 24 40" className="h-9 w-6 shrink-0 text-slide-accent">
+      <path d="M12 2v32m-9-9 9 9 9-9" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
   )
 }
 
@@ -88,11 +112,27 @@ export function LifecycleDiagram({ s }: { s: LifecycleSlide }) {
   const turnLabel = s.turnLabel ?? "매 턴"
   const loopLabel = s.loopLabel ?? "도구 루프"
   const sideLabel = s.sideLabel ?? "따로 발생"
+  // The diagram is laid out at its natural size, then scaled as a whole to fill the slide body.
+  const box = useRef<HTMLDivElement>(null)
+  const art = useRef<HTMLDivElement>(null)
+  const [k, setK] = useState(1)
+  useLayoutEffect(() => {
+    const fit = () => {
+      const b = box.current, a = art.current
+      if (!b || !a || !a.offsetWidth) return
+      setK(Math.min(1.6, (b.clientWidth - 8) / a.offsetWidth, (b.clientHeight - 8) / a.offsetHeight))
+    }
+    fit()
+    const ro = new ResizeObserver(fit)
+    if (box.current) ro.observe(box.current)
+    return () => ro.disconnect()
+  }, [s])
   return (
-    <div className="flex h-full min-h-0 flex-col items-center justify-center gap-12">
-      <div className="flex items-center gap-2">
-        <Group nodes={s.start} />
-        <Arrow />
+    <div ref={box} className="flex h-full min-h-0 items-center justify-center overflow-hidden">
+    <div ref={art} className="flex shrink-0 flex-col items-center gap-10 pt-6" style={{ transform: `scale(${k})` }}>
+      <div className="flex flex-col items-center gap-3">
+        <Pills nodes={s.start} />
+        <DownArrow />
         {/* each turn */}
         <div className="relative flex flex-col rounded-[28px] border-[3px] border-slide-accent px-6 pt-6 pb-8">
           <Tag solid>{turnLabel}</Tag>
@@ -117,8 +157,8 @@ export function LifecycleDiagram({ s }: { s: LifecycleSlide }) {
             <Group nodes={s.turnEnd} />
           </div>
         </div>
-        <Arrow />
-        <Group nodes={s.end} />
+        <DownArrow />
+        <Pills nodes={s.end} />
       </div>
       {s.side?.length ? (
         <div className="flex max-w-full flex-wrap items-center justify-center gap-3">
@@ -137,6 +177,7 @@ export function LifecycleDiagram({ s }: { s: LifecycleSlide }) {
           ))}
         </div>
       ) : null}
+    </div>
     </div>
   )
 }

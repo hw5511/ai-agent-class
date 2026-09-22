@@ -225,8 +225,10 @@ export interface OfficePptSlide {
   title: string
   sub?: string
   layout?: "title" | "bullets" | "cards" | "table" | "timeline" | "closing"
-  items?: string[] // bullets / card labels / timeline points / table rows ("a|b|c")
+  items?: string[] // bullets / card labels / timeline points ("date label", e.g. "3/27 진해군항제 시작") / table rows ("a|b|c"); closing: items[0] is the thank-you line
   badge?: number
+  accent?: string // hex override for this slide's accent color, default the deck accent (#c43e1c)
+  date?: string // title layout only: small date/presenter line under the subtitle
 }
 
 export interface OfficePanel {
@@ -334,6 +336,7 @@ export interface Terminal {
   sessionTag?: { name: string; badge?: number } // session name shown as a light-blue tag on the input box
   footer?: { text: string; badge?: number } // status line under the input box, e.g. "bypass permissions on"
   input?: { text?: string; placeholder?: string; badge?: number }
+  fit?: boolean // scale the whole terminal so the content fills the window (no dark gap, nothing cut)
   // a titled divider right above the input box, e.g. "진해군항제 심층조사(하위 에이전트 수합)" inside a subagent
   rule?: { text: string; badge?: number }
   // background agent list under the footer (the "← for agents" view): main, general-purpose (+2), tree rows

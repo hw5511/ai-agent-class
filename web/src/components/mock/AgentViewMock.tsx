@@ -14,7 +14,7 @@ export function AgentViewMock({ s }: { s: AgentViewScreen }) {
 
   return (
     <div className="h-full min-h-0 overflow-hidden rounded-2xl shadow-[0_18px_40px_rgba(16,17,19,0.16)]">
-      <div className={cn("flex h-full min-h-0 flex-col gap-3 bg-[#0c0d0e] px-6 py-5 font-term text-[22px] leading-[1.5] text-[#e8eaec]", hasBadges && "pl-3")}>
+      <div className={cn("flex h-full min-h-0 flex-col gap-4 bg-[#0c0d0e] px-8 py-6 font-term text-[30px] leading-[1.5] text-[#e8eaec]", hasBadges && "pl-3")}>
         <Row gutter={hasBadges}>
           <div className="flex items-center gap-2">
             <span className="text-[#d97757]">✻</span>
@@ -78,7 +78,7 @@ export function AgentViewMock({ s }: { s: AgentViewScreen }) {
           </Row>
           {s.footer ? (
             <Row gutter={hasBadges}>
-              <span className="text-[18px] text-[#767c81]">{s.footer}</span>
+              <span className="text-[24px] text-[#767c81]">{s.footer}</span>
             </Row>
           ) : null}
         </div>

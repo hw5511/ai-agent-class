@@ -1,6 +1,7 @@
 // Agent terminal mock, laid out the way every agent TUI is: vendor banner at the top, conversation in
 // the middle (newest line kept in view), input box docked to the bottom. Pure flex; no coordinates.
 // A line with `badge` gets a numbered badge in the left gutter of that very row.
+import { useLayoutEffect, useRef, useState } from "react"
 import type { Terminal } from "@/content/schema"
 import { NumberBadge } from "@/components/slide/NumberBadge"
 import { VendorBanner } from "./VendorBanner"
@@ -29,14 +30,54 @@ function Marked({ text, mark }: { text: string; mark?: string }) {
   )
 }
 
+// `fit`: the whole terminal is scaled so its content fills the window: short conversations grow to a readable
+// size instead of leaving a dark gap, long ones shrink instead of being cut at the top (scale 0.7 to 1.6).
 export function AgentTerminal({ t, className }: { t: Terminal; className?: string }) {
+  const outer = useRef<HTMLDivElement>(null)
+  const conv = useRef<HTMLDivElement>(null)
+  const list = useRef<HTMLDivElement>(null)
+  const [s, setS] = useState(1)
+  useLayoutEffect(() => {
+    if (!t.fit) return
+    const run = () => {
+      const o = outer.current, c = conv.current, l = list.current
+      if (!o || !c || !l) return
+      const H = o.clientHeight
+      if (!H) return
+      setS((cur) => {
+        const inner = H / cur // inner box height in unscaled px
+        const fixed = inner - c.clientHeight
+        const need = fixed + l.offsetHeight + 8
+        const next = Math.min(1.6, Math.max(0.7, H / need))
+        return Math.abs(next - cur) < 0.01 ? cur : next
+      })
+    }
+    run()
+    const ro = new ResizeObserver(run)
+    if (outer.current) ro.observe(outer.current)
+    if (list.current) ro.observe(list.current)
+    return () => ro.disconnect()
+  }, [t, s])
+  const body = <TerminalBody t={t} className={className} convRef={conv} listRef={list} />
+  if (!t.fit) return body
+  return (
+    <div ref={outer} className="relative h-full min-h-0 overflow-hidden bg-[#0c0d0e]">
+      <div className="absolute top-0 left-0 origin-top-left" style={{ width: `${100 / s}%`, height: `${100 / s}%`, transform: `scale(${s})` }}>
+        {body}
+      </div>
+    </div>
+  )
+}
+
+function TerminalBody({ t, className, convRef, listRef }: { t: Terminal; className?: string; convRef?: React.Ref<HTMLDivElement>; listRef?: React.Ref<HTMLDivElement> }) {
   const shell = t.vendor === "shell"
   const hasBadges = t.turns.some((x) => x.badge) || !!t.input?.badge || !!t.usage?.some((u) => u.badge) || !!t.panel?.rows.some((r) => r.badge) || !!t.picker?.folderBadge || !!t.picker?.items.some((x) => x.badge) || !!t.sessionTag?.badge || !!t.footer?.badge || !!t.rule?.badge || !!t.agents?.badge || !!t.agents?.rows.some((r) => r.badge)
   return (
     <div className={cn("flex h-full min-h-0 flex-col bg-[#0c0d0e] font-term leading-[1.6] text-[#e8eaec]", shell ? "text-[26px]" : "text-[22px]", className)}>
       <div className={cn("flex min-h-0 flex-1 flex-col gap-5 overflow-hidden px-5 pt-4", hasBadges && "pl-2")}>
         {!shell && <Row gutter={hasBadges}><VendorBanner vendor={t.vendor} cwd={t.cwd} /></Row>}
-        <div className={cn("flex min-h-0 flex-1 flex-col gap-4 overflow-hidden pb-2", !shell && "justify-end")}>
+        <div ref={convRef} className={cn("flex min-h-0 flex-1 flex-col overflow-hidden pb-2", !shell && "justify-end")}>
+          <div ref={listRef} className="flex shrink-0 flex-col gap-4">
           {t.turns.map((turn, i) => (
             <Row key={i} gutter={hasBadges} badge={turn.badge}>
               {shell ? (
@@ -125,6 +166,7 @@ export function AgentTerminal({ t, className }: { t: Terminal; className?: strin
               </div>
             </Row>
           ))}
+          </div>
         </div>
       </div>
       {!shell && (
