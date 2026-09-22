@@ -67,14 +67,14 @@ export function ChatMock({ s }: { s: ChatScreen }) {
 }
 
 export function FileMock({ s }: { s: FileScreen }) {
-  return (
+  const card = (
     <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-white">
-      <div className="flex h-12 items-center gap-3 border-b border-neutral-200 px-6">
+      <div className={cn("flex items-center gap-3 border-b border-neutral-200 px-6", s.large ? "h-16" : "h-12")}>
         <span className="size-2.5 rounded-full bg-slide-accent" />
-        <span className="font-term text-[20px] text-[#43474b]">{s.name}</span>
-        {s.badge ? <span className="ml-auto"><NumberBadge n={s.badge} size="sm" /></span> : null}
+        <span className={cn("font-term text-[#43474b]", s.large ? "text-[26px]" : "text-[20px]")}>{s.name}</span>
+        {s.badge ? <span className="ml-auto"><NumberBadge n={s.badge} size={s.large ? "md" : "sm"} /></span> : null}
       </div>
-      <div className="flex flex-col gap-2 px-7 py-5 font-term text-[24px] text-[#101113]">
+      <div className={cn("flex flex-col font-term text-[#101113]", s.large ? "gap-4 px-10 py-8 text-[34px] leading-[1.45]" : "gap-2 px-7 py-5 text-[24px]")}>
         {s.lines.map((l, i) => {
           if (!s.mark || !l.includes(s.mark)) return <div key={i}>{l}</div>
           const [a, b] = l.split(s.mark)
@@ -89,6 +89,7 @@ export function FileMock({ s }: { s: FileScreen }) {
       </div>
     </div>
   )
+  return s.large ? <div className="flex h-full min-h-0 items-center">{<div className="w-full">{card}</div>}</div> : card
 }
 
 export function BrowserMock({ s }: { s: BrowserScreen }) {

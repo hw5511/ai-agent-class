@@ -31,7 +31,7 @@ function Marked({ text, mark }: { text: string; mark?: string }) {
 
 export function AgentTerminal({ t, className }: { t: Terminal; className?: string }) {
   const shell = t.vendor === "shell"
-  const hasBadges = t.turns.some((x) => x.badge) || !!t.input?.badge || !!t.usage?.some((u) => u.badge) || !!t.panel?.rows.some((r) => r.badge) || !!t.picker?.folderBadge || !!t.picker?.items.some((x) => x.badge) || !!t.sessionTag?.badge || !!t.footer?.badge
+  const hasBadges = t.turns.some((x) => x.badge) || !!t.input?.badge || !!t.usage?.some((u) => u.badge) || !!t.panel?.rows.some((r) => r.badge) || !!t.picker?.folderBadge || !!t.picker?.items.some((x) => x.badge) || !!t.sessionTag?.badge || !!t.footer?.badge || !!t.rule?.badge || !!t.agents?.badge || !!t.agents?.rows.some((r) => r.badge)
   return (
     <div className={cn("flex h-full min-h-0 flex-col bg-[#0c0d0e] font-term leading-[1.6] text-[#e8eaec]", shell ? "text-[26px]" : "text-[22px]", className)}>
       <div className={cn("flex min-h-0 flex-1 flex-col gap-5 overflow-hidden px-5 pt-4", hasBadges && "pl-2")}>
@@ -49,10 +49,20 @@ export function AgentTerminal({ t, className }: { t: Terminal; className?: strin
                   <span className={cn("break-all", turn.role === "tool" ? "rounded bg-[#1d3a57] px-1 font-bold text-[#cfe6ff]" : "text-[#b8bcc0]")}><Marked text={turn.text} mark={turn.mark} /></span>
                 )
               ) : (
-                <span className={cn("flex gap-3", turn.role === "user" && "text-[#8b9095]")}>
-                  <span className="shrink-0">{turn.role === "user" ? ">" : "●"}</span>
-                  <span className={cn("break-keep [overflow-wrap:anywhere]", turn.role === "tool" && "font-bold")}><Marked text={turn.text} mark={turn.mark} /></span>
-                </span>
+                (() => {
+                  // A line that already carries its own TUI glyph (● ✻ ⎿ ├ └) is drawn as written, without a
+                  // second "●" in front; ⎿/├/└ continuation lines are indented under the line above.
+                  const own = turn.role !== "user" && /^\s*[●✻✶※⎿├└│]/.test(turn.text)
+                  const cont = own && /^\s*[⎿├└│]/.test(turn.text)
+                  const text = own ? turn.text.replace(/^\s*● /, "") : turn.text
+                  return (
+                    <span className={cn("flex gap-3", turn.role === "user" && "text-[#8b9095]", cont && "pl-8 text-[#8b9095]")}>
+                      {own && !cont ? <span className="shrink-0">{/^\s*●/.test(turn.text) ? "●" : ""}</span> : null}
+                      {!own ? <span className="shrink-0">{turn.role === "user" ? ">" : "●"}</span> : null}
+                      <span className={cn("break-keep [overflow-wrap:anywhere]", turn.role === "tool" && "font-bold", own && /^\s*[✻✶※]/.test(turn.text) && "text-[#767c81]")}><Marked text={text} mark={turn.mark} /></span>
+                    </span>
+                  )
+                })()
               )}
             </Row>
           ))}
@@ -119,6 +129,16 @@ export function AgentTerminal({ t, className }: { t: Terminal; className?: strin
       </div>
       {!shell && (
         <div className={cn("flex flex-col gap-1 px-5 pb-4", hasBadges && "pl-2")}>
+          {t.rule && (
+            <Row gutter={hasBadges} badge={t.rule.badge}>
+              <div className="flex items-center whitespace-nowrap text-[#5b5e61]">
+                <span>{"─── "}</span>
+                <span className="font-bold text-[#b8bcc0]">{t.rule.text}</span>
+                <span>{" "}</span>
+                <span className="ml-1 h-0 flex-1 border-t border-[#5b5e61]" />
+              </div>
+            </Row>
+          )}
           <Row gutter={hasBadges} badge={t.input?.badge}>
             <div className="relative flex items-center gap-3 rounded-md border border-[#3a3d40] px-4 py-2">
               {t.sessionTag ? (
@@ -134,6 +154,35 @@ export function AgentTerminal({ t, className }: { t: Terminal; className?: strin
           <Row gutter={hasBadges} badge={t.footer?.badge}>
             {t.footer ? <span className="text-[18px] text-[#e5657a]">{t.footer.text}</span> : <span className="text-[18px] text-[#5b5e61]">? for shortcuts</span>}
           </Row>
+          {t.agents && (
+            <div className="mt-1 flex flex-col gap-0.5 text-[19px]">
+              {t.agents.hint || t.agents.badge ? (
+                <Row gutter={hasBadges} badge={t.agents.badge}>
+                  <span className="text-[#767c81]">{t.agents.hint}</span>
+                </Row>
+              ) : null}
+              {t.agents.rows.map((r, i) => (
+                <Row key={`ag${i}`} gutter={hasBadges} badge={r.badge}>
+                  <div className="flex items-center gap-1">
+                    <span className="w-[2ch] shrink-0 text-[#d97757]">{r.selected ? "❯" : ""}</span>
+                    {r.tree ? <span className="ml-[1.5ch] shrink-0 pr-1 text-[#5b5e61]">{r.tree}</span> : null}
+                    <span className={cn("shrink-0", r.active ? "text-[#e8eaec]" : "text-[#767c81]")}>{r.active ? "●" : "◯"}</span>
+                    <span className={cn("ml-1 shrink-0", r.selected ? "font-bold text-[#e8eaec]" : "text-[#b8bcc0]")}>
+                      {r.name}
+                      {r.count ? ` (+${r.count})` : ""}
+                    </span>
+                    {r.label ? <span className="ml-2 min-w-0 flex-1 truncate text-[#8b9095]">{r.label}</span> : <span className="min-w-0 flex-1" />}
+                    {r.meta ? <span className="ml-2 shrink-0 whitespace-nowrap text-[#767c81]">{r.meta}</span> : null}
+                  </div>
+                </Row>
+              ))}
+              {t.agents.more ? (
+                <Row gutter={hasBadges}>
+                  <span className="text-[#767c81]">{t.agents.more}</span>
+                </Row>
+              ) : null}
+            </div>
+          )}
         </div>
       )}
     </div>

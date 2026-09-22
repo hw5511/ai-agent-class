@@ -5,6 +5,7 @@ import type { StackSlide, CardsSlide, CompareSlide, FlowSlide, IllustrationSlide
 import { NumberBadge } from "./NumberBadge"
 import { Mark } from "./Mark"
 import { ScreenView } from "./ScreenView"
+import { LifecycleDiagram } from "./LifecycleDiagram"
 import { asset, cn } from "@/lib/utils"
 
 export function SlideBody({ slide }: { slide: Slide }) {
@@ -29,6 +30,8 @@ export function SlideBody({ slide }: { slide: Slide }) {
       return <FlowT s={slide} />
     case "stack":
       return <StackT s={slide} />
+    case "lifecycle":
+      return <LifecycleDiagram s={slide} />
   }
 }
 

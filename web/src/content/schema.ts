@@ -50,6 +50,7 @@ export type Slide =
   | CardsSlide
   | FlowSlide
   | StackSlide
+  | LifecycleSlide
 
 interface SlideBase {
   id: string
@@ -112,6 +113,30 @@ export interface StackSlide extends SlideBase {
   items: { screen: Screen; grow?: boolean }[]
 }
 
+/** Claude Code hooks lifecycle, drawn left to right: session start -> [each turn: turn start -> [agentic
+ *  loop, with a return arrow] -> turn end, with a return arrow] -> session end, plus a row of events that
+ *  fire on their own. Node labels are exact hook event names (code.claude.com/docs/en/hooks). */
+export interface LifecycleSlide extends SlideBase {
+  template: "lifecycle"
+  start: LifecycleNode[] // once per session, before the first turn: SessionStart
+  turnStart: LifecycleNode[] // each turn, before the loop: UserPromptSubmit
+  loop: LifecycleNode[] // the agentic loop: PreToolUse, PermissionRequest, [tool], PostToolUse ...
+  turnEnd: LifecycleNode[] // each turn, after the loop: Stop
+  end: LifecycleNode[] // once, at exit: SessionEnd
+  side?: LifecycleNode[] // events that fire on their own (Notification, PreCompact ...), a thin row under the diagram
+  turnLabel?: string // default "매 턴"
+  loopLabel?: string // default "도구 루프"
+  sideLabel?: string // default "따로 발생"
+}
+
+export interface LifecycleNode {
+  label: string // exact event name, or "[도구 실행]" for the tool step
+  sub?: string // one short keyword under the name
+  badge?: number
+  highlight?: boolean // accent border (the event a slide is about)
+  muted?: boolean // grey, for rarely used events
+}
+
 /** A diagram or illustration from the illustration library. */
 export interface IllustrationSlide extends SlideBase {
   template: "illustration"
@@ -141,7 +166,77 @@ export interface Note {
 
 // ---- screens: the mockups a slide can show ------------------------------------------------------
 
-export type Screen = VSCodeScreen | ShotScreen | TerminalScreen | ChatScreen | BrowserScreen | FileScreen
+export type Screen = VSCodeScreen | ShotScreen | TerminalScreen | ChatScreen | BrowserScreen | FileScreen | AgentViewScreen | OfficeScreen
+
+/** Claude Code's full-screen Agent View (/background, or the left arrow): whole sessions listed by state. */
+export interface AgentViewScreen {
+  kind: "agentview"
+  version?: string // "Claude Code v2.1.278"
+  model?: string // "Sonnet 5 · ~\agent1"
+  counts: string // "0 awaiting input · 1 working · 1 completed"
+  countsBadge?: number
+  notice?: string // dim line, e.g. "Your conversation moved to the background — enter opens it · ..."
+  noticeBadge?: number
+  groups: {
+    title: string // "Working" / "Completed"
+    rows: { icon?: string; name: string; desc?: string; time?: string; selected?: boolean; badge?: number }[] // icon "✶" working, "✻" done
+  }[]
+  input?: { text?: string; placeholder?: string; badge?: number } // "describe a task for a new session"
+  footer?: string // "⏵⏵ bypass permissions · enter to return · space to r…"
+}
+
+/** Microsoft Office desktop window (Excel / Word / PowerPoint) with the Claude add-in panel on the right. */
+export interface OfficeScreen {
+  kind: "office"
+  app: "excel" | "word" | "powerpoint"
+  file: string // title bar file name, e.g. "매출보고서.xlsx"
+  tab?: string // active ribbon tab, default "홈"
+  ribbonMark?: { label: string; badge?: number } // one ribbon button drawn highlighted, e.g. "추가 기능"
+  excel?: OfficeExcel
+  word?: { pages: OfficeWordPage[] } // pages side by side (cover, TOC, body ...)
+  powerpoint?: { slides: OfficePptSlide[]; current: number } // current = 1-based slide on the canvas
+  panel?: OfficePanel // Claude add-in on the right; omit for no panel
+  dialog?: { title: string; text: string; button?: string; badge?: number } // modal over the window (e.g. load error)
+  zoom?: number // >1 enlarges the document area (a close-up of a formula), default 1
+}
+
+export interface OfficeExcel {
+  name?: string // name box, e.g. "F8"
+  formula?: string // formula bar text, e.g. "=VLOOKUP(B8,$H$5:$J$10,2,FALSE)"
+  formulaBadge?: number
+  cols: { label: string; width?: number }[] // column headers A, B, C ...; width in px at zoom 1 (default 120)
+  rows: { cells: string[]; style?: "title" | "sub" | "head" | "total" | "note" | "blank"; badge?: number }[] // row 1 = rows[0]
+  selected?: string // highlighted cell address, e.g. "F8"
+  sheets?: string[] // sheet tabs, first one active
+}
+
+export interface OfficeWordPage {
+  header?: string
+  footer?: string
+  badge?: number
+  blocks: {
+    t: "title" | "subtitle" | "h1" | "h2" | "p" | "toc" | "table" | "meta" | "rule" | "space" | "placeholder"
+    text?: string // toc: "1. 개요 ........ 3" style lines are split on "|" into label | page
+    rows?: string[][] // table only, first row = header
+  }[]
+}
+
+export interface OfficePptSlide {
+  title: string
+  sub?: string
+  layout?: "title" | "bullets" | "cards" | "table" | "timeline" | "closing"
+  items?: string[] // bullets / card labels / timeline points / table rows ("a|b|c")
+  badge?: number
+}
+
+export interface OfficePanel {
+  model?: string // "Sonnet 5"
+  mode?: "ask" | "accept" // hand icon state: Ask before edits / Accept all edits
+  messages: { role: "user" | "assistant"; text: string; steps?: string[] }[] // steps = dim tool lines under an answer
+  input?: string // placeholder or typed text, default "Ask Claude..."
+  menu?: boolean // show the Ask before edits / Accept all edits menu open
+  badge?: number
+}
 
 /** A small file card: a tab with the file name and a few lines; `mark` highlights a substring. */
 export interface FileScreen {
@@ -150,6 +245,7 @@ export interface FileScreen {
   lines: string[]
   mark?: string
   badge?: number
+  large?: boolean // bigger type, centred in the slide (a file card that is the whole visual)
 }
 
 /** A chat-assistant window (ChatGPT, Claude.ai, Gemini) — the "ask and copy" way of working. */
@@ -238,6 +334,24 @@ export interface Terminal {
   sessionTag?: { name: string; badge?: number } // session name shown as a light-blue tag on the input box
   footer?: { text: string; badge?: number } // status line under the input box, e.g. "bypass permissions on"
   input?: { text?: string; placeholder?: string; badge?: number }
+  // a titled divider right above the input box, e.g. "진해군항제 심층조사(하위 에이전트 수합)" inside a subagent
+  rule?: { text: string; badge?: number }
+  // background agent list under the footer (the "← for agents" view): main, general-purpose (+2), tree rows
+  agents?: {
+    hint?: string // dim line above the list, e.g. "Enter to view · x to stop"
+    rows: {
+      name: string // "main" / "general-purpose"
+      count?: number // nested agents, drawn "(+2)"
+      label?: string // task description, cut with an ellipsis when long
+      meta?: string // right side, e.g. "19s · ↓ 63.7k tokens"
+      tree?: "├" | "└" // child row of the row above
+      active?: boolean // ● instead of ◯ (the one you are looking at)
+      selected?: boolean // ❯ cursor
+      badge?: number
+    }[]
+    more?: string // "↓ 1 more"
+    badge?: number
+  }
 }
 
 // ---- action box: what the student does with this slide ------------------------------------------
