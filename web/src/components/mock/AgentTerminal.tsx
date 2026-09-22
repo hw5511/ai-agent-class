@@ -37,11 +37,16 @@ export function AgentTerminal({ t, className }: { t: Terminal; className?: strin
   const conv = useRef<HTMLDivElement>(null)
   const list = useRef<HTMLDivElement>(null)
   const [s, setS] = useState(1)
+  // Text re-wraps at every scale, so the fit can oscillate; allow a few adjustments per terminal, then stop.
+  const tries = useRef(0)
+  useLayoutEffect(() => {
+    tries.current = 0
+  }, [t])
   useLayoutEffect(() => {
     if (!t.fit) return
     const run = () => {
       const o = outer.current, c = conv.current, l = list.current
-      if (!o || !c || !l) return
+      if (!o || !c || !l || tries.current >= 6) return
       const H = o.clientHeight
       if (!H) return
       setS((cur) => {
@@ -49,13 +54,15 @@ export function AgentTerminal({ t, className }: { t: Terminal; className?: strin
         const fixed = inner - c.clientHeight
         const need = fixed + l.offsetHeight + 8
         const next = Math.min(1.6, Math.max(0.7, H / need))
-        return Math.abs(next - cur) < 0.01 ? cur : next
+        if (Math.abs(next - cur) < 0.02) return cur
+        tries.current += 1
+        // after the first corrections only shrink, so a wrap-induced overflow can never bounce back
+        return tries.current > 2 ? Math.min(cur, next) : next
       })
     }
     run()
     const ro = new ResizeObserver(run)
     if (outer.current) ro.observe(outer.current)
-    if (list.current) ro.observe(list.current)
     return () => ro.disconnect()
   }, [t, s])
   const body = <TerminalBody t={t} className={className} convRef={conv} listRef={list} />
