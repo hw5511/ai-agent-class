@@ -41,6 +41,7 @@ function badgesOfScreen(s, out) {
     for (const sl of s.powerpoint?.slides ?? []) if (sl.badge) out.push(sl.badge)
     return
   }
+  if (s.kind === "shot") for (const b of s.badges ?? []) out.push(b.n)
   for (const m of s.messages ?? []) if (m.badge) out.push(m.badge)
   for (const r of s.results ?? []) if (r.badge) out.push(r.badge)
   const t = s.terminal

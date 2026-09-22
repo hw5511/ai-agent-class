@@ -1,9 +1,11 @@
+import { useLayoutEffect, useRef, useState } from "react"
 import type { Screen } from "@/content/schema"
 import { VSCodeMock } from "@/components/mock/VSCodeMock"
 import { AgentTerminal } from "@/components/mock/AgentTerminal"
 import { BrowserMock, ChatMock, FileMock } from "@/components/mock/WebMocks"
 import { AgentViewMock } from "@/components/mock/AgentViewMock"
 import { OfficeMock } from "@/components/mock/OfficeMock"
+import { NumberBadge } from "./NumberBadge"
 import { asset } from "@/lib/utils"
 
 // One switch from screen data to mockup. New screen kinds are added here and in the schema only.
@@ -20,9 +22,47 @@ export function ScreenView({ screen }: { screen: Screen }) {
         <AgentTerminal t={screen.terminal} />
       </div>
     )
+  if (!screen.badges?.length)
+    return (
+      <div className="flex h-full min-h-0 items-center justify-center">
+        <img src={asset(screen.src)} alt="" className="size-full object-contain drop-shadow-[0_12px_28px_rgba(16,17,19,0.14)]" />
+      </div>
+    )
+  return <BadgedShot src={screen.src} badges={screen.badges} />
+}
+
+// A capture with numbered badges: the picture is scaled to fit its box (up or down, keeping its ratio) and the
+// badges are placed in percent of the picture, so they stay on the item at any size.
+function BadgedShot({ src, badges }: { src: string; badges: { n: number; x: number; y: number }[] }) {
+  const box = useRef<HTMLDivElement>(null)
+  const [nat, setNat] = useState<[number, number] | null>(null)
+  const [size, setSize] = useState<[number, number]>([0, 0])
+  useLayoutEffect(() => {
+    const el = box.current
+    if (!el) return
+    const fit = () => setSize([el.clientWidth, el.clientHeight])
+    fit()
+    const ro = new ResizeObserver(fit)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
+  let w = 0, h = 0
+  if (nat && size[0] && size[1]) {
+    const k = Math.min(size[0] / nat[0], size[1] / nat[1])
+    w = nat[0] * k
+    h = nat[1] * k
+  }
   return (
-    <div className="flex h-full min-h-0 items-center justify-center">
-      <img src={asset(screen.src)} alt="" className="size-full object-contain drop-shadow-[0_12px_28px_rgba(16,17,19,0.14)]" />
+    <div ref={box} className="flex h-full min-h-0 w-full items-center justify-center">
+      <div className="relative shrink-0" style={nat ? { width: w, height: h } : undefined}>
+        <img src={asset(src)} alt="" onLoad={(e) => setNat([e.currentTarget.naturalWidth, e.currentTarget.naturalHeight])} className={nat ? "size-full drop-shadow-[0_12px_28px_rgba(16,17,19,0.14)]" : "max-h-full max-w-full"} />
+        {nat &&
+          badges.map((b, i) => (
+            <span key={i} className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full ring-4 ring-white" style={{ left: `${b.x}%`, top: `${b.y}%` }}>
+              <NumberBadge n={b.n} />
+            </span>
+          ))}
+      </div>
     </div>
   )
 }

@@ -47,7 +47,7 @@ function CompareT({ s }: { s: CompareSlide }) {
   return (
     <div className="flex h-full min-h-0 gap-12">
       {[s.left, s.right].map((side, i) => (
-        <div key={i} className="flex min-w-0 flex-1 flex-col gap-5">
+        <div key={i} className="flex min-w-0 flex-1 flex-col gap-5" style={s.ratio ? { flexGrow: s.ratio[i] } : undefined}>
           <div className="flex items-center gap-4">
             {s.notes?.length ? <NumberBadge n={i + 1} /> : null}
             <span className="font-display text-[32px] font-bold text-[#101113]">{side.label}</span>

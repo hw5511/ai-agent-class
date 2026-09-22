@@ -40,13 +40,15 @@ export function AgentTerminal({ t, className }: { t: Terminal; className?: strin
   // Two passes, no feedback loop: pass 0 measures at scale 1 and picks a scale; pass 1 re-measures at that
   // scale (text wraps differently) and may only shrink. A new terminal or a resized window starts over.
   const pass = useRef(0)
+  const spacer = useRef<HTMLDivElement>(null)
   const measure = () => {
     const o = outer.current, c = conv.current, l = list.current
     if (!o || !c || !l) return null
     const H = o.clientHeight
     if (!H) return null
     const inner = H / s
-    const need = inner - c.clientHeight + l.offsetHeight + 8
+    const gap = spacer.current?.offsetHeight ?? 0 // empty session: the free space under the input box
+    const need = inner - gap - c.clientHeight + l.offsetHeight + 8
     return Math.min(1.6, Math.max(0.7, H / need))
   }
   useLayoutEffect(() => {
@@ -84,7 +86,7 @@ export function AgentTerminal({ t, className }: { t: Terminal; className?: strin
     document.fonts?.ready.then(restart)
     return () => ro.disconnect()
   }, [t])
-  const body = <TerminalBody t={t} className={className} convRef={conv} listRef={list} />
+  const body = <TerminalBody t={t} className={className} convRef={conv} listRef={list} spacerRef={spacer} />
   if (!t.fit) return body
   return (
     <div ref={outer} className="relative h-full min-h-0 overflow-hidden bg-[#0c0d0e]">
@@ -95,12 +97,14 @@ export function AgentTerminal({ t, className }: { t: Terminal; className?: strin
   )
 }
 
-function TerminalBody({ t, className, convRef, listRef }: { t: Terminal; className?: string; convRef?: React.Ref<HTMLDivElement>; listRef?: React.Ref<HTMLDivElement> }) {
+function TerminalBody({ t, className, convRef, listRef, spacerRef }: { t: Terminal; className?: string; convRef?: React.Ref<HTMLDivElement>; listRef?: React.Ref<HTMLDivElement>; spacerRef?: React.Ref<HTMLDivElement> }) {
   const shell = t.vendor === "shell"
+  // A fresh session (nothing typed yet) keeps the input right under the banner, like the real TUI.
+  const empty = !shell && !t.turns.length && !t.panel && !t.picker && !t.usage?.length
   const hasBadges = t.turns.some((x) => x.badge) || !!t.input?.badge || !!t.usage?.some((u) => u.badge) || !!t.panel?.rows.some((r) => r.badge) || !!t.picker?.folderBadge || !!t.picker?.items.some((x) => x.badge) || !!t.sessionTag?.badge || !!t.footer?.badge || !!t.rule?.badge || !!t.agents?.badge || !!t.agents?.rows.some((r) => r.badge)
   return (
     <div className={cn("flex h-full min-h-0 flex-col bg-[#0c0d0e] font-term leading-[1.6] text-[#e8eaec]", shell ? "text-[26px]" : "text-[22px]", className)}>
-      <div className={cn("flex min-h-0 flex-1 flex-col gap-5 overflow-hidden px-5 pt-4", hasBadges && "pl-2")}>
+      <div className={cn("flex min-h-0 flex-col gap-5 overflow-hidden px-5 pt-4", empty ? "flex-none" : "flex-1", hasBadges && "pl-2")}>
         {!shell && <Row gutter={hasBadges}><VendorBanner vendor={t.vendor} cwd={t.cwd} /></Row>}
         <div ref={convRef} className={cn("flex min-h-0 flex-1 flex-col overflow-hidden pb-2", !shell && "justify-end")}>
           <div ref={listRef} className="flex shrink-0 flex-col gap-4">
@@ -253,6 +257,7 @@ function TerminalBody({ t, className, convRef, listRef }: { t: Terminal; classNa
           )}
         </div>
       )}
+      {empty && <div ref={spacerRef} className="flex-1" />}
     </div>
   )
 }

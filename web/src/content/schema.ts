@@ -79,6 +79,7 @@ export interface CompareSlide extends SlideBase {
   template: "compare"
   left: { label: string; screen: Screen }
   right: { label: string; screen: Screen }
+  ratio?: [number, number] // relative widths of left and right, default [1, 1]
 }
 
 /** A table: short cells only (keywords, commands, yes/no). */
@@ -321,6 +322,8 @@ export interface TerminalScreen {
 export interface ShotScreen {
   kind: "shot"
   src: string // real capture
+  // numbered badges pinned on the picture; x / y in percent of the image (0-100), e.g. the menu item to click
+  badges?: { n: number; x: number; y: number }[]
 }
 
 export type Vendor = "claude" | "antigravity" | "codex" | "shell"
