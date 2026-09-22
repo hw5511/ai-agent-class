@@ -1,1 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif"><defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9aa0a6"/></marker></defs><line x1="800" y1="40" x2="800" y2="756" stroke="#e5e5e5" stroke-width="2"/><text x="80" y="72" font-size="34" font-weight="800" fill="#101113">1인 기업 · 사장님 혼자</text><circle cx="716" cy="56" r="26" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="716" y="65" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text><line x1="360" y1="360" x2="215" y2="180" stroke="#c9ccd1" stroke-width="3" stroke-dasharray="7 7"/><g filter="url(#sh)"><rect x="150" y="150" width="130" height="60" rx="14" fill="#ffffff" stroke="#e5e5e5" stroke-width="2"/></g><rect x="164" y="166" width="26" height="26" rx="6" fill="#1273c4"/><text x="206" y="188" font-size="22" font-weight="800" fill="#101113">조사</text><line x1="440" y1="360" x2="695" y2="190" stroke="#c9ccd1" stroke-width="3" stroke-dasharray="7 7"/><g filter="url(#sh)"><rect x="630" y="160" width="130" height="60" rx="14" fill="#ffffff" stroke="#e5e5e5" stroke-width="2"/></g><rect x="644" y="176" width="26" height="26" rx="6" fill="#7c8288"/><text x="686" y="198" font-size="22" font-weight="800" fill="#101113">코딩</text><line x1="365" y1="320" x2="195" y2="420" stroke="#c9ccd1" stroke-width="3" stroke-dasharray="7 7"/><g filter="url(#sh)"><rect x="130" y="390" width="130" height="60" rx="14" fill="#ffffff" stroke="#e5e5e5" stroke-width="2"/></g><rect x="144" y="406" width="26" height="26" rx="6" fill="#7c8288"/><text x="186" y="428" font-size="22" font-weight="800" fill="#101113">정리</text><line x1="435" y1="320" x2="705" y2="440" stroke="#c9ccd1" stroke-width="3" stroke-dasharray="7 7"/><g filter="url(#sh)"><rect x="640" y="410" width="130" height="60" rx="14" fill="#ffffff" stroke="#e5e5e5" stroke-width="2"/></g><rect x="654" y="426" width="26" height="26" rx="6" fill="#1273c4"/><text x="696" y="448" font-size="22" font-weight="800" fill="#101113">디자인</text><circle cx="400.00" cy="209.30" r="77.28" fill="#3a3025" /><rect x="287.50" y="311.00" width="225.00" height="170.00" rx="42.00" fill="#1273c4" /><rect x="343.00" y="311.00" width="114.00" height="45.00" rx="22.50" fill="#1273c4" /><rect x="380.50" y="287.00" width="39.00" height="33.00" rx="0.00" fill="#f2c9a5" /><circle cx="400.00" cy="230.00" r="69.00" fill="#f2c9a5" /><circle cx="376.00" cy="236.00" r="5.40" fill="#101113" /><circle cx="424.00" cy="236.00" r="5.40" fill="#101113" /><ellipse cx="364.00" cy="254.00" rx="12.00" ry="7.50" fill="#ff9aa2" opacity="0.55"/><ellipse cx="436.00" cy="254.00" rx="12.00" ry="7.50" fill="#ff9aa2" opacity="0.55"/><path d="M 382.0 266.0 q9.0 -15.0 18.0 0 q9.0 15.0 18.0 0" fill="none" stroke="#101113" stroke-width="3.9" stroke-linecap="round"/><text x="400" y="400" font-size="24" fill="#ffffff" font-weight="800" text-anchor="middle">사장님</text><path d="M 374 122.0 q8 -28 28 -20 q20 8 8 24 q-9 13 -25 5 q-13 -7 -5 -20" fill="none" stroke="#7c8288" stroke-width="4" stroke-linecap="round"/><text x="130" y="594" font-size="24" fill="#43474b" font-weight="700">집중력</text><rect x="130" y="608" width="560" height="34" rx="17" fill="#e5e5e5"/><rect x="130" y="608" width="100" height="34" rx="17" fill="#1273c4"/><text x="130" y="676" font-size="26" fill="#101113" font-weight="800">집중력 낮음 · 일이 4갈래로 흩어짐</text><text x="860" y="72" font-size="34" font-weight="800" fill="#101113">직원을 고용 · 분업</text><circle cx="1520" cy="56" r="26" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1520" y="65" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">2</text><circle cx="1200.00" cy="217.30" r="77.28" fill="#3a3025" /><rect x="1087.50" y="319.00" width="225.00" height="130.00" rx="42.00" fill="#1273c4" /><rect x="1143.00" y="319.00" width="114.00" height="45.00" rx="22.50" fill="#1273c4" /><rect x="1180.50" y="295.00" width="39.00" height="33.00" rx="0.00" fill="#f2c9a5" /><circle cx="1200.00" cy="238.00" r="69.00" fill="#f2c9a5" /><circle cx="1176.00" cy="244.00" r="5.40" fill="#101113" /><circle cx="1224.00" cy="244.00" r="5.40" fill="#101113" /><ellipse cx="1164.00" cy="262.00" rx="12.00" ry="7.50" fill="#ff9aa2" opacity="0.55"/><ellipse cx="1236.00" cy="262.00" rx="12.00" ry="7.50" fill="#ff9aa2" opacity="0.55"/><path d="M 1182.0 274.0 q18.1 21.1 36.0 0" fill="none" stroke="#101113" stroke-width="3.9" stroke-linecap="round"/><text x="1200" y="392.0" font-size="24" fill="#ffffff" font-weight="800" text-anchor="middle">사장님</text><line x1="940.0" y1="490.0" x2="1200" y2="449.0" stroke="#9aa0a6" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#ar)"/><rect x="927.70" y="461.00" width="24.60" height="19.00" rx="3.00" fill="#ffffff" stroke="#7c8288" stroke-width="2"/><line x1="932.4" y1="467.5" x2="947.6" y2="467.5" stroke="#7c8288" stroke-width="2"/><line x1="932.4" y1="473.5" x2="947.6" y2="473.5" stroke="#7c8288" stroke-width="2"/><rect x="866.85" y="613.63" width="146.30" height="12.32" rx="6.16" fill="#c9ccd1" /><circle cx="940.00" cy="515.72" r="33.72" fill="#3a3025" /><rect x="890.91" y="552.44" width="98.17" height="72.00" rx="18.36" fill="#2f9e8f" /><rect x="915.13" y="552.44" width="49.74" height="19.64" rx="9.82" fill="#2f9e8f" /><rect x="931.49" y="548.57" width="17.02" height="14.40" rx="0.00" fill="#f2c9a5" /><circle cx="940.00" cy="524.75" r="30.11" fill="#f2c9a5" /><circle cx="929.53" cy="527.37" r="2.36" fill="#101113" /><circle cx="950.47" cy="527.37" r="2.36" fill="#101113" /><ellipse cx="924.29" cy="535.22" rx="5.24" ry="3.27" fill="#ff9aa2" opacity="0.55"/><ellipse cx="955.71" cy="535.22" rx="5.24" ry="3.27" fill="#ff9aa2" opacity="0.55"/><path d="M 932.1 536.5 q7.9 9.2 15.7 0" fill="none" stroke="#101113" stroke-width="2.21" stroke-linecap="round"/><text x="940.0" y="654.0" font-size="18" fill="#43474b" font-weight="700" text-anchor="middle">담당 직원 · 조사</text><line x1="1200.0" y1="490.0" x2="1200" y2="449.0" stroke="#9aa0a6" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#ar)"/><rect x="1187.70" y="461.00" width="24.60" height="19.00" rx="3.00" fill="#ffffff" stroke="#7c8288" stroke-width="2"/><line x1="1192.4" y1="467.5" x2="1207.6" y2="467.5" stroke="#7c8288" stroke-width="2"/><line x1="1192.4" y1="473.5" x2="1207.6" y2="473.5" stroke="#7c8288" stroke-width="2"/><rect x="1126.85" y="613.63" width="146.30" height="12.32" rx="6.16" fill="#c9ccd1" /><circle cx="1200.00" cy="515.72" r="33.72" fill="#3a3025" /><rect x="1150.91" y="552.44" width="98.17" height="72.00" rx="18.36" fill="#8b5cf6" /><rect x="1175.13" y="552.44" width="49.74" height="19.64" rx="9.82" fill="#8b5cf6" /><rect x="1191.49" y="548.57" width="17.02" height="14.40" rx="0.00" fill="#f2c9a5" /><circle cx="1200.00" cy="524.75" r="30.11" fill="#f2c9a5" /><circle cx="1189.53" cy="527.37" r="2.36" fill="#101113" /><circle cx="1210.47" cy="527.37" r="2.36" fill="#101113" /><ellipse cx="1184.29" cy="535.22" rx="5.24" ry="3.27" fill="#ff9aa2" opacity="0.55"/><ellipse cx="1215.71" cy="535.22" rx="5.24" ry="3.27" fill="#ff9aa2" opacity="0.55"/><path d="M 1192.1 536.5 q7.9 9.2 15.7 0" fill="none" stroke="#101113" stroke-width="2.21" stroke-linecap="round"/><text x="1200.0" y="654.0" font-size="18" fill="#43474b" font-weight="700" text-anchor="middle">담당 직원 · 코딩</text><line x1="1460.0" y1="490.0" x2="1200" y2="449.0" stroke="#9aa0a6" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#ar)"/><rect x="1447.70" y="461.00" width="24.60" height="19.00" rx="3.00" fill="#ffffff" stroke="#7c8288" stroke-width="2"/><line x1="1452.4" y1="467.5" x2="1467.6" y2="467.5" stroke="#7c8288" stroke-width="2"/><line x1="1452.4" y1="473.5" x2="1467.6" y2="473.5" stroke="#7c8288" stroke-width="2"/><rect x="1386.85" y="613.63" width="146.30" height="12.32" rx="6.16" fill="#c9ccd1" /><circle cx="1460.00" cy="515.72" r="33.72" fill="#3a3025" /><rect x="1410.91" y="552.44" width="98.17" height="72.00" rx="18.36" fill="#7c8288" /><rect x="1435.13" y="552.44" width="49.74" height="19.64" rx="9.82" fill="#7c8288" /><rect x="1451.49" y="548.57" width="17.02" height="14.40" rx="0.00" fill="#f2c9a5" /><circle cx="1460.00" cy="524.75" r="30.11" fill="#f2c9a5" /><circle cx="1449.53" cy="527.37" r="2.36" fill="#101113" /><circle cx="1470.47" cy="527.37" r="2.36" fill="#101113" /><ellipse cx="1444.29" cy="535.22" rx="5.24" ry="3.27" fill="#ff9aa2" opacity="0.55"/><ellipse cx="1475.71" cy="535.22" rx="5.24" ry="3.27" fill="#ff9aa2" opacity="0.55"/><path d="M 1452.1 536.5 q7.9 9.2 15.7 0" fill="none" stroke="#101113" stroke-width="2.21" stroke-linecap="round"/><text x="1460.0" y="654.0" font-size="18" fill="#43474b" font-weight="700" text-anchor="middle">담당 직원 · 정리</text><text x="900" y="686" font-size="24" fill="#43474b" font-weight="700">집중력</text><rect x="900" y="700" width="560" height="34" rx="17" fill="#e5e5e5"/><rect x="900" y="700" width="476" height="34" rx="17" fill="#1273c4"/><text x="900" y="768" font-size="26" fill="#101113" font-weight="800">집중력 높음 · 핵심 보고만 받아 판단</text><g filter="url(#sh)"><rect x="40" y="800" width="1520" height="76" rx="20" fill="#e7f0fb" stroke="#c7defa" stroke-width="2"/></g><circle cx="100" cy="838" r="26" fill="#1273c4"/><text x="100" y="847" font-size="26" font-weight="900" fill="#fff" text-anchor="middle">!</text><text x="150" y="848" font-size="30" font-weight="900" fill="#1273c4">context = 집중력</text><text x="470" y="848" font-size="24" font-weight="700" fill="#43474b">몸은 하나 · 나눠 맡길수록 판단에 집중할 수 있습니다</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 900" width="1920" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs><filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter><filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter><marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker><marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker><marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#43474b"/></marker><marker id="ao" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d97757"/></marker></defs>
+<rect x="40.0" y="30.0" width="900.0" height="700.0" rx="26" fill="#fdf5f5" stroke="#e5e5e5" stroke-width="2"/>
+<text x="490.0" y="94.0" font-size="42" fill="#101113" font-weight="900" text-anchor="middle">사장님 혼자</text>
+<circle cx="910.0" cy="30.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/>
+<text x="910.0" y="40.6" font-size="29" fill="#fff" font-weight="800" text-anchor="middle">1</text>
+<path d="M205 200C347.5 130 347.5 290 490 410" fill="none" stroke="#9a9ea3" stroke-width="3" stroke-dasharray="8 8"/>
+<path d="M775 200C632.5 130 632.5 290 490 410" fill="none" stroke="#9a9ea3" stroke-width="3" stroke-dasharray="8 8"/>
+<path d="M195 450C342.5 380 342.5 540 490 410" fill="none" stroke="#9a9ea3" stroke-width="3" stroke-dasharray="8 8"/>
+<path d="M785 450C637.5 380 637.5 540 490 410" fill="none" stroke="#9a9ea3" stroke-width="3" stroke-dasharray="8 8"/>
+<path d="M376.6 520.0C373.9 433.6 406.3 409.3 449.5 403.9L530.5 403.9C573.7 409.3 606.1 433.6 603.4 520.0Z" fill="#3d4a5c"/>
+<path d="M469.8 363.4L510.2 363.4L510.2 409.3Q490.0 420.1 469.8 409.3Z" fill="#e2ad86"/>
+<path d="M454.9 403.9L490.0 441.7L525.1 403.9L508.9 401.2L490.0 420.1L471.1 401.2Z" fill="#fff"/>
+<path d="M480.6 422.8L499.4 422.8L504.9 487.6L490.0 503.8L475.1 487.6Z" fill="#d93a3a"/>
+<circle cx="430.6" cy="333.7" r="12.15" fill="#e2ad86"/>
+<circle cx="549.4" cy="333.7" r="12.15" fill="#e2ad86"/>
+<circle cx="490.0" cy="325.6" r="59.400000000000006" fill="#f3c9a5"/>
+<path d="M426.6 339.1C419.8 252.7 552.1 241.9 553.5 333.7C544.0 298.6 517.0 285.1 484.6 287.8L476.5 309.4C457.6 309.4 436.0 317.5 426.6 339.1Z" fill="#2f2a28"/>
+<rect x="100.0" y="156.0" width="210.0" height="88.0" rx="16" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
+<circle cx="146.0" cy="200.0" r="26" fill="#1273c4"/>
+<circle cx="142.6" cy="196.6" r="9.464000000000002" fill="none" stroke="#fff" stroke-width="3.0420000000000003"/>
+<path d="M149.4 203.4L157.5 211.5" fill="none" stroke="#fff" stroke-width="3.6504000000000003" stroke-linecap="round"/>
+<text x="188.0" y="212.0" font-size="32" fill="#101113" font-weight="800" text-anchor="start">조사</text>
+<rect x="670.0" y="156.0" width="210.0" height="88.0" rx="16" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
+<circle cx="716.0" cy="200.0" r="26" fill="#8b5cf6"/>
+<path d="M711.3 190.5L702.5 200.0L711.3 209.5M720.7 190.5L729.5 200.0L720.7 209.5" fill="none" stroke="#fff" stroke-width="3.0420000000000003" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="758.0" y="212.0" font-size="32" fill="#101113" font-weight="800" text-anchor="start">코딩</text>
+<rect x="90.0" y="406.0" width="210.0" height="88.0" rx="16" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
+<circle cx="136.0" cy="450.0" r="26" fill="#12a150"/>
+<path d="M122.5 441.2h9.5l2.7 3.4h14.9v15.5h-27.0z" fill="none" stroke="#fff" stroke-width="3.0420000000000003" stroke-linejoin="round"/>
+<text x="178.0" y="462.0" font-size="32" fill="#101113" font-weight="800" text-anchor="start">정리</text>
+<rect x="680.0" y="406.0" width="210.0" height="88.0" rx="16" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
+<circle cx="726.0" cy="450.0" r="26" fill="#d97757"/>
+<path d="M715.2 460.8l2.7 -7.4l14.2 -14.2l4.7 4.7l-14.2 14.2z" fill="none" stroke="#fff" stroke-width="3.0420000000000003" stroke-linejoin="round"/>
+<text x="768.0" y="462.0" font-size="32" fill="#101113" font-weight="800" text-anchor="start">디자인</text>
+<path d="M395 500L407 401H573L585 500Z" fill="#c9ccd1"/>
+<circle cx="490.0" cy="448.7" r="9.5" fill="#fff"/>
+<rect x="300.0" y="500.0" width="380.0" height="30.0" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<path d="M568.0 290.0C556.3 308.2 555.0 321.2 568.0 321.2C581.0 321.2 579.7 308.2 568.0 290.0Z" fill="#6fb3e8"/>
+<path d="M404.0 310.0C395.0 324.0 394.0 334.0 404.0 334.0C414.0 334.0 413.0 324.0 404.0 310.0Z" fill="#6fb3e8"/>
+<text x="120.0" y="680.0" font-size="32" fill="#43474b" font-weight="800" text-anchor="start">집중력</text>
+<rect x="250.0" y="654.0" width="480.0" height="34.0" rx="17.0" fill="#e6e8eb"/>
+<rect x="250.0" y="654.0" width="96.0" height="34.0" rx="17.0" fill="#d93a3a"/>
+<text x="748.0" y="683.2" font-size="34" fill="#d93a3a" font-weight="900" text-anchor="start">낮음</text>
+<rect x="980.0" y="30.0" width="900.0" height="700.0" rx="26" fill="#f4faf6" stroke="#e5e5e5" stroke-width="2"/>
+<text x="1430.0" y="94.0" font-size="42" fill="#101113" font-weight="900" text-anchor="middle">직원 고용 · 분업</text>
+<circle cx="1850.0" cy="30.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/>
+<text x="1850.0" y="40.6" font-size="29" fill="#fff" font-weight="800" text-anchor="middle">2</text>
+<path d="M1350.2 308.0C1348.3 247.2 1371.1 230.1 1401.5 226.3L1458.5 226.3C1488.9 230.1 1511.7 247.2 1509.8 308.0Z" fill="#3d4a5c"/>
+<path d="M1415.8 197.8L1444.2 197.8L1444.2 230.1Q1430.0 237.7 1415.8 230.1Z" fill="#e2ad86"/>
+<path d="M1405.3 226.3L1430.0 252.9L1454.7 226.3L1443.3 224.4L1430.0 237.7L1416.7 224.4Z" fill="#fff"/>
+<path d="M1423.3 239.6L1436.7 239.6L1440.5 285.2L1430.0 296.6L1419.5 285.2Z" fill="#d93a3a"/>
+<circle cx="1388.2" cy="176.9" r="8.549999999999999" fill="#e2ad86"/>
+<circle cx="1471.8" cy="176.9" r="8.549999999999999" fill="#e2ad86"/>
+<circle cx="1430.0" cy="171.2" r="41.8" fill="#f3c9a5"/>
+<path d="M1385.3 180.7C1380.6 119.9 1473.7 112.3 1474.7 176.9C1468.0 152.2 1449.0 142.7 1426.2 144.6L1420.5 159.8C1407.2 159.8 1392.0 165.5 1385.3 180.7Z" fill="#2f2a28"/>
+<path d="M1365 294L1377 226H1483L1495 294Z" fill="#c9ccd1"/>
+<circle cx="1430.0" cy="258.9" r="6.5" fill="#fff"/>
+<rect x="1280.0" y="294.0" width="300.0" height="30.0" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="1584.2" y="154.8" width="111.5" height="54.4" rx="27.2" fill="#fff"/>
+<text x="1640.0" y="193.5" font-size="32" fill="#101113" font-weight="800" text-anchor="middle">판단</text>
+<path d="M1196 376L1336 330" fill="none" stroke="#12a150" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ag)"/>
+<path d="M1430 376L1430 330" fill="none" stroke="#12a150" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ag)"/>
+<path d="M1664 376L1524 330" fill="none" stroke="#12a150" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ag)"/>
+<path d="M1109.5 529.0C1108.1 482.9 1125.4 470.0 1148.4 467.1L1191.6 467.1C1214.6 470.0 1231.9 482.9 1230.5 529.0Z" fill="#1273c4"/>
+<path d="M1159.2 445.5L1180.8 445.5L1180.8 470.0Q1170.0 475.7 1159.2 470.0Z" fill="#e2ad86"/>
+<path d="M1151.3 467.1L1170.0 487.2L1188.7 467.1L1180.1 465.6L1170.0 475.7L1159.9 465.6Z" fill="#fff"/>
+<circle cx="1138.3" cy="429.6" r="6.4799999999999995" fill="#e2ad86"/>
+<circle cx="1201.7" cy="429.6" r="6.4799999999999995" fill="#e2ad86"/>
+<circle cx="1170.0" cy="425.3" r="31.68" fill="#f3c9a5"/>
+<path d="M1136.9 431.1C1131.1 387.9 1198.8 376.4 1204.6 421.0L1203.1 431.1C1194.5 413.8 1174.3 406.6 1157.0 409.5C1148.4 413.8 1141.2 421.0 1136.9 431.1Z" fill="#6b4a36"/>
+<rect x="1075.0" y="512.0" width="190.0" height="88.0" rx="16" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
+<circle cx="1121.0" cy="556.0" r="26" fill="#1273c4"/>
+<circle cx="1117.6" cy="552.6" r="9.464000000000002" fill="none" stroke="#fff" stroke-width="3.0420000000000003"/>
+<path d="M1124.4 559.4L1132.5 567.5" fill="none" stroke="#fff" stroke-width="3.6504000000000003" stroke-linecap="round"/>
+<text x="1163.0" y="568.0" font-size="32" fill="#101113" font-weight="800" text-anchor="start">조사</text>
+<path d="M1394.0 428.2C1389.7 385.0 1470.3 385.0 1466.0 428.2L1470.3 477.2Q1430.0 485.8 1389.7 477.2Z" fill="#2f2a28"/>
+<path d="M1369.5 529.0C1368.1 482.9 1385.4 470.0 1408.4 467.1L1451.6 467.1C1474.6 470.0 1491.9 482.9 1490.5 529.0Z" fill="#8b5cf6"/>
+<path d="M1419.2 445.5L1440.8 445.5L1440.8 470.0Q1430.0 475.7 1419.2 470.0Z" fill="#e2ad86"/>
+<path d="M1411.3 467.1L1430.0 487.2L1448.7 467.1L1440.1 465.6L1430.0 475.7L1419.9 465.6Z" fill="#fff"/>
+<circle cx="1398.3" cy="429.6" r="6.4799999999999995" fill="#e2ad86"/>
+<circle cx="1461.7" cy="429.6" r="6.4799999999999995" fill="#e2ad86"/>
+<circle cx="1430.0" cy="425.3" r="31.68" fill="#f3c9a5"/>
+<path d="M1396.9 435.4C1394.0 387.9 1466.0 387.9 1463.1 435.4C1458.8 412.4 1437.2 406.6 1415.6 410.9C1405.5 415.2 1399.8 423.9 1396.9 435.4Z" fill="#2f2a28"/>
+<rect x="1335.0" y="512.0" width="190.0" height="88.0" rx="16" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
+<circle cx="1381.0" cy="556.0" r="26" fill="#8b5cf6"/>
+<path d="M1376.3 546.5L1367.5 556.0L1376.3 565.5M1385.7 546.5L1394.5 556.0L1385.7 565.5" fill="none" stroke="#fff" stroke-width="3.0420000000000003" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1423.0" y="568.0" font-size="32" fill="#101113" font-weight="800" text-anchor="start">코딩</text>
+<path d="M1629.5 529.0C1628.1 482.9 1645.4 470.0 1668.4 467.1L1711.6 467.1C1734.6 470.0 1751.9 482.9 1750.5 529.0Z" fill="#12a150"/>
+<path d="M1679.2 445.5L1700.8 445.5L1700.8 470.0Q1690.0 475.7 1679.2 470.0Z" fill="#e2ad86"/>
+<path d="M1671.3 467.1L1690.0 487.2L1708.7 467.1L1700.1 465.6L1690.0 475.7L1679.9 465.6Z" fill="#fff"/>
+<circle cx="1658.3" cy="429.6" r="6.4799999999999995" fill="#e2ad86"/>
+<circle cx="1721.7" cy="429.6" r="6.4799999999999995" fill="#e2ad86"/>
+<circle cx="1690.0" cy="425.3" r="31.68" fill="#f3c9a5"/>
+<circle cx="1690.0" cy="387.9" r="14.399999999999999" fill="#8a5a3c"/>
+<path d="M1656.9 431.1C1654.0 390.8 1726.0 390.8 1723.1 431.1C1715.9 412.4 1664.1 412.4 1656.9 431.1Z" fill="#8a5a3c"/>
+<rect x="1595.0" y="512.0" width="190.0" height="88.0" rx="16" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
+<circle cx="1641.0" cy="556.0" r="26" fill="#12a150"/>
+<path d="M1627.5 547.2h9.5l2.7 3.4h14.9v15.5h-27.0z" fill="none" stroke="#fff" stroke-width="3.0420000000000003" stroke-linejoin="round"/>
+<text x="1683.0" y="568.0" font-size="32" fill="#101113" font-weight="800" text-anchor="start">정리</text>
+<text x="1060.0" y="680.0" font-size="32" fill="#43474b" font-weight="800" text-anchor="start">집중력</text>
+<rect x="1190.0" y="654.0" width="480.0" height="34.0" rx="17.0" fill="#e6e8eb"/>
+<rect x="1190.0" y="654.0" width="422.4" height="34.0" rx="17.0" fill="#12a150"/>
+<text x="1688.0" y="683.2" font-size="34" fill="#12a150" font-weight="900" text-anchor="start">높음</text>
+<rect x="40.0" y="756.0" width="1840.0" height="114.0" rx="24" fill="#f2f7fd" stroke="#cfe0f3" stroke-width="2"/>
+<circle cx="110.0" cy="813.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/>
+<text x="110.0" y="823.6" font-size="29" fill="#fff" font-weight="800" text-anchor="middle">!</text>
+<text x="160.0" y="829.0" font-size="44" fill="#1273c4" font-weight="900" text-anchor="start">context = 집중력</text>
+<text x="600.0" y="827.0" font-size="32" fill="#43474b" font-weight="600" text-anchor="start">일을 나눠 맡길수록 메인 클로드는 판단에 집중합니다</text>
+</svg>

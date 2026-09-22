@@ -1,69 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 120 1600 680" width="1600" height="680" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
-<defs>
-  <marker id="avf-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
-  <filter id="avf-ds" x="-30%" y="-30%" width="160%" height="160%">
-    <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#101113" flood-opacity="0.16"/>
-  </filter>
-</defs>
-
-<!-- Stage 1: main Claude terminal, session running -->
-<g filter="url(#avf-ds)">
-  <rect x="40" y="200" width="440" height="420" rx="20" fill="#0c0d0e"/>
-</g>
-<circle cx="72" cy="230" r="7" fill="#d97757"/>
-<circle cx="96" cy="230" r="7" fill="#7c8288"/>
-<circle cx="120" cy="230" r="7" fill="#5f9e6b"/>
-<text x="70" y="280" font-size="20" fill="#7c8288">Claude Code v2.1.278</text>
-<text x="70" y="315" font-size="18" fill="#767c81">Sonnet 5 · ~\agent1</text>
-<text x="70" y="380" font-size="24" font-weight="700" fill="#e8eaec">
-  <tspan fill="#d97757">✶ </tspan>korean language support
-</text>
-<text x="70" y="412" font-size="24" font-weight="700" fill="#e8eaec">timeout <tspan fill="#767c81" font-weight="400">200초 대기 … 6m</tspan></text>
-<rect x="70" y="470" width="380" height="46" rx="10" fill="none" stroke="#3a3d40" stroke-width="2"/>
-<text x="90" y="499" font-size="18" fill="#5b5e61">메시지를 입력하세요...</text>
-<text x="70" y="560" font-size="18" fill="#767c81">⏵⏵ bypass permissions on</text>
-<text x="70" y="586" font-size="18" fill="#767c81">esc to interrupt</text>
-<text x="260" y="665" text-anchor="middle" font-size="30" font-weight="800" fill="#101113">메인 세션 진행 중</text>
-
-<!-- arrow 1 -->
-<line x1="500" y1="410" x2="580" y2="410" stroke="#1273c4" stroke-width="5" marker-end="url(#avf-ar)"/>
-
-<!-- Stage 2: keycap -->
-<g filter="url(#avf-ds)">
-  <rect x="600" y="330" width="160" height="160" rx="28" fill="#ffffff" stroke="#1273c4" stroke-width="5"/>
-</g>
-<text x="680" y="435" text-anchor="middle" font-size="76" font-weight="700" fill="#1273c4">&#8592;</text>
-<circle cx="748" cy="342" r="30" fill="#1273c4"/>
-<text x="748" y="352" text-anchor="middle" font-size="28" font-weight="800" fill="#ffffff">1</text>
-<text x="680" y="540" text-anchor="middle" font-size="26" font-weight="700" fill="#43474b">/background</text>
-<text x="680" y="572" text-anchor="middle" font-size="26" font-weight="700" fill="#43474b">/bg · &#8592;</text>
-
-<!-- arrow 2 -->
-<line x1="800" y1="410" x2="880" y2="410" stroke="#1273c4" stroke-width="5" marker-end="url(#avf-ar)"/>
-
-<!-- Stage 3: Agent View screen -->
-<g filter="url(#avf-ds)">
-  <rect x="900" y="150" width="660" height="560" rx="24" fill="#0c0d0e"/>
-</g>
-<circle cx="932" cy="180" r="7" fill="#d97757"/>
-<circle cx="956" cy="180" r="7" fill="#7c8288"/>
-<circle cx="980" cy="180" r="7" fill="#5f9e6b"/>
-<text x="930" y="228" font-size="20" fill="#7c8288">Claude Code v2.1.278</text>
-<text x="930" y="260" font-size="18" fill="#767c81">Sonnet 5 · ~\agent1</text>
-<text x="930" y="308" font-size="24" font-weight="700" fill="#e8eaec">0 awaiting input · 1 working · 0 completed</text>
-<circle cx="1500" cy="298" r="30" fill="#1273c4"/>
-<text x="1500" y="308" text-anchor="middle" font-size="28" font-weight="800" fill="#ffffff">2</text>
-<text x="930" y="345" font-size="18" fill="#767c81">Your conversation moved to the background</text>
-<line x1="930" y1="380" x2="1500" y2="380" stroke="#2a2c2e" stroke-width="2"/>
-<text x="930" y="425" font-size="24" font-weight="800" fill="#e8eaec">Working</text>
-<rect x="920" y="450" width="590" height="70" rx="12" fill="#17191b"/>
-<text x="945" y="493" font-size="22" fill="#d97757">&#10022;</text>
-<text x="980" y="493" font-size="22" fill="#e8eaec" font-weight="700">korean language support timeout</text>
-<text x="1440" y="493" font-size="20" fill="#767c81">6m</text>
-<text x="930" y="565" font-size="24" font-weight="800" fill="#e8eaec" opacity="0.5">Completed</text>
-<text x="930" y="598" font-size="20" fill="#5b5e61">완료된 세션 없음</text>
-<rect x="930" y="630" width="600" height="48" rx="10" fill="none" stroke="#3a3d40" stroke-width="2"/>
-<text x="950" y="661" font-size="18" fill="#5b5e61">describe a task for a new session</text>
-<text x="930" y="700" font-size="16" fill="#767c81">⏵⏵ bypass permissions · enter to return · space to r…</text>
-<text x="1230" y="768" text-anchor="middle" font-size="30" font-weight="800" fill="#101113">에이전트 뷰 목록</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 900" width="1920" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs><filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter><filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter><marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker><marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker><marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#43474b"/></marker><marker id="ao" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d97757"/></marker></defs>
+<rect x="40.0" y="150.0" width="600.0" height="470.0" rx="22" fill="#15171a" filter="url(#sh)"/>
+<circle cx="74.0" cy="182.0" r="9" fill="#ed6a5e"/>
+<circle cx="104.0" cy="182.0" r="9" fill="#f5bf4f"/>
+<circle cx="134.0" cy="182.0" r="9" fill="#61c554"/>
+<path d="M92.00 216.00h4.40v8.00h-4.40zM92.00 223.60h4.40v8.00h-4.40zM96.00 216.00h4.40v8.00h-4.40zM100.00 216.00h4.40v8.00h-4.40zM96.00 223.60h4.40v8.00h-4.40zM104.00 216.00h4.40v8.00h-4.40zM108.00 216.00h4.40v8.00h-4.40zM104.00 223.60h4.40v8.00h-4.40zM108.00 223.60h4.40v8.00h-4.40zM112.00 216.00h4.40v8.00h-4.40zM116.00 216.00h4.40v8.00h-4.40zM112.00 223.60h4.40v8.00h-4.40zM116.00 223.60h4.40v8.00h-4.40zM120.00 216.00h4.40v8.00h-4.40zM124.00 216.00h4.40v8.00h-4.40zM120.00 223.60h4.40v8.00h-4.40zM124.00 223.60h4.40v8.00h-4.40zM128.00 216.00h4.40v8.00h-4.40zM132.00 216.00h4.40v8.00h-4.40zM132.00 223.60h4.40v8.00h-4.40zM136.00 216.00h4.40v8.00h-4.40zM136.00 223.60h4.40v8.00h-4.40zM84.00 231.20h4.40v8.00h-4.40zM88.00 231.20h4.40v8.00h-4.40zM92.00 231.20h4.40v8.00h-4.40zM92.00 238.80h4.40v8.00h-4.40zM96.00 231.20h4.40v8.00h-4.40zM100.00 231.20h4.40v8.00h-4.40zM96.00 238.80h4.40v8.00h-4.40zM100.00 238.80h4.40v8.00h-4.40zM104.00 231.20h4.40v8.00h-4.40zM108.00 231.20h4.40v8.00h-4.40zM104.00 238.80h4.40v8.00h-4.40zM108.00 238.80h4.40v8.00h-4.40zM112.00 231.20h4.40v8.00h-4.40zM116.00 231.20h4.40v8.00h-4.40zM112.00 238.80h4.40v8.00h-4.40zM116.00 238.80h4.40v8.00h-4.40zM120.00 231.20h4.40v8.00h-4.40zM124.00 231.20h4.40v8.00h-4.40zM120.00 238.80h4.40v8.00h-4.40zM124.00 238.80h4.40v8.00h-4.40zM128.00 231.20h4.40v8.00h-4.40zM132.00 231.20h4.40v8.00h-4.40zM128.00 238.80h4.40v8.00h-4.40zM132.00 238.80h4.40v8.00h-4.40zM136.00 231.20h4.40v8.00h-4.40zM140.00 231.20h4.40v8.00h-4.40zM136.00 238.80h4.40v8.00h-4.40zM144.00 231.20h4.40v8.00h-4.40zM96.00 246.40h4.40v8.00h-4.40zM104.00 246.40h4.40v8.00h-4.40zM124.00 246.40h4.40v8.00h-4.40zM132.00 246.40h4.40v8.00h-4.40z" fill="#d97757" shape-rendering="crispEdges"/>
+<text x="170.0" y="246.0" font-size="30" fill="#e8eaed" font-weight="800" text-anchor="start">Claude Code</text>
+<text x="80.0" y="350.0" font-size="32" fill="#e8eaed" font-weight="600" text-anchor="start">&gt; 200초 대기 명령 실행해줘</text>
+<text x="80.0" y="430.0" font-size="30" fill="#d97757" font-weight="700" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'D2Coding', monospace">✻ Running… 6s</text>
+<rect x="80.0" y="520.0" width="520.0" height="60.0" rx="12" fill="none" stroke="#3a3e44" stroke-width="2"/>
+<text x="100.0" y="560.0" font-size="26" fill="#8b9095" font-weight="500" text-anchor="start">메시지를 입력하세요…</text>
+<text x="340.0" y="690.0" font-size="34" fill="#101113" font-weight="900" text-anchor="middle">지금 대화 중인 세션</text>
+<path d="M660 385H716" fill="none" stroke="#1273c4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ab)"/>
+<rect x="724.0" y="250.0" width="172.0" height="180.0" rx="26" fill="#c9ccd1"/>
+<rect x="724.0" y="240.0" width="172.0" height="170.0" rx="26" fill="#fff" stroke="#c9ccd1" stroke-width="3"/>
+<path d="M850 325H772M802 292L768 325L802 358" fill="none" stroke="#1273c4" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="896.0" cy="240.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/>
+<text x="896.0" y="250.6" font-size="29" fill="#fff" font-weight="800" text-anchor="middle">1</text>
+<rect x="697.6" y="464.5" width="224.8" height="51.0" rx="25.5" fill="#e3eefa"/>
+<text x="810.0" y="500.8" font-size="30" fill="#1273c4" font-weight="800" text-anchor="middle">/background</text>
+<rect x="760.8" y="534.5" width="98.4" height="51.0" rx="25.5" fill="#e3eefa"/>
+<text x="810.0" y="570.8" font-size="30" fill="#1273c4" font-weight="800" text-anchor="middle">/bg</text>
+<path d="M904 385H950" fill="none" stroke="#1273c4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ab)"/>
+<rect x="970.0" y="50.0" width="910.0" height="800.0" rx="22" fill="#15171a" filter="url(#sh)"/>
+<circle cx="1004.0" cy="82.0" r="9" fill="#ed6a5e"/>
+<circle cx="1034.0" cy="82.0" r="9" fill="#f5bf4f"/>
+<circle cx="1064.0" cy="82.0" r="9" fill="#61c554"/>
+<text x="1010.0" y="136.0" font-size="38" fill="#e8eaed" font-weight="900" text-anchor="start">에이전트 뷰</text>
+<text x="1010.0" y="180.0" font-size="26" fill="#8b9095" font-weight="600" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'D2Coding', monospace">0 awaiting · 1 working · 0 completed</text>
+<path d="M1010 210H1840" fill="none" stroke="#33373d" stroke-width="2"/>
+<text x="1010.0" y="272.0" font-size="34" fill="#e8eaed" font-weight="900" text-anchor="start">Working</text>
+<rect x="1004.0" y="300.0" width="842.0" height="150.0" rx="16" fill="#23262b" stroke="#1273c4" stroke-width="4"/>
+<path d="M1045.60 330.00h3.60v6.48h-3.60zM1045.60 336.08h3.60v6.48h-3.60zM1048.80 330.00h3.60v6.48h-3.60zM1052.00 330.00h3.60v6.48h-3.60zM1048.80 336.08h3.60v6.48h-3.60zM1055.20 330.00h3.60v6.48h-3.60zM1058.40 330.00h3.60v6.48h-3.60zM1055.20 336.08h3.60v6.48h-3.60zM1058.40 336.08h3.60v6.48h-3.60zM1061.60 330.00h3.60v6.48h-3.60zM1064.80 330.00h3.60v6.48h-3.60zM1061.60 336.08h3.60v6.48h-3.60zM1064.80 336.08h3.60v6.48h-3.60zM1068.00 330.00h3.60v6.48h-3.60zM1071.20 330.00h3.60v6.48h-3.60zM1068.00 336.08h3.60v6.48h-3.60zM1071.20 336.08h3.60v6.48h-3.60zM1074.40 330.00h3.60v6.48h-3.60zM1077.60 330.00h3.60v6.48h-3.60zM1077.60 336.08h3.60v6.48h-3.60zM1080.80 330.00h3.60v6.48h-3.60zM1080.80 336.08h3.60v6.48h-3.60zM1039.20 342.16h3.60v6.48h-3.60zM1042.40 342.16h3.60v6.48h-3.60zM1045.60 342.16h3.60v6.48h-3.60zM1045.60 348.24h3.60v6.48h-3.60zM1048.80 342.16h3.60v6.48h-3.60zM1052.00 342.16h3.60v6.48h-3.60zM1048.80 348.24h3.60v6.48h-3.60zM1052.00 348.24h3.60v6.48h-3.60zM1055.20 342.16h3.60v6.48h-3.60zM1058.40 342.16h3.60v6.48h-3.60zM1055.20 348.24h3.60v6.48h-3.60zM1058.40 348.24h3.60v6.48h-3.60zM1061.60 342.16h3.60v6.48h-3.60zM1064.80 342.16h3.60v6.48h-3.60zM1061.60 348.24h3.60v6.48h-3.60zM1064.80 348.24h3.60v6.48h-3.60zM1068.00 342.16h3.60v6.48h-3.60zM1071.20 342.16h3.60v6.48h-3.60zM1068.00 348.24h3.60v6.48h-3.60zM1071.20 348.24h3.60v6.48h-3.60zM1074.40 342.16h3.60v6.48h-3.60zM1077.60 342.16h3.60v6.48h-3.60zM1074.40 348.24h3.60v6.48h-3.60zM1077.60 348.24h3.60v6.48h-3.60zM1080.80 342.16h3.60v6.48h-3.60zM1084.00 342.16h3.60v6.48h-3.60zM1080.80 348.24h3.60v6.48h-3.60zM1087.20 342.16h3.60v6.48h-3.60zM1048.80 354.32h3.60v6.48h-3.60zM1055.20 354.32h3.60v6.48h-3.60zM1071.20 354.32h3.60v6.48h-3.60zM1077.60 354.32h3.60v6.48h-3.60z" fill="#d97757" shape-rendering="crispEdges"/>
+<text x="1112.0" y="356.0" font-size="30" fill="#e8eaed" font-weight="700" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'D2Coding', monospace">korean language support</text>
+<text x="1112.0" y="404.0" font-size="30" fill="#e8eaed" font-weight="700" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'D2Coding', monospace">timeout</text>
+<text x="1250.0" y="404.0" font-size="30" fill="#8b9095" font-weight="600" text-anchor="start">200초 대기 …</text>
+<text x="1810.0" y="356.0" font-size="28" fill="#8b9095" font-weight="700" text-anchor="end" font-family="'JetBrains Mono', Consolas, 'D2Coding', monospace">6m</text>
+<rect x="1603.1" y="396.2" width="173.8" height="47.6" rx="23.8" fill="#1273c4"/>
+<text x="1690.0" y="430.1" font-size="28" fill="#fff" font-weight="800" text-anchor="middle">세션 통째로</text>
+<circle cx="1846.0" cy="300.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/>
+<text x="1846.0" y="310.6" font-size="29" fill="#fff" font-weight="800" text-anchor="middle">2</text>
+<text x="1010.0" y="530.0" font-size="34" fill="#bfc3c8" font-weight="900" text-anchor="start">Completed</text>
+<rect x="1004.0" y="558.0" width="842.0" height="110.0" rx="16" fill="none" stroke="#3f444a" stroke-width="3" stroke-dasharray="10 8"/>
+<path d="M1036.8 613.0l8.8 9.7l18.5 -19.4" fill="none" stroke="#12a150" stroke-width="5.148" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1090.0" y="624.0" font-size="30" fill="#8b9095" font-weight="700" text-anchor="start">작업이 끝나면 여기로 이동</text>
+<rect x="1004.0" y="720.0" width="842.0" height="64.0" rx="12" fill="none" stroke="#3a3e44" stroke-width="2"/>
+<text x="1026.0" y="762.0" font-size="26" fill="#8b9095" font-weight="500" text-anchor="start" font-family="'JetBrains Mono', Consolas, 'D2Coding', monospace">describe a task for a new session</text>
 </svg>

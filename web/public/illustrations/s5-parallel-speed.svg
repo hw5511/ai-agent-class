@@ -1,100 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
-<defs>
-  <filter id="s5ps-sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#101113" flood-opacity="0.12"/></filter>
-  <symbol id="s5ps-mascot" viewBox="0 0 18 6" preserveAspectRatio="none" shape-rendering="crispEdges"><rect x="3" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="3" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="4" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="5" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="4" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="6" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="7" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="6" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="7" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="8" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="9" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="8" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="9" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="10" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="11" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="10" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="11" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="12" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="13" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="13" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="14" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="14" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="1" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="2" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="3" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="3" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="4" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="5" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="4" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="5" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="6" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="7" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="6" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="7" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="8" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="9" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="8" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="9" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="10" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="11" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="10" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="11" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="12" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="13" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="12" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="13" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="14" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="15" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="14" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="16" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="4" y="4" width="1.02" height="1.02" fill="#d97757"/><rect x="6" y="4" width="1.02" height="1.02" fill="#d97757"/><rect x="11" y="4" width="1.02" height="1.02" fill="#d97757"/><rect x="13" y="4" width="1.02" height="1.02" fill="#d97757"/></symbol>
-</defs>
-
-<!-- lane 1: main solo, sequential -->
-<text x="60" y="60" font-size="30" fill="#101113" font-weight="800" text-anchor="start">메인 혼자</text>
-<circle cx="1500" cy="50" r="26" fill="#1273c4"/><text x="1500" y="59" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
-<use href="#s5ps-mascot" x="81.6" y="75.5" width="52.8" height="49.1"/>
-<g transform="translate(60 122)">
-<rect x="0" y="0" width="470" height="100" rx="18" fill="#ffffff" stroke="#1273c4" stroke-opacity="0.45" stroke-width="2.5" filter="url(#s5ps-sh)"/>
-<rect x="7" y="8" width="8" height="84" rx="4" fill="#1273c4"/>
-<circle cx="40" cy="50.0" r="24" fill="#1273c4"/>
-<g transform="translate(40 50.0) scale(1.25)" stroke="#ffffff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="-1.5" cy="-2" r="6.2"/><line x1="3" y1="2.5" x2="8.4" y2="7.9"/></g>
-<text x="82" y="42.0" font-size="25" fill="#101113" font-weight="800" text-anchor="start">조사</text>
-<text x="82" y="72.0" font-size="20" fill="#7c8288" font-weight="600" text-anchor="start">10분</text>
-</g>
-<g transform="translate(565 122)">
-<rect x="0" y="0" width="470" height="100" rx="18" fill="#ffffff" stroke="#d97757" stroke-opacity="0.45" stroke-width="2.5" filter="url(#s5ps-sh)"/>
-<rect x="7" y="8" width="8" height="84" rx="4" fill="#d97757"/>
-<circle cx="40" cy="50.0" r="24" fill="#d97757"/>
-<g transform="translate(40 50.0) scale(1.25)" stroke="#ffffff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,-6 8,0 3,6"/><polyline points="-3,-6 -8,0 -3,6"/></g>
-<text x="82" y="42.0" font-size="25" fill="#101113" font-weight="800" text-anchor="start">코딩</text>
-<text x="82" y="72.0" font-size="20" fill="#7c8288" font-weight="600" text-anchor="start">10분</text>
-</g>
-<g transform="translate(1070 122)">
-<rect x="0" y="0" width="470" height="100" rx="18" fill="#ffffff" stroke="#2f9e6e" stroke-opacity="0.45" stroke-width="2.5" filter="url(#s5ps-sh)"/>
-<rect x="7" y="8" width="8" height="84" rx="4" fill="#2f9e6e"/>
-<circle cx="40" cy="50.0" r="24" fill="#2f9e6e"/>
-<g transform="translate(40 50.0) scale(1.2)" stroke="#ffffff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-9,-6 L-3,-6 L-1,-3 L9,-3 L9,7 L-9,7 Z"/></g>
-<text x="82" y="42.0" font-size="25" fill="#101113" font-weight="800" text-anchor="start">정리</text>
-<text x="82" y="72.0" font-size="20" fill="#7c8288" font-weight="600" text-anchor="start">10분</text>
-</g>
-<g transform="translate(60 262)">
-<line x1="0" y1="0" x2="1480" y2="0" stroke="#c9ccd1" stroke-width="2"/>
-<line x1="0" y1="-8" x2="0" y2="8" stroke="#c9ccd1" stroke-width="2"/>
-<text x="0" y="34" font-size="22" fill="#7c8288" font-weight="400" text-anchor="start">0분</text>
-<line x1="505" y1="-8" x2="505" y2="8" stroke="#c9ccd1" stroke-width="2"/>
-<text x="505" y="34" font-size="22" fill="#7c8288" font-weight="400" text-anchor="middle">10분</text>
-<line x1="1010" y1="-8" x2="1010" y2="8" stroke="#c9ccd1" stroke-width="2"/>
-<text x="1010" y="34" font-size="22" fill="#7c8288" font-weight="400" text-anchor="middle">20분</text>
-<line x1="1480" y1="-40" x2="1480" y2="16" stroke="#d97757" stroke-width="4"/>
-<g transform="translate(1480 -70) scale(1.3)" stroke="#d97757" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="0" cy="0" r="9"/><line x1="0" y1="0" x2="0" y2="-5"/><line x1="0" y1="0" x2="4" y2="2"/></g>
-<text x="1480" y="60" font-size="26" fill="#d97757" font-weight="800" text-anchor="end">완료 · 30분</text>
-</g>
-<line x1="60" y1="330" x2="1540" y2="330" stroke="#e5e5e5" stroke-width="2"/>
-<!-- lane 2: 3 subagents, parallel -->
-<text x="60" y="384" font-size="30" fill="#101113" font-weight="800" text-anchor="start">서브에이전트 3개</text>
-<circle cx="1500" cy="374" r="26" fill="#1273c4"/><text x="1500" y="383" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
-<g transform="translate(60 412)">
-<g transform="translate(0 0)">
-<rect x="0" y="0" width="470" height="88" rx="18" fill="#ffffff" stroke="#1273c4" stroke-opacity="0.45" stroke-width="2.5" filter="url(#s5ps-sh)"/>
-<rect x="7" y="8" width="8" height="72" rx="4" fill="#1273c4"/>
-<use href="#s5ps-mascot" x="44.2" y="25.6" width="39.6" height="36.8"/>
-<circle cx="130" cy="44.0" r="24" fill="#1273c4"/>
-<g transform="translate(130 44.0) scale(1.15)" stroke="#ffffff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="-1.5" cy="-2" r="6.2"/><line x1="3" y1="2.5" x2="8.4" y2="7.9"/></g>
-<text x="172" y="36.0" font-size="25" fill="#101113" font-weight="800" text-anchor="start">조사</text>
-<text x="172" y="66.0" font-size="20" fill="#7c8288" font-weight="600" text-anchor="start">10분</text>
-</g>
-<g transform="translate(0 102)">
-<rect x="0" y="0" width="470" height="88" rx="18" fill="#ffffff" stroke="#d97757" stroke-opacity="0.45" stroke-width="2.5" filter="url(#s5ps-sh)"/>
-<rect x="7" y="8" width="8" height="72" rx="4" fill="#d97757"/>
-<use href="#s5ps-mascot" x="44.2" y="25.6" width="39.6" height="36.8"/>
-<circle cx="130" cy="44.0" r="24" fill="#d97757"/>
-<g transform="translate(130 44.0) scale(1.15)" stroke="#ffffff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,-6 8,0 3,6"/><polyline points="-3,-6 -8,0 -3,6"/></g>
-<text x="172" y="36.0" font-size="25" fill="#101113" font-weight="800" text-anchor="start">코딩</text>
-<text x="172" y="66.0" font-size="20" fill="#7c8288" font-weight="600" text-anchor="start">10분</text>
-</g>
-<g transform="translate(0 204)">
-<rect x="0" y="0" width="470" height="88" rx="18" fill="#ffffff" stroke="#2f9e6e" stroke-opacity="0.45" stroke-width="2.5" filter="url(#s5ps-sh)"/>
-<rect x="7" y="8" width="8" height="72" rx="4" fill="#2f9e6e"/>
-<use href="#s5ps-mascot" x="44.2" y="25.6" width="39.6" height="36.8"/>
-<circle cx="130" cy="44.0" r="24" fill="#2f9e6e"/>
-<g transform="translate(130 44.0) scale(1.1)" stroke="#ffffff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-9,-6 L-3,-6 L-1,-3 L9,-3 L9,7 L-9,7 Z"/></g>
-<text x="172" y="36.0" font-size="25" fill="#101113" font-weight="800" text-anchor="start">정리</text>
-<text x="172" y="66.0" font-size="20" fill="#7c8288" font-weight="600" text-anchor="start">10분</text>
-</g>
-<line x1="0" y1="322" x2="470" y2="322" stroke="#c9ccd1" stroke-width="2"/>
-<line x1="0" y1="314" x2="0" y2="330" stroke="#c9ccd1" stroke-width="2"/>
-<text x="0" y="356" font-size="22" fill="#7c8288" font-weight="400" text-anchor="start">0분</text>
-<line x1="487.5" y1="-16" x2="487.5" y2="308" stroke="#1273c4" stroke-width="4"/>
-<line x1="469.5" y1="-16" x2="505.5" y2="-16" stroke="#1273c4" stroke-width="4"/>
-<line x1="469.5" y1="308" x2="505.5" y2="308" stroke="#1273c4" stroke-width="4"/>
-<g transform="translate(487.5 -50) scale(1.3)" stroke="#1273c4" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="0" cy="0" r="9"/><line x1="0" y1="0" x2="0" y2="-5"/><line x1="0" y1="0" x2="4" y2="2"/></g>
-<text x="521.5" y="140.0" font-size="26" fill="#1273c4" font-weight="800" text-anchor="start">동시 완료</text>
-<text x="521.5" y="176.0" font-size="26" fill="#1273c4" font-weight="800" text-anchor="start">· 10분</text>
-<rect x="717.5" y="122.0" width="300" height="48" rx="24" fill="#eef6fc" stroke="#1273c4" stroke-width="2"/>
-<text x="867.5" y="154.0" font-size="22" fill="#1273c4" font-weight="700" text-anchor="middle">같은 10분에 다른 일 3개</text>
-</g>
-<g transform="translate(1120 738)">
-<rect x="0" y="0" width="420" height="96" rx="20" fill="#ffffff" stroke="#e5e5e5" stroke-width="2" filter="url(#s5ps-sh)"/>
-<text x="26" y="42" font-size="23" fill="#7c8288" font-weight="700" text-anchor="start">순차 30분</text>
-<line x1="16" y1="48" x2="118" y2="48" stroke="#7c8288" stroke-width="2.5"/>
-<path d="M144,50 L192,50 M180,40 L192,50 L180,60" stroke="#9a9ea3" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="212" y="46" font-size="28" fill="#1273c4" font-weight="800" text-anchor="start">병렬 10분</text>
-<rect x="212" y="60" width="140" height="32" rx="16" fill="#d97757"/>
-<text x="282" y="82" font-size="19" fill="#ffffff" font-weight="800" text-anchor="middle">3배 빠름</text>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 900" width="1920" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs><filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter><filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter><marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker><marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker><marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#43474b"/></marker><marker id="ao" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d97757"/></marker></defs>
+<rect x="40.0" y="30.0" width="1840.0" height="405.0" rx="26" fill="#fdf5f5" stroke="#e5e5e5" stroke-width="2"/>
+<text x="80.0" y="100.0" font-size="40" fill="#101113" font-weight="900" text-anchor="start">메인 혼자 · 순서대로</text>
+<circle cx="1850.0" cy="30.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/>
+<text x="1850.0" y="40.6" font-size="29" fill="#fff" font-weight="800" text-anchor="middle">1</text>
+<path d="M148.00 170.00h7.40v13.70h-7.40zM148.00 183.30h7.40v13.70h-7.40zM155.00 170.00h7.40v13.70h-7.40zM162.00 170.00h7.40v13.70h-7.40zM155.00 183.30h7.40v13.70h-7.40zM169.00 170.00h7.40v13.70h-7.40zM176.00 170.00h7.40v13.70h-7.40zM169.00 183.30h7.40v13.70h-7.40zM176.00 183.30h7.40v13.70h-7.40zM183.00 170.00h7.40v13.70h-7.40zM190.00 170.00h7.40v13.70h-7.40zM183.00 183.30h7.40v13.70h-7.40zM190.00 183.30h7.40v13.70h-7.40zM197.00 170.00h7.40v13.70h-7.40zM204.00 170.00h7.40v13.70h-7.40zM197.00 183.30h7.40v13.70h-7.40zM204.00 183.30h7.40v13.70h-7.40zM211.00 170.00h7.40v13.70h-7.40zM218.00 170.00h7.40v13.70h-7.40zM218.00 183.30h7.40v13.70h-7.40zM225.00 170.00h7.40v13.70h-7.40zM225.00 183.30h7.40v13.70h-7.40zM134.00 196.60h7.40v13.70h-7.40zM141.00 196.60h7.40v13.70h-7.40zM148.00 196.60h7.40v13.70h-7.40zM148.00 209.90h7.40v13.70h-7.40zM155.00 196.60h7.40v13.70h-7.40zM162.00 196.60h7.40v13.70h-7.40zM155.00 209.90h7.40v13.70h-7.40zM162.00 209.90h7.40v13.70h-7.40zM169.00 196.60h7.40v13.70h-7.40zM176.00 196.60h7.40v13.70h-7.40zM169.00 209.90h7.40v13.70h-7.40zM176.00 209.90h7.40v13.70h-7.40zM183.00 196.60h7.40v13.70h-7.40zM190.00 196.60h7.40v13.70h-7.40zM183.00 209.90h7.40v13.70h-7.40zM190.00 209.90h7.40v13.70h-7.40zM197.00 196.60h7.40v13.70h-7.40zM204.00 196.60h7.40v13.70h-7.40zM197.00 209.90h7.40v13.70h-7.40zM204.00 209.90h7.40v13.70h-7.40zM211.00 196.60h7.40v13.70h-7.40zM218.00 196.60h7.40v13.70h-7.40zM211.00 209.90h7.40v13.70h-7.40zM218.00 209.90h7.40v13.70h-7.40zM225.00 196.60h7.40v13.70h-7.40zM232.00 196.60h7.40v13.70h-7.40zM225.00 209.90h7.40v13.70h-7.40zM239.00 196.60h7.40v13.70h-7.40zM155.00 223.20h7.40v13.70h-7.40zM169.00 223.20h7.40v13.70h-7.40zM204.00 223.20h7.40v13.70h-7.40zM218.00 223.20h7.40v13.70h-7.40z" fill="#d97757" shape-rendering="crispEdges"/>
+<text x="190.0" y="290.0" font-size="28" fill="#43474b" font-weight="700" text-anchor="middle">메인 클로드</text>
+<rect x="334.0" y="160.0" width="392.0" height="100.0" rx="16" fill="#1273c4"/>
+<text x="530.0" y="223.0" font-size="38" fill="#fff" font-weight="900" text-anchor="middle">조사</text>
+<rect x="734.0" y="160.0" width="392.0" height="100.0" rx="16" fill="#8b5cf6"/>
+<text x="930.0" y="223.0" font-size="38" fill="#fff" font-weight="900" text-anchor="middle">코딩</text>
+<rect x="1134.0" y="160.0" width="392.0" height="100.0" rx="16" fill="#12a150"/>
+<text x="1330.0" y="223.0" font-size="38" fill="#fff" font-weight="900" text-anchor="middle">정리</text>
+<path d="M330 300H1530" fill="none" stroke="#9a9ea3" stroke-width="3"/>
+<path d="M330 290V310" fill="none" stroke="#9a9ea3" stroke-width="3"/>
+<text x="330.0" y="352.0" font-size="28" fill="#8b9095" font-weight="700" text-anchor="middle">0분</text>
+<path d="M730 290V310" fill="none" stroke="#9a9ea3" stroke-width="3"/>
+<text x="730.0" y="352.0" font-size="28" fill="#8b9095" font-weight="700" text-anchor="middle">10분</text>
+<path d="M1130 290V310" fill="none" stroke="#9a9ea3" stroke-width="3"/>
+<text x="1130.0" y="352.0" font-size="28" fill="#8b9095" font-weight="700" text-anchor="middle">20분</text>
+<path d="M1530 290V310" fill="none" stroke="#9a9ea3" stroke-width="3"/>
+<text x="1530.0" y="352.0" font-size="28" fill="#8b9095" font-weight="700" text-anchor="middle">30분</text>
+<circle cx="1690.0" cy="215.0" r="92" fill="#fff" stroke="#43474b" stroke-width="8.28"/>
+<path d="M1690.0 215.0L1690.0 137.7A77.3 77.3 0 0 1 1690.0 292.3Z" fill="#d93a3a" fill-opacity="0.85"/>
+<path d="M1690.0 135.9L1690.0 148.8" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1729.6 146.5L1725.9 152.9" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1758.5 175.4L1752.1 179.1" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1769.1 215.0L1756.2 215.0" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1758.5 254.6L1752.1 250.9" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1729.6 283.5L1725.9 277.1" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1690.0 294.1L1690.0 281.2" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1650.4 283.5L1654.1 277.1" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1621.5 254.6L1627.9 250.9" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1610.9 215.0L1623.8 215.0" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1621.5 175.4L1627.9 179.1" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1650.4 146.5L1654.1 152.9" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1690.0 215.0L1690.0 275.7" fill="none" stroke="#101113" stroke-width="7.36" stroke-linecap="round"/>
+<path d="M1690.0 215.0L1690.0 169.0" fill="none" stroke="#101113" stroke-width="7.36" stroke-linecap="round"/>
+<circle cx="1690.0" cy="215.0" r="7.36" fill="#101113"/>
+<rect x="1679.0" y="104.6" width="22.1" height="14.7" rx="3" fill="#43474b"/>
+<text x="1690.0" y="385.0" font-size="52" fill="#d93a3a" font-weight="900" text-anchor="middle">30분</text>
+<rect x="40.0" y="465.0" width="1840.0" height="405.0" rx="26" fill="#f4faf6" stroke="#e5e5e5" stroke-width="2"/>
+<text x="80.0" y="535.0" font-size="40" fill="#101113" font-weight="900" text-anchor="start">서브에이전트 3개 · 동시에</text>
+<circle cx="1850.0" cy="465.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/>
+<text x="1850.0" y="475.6" font-size="29" fill="#fff" font-weight="800" text-anchor="middle">2</text>
+<path d="M162.40 582.00h5.00v9.14h-5.00zM162.40 590.74h5.00v9.14h-5.00zM167.00 582.00h5.00v9.14h-5.00zM171.60 582.00h5.00v9.14h-5.00zM167.00 590.74h5.00v9.14h-5.00zM176.20 582.00h5.00v9.14h-5.00zM180.80 582.00h5.00v9.14h-5.00zM176.20 590.74h5.00v9.14h-5.00zM180.80 590.74h5.00v9.14h-5.00zM185.40 582.00h5.00v9.14h-5.00zM190.00 582.00h5.00v9.14h-5.00zM185.40 590.74h5.00v9.14h-5.00zM190.00 590.74h5.00v9.14h-5.00zM194.60 582.00h5.00v9.14h-5.00zM199.20 582.00h5.00v9.14h-5.00zM194.60 590.74h5.00v9.14h-5.00zM199.20 590.74h5.00v9.14h-5.00zM203.80 582.00h5.00v9.14h-5.00zM208.40 582.00h5.00v9.14h-5.00zM208.40 590.74h5.00v9.14h-5.00zM213.00 582.00h5.00v9.14h-5.00zM213.00 590.74h5.00v9.14h-5.00zM153.20 599.48h5.00v9.14h-5.00zM157.80 599.48h5.00v9.14h-5.00zM162.40 599.48h5.00v9.14h-5.00zM162.40 608.22h5.00v9.14h-5.00zM167.00 599.48h5.00v9.14h-5.00zM171.60 599.48h5.00v9.14h-5.00zM167.00 608.22h5.00v9.14h-5.00zM171.60 608.22h5.00v9.14h-5.00zM176.20 599.48h5.00v9.14h-5.00zM180.80 599.48h5.00v9.14h-5.00zM176.20 608.22h5.00v9.14h-5.00zM180.80 608.22h5.00v9.14h-5.00zM185.40 599.48h5.00v9.14h-5.00zM190.00 599.48h5.00v9.14h-5.00zM185.40 608.22h5.00v9.14h-5.00zM190.00 608.22h5.00v9.14h-5.00zM194.60 599.48h5.00v9.14h-5.00zM199.20 599.48h5.00v9.14h-5.00zM194.60 608.22h5.00v9.14h-5.00zM199.20 608.22h5.00v9.14h-5.00zM203.80 599.48h5.00v9.14h-5.00zM208.40 599.48h5.00v9.14h-5.00zM203.80 608.22h5.00v9.14h-5.00zM208.40 608.22h5.00v9.14h-5.00zM213.00 599.48h5.00v9.14h-5.00zM217.60 599.48h5.00v9.14h-5.00zM213.00 608.22h5.00v9.14h-5.00zM222.20 599.48h5.00v9.14h-5.00zM167.00 616.96h5.00v9.14h-5.00zM176.20 616.96h5.00v9.14h-5.00zM199.20 616.96h5.00v9.14h-5.00zM208.40 616.96h5.00v9.14h-5.00z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="334.0" y="574.0" width="392.0" height="72.0" rx="14" fill="#1273c4"/>
+<text x="530.0" y="622.0" font-size="34" fill="#fff" font-weight="900" text-anchor="middle">조사</text>
+<path d="M162.40 670.00h5.00v9.14h-5.00zM162.40 678.74h5.00v9.14h-5.00zM167.00 670.00h5.00v9.14h-5.00zM171.60 670.00h5.00v9.14h-5.00zM167.00 678.74h5.00v9.14h-5.00zM176.20 670.00h5.00v9.14h-5.00zM180.80 670.00h5.00v9.14h-5.00zM176.20 678.74h5.00v9.14h-5.00zM180.80 678.74h5.00v9.14h-5.00zM185.40 670.00h5.00v9.14h-5.00zM190.00 670.00h5.00v9.14h-5.00zM185.40 678.74h5.00v9.14h-5.00zM190.00 678.74h5.00v9.14h-5.00zM194.60 670.00h5.00v9.14h-5.00zM199.20 670.00h5.00v9.14h-5.00zM194.60 678.74h5.00v9.14h-5.00zM199.20 678.74h5.00v9.14h-5.00zM203.80 670.00h5.00v9.14h-5.00zM208.40 670.00h5.00v9.14h-5.00zM208.40 678.74h5.00v9.14h-5.00zM213.00 670.00h5.00v9.14h-5.00zM213.00 678.74h5.00v9.14h-5.00zM153.20 687.48h5.00v9.14h-5.00zM157.80 687.48h5.00v9.14h-5.00zM162.40 687.48h5.00v9.14h-5.00zM162.40 696.22h5.00v9.14h-5.00zM167.00 687.48h5.00v9.14h-5.00zM171.60 687.48h5.00v9.14h-5.00zM167.00 696.22h5.00v9.14h-5.00zM171.60 696.22h5.00v9.14h-5.00zM176.20 687.48h5.00v9.14h-5.00zM180.80 687.48h5.00v9.14h-5.00zM176.20 696.22h5.00v9.14h-5.00zM180.80 696.22h5.00v9.14h-5.00zM185.40 687.48h5.00v9.14h-5.00zM190.00 687.48h5.00v9.14h-5.00zM185.40 696.22h5.00v9.14h-5.00zM190.00 696.22h5.00v9.14h-5.00zM194.60 687.48h5.00v9.14h-5.00zM199.20 687.48h5.00v9.14h-5.00zM194.60 696.22h5.00v9.14h-5.00zM199.20 696.22h5.00v9.14h-5.00zM203.80 687.48h5.00v9.14h-5.00zM208.40 687.48h5.00v9.14h-5.00zM203.80 696.22h5.00v9.14h-5.00zM208.40 696.22h5.00v9.14h-5.00zM213.00 687.48h5.00v9.14h-5.00zM217.60 687.48h5.00v9.14h-5.00zM213.00 696.22h5.00v9.14h-5.00zM222.20 687.48h5.00v9.14h-5.00zM167.00 704.96h5.00v9.14h-5.00zM176.20 704.96h5.00v9.14h-5.00zM199.20 704.96h5.00v9.14h-5.00zM208.40 704.96h5.00v9.14h-5.00z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="334.0" y="662.0" width="392.0" height="72.0" rx="14" fill="#8b5cf6"/>
+<text x="530.0" y="710.0" font-size="34" fill="#fff" font-weight="900" text-anchor="middle">코딩</text>
+<path d="M162.40 758.00h5.00v9.14h-5.00zM162.40 766.74h5.00v9.14h-5.00zM167.00 758.00h5.00v9.14h-5.00zM171.60 758.00h5.00v9.14h-5.00zM167.00 766.74h5.00v9.14h-5.00zM176.20 758.00h5.00v9.14h-5.00zM180.80 758.00h5.00v9.14h-5.00zM176.20 766.74h5.00v9.14h-5.00zM180.80 766.74h5.00v9.14h-5.00zM185.40 758.00h5.00v9.14h-5.00zM190.00 758.00h5.00v9.14h-5.00zM185.40 766.74h5.00v9.14h-5.00zM190.00 766.74h5.00v9.14h-5.00zM194.60 758.00h5.00v9.14h-5.00zM199.20 758.00h5.00v9.14h-5.00zM194.60 766.74h5.00v9.14h-5.00zM199.20 766.74h5.00v9.14h-5.00zM203.80 758.00h5.00v9.14h-5.00zM208.40 758.00h5.00v9.14h-5.00zM208.40 766.74h5.00v9.14h-5.00zM213.00 758.00h5.00v9.14h-5.00zM213.00 766.74h5.00v9.14h-5.00zM153.20 775.48h5.00v9.14h-5.00zM157.80 775.48h5.00v9.14h-5.00zM162.40 775.48h5.00v9.14h-5.00zM162.40 784.22h5.00v9.14h-5.00zM167.00 775.48h5.00v9.14h-5.00zM171.60 775.48h5.00v9.14h-5.00zM167.00 784.22h5.00v9.14h-5.00zM171.60 784.22h5.00v9.14h-5.00zM176.20 775.48h5.00v9.14h-5.00zM180.80 775.48h5.00v9.14h-5.00zM176.20 784.22h5.00v9.14h-5.00zM180.80 784.22h5.00v9.14h-5.00zM185.40 775.48h5.00v9.14h-5.00zM190.00 775.48h5.00v9.14h-5.00zM185.40 784.22h5.00v9.14h-5.00zM190.00 784.22h5.00v9.14h-5.00zM194.60 775.48h5.00v9.14h-5.00zM199.20 775.48h5.00v9.14h-5.00zM194.60 784.22h5.00v9.14h-5.00zM199.20 784.22h5.00v9.14h-5.00zM203.80 775.48h5.00v9.14h-5.00zM208.40 775.48h5.00v9.14h-5.00zM203.80 784.22h5.00v9.14h-5.00zM208.40 784.22h5.00v9.14h-5.00zM213.00 775.48h5.00v9.14h-5.00zM217.60 775.48h5.00v9.14h-5.00zM213.00 784.22h5.00v9.14h-5.00zM222.20 775.48h5.00v9.14h-5.00zM167.00 792.96h5.00v9.14h-5.00zM176.20 792.96h5.00v9.14h-5.00zM199.20 792.96h5.00v9.14h-5.00zM208.40 792.96h5.00v9.14h-5.00z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="334.0" y="750.0" width="392.0" height="72.0" rx="14" fill="#12a150"/>
+<text x="530.0" y="798.0" font-size="34" fill="#fff" font-weight="900" text-anchor="middle">정리</text>
+<rect x="750.0" y="574.0" width="760.0" height="248.0" rx="18" fill="none" stroke="#12a150" stroke-width="3" stroke-dasharray="12 10"/>
+<text x="1130.0" y="690.0" font-size="52" fill="#12a150" font-weight="900" text-anchor="middle">20분 절약</text>
+<text x="1130.0" y="744.0" font-size="30" fill="#43474b" font-weight="600" text-anchor="middle">셋이 한꺼번에 끝냄</text>
+<path d="M730 560V836" fill="none" stroke="#43474b" stroke-width="4" stroke-dasharray="4 8" stroke-linecap="round"/>
+<circle cx="1690.0" cy="655.0" r="92" fill="#fff" stroke="#43474b" stroke-width="8.28"/>
+<path d="M1690.0 655.0L1690.0 577.7A77.3 77.3 0 0 1 1756.9 616.4Z" fill="#12a150" fill-opacity="0.85"/>
+<path d="M1690.0 575.9L1690.0 588.8" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1729.6 586.5L1725.9 592.9" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1758.5 615.4L1752.1 619.1" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1769.1 655.0L1756.2 655.0" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1758.5 694.6L1752.1 690.9" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1729.6 723.5L1725.9 717.1" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1690.0 734.1L1690.0 721.2" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1650.4 723.5L1654.1 717.1" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1621.5 694.6L1627.9 690.9" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1610.9 655.0L1623.8 655.0" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1621.5 615.4L1627.9 619.1" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1650.4 586.5L1654.1 592.9" fill="none" stroke="#43474b" stroke-width="3.68" stroke-linecap="round"/>
+<path d="M1690.0 655.0L1742.6 624.6" fill="none" stroke="#101113" stroke-width="7.36" stroke-linecap="round"/>
+<path d="M1690.0 655.0L1690.0 609.0" fill="none" stroke="#101113" stroke-width="7.36" stroke-linecap="round"/>
+<circle cx="1690.0" cy="655.0" r="7.36" fill="#101113"/>
+<rect x="1679.0" y="544.6" width="22.1" height="14.7" rx="3" fill="#43474b"/>
+<text x="1690.0" y="825.0" font-size="52" fill="#12a150" font-weight="900" text-anchor="middle">10분</text>
 </svg>
