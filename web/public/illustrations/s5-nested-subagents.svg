@@ -1,50 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1760 800" width="1760" height="800" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
 <defs>
-  <marker id="s5ns-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
-  <marker id="s5ns-arg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#43474b"/></marker>
+  <filter id="s5ns-sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <marker id="s5ns-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="s5ns-arg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9a9ea3"/></marker>
+  <symbol id="s5ns-mascot" viewBox="0 0 18 6" preserveAspectRatio="none" shape-rendering="crispEdges"><rect x="3" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="3" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="4" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="5" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="4" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="6" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="7" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="6" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="7" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="8" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="9" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="8" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="9" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="10" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="11" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="10" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="11" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="12" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="13" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="13" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="14" y="0" width="1.02" height="1.02" fill="#d97757"/><rect x="14" y="1" width="1.02" height="1.02" fill="#d97757"/><rect x="1" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="2" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="3" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="3" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="4" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="5" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="4" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="5" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="6" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="7" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="6" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="7" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="8" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="9" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="8" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="9" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="10" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="11" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="10" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="11" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="12" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="13" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="12" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="13" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="14" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="15" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="14" y="3" width="1.02" height="1.02" fill="#d97757"/><rect x="16" y="2" width="1.02" height="1.02" fill="#d97757"/><rect x="4" y="4" width="1.02" height="1.02" fill="#d97757"/><rect x="6" y="4" width="1.02" height="1.02" fill="#d97757"/><rect x="11" y="4" width="1.02" height="1.02" fill="#d97757"/><rect x="13" y="4" width="1.02" height="1.02" fill="#d97757"/></symbol>
 </defs>
 
-<rect x="730" y="40" width="300" height="90" rx="16" fill="#1273c4"/>
-<text x="880" y="95" font-size="28" fill="#ffffff" font-weight="800" text-anchor="middle">메인 클로드</text>
+<!-- main claude -->
+<rect x="610" y="40" width="380" height="110" rx="18" fill="#ffffff" stroke="#e5e5e5" stroke-width="2" filter="url(#s5ns-sh)"/>
+<use href="#s5ns-mascot" x="758.8" y="42.6" width="82.5" height="76.7"/>
+<text x="800" y="132" font-size="27" fill="#101113" font-weight="800" text-anchor="middle">메인 클로드</text>
 
-<line x1="820" y1="130" x2="330" y2="220" stroke="#1273c4" stroke-width="4" marker-end="url(#s5ns-ar)"/>
-<line x1="880" y1="130" x2="880" y2="220" stroke="#1273c4" stroke-width="4" marker-end="url(#s5ns-ar)"/>
-<line x1="940" y1="130" x2="1430" y2="220" stroke="#1273c4" stroke-width="4" marker-end="url(#s5ns-ar)"/>
-<circle cx="1250" cy="150" r="24" fill="#1273c4"/><text x="1250" y="159" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
-<text x="1290" y="159" font-size="22" fill="#1273c4" font-weight="800" text-anchor="start">서브에이전트 3개 배치</text>
+<!-- arrows: main -> 3 level-1 subagents -->
+<line x1="800" y1="150" x2="430" y2="225" stroke="#1273c4" stroke-width="4.5" marker-end="url(#s5ns-ar)"/>
+<line x1="800" y1="150" x2="780" y2="225" stroke="#1273c4" stroke-width="4.5" marker-end="url(#s5ns-ar)"/>
+<line x1="800" y1="150" x2="1130" y2="225" stroke="#1273c4" stroke-width="4.5" marker-end="url(#s5ns-ar)"/>
+<circle cx="1250" cy="195" r="24" fill="#1273c4"/><text x="1250" y="204" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+<text x="1285" y="203" font-size="26" fill="#1273c4" font-weight="800" text-anchor="start">서브에이전트 3개 배치</text>
 
-<rect x="160" y="220" width="260" height="90" rx="14" fill="#101113"/>
-<text x="290" y="260" font-size="20" fill="#ffffff" font-weight="800" text-anchor="middle">general-purpose</text>
-<text x="290" y="288" font-size="17" fill="#e5e5e5" font-weight="400" text-anchor="middle">진해군항제 심층조사</text>
+<!-- level-1 card 1 : 진해군항제 (has nested sub-subagents) -->
+<rect x="270" y="225" width="320" height="110" rx="16" fill="#ffffff" stroke="#e5e5e5" stroke-width="2" filter="url(#s5ns-sh)"/>
+<use href="#s5ns-mascot" x="302.9" y="233.1" width="36.3" height="33.8"/>
+<text x="430" y="289" font-size="18" fill="#7c8288" font-weight="700" text-anchor="middle">general-purpose</text>
+<text x="430" y="317" font-size="22" fill="#101113" font-weight="800" text-anchor="middle">진해군항제 심층조사</text>
+<circle cx="590" cy="225" r="22" fill="#ffffff" stroke="#1273c4" stroke-width="3"/><text x="590" y="232" font-size="18" fill="#1273c4" font-weight="800" text-anchor="middle">+2</text>
 
-<rect x="750" y="220" width="260" height="90" rx="14" fill="#43474b"/>
-<text x="880" y="260" font-size="20" fill="#ffffff" font-weight="800" text-anchor="middle">general-purpose</text>
-<text x="880" y="288" font-size="17" fill="#e5e5e5" font-weight="400" text-anchor="middle">여의도 봄꽃축제 심층조사</text>
+<!-- level-1 card 2 : 여의도 -->
+<rect x="620" y="225" width="320" height="110" rx="16" fill="#ffffff" stroke="#e5e5e5" stroke-width="2" filter="url(#s5ns-sh)"/>
+<use href="#s5ns-mascot" x="652.9" y="233.1" width="36.3" height="33.8"/>
+<text x="780" y="289" font-size="18" fill="#7c8288" font-weight="700" text-anchor="middle">general-purpose</text>
+<text x="780" y="317" font-size="22" fill="#101113" font-weight="800" text-anchor="middle">여의도 봄꽃축제 심층조사</text>
 
-<rect x="1340" y="220" width="260" height="90" rx="14" fill="#43474b"/>
-<text x="1470" y="260" font-size="20" fill="#ffffff" font-weight="800" text-anchor="middle">general-purpose</text>
-<text x="1470" y="288" font-size="17" fill="#e5e5e5" font-weight="400" text-anchor="middle">경주 대릉원돌담길 심층조사</text>
+<!-- level-1 card 3 : 경주 -->
+<rect x="970" y="225" width="320" height="110" rx="16" fill="#ffffff" stroke="#e5e5e5" stroke-width="2" filter="url(#s5ns-sh)"/>
+<use href="#s5ns-mascot" x="1002.9" y="233.1" width="36.3" height="33.8"/>
+<text x="1130" y="289" font-size="18" fill="#7c8288" font-weight="700" text-anchor="middle">general-purpose</text>
+<text x="1130" y="317" font-size="22" fill="#101113" font-weight="800" text-anchor="middle">경주 대릉원돌담길 심층조사</text>
 
-<line x1="220" y1="310" x2="140" y2="410" stroke="#43474b" stroke-width="3" marker-end="url(#s5ns-arg)"/>
-<line x1="290" y1="310" x2="290" y2="410" stroke="#43474b" stroke-width="3" marker-end="url(#s5ns-arg)"/>
-<line x1="360" y1="310" x2="440" y2="410" stroke="#43474b" stroke-width="3" marker-end="url(#s5ns-arg)"/>
-<circle cx="470" cy="360" r="24" fill="#1273c4"/><text x="470" y="369" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
-<text x="510" y="369" font-size="22" fill="#1273c4" font-weight="800" text-anchor="start">하청의 하청</text>
+<!-- arrows: card1 -> 3 sub-subagents -->
+<line x1="330" y1="335" x2="270" y2="440" stroke="#1273c4" stroke-width="3.5" marker-end="url(#s5ns-ar)"/>
+<line x1="430" y1="335" x2="430" y2="440" stroke="#1273c4" stroke-width="3.5" marker-end="url(#s5ns-ar)"/>
+<line x1="530" y1="335" x2="590" y2="440" stroke="#1273c4" stroke-width="3.5" marker-end="url(#s5ns-ar)"/>
+<circle cx="850" cy="475" r="22" fill="#1273c4"/><text x="850" y="483" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+<text x="882" y="483" font-size="26" fill="#1273c4" font-weight="800" text-anchor="start">하청의 하청</text>
 
-<rect x="70" y="420" width="140" height="70" rx="10" fill="#9a9ea3"/><text x="140" y="461" font-size="16" fill="#101113" font-weight="700" text-anchor="middle">역사 · 유래</text>
-<rect x="220" y="420" width="140" height="70" rx="10" fill="#9a9ea3"/><text x="290" y="461" font-size="16" fill="#101113" font-weight="700" text-anchor="middle">프로그램 · 명소</text>
-<rect x="370" y="420" width="140" height="70" rx="10" fill="#9a9ea3"/><text x="440" y="461" font-size="16" fill="#101113" font-weight="700" text-anchor="middle">방문 · 운영</text>
+<!-- sub-subagent cards -->
+<rect x="205" y="440" width="130" height="80" rx="12" fill="#ffffff" stroke="#9a9ea3" stroke-width="2"/>
+<circle cx="228" cy="460" r="6" fill="#1273c4"/>
+<text x="270" y="466" font-size="18" fill="#101113" font-weight="800" text-anchor="middle">역사</text>
+<text x="270" y="492" font-size="18" fill="#101113" font-weight="800" text-anchor="middle">유래</text>
 
-<line x1="290" y1="490" x2="290" y2="560" stroke="#9a9ea3" stroke-width="3" marker-end="url(#s5ns-arg)"/>
-<line x1="880" y1="310" x2="880" y2="560" stroke="#43474b" stroke-width="3" marker-end="url(#s5ns-arg)"/>
-<line x1="1470" y1="310" x2="1470" y2="560" stroke="#43474b" stroke-width="3" marker-end="url(#s5ns-arg)"/>
+<rect x="365" y="440" width="130" height="80" rx="12" fill="#ffffff" stroke="#9a9ea3" stroke-width="2"/>
+<circle cx="388" cy="460" r="6" fill="#1273c4"/>
+<text x="430" y="466" font-size="18" fill="#101113" font-weight="800" text-anchor="middle">프로그램</text>
+<text x="430" y="492" font-size="18" fill="#101113" font-weight="800" text-anchor="middle">명소</text>
 
-<rect x="215" y="570" width="150" height="70" rx="10" fill="#ffffff" stroke="#101113" stroke-width="3"/>
-<text x="290" y="612" font-size="18" fill="#101113" font-weight="800" text-anchor="middle">보고서.md</text>
-<rect x="805" y="570" width="150" height="70" rx="10" fill="#ffffff" stroke="#101113" stroke-width="3"/>
-<text x="880" y="612" font-size="18" fill="#101113" font-weight="800" text-anchor="middle">보고서.md</text>
-<rect x="1395" y="570" width="150" height="70" rx="10" fill="#ffffff" stroke="#101113" stroke-width="3"/>
-<text x="1470" y="612" font-size="18" fill="#101113" font-weight="800" text-anchor="middle">보고서.md</text>
-<circle cx="1000" cy="605" r="24" fill="#1273c4"/><text x="1000" y="614" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
-<text x="1040" y="614" font-size="22" fill="#1273c4" font-weight="800" text-anchor="start">md 보고서 3개 생성</text>
+<rect x="525" y="440" width="130" height="80" rx="12" fill="#ffffff" stroke="#9a9ea3" stroke-width="2"/>
+<circle cx="548" cy="460" r="6" fill="#1273c4"/>
+<text x="590" y="466" font-size="18" fill="#101113" font-weight="800" text-anchor="middle">방문</text>
+<text x="590" y="492" font-size="18" fill="#101113" font-weight="800" text-anchor="middle">운영</text>
+
+<!-- dashed: sub-subagents converge -> single report -->
+<line x1="270" y1="520" x2="410" y2="690" stroke="#9a9ea3" stroke-width="3.5" stroke-dasharray="9 7" marker-end="url(#s5ns-arg)"/>
+<line x1="430" y1="520" x2="430" y2="690" stroke="#9a9ea3" stroke-width="3.5" stroke-dasharray="9 7" marker-end="url(#s5ns-arg)"/>
+<line x1="590" y1="520" x2="450" y2="690" stroke="#9a9ea3" stroke-width="3.5" stroke-dasharray="9 7" marker-end="url(#s5ns-arg)"/>
+
+<!-- dashed: card2 / card3 straight down to their own report -->
+<line x1="780" y1="335" x2="780" y2="690" stroke="#9a9ea3" stroke-width="3.5" stroke-dasharray="9 7" marker-end="url(#s5ns-arg)"/>
+<line x1="1130" y1="335" x2="1130" y2="690" stroke="#9a9ea3" stroke-width="3.5" stroke-dasharray="9 7" marker-end="url(#s5ns-arg)"/>
+
+<!-- report cards -->
+<g>
+  <rect x="360" y="690" width="140" height="90" rx="14" fill="#ffffff" stroke="#101113" stroke-width="2.5"/>
+  <g transform="translate(430 722) scale(1.15)" stroke="#101113" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-5,-9 L2,-9 L6,-5 L6,9 L-5,9 Z"/><path d="M2,-9 L2,-5 L6,-5"/></g>
+  <text x="430" y="764" font-size="20" fill="#101113" font-weight="800" text-anchor="middle">보고서.md</text>
+</g>
+<g>
+  <rect x="710" y="690" width="140" height="90" rx="14" fill="#ffffff" stroke="#101113" stroke-width="2.5"/>
+  <g transform="translate(780 722) scale(1.15)" stroke="#101113" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-5,-9 L2,-9 L6,-5 L6,9 L-5,9 Z"/><path d="M2,-9 L2,-5 L6,-5"/></g>
+  <text x="780" y="764" font-size="20" fill="#101113" font-weight="800" text-anchor="middle">보고서.md</text>
+</g>
+<g>
+  <rect x="1060" y="690" width="140" height="90" rx="14" fill="#ffffff" stroke="#101113" stroke-width="2.5"/>
+  <g transform="translate(1130 722) scale(1.15)" stroke="#101113" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-5,-9 L2,-9 L6,-5 L6,9 L-5,9 Z"/><path d="M2,-9 L2,-5 L6,-5"/></g>
+  <text x="1130" y="764" font-size="20" fill="#101113" font-weight="800" text-anchor="middle">보고서.md</text>
+</g>
+
+<circle cx="1250" cy="730" r="24" fill="#1273c4"/><text x="1250" y="739" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+<text x="1285" y="739" font-size="26" fill="#1273c4" font-weight="800" text-anchor="start">md 보고서 3개 생성</text>
 </svg>

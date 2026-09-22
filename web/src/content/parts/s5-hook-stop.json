@@ -25,7 +25,8 @@
           ],
           "input": {
             "placeholder": "메시지를 입력하세요..."
-          }
+          },
+          "fit": true
         }
       },
       "notes": [
@@ -68,7 +69,8 @@
           ],
           "input": {
             "placeholder": "메시지를 입력하세요..."
-          }
+          },
+          "fit": true
         }
       },
       "notes": [
@@ -142,7 +144,8 @@
           },
           "input": {
             "placeholder": "메시지를 입력하세요..."
-          }
+          },
+          "fit": true
         }
       },
       "notes": [
@@ -181,7 +184,8 @@
           ],
           "input": {
             "placeholder": "메시지를 입력하세요..."
-          }
+          },
+          "fit": true
         }
       },
       "notes": [

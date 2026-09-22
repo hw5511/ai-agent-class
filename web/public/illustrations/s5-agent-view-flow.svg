@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 120 1600 680" width="1600" height="680" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs>
+  <marker id="avf-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <filter id="avf-ds" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#101113" flood-opacity="0.16"/>
+  </filter>
+</defs>
+
+<!-- Stage 1: main Claude terminal, session running -->
+<g filter="url(#avf-ds)">
+  <rect x="40" y="200" width="440" height="420" rx="20" fill="#0c0d0e"/>
+</g>
+<circle cx="72" cy="230" r="7" fill="#d97757"/>
+<circle cx="96" cy="230" r="7" fill="#7c8288"/>
+<circle cx="120" cy="230" r="7" fill="#5f9e6b"/>
+<text x="70" y="280" font-size="20" fill="#7c8288">Claude Code v2.1.278</text>
+<text x="70" y="315" font-size="18" fill="#767c81">Sonnet 5 · ~\agent1</text>
+<text x="70" y="380" font-size="24" font-weight="700" fill="#e8eaec">
+  <tspan fill="#d97757">✶ </tspan>korean language support
+</text>
+<text x="70" y="412" font-size="24" font-weight="700" fill="#e8eaec">timeout <tspan fill="#767c81" font-weight="400">200초 대기 … 6m</tspan></text>
+<rect x="70" y="470" width="380" height="46" rx="10" fill="none" stroke="#3a3d40" stroke-width="2"/>
+<text x="90" y="499" font-size="18" fill="#5b5e61">메시지를 입력하세요...</text>
+<text x="70" y="560" font-size="18" fill="#767c81">⏵⏵ bypass permissions on</text>
+<text x="70" y="586" font-size="18" fill="#767c81">esc to interrupt</text>
+<text x="260" y="665" text-anchor="middle" font-size="30" font-weight="800" fill="#101113">메인 세션 진행 중</text>
+
+<!-- arrow 1 -->
+<line x1="500" y1="410" x2="580" y2="410" stroke="#1273c4" stroke-width="5" marker-end="url(#avf-ar)"/>
+
+<!-- Stage 2: keycap -->
+<g filter="url(#avf-ds)">
+  <rect x="600" y="330" width="160" height="160" rx="28" fill="#ffffff" stroke="#1273c4" stroke-width="5"/>
+</g>
+<text x="680" y="435" text-anchor="middle" font-size="76" font-weight="700" fill="#1273c4">&#8592;</text>
+<circle cx="748" cy="342" r="30" fill="#1273c4"/>
+<text x="748" y="352" text-anchor="middle" font-size="28" font-weight="800" fill="#ffffff">1</text>
+<text x="680" y="540" text-anchor="middle" font-size="26" font-weight="700" fill="#43474b">/background</text>
+<text x="680" y="572" text-anchor="middle" font-size="26" font-weight="700" fill="#43474b">/bg · &#8592;</text>
+
+<!-- arrow 2 -->
+<line x1="800" y1="410" x2="880" y2="410" stroke="#1273c4" stroke-width="5" marker-end="url(#avf-ar)"/>
+
+<!-- Stage 3: Agent View screen -->
+<g filter="url(#avf-ds)">
+  <rect x="900" y="150" width="660" height="560" rx="24" fill="#0c0d0e"/>
+</g>
+<circle cx="932" cy="180" r="7" fill="#d97757"/>
+<circle cx="956" cy="180" r="7" fill="#7c8288"/>
+<circle cx="980" cy="180" r="7" fill="#5f9e6b"/>
+<text x="930" y="228" font-size="20" fill="#7c8288">Claude Code v2.1.278</text>
+<text x="930" y="260" font-size="18" fill="#767c81">Sonnet 5 · ~\agent1</text>
+<text x="930" y="308" font-size="24" font-weight="700" fill="#e8eaec">0 awaiting input · 1 working · 0 completed</text>
+<circle cx="1500" cy="298" r="30" fill="#1273c4"/>
+<text x="1500" y="308" text-anchor="middle" font-size="28" font-weight="800" fill="#ffffff">2</text>
+<text x="930" y="345" font-size="18" fill="#767c81">Your conversation moved to the background</text>
+<line x1="930" y1="380" x2="1500" y2="380" stroke="#2a2c2e" stroke-width="2"/>
+<text x="930" y="425" font-size="24" font-weight="800" fill="#e8eaec">Working</text>
+<rect x="920" y="450" width="590" height="70" rx="12" fill="#17191b"/>
+<text x="945" y="493" font-size="22" fill="#d97757">&#10022;</text>
+<text x="980" y="493" font-size="22" fill="#e8eaec" font-weight="700">korean language support timeout</text>
+<text x="1440" y="493" font-size="20" fill="#767c81">6m</text>
+<text x="930" y="565" font-size="24" font-weight="800" fill="#e8eaec" opacity="0.5">Completed</text>
+<text x="930" y="598" font-size="20" fill="#5b5e61">완료된 세션 없음</text>
+<rect x="930" y="630" width="600" height="48" rx="10" fill="none" stroke="#3a3d40" stroke-width="2"/>
+<text x="950" y="661" font-size="18" fill="#5b5e61">describe a task for a new session</text>
+<text x="930" y="700" font-size="16" fill="#767c81">⏵⏵ bypass permissions · enter to return · space to r…</text>
+<text x="1230" y="768" text-anchor="middle" font-size="30" font-weight="800" fill="#101113">에이전트 뷰 목록</text>
+</svg>

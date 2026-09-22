@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 170 1600 560" width="1600" height="560" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs>
+  <marker id="ht-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <filter id="ht-ds" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#101113" flood-opacity="0.16"/>
+  </filter>
+</defs>
+
+<!-- Stage 1: user prompt in terminal, hook watching for '뿅' -->
+<g filter="url(#ht-ds)">
+  <rect x="40" y="230" width="440" height="360" rx="20" fill="#0c0d0e"/>
+</g>
+<circle cx="72" cy="260" r="7" fill="#d97757"/>
+<circle cx="96" cy="260" r="7" fill="#7c8288"/>
+<circle cx="120" cy="260" r="7" fill="#5f9e6b"/>
+<text x="70" y="310" font-size="20" fill="#767c81">&gt; 안녕?</text>
+<text x="70" y="345" font-size="20" fill="#e8eaec">안녕하세요! 무엇을 도와드릴까요?</text>
+<text x="70" y="420" font-size="26" font-weight="700" fill="#e8eaec">&gt; 너는 누구니? <tspan fill="#d97757" font-weight="800">뿅</tspan></text>
+<rect x="224" y="390" width="40" height="40" rx="10" fill="none" stroke="#d97757" stroke-width="3" stroke-dasharray="6 5"/>
+<circle cx="440" cy="392" r="28" fill="#1273c4"/>
+<text x="440" y="401" text-anchor="middle" font-size="26" font-weight="800" fill="#ffffff">1</text>
+<text x="260" y="640" text-anchor="middle" font-size="28" font-weight="800" fill="#101113">이벤트 감지 · &#39;뿅&#39; 포함</text>
+
+<!-- arrow 1 -->
+<line x1="500" y1="410" x2="580" y2="410" stroke="#1273c4" stroke-width="5" marker-end="url(#ht-ar)"/>
+
+<!-- Stage 2: hook trigger + injected text -->
+<g filter="url(#ht-ds)">
+  <rect x="600" y="190" width="480" height="480" rx="24" fill="#ffffff" stroke="#1273c4" stroke-width="3" stroke-dasharray="12 8"/>
+</g>
+<circle cx="840" cy="270" r="44" fill="#1273c4"/>
+<g transform="translate(816,246) scale(2)">
+  <path d="M13 2 3 14h7l-1 8 10-12h-7z" fill="#ffffff"/>
+</g>
+<circle cx="1044" cy="222" r="28" fill="#1273c4"/>
+<text x="1044" y="231" text-anchor="middle" font-size="26" font-weight="800" fill="#ffffff">2</text>
+<text x="840" y="352" text-anchor="middle" font-size="26" font-weight="800" fill="#101113">UserPromptSubmit 훅 실행</text>
+<rect x="640" y="390" width="400" height="230" rx="14" fill="#e5e5e5"/>
+<text x="662" y="428" font-size="22" font-weight="800" fill="#101113">삽입되는 문구</text>
+<text x="662" y="465" font-size="22" fill="#43474b">정상적으로 답변하면서</text>
+<text x="662" y="497" font-size="22" fill="#43474b">응답 끝에 &#39;빵빵+</text>
+<text x="662" y="529" font-size="22" fill="#43474b">[날짜시간]&#39;을 붙이기</text>
+<text x="840" y="710" text-anchor="middle" font-size="28" font-weight="800" fill="#101113">훅 실행 · 문구 주입</text>
+
+<!-- arrow 2 -->
+<line x1="1100" y1="410" x2="1180" y2="410" stroke="#1273c4" stroke-width="5" marker-end="url(#ht-ar)"/>
+
+<!-- Stage 3: final answer -->
+<g filter="url(#ht-ds)">
+  <rect x="1200" y="230" width="360" height="360" rx="20" fill="#0c0d0e"/>
+</g>
+<circle cx="1232" cy="260" r="7" fill="#d97757"/>
+<circle cx="1256" cy="260" r="7" fill="#7c8288"/>
+<circle cx="1280" cy="260" r="7" fill="#5f9e6b"/>
+<text x="1230" y="310" font-size="18" fill="#767c81">&gt; 너는 누구니? 뿅</text>
+<text x="1230" y="360" font-size="20" fill="#e8eaec">저는 Claude예요,</text>
+<text x="1230" y="390" font-size="20" fill="#e8eaec">무엇이든 물어보세요.</text>
+<text x="1230" y="450" font-size="24" font-weight="800" fill="#d97757">빵빵+2026-09-22</text>
+<text x="1230" y="480" font-size="24" font-weight="800" fill="#d97757">09:38:22</text>
+<text x="1380" y="640" text-anchor="middle" font-size="28" font-weight="800" fill="#101113">결과 · 답변 끝에 추가됨</text>
+</svg>

@@ -52,7 +52,8 @@
                 "meta": "3s · ↓ 67.0k tokens"
               }
             ]
-          }
+          },
+          "fit": true
         }
       },
       "notes": [
@@ -73,10 +74,7 @@
       "template": "screen",
       "title": "서브에이전트 안으로 진입",
       "screen": {
-        "kind": "vscode",
-        "folder": "agent1",
-        "files": [],
-        "noSidebar": true,
+        "kind": "terminal",
         "terminal": {
           "vendor": "claude",
           "cwd": "C:\\agent1",
@@ -153,7 +151,8 @@
               }
             ],
             "more": "↓ 1 more"
-          }
+          },
+          "fit": true
         }
       },
       "notes": [
@@ -231,7 +230,8 @@
                 "tree": "└"
               }
             ]
-          }
+          },
+          "fit": true
         }
       },
       "notes": [
@@ -290,7 +290,8 @@
                 "meta": "45s · ↓ 70.5k tokens"
               }
             ]
-          }
+          },
+          "fit": true
         }
       },
       "notes": [
@@ -334,7 +335,8 @@
           },
           "footer": {
             "text": "✻ Crunched for 3m 40s"
-          }
+          },
+          "fit": true
         }
       },
       "notes": [

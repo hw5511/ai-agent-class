@@ -31,7 +31,8 @@
           },
           "footer": {
             "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
-          }
+          },
+          "fit": true
         }
       },
       "notes": [
@@ -211,7 +212,8 @@
                 "badge": 2
               }
             ]
-          }
+          },
+          "fit": true
         }
       },
       "notes": [
@@ -229,23 +231,79 @@
     },
     {
       "id": "s5-agent-custom-05",
-      "template": "screen",
+      "template": "compare",
       "title": "description · 호출 조건 문구",
-      "screen": {
-        "kind": "file",
-        "name": "ai-trend-news.md",
-        "lines": [
-          "description: AI 트렌드 관련 최신 뉴스를 조사해야 할 때 이것을 사용해라"
-        ],
-        "mark": "조사해야 할 때 이것을 사용해라",
-        "badge": 1,
-        "large": true
+      "left": {
+        "label": "description 한 줄",
+        "screen": {
+          "kind": "file",
+          "name": "ai-trend-news.md",
+          "large": true,
+          "lines": [
+            "---",
+            "name: ai-trend-news",
+            "description: AI 트렌드 관련 최신 뉴스를 조사해야 할 때 이것을 사용해라",
+            "model: sonnet",
+            "---"
+          ],
+          "mark": "조사해야 할 때 이것을 사용해라"
+        }
+      },
+      "right": {
+        "label": "main 의 판단",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "요즘 AI 쪽 새 소식 좀 정리해줘"
+              },
+              {
+                "role": "assistant",
+                "text": "AI 트렌드 뉴스 조사라서 ai-trend-news 서브에이전트에게 맡길게요."
+              },
+              {
+                "role": "tool",
+                "text": "Agent(ai-trend-news · AI 트렌드 뉴스 조사)"
+              },
+              {
+                "role": "assistant",
+                "text": "⎿  Backgrounded agent (↓ to manage)"
+              }
+            ],
+            "input": {
+              "placeholder": "메시지를 입력하세요..."
+            },
+            "agents": {
+              "rows": [
+                {
+                  "name": "main",
+                  "active": true
+                },
+                {
+                  "name": "ai-trend-news",
+                  "label": "AI 트렌드 뉴스 조사",
+                  "meta": "4s · ↓ 9.8k tokens"
+                }
+              ]
+            },
+            "fit": true
+          }
+        }
       },
       "notes": [
         {
           "n": 1,
           "head": "○○할 때 이것을 사용해라",
-          "body": "description 은 이렇게 어떤 상황에 이 서브에이전트를 쓸지 알려주는 문장으로 씁니다."
+          "body": "description 은 어떤 상황에 이 서브에이전트를 쓸지 알려주는 문장으로 씁니다. 표시된 부분처럼 '○○할 때 이것을 사용해라' 형태로 적어보세요."
+        },
+        {
+          "n": 2,
+          "head": "상황이 맞으면 알아서 호출",
+          "body": "요청이 description 에 적힌 상황과 맞으면, 이름을 부르지 않아도 main 이 이 서브에이전트를 골라서 맡깁니다."
         }
       ]
     },
@@ -320,7 +378,8 @@
                 "badge": 2
               }
             ]
-          }
+          },
+          "fit": true
         }
       },
       "notes": [

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <clipPath id="ppt-clip"><rect x="2" y="2" width="44" height="44" rx="9"/></clipPath>
+  </defs>
+  <g clip-path="url(#ppt-clip)">
+    <rect x="2" y="2" width="44" height="44" fill="#c43e1c"/>
+    <path d="M31 2 46 2 46 17Z" fill="#ffffff" opacity="0.16"/>
+    <text x="24" y="33" text-anchor="middle" font-family="Arial, 'Segoe UI', sans-serif" font-size="24" font-weight="800" fill="#ffffff">P</text>
+  </g>
+</svg>

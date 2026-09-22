@@ -5,21 +5,9 @@
   "slides": [
     {
       "id": "s5-agent-view-01",
-      "template": "flow",
+      "template": "illustration",
       "title": "에이전트 뷰란",
-      "steps": [
-        {
-          "label": "메인 세션 진행 중"
-        },
-        {
-          "label": "/background · /bg · ←",
-          "badge": 1
-        },
-        {
-          "label": "에이전트 뷰 목록",
-          "badge": 2
-        }
-      ],
+      "illustration": "/illustrations/s5-agent-view-flow.svg",
       "notes": [
         {
           "n": 1,
@@ -75,7 +63,8 @@
             },
             "footer": {
               "text": "⏵⏵ bypass permissions on · esc to interrupt"
-            }
+            },
+            "fit": true
           }
         }
       },
@@ -273,7 +262,8 @@
           ],
           "input": {
             "placeholder": "메시지를 입력하세요..."
-          }
+          },
+          "fit": true
         }
       },
       "notes": [
@@ -291,37 +281,49 @@
     },
     {
       "id": "s5-agent-view-06",
-      "template": "table",
+      "template": "cards",
       "title": "정리 · 자주 안 쓰는 이유",
-      "columns": [
-        "항목",
-        "내용"
-      ],
-      "rows": [
+      "cards": [
         {
-          "cells": [
-            "bypass 모드",
-            "적용 안 됨"
-          ]
+          "label": "bypass 미적용",
+          "logo": "icon:Lock",
+          "tags": [
+            "bypass 모드 안 걸림"
+          ],
+          "badge": 1
         },
         {
-          "cells": [
-            "대안",
-            "VS Code 분할 터미널(다음 학습)"
-          ]
+          "label": "분할 터미널",
+          "logo": "/logos/visualstudiocode.svg",
+          "tags": [
+            "VS Code 가 더 편함"
+          ],
+          "badge": 2
         },
         {
-          "cells": [
-            "복귀",
-            "Working 세션 선택 후 Enter"
-          ]
+          "label": "Enter 로 복귀",
+          "logo": "icon:Keyboard",
+          "tags": [
+            "Working 세션 선택 후"
+          ],
+          "badge": 3
         }
       ],
       "notes": [
         {
-          "n": "!",
-          "head": "드물게 쓰는 기능",
-          "body": "이 방식으로 만든 세션은 bypass 모드가 안 걸리고, 나중에 배우는 VS Code 분할 터미널이 더 편해서 실제로는 잘 안 씁니다."
+          "n": 1,
+          "head": "bypass 미적용",
+          "body": "이 방식으로 만든 세션은 bypass 모드가 걸리지 않습니다."
+        },
+        {
+          "n": 2,
+          "head": "분할 터미널이 더 편함",
+          "body": "나중에 배우는 VS Code 분할 터미널 쪽이 실제로는 더 편해서 잘 안 씁니다."
+        },
+        {
+          "n": 3,
+          "head": "Enter 로 복귀",
+          "body": "복귀할 때는 Working 목록에서 세션을 선택하고 Enter 를 누릅니다."
         }
       ]
     }
