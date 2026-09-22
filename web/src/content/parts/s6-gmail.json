@@ -1,0 +1,250 @@
+{
+  "id": "s6-gmail",
+  "title": "Gmail",
+  "summary": "Gmail 커넥터를 연결하고, Claude Code 로 최근 메일을 조회하고 실제로 테스트 메일을 보내본다.",
+  "slides": [
+    {
+      "id": "s6-gmail-01",
+      "template": "screen",
+      "title": "Gmail 검색",
+      "screen": { "kind": "shot", "src": "/shots/s6/40_gmail_1_search.png" },
+      "notes": [
+        { "n": 1, "head": "커넥터 검색창", "body": "화면 위쪽 디렉터리 검색창에 Gmail 을 입력해 보세요. 이름에 Gmail 이 들어간 커넥터들이 목록으로 나타납니다." },
+        { "n": 2, "head": "공식 Gmail 커넥터", "body": "목록 맨 위에 있고 이름 옆에 체크 표시가 붙은 Gmail 항목이 Claude 가 공식으로 제공하는 커넥터예요. 이걸 골라야 안전하게 연결됩니다." }
+      ]
+    },
+    {
+      "id": "s6-gmail-02",
+      "template": "screen",
+      "title": "액세스 동의",
+      "screen": { "kind": "shot", "src": "/shots/s6/40_gmail_5_consent.png" },
+      "notes": [
+        { "n": 1, "head": "메일 읽기 및 전송 권한", "body": "Claude for Gmail 이 메일을 읽고 새 메일을 작성해서 보낼 수 있게 해달라고 요청하는 권한 목록을 화면에서 확인해 보세요." },
+        { "n": 2, "head": "계속 눌러 승인", "body": "권한 항목을 확인했다면 화면 아래 계속 버튼을 눌러야 클로드가 실제로 내 지메일에 접근할 수 있게 승인됩니다." }
+      ]
+    },
+    {
+      "id": "s6-gmail-03",
+      "template": "screen",
+      "title": "연결 확인",
+      "screen": { "kind": "shot", "src": "/shots/s6/40_gmail_9_yours.png" },
+      "notes": [
+        { "n": 1, "head": "내 항목에 추가됨", "body": "사용자 지정 화면의 내 항목 탭을 열어보면 방금 연결한 Gmail 카드가 목록에 새로 생긴 것을 볼 수 있어요." },
+        { "n": 2, "head": "체크 표시로 확인", "body": "카드 이름 옆에 초록색 체크 표시가 떠 있으면 연결이 정상적으로 끝났다는 뜻이니 다음 단계로 넘어가면 됩니다." }
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [{ "kind": "link", "href": "claude.ai/customize/connectors", "text": "claude.ai/customize/connectors" }]
+      }
+    },
+    {
+      "id": "s6-gmail-04",
+      "template": "screen",
+      "title": "재실행 · /mcp 확인",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [{ "role": "user", "text": "/mcp" }],
+          "panel": {
+            "title": "",
+            "rows": [
+              { "seg": [{ "t": "Manage MCP servers", "c": "bold" }] },
+              { "seg": [{ "t": "1 servers", "c": "dim" }] },
+              { "seg": [] },
+              { "seg": [{ "t": "claude.ai", "c": "bold" }], "badge": 1 },
+              { "seg": [{ "t": "  claude.ai Notion · ✔ connected · 45 tools", "c": "green" }] },
+              { "seg": [{ "t": "  claude.ai Google Calendar · ✔ connected · 12 tools", "c": "green" }] },
+              { "seg": [{ "t": "  claude.ai Google Drive · ✔ connected · 8 tools", "c": "green" }] },
+              { "seg": [{ "t": "  claude.ai Gmail · ✔ connected · 7 tools", "c": "green" }], "badge": 2 }
+            ]
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "claude.ai 서버 하나", "body": "claude --dangerously-skip-permissions 로 다시 실행한 뒤 /mcp 를 입력하면, claude.ai 서버 하나 아래에 지금까지 연결한 커넥터들이 계속 쌓여 있는 모습을 볼 수 있어요." },
+        { "n": 2, "head": "Gmail 연결됨", "body": "목록 중 claude.ai Gmail 줄 옆에 초록색 connected 표시와 7 tools 라는 숫자가 새로 보이면, 방금 연결한 지메일 도구를 클로드 코드에서도 쓸 수 있다는 뜻입니다." }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          { "kind": "copy", "value": "claude --dangerously-skip-permissions" },
+          { "kind": "copy", "value": "/mcp" }
+        ]
+      }
+    },
+    {
+      "id": "s6-gmail-05",
+      "template": "screen",
+      "title": "프롬프트 · 할 수 있는 일 묻기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": { "text": "Gmail mcp 로 뭐 할 수 있는지 툴목록 보고 알려줘", "badge": 1 },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "툴목록 기반 질문", "body": "터미널 입력창에 Gmail mcp 로 뭐 할 수 있는지 툴목록 보고 알려줘 라고 그대로 입력해 보세요. 클로드가 지메일 도구 목록을 스스로 확인한 뒤 설명해 줍니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [{ "kind": "copy", "value": "Gmail mcp 로 뭐 할 수 있는지 툴목록 보고 알려줘" }]
+      }
+    },
+    {
+      "id": "s6-gmail-06",
+      "template": "screen",
+      "title": "결과 · 할 수 있는 일 목록",
+      "replaceWithCapture": "Gmail mcp 툴목록 질문 실제 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [{ "role": "user", "text": "Gmail mcp 로 뭐 할 수 있는지 툴목록 보고 알려줘" }],
+          "panel": {
+            "title": "",
+            "rows": [
+              { "seg": [{ "t": "● Gmail MCP 연결 상태: ✔ connected · 7 tools", "c": "bold" }], "badge": 1 },
+              { "seg": [] },
+              { "seg": [{ "t": "● 사용 가능한 일", "c": "bold" }], "badge": 2 },
+              { "seg": [{ "t": "  · 메일 검색 및 조회", "c": "dim" }] },
+              { "seg": [{ "t": "  · 메일 작성 및 전송", "c": "dim" }] },
+              { "seg": [{ "t": "  · 라벨 · 임시보관함 관리", "c": "dim" }] }
+            ]
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "연결 상태 확인", "body": "가장 위 줄에 Gmail MCP 가 connected 상태이고 7 tools 를 쓸 수 있다고 나오면, 방금 연결한 도구들이 실제로 작동 준비가 됐다는 뜻이에요." },
+        { "n": 2, "head": "할 수 있는 일 요약", "body": "그 아래에 메일 검색과 조회, 작성과 전송, 라벨과 임시보관함 관리까지 클로드가 할 수 있는 일들을 목록으로 정리해서 보여줍니다." }
+      ]
+    },
+    {
+      "id": "s6-gmail-07",
+      "template": "screen",
+      "title": "프롬프트 · 최근 메일 조회",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": { "text": "내 지메일에 최근 온 메일 5개만 요약해줘", "badge": 1 },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "최근 메일 요약 요청", "body": "터미널 입력창에 내 지메일에 최근 온 메일 5개만 요약해줘 라고 입력해 보세요. 받은편지함에서 가장 최근 다섯 통만 골라 요약해 달라는 요청입니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [{ "kind": "copy", "value": "내 지메일에 최근 온 메일 5개만 요약해줘" }]
+      }
+    },
+    {
+      "id": "s6-gmail-08",
+      "template": "screen",
+      "title": "결과 · 최근 메일 요약",
+      "replaceWithCapture": "최근 메일 5개 조회 실제 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [{ "role": "user", "text": "내 지메일에 최근 온 메일 5개만 요약해줘" }],
+          "panel": {
+            "title": "",
+            "rows": [
+              { "seg": [{ "t": "● 최근 메일 5건", "c": "bold" }], "badge": 1 },
+              { "seg": [{ "t": "  1. 수업 안내 · 다음주 일정 공지", "c": "dim" }] },
+              { "seg": [{ "t": "  2. 결제 영수증 · 정기 구독 갱신", "c": "dim" }] },
+              { "seg": [{ "t": "  3. 뉴스레터 · 이번주 업데이트", "c": "dim" }] },
+              { "seg": [{ "t": "  4. 계정 보안 알림 · 새 로그인 감지", "c": "dim" }] },
+              { "seg": [{ "t": "  5. 회의 초대 · 내일 오후 2시", "c": "dim" }] }
+            ]
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "다섯 건 요약", "body": "최근 메일 5건 이라는 제목 아래로 수업 안내, 결제 영수증, 뉴스레터, 보안 알림, 회의 초대까지 다섯 통이 한 줄씩 요약되어 나타납니다. 받은편지함을 직접 열어보지 않아도 무슨 메일이 왔는지 바로 알 수 있어요." }
+      ]
+    },
+    {
+      "id": "s6-gmail-09",
+      "template": "screen",
+      "title": "프롬프트 · 나에게 테스트 메일 보내기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": { "text": "나한테 테스트 메일 하나 보내줘 제목이랑 내용은 아무거나 넣어서", "badge": 1 },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "실제로 전송되는 메일", "body": "터미널 입력창에 나한테 테스트 메일 하나 보내줘 제목이랑 내용은 아무거나 넣어서 라고 입력해 보세요. 이 프롬프트는 클로드가 제목과 내용을 알아서 지어내 실제로 메일 한 통을 진짜로 전송하게 만듭니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [{ "kind": "copy", "value": "나한테 테스트 메일 하나 보내줘 제목이랑 내용은 아무거나 넣어서" }]
+      }
+    },
+    {
+      "id": "s6-gmail-10",
+      "template": "screen",
+      "title": "결과 · 보낸 메일 도착",
+      "replaceWithCapture": "테스트 메일 실제 전송 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [{ "role": "user", "text": "나한테 테스트 메일 하나 보내줘 제목이랑 내용은 아무거나 넣어서" }],
+          "panel": {
+            "title": "",
+            "rows": [
+              { "seg": [{ "t": "● 메일 전송 완료", "c": "bold" }], "badge": 1 },
+              { "seg": [{ "t": "  받는사람: student@gmail.com", "c": "dim" }] },
+              { "seg": [{ "t": "  제목: 안녕하세요, 테스트 메일입니다", "c": "dim" }], "badge": 2 },
+              { "seg": [{ "t": "  ⎿  받은편지함에 도착했습니다", "c": "dim" }] }
+            ]
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "전송 완료 보고", "body": "메일 전송 완료 라는 문구와 함께 받는사람이 student@gmail.com 으로, 제목이 안녕하세요, 테스트 메일입니다 로 채워져 실제로 전송됐다는 결과가 나타납니다." },
+        { "n": 2, "head": "받은편지함에서 확인", "body": "화면에 나온 제목 그대로 잠시 뒤 받은편지함을 열어보면 방금 클로드가 보낸 테스트 메일이 실제로 도착해 있는 걸 확인할 수 있어요." }
+      ]
+    }
+  ]
+}

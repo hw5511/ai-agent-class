@@ -1,0 +1,167 @@
+{
+  "id": "s6-notion-merits",
+  "title": "노션의 장점",
+  "summary": "노션 페이지를 다른 사람과 공유하고, PDF · 마크다운으로 내보내고, 템플릿으로 시작할 수 있다는 것을 확인한다.",
+  "slides": [
+    {
+      "id": "s6-notion-merits-01",
+      "template": "screen",
+      "title": "공유 · 초대받은 사용자만",
+      "screen": { "kind": "shot", "src": "/shots/s6/60_1_share.png" },
+      "notes": [
+        { "n": 1, "head": "우상단 공유 버튼", "body": "페이지 오른쪽 위에 있는 공유 버튼을 눌러보세요. 그러면 이 페이지를 함께 볼 사람을 초대할 수 있는 창이 열립니다." },
+        { "n": 2, "head": "기본값은 초대받은 사용자만", "body": "일반 사용 권한 옆을 보면 초대받은 사용자만이라고 적혀 있어요. 그래서 지금은 내가 이메일로 초대한 사람만 이 페이지를 볼 수 있습니다." }
+      ]
+    },
+    {
+      "id": "s6-notion-merits-02",
+      "template": "screen",
+      "title": "링크가 있는 모든 사용자",
+      "screen": { "kind": "shot", "src": "/shots/s6/60_2_access_menu.png" },
+      "notes": [
+        { "n": 1, "head": "일반 사용 권한 열기", "body": "초대받은 사용자만이라고 적힌 부분을 클릭하면 드롭다운 메뉴가 열려요. 여기서 공유 범위를 다른 옵션으로 바꿀 수 있습니다." },
+        { "n": 2, "head": "링크가 있는 웹의 모든 사용자", "body": "드롭다운에서 링크가 있는 웹의 모든 사용자를 선택하고 링크 복사를 누르면, 그 링크를 가진 사람은 누구나 로그인 없이 페이지를 볼 수 있어요." }
+      ]
+    },
+    {
+      "id": "s6-notion-merits-03",
+      "template": "screen",
+      "title": "더 보기 메뉴 · 내보내기",
+      "screen": { "kind": "shot", "src": "/shots/s6/60_3_more_menu.png" },
+      "notes": [
+        { "n": 1, "head": "우상단 점 세 개", "body": "제목 옆에 있는 점 세 개 아이콘을 눌러보세요. 페이지를 다루는 여러 기능이 담긴 메뉴가 펼쳐집니다." },
+        { "n": 2, "head": "내보내기 선택", "body": "펼쳐진 메뉴에서 내보내기를 클릭하면 파일 형식을 고르는 새 창이 열려요. 이 기능으로 노션 페이지를 다른 프로그램에서도 열 수 있는 파일로 바꿀 수 있습니다." }
+      ]
+    },
+    {
+      "id": "s6-notion-merits-04",
+      "template": "screen",
+      "title": "내보내기 형식 선택",
+      "screen": { "kind": "shot", "src": "/shots/s6/60_4_export_dialog.png" },
+      "notes": [
+        { "n": 1, "head": "내보내기 형식", "body": "내보내기 형식, 데이터베이스 보기, 페이지 콘텐츠 세 항목을 각각 눌러서 원하는 값으로 바꿀 수 있어요. 지금은 무엇을 어떻게 내보낼지 정하는 단계입니다." },
+        { "n": 2, "head": "기본값 Markdown & CSV", "body": "내보내기 형식 항목이 기본으로 Markdown & CSV 로 되어 있어요. 이 값을 클릭하면 다른 형식으로 바꿀 수 있는 목록이 나타납니다." }
+      ]
+    },
+    {
+      "id": "s6-notion-merits-05",
+      "template": "screen",
+      "title": "형식 드롭다운 · PDF 선택",
+      "screen": { "kind": "shot", "src": "/shots/s6/60_5_format_menu.png" },
+      "notes": [
+        { "n": 1, "head": "PDF, HTML, Markdown & CSV", "body": "형식 값을 클릭하면 PDF, HTML, Markdown & CSV 세 가지 선택지가 나타나요. 상황에 맞는 형식을 여기서 고르면 됩니다." },
+        { "n": 2, "head": "PDF 선택 후 내보내기", "body": "PDF 를 선택한 다음 내보내기 버튼을 누르면, 노션 페이지가 그대로 PDF 파일로 만들어져 다운로드됩니다." }
+      ]
+    },
+    {
+      "id": "s6-notion-merits-06",
+      "template": "compare",
+      "title": "PDF 다운로드 결과",
+      "left": {
+        "label": "다운로드된 PDF",
+        "screen": {
+          "kind": "browser",
+          "url": "file:///C:/Users/student/Downloads/여행 일정 & 경비 관리 All in One.pdf",
+          "page": {
+            "heading": "여행 일정 & 경비 관리 All in One",
+            "lines": [
+              "1일차 - 나리타 공항 입국",
+              "2일차 - 오전 카페 투어",
+              "여행준비 · 여행일정 · 지출항목 · 참고 링크 & URL"
+            ]
+          }
+        }
+      },
+      "right": {
+        "label": "다운로드 폴더",
+        "screen": {
+          "kind": "vscode",
+          "folder": "다운로드",
+          "files": [
+            { "name": "Downloads", "folder": true, "active": true },
+            { "name": "여행 일정 & 경비 관리 All in One.pdf", "depth": 1, "badge": 1 }
+          ],
+          "terminal": { "vendor": "shell", "cwd": "C:\\Users\\student\\Downloads", "turns": [], "fit": true },
+          "noTerminal": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "다운로드 폴더에 저장", "body": "내보내기가 끝나면 페이지 제목 그대로 PDF 파일이 다운로드 폴더에 저장돼요. 오른쪽 화면의 탐색기에서 파일이 생긴 걸 확인할 수 있습니다." },
+        { "n": 2, "head": "PDF 로 열어 확인", "body": "그 파일을 더블 클릭해서 열면 왼쪽 화면처럼 노션 페이지의 제목과 내용이 그대로 담긴 PDF 문서가 나타나요. 화면 위 주소를 보면 다운로드 폴더 안의 그 파일이 열린 것임을 알 수 있습니다." }
+      ],
+      "replaceWithCapture": "실제 PDF 내보내기 결과 (다운로드 폴더 또는 열린 PDF 파일)"
+    },
+    {
+      "id": "s6-notion-merits-07",
+      "template": "screen",
+      "title": "마크다운 & CSV 로 내보내기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          { "name": "agent1", "folder": true, "active": true, "badge": 1 },
+          { "name": "여행 일정 & 경비 관리 All in One", "depth": 1, "folder": true },
+          { "name": "여행 일정 & 경비 관리 All in One.md", "depth": 2 },
+          { "name": "지출항목.csv", "depth": 2, "badge": 2 },
+          { "name": "참고 링크 & URL.csv", "depth": 2 }
+        ],
+        "terminal": { "vendor": "shell", "cwd": "C:\\agent1", "turns": [], "fit": true },
+        "noTerminal": true
+      },
+      "notes": [
+        { "n": 1, "head": "agent1 폴더로 이동", "body": "내보낸 zip 파일의 압축을 풀어서 실습 폴더인 agent1 안으로 옮겨 놓으세요. 왼쪽 탐색기에 agent1 폴더가 선택된 걸 볼 수 있습니다." },
+        { "n": 2, "head": "md 와 csv 로 분리", "body": "문서 내용은 여행 일정 & 경비 관리 All in One.md 파일로, 데이터베이스는 지출항목.csv 와 참고 링크 & URL.csv 파일로 각각 나뉘어 만들어져요." }
+      ],
+      "replaceWithCapture": "실제 마크다운 & CSV 내보내기 후 agent1 폴더로 옮긴 결과"
+    },
+    {
+      "id": "s6-notion-merits-08",
+      "template": "screen",
+      "title": "VSCode 에서 마크다운 열기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          { "name": "agent1", "folder": true, "active": true },
+          { "name": "여행 일정 & 경비 관리 All in One.md", "depth": 1, "active": true }
+        ],
+        "editor": {
+          "file": "여행 일정 & 경비 관리 All in One.md",
+          "lines": [
+            "# 여행 일정 & 경비 관리 All in One",
+            "",
+            "## 여행준비",
+            "- 필수준비물",
+            "- 세면도구",
+            "",
+            "## 여행일정",
+            "| 일차 | 장소 | 시간 | 경비 |",
+            "| --- | --- | --- | --- |",
+            "| 1일차 | 나리타 공항 입국 | 1:00 - 2:03 | - |",
+            "| 2일차 | 오전 카페 투어 | 09:00 - 4:00 | - |",
+            "",
+            "## 지출항목",
+            "- 식비, 숙박, 교통"
+          ]
+        },
+        "terminal": { "vendor": "shell", "cwd": "C:\\agent1", "turns": [], "fit": true },
+        "noTerminal": true
+      },
+      "notes": [
+        { "n": 1, "head": "제목 · 목록 · 표", "body": "왼쪽 에디터에 열린 md 파일을 보면 노션의 제목, 목록, 표가 마크다운 문법 그대로 옮겨진 걸 확인할 수 있어요." },
+        { "n": 2, "head": "마크다운 기반이라 AI 와 호환 좋음", "body": "마크다운은 AI 가 가장 잘 읽는 형식이라서, 이 md 파일을 그대로 복사해서 다음 작업의 프롬프트에 붙여 넣기 좋아요." }
+      ]
+    },
+    {
+      "id": "s6-notion-merits-09",
+      "template": "illustration",
+      "title": "템플릿 많음 · 채우기는 귀찮음",
+      "illustration": "/illustrations/s6-template-chore.svg",
+      "notes": [
+        { "n": 1, "head": "수많은 템플릿", "body": "왼쪽 화면을 보면 노션에는 여행 일정, 가계부, 회의록처럼 이미 만들어진 템플릿이 아주 많다는 걸 알 수 있어요." },
+        { "n": 2, "head": "채우기는 여전히 귀찮음", "body": "가운데 화면처럼 목적지나 예산 같은 빈 칸이 잔뜩 있으면, 그 템플릿에 내 정보를 하나하나 채워 넣는 일은 여전히 손이 많이 갑니다." },
+        { "n": 3, "head": "AI 가 대신 채움", "body": "오른쪽 화면의 주황색 캐릭터가 Claude 예요. 이 귀찮은 빈 칸 채우기를 Claude 에게 시키면, 웹서치까지 해서 바르셀로나 같은 실제 정보로 대신 채워 줍니다." }
+      ]
+    }
+  ]
+}

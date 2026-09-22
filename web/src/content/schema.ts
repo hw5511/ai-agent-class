@@ -57,6 +57,9 @@ interface SlideBase {
   title: string // keyword noun phrase, the only sentence-like text on the slide
   notes?: Note[] // shown in the right panel, not on the slide
   action?: ActionBox
+  // Author-only marker, never rendered: this slide shows a plausible mockup that should be replaced by a real
+  // rehearsal capture later (e.g. "real terminal result of the Notion tool-list prompt").
+  replaceWithCapture?: string
 }
 
 /** Legacy: an already-rendered picture (PNG/SVG). Every slide from the old decks starts here. */

@@ -1,0 +1,193 @@
+{
+  "id": "s6-notion-template",
+  "title": "템플릿 + AI",
+  "summary": "노션 템플릿을 내 페이지로 가져온 뒤, Claude 에게 구조를 분석시키고 스페인 2박3일 여행 정보로 채워본다.",
+  "slides": [
+    {
+      "id": "s6-notion-template-01",
+      "template": "screen",
+      "title": "템플릿 갤러리",
+      "screen": { "kind": "shot", "src": "/shots/s6/50_tpl_1_list.png" },
+      "notes": [
+        { "n": 1, "head": "70,000개 이상의 템플릿", "body": "화면 위쪽 검색창에 70,000개 이상의 템플릿이라고 적혀 있어요. notion.com 의 템플릿 갤러리에서 다양한 분야의 템플릿을 검색하고 둘러볼 수 있습니다." }
+      ],
+      "action": {
+        "label": "템플릿 갤러리 열기",
+        "items": [
+          { "kind": "link", "href": "https://www.notion.com/ko/explore-templates", "text": "notion.com/ko/explore-templates" }
+        ]
+      }
+    },
+    {
+      "id": "s6-notion-template-02",
+      "template": "screen",
+      "title": "여행 일정 & 경비 관리 템플릿",
+      "screen": { "kind": "shot", "src": "/shots/s6/50_tpl_2_bottom.png" },
+      "notes": [
+        { "n": 1, "head": "여행 카테고리에서 발견", "body": "화면 아래쪽 여행 카테고리 탭을 누르고 목록을 훑다 보면 여행 일정 & 경비 관리 All in One 템플릿을 찾을 수 있어요." }
+      ]
+    },
+    {
+      "id": "s6-notion-template-03",
+      "template": "screen",
+      "title": "템플릿 미리보기 · 사용하기",
+      "screen": { "kind": "shot", "src": "/shots/s6/50_tpl_3_modal.png" },
+      "notes": [
+        { "n": 1, "head": "템플릿 설명 확인", "body": "오른쪽 템플릿 설명 영역에서 이 템플릿이 어떤 기능을 가졌는지 먼저 읽어볼 수 있어요." },
+        { "n": 2, "head": "템플릿 사용하기", "body": "설명이 마음에 들면 오른쪽 위 템플릿 사용하기 버튼을 눌러서 이 템플릿을 내 워크스페이스로 가져오세요." }
+      ]
+    },
+    {
+      "id": "s6-notion-template-04",
+      "template": "screen",
+      "title": "워크스페이스 선택",
+      "screen": { "kind": "shot", "src": "/shots/s6/50_tpl_4_add_dialog.png" },
+      "notes": [
+        { "n": 1, "head": "새 창으로 열림", "body": "템플릿 사용하기를 누르면 새 창이 뜨면서 어느 워크스페이스에 추가할지 물어봐요." },
+        { "n": 2, "head": "Add to Private", "body": "개인 워크스페이스를 고른 다음 파란색 Add to Private 버튼을 누르면, 내 개인 페이지 목록에 이 템플릿이 그대로 복제됩니다." }
+      ]
+    },
+    {
+      "id": "s6-notion-template-05",
+      "template": "screen",
+      "title": "개인 페이지에 추가 완료",
+      "screen": { "kind": "shot", "src": "/shots/s6/50_tpl_5_added.png" },
+      "notes": [
+        { "n": 1, "head": "Template is ready 알림", "body": "화면 왼쪽 아래에 템플릿이 워크스페이스에 추가됐다는 Template is ready 알림이 나타나요." },
+        { "n": 2, "head": "왼쪽 목록에 새 페이지", "body": "왼쪽 사이드바의 개인 페이지 목록을 보면 방금 복제한 여행 일정 & 경비 관리 All in One 페이지가 새로 나타난 걸 볼 수 있습니다." }
+      ]
+    },
+    {
+      "id": "s6-notion-template-06",
+      "template": "screen",
+      "title": "프롬프트 · 템플릿 구조 분석",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": {
+            "text": "현재 개인페이지에 복제해온 여행 일정 & 경비 관리 All in One 페이지를 찾아서 해당 템플릿의 구조와 db를 분석해줘",
+            "badge": 1
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "구조 분석 요청", "body": "터미널에 적힌 프롬프트처럼 노션 mcp 도구로 방금 복제한 페이지를 찾아서, 안에 어떤 섹션과 데이터베이스가 있는지 분석해 달라고 요청해 보세요." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "현재 개인페이지에 복제해온 여행 일정 & 경비 관리 All in One 페이지를 찾아서 해당 템플릿의 구조와 db를 분석해줘" }
+        ]
+      }
+    },
+    {
+      "id": "s6-notion-template-07",
+      "template": "screen",
+      "title": "분석 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "현재 개인페이지에 복제해온 여행 일정 & 경비 관리 All in One 페이지를 찾아서 해당 템플릿의 구조와 db를 분석해줘"
+            },
+            {
+              "role": "assistant",
+              "text": "페이지 구조를 확인했습니다.\n\n1) 여행준비 - 체크리스트 (필수준비물, 세면도구)\n2) 여행일정 - 지도보기 DB (일차, 장소, 시간, 경비 컬럼)\n3) 지출항목 - DB (항목, 금액, 통화)\n4) 참고 링크 & URL - DB\n\n여행일정 DB 와 지출항목 DB 가 서로 연결돼 있어서, 일정에 경비를 적으면 지출항목에도 반영되는 구조입니다.",
+              "badge": 1
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "네 개 섹션과 DB 구조", "body": "Claude 가 답한 내용을 보면 여행준비 체크리스트, 여행일정 DB, 지출항목 DB, 참고 링크 DB 이렇게 네 개 섹션으로 이뤄져 있고, 여행일정과 지출항목 DB 가 서로 연결돼 있다고 설명합니다." }
+      ],
+      "replaceWithCapture": "실제 노션 mcp 로 템플릿 구조/DB 를 분석한 결과"
+    },
+    {
+      "id": "s6-notion-template-08",
+      "template": "screen",
+      "title": "프롬프트 · 스페인 2박3일로 채우기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": {
+            "text": "그러면 현재 페이지에 기존 데이터들은 제거하구, 스페인 2박3일 여행일정으로 너가 이 템플릿을 채우기 위한 필요한 정보를 웹서치로 조사해서 채워넣어줘",
+            "badge": 1
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "기존 데이터 제거 + 웹서치로 채우기", "body": "터미널에 적힌 프롬프트처럼, 템플릿 안의 예시 데이터는 지우고 스페인 2박3일 일정에 필요한 정보를 웹서치로 조사해서 채워 달라고 요청해 보세요." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "그러면 현재 페이지에 기존 데이터들은 제거하구, 스페인 2박3일 여행일정으로 너가 이 템플릿을 채우기 위한 필요한 정보를 웹서치로 조사해서 채워넣어줘" }
+        ]
+      }
+    },
+    {
+      "id": "s6-notion-template-09",
+      "template": "compare",
+      "title": "채워진 스페인 여행 템플릿",
+      "left": {
+        "label": "노션 페이지",
+        "screen": {
+          "kind": "browser",
+          "url": "notion.so/스페인-2박3일-여행-일정-경비-관리",
+          "page": {
+            "heading": "스페인 2박3일 여행 일정 & 경비 관리",
+            "lines": [
+              "1일차 - 바르셀로나 도착, 사그라다 파밀리아",
+              "2일차 - 바르셀로나 시내, 구엘 공원",
+              "3일차 - 마드리드 이동, 프라도 미술관",
+              "총 경비 - 850 EUR (약 125만원)"
+            ]
+          }
+        }
+      },
+      "right": {
+        "label": "터미널",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "assistant",
+                "text": "스페인 2박3일 일정을 웹서치로 조사해서 채워 넣었습니다. 바르셀로나 1박, 마드리드 1박으로 구성했고, 항공 · 숙소 · 식비를 유로와 원화로 함께 적어 뒀습니다.",
+                "badge": 1
+              }
+            ],
+            "fit": true
+          }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "바르셀로나 · 마드리드 일정", "body": "왼쪽 노션 화면을 보면 웹서치로 조사한 실제 관광지와 동선으로 여행일정 DB 가 채워진 걸 확인할 수 있어요." },
+        { "n": 2, "head": "유로와 원화 경비", "body": "지출 항목마다 EUR 금액과 함께 원화 환산 금액도 같이 적혀 있어서, 오른쪽 터미널의 설명처럼 예산을 바로 확인할 수 있습니다." }
+      ],
+      "replaceWithCapture": "실제로 노션 mcp 가 스페인 2박3일 템플릿을 채운 결과 (노션 화면 + 터미널)"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "s6-connector-web",
+  "title": "웹에서 커넥터 연결하기",
+  "summary": "claude.ai 디렉터리에서 노션 커넥터를 연결하고, Claude Code 의 /mcp 로도 연결을 확인한다.",
+  "slides": [
+    {
+      "id": "s6-connector-web-01",
+      "template": "screen",
+      "title": "디렉터리 접속",
+      "screen": { "kind": "shot", "src": "/shots/s6/01_directory.png" },
+      "notes": [
+        { "n": 1, "head": "디렉터리", "body": "화면처럼 claude.ai/directory 주소로 들어가면 Claude 에 연결할 수 있는 서비스 목록이 쭉 나타나요. 여기서 원하는 서비스를 찾아 연결을 시작하면 됩니다." },
+        { "n": 2, "head": "커넥터라는 이름", "body": "앞서 배운 MCP 를 웹 클로드 화면에서는 커넥터 라는 이름으로 부르고 있어요. 부르는 이름만 다를 뿐 같은 기능이라고 생각하면 됩니다." }
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [{ "kind": "link", "href": "claude.ai/directory", "text": "claude.ai/directory" }]
+      }
+    },
+    {
+      "id": "s6-connector-web-02",
+      "template": "screen",
+      "title": "노션 검색",
+      "screen": { "kind": "shot", "src": "/shots/s6/02_search_notion.png" },
+      "notes": [
+        { "n": 1, "head": "커넥터 검색창", "body": "화면 위쪽 검색창에 Notion 이라고 입력하면 관련된 커넥터들이 목록으로 나타나요. 원하는 서비스 이름을 직접 검색해서 찾을 수 있습니다." },
+        { "n": 2, "head": "공식 Notion 커넥터", "body": "목록 맨 위에 체크 표시가 붙어 있는 Notion 이 공식 커넥터예요. 여러 개 중에서 헷갈리지 않게 이 체크 표시가 붙은 항목을 선택하면 됩니다." }
+      ]
+    },
+    {
+      "id": "s6-connector-web-03",
+      "template": "screen",
+      "title": "+ 버튼",
+      "screen": { "kind": "shot", "src": "/shots/s6/03_plus_hover.png" },
+      "notes": [
+        { "n": 1, "head": "+ 버튼", "body": "Notion 카드 오른쪽에 있는 + 버튼을 눌러보세요. 이 버튼을 누르는 순간부터 연결 과정이 시작됩니다." },
+        { "n": 2, "head": "연결 안내 문구", "body": "버튼 위에 마우스를 올리면 Claude 에 Notion 연결 이라는 안내 문구가 떠요. 지금 어떤 동작을 하게 되는지 미리 확인할 수 있습니다." }
+      ]
+    },
+    {
+      "id": "s6-connector-web-04",
+      "template": "screen",
+      "title": "Notion 연결 승인",
+      "screen": { "kind": "shot", "src": "/shots/s6/04_after_plus_main.png" },
+      "notes": [
+        { "n": 1, "head": "워크스페이스 선택", "body": "화면에서 연결할 노션 워크스페이스를 골라주세요. 평소 쓰던 노션 계정의 작업 공간이 여기 나타납니다." },
+        { "n": 2, "head": "계속하기", "body": "아래에 나온 권한 목록을 한번 읽어보고 계속하기 버튼을 누르면 연결이 승인돼요. 이 권한들이 바로 Claude 가 노션에서 할 수 있는 일의 범위입니다." }
+      ]
+    },
+    {
+      "id": "s6-connector-web-05",
+      "template": "screen",
+      "title": "연결 확인",
+      "screen": { "kind": "shot", "src": "/shots/s6/07_connectors_yours.png" },
+      "notes": [
+        { "n": 1, "head": "내 항목 탭", "body": "사용자 지정 화면에서 내 항목 탭을 열면 지금까지 연결한 커넥터들이 한눈에 보여요. 여기서 연결 상태를 언제든 다시 확인할 수 있습니다." },
+        { "n": 2, "head": "Notion 연결됨", "body": "Notion 옆에 체크 표시가 뜨면 연결이 정상적으로 끝난 거예요. 이 표시가 보이지 않으면 앞선 단계로 돌아가 다시 연결해보세요." }
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [{ "kind": "link", "href": "claude.ai/customize/connectors", "text": "claude.ai/customize/connectors" }]
+      }
+    },
+    {
+      "id": "s6-connector-web-06",
+      "template": "screen",
+      "title": "/mcp 로 연결 확인",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [{ "role": "user", "text": "/mcp" }],
+          "panel": {
+            "title": "",
+            "rows": [
+              { "seg": [{ "t": "Manage MCP servers", "c": "bold" }] },
+              { "seg": [{ "t": "1 servers", "c": "dim" }] },
+              { "seg": [] },
+              { "seg": [{ "t": "claude.ai", "c": "bold" }], "badge": 1 },
+              { "seg": [{ "t": "  claude.ai Notion · ✔ connected · 45 tools", "c": "green" }], "badge": 2 }
+            ]
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "claude.ai 서버", "body": "터미널에서 /mcp 를 입력하면 claude.ai 라는 이름으로 서버 하나가 등록된 걸 볼 수 있어요. 웹에서 연결한 커넥터가 Claude Code 에서도 그대로 잡히는지 이렇게 확인합니다." },
+        { "n": 2, "head": "Notion 연결됨", "body": "claude.ai Notion 옆에 connected 표시와 함께 사용 가능한 도구 45 개가 보여요. 이 숫자가 뜬다면 노션 연결이 Claude Code 에서도 제대로 되어 있다는 뜻입니다." }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          { "kind": "copy", "value": "claude --dangerously-skip-permissions" },
+          { "kind": "copy", "value": "/mcp" }
+        ]
+      }
+    }
+  ]
+}

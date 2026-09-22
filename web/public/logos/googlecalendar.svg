@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="gcal-clip"><rect x="3" y="3" width="58" height="58" rx="13"/></clipPath>
+  </defs>
+  <g clip-path="url(#gcal-clip)">
+    <rect x="3" y="3" width="58" height="58" fill="#ffffff"/>
+    <rect x="3" y="3" width="58" height="12" fill="#4285f4"/>
+    <rect x="3" y="49" width="58" height="12" fill="#4285f4"/>
+    <rect x="3" y="15" width="12" height="34" fill="#34a853"/>
+    <rect x="49" y="15" width="12" height="34" fill="#ea4335"/>
+    <rect x="15" y="15" width="34" height="34" fill="#ffffff" stroke="#e5e5e5" stroke-width="1.5"/>
+    <rect x="19" y="9" width="4" height="10" rx="2" fill="#5f6368"/>
+    <rect x="41" y="9" width="4" height="10" rx="2" fill="#5f6368"/>
+    <text x="32" y="41" text-anchor="middle" font-family="Arial, 'Segoe UI', sans-serif" font-size="21" font-weight="800" fill="#1a73e8">31</text>
+  </g>
+</svg>

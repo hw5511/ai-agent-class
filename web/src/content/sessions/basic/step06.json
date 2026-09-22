@@ -1,0 +1,24 @@
+{
+  "step": 6,
+  "title": "MCP · 외부 서비스 연결",
+  "hours": "2시간",
+  "goal": "MCP 가 무엇인지 이해하고, 노션 · 구글 캘린더 · 드라이브 · Gmail · 블렌더를 Claude 에 연결해 직접 일을 시켜본다.",
+  "topics": [
+    "MCP 개념 (다리 · 서버 · API · 명령어 모음집)",
+    "웹 커넥터 연결과 노션 실습 (페이지 만들기 · 리서치 보고서 · 템플릿 채우기)",
+    "구글 캘린더 · 드라이브 · Gmail 커넥터",
+    "로컬 MCP: 블렌더"
+  ],
+  "practice": "웹 클로드에서 노션을 연결해 페이지를 만들고 템플릿을 채운 뒤, 구글 서비스와 블렌더까지 Claude Code 에서 다뤄본다.",
+  "parts": [
+    "s6-mcp-intro",
+    "s6-connector-web",
+    "s6-notion-first",
+    "s6-notion-merits",
+    "s6-notion-template",
+    "s6-gcal",
+    "s6-gdrive",
+    "s6-gmail",
+    "s6-blender"
+  ]
+}

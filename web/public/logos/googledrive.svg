@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="gdrive-clip"><rect x="3" y="3" width="58" height="58" rx="13"/></clipPath>
+  </defs>
+  <g clip-path="url(#gdrive-clip)">
+    <rect x="3" y="3" width="58" height="58" fill="#ffffff"/>
+    <polygon points="24,10 40,10 56,38 40,38" fill="#ffcf63"/>
+    <polygon points="24,10 8,38 16,52 40,52 32,38" fill="#00ac47"/>
+    <polygon points="40,38 16,38 8,38 16,52" fill="#00832d"/>
+    <polygon points="40,38 56,38 48,52 24,52 32,38" fill="#2684fc"/>
+  </g>
+</svg>

@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs>
+  <filter id="bs-sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#101113" flood-opacity="0.2"/></filter>
+  <linearGradient id="bs-sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#3d4a5c"/>
+    <stop offset="1" stop-color="#232a34"/>
+  </linearGradient>
+</defs>
+
+<!-- window frame -->
+<g filter="url(#bs-sh)"><rect x="60" y="60" width="1480" height="780" rx="10" fill="#2b2b2b"/></g>
+
+<!-- title bar -->
+<rect x="60" y="60" width="1480" height="34" rx="10" fill="#3a3a3a"/>
+<circle cx="86" cy="77" r="6" fill="#e5645b"/><circle cx="106" cy="77" r="6" fill="#e5c15b"/><circle cx="126" cy="77" r="6" fill="#5be56b"/>
+<text x="800" y="82" font-size="15" fill="#cfcfcf" text-anchor="middle">Blender</text>
+
+<!-- menu bar -->
+<rect x="60" y="94" width="1480" height="30" fill="#323232"/>
+<text x="80" y="114" font-size="15" fill="#c9c9c9">File</text>
+<text x="122" y="114" font-size="15" fill="#c9c9c9">Edit</text>
+<text x="168" y="114" font-size="15" fill="#c9c9c9">Render</text>
+<text x="228" y="114" font-size="15" fill="#c9c9c9">Window</text>
+<text x="296" y="114" font-size="15" fill="#c9c9c9">Help</text>
+<text x="1470" y="114" font-size="14" fill="#8fd19e" text-anchor="end">Layout Modeling Animation</text>
+
+<!-- toolbar left -->
+<rect x="60" y="124" width="48" height="606" fill="#2f2f2f"/>
+<g fill="none" stroke="#a0a0a0" stroke-width="2">
+  <rect x="74" y="140" width="20" height="20" rx="4"/>
+  <circle cx="84" cy="190" r="10"/>
+  <path d="M74 226 l20 0 l-10 18 Z"/>
+  <rect x="74" y="256" width="20" height="20" rx="10"/>
+</g>
+
+<!-- viewport -->
+<rect x="108" y="124" width="1172" height="606" fill="url(#bs-sky)"/>
+
+<!-- ground grid -->
+<g stroke="#4c5768" stroke-width="1">
+  <line x1="108" y1="600" x2="1280" y2="600"/>
+  <line x1="108" y1="560" x2="1280" y2="560"/>
+  <line x1="200" y1="500" x2="60" y2="730"/>
+  <line x1="400" y1="500" x2="330" y2="730"/>
+  <line x1="600" y1="500" x2="600" y2="730"/>
+  <line x1="800" y1="500" x2="870" y2="730"/>
+  <line x1="1000" y1="500" x2="1140" y2="730"/>
+  <line x1="1200" y1="500" x2="1410" y2="730"/>
+</g>
+
+<!-- platforms (low-poly) -->
+<g>
+  <polygon points="200,610 340,610 380,650 240,650" fill="#4e8fd6"/>
+  <polygon points="240,650 380,650 380,668 240,668" fill="#3a6fae"/>
+</g>
+<g>
+  <polygon points="440,560 580,560 615,595 475,595" fill="#5fb4a6"/>
+  <polygon points="475,595 615,595 615,612 475,612" fill="#488f83"/>
+</g>
+<g>
+  <polygon points="680,600 830,600 868,638 720,638" fill="#4e8fd6"/>
+  <polygon points="720,638 868,638 868,656 720,656" fill="#3a6fae"/>
+</g>
+<g>
+  <polygon points="920,540 1050,540 1084,573 954,573" fill="#8b7fd6"/>
+  <polygon points="954,573 1084,573 1084,590 954,590" fill="#6a5fae"/>
+</g>
+<g>
+  <polygon points="1130,595 1270,595 1305,630 1165,630" fill="#e0a860"/>
+  <polygon points="1165,630 1305,630 1305,648 1165,648" fill="#b6803e"/>
+</g>
+
+<!-- hero ball -->
+<circle cx="600" cy="500" r="34" fill="#e0703c"/>
+<circle cx="589" cy="489" r="10" fill="#f2a878" opacity="0.8"/>
+
+<!-- goal arch -->
+<g stroke="#f0c95b" stroke-width="8" fill="none" stroke-linecap="round">
+  <path d="M1180 620 L1180 500 A60 60 0 0 1 1300 500 L1300 620"/>
+</g>
+<rect x="1170" y="614" width="20" height="16" fill="#c9a13f"/>
+<rect x="1290" y="614" width="20" height="16" fill="#c9a13f"/>
+<polygon points="1240,470 1240,510 1275,490" fill="#e0703c"/>
+
+<!-- camera icon -->
+<g transform="translate(340,320)" fill="none" stroke="#f2d24b" stroke-width="4" stroke-linejoin="round">
+  <rect x="-30" y="-16" width="52" height="34" rx="6"/>
+  <polygon points="22,-6 44,-20 44,16 22,4"/>
+</g>
+<line x1="358" y1="320" x2="560" y2="480" stroke="#f2d24b" stroke-width="2" stroke-dasharray="5 4"/>
+
+<!-- outliner (right panel) -->
+<rect x="1280" y="124" width="200" height="606" fill="#2f2f2f"/>
+<text x="1294" y="146" font-size="14" fill="#c9c9c9" font-weight="700">Scene Collection</text>
+<line x1="1280" y1="156" x2="1480" y2="156" stroke="#3d3d3d" stroke-width="1"/>
+<g font-size="14" fill="#c9c9c9">
+  <circle cx="1300" cy="178" r="5" fill="#e0703c"/><text x="1310" y="182">Ball</text>
+  <rect x="1295" y="199" width="10" height="8" fill="#4e8fd6"/><text x="1310" y="208">Platform</text>
+  <rect x="1295" y="225" width="10" height="8" fill="#4e8fd6"/><text x="1310" y="234">Platform.001</text>
+  <rect x="1295" y="251" width="10" height="8" fill="#5fb4a6"/><text x="1310" y="260">Platform.002</text>
+  <rect x="1295" y="277" width="10" height="8" fill="#4e8fd6"/><text x="1310" y="286">Platform.003</text>
+  <rect x="1295" y="303" width="10" height="8" fill="#8b7fd6"/><text x="1310" y="312">Platform.004</text>
+  <rect x="1295" y="329" width="10" height="10" fill="none" stroke="#f0c95b" stroke-width="2"/><text x="1310" y="338">Goal</text>
+  <polygon points="1295,353 1306,359 1295,365" fill="#f2d24b"/><text x="1310" y="364">Camera</text>
+  <circle cx="1300" cy="386" r="5" fill="#f2d24b"/><text x="1310" y="390">Light</text>
+</g>
+
+<!-- properties row under outliner -->
+<rect x="1280" y="500" width="200" height="230" fill="#292929"/>
+<text x="1294" y="522" font-size="13" fill="#9a9a9a" font-weight="700">Object Properties</text>
+<rect x="1294" y="536" width="172" height="14" rx="3" fill="#3d3d3d"/>
+<rect x="1294" y="558" width="172" height="14" rx="3" fill="#3d3d3d"/>
+<rect x="1294" y="580" width="120" height="14" rx="3" fill="#3d3d3d"/>
+
+<!-- timeline -->
+<rect x="60" y="730" width="1480" height="70" fill="#292929"/>
+<line x1="90" y1="765" x2="1510" y2="765" stroke="#444" stroke-width="2"/>
+<g fill="#8fd19e">
+  <rect x="90" y="758" width="3" height="14"/>
+  <rect x="300" y="758" width="3" height="14"/>
+  <rect x="510" y="758" width="3" height="14"/>
+  <rect x="720" y="758" width="3" height="14"/>
+  <rect x="930" y="758" width="3" height="14"/>
+  <rect x="1140" y="758" width="3" height="14"/>
+  <rect x="1350" y="758" width="3" height="14"/>
+</g>
+<polygon points="480,750 500,750 490,772" fill="#e0703c"/>
+<text x="90" y="750" font-size="13" fill="#9a9a9a">1</text>
+<text x="1490" y="750" font-size="13" fill="#9a9a9a" text-anchor="end">250</text>
+
+<!-- MCP connected overlay card -->
+<g filter="url(#bs-sh)"><rect x="1170" y="746" width="330" height="76" rx="16" fill="#ffffff" stroke="#e5e5e5" stroke-width="2"/></g>
+<circle cx="1206" cy="784" r="14" fill="#d97757"/>
+<circle cx="1206" cy="784" r="20" fill="none" stroke="#d97757" stroke-width="2.4" opacity="0.4"/>
+<text x="1234" y="777" font-size="20" font-weight="800" fill="#101113">MCP 연결됨</text>
+<text x="1234" y="800" font-size="17" fill="#7c8288">localhost · 포트 9876</text>
+
+</svg>

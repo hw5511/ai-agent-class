@@ -1,0 +1,223 @@
+{
+  "id": "s6-gcal",
+  "title": "구글 캘린더",
+  "summary": "웹 클로드에서 구글 캘린더 커넥터를 연결하고, Claude Code 로 일정을 추가·조회·반복·삭제해본다.",
+  "slides": [
+    {
+      "id": "s6-gcal-01",
+      "template": "screen",
+      "title": "구글 캘린더 검색",
+      "screen": { "kind": "shot", "src": "/shots/s6/20_cal_1_search.png" },
+      "notes": [
+        { "n": 1, "head": "커넥터 검색창", "body": "화면 위쪽 디렉터리 검색창에 Google Calendar 를 입력해 보세요. 그러면 이름에 캘린더가 들어간 커넥터들이 목록으로 쭉 나타납니다." },
+        { "n": 2, "head": "공식 캘린더 커넥터", "body": "목록 맨 위에 있고 이름 옆에 체크 표시가 붙은 Google Calendar 항목이 Claude 가 공식으로 제공하는 커넥터예요. 이걸 눌러야 안전하게 연결할 수 있습니다." }
+      ]
+    },
+    {
+      "id": "s6-gcal-02",
+      "template": "screen",
+      "title": "계정 선택",
+      "screen": { "kind": "shot", "src": "/shots/s6/20_cal_2_after_plus.png" },
+      "notes": [
+        { "n": 1, "head": "+ 버튼 누르면 로그인 창", "body": "커넥터 카드에 있는 + 버튼을 누르면 화면처럼 어떤 구글 계정으로 연결할지 고르는 로그인 창이 새로 뜹니다." },
+        { "n": 2, "head": "수업용 계정 선택", "body": "여러 계정이 뜨더라도 지금은 본인이 쓰는 구글 계정을 선택해서 진행하세요." }
+      ]
+    },
+    {
+      "id": "s6-gcal-03",
+      "template": "screen",
+      "title": "액세스 동의",
+      "screen": { "kind": "shot", "src": "/shots/s6/20_cal_4_step.png" },
+      "notes": [
+        { "n": 1, "head": "요청 권한 확인", "body": "Claude for Google Calendar 가 무엇을 할 수 있게 해달라고 요청하는지 화면에 나온 권한 목록을 한 번 읽어보세요." },
+        { "n": 2, "head": "계속 눌러 승인", "body": "권한 내용을 확인했다면 화면 아래 계속 버튼을 눌러야 클로드가 실제로 내 캘린더에 접근할 수 있게 승인됩니다." }
+      ]
+    },
+    {
+      "id": "s6-gcal-04",
+      "template": "screen",
+      "title": "연결 확인",
+      "screen": { "kind": "shot", "src": "/shots/s6/20_cal_9_yours.png" },
+      "notes": [
+        { "n": 1, "head": "내 항목에 추가됨", "body": "사용자 지정 화면의 내 항목 탭을 열어보면 방금 연결한 Google Calendar 카드가 목록에 새로 생긴 것을 볼 수 있어요." },
+        { "n": 2, "head": "체크 표시로 확인", "body": "카드 이름 옆에 초록색 체크 표시가 떠 있으면 연결이 정상적으로 끝났다는 뜻이니 다음 단계로 넘어가면 됩니다." }
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [{ "kind": "link", "href": "claude.ai/customize/connectors", "text": "claude.ai/customize/connectors" }]
+      }
+    },
+    {
+      "id": "s6-gcal-05",
+      "template": "screen",
+      "title": "재실행 · /mcp 확인",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [{ "role": "user", "text": "/mcp" }],
+          "panel": {
+            "title": "",
+            "rows": [
+              { "seg": [{ "t": "Manage MCP servers", "c": "bold" }] },
+              { "seg": [{ "t": "1 servers", "c": "dim" }] },
+              { "seg": [] },
+              { "seg": [{ "t": "claude.ai", "c": "bold" }], "badge": 1 },
+              { "seg": [{ "t": "  claude.ai Notion · ✔ connected · 45 tools", "c": "green" }] },
+              { "seg": [{ "t": "  claude.ai Google Calendar · ✔ connected · 12 tools", "c": "green" }], "badge": 2 }
+            ]
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "claude.ai 서버 하나", "body": "터미널에서 claude --dangerously-skip-permissions 로 클로드 코드를 다시 실행한 뒤 /mcp 를 입력해 보세요. claude.ai 라는 서버 하나 아래 지금까지 연결한 커넥터들이 한 번에 모여 있는 걸 볼 수 있습니다." },
+        { "n": 2, "head": "구글 캘린더 연결됨", "body": "목록 중 claude.ai Google Calendar 줄 옆에 초록색 connected 표시와 12 tools 라는 숫자가 새로 보이면, 방금 연결한 캘린더 도구를 클로드 코드에서도 바로 쓸 수 있다는 뜻이에요." }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          { "kind": "copy", "value": "claude --dangerously-skip-permissions" },
+          { "kind": "copy", "value": "/mcp" }
+        ]
+      }
+    },
+    {
+      "id": "s6-gcal-06",
+      "template": "screen",
+      "title": "프롬프트 · 할 수 있는 일 묻기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": { "text": "구글 캘린더 mcp 툴목록 보고 너가 뭘 할수 있는지 알려줘", "badge": 1 },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "툴목록 기반 질문", "body": "터미널 입력창에 구글 캘린더 mcp 툴목록 보고 너가 뭘 할수 있는지 알려줘 라고 그대로 입력해 보세요. 클로드가 캘린더 도구 목록을 스스로 확인한 뒤 설명해 줍니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [{ "kind": "copy", "value": "구글 캘린더 mcp 툴목록 보고 너가 뭘 할수 있는지 알려줘" }]
+      }
+    },
+    {
+      "id": "s6-gcal-07",
+      "template": "screen",
+      "title": "결과 · 할 수 있는 일 목록",
+      "replaceWithCapture": "구글 캘린더 mcp 툴목록 질문 실제 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [{ "role": "user", "text": "구글 캘린더 mcp 툴목록 보고 너가 뭘 할수 있는지 알려줘" }],
+          "panel": {
+            "title": "",
+            "rows": [
+              { "seg": [{ "t": "● Google Calendar MCP 연결 상태: ✔ connected · 12 tools", "c": "bold" }], "badge": 1 },
+              { "seg": [] },
+              { "seg": [{ "t": "● 사용 가능한 일", "c": "bold" }], "badge": 2 },
+              { "seg": [{ "t": "  · 일정 조회 · 생성 · 수정 · 삭제", "c": "dim" }] },
+              { "seg": [{ "t": "  · 반복 일정 설정", "c": "dim" }] },
+              { "seg": [{ "t": "  · 구글 미트 링크 추가", "c": "dim" }] },
+              { "seg": [{ "t": "  · 여러 캘린더의 빈 시간 찾기", "c": "dim" }] }
+            ]
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "연결 상태 확인", "body": "가장 위 줄에 Google Calendar MCP 가 connected 상태이고 12 tools 를 쓸 수 있다고 나오면, 방금 연결한 도구들이 실제로 작동 준비가 됐다는 뜻이에요." },
+        { "n": 2, "head": "할 수 있는 일 요약", "body": "그 아래에 일정 조회부터 수정, 삭제, 반복 일정, 미트 링크 추가, 빈 시간 찾기까지 클로드가 할 수 있는 일들을 목록으로 정리해서 보여줍니다." }
+      ]
+    },
+    {
+      "id": "s6-gcal-08",
+      "template": "screen",
+      "title": "실습 · 이벤트 추가 · 조회 · 반복 · 삭제",
+      "replaceWithCapture": "이벤트 추가 · 조회 · 반복 · 삭제 실습 실제 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            { "role": "user", "text": "내일 오후 3시에 '팀 회의' 일정 1시간짜리로 캘린더에 추가해줘", "badge": 1 },
+            { "role": "assistant", "text": "✔ '팀 회의' 일정을 내일 15:00~16:00 에 추가했어요" },
+            { "role": "user", "text": "오늘 내 캘린더에 뭐 있는지 보여줘" },
+            { "role": "assistant", "text": "오늘 일정은 '팀 회의' 15:00~16:00 하나예요" },
+            { "role": "user", "text": "매주 월요일 오전 10시에 '주간 스크럼' 반복 일정으로 만들어줘", "badge": 2 },
+            { "role": "assistant", "text": "✔ 매주 월요일 10:00 에 '주간 스크럼' 반복 일정을 만들었어요" },
+            { "role": "user", "text": "방금 만든 '주간 스크럼' 일정 삭제해줘" },
+            { "role": "assistant", "text": "✔ '주간 스크럼' 일정을 삭제했어요" }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "이벤트 추가 · 조회", "body": "먼저 내일 오후 3시에 '팀 회의' 일정 1시간짜리로 캘린더에 추가해줘 라고 입력해 보세요. 클로드가 실제로 캘린더에 일정을 넣고, 이어서 오늘 일정을 물어보면 방금 넣은 일정을 그대로 읽어서 알려줍니다." },
+        { "n": 2, "head": "반복 일정 · 삭제", "body": "이번에는 매주 월요일 오전 10시에 '주간 스크럼' 반복 일정으로 만들어줘 라고 입력하면 매주 반복되는 일정이 새로 생겨요. 마지막으로 방금 만든 일정을 지워달라고 하면 실제로 삭제까지 해 줍니다." },
+        { "n": "!", "head": "날짜와 시간은 정확히", "body": "날짜와 시간을 정확히 적어야 원하는 시각의 일정으로 만들어집니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "내일 오후 3시에 '팀 회의' 일정 1시간짜리로 캘린더에 추가해줘", "desc": "이벤트 추가" },
+          { "kind": "copy", "value": "오늘 내 캘린더에 뭐 있는지 보여줘", "desc": "일정 읽기" },
+          { "kind": "copy", "value": "매주 월요일 오전 10시에 '주간 스크럼' 반복 일정으로 만들어줘", "desc": "반복 일정" },
+          { "kind": "copy", "value": "방금 만든 '주간 스크럼' 일정 삭제해줘", "desc": "삭제" }
+        ]
+      }
+    },
+    {
+      "id": "s6-gcal-09",
+      "template": "screen",
+      "title": "실습 · Meet 링크 · 빈 시간 찾기",
+      "replaceWithCapture": "Meet 링크 · 빈 시간 찾기 실습 실제 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            { "role": "user", "text": "내일 팀 회의 일정에 구글미트 링크도 같이 넣어줘", "badge": 1 },
+            { "role": "assistant", "text": "✔ '팀 회의' 일정에 meet.google.com/abc-defg-hij 링크를 추가했어요" },
+            { "role": "user", "text": "이번주에 내가 안 바쁜 시간대 좀 찾아줘", "badge": 2 },
+            { "role": "assistant", "text": "이번주 화 · 목 오후 2시~5시가 비어 있어요" }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "미트 링크까지 자동으로", "body": "내일 팀 회의 일정에 구글미트 링크도 같이 넣어줘 라고 입력해 보세요. 클로드가 기존 일정을 찾아서 화상회의 링크를 만들어 그 일정에 바로 붙여 줍니다." },
+        { "n": 2, "head": "빈 시간대 찾기", "body": "이번주에 내가 안 바쁜 시간대 좀 찾아줘 라고 물어보면, 이번주 일정을 전부 훑어서 비어 있는 시간대만 골라 알려줍니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "내일 팀 회의 일정에 구글미트 링크도 같이 넣어줘", "desc": "Meet 링크 추출" },
+          { "kind": "copy", "value": "이번주에 내가 안 바쁜 시간대 좀 찾아줘", "desc": "안 바쁜 시간 찾기" }
+        ]
+      }
+    }
+  ]
+}
