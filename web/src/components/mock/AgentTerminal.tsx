@@ -37,34 +37,53 @@ export function AgentTerminal({ t, className }: { t: Terminal; className?: strin
   const conv = useRef<HTMLDivElement>(null)
   const list = useRef<HTMLDivElement>(null)
   const [s, setS] = useState(1)
-  // Text re-wraps at every scale, so the fit can oscillate; allow a few adjustments per terminal, then stop.
-  const tries = useRef(0)
+  // Two passes, no feedback loop: pass 0 measures at scale 1 and picks a scale; pass 1 re-measures at that
+  // scale (text wraps differently) and may only shrink. A new terminal or a resized window starts over.
+  const pass = useRef(0)
+  const measure = () => {
+    const o = outer.current, c = conv.current, l = list.current
+    if (!o || !c || !l) return null
+    const H = o.clientHeight
+    if (!H) return null
+    const inner = H / s
+    const need = inner - c.clientHeight + l.offsetHeight + 8
+    return Math.min(1.6, Math.max(0.7, H / need))
+  }
   useLayoutEffect(() => {
-    tries.current = 0
+    pass.current = 0
+    setS(1)
   }, [t])
   useLayoutEffect(() => {
-    if (!t.fit) return
-    const run = () => {
-      const o = outer.current, c = conv.current, l = list.current
-      if (!o || !c || !l || tries.current >= 6) return
-      const H = o.clientHeight
-      if (!H) return
-      setS((cur) => {
-        const inner = H / cur // inner box height in unscaled px
-        const fixed = inner - c.clientHeight
-        const need = fixed + l.offsetHeight + 8
-        const next = Math.min(1.6, Math.max(0.7, H / need))
-        if (Math.abs(next - cur) < 0.02) return cur
-        tries.current += 1
-        // after the first corrections only shrink, so a wrap-induced overflow can never bounce back
-        return tries.current > 2 ? Math.min(cur, next) : next
-      })
+    if (!t.fit || pass.current > 1) return
+    const k = measure()
+    if (k === null) return
+    if (pass.current === 0) {
+      pass.current = 1
+      if (Math.abs(k - s) >= 0.02) setS(k)
+      else pass.current = 2
+    } else {
+      pass.current = 2
+      if (k < s - 0.01) setS(k)
     }
-    run()
-    const ro = new ResizeObserver(run)
-    if (outer.current) ro.observe(outer.current)
+  })
+  useLayoutEffect(() => {
+    if (!t.fit || !outer.current) return
+    let w = outer.current.clientWidth, h = outer.current.clientHeight
+    const restart = () => {
+      pass.current = 0
+      setS(1)
+    }
+    const ro = new ResizeObserver(() => {
+      const o = outer.current
+      if (!o || (o.clientWidth === w && o.clientHeight === h)) return
+      w = o.clientWidth
+      h = o.clientHeight
+      restart()
+    })
+    ro.observe(outer.current)
+    document.fonts?.ready.then(restart)
     return () => ro.disconnect()
-  }, [t, s])
+  }, [t])
   const body = <TerminalBody t={t} className={className} convRef={conv} listRef={list} />
   if (!t.fit) return body
   return (
