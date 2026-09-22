@@ -25,12 +25,12 @@
         {
           "n": 1,
           "head": "한 주제 끝",
-          "body": "대화가 쌓인 Messages"
+          "body": "한 주제의 대화가 끝나면 Messages 에 그 대화가 쌓여 있는 상태입니다."
         },
         {
           "n": 2,
           "head": "/clear",
-          "body": "Messages 비운 새 세션으로 시작"
+          "body": "/clear 를 입력하면 Messages 를 비우고 새 세션으로 시작합니다."
         }
       ],
       "action": {
@@ -55,17 +55,17 @@
         {
           "n": 1,
           "head": "잊었다는 대답",
-          "body": "말로만 잊은 척"
+          "body": "잊어달라고 말하면 Claude 는 잊었다고 대답하지만 실제로는 말로만 잊은 척하는 것입니다."
         },
         {
           "n": 2,
           "head": "그대로 남은 실수",
-          "body": "다음 질문에 같이 투입"
+          "body": "이전 실수는 그대로 남아서 다음 질문을 보낼 때도 같이 투입됩니다."
         },
         {
           "n": "!",
           "head": "암 도려내기",
-          "body": "/rewind 로 실제 제거"
+          "body": "이럴 때는 /rewind 로 그 내용을 실제로 제거해야 합니다."
         }
       ]
     },
@@ -136,12 +136,12 @@
         {
           "n": 1,
           "head": "인삿말 요청",
-          "body": "Chrome 챌린지 세션에서 이어서"
+          "body": "앞서 Chrome 에서 로그인 계정을 확인한 세션에 이어서 현재폴더에 test.md 파일에 간단한 인삿말을 남겨 달라고 요청합니다."
         },
         {
           "n": 2,
           "head": "Write 툴",
-          "body": "test.md 새로 생성"
+          "body": "Write 툴이 test.md 파일을 새로 만들어서 인삿말 두 줄을 적습니다."
         }
       ],
       "action": {
@@ -232,12 +232,12 @@
         {
           "n": 1,
           "head": "영문 버전 요청",
-          "body": "같은 문서 아래에 추가"
+          "body": "같은 test.md 문서 아래에 영문 버전도 남겨 달라고 요청합니다."
         },
         {
           "n": 2,
           "head": "Edit 툴",
-          "body": "Write 한 번 · Edit 한 번 사용한 상태"
+          "body": "이번에는 Update 로 표시된 Edit 툴을 써서 지금까지 Write 한 번, Edit 한 번을 사용한 상태가 됩니다."
         }
       ],
       "action": {
@@ -397,12 +397,12 @@
         {
           "n": 1,
           "head": "current 바로 위 메시지",
-          "body": "↑ ↓ 로 고르고 Enter"
+          "body": "방향키 위아래로 되돌릴 메시지를 고르고 Enter 를 눌러 선택합니다."
         },
         {
           "n": "!",
           "head": "메시지별 변경 표시",
-          "body": "No code changes · test.md +3"
+          "body": "각 메시지 아래에 No code changes 나 test.md +3 처럼 그 메시지에서 바뀐 내용이 표시됩니다."
         }
       ],
       "action": {
@@ -559,17 +559,17 @@
         {
           "n": 1,
           "head": "Restore conversation",
-          "body": "대화만 되돌리기"
+          "body": "Restore conversation 은 대화만 되돌립니다."
         },
         {
           "n": 2,
           "head": "Restore code",
-          "body": "Write · Edit 한 파일만 되돌리기"
+          "body": "Restore code 는 Write 나 Edit 로 바꾼 파일만 되돌립니다."
         },
         {
           "n": 3,
           "head": "Restore code and conversation",
-          "body": "둘 다 · 이번 실습 선택"
+          "body": "Restore code and conversation 은 대화와 파일을 둘 다 되돌리는 방식으로, 이번 실습에서는 이 방식을 선택합니다."
         }
       ]
     },
@@ -643,12 +643,12 @@
         {
           "n": 1,
           "head": "보내기 직전 대화로",
-          "body": "영문 버전 요청 전 시점"
+          "body": "대화는 영문 버전 요청을 보내기 직전 시점으로 돌아갑니다."
         },
         {
           "n": "!",
           "head": "파일 변화 유지",
-          "body": "test.md 영문 줄 그대로"
+          "body": "test.md 에 적힌 영문 줄은 지워지지 않고 그대로 남아 있습니다."
         }
       ]
     },
@@ -735,12 +735,12 @@
         {
           "n": 1,
           "head": "Write · Edit 기록 되돌리기",
-          "body": "되돌린 지점 이후 파일 변경 취소"
+          "body": "되돌린 지점 이후에 Write 나 Edit 로 바꾼 파일 내용이 취소되어 test.md 에서 영문 줄이 사라집니다."
         },
         {
           "n": "!",
           "head": "Bash 제외",
-          "body": "명령어로 바꾼 파일은 그대로"
+          "body": "Bash 명령어로 바꾼 파일은 이 되돌리기 대상에서 제외되어 그대로 남습니다."
         }
       ]
     },
@@ -811,12 +811,12 @@
         {
           "n": 1,
           "head": "test.md",
-          "body": "영문 줄 사라짐"
+          "body": "test.md 에서 영문 줄이 사라지고 인삿말 두 줄만 남습니다."
         },
         {
           "n": 2,
           "head": "입력칸",
-          "body": "되돌린 메시지 다시 표시"
+          "body": "되돌린 메시지였던 그 문서에 아래에 영문버전도 남겨줘 가 입력칸에 다시 나타납니다."
         }
       ]
     },
@@ -915,12 +915,12 @@
         {
           "n": 1,
           "head": "인삿말 메시지로 rewind",
-          "body": "Restore code and conversation"
+          "body": "이번에는 인삿말을 남겨달라고 한 메시지까지 Restore code and conversation 으로 되돌립니다."
         },
         {
           "n": 2,
           "head": "test.md 삭제",
-          "body": "Write 기록까지 되돌림"
+          "body": "Write 로 만들었던 test.md 파일 자체가 사라질 만큼 되돌려집니다."
         }
       ]
     },
@@ -1040,12 +1040,12 @@
         {
           "n": 1,
           "head": "글 있을 때",
-          "body": "입력칸 전체 지우기"
+          "body": "입력칸에 글이 남아 있을 때 Esc 를 두 번 누르면 입력칸 전체가 지워집니다."
         },
         {
           "n": 2,
           "head": "비어 있을 때",
-          "body": "/rewind 바로 열기"
+          "body": "입력칸이 비어 있을 때 Esc 를 두 번 누르면 /rewind 창이 바로 열립니다."
         }
       ]
     }

@@ -15,12 +15,12 @@
         {
           "n": 1,
           "head": "채팅 하나 = 세션 하나",
-          "body": "ChatGPT 왼쪽 목록의 한 칸"
+          "body": "ChatGPT 왼쪽 목록에 있는 채팅 한 칸이 세션 하나에 해당합니다."
         },
         {
           "n": 2,
           "head": "채팅 목록 = 세션 목록",
-          "body": "Claude Code 도 같은 구조"
+          "body": "Claude Code 도 같은 구조로, 대화 하나하나가 세션이 됩니다."
         }
       ]
     },
@@ -96,12 +96,12 @@
         {
           "n": 1,
           "head": "같은 세션",
-          "body": "앞에서 나눈 대화 기억"
+          "body": "같은 세션 안에서는 내 이름이 뭐라고 했지 라고 물어도 앞에서 나눈 대화를 기억해서 대답합니다."
         },
         {
           "n": 2,
           "head": "세션이 바뀌면",
-          "body": "/clear 뒤에는 이전 대화 기억 없음"
+          "body": "/clear 뒤에는 이전 대화를 기억하지 못해서 이름을 알려준 적이 없다고 대답합니다."
         }
       ]
     },
@@ -141,12 +141,12 @@
         {
           "n": 1,
           "head": "bypass permissions on",
-          "body": "앞으로 항상 이 명령어로 실행"
+          "body": "claude --dangerously-skip-permissions 로 실행하면 앞으로 항상 이 명령어로 실행하겠다는 뜻의 bypass permissions on 이 표시됩니다."
         },
         {
           "n": 2,
           "head": "첫 대화",
-          "body": "자기소개 요청으로 세션 만들기"
+          "body": "간단하게 자기소개 해볼래 라고 첫 질문을 보내면서 세션을 시작합니다."
         }
       ],
       "action": {
@@ -211,12 +211,12 @@
         {
           "n": 1,
           "head": "Ctrl + C 두 번",
-          "body": "한 번 누르면 Press Ctrl-C again to exit 표시, 한 번 더 누르면 종료"
+          "body": "Ctrl 과 C 를 한 번 누르면 Press Ctrl-C again to exit 이 표시되고, 한 번 더 누르면 세션이 종료됩니다."
         },
         {
           "n": 2,
           "head": "--resume 세션ID 드래그 복사",
-          "body": "claude 뒤 부분만 선택 후 Ctrl + C"
+          "body": "종료 화면에 나오는 claude --resume 뒤의 세션 id 부분만 드래그로 선택해서 Ctrl + C 로 복사합니다."
         }
       ]
     },
@@ -260,12 +260,12 @@
         {
           "n": 1,
           "head": "방향키 ↑",
-          "body": "직전 실행 명령어 불러오기"
+          "body": "방향키 ↑ 를 누르면 직전에 실행했던 claude --dangerously-skip-permissions 명령어가 다시 불러와집니다."
         },
         {
           "n": 2,
           "head": "한 칸 띄우고 붙여넣기",
-          "body": "Ctrl + V 후 Enter"
+          "body": "그 뒤에 한 칸 띄우고 Ctrl + V 로 복사해 둔 --resume 세션id 를 붙여넣은 다음 Enter 를 누릅니다."
         }
       ]
     },
@@ -304,12 +304,12 @@
         {
           "n": 1,
           "head": "이전 대화 그대로",
-          "body": "종료 전 자기소개 대화 복원"
+          "body": "--resume 세션id 로 다시 들어가면 종료 전 나눴던 자기소개 대화가 그대로 복원됩니다."
         },
         {
           "n": "!",
           "head": "이어서 대화 가능",
-          "body": "앞 내용 기억한 상태"
+          "body": "앞의 내용을 기억한 상태라서 바로 이어서 대화할 수 있습니다."
         }
       ]
     },
@@ -325,17 +325,17 @@
         {
           "n": 1,
           "head": "--dangerously-skip-permissions",
-          "body": "권한 확인 없이 실행"
+          "body": "--dangerously-skip-permissions 는 권한 확인 없이 실행하는 플래그입니다."
         },
         {
           "n": 2,
           "head": "--chrome",
-          "body": "Claude in Chrome 켜고 실행"
+          "body": "--chrome 은 Claude in Chrome 을 켜고 실행하는 플래그입니다."
         },
         {
           "n": 3,
           "head": "--resume",
-          "body": "지정한 세션 이어서 실행"
+          "body": "--resume 은 지정한 세션을 이어서 실행하는 플래그입니다."
         }
       ]
     },
@@ -487,12 +487,12 @@
         {
           "n": 1,
           "head": "Session name",
-          "body": "처음엔 비어 있음"
+          "body": "처음에는 Session name 칸이 비어 있고 /rename to add a name 이라고 안내됩니다."
         },
         {
           "n": 2,
           "head": "Session ID",
-          "body": "종료할 때 나온 번호와 같은 값"
+          "body": "Session ID 칸에 표시되는 값은 종료할 때 나왔던 세션 id 와 같은 값입니다."
         }
       ],
       "action": {
