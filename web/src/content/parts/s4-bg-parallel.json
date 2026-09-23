@@ -61,7 +61,25 @@
             ]
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on · 2 shells · ↓ to manage"
+            "text": "⏵⏵ bypass permissions on · 2 shells · ↓ to manage",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · ",
+                "c": "dim"
+              },
+              {
+                "t": "2 shells",
+                "c": "sky"
+              },
+              {
+                "t": " · ↓ to manage",
+                "c": "dim"
+              }
+            ]
           }
         },
         "noSidebar": true
@@ -240,6 +258,24 @@
           },
           "footer": {
             "text": "⏵⏵ bypass permissions on · 2 shells · ↓ to manage",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · ",
+                "c": "dim"
+              },
+              {
+                "t": "2 shells",
+                "c": "sky"
+              },
+              {
+                "t": " · ↓ to manage",
+                "c": "dim"
+              }
+            ],
             "badge": 2
           }
         },
@@ -353,7 +389,25 @@
             ]
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on · 1 shell · ↓ to manage"
+            "text": "⏵⏵ bypass permissions on · 1 shell · ↓ to manage",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · ",
+                "c": "dim"
+              },
+              {
+                "t": "1 shell",
+                "c": "sky"
+              },
+              {
+                "t": " · ↓ to manage",
+                "c": "dim"
+              }
+            ]
           }
         },
         "noSidebar": true
@@ -402,7 +456,25 @@
             "placeholder": "메시지를 입력하세요..."
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on · 1 shell · ↓ to manage"
+            "text": "⏵⏵ bypass permissions on · 1 shell · ↓ to manage",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · ",
+                "c": "dim"
+              },
+              {
+                "t": "1 shell",
+                "c": "sky"
+              },
+              {
+                "t": " · ↓ to manage",
+                "c": "dim"
+              }
+            ]
           }
         },
         "noSidebar": true
@@ -498,7 +570,17 @@
             ]
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
           }
         },
         "noSidebar": true

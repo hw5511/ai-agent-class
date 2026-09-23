@@ -99,7 +99,25 @@
             ]
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage"
+            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · ",
+                "c": "dim"
+              },
+              {
+                "t": "1 monitor",
+                "c": "sky"
+              },
+              {
+                "t": " · ↓ to manage",
+                "c": "dim"
+              }
+            ]
           }
         },
         "noSidebar": true
@@ -207,7 +225,25 @@
             ]
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage"
+            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · ",
+                "c": "dim"
+              },
+              {
+                "t": "1 monitor",
+                "c": "sky"
+              },
+              {
+                "t": " · ↓ to manage",
+                "c": "dim"
+              }
+            ]
           }
         },
         "noSidebar": true
@@ -260,7 +296,17 @@
             "placeholder": "메시지를 입력하세요..."
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
           }
         },
         "noSidebar": true
@@ -346,7 +392,25 @@
             ]
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage"
+            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · ",
+                "c": "dim"
+              },
+              {
+                "t": "1 monitor",
+                "c": "sky"
+              },
+              {
+                "t": " · ↓ to manage",
+                "c": "dim"
+              }
+            ]
           }
         }
       },
@@ -440,7 +504,25 @@
             ]
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage"
+            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · ",
+                "c": "dim"
+              },
+              {
+                "t": "1 monitor",
+                "c": "sky"
+              },
+              {
+                "t": " · ↓ to manage",
+                "c": "dim"
+              }
+            ]
           }
         }
       },
@@ -515,7 +597,25 @@
             ]
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage"
+            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · ",
+                "c": "dim"
+              },
+              {
+                "t": "1 monitor",
+                "c": "sky"
+              },
+              {
+                "t": " · ↓ to manage",
+                "c": "dim"
+              }
+            ]
           }
         },
         "keycap": {
@@ -650,7 +750,25 @@
             ]
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage"
+            "text": "⏵⏵ bypass permissions on · 1 monitor · ↓ to manage",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · ",
+                "c": "dim"
+              },
+              {
+                "t": "1 monitor",
+                "c": "sky"
+              },
+              {
+                "t": " · ↓ to manage",
+                "c": "dim"
+              }
+            ]
           }
         },
         "noSidebar": true

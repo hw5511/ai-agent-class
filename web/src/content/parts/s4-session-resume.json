@@ -102,7 +102,17 @@
             "badge": 1
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
           }
         }
       },
@@ -237,7 +247,17 @@
             "placeholder": "메시지를 입력하세요..."
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
           }
         }
       },
@@ -361,7 +381,17 @@
             "badge": 1
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
           }
         }
       },
@@ -477,7 +507,17 @@
             "badge": 1
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
           }
         }
       },
@@ -593,7 +633,17 @@
             "badge": 1
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
           }
         }
       },

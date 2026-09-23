@@ -235,7 +235,18 @@ function TerminalBody({ t, className, convRef, listRef, spacerRef }: { t: Termin
             </div>
           </Row>
           <Row gutter={hasBadges} badge={t.footer?.badge}>
-            {t.footer ? <span className="text-[18px] text-[#e5657a]">{t.footer.text}</span> : <span className="text-[18px] text-[#5b5e61]">? for shortcuts</span>}
+            {t.footer ? (
+              // Real Claude Code paints the status line in three colours: the permission mode red,
+              // a live count like "1 shell" sky blue, the key hints grey. A footer that only carries
+              // `text` keeps the old all-red look, so an unexpected string is never mis-coloured.
+              <span className="text-[18px] text-[#e5657a]">
+                {t.footer.seg
+                  ? t.footer.seg.map((g, j) => (
+                      <span key={j} className={cn(g.c === "sky" && "text-[#8fd0ff]", g.c === "dim" && "text-[#8b9095]")}>{g.t}</span>
+                    ))
+                  : t.footer.text}
+              </span>
+            ) : <span className="text-[18px] text-[#5b5e61]">? for shortcuts</span>}
           </Row>
           {t.agents && (
             <div className="mt-1 flex flex-col gap-0.5 text-[19px]">

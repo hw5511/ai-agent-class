@@ -25,7 +25,17 @@
             "placeholder": "메시지를 입력하세요..."
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on · ↓ to manage"
+            "text": "⏵⏵ bypass permissions on · ↓ to manage",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · ↓ to manage",
+                "c": "dim"
+              }
+            ]
           },
           "agents": {
             "rows": [
@@ -264,7 +274,17 @@
             "placeholder": "메시지를 입력하세요..."
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on · ↓ to manage"
+            "text": "⏵⏵ bypass permissions on · ↓ to manage",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · ↓ to manage",
+                "c": "dim"
+              }
+            ]
           },
           "agents": {
             "hint": "Enter to view · x to stop",

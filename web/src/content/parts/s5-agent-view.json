@@ -62,7 +62,17 @@
               ]
             },
             "footer": {
-              "text": "⏵⏵ bypass permissions on · esc to interrupt"
+              "text": "⏵⏵ bypass permissions on · esc to interrupt",
+              "seg": [
+                {
+                  "t": "⏵⏵ bypass permissions on",
+                  "c": "red"
+                },
+                {
+                  "t": " · esc to interrupt",
+                  "c": "dim"
+                }
+              ]
             },
             "fit": true
           }

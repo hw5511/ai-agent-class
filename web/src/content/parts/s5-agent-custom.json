@@ -30,7 +30,17 @@
             "placeholder": "메시지를 입력하세요..."
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
           },
           "fit": true
         }
@@ -363,7 +373,17 @@
             "placeholder": "메시지를 입력하세요..."
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on · ↓ to manage"
+            "text": "⏵⏵ bypass permissions on · ↓ to manage",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · ↓ to manage",
+                "c": "dim"
+              }
+            ]
           },
           "agents": {
             "rows": [

@@ -42,7 +42,17 @@
               ]
             },
             "footer": {
-              "text": "⏵⏵ bypass permissions on · esc to interrupt"
+              "text": "⏵⏵ bypass permissions on · esc to interrupt",
+              "seg": [
+                {
+                  "t": "⏵⏵ bypass permissions on",
+                  "c": "red"
+                },
+                {
+                  "t": " · esc to interrupt",
+                  "c": "dim"
+                }
+              ]
             }
           }
         }
@@ -174,7 +184,17 @@
             ]
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on · esc to interrupt"
+            "text": "⏵⏵ bypass permissions on · esc to interrupt",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · esc to interrupt",
+                "c": "dim"
+              }
+            ]
           }
         },
         "noSidebar": true
@@ -260,7 +280,17 @@
             ]
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on · esc to interrupt"
+            "text": "⏵⏵ bypass permissions on · esc to interrupt",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · esc to interrupt",
+                "c": "dim"
+              }
+            ]
           }
         },
         "noSidebar": true
@@ -337,7 +367,17 @@
             ]
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on · esc to interrupt"
+            "text": "⏵⏵ bypass permissions on · esc to interrupt",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · esc to interrupt",
+                "c": "dim"
+              }
+            ]
           }
         },
         "noSidebar": true
@@ -436,6 +476,24 @@
           },
           "footer": {
             "text": "⏵⏵ bypass permissions on · 1 shell · ↓ to manage",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · ",
+                "c": "dim"
+              },
+              {
+                "t": "1 shell",
+                "c": "sky"
+              },
+              {
+                "t": " · ↓ to manage",
+                "c": "dim"
+              }
+            ],
             "badge": 2
           }
         },
@@ -514,6 +572,24 @@
           },
           "footer": {
             "text": "⏵⏵ bypass permissions on · 1 shell · ↓ to manage",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · ",
+                "c": "dim"
+              },
+              {
+                "t": "1 shell",
+                "c": "sky"
+              },
+              {
+                "t": " · ↓ to manage",
+                "c": "dim"
+              }
+            ],
             "badge": 2
           }
         },
@@ -593,7 +669,25 @@
             "placeholder": "메시지를 입력하세요..."
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on · 1 shell · ↓ to manage"
+            "text": "⏵⏵ bypass permissions on · 1 shell · ↓ to manage",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " · ",
+                "c": "dim"
+              },
+              {
+                "t": "1 shell",
+                "c": "sky"
+              },
+              {
+                "t": " · ↓ to manage",
+                "c": "dim"
+              }
+            ]
           }
         },
         "editor": {

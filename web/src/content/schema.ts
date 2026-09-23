@@ -337,6 +337,12 @@ export interface VideoScreen {
 
 export type Vendor = "claude" | "antigravity" | "codex" | "shell"
 
+/** one coloured run of the terminal status footer; no `c` means the footer red */
+export interface FooterSeg {
+  t: string
+  c?: "red" | "sky" | "dim"
+}
+
 export interface Terminal {
   vendor: Vendor
   cwd?: string
@@ -349,7 +355,12 @@ export interface Terminal {
   // /resume session picker: optional search box, the folder it lists, sessions newest first
   picker?: { title?: string; search?: boolean; folder?: string; folderBadge?: number; items: { name: string; meta: string; selected?: boolean; badge?: number }[] }
   sessionTag?: { name: string; badge?: number } // session name shown as a light-blue tag on the input box
-  footer?: { text: string; badge?: number } // status line under the input box, e.g. "bypass permissions on"
+  // status line under the input box, e.g. "bypass permissions on".
+  // `text` alone renders all red (the legacy look). Real Claude Code colours the parts
+  // differently, so `seg` spells the parts out: "red" = the permission mode, "sky" = a live
+  // resource count like "1 shell", "dim" = a keyboard hint. `text` stays as the plain-text
+  // source of truth (search, diffs) and must equal the segments joined; `seg` wins when present.
+  footer?: { text: string; seg?: FooterSeg[]; badge?: number }
   input?: { text?: string; placeholder?: string; badge?: number }
   fit?: boolean // scale the whole terminal so the content fills the window (no dark gap, nothing cut)
   // a titled divider right above the input box, e.g. "진해군항제 심층조사(하위 에이전트 수합)" inside a subagent

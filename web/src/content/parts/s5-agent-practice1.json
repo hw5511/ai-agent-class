@@ -114,7 +114,17 @@
             ]
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on (shift+tab to cycle) · ← for agents"
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle) · ← for agents",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle) · ← for agents",
+                "c": "dim"
+              }
+            ]
           },
           "fit": true
         },

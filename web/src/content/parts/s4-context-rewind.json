@@ -121,7 +121,17 @@
             "placeholder": "메시지를 입력하세요..."
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
           }
         },
         "editor": {
@@ -214,7 +224,17 @@
             "placeholder": "메시지를 입력하세요..."
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
           }
         },
         "editor": {
@@ -608,7 +628,17 @@
               "placeholder": "메시지를 입력하세요..."
             },
             "footer": {
-              "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+              "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+              "seg": [
+                {
+                  "t": "⏵⏵ bypass permissions on",
+                  "c": "red"
+                },
+                {
+                  "t": " (shift+tab to cycle)",
+                  "c": "dim"
+                }
+              ]
             },
             "fit": true
           },
@@ -686,7 +716,17 @@
               "placeholder": "메시지를 입력하세요..."
             },
             "footer": {
-              "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+              "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+              "seg": [
+                {
+                  "t": "⏵⏵ bypass permissions on",
+                  "c": "red"
+                },
+                {
+                  "t": " (shift+tab to cycle)",
+                  "c": "dim"
+                }
+              ]
             },
             "fit": true
           },
@@ -764,7 +804,17 @@
             "badge": 2
           },
           "footer": {
-            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
           }
         },
         "editor": {
@@ -834,7 +884,17 @@
               "placeholder": "메시지를 입력하세요..."
             },
             "footer": {
-              "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+              "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+              "seg": [
+                {
+                  "t": "⏵⏵ bypass permissions on",
+                  "c": "red"
+                },
+                {
+                  "t": " (shift+tab to cycle)",
+                  "c": "dim"
+                }
+              ]
             }
           },
           "editor": {
@@ -875,7 +935,17 @@
               "badge": 2
             },
             "footer": {
-              "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+              "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+              "seg": [
+                {
+                  "t": "⏵⏵ bypass permissions on",
+                  "c": "red"
+                },
+                {
+                  "t": " (shift+tab to cycle)",
+                  "c": "dim"
+                }
+              ]
             }
           }
         }
@@ -920,7 +990,17 @@
               "text": "잘못 적은 긴 문장 전부 지우고 싶을 때"
             },
             "footer": {
-              "text": "⏵⏵ bypass permissions on (shift+tab to cycle)"
+              "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+              "seg": [
+                {
+                  "t": "⏵⏵ bypass permissions on",
+                  "c": "red"
+                },
+                {
+                  "t": " (shift+tab to cycle)",
+                  "c": "dim"
+                }
+              ]
             }
           },
           "noSidebar": true,
