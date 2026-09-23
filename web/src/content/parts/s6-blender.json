@@ -26,7 +26,7 @@
           "cwd": "C:\\agent1",
           "turns": [],
           "input": {
-            "text": "블렌더 설치해주고, 현재폴더에 blender mcp도 설치해줘. 내가 너를 재부팅하고, 그다음에 너가 블렌더 실행하면 바로 인식될수 잇는 상태로 말야",
+            "text": "블렌더 5.1 버전을 설치해주고, 현재폴더에 blender mcp도 설치해줘. 내가 너를 재부팅하고, 그다음에 너가 블렌더 실행하면 바로 인식될수 잇는 상태로 말야",
             "badge": 1
           },
           "fit": true
@@ -38,7 +38,7 @@
       "action": {
         "label": "프롬프트 복사",
         "items": [
-          { "kind": "copy", "value": "블렌더 설치해주고, 현재폴더에 blender mcp도 설치해줘. 내가 너를 재부팅하고, 그다음에 너가 블렌더 실행하면 바로 인식될수 잇는 상태로 말야" }
+          { "kind": "copy", "value": "블렌더 5.1 버전을 설치해주고, 현재폴더에 blender mcp도 설치해줘. 내가 너를 재부팅하고, 그다음에 너가 블렌더 실행하면 바로 인식될수 잇는 상태로 말야" }
         ]
       }
     },
@@ -58,13 +58,13 @@
           "turns": [
             {
               "role": "user",
-              "text": "블렌더 설치해주고, 현재폴더에 blender mcp도 설치해줘. 내가 너를 재부팅하고, 그다음에 너가 블렌더 실행하면 바로 인식될수 잇는 상태로 말야"
+              "text": "블렌더 5.1 버전을 설치해주고, 현재폴더에 blender mcp도 설치해줘. 내가 너를 재부팅하고, 그다음에 너가 블렌더 실행하면 바로 인식될수 잇는 상태로 말야"
             }
           ],
           "panel": {
             "title": "",
             "rows": [
-              { "seg": [{ "t": "● Bash(winget install BlenderFoundation.Blender)", "c": "bold" }], "badge": 1 },
+              { "seg": [{ "t": "● Bash(winget install BlenderFoundation.Blender --version 5.1.2)", "c": "bold" }], "badge": 1 },
               { "seg": [{ "t": "  ⎿  Blender 설치 완료", "c": "dim" }] },
               { "seg": [] },
               { "seg": [{ "t": "● Bash(blender-mcp 애드온 addon.py 를 블렌더에 설치 · 활성화)", "c": "bold" }] },
@@ -73,15 +73,15 @@
               { "seg": [{ "t": "● Bash(claude mcp add blender -s project -- uvx blender-mcp)", "c": "bold" }], "badge": 2 },
               { "seg": [{ "t": "  ⎿  .mcp.json 에 blender 서버가 추가됐습니다 (agent1)", "c": "dim" }] },
               { "seg": [] },
-              { "seg": [{ "t": "✻ 재부팅 후 블렌더 BlenderMCP 탭에서 Connect 를 누르면 연결됩니다", "c": "dim" }] }
+              { "seg": [{ "t": "✻ 재부팅 후 블렌더를 켜면 BlenderMCP 서버가 자동으로 시작됩니다", "c": "dim" }] }
             ]
           },
           "fit": true
         }
       },
       "notes": [
-        { "n": 1, "head": "블렌더 설치", "body": "첫 번째 줄의 winget install BlenderFoundation.Blender 명령으로 클로드가 블렌더 프로그램 자체를 컴퓨터에 설치합니다." },
-        { "n": 2, "head": "blender mcp 서버 등록", "body": "이어서 블렌더 안에 blender mcp 애드온을 설치하고, claude mcp add blender -s project -- uvx blender-mcp 명령으로 blender mcp 서버를 agent1 폴더의 .mcp.json 파일에 등록합니다. 다음에 클로드 코드를 켜고 블렌더 오른쪽 BlenderMCP 탭에서 Connect 를 누르면 바로 연결돼요." }
+        { "n": 1, "head": "블렌더 설치", "body": "첫 번째 줄의 winget install BlenderFoundation.Blender --version 5.1.2 명령으로 클로드가 블렌더 5.1 버전을 컴퓨터에 설치합니다. blender mcp 애드온은 5.1 폴더에만 들어가므로 4.3 같은 다른 버전을 설치하면 애드온이 없어서 연결되지 않아요." },
+        { "n": 2, "head": "blender mcp 서버 등록", "body": "이어서 블렌더 안에 blender mcp 애드온을 설치하고, claude mcp add blender -s project -- uvx blender-mcp 명령으로 blender mcp 서버를 agent1 폴더의 .mcp.json 파일에 등록합니다. 애드온이 서버를 자동으로 켜 두기 때문에 다음에 블렌더를 실행하기만 하면 따로 버튼을 누르지 않아도 연결돼요." }
       ]
     },
     {
@@ -161,7 +161,9 @@
               "rows": [
                 { "seg": [{ "t": "● get_scene_info()", "c": "bold" }], "badge": 1 },
                 { "seg": [{ "t": "  ⎿  blender MCP connected", "c": "dim" }], "badge": 2 },
-                { "seg": [{ "t": "  ⎿  scene: Cube, Camera, Light", "c": "dim" }] }
+                { "seg": [{ "t": "  ⎿  scene: Cube, Camera, Light", "c": "dim" }] },
+                { "seg": [] },
+                { "seg": [{ "t": "  ⎿  addon protocol 5, expected 9 (update recommended)", "c": "dim" }] }
               ]
             },
             "fit": true
@@ -170,7 +172,8 @@
       },
       "notes": [
         { "n": 1, "head": "블렌더 실행", "body": "클로드가 블렌더를 실행한 뒤 get_scene_info 도구로 지금 열려 있는 장면의 정보를 그대로 가져옵니다." },
-        { "n": 2, "head": "연결 및 기본 오브젝트 확인", "body": "오른쪽 터미널에 blender MCP connected 라는 초록색 글자가 뜨고, 새 블렌더 파일에 기본으로 들어 있는 Cube, Camera, Light 오브젝트가 함께 보이면 연결이 끝난 것입니다." }
+        { "n": 2, "head": "연결 및 기본 오브젝트 확인", "body": "오른쪽 터미널에 blender MCP connected 라는 초록색 글자가 뜨고, 새 블렌더 파일에 기본으로 들어 있는 Cube, Camera, Light 오브젝트가 함께 보이면 연결이 끝난 것입니다." },
+        { "n": "!", "head": "update recommended 경고", "body": "그 아래 애드온 프로토콜 5, 기대값 9 라는 update recommended 경고가 같이 뜨는데 오류가 아니라 정상이니 그대로 다음 단계로 넘어가면 됩니다." }
       ]
     },
     {
@@ -253,10 +256,9 @@
       "id": "s6-blender-09",
       "template": "screen",
       "title": "결과 · 완성된 영상",
-      "replaceWithCapture": "ball_adventure.mp4 완성 영상 실제 프레임",
-      "screen": { "kind": "shot", "src": "/illustrations/s6-ball-frames.svg" },
+      "screen": { "kind": "video", "src": "/video/ball_adventure.mp4", "poster": "/video/ball_adventure_poster.png", "loop": true },
       "notes": [
-        { "n": 1, "head": "네 장면으로 보는 완성 영상", "body": "화면의 네 장면을 순서대로 보면 첫 플랫폼 위에서 출발한 공이 틈을 뛰어넘어 점프하고, 낮은 각도로 스윕하는 카메라를 지나 마지막에는 색종이와 함께 골인 지점을 통과합니다." },
+        { "n": 1, "head": "완성된 영상 재생", "body": "화면 가운데 재생 버튼을 누르면 실제로 만들어진 9초짜리 영상이 그대로 재생됩니다. 첫 플랫폼에서 출발한 공이 틈을 뛰어넘고, 낮은 각도로 스윕하는 카메라를 지나 마지막에 골인 지점을 통과해요." },
         { "n": 2, "head": "vscode 탐색기에서 확인", "body": "vscode 왼쪽 탐색기에서 agent1 폴더를 열어보면 방금 만든 ball_adventure.mp4 파일이 새로 생겨 있는 것을 확인할 수 있어요." }
       ]
     }
