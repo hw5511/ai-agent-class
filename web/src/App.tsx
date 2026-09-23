@@ -80,19 +80,14 @@ export default function App() {
     return () => removeEventListener("keydown", on)
   })
 
-  // Sessions whose part list is unfolded. The session being viewed opens by itself; clicking the
-  // open session's row folds it again (CEO 2026-09-22).
-  const [expanded, setExpanded] = useState<Set<number>>(() => new Set([session.step]))
+  // The one session whose part list is unfolded — an accordion, so opening one folds the other
+  // (CEO 2026-09-23). Navigating always unfolds the session being viewed; clicking the unfolded
+  // session's own row folds it again (CEO 2026-09-22).
+  const [expanded, setExpanded] = useState<number | null>(session.step)
   useEffect(() => {
-    setExpanded((e) => (e.has(session.step) ? e : new Set(e).add(session.step)))
+    setExpanded(session.step)
   }, [session.step])
-  const toggle = (step: number) =>
-    setExpanded((e) => {
-      const n = new Set(e)
-      if (n.has(step)) n.delete(step)
-      else n.add(step)
-      return n
-    })
+  const toggle = (step: number) => setExpanded((e) => (e === step ? null : step))
   const partStart = (s: typeof session, partId: string) => flatSlides(s).findIndex((x) => x.part.id === partId) + 1
   const inPart = slides.filter((x) => x.part.id === cur?.part.id)
   const posInPart = inPart.findIndex((x) => x.slide.id === cur?.slide.id) + 1
@@ -118,7 +113,7 @@ export default function App() {
             <SidebarMenu className="gap-1">
               {course.sessions.map((s) => {
                 const open = s.step === session.step
-                const unfolded = expanded.has(s.step) && s.parts.length > 1
+                const unfolded = expanded === s.step && s.parts.length > 1
                 return (
                   <SidebarMenuItem key={s.step}>
                     {/* Session row: full title wraps instead of being cut; the open session gets an accent number chip.
