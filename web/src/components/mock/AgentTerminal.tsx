@@ -127,7 +127,17 @@ function TerminalBody({ t, className, convRef, listRef, spacerRef }: { t: Termin
                   const cont = own && /^\s*[⎿├└│]/.test(turn.text)
                   const text = own ? turn.text.replace(/^\s*● /, "") : turn.text
                   return (
-                    <span className={cn("flex gap-3", turn.role === "user" && "text-[#8b9095]", cont && "pl-8 text-[#8b9095]")}>
+                    <span className={cn(
+                      "flex gap-3",
+                      // The student copies the PROMPT, so the prompt is the brightest thing on the slide:
+                      // pure white + bold (19.5:1 on #0c0d0e). The agent's answer is Claude's own orange
+                      // #d97757 (6.2:1, AA at this 22px size), so the two speakers never blur together
+                      // (CEO 2026-09-23: it used to be the other way round).
+                      turn.role === "user" && "font-bold text-white",
+                      turn.role !== "user" && !cont && "text-[#d97757]",
+                      // ⎿/├/└ rows are tool OUTPUT under an answer, not the answer: legible grey (10.2:1).
+                      cont && "pl-8 text-[#b8bcc0]",
+                    )}>
                       {own && !cont ? <span className="shrink-0">{/^\s*●/.test(turn.text) ? "●" : ""}</span> : null}
                       {!own ? <span className="shrink-0">{turn.role === "user" ? ">" : "●"}</span> : null}
                       <span className={cn("break-keep [overflow-wrap:anywhere]", turn.role === "tool" && "font-bold", own && /^\s*[✻✶※]/.test(turn.text) && "text-[#767c81]")}><Marked text={text} mark={turn.mark} /></span>
@@ -220,7 +230,8 @@ function TerminalBody({ t, className, convRef, listRef, spacerRef }: { t: Termin
                 </span>
               ) : null}
               <span className="text-[#767c81]">&gt;</span>
-              {t.input?.text ? <span>{t.input.text}<span className="ml-0.5 inline-block h-6 w-3 translate-y-1 bg-[#cfd2d4]" /></span> : <span className="text-[#5b5e61]">{t.input?.placeholder ?? ""}</span>}
+              {/* Text in the box is the prompt the student is typing right now — same white+bold as a sent one. */}
+              {t.input?.text ? <span className="font-bold text-white">{t.input.text}<span className="ml-0.5 inline-block h-6 w-3 translate-y-1 bg-[#cfd2d4]" /></span> : <span className="text-[#5b5e61]">{t.input?.placeholder ?? ""}</span>}
             </div>
           </Row>
           <Row gutter={hasBadges} badge={t.footer?.badge}>
