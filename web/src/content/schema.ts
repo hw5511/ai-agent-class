@@ -170,7 +170,7 @@ export interface Note {
 
 // ---- screens: the mockups a slide can show ------------------------------------------------------
 
-export type Screen = VSCodeScreen | ShotScreen | TerminalScreen | ChatScreen | BrowserScreen | FileScreen | AgentViewScreen | OfficeScreen
+export type Screen = VSCodeScreen | ShotScreen | VideoScreen | TerminalScreen | ChatScreen | BrowserScreen | FileScreen | AgentViewScreen | OfficeScreen
 
 /** Claude Code's full-screen Agent View (/background, or the left arrow): whole sessions listed by state. */
 export interface AgentViewScreen {
@@ -324,6 +324,15 @@ export interface ShotScreen {
   src: string // real capture
   // numbered badges pinned on the picture; x / y in percent of the image (0-100), e.g. the menu item to click
   badges?: { n: number; x: number; y: number }[]
+}
+
+// A real recording played in the slide's preview area (e.g. the mp4 the student's own render produced).
+// Used only where the result IS a video; a still capture stays a ShotScreen.
+export interface VideoScreen {
+  kind: "video"
+  src: string // mp4 in public/, e.g. "/video/ball_adventure.mp4"
+  poster?: string // still frame shown before play, in public/
+  loop?: boolean
 }
 
 export type Vendor = "claude" | "antigravity" | "codex" | "shell"

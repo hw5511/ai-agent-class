@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url"
 const root = join(dirname(fileURLToPath(import.meta.url)), "..")
 const partsDir = join(root, "src/content/parts")
 const TEMPLATES = new Set(["screen", "compare", "table", "illustration", "overview", "cards", "flow", "stack", "lifecycle"])
-const SCREENS = new Set(["vscode", "terminal", "shot", "chat", "browser", "file", "agentview", "office"])
+const SCREENS = new Set(["vscode", "terminal", "shot", "video", "chat", "browser", "file", "agentview", "office"])
 const VENDORS = new Set(["claude", "antigravity", "codex", "shell"])
 const KINDS = new Set(["copy", "link", "download"])
 
@@ -59,6 +59,10 @@ function badgesOfScreen(s, out) {
 function checkScreen(where, s) {
   if (!s || !SCREENS.has(s.kind)) return err(where, `bad screen.kind ${s?.kind}`)
   if (s.kind === "shot" && !existsSync(join(root, "public", s.src ?? ""))) err(where, `missing shot ${s.src}`)
+  if (s.kind === "video") {
+    if (!existsSync(join(root, "public", s.src ?? ""))) err(where, `missing video ${s.src}`)
+    if (s.poster && !existsSync(join(root, "public", s.poster))) err(where, `missing poster ${s.poster}`)
+  }
   if (s.kind === "vscode" || s.kind === "terminal") {
     if (!s.terminal || !VENDORS.has(s.terminal.vendor)) err(where, `bad terminal.vendor ${s.terminal?.vendor}`)
     if (!Array.isArray(s.terminal?.turns)) err(where, "terminal.turns missing")

@@ -16,6 +16,20 @@ export function ScreenView({ screen }: { screen: Screen }) {
   if (screen.kind === "file") return <FileMock s={screen} />
   if (screen.kind === "agentview") return <AgentViewMock s={screen} />
   if (screen.kind === "office") return <OfficeMock s={screen} />
+  if (screen.kind === "video")
+    return (
+      <div className="flex h-full min-h-0 items-center justify-center">
+        <video
+          src={asset(screen.src)}
+          poster={screen.poster ? asset(screen.poster) : undefined}
+          controls
+          playsInline
+          loop={screen.loop}
+          preload="metadata"
+          className="size-full object-contain drop-shadow-[0_12px_28px_rgba(16,17,19,0.14)]"
+        />
+      </div>
+    )
   if (screen.kind === "terminal")
     return (
       <div className="h-full min-h-0 overflow-hidden rounded-2xl shadow-[0_18px_40px_rgba(16,17,19,0.16)]">
