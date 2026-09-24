@@ -31,6 +31,7 @@ export interface Part {
   title: string // "개발 환경 준비"
   summary?: string // one line: what this part is for — shown on the part cover's right panel
   sections?: { title: string; count: number }[] // detailed table of contents shown on the part cover instead of every slide title
+  cover?: false // no generated cover and not counted in the covers' table of contents (a session opener)
   slides: Slide[]
 }
 
@@ -202,6 +203,14 @@ export interface OfficeScreen {
   panel?: OfficePanel // Claude add-in on the right; omit for no panel
   dialog?: { title: string; text: string; button?: string; badge?: number } // modal over the window (e.g. load error)
   zoom?: number // >1 enlarges the document area (a close-up of a formula), default 1
+  // a right-click context menu drawn over the document area; x/y = percent of the whole window (0-100)
+  contextMenu?: { x: number; y: number; items: OfficeContextMenuItem[]; badge?: number }
+}
+
+export interface OfficeContextMenuItem {
+  label: string // "-" draws a separator
+  active?: boolean // highlighted row (the item being pointed at / changed)
+  badge?: number
 }
 
 export interface OfficeExcel {

@@ -104,13 +104,15 @@ function IllustrationT({ s }: { s: IllustrationSlide }) {
   )
 }
 
+// More than five rows (a session agenda) steps the rows down so all of them fit under the title.
 function OverviewT({ s }: { s: OverviewSlide }) {
+  const dense = s.items.length > 5
   return (
-    <div className="flex h-full flex-col justify-center gap-5">
+    <div className={cn("flex h-full flex-col justify-center", dense ? "gap-3" : "gap-5")}>
       {s.items.map((it, i) => (
-        <div key={i} className={cn("flex items-center gap-8 rounded-2xl border bg-white px-10 py-7", it.current ? "border-2 border-slide-accent" : "border-neutral-200")}>
+        <div key={i} className={cn("flex items-center gap-8 rounded-2xl border bg-white px-10", dense ? "py-4" : "py-7", it.current ? "border-2 border-slide-accent" : "border-neutral-200")}>
           <NumberBadge n={i + 1} />
-          <span className="flex-1 font-display text-[40px] font-bold text-[#101113]">{it.label}</span>
+          <span className={cn("flex-1 font-display font-bold text-[#101113]", dense ? "text-[34px]" : "text-[40px]")}>{it.label}</span>
           {it.meta && <span className="font-term text-[28px] text-[#7c8288]">{it.meta}</span>}
         </div>
       ))}

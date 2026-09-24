@@ -84,11 +84,15 @@ export function loadSite(): Site {
 
 // Every part of a multi-part session opens with a generated cover (CEO 2026-09-21: 목차가 구분될 때
 // 개요 페이지). Its title list and table-of-contents strip come straight from the part data.
+// A part marked `cover: false` (a session opener: title + agenda) gets no cover and stays out of the
+// cover's table of contents, so PART 01 is the first teaching part.
 export const flatSlides = (s: Session) => {
-  const toc = s.parts.map((p) => ({ title: p.title, count: p.slides.length }))
-  return s.parts.flatMap((p, pi) => {
+  const covered = s.parts.filter((p) => p.cover !== false)
+  const toc = covered.map((p) => ({ title: p.title, count: p.slides.length }))
+  return s.parts.flatMap((p) => {
     const items = p.slides.map((slide) => ({ part: p, slide }))
-    if (s.parts.length < 2) return items
+    if (s.parts.length < 2 || p.cover === false) return items
+    const pi = covered.indexOf(p)
     const cover: Slide = {
       id: `${p.id}-cover`,
       template: "part-cover",

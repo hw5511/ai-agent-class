@@ -4,6 +4,7 @@
 import { AlertTriangleIcon } from "lucide-react"
 import type { OfficeScreen } from "@/content/schema"
 import { NumberBadge } from "@/components/slide/NumberBadge"
+import { cn } from "@/lib/utils"
 import { APP_COLOR, APP_LETTER, RibbonRow, RibbonTabs } from "./office/ribbon"
 import { ExcelView } from "./office/ExcelView"
 import { WordView } from "./office/WordView"
@@ -44,6 +45,25 @@ export function OfficeMock({ s }: { s: OfficeScreen }) {
       </div>
 
       {s.panel && <PanelView p={s.panel} />}
+
+      {s.contextMenu && (
+        <div
+          className="absolute z-30 flex w-[260px] flex-col rounded-md border border-neutral-300 bg-white py-1.5 font-display text-[15px] text-[#262626] shadow-[0_10px_30px_rgba(0,0,0,0.25)]"
+          style={{ left: `${s.contextMenu.x}%`, top: `${s.contextMenu.y}%` }}
+        >
+          {s.contextMenu.badge ? <span className="absolute -top-5 -right-5 z-10"><NumberBadge n={s.contextMenu.badge} size="sm" /></span> : null}
+          {s.contextMenu.items.map((it, i) =>
+            it.label === "-" ? (
+              <div key={i} className="my-1 h-px bg-neutral-200" />
+            ) : (
+              <div key={i} className={cn("relative mx-1.5 flex items-center gap-2 rounded px-3 py-1.5", it.active && "bg-[#e8f0fe]")}>
+                <span className="flex-1">{it.label}</span>
+                {it.badge ? <NumberBadge n={it.badge} size="sm" /> : null}
+              </div>
+            ),
+          )}
+        </div>
+      )}
 
       {s.dialog && (
         <div className="absolute inset-0 z-30 flex items-center justify-center bg-black/35">

@@ -35,10 +35,11 @@ function badgesOfScreen(s, out) {
     for (const g of s.groups ?? []) for (const r of g.rows ?? []) if (r.badge) out.push(r.badge)
   }
   if (s.kind === "office") {
-    for (const b of [s.ribbonMark?.badge, s.excel?.formulaBadge, s.panel?.badge, s.dialog?.badge]) if (b) out.push(b)
+    for (const b of [s.ribbonMark?.badge, s.excel?.formulaBadge, s.panel?.badge, s.dialog?.badge, s.contextMenu?.badge]) if (b) out.push(b)
     for (const r of s.excel?.rows ?? []) if (r.badge) out.push(r.badge)
     for (const pg of s.word?.pages ?? []) if (pg.badge) out.push(pg.badge)
     for (const sl of s.powerpoint?.slides ?? []) if (sl.badge) out.push(sl.badge)
+    for (const it of s.contextMenu?.items ?? []) if (it.badge) out.push(it.badge)
     return
   }
   if (s.kind === "shot") for (const b of s.badges ?? []) out.push(b.n)
