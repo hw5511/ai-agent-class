@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs>
+<filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+<marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+</defs>
+<rect x="0" y="0" width="1600" height="900" fill="#fff"/>
+
+<!-- CLAUDE.md document, filled top to bottom -->
+<g filter="url(#sh)">
+<rect x="170" y="150" width="400" height="470" rx="14" fill="#fff" stroke="#d97757" stroke-width="4"/>
+</g>
+<rect x="170" y="150" width="400" height="62" rx="14" fill="#2b2e33"/>
+<rect x="170" y="196" width="400" height="16" fill="#2b2e33"/>
+<text x="370" y="192" font-size="26" fill="#fff" font-weight="800" text-anchor="middle" font-family="Consolas, monospace">CLAUDE.md</text>
+<g fill="#e5c9bd">
+<rect x="200" y="234" width="340" height="14" rx="5"/>
+<rect x="200" y="264" width="340" height="14" rx="5"/>
+<rect x="200" y="294" width="300" height="14" rx="5"/>
+<rect x="200" y="324" width="340" height="14" rx="5"/>
+<rect x="200" y="354" width="260" height="14" rx="5"/>
+<rect x="200" y="384" width="340" height="14" rx="5"/>
+<rect x="200" y="414" width="320" height="14" rx="5"/>
+<rect x="200" y="444" width="340" height="14" rx="5"/>
+<rect x="200" y="474" width="280" height="14" rx="5"/>
+<rect x="200" y="504" width="340" height="14" rx="5"/>
+<rect x="200" y="534" width="310" height="14" rx="5"/>
+<rect x="200" y="564" width="340" height="14" rx="5"/>
+</g>
+<!-- overflow: jagged torn edge and lines spilling below the box border -->
+<path d="M170 620 L210 636 L250 618 L290 636 L330 618 L370 636 L410 618 L450 636 L490 618 L530 636 L570 618 V620 H170 Z" fill="#fdf1ea" stroke="#d97757" stroke-width="3"/>
+<rect x="210" y="644" width="300" height="14" rx="5" fill="#f0b39a"/>
+<rect x="230" y="672" width="240" height="14" rx="5" fill="#f0b39a"/>
+<text x="370" y="725" font-size="26" fill="#d97757" font-weight="800" text-anchor="middle">항상 전부 로드</text>
+
+<!-- arrow to Claude -->
+<path d="M600 380 Q790 380 970 380" fill="none" stroke="#43474b" stroke-width="6" marker-end="url(#ab)"/>
+
+<!-- Claude, overloaded -->
+<circle cx="1180" cy="380" r="120" fill="#fff4ef" stroke="#f0c9b8" stroke-width="3" filter="url(#sh)"/>
+<text x="1180" y="395" font-size="46" fill="#d97757" font-weight="900" text-anchor="middle">Claude</text>
+<rect x="1060" y="540" width="240" height="34" rx="17" fill="#f4d9cc"/>
+<rect x="1060" y="540" width="240" height="34" rx="17" fill="#d97757"/>
+<text x="1180" y="564" font-size="22" fill="#fff" font-weight="800" text-anchor="middle">항상 가득 참</text>
+
+<text x="800" y="820" font-size="40" fill="#101113" font-weight="900" text-anchor="middle">CLAUDE.md 는 전부 항상 읽혀서 넘친다</text>
+
+<circle cx="510" cy="585" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="510" y="594" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<circle cx="1180" cy="500" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1180" y="509" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+</svg>

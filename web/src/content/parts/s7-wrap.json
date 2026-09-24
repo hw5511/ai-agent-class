@@ -1,0 +1,36 @@
+{
+  "id": "s7-wrap",
+  "title": "정리",
+  "summary": "오늘 만든 스킬 세 가지를 돌아보고, 라이브러리에서 플러그인까지 이어지는 흐름을 한 줄로 정리한다.",
+  "slides": [
+    {
+      "id": "s7-wrap-01",
+      "template": "cards",
+      "title": "오늘 만든 스킬",
+      "cards": [
+        { "label": "/cardnews", "logo": "icon:Book", "tags": ["카드뉴스 생성", "표지 · 본문"], "badge": 1 },
+        { "label": "/img2pdf", "logo": "icon:Folder", "tags": ["이미지 여러 장을 PDF 로 병합"] },
+        { "label": "/photo-edit", "logo": "icon:Settings", "tags": ["밝기 · 대비 · 비율 조정"], "highlight": true, "badge": 2 }
+      ],
+      "notes": [
+        { "n": 1, "head": "카드뉴스부터 시작", "body": "가장 먼저 만든 스킬은 카드뉴스 표지와 본문을 만드는 cardnews 입니다." },
+        { "n": 2, "head": "포토에딧까지 확장", "body": "마지막에는 플러그인으로 skill-creator 를 설치해서 사진 보정 스킬 photo-edit 까지 만들었습니다." }
+      ]
+    },
+    {
+      "id": "s7-wrap-02",
+      "template": "flow",
+      "title": "라이브러리에서 플러그인까지",
+      "steps": [
+        { "label": "라이브러리", "sub": "부품", "logo": "icon:Book", "badge": 1 },
+        { "label": "CLI", "sub": "AI 용 조작판", "logo": "icon:Terminal" },
+        { "label": "스킬", "sub": "약속", "logo": "icon:Bot" },
+        { "label": "플러그인", "sub": "공유", "logo": "icon:Zap", "badge": 2 }
+      ],
+      "notes": [
+        { "n": 1, "head": "라이브러리에서 시작", "body": "남이 만들어 둔 라이브러리라는 부품에서 시작합니다." },
+        { "n": 2, "head": "플러그인으로 공유까지", "body": "CLI 로 AI 가 다루기 쉽게 만들고, 스킬로 약속해두고, 플러그인으로 나눠 공유하는 순서입니다." }
+      ]
+    }
+  ]
+}

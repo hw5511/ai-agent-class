@@ -1,0 +1,49 @@
+{
+  "id": "s7-skill-intro",
+  "title": "스킬이란?",
+  "summary": "CLAUDE.md 가 포화되는 문제를 스킬이 필요할 때만 장전하는 방식으로 풀고, 반복 작업을 줄이는 핵심 가치를 이해한다.",
+  "slides": [
+    {
+      "id": "s7-skill-intro-01",
+      "template": "illustration",
+      "title": "스킬 = 필요할 때 꺼내 쓰는 가이드북",
+      "illustration": "/illustrations/s7-skill-manual.svg",
+      "notes": [
+        { "n": 1, "head": "필요한 것만 전달", "body": "선반에서 지금 필요한 가이드북 하나만 꺼내 Claude 에게 전달합니다." },
+        { "n": 2, "head": "카드뉴스 폴더만 꺼냄", "body": "여러 가이드북 중 지금 작업에 맞는 카드뉴스 폴더 하나만 앞으로 뽑아냅니다." },
+        { "n": 3, "head": "Claude 가 받음", "body": "Claude 는 이렇게 전달받은 가이드북이 있을 때만 그 방법대로 작업을 진행합니다." }
+      ]
+    },
+    {
+      "id": "s7-skill-intro-02",
+      "template": "illustration",
+      "title": "CLAUDE.md 포화 · 전부 항상 로드",
+      "illustration": "/illustrations/s7-skill-overflow.svg",
+      "notes": [
+        { "n": 1, "head": "CLAUDE.md 는 항상 전부 로드", "body": "CLAUDE.md 에 적어둔 내용은 지금 필요하든 아니든 매번 전부 읽혀서 넘칩니다." },
+        { "n": 2, "head": "Claude 쪽 부담 증가", "body": "내용이 늘어날수록 Claude 가 매번 읽어야 하는 양이 그만큼 가득 차게 됩니다." }
+      ]
+    },
+    {
+      "id": "s7-skill-intro-03",
+      "template": "illustration",
+      "title": "필요할 때만 장전하는 스킬",
+      "illustration": "/illustrations/s7-skill-cartridge.svg",
+      "notes": [
+        { "n": 1, "head": "선반의 스킬", "body": "여러 스킬 중 지금 쓸 카드뉴스 스킬 하나를 고릅니다." },
+        { "n": 2, "head": "프롬프트에 장전", "body": "고른 스킬을 게임 카트리지처럼 프롬프트 슬롯에 끼워 넣습니다." },
+        { "n": 3, "head": "장전됐을 때만 켜짐", "body": "스킬이 장전된 순간에만 Claude 가 그 방법을 켜서 씁니다." }
+      ]
+    },
+    {
+      "id": "s7-skill-intro-04",
+      "template": "illustration",
+      "title": "반복 작업 절약 · 프롬프트 반복 vs 명령어 한 번",
+      "illustration": "/illustrations/s7-skill-before-after.svg",
+      "notes": [
+        { "n": 1, "head": "이전에는 매번 반복", "body": "스킬이 없으면 매번 프롬프트를 다시 설명하거나 코드를 직접 고쳐야 합니다." },
+        { "n": 2, "head": "이제는 명령어 한 번", "body": "스킬로 만들어두면 /cardnews 처럼 명령어 하나만 입력해도 바로 작업이 끝납니다." }
+      ]
+    }
+  ]
+}

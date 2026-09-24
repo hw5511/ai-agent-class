@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs>
+<filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+<marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+</defs>
+<rect x="0" y="0" width="1600" height="900" fill="#fff"/>
+<text x="440" y="180" font-size="34" fill="#101113" font-weight="900" text-anchor="middle">남이 만들어 둔 기능 상자</text>
+<g filter="url(#sh)">
+<rect x="180" y="220" width="520" height="420" rx="20" fill="#f4f5f7" stroke="#c9ccd1" stroke-width="3"/>
+</g>
+<rect x="180" y="220" width="520" height="70" rx="20" fill="#2b2e33"/>
+<text x="440" y="266" font-size="26" fill="#fff" font-weight="800" text-anchor="middle">라이브러리</text>
+<g font-size="24" font-weight="800" text-anchor="middle">
+<rect x="220" y="330" width="180" height="110" rx="14" fill="#fff" stroke="#c9ccd1" stroke-width="3"/>
+<text x="310" y="378" fill="#d97757">이미지 처리</text>
+<text x="310" y="410" font-size="20" fill="#8b9095" font-weight="500">Pillow</text>
+<rect x="460" y="330" width="180" height="110" rx="14" fill="#fff" stroke="#c9ccd1" stroke-width="3"/>
+<text x="550" y="378" fill="#2f9e6e">QR 코드</text>
+<text x="550" y="410" font-size="20" fill="#8b9095" font-weight="500">qrcode</text>
+<rect x="220" y="470" width="180" height="110" rx="14" fill="#fff" stroke="#c9ccd1" stroke-width="3"/>
+<text x="310" y="518" fill="#1273c4">PDF 합치기</text>
+<text x="310" y="550" font-size="20" fill="#8b9095" font-weight="500">img2pdf</text>
+<rect x="460" y="470" width="180" height="110" rx="14" fill="#fff" stroke="#c9ccd1" stroke-width="3"/>
+<text x="550" y="518" fill="#8b5cf6">웹 데이터</text>
+<text x="550" y="550" font-size="20" fill="#8b9095" font-weight="500">requests</text>
+</g>
+<path d="M700 430 Q900 380 1080 430" fill="none" stroke="#1273c4" stroke-width="6" marker-end="url(#ab)"/>
+<rect x="1090" y="330" width="360" height="210" rx="16" fill="#101113" filter="url(#sh)"/>
+<text x="1120" y="380" font-size="24" fill="#8fd0ff" font-weight="700">import pillow</text>
+<text x="1120" y="418" font-size="24" fill="#8fd0ff" font-weight="700">이미지.만들기()</text>
+<text x="1120" y="480" font-size="22" fill="#7dd88f" font-weight="700"># 내가 직접 짜지 않고</text>
+<text x="1120" y="510" font-size="22" fill="#7dd88f" font-weight="700"># 가져다 바로 씀</text>
+<text x="800" y="760" font-size="40" fill="#101113" font-weight="900" text-anchor="middle">직접 안 만들고 가져다 쓰는 코드 모음</text>
+<circle cx="440" cy="245" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="440" y="254" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<circle cx="1270" cy="300" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1270" y="309" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+</svg>

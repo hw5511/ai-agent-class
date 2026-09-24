@@ -1,0 +1,375 @@
+{
+  "id": "s7-plugin",
+  "title": "플러그인 실습: 미니 포토샵",
+  "summary": "플러그인 마켓플레이스에서 skill-creator 를 설치하고, 그 플러그인으로 photo-edit 스킬과 보정 웹페이지까지 만들어본다.",
+  "slides": [
+    {
+      "id": "s7-plugin-01",
+      "template": "illustration",
+      "title": "플러그인과 마켓플레이스",
+      "illustration": "/illustrations/s7-plugin-package.svg",
+      "notes": [
+        { "n": 1, "head": "플러그인 = 도구 꾸러미", "body": "스킬, MCP, 서브에이전트처럼 따로 흩어져 있던 도구들을 하나로 묶어 포장한 것이 플러그인입니다." },
+        { "n": 2, "head": "마켓플레이스 = 진열대", "body": "이렇게 포장된 플러그인들을 모아 진열해두고 골라 설치할 수 있게 만든 곳이 마켓플레이스예요. 휴대폰 앱과 앱스토어 같은 관계입니다." }
+      ]
+    },
+    {
+      "id": "s7-plugin-02",
+      "template": "screen",
+      "title": "플러그인 매니저 열기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            { "role": "user", "text": "/clear" },
+            { "role": "user", "text": "/plugin", "badge": 1 }
+          ],
+          "panel": {
+            "title": "플러그인 매니저",
+            "rows": [
+              { "seg": [{ "t": "Discover", "c": "tab" }, { "t": "   Installed", "c": "dim" }, { "t": "   Marketplaces", "c": "dim" }, { "t": "   Errors", "c": "dim" }] },
+              { "seg": [] },
+              { "seg": [{ "t": "검색: (입력해서 필터링)", "c": "dim" }], "badge": 2 },
+              { "seg": [] },
+              { "seg": [{ "t": "claude-plugins-official", "c": "bold" }] },
+              { "seg": [{ "t": "  skill-creator", "c": "dim" }] },
+              { "seg": [{ "t": "  cardnews-toolkit", "c": "dim" }] },
+              { "seg": [{ "t": "  pdf-tools", "c": "dim" }] }
+            ]
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "/plugin 실행", "body": "/clear 로 대화를 비운 뒤 /plugin 을 입력하면 플러그인 매니저 화면이 열립니다." },
+        { "n": 2, "head": "탭과 검색창", "body": "위쪽에 Discover, Installed, Marketplaces, Errors 탭이 있고 그 아래 검색창으로 공식 마켓플레이스 claude-plugins-official 에 있는 플러그인들을 찾아볼 수 있습니다." }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          { "kind": "copy", "value": "/clear" },
+          { "kind": "copy", "value": "/plugin" }
+        ]
+      }
+    },
+    {
+      "id": "s7-plugin-03",
+      "template": "screen",
+      "title": "검색과 설치 범위",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [{ "role": "user", "text": "/plugin" }],
+          "panel": {
+            "title": "skill-creator",
+            "rows": [
+              { "seg": [{ "t": "검색: skill-creator", "c": "bold" }], "badge": 1 },
+              { "seg": [] },
+              { "seg": [{ "t": "skill-creator · claude-plugins-official", "c": "green" }], "badge": 2 },
+              { "seg": [] },
+              { "seg": [{ "t": "설치 범위 선택", "c": "bold" }] },
+              { "seg": [{ "t": "  Install for you (user scope)", "c": "dim" }] },
+              { "seg": [{ "t": "▸ Install for all collaborators on this repository (project scope)", "c": "accent" }], "badge": 3 },
+              { "seg": [{ "t": "  Install for you, in this repo only (local scope)", "c": "dim" }] }
+            ]
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "skill-creator 검색", "body": "검색창에 skill-creator 를 입력하면 목록이 skill-creator · claude-plugins-official 하나로 좁혀집니다." },
+        { "n": 2, "head": "검색 결과 선택", "body": "그 항목을 선택하면 상세 화면과 설치 범위 선택지가 함께 나타납니다." },
+        { "n": 3, "head": "project scope 선택", "body": "이 저장소의 협업자 전체에게 적용되는 project scope 를 골라야 팀원 모두가 같은 스킬을 쓸 수 있습니다." }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [{ "kind": "copy", "value": "skill-creator" }]
+      }
+    },
+    {
+      "id": "s7-plugin-04",
+      "template": "screen",
+      "title": "설치 확인",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            { "role": "user", "text": "/reload-plugins" },
+            { "role": "assistant", "text": "플러그인 목록을 다시 불러왔어요" }
+          ],
+          "input": { "text": "/skill-creator", "badge": 1 },
+          "panel": {
+            "title": "",
+            "rows": [
+              { "seg": [{ "t": "/skill-creator", "c": "green" }], "badge": 2 },
+              { "seg": [{ "t": "  반복되는 작업을 스킬로 만들어주는 스킬", "c": "dim" }] },
+              { "seg": [{ "t": "/clear", "c": "dim" }] },
+              { "seg": [{ "t": "/reload-plugins", "c": "dim" }] }
+            ]
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "/reload-plugins 로 반영", "body": "설치한 플러그인을 실제로 쓰려면 /reload-plugins 를 입력해 목록을 다시 불러와야 합니다." },
+        { "n": 2, "head": "/skill-creator 인식됨", "body": "슬래시를 입력하면 목록에 /skill-creator 명령어가 초록색으로 나타나 플러그인이 정상 설치됐음을 확인할 수 있습니다." }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [{ "kind": "copy", "value": "/reload-plugins" }]
+      }
+    },
+    {
+      "id": "s7-plugin-05",
+      "template": "flow",
+      "title": "스킬 크리에이터",
+      "loop": true,
+      "steps": [
+        { "label": "관찰", "sub": "반복 작업 찾기", "logo": "icon:Search", "badge": 1 },
+        { "label": "정리", "sub": "가이드로 문서화", "logo": "icon:Book" },
+        { "label": "저장", "sub": "SKILL.md 로 저장", "logo": "icon:Write" }
+      ],
+      "notes": [
+        { "n": 1, "head": "스킬 만드는 과정도 반복", "body": "관찰하고 정리해서 SKILL.md 로 저장하는 이 스킬 제작 과정 자체도 매번 똑같이 반복됩니다." },
+        { "n": "!", "head": "그래서 스킬크리에이터", "body": "반복되는 과정이니 이것도 스킬로 만들어둔 것이 바로 스킬크리에이터입니다." }
+      ]
+    },
+    {
+      "id": "s7-plugin-06",
+      "template": "screen",
+      "title": "프롬프트 · photo-edit 스킬",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": {
+            "text": "/skill-creator 사진 보정을 하는 '미니 포토샵' 스킬을 photo-edit 이라는 이름으로 만들어줘. 기능은 밝기, 대비, 색조 조절과 사진 크기 변경, 비율 변경(1:1, 4:5, 9:16으로 가운데 자르기)이야. pillow 라이브러리를 쓰는 cli 스크립트로 만들고, 사진 한 장뿐 아니라 폴더 안 사진들을 한 번에 처리하는 옵션도 넣어줘. 결과물은 원본을 덮어쓰지 말고 새 폴더에 저장해줘. 스킬은 현재폴더의 .claude/skills 폴더에 만들고, 테스트는 사진 1장으로 한 번만 하고 결과 확인 화면은 생략해줘.",
+            "badge": 1
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "/skill-creator 로 요청", "body": "슬래시 명령어 /skill-creator 뒤에 만들고 싶은 photo-edit 스킬의 기능과 조건을 전부 이어서 입력해 보세요." },
+        { "n": "!", "head": "테스트 범위도 미리 지정", "body": "사진 한 장으로만 테스트하고 결과 화면은 생략해달라고 미리 요청해두면 스킬 제작이 더 빠르게 끝납니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/skill-creator 사진 보정을 하는 '미니 포토샵' 스킬을 photo-edit 이라는 이름으로 만들어줘. 기능은 밝기, 대비, 색조 조절과 사진 크기 변경, 비율 변경(1:1, 4:5, 9:16으로 가운데 자르기)이야. pillow 라이브러리를 쓰는 cli 스크립트로 만들고, 사진 한 장뿐 아니라 폴더 안 사진들을 한 번에 처리하는 옵션도 넣어줘. 결과물은 원본을 덮어쓰지 말고 새 폴더에 저장해줘. 스킬은 현재폴더의 .claude/skills 폴더에 만들고, 테스트는 사진 1장으로 한 번만 하고 결과 확인 화면은 생략해줘."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s7-plugin-07",
+      "template": "screen",
+      "title": "photo-edit 스킬 완성",
+      "replaceWithCapture": "photo-edit 스킬 제작 · 테스트 실제 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          { "name": ".claude", "folder": true },
+          { "name": "skills", "folder": true, "depth": 1 },
+          { "name": "photo-edit", "folder": true, "depth": 2 },
+          { "name": "SKILL.md", "depth": 3 },
+          { "name": "scripts", "folder": true, "depth": 3 },
+          { "name": "photo_edit.py", "depth": 4, "active": true },
+          { "name": "photo.jpg" }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/skill-creator 사진 보정을 하는 '미니 포토샵' 스킬을 photo-edit 이라는 이름으로 만들어줘. 기능은 밝기, 대비, 색조 조절과 사진 크기 변경, 비율 변경(1:1, 4:5, 9:16으로 가운데 자르기)이야. pillow 라이브러리를 쓰는 cli 스크립트로 만들고, 사진 한 장뿐 아니라 폴더 안 사진들을 한 번에 처리하는 옵션도 넣어줘. 결과물은 원본을 덮어쓰지 말고 새 폴더에 저장해줘. 스킬은 현재폴더의 .claude/skills 폴더에 만들고, 테스트는 사진 1장으로 한 번만 하고 결과 확인 화면은 생략해줘.",
+              "badge": 1
+            },
+            { "role": "tool", "text": "Skill(skill-creator)" },
+            { "role": "tool", "text": "Write(.claude/skills/photo-edit/SKILL.md)", "badge": 2 },
+            { "role": "tool", "text": "Write(.claude/skills/photo-edit/scripts/photo_edit.py)" },
+            { "role": "tool", "text": "Bash(python .claude/skills/photo-edit/scripts/photo_edit.py --input photo.jpg --brightness 1.1)", "badge": 3 },
+            { "role": "assistant", "text": "photo-edit 스킬을 만들고 테스트까지 마쳤어요" }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "요청 그대로 재실행", "body": "앞서 입력한 photo-edit 스킬 제작 요청이 그대로 실행됩니다." },
+        { "n": 2, "head": "SKILL.md 와 스크립트 생성", "body": "skill-creator 가 사용법을 담은 SKILL.md 와 실행 코드인 photo_edit.py 를 스스로 나눠서 작성합니다." },
+        { "n": 3, "head": "사진 1장 테스트", "body": "만든 스크립트를 photo.jpg 한 장으로 테스트해서 정상 작동하는지 확인합니다." }
+      ]
+    },
+    {
+      "id": "s7-plugin-08",
+      "template": "screen",
+      "title": "프롬프트 · 보정 웹페이지",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          { "name": ".claude", "folder": true },
+          { "name": "photo.jpg" }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": {
+            "text": "photo-edit 스킬의 스크립트와 똑같은 계산 로직으로, 브라우저에서 슬라이더로 조절하는 웹페이지를 html 파일 하나로 현재폴더에 만들어줘. 지금 설정값을 photo-edit 명령어로 복사하는 버튼도 넣어줘.",
+            "badge": 1
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "같은 로직을 웹페이지로", "body": "photo-edit 스크립트와 똑같은 계산 방식으로 슬라이더 웹페이지를 만들어달라고 요청합니다." },
+        { "n": "!", "head": "복사 버튼도 함께 요청", "body": "지금 슬라이더 값을 photo-edit 명령어로 그대로 복사하는 버튼까지 같이 넣어달라고 미리 요청해 두었습니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "photo-edit 스킬의 스크립트와 똑같은 계산 로직으로, 브라우저에서 슬라이더로 조절하는 웹페이지를 html 파일 하나로 현재폴더에 만들어줘. 지금 설정값을 photo-edit 명령어로 복사하는 버튼도 넣어줘."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s7-plugin-09",
+      "template": "screen",
+      "title": "보정 웹페이지 GUI",
+      "replaceWithCapture": "photo-edit.html GUI 페이지 실제 캡처",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/s7/photo-edit-gui.png",
+        "badges": [
+          { "n": 1, "x": 12, "y": 18 },
+          { "n": 2, "x": 67, "y": 40 },
+          { "n": 3, "x": 84, "y": 79 }
+        ]
+      },
+      "notes": [
+        { "n": 1, "head": "슬라이더로 값 조절", "body": "왼쪽 슬라이더로 밝기, 대비, 색조, 크기, 비율 값을 하나씩 눈으로 보면서 조절합니다." },
+        { "n": 2, "head": "실시간 미리보기", "body": "값을 바꿀 때마다 오른쪽 미리보기 사진이 그 자리에서 바로 바뀌어 결과를 확인할 수 있습니다." },
+        { "n": 3, "head": "명령어 복사 버튼", "body": "원하는 값을 찾았으면 명령어 복사 버튼을 눌러 지금 설정을 photo-edit 명령어로 그대로 가져갑니다." }
+      ]
+    },
+    {
+      "id": "s7-plugin-10",
+      "template": "compare",
+      "title": "한 장 밝기 맞추기",
+      "left": {
+        "label": "GUI · 한 번에 맞춤",
+        "screen": { "kind": "shot", "src": "/shots/s7/photo-edit-gui.png" }
+      },
+      "right": {
+        "label": "CLI · 값 추측 반복",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              { "role": "user", "text": "python .claude/skills/photo-edit/scripts/photo_edit.py --input photo.jpg --brightness 1.05" },
+              { "role": "assistant", "text": "아직 어두워요" },
+              { "role": "user", "text": "python .claude/skills/photo-edit/scripts/photo_edit.py --input photo.jpg --brightness 1.15" },
+              { "role": "assistant", "text": "이번엔 너무 밝아요" },
+              { "role": "user", "text": "python .claude/skills/photo-edit/scripts/photo_edit.py --input photo.jpg --brightness 1.1" }
+            ],
+            "fit": true
+          }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "GUI 는 보면서 바로 맞춤", "body": "슬라이더를 움직이며 눈으로 보고 밝기를 한 번에 원하는 만큼 맞출 수 있습니다." },
+        { "n": 2, "head": "CLI 는 값을 추측해서 반복", "body": "CLI 는 미리보기가 없어서 --brightness 값을 이렇게 저렇게 바꿔가며 여러 번 실행해봐야 합니다." }
+      ]
+    },
+    {
+      "id": "s7-plugin-11",
+      "template": "compare",
+      "title": "6장 일괄 보정",
+      "left": {
+        "label": "CLI + 스킬 · 한 줄로 6장",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              { "role": "user", "text": "/photo-edit 벚꽃 폴더 사진 전부 밝기 10% 올리고 4:5로 바꿔줘", "badge": 1 },
+              { "role": "tool", "text": "Bash(python .claude/skills/photo-edit/scripts/photo_edit.py --input 벚꽃축제_카드뉴스 --brightness 1.1 --ratio 4:5 --output-dir 벚꽃_보정)" },
+              { "role": "assistant", "text": "사진 6장을 모두 보정해서 벚꽃_보정 폴더에 저장했어요" }
+            ],
+            "fit": true
+          }
+        }
+      },
+      "right": {
+        "label": "GUI · 6장 수작업",
+        "screen": {
+          "kind": "browser",
+          "url": "photo-edit.html",
+          "page": {
+            "heading": "사진 6장 수작업 보정",
+            "lines": ["01.png 열기 → 조절 → 저장", "02.png ~ 05.png 도 각각 반복", "06.png 열기 → 조절 → 저장"]
+          }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "한 줄로 6장 전부", "body": "/photo-edit 스킬에 한 줄만 요청하면 벚꽃 폴더 사진 6장을 한 번에 밝기 10퍼센트, 비율 4대5 로 바꿔서 새 폴더에 저장합니다." },
+        { "n": 2, "head": "GUI 는 6번 반복", "body": "GUI 로는 사진마다 열고 값을 맞추고 저장하는 과정을 6번 그대로 반복해야 합니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [{ "kind": "copy", "value": "/photo-edit 벚꽃 폴더 사진 전부 밝기 10% 올리고 4:5로 바꿔줘" }]
+      }
+    },
+    {
+      "id": "s7-plugin-12",
+      "template": "flow",
+      "title": "같은 로직, 다른 조작판",
+      "steps": [
+        { "label": "사람", "sub": "GUI 로 값 찾기", "logo": "icon:Click", "badge": 1 },
+        { "label": "명령어 복사", "sub": "찾은 값 그대로", "logo": "icon:Terminal" },
+        { "label": "클로드에게 전달", "sub": "프롬프트로 전달", "logo": "icon:Chat" },
+        { "label": "AI 가 반복", "sub": "여러 장 자동 처리", "logo": "icon:Bot", "badge": 2 }
+      ],
+      "notes": [
+        { "n": 1, "head": "사람은 GUI 로 눈대중", "body": "사람은 GUI 슬라이더를 움직이며 눈으로 보고 원하는 값을 찾습니다." },
+        { "n": 2, "head": "AI 는 명령어로 반복", "body": "그 값을 명령어로 복사해 클로드에게 전달하면 AI 가 같은 계산을 여러 장에 반복해서 처리합니다." }
+      ]
+    }
+  ]
+}

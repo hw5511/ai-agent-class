@@ -1,0 +1,197 @@
+{
+  "id": "s7-cli",
+  "title": "CLI란?",
+  "summary": "GUI 대신 명령어 옵션으로 AI 가 다루기 쉬운 CLI 스크립트를 만들어본다.",
+  "slides": [
+    {
+      "id": "s7-cli-01",
+      "template": "illustration",
+      "title": "CLI 와 GUI",
+      "illustration": "/illustrations/s7-cli-vs-gui.svg",
+      "notes": [
+        { "n": 1, "head": "CLI", "body": "명령어를 글자로 직접 타이핑해서 실행하는 방식이 CLI, Command Line Interface 의 줄임말입니다." },
+        { "n": 2, "head": "GUI", "body": "버튼과 메뉴를 마우스로 눌러서 조작하는 방식이 GUI, Graphic User Interface 이고 CLI 의 반대말입니다." }
+      ]
+    },
+    {
+      "id": "s7-cli-02",
+      "template": "flow",
+      "title": "코드 직접 수정 반복",
+      "loop": true,
+      "steps": [
+        { "label": "Read", "sub": "현재 코드 확인", "logo": "icon:Read", "badge": 1 },
+        { "label": "Edit", "sub": "바뀔 값 수정", "logo": "icon:Edit", "badge": 2 },
+        { "label": "Bash", "sub": "다시 실행", "logo": "icon:Bash", "badge": 3 }
+      ],
+      "notes": [
+        { "n": 1, "head": "Read 로 확인", "body": "지금 코드에서 어떤 값이 어디에 적혀 있는지 먼저 읽어서 확인합니다." },
+        { "n": 2, "head": "Edit 로 값 수정", "body": "바꾸고 싶은 제목이나 색상 값을 코드 안에서 직접 찾아 고칩니다." },
+        { "n": 3, "head": "Bash 로 재실행", "body": "고친 코드를 다시 실행해서 결과를 확인하고, 바꿀 게 또 생기면 이 세 단계를 처음부터 반복합니다." }
+      ]
+    },
+    {
+      "id": "s7-cli-03",
+      "template": "screen",
+      "title": "GUI 편집 · 우클릭 메뉴",
+      "screen": {
+        "kind": "office",
+        "app": "powerpoint",
+        "file": "카드뉴스.pptx",
+        "tab": "홈",
+        "powerpoint": {
+          "slides": [{ "title": "AI 트렌드", "sub": "인스타그램 카드뉴스 표지", "layout": "title" }],
+          "current": 1
+        },
+        "contextMenu": {
+          "x": 46,
+          "y": 40,
+          "badge": 1,
+          "items": [
+            { "label": "글꼴" },
+            { "label": "글꼴 크기" },
+            { "label": "-" },
+            { "label": "굵게" },
+            { "label": "기울임" },
+            { "label": "-" },
+            { "label": "글꼴 색", "active": true, "badge": 2 },
+            { "label": "도형 채우기" },
+            { "label": "윤곽선" }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "우클릭 메뉴 열기", "body": "표지의 글자를 마우스로 우클릭하면 글꼴, 크기, 굵기 같은 메뉴가 하나씩 뜹니다." },
+        { "n": 2, "head": "항목마다 따로 클릭", "body": "글꼴 색처럼 바꾸고 싶은 항목을 매번 메뉴에서 찾아 하나씩 눌러야 합니다." }
+      ]
+    },
+    {
+      "id": "s7-cli-04",
+      "template": "illustration",
+      "title": "마우스 없는 AI",
+      "illustration": "/illustrations/s7-no-mouse.svg",
+      "notes": [
+        { "n": 1, "head": "마우스 클릭 불가", "body": "AI 는 화면의 버튼을 실제로 클릭할 손이나 마우스가 없어서 GUI 조작이 어렵습니다." },
+        { "n": 2, "head": "명령어로 대신 실행", "body": "대신 키보드로 명령어를 입력하는 방식이라면 AI 도 그대로 실행할 수 있습니다." }
+      ]
+    },
+    {
+      "id": "s7-cli-05",
+      "template": "illustration",
+      "title": "명령어의 구조",
+      "illustration": "/illustrations/s7-cmdline-anatomy.svg",
+      "notes": [
+        { "n": 1, "head": "고정 부분", "body": "python cardnews_cli.py 처럼 어떤 스크립트를 실행할지는 실행할 때마다 항상 똑같이 적습니다." },
+        { "n": 2, "head": "바뀌는 부분", "body": "--title, --bg-color 같은 옵션 뒤의 값만 매번 바꿔서 서로 다른 결과를 만듭니다." }
+      ]
+    },
+    {
+      "id": "s7-cli-06",
+      "template": "table",
+      "title": "cardnews_cli.py 옵션",
+      "columns": ["옵션", "의미"],
+      "rows": [
+        { "cells": ["--title", "표지 제목 글자"] },
+        { "cells": ["--subtitle", "부제목 글자"] },
+        { "cells": ["--bg-color", "배경 색상"] },
+        { "cells": ["--accent-color", "강조 색상"] },
+        { "cells": ["--font-size", "글자 크기"] },
+        { "cells": ["--output", "저장할 파일 이름"] }
+      ],
+      "notes": [
+        { "n": "!", "head": "옵션 값만 바꿔 재사용", "body": "코드는 그대로 두고 이 옵션들의 값만 바꿔서 실행하면 매번 다른 카드뉴스가 나옵니다." }
+      ]
+    },
+    {
+      "id": "s7-cli-07",
+      "template": "screen",
+      "title": "매개변수 설명 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          { "name": "cardnews_cover.py" },
+          { "name": "ai트렌드_표지.png" }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": { "text": "현재 카드뉴스 스크립트에서 모든 매개변수 종류를 설명해줘", "badge": 1 },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "매개변수 종류 질문", "body": "지금까지 만든 cardnews_cover.py 안에 어떤 값들이 매개변수로 쓰이는지 설명해달라고 입력해 보세요." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "현재 카드뉴스 스크립트에서 모든 매개변수 종류를 설명해줘" }
+        ]
+      }
+    },
+    {
+      "id": "s7-cli-08",
+      "template": "screen",
+      "title": "CLI 스크립트 작성 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          { "name": "cardnews_cover.py" },
+          { "name": "ai트렌드_표지.png" }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": { "text": "그 매개변수들을 인자로 하는 cli스크립트를 현재 폴더에 작성해서 3개 정도 테스트해줘", "badge": 1 },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "CLI 스크립트 요청", "body": "방금 정리된 매개변수들을 옵션으로 받는 cli 스크립트를 만들고 3번 정도 테스트까지 해달라고 이어서 입력해 보세요." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "그 매개변수들을 인자로 하는 cli스크립트를 현재 폴더에 작성해서 3개 정도 테스트해줘" }
+        ]
+      }
+    },
+    {
+      "id": "s7-cli-09",
+      "template": "screen",
+      "title": "CLI 스크립트 테스트 결과",
+      "replaceWithCapture": "cardnews_cli.py 3회 테스트 실제 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          { "name": "cardnews_cli.py" },
+          { "name": "cli-test-1.png" },
+          { "name": "cli-test-2.png" },
+          { "name": "cli-test-3.png", "active": true }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [
+            { "role": "user", "text": "그 매개변수들을 인자로 하는 cli스크립트를 현재 폴더에 작성해서 3개 정도 테스트해줘" },
+            { "role": "assistant", "text": "Write(cardnews_cli.py)" },
+            { "role": "assistant", "text": "Bash(python cardnews_cli.py --title \"AI 트렌드\" --bg-color \"#1e5b3a\" --output cli-test-1.png)", "badge": 1 },
+            { "role": "assistant", "text": "Bash(python cardnews_cli.py --title \"생산성 팁\" --bg-color \"#173a2a\" --output cli-test-2.png)", "badge": 2 },
+            { "role": "assistant", "text": "Bash(python cardnews_cli.py --title \"AI 에이전트\" --bg-color \"#132d45\" --output cli-test-3.png)", "badge": 3 }
+          ],
+          "fit": true
+        },
+        "imageEditor": { "file": "cli-test-3.png", "src": "/shots/s7/cli-tests.png", "meta": "1080 x 1350 · 3장" }
+      },
+      "notes": [
+        { "n": 1, "head": "코드 수정 없이 실행", "body": "cardnews_cli.py 코드는 그대로 두고 옵션 값만 바꿔서 Bash 로 첫 번째 테스트를 실행합니다." },
+        { "n": 2, "head": "옵션만 바꿔 재실행", "body": "제목과 배경 색상 옵션만 다시 바꿔서 두 번째 카드뉴스를 만듭니다." },
+        { "n": 3, "head": "세 번째까지 반복", "body": "같은 방식으로 세 번째까지 실행하면 코드를 한 번도 고치지 않고 서로 다른 카드뉴스 3장이 만들어집니다." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs>
+<filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+<marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+</defs>
+<rect x="0" y="0" width="1600" height="900" fill="#fff"/>
+
+<text x="270" y="190" font-size="28" fill="#43474b" font-weight="800" text-anchor="middle">반복되는 요청</text>
+<g filter="url(#sh)">
+<rect x="120" y="230" width="300" height="64" rx="14" fill="#fff" stroke="#c9ccd1" stroke-width="3"/>
+<rect x="120" y="318" width="300" height="64" rx="14" fill="#fff" stroke="#c9ccd1" stroke-width="3"/>
+<rect x="120" y="406" width="300" height="64" rx="14" fill="#fff" stroke="#c9ccd1" stroke-width="3"/>
+</g>
+<text x="270" y="270" font-size="24" fill="#101113" text-anchor="middle">카드뉴스 만들어줘</text>
+<text x="270" y="358" font-size="24" fill="#101113" text-anchor="middle">카드뉴스 만들어줘</text>
+<text x="270" y="446" font-size="24" fill="#101113" text-anchor="middle">카드뉴스 만들어줘</text>
+<circle cx="150" cy="200" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="150" y="209" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+
+<path d="M430 350 L610 350" fill="none" stroke="#1273c4" stroke-width="6" marker-end="url(#ab)"/>
+
+<g filter="url(#sh)">
+<rect x="640" y="180" width="320" height="340" rx="18" fill="#fff" stroke="#1273c4" stroke-width="4"/>
+</g>
+<text x="800" y="240" font-size="34" fill="#1273c4" font-weight="900" text-anchor="middle">SKILL.md</text>
+<line x1="672" y1="266" x2="928" y2="266" stroke="#dadce0" stroke-width="3"/>
+<text x="672" y="312" font-size="24" fill="#43474b" font-weight="800">name</text>
+<text x="672" y="352" font-size="24" fill="#43474b" font-weight="800">description</text>
+<text x="672" y="392" font-size="24" fill="#43474b" font-weight="800">사용법</text>
+<text x="672" y="432" font-size="24" fill="#8b9095">python cardnews.py ...</text>
+<text x="800" y="480" font-size="26" fill="#1273c4" font-weight="900" text-anchor="middle">정리된 가이드</text>
+<circle cx="925" cy="205" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="925" y="214" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+
+<path d="M960 350 L1140 350" fill="none" stroke="#1273c4" stroke-width="6" marker-end="url(#ab)"/>
+
+<circle cx="1320" cy="380" r="95" fill="#fff4ef" stroke="#f0c9b8" stroke-width="3"/>
+<text x="1320" y="392" font-size="42" fill="#d97757" font-weight="900" text-anchor="middle">Claude</text>
+<rect x="1245" y="500" width="150" height="56" rx="12" fill="#eaf4fb" stroke="#1273c4" stroke-width="3"/>
+<text x="1320" y="536" font-size="24" font-weight="800" fill="#1273c4" text-anchor="middle">장전 완료</text>
+<circle cx="1320" cy="270" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1320" y="279" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+
+<text x="800" y="760" font-size="40" fill="#101113" font-weight="900" text-anchor="middle">반복되는 패턴을 가이드로 정리해 미리 장전해 둔다</text>
+</svg>

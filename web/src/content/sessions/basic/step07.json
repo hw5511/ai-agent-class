@@ -1,0 +1,26 @@
+{
+  "step": 7,
+  "title": "스킬 · 라이브러리 · CLI · 플러그인",
+  "hours": "2시간",
+  "goal": "라이브러리로 만든 스크립트를 CLI 로 바꾸고, 반복 작업을 스킬로 장전해 두었다가 /명령어로 꺼내 쓴다. 플러그인으로 남이 만든 스킬도 설치해 본다.",
+  "topics": [
+    "스킬 개념 (필요할 때 꺼내 쓰는 가이드북)",
+    "라이브러리 (남이 써 둔 부품)",
+    "Pillow 카드뉴스 스크립트",
+    "CLI (AI 용 조작판 · 옵션)",
+    "스킬 실습: /cardnews · /img2pdf",
+    "플러그인 · skill-creator · 미니 포토샵"
+  ],
+  "practice": "Pillow 로 카드뉴스 스크립트를 만들어 CLI 로 바꾸고 /cardnews 스킬로 벚꽃축제 카드뉴스 6장을 뽑는다. /img2pdf 로 PDF 로 합치고, skill-creator 플러그인으로 /photo-edit 스킬과 GUI 페이지를 만든다.",
+  "parts": [
+    "s7-open",
+    "s7-skill-intro",
+    "s7-library",
+    "s7-script",
+    "s7-cli",
+    "s7-cardnews",
+    "s7-img2pdf",
+    "s7-plugin",
+    "s7-wrap"
+  ]
+}

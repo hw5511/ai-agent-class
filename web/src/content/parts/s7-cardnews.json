@@ -1,0 +1,249 @@
+{
+  "id": "s7-cardnews",
+  "title": "스킬 실습 1: /cardnews",
+  "summary": "반복되는 카드뉴스 제작 방식을 SKILL.md 와 CLI 스크립트로 정리해 /cardnews 스킬로 만들고 실습해본다.",
+  "slides": [
+    {
+      "id": "s7-cardnews-01",
+      "template": "illustration",
+      "title": "스킬 = 정리된 가이드",
+      "illustration": "/illustrations/s7-cardnews-pattern.svg",
+      "notes": [
+        { "n": 1, "head": "반복되는 요청", "body": "카드뉴스를 만들 때마다 같은 방식으로 요청하고 스크립트를 고치는 일이 반복됩니다." },
+        { "n": 2, "head": "SKILL.md 로 정리", "body": "그 반복되는 작업 방식을 한 번 정리해서 SKILL.md 라는 가이드 파일로 적어 둡니다." },
+        { "n": 3, "head": "미리 장전", "body": "가이드를 미리 만들어 두면 필요할 때 클로드가 바로 꺼내 쓸 수 있게 장전된 상태가 됩니다." }
+      ]
+    },
+    {
+      "id": "s7-cardnews-02",
+      "template": "illustration",
+      "title": "스킬 = 계약",
+      "illustration": "/illustrations/s7-cardnews-contract.svg",
+      "notes": [
+        { "n": 1, "head": "SKILL.md + CLI 스크립트", "body": "작업 방식을 적은 SKILL.md 와 실행할 CLI 스크립트가 계약서 역할을 합니다." },
+        { "n": 2, "head": "학생과 클로드", "body": "학생과 클로드가 미리 이 방식대로 일하기로 정해 둔 상태입니다." },
+        { "n": 3, "head": "논의 없이 바로 시작", "body": "다음에 같은 작업을 시키면 방식을 다시 설명하지 않아도 클로드가 곧바로 작업을 시작합니다." }
+      ]
+    },
+    {
+      "id": "s7-cardnews-03",
+      "template": "screen",
+      "title": "프롬프트 · 스킬로 정리",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [{ "name": "cardnews_cli.py" }],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": {
+            "text": "만들어둔 카드뉴스 cli스크립트를 표지 말고 본문도 만들수 있게 템플릿을 디자인해서 cli옵션으로 만들고, 현재폴더의 .claude/skills폴더에 cardnews라는 폴더를 만든다음 거기에 cli스크립트를 옮겨두고, 그 cli 스크립트의 사용법을 SKILL.md파일로 가이드를 기록해놔줘",
+            "badge": 1
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "스킬로 정리 요청", "body": "본문 템플릿 추가와 skills 폴더로 옮기기, SKILL.md 작성까지 한 번에 요청합니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "만들어둔 카드뉴스 cli스크립트를 표지 말고 본문도 만들수 있게 템플릿을 디자인해서 cli옵션으로 만들고, 현재폴더의 .claude/skills폴더에 cardnews라는 폴더를 만든다음 거기에 cli스크립트를 옮겨두고, 그 cli 스크립트의 사용법을 SKILL.md파일로 가이드를 기록해놔줘" }
+        ]
+      }
+    },
+    {
+      "id": "s7-cardnews-04",
+      "template": "screen",
+      "title": "cardnews 스킬 폴더",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          { "name": ".claude", "folder": true, "depth": 0 },
+          { "name": "skills", "folder": true, "depth": 1 },
+          { "name": "cardnews", "folder": true, "depth": 2, "badge": 1 },
+          { "name": "SKILL.md", "depth": 3, "active": true, "badge": 2 },
+          { "name": "cardnews.py", "depth": 3 }
+        ],
+        "editor": {
+          "file": "SKILL.md",
+          "badge": 2,
+          "lines": [
+            "---",
+            "name: cardnews",
+            "description: 카드뉴스 표지·본문 이미지를 만든다",
+            "---",
+            "",
+            "## 사용법",
+            "python cardnews.py --type cover --title <제목> --output <파일>",
+            "python cardnews.py --type body --body <내용> --output <파일>"
+          ]
+        },
+        "noTerminal": true,
+        "terminal": { "vendor": "shell", "cwd": "", "turns": [] }
+      },
+      "notes": [
+        { "n": 1, "head": "스킬 폴더 생성", "body": ".claude/skills 안에 cardnews 폴더가 새로 생기고 그 안에 SKILL.md 와 cardnews.py 가 들어 있습니다." },
+        { "n": 2, "head": "SKILL.md 머리말", "body": "위쪽 name 과 description 줄에 스킬 이름과 설명이 적혀 있고, 아래에는 사용법이 적혀 있습니다." }
+      ]
+    },
+    {
+      "id": "s7-cardnews-05",
+      "template": "screen",
+      "title": "명령어 확인 · /cardnews",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [{ "role": "user", "text": "/clear" }],
+          "input": { "text": "/cardnews", "badge": 1 },
+          "panel": {
+            "title": "",
+            "rows": [
+              { "seg": [{ "t": "/cardnews  카드뉴스 표지·본문 이미지를 만든다 (project)" }], "badge": 1 }
+            ]
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "슬래시 목록에 표시", "body": "/cardnews 라고 입력하면 방금 만든 스킬이 설명과 함께 슬래시 명령어 목록에 나타납니다." },
+        { "n": "!", "head": "안 보이면 재로드", "body": "목록에 보이지 않으면 /reload-skills 를 입력해서 스킬을 다시 불러오면 됩니다." }
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          { "kind": "copy", "value": "/clear" },
+          { "kind": "copy", "value": "/reload-skills" }
+        ]
+      }
+    },
+    {
+      "id": "s7-cardnews-06",
+      "template": "screen",
+      "title": "프롬프트 · /cardnews 실행",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "turns": [],
+          "input": {
+            "text": "/cardnews 한국의 벚꽃축제에 대해 웹조사한다음 6장 정도 분량의 카드뉴스를 현재폴더에 저장폴더를 만들고 거기에 만들어줘",
+            "badge": 1
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "스킬 명령어로 시작", "body": "슬래시 명령어 뒤에 원하는 내용을 이어서 입력하면 웹조사부터 카드뉴스 제작까지 한 번에 요청하는 것입니다." },
+        { "n": "!", "head": "입력하면 SKILL.md 삽입", "body": "/cardnews 를 입력하는 순간 SKILL.md 내용이 프롬프트 안에 자동으로 들어갑니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "/cardnews 한국의 벚꽃축제에 대해 웹조사한다음 6장 정도 분량의 카드뉴스를 현재폴더에 저장폴더를 만들고 거기에 만들어줘" }
+        ]
+      }
+    },
+    {
+      "id": "s7-cardnews-07",
+      "template": "compare",
+      "title": "스킬 없이 vs 스킬로",
+      "left": {
+        "label": "스킬 없이",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              { "role": "user", "text": "한국의 벚꽃축제에 대해 웹조사한다음 6장 정도 분량의 카드뉴스를 현재폴더에 저장폴더를 만들고 거기에 만들어줘" },
+              { "role": "assistant", "text": "어떤 방식으로 만들까요? 디자인은요?", "badge": 1 }
+            ],
+            "fit": true
+          }
+        }
+      },
+      "right": {
+        "label": "스킬로",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              { "role": "user", "text": "/cardnews 한국의 벚꽃축제에 대해 웹조사한다음 6장 정도 분량의 카드뉴스를 현재폴더에 저장폴더를 만들고 거기에 만들어줘", "badge": 2 },
+              { "role": "assistant", "text": "WebSearch(\"한국 벚꽃축제 2026\")", "badge": 3 },
+              { "role": "assistant", "text": "Bash(cardnews.py --type cover --title 한국의 벚꽃축제 --output 01.png)" },
+              { "role": "assistant", "text": "Bash(cardnews.py --type body --title 진해군항제 --output 02.png)" },
+              { "role": "assistant", "text": "Bash(cardnews.py --type body --title 여의도 봄꽃축제 --output 03.png)" },
+              { "role": "assistant", "text": "Bash(cardnews.py --type body --title 경주 대릉원·보문 --output 04.png)" },
+              { "role": "assistant", "text": "Bash(cardnews.py --type body --title 석촌호수 --output 05.png)" },
+              { "role": "assistant", "text": "Bash(cardnews.py --type body --title 관람 팁 --output 06.png)" }
+            ],
+            "fit": true
+          }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "디자인부터 되물어봄", "body": "스킬이 없으면 클로드가 어떤 방식으로 만들지, 디자인은 어떻게 할지부터 되물어봅니다." },
+        { "n": 2, "head": "명령어로 바로 시작", "body": "/cardnews 명령어를 쓰면 정해둔 방식대로 따로 묻지 않고 바로 작업을 시작합니다." },
+        { "n": 3, "head": "조사 후 스크립트 반복 실행", "body": "웹조사를 한 번 한 뒤 cardnews.py 스크립트를 여섯 번 실행해서 카드 6장을 차례로 만듭니다." }
+      ]
+    },
+    {
+      "id": "s7-cardnews-08",
+      "template": "screen",
+      "title": "완성된 카드뉴스 6장",
+      "screen": { "kind": "shot", "src": "/shots/s7/cherry-all.png" },
+      "notes": [
+        { "n": 1, "head": "카드 6장 완성", "body": "표지 1장과 본문 5장으로 이루어진 한국의 벚꽃축제 카드뉴스 6장이 저장 폴더 안에 만들어졌습니다." }
+      ]
+    },
+    {
+      "id": "s7-cardnews-09",
+      "template": "compare",
+      "title": "1회성 작업 vs 스킬",
+      "left": {
+        "label": "1회성 작업",
+        "screen": {
+          "kind": "file",
+          "name": "그 자리에서",
+          "large": true,
+          "badge": 1,
+          "lines": ["스크립트 작성", "실행", "한 번이면 끝"]
+        }
+      },
+      "right": {
+        "label": "3번 이상 반복",
+        "screen": {
+          "kind": "file",
+          "name": "스킬로 등록",
+          "large": true,
+          "badge": 2,
+          "lines": ["작업 방식 → SKILL.md", "스크립트 → 스킬 폴더", "/명령어로 재사용"]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "1회성 작업", "body": "한 번만 쓸 스크립트라면 그 자리에서 작성하고 바로 실행하면 충분합니다." },
+        { "n": 2, "head": "3번 이상 반복", "body": "같은 작업을 클로드에게 3번 이상 시킨다면 작업 방식은 SKILL.md 에, 스크립트는 스킬 폴더에 넣어 스킬로 만듭니다." }
+      ]
+    }
+  ]
+}
