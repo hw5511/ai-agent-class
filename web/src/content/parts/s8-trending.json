@@ -1,0 +1,296 @@
+{
+  "id": "s8-trending",
+  "title": "남이 만든 것 먼저 찾기",
+  "summary": "GitHub 트렌딩과 저장소 페이지에서 이미 만들어진 도구를 찾아 바로 설치해 본다.",
+  "slides": [
+    {
+      "id": "s8-trending-01",
+      "template": "screen",
+      "title": "GitHub 트렌딩",
+      "screen": {
+        "kind": "web",
+        "url": "github.com/trending",
+        "tabs": [
+          {
+            "title": "GitHub",
+            "icon": "github",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "github-trending",
+          "filterBadge": 1,
+          "repos": [
+            {
+              "owner": "rohitg00",
+              "name": "ai-engineering-from-scratch",
+              "desc": "Learn it. Build it. Ship it for others.",
+              "lang": "Python",
+              "langColor": "#3572A5",
+              "stars": "56,539",
+              "forks": "9,928",
+              "today": "347 stars today",
+              "sponsor": true,
+              "badge": 2
+            },
+            {
+              "owner": "vectorize-io",
+              "name": "hindsight",
+              "desc": "Hindsight: Agent Memory That Learns",
+              "lang": "Python",
+              "langColor": "#3572A5",
+              "stars": "27,771",
+              "forks": "2,680",
+              "today": "1,668 stars today"
+            },
+            {
+              "owner": "dream-num",
+              "name": "univer",
+              "desc": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+              "lang": "TypeScript",
+              "langColor": "#3178c6",
+              "stars": "17,583",
+              "forks": "1,516",
+              "today": "1,082 stars today"
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Date range 로 오늘 뜬 것만",
+          "body": "언어와 기간을 오늘로 좁혀서 지금 가장 인기 있는 저장소만 볼 수 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "Star 로 바로 저장",
+          "body": "마음에 드는 저장소는 목록에서 바로 이 버튼으로 별표를 눌러 저장합니다."
+        }
+      ],
+      "action": {
+        "label": "트렌딩 페이지 열기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://github.com/trending",
+            "text": "github.com/trending"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8-trending-02",
+      "template": "screen",
+      "title": "저장소 화면",
+      "screen": {
+        "kind": "web",
+        "url": "github.com/microsoft/markitdown",
+        "tabs": [
+          {
+            "title": "GitHub",
+            "icon": "github",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "github-repo",
+          "loggedIn": false,
+          "owner": "microsoft",
+          "name": "markitdown",
+          "forks": "13.8k",
+          "stars": "187k",
+          "starBadge": 1,
+          "tabs": [
+            {
+              "label": "Code",
+              "active": true
+            },
+            {
+              "label": "Issues",
+              "count": 327
+            },
+            {
+              "label": "Pull requests",
+              "count": 368
+            },
+            {
+              "label": "Discussions"
+            },
+            {
+              "label": "Actions"
+            },
+            {
+              "label": "Projects"
+            },
+            {
+              "label": "Security and quality"
+            },
+            {
+              "label": "Insights"
+            }
+          ],
+          "branch": "main",
+          "branchesCount": 7,
+          "tagsCount": 25,
+          "lastCommit": {
+            "author": "Adam Fourney",
+            "message": "Bump versions or markitdown and markitdown-ocr (#2545)",
+            "sha": "b8f79c5",
+            "when": "3 days ago"
+          },
+          "files": [
+            {
+              "name": ".github",
+              "folder": true,
+              "message": "fix: bump youtube-transcript-api",
+              "when": "3 days ago"
+            },
+            {
+              "name": "packages",
+              "folder": true,
+              "message": "Bump versions or markitdown and markitdown-ocr (#2545)",
+              "when": "3 days ago"
+            },
+            {
+              "name": "README.md",
+              "message": "fix: bump youtube-transcript-api",
+              "when": "3 days ago"
+            },
+            {
+              "name": "LICENSE",
+              "message": "LICENSE committed",
+              "when": "2 years ago"
+            }
+          ],
+          "readme": {
+            "heading": "MarkItDown",
+            "lines": [
+              "Python tool for converting files and office documents to Markdown.",
+              "MIT licensed, maintained by Microsoft."
+            ]
+          },
+          "about": {
+            "desc": "Python tool for converting files and office documents to Markdown.",
+            "topics": [
+              "autogen",
+              "langchain",
+              "markdown",
+              "openai",
+              "pdf"
+            ],
+            "license": "MIT",
+            "stars": "187k",
+            "watching": "588",
+            "forks": "13.8k",
+            "badge": 2
+          },
+          "releases": {
+            "version": "Version 0.1.8",
+            "latest": true,
+            "when": "3 days ago",
+            "count": 23
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "로그인 없이도 스타 수 확인",
+          "body": "로그인하지 않아도 저장소의 스타 수와 인기를 그대로 볼 수 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "About 요약",
+          "body": "설명, 주제 태그, 라이선스, 스타 수를 오른쪽 About 에서 한눈에 확인합니다."
+        }
+      ],
+      "action": {
+        "label": "저장소 열기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://github.com/microsoft/markitdown",
+            "text": "github.com/microsoft/markitdown"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8-trending-03",
+      "template": "screen",
+      "title": "markitdown 설치",
+      "replaceWithCapture": "pip install markitdown[all] 실제 실행 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          {
+            "name": "cafe-landing",
+            "folder": true
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "fit": true,
+          "turns": [
+            {
+              "role": "user",
+              "text": "https://github.com/microsoft/markitdown 설치해서 쓸 수 있게 해줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(pip install 'markitdown[all]')"
+            },
+            {
+              "role": "assistant",
+              "text": "markitdown 설치를 마쳤어요. PDF, Word, Excel, PowerPoint, 이미지, HTML 을 마크다운으로 바꿔드릴 수 있어요.",
+              "badge": 2
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "저장소 주소로 설치 요청",
+          "body": "찾은 저장소 주소를 그대로 붙여넣고 설치해서 쓸 수 있게 해달라고 입력해 보세요."
+        },
+        {
+          "n": 2,
+          "head": "바로 변환 가능",
+          "body": "설치가 끝나면 PDF, Word, Excel, PowerPoint, 이미지, HTML 문서를 바로 마크다운으로 바꿀 수 있습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "https://github.com/microsoft/markitdown 설치해서 쓸 수 있게 해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8-trending-04",
+      "template": "illustration",
+      "title": "만들기 전에 먼저 찾기",
+      "illustration": "/illustrations/s8-search-first.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "이미 누가 만들어 뒀을 가능성",
+          "body": "비개발자가 상상할 만한 기능은 이미 누군가 GitHub 에 만들어 뒀을 가능성이 큽니다."
+        },
+        {
+          "n": 2,
+          "head": "검색이 먼저",
+          "body": "처음부터 새로 만들기 전에 트렌딩과 검색으로 비슷한 저장소가 있는지 먼저 찾아봅니다."
+        }
+      ]
+    }
+  ]
+}

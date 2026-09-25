@@ -1,5 +1,5 @@
 // A card/step mark: a brand image path (/logos/x.svg, /brand/x.png) or "icon:<Name>" for a lucide icon.
-import { BookOpenIcon, BotIcon, BrainIcon, CpuIcon, FilePenIcon, FilePlusIcon, FileTextIcon, FolderIcon, GlobeIcon, KeyboardIcon, LockIcon, MessageSquareIcon, MousePointerClickIcon, SearchIcon, SettingsIcon, ShieldCheckIcon, SquareTerminalIcon, ZapIcon, FeatherIcon, MusicIcon, CrownIcon, SparklesIcon } from "lucide-react"
+import { BookOpenIcon, BotIcon, BrainIcon, CpuIcon, FilePenIcon, FilePlusIcon, FileTextIcon, FolderIcon, GlobeIcon, KeyboardIcon, LockIcon, MessageSquareIcon, MousePointerClickIcon, SearchIcon, SettingsIcon, ShieldCheckIcon, SquareTerminalIcon, ZapIcon, FeatherIcon, MusicIcon, CrownIcon, SparklesIcon, CloudUploadIcon, CloudDownloadIcon, Undo2Icon, HistoryIcon, CloudIcon, MonitorIcon, SmartphoneIcon, GitCommitHorizontalIcon, GitMergeIcon, StarIcon } from "lucide-react"
 import { asset, cn } from "@/lib/utils"
 
 const ICONS = {
@@ -8,6 +8,8 @@ const ICONS = {
   Settings: SettingsIcon, Shield: ShieldCheckIcon, Lock: LockIcon, Cpu: CpuIcon, Brain: BrainIcon, Bot: BotIcon,
   Chat: MessageSquareIcon, Keyboard: KeyboardIcon, Click: MousePointerClickIcon, Book: BookOpenIcon, Zap: ZapIcon,
   Feather: FeatherIcon, Music: MusicIcon, Crown: CrownIcon, Sparkles: SparklesIcon,
+  Upload: CloudUploadIcon, Download: CloudDownloadIcon, Undo: Undo2Icon, History: HistoryIcon, Cloud: CloudIcon,
+  Monitor: MonitorIcon, Phone: SmartphoneIcon, Commit: GitCommitHorizontalIcon, Merge: GitMergeIcon, Star: StarIcon,
 } as const
 export const ICON_NAMES = Object.keys(ICONS)
 

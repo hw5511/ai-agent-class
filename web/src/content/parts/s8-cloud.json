@@ -1,0 +1,666 @@
+{
+  "id": "s8-cloud",
+  "title": "클라우드 세션 · GitHub 연동",
+  "summary": "claude.ai/code 의 클라우드 세션을 GitHub 저장소에 연결해서 브라우저나 컴퓨터를 꺼도 이어지는 작업을 본다.",
+  "slides": [
+    {
+      "id": "s8-cloud-01",
+      "template": "illustration",
+      "title": "클라우드 세션 = 빌려 쓰는 컴퓨터",
+      "illustration": "/illustrations/s8-cloud-vm.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "빌려 쓰는 컴퓨터",
+          "body": "클라우드 세션은 Claude 가 빌려주는 가상 컴퓨터 안에서 작업을 대신 진행합니다."
+        },
+        {
+          "n": 2,
+          "head": "꺼도 계속 동작",
+          "body": "브라우저를 닫거나 내 컴퓨터를 꺼도 클라우드 세션은 멈추지 않고 계속 작업을 이어갑니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-cloud-02",
+      "template": "screen",
+      "title": "claude.ai 코드 홈",
+      "screen": {
+        "kind": "web",
+        "url": "claude.ai/code",
+        "tabs": [
+          {
+            "title": "Claude Code",
+            "icon": "claude",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "claude",
+          "screen": "home",
+          "home": {
+            "greeting": "수강생님, 다음 일정은 무엇인가요?"
+          },
+          "env": {
+            "chips": [
+              {
+                "icon": "cloud",
+                "label": "Default",
+                "badge": 2
+              },
+              {
+                "icon": "plus",
+                "label": "+ 저장소 선택..."
+              }
+            ]
+          },
+          "input": {
+            "placeholder": "작업을 설명하거나 질문하세요"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          },
+          "githubPopover": {
+            "title": "리포지토리에서 작업하기 위한 두 단계",
+            "steps": [
+              {
+                "title": "GitHub 계정 연결",
+                "desc": "GitHub에서 사용자가 누구인지 Claude에게 알려줍니다."
+              },
+              {
+                "title": "Claude GitHub App 설치",
+                "desc": "선택한 저장소에서 Claude가 작업할 수 있도록 합니다."
+              }
+            ],
+            "buttonText": "GitHub 연결",
+            "buttonBadge": 1
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "GitHub 연결",
+          "body": "GitHub 연결 버튼을 누르면 계정 연동과 앱 설치까지 두 단계가 이어집니다."
+        },
+        {
+          "n": 2,
+          "head": "Default 칩",
+          "body": "저장소를 아직 고르지 않은 클라우드 세션은 Default 라는 이름으로 표시됩니다."
+        }
+      ],
+      "action": {
+        "label": "바로가기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://claude.ai/code",
+            "text": "claude.ai/code 열기"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8-cloud-03",
+      "template": "screen",
+      "title": "사용자 지정 커넥터",
+      "screen": {
+        "kind": "web",
+        "url": "claude.ai/customize/connectors",
+        "tabs": [
+          {
+            "title": "Claude",
+            "icon": "claude",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "claude",
+          "screen": "customize",
+          "customize": {
+            "tab": "커넥터",
+            "rows": [
+              {
+                "label": "Claude Docs",
+                "type": "웹",
+                "tag": "사용자 지정",
+                "connected": true
+              },
+              {
+                "logo": "gmail",
+                "label": "Gmail",
+                "type": "웹",
+                "connected": true
+              },
+              {
+                "logo": "googlecalendar",
+                "label": "Google Calendar",
+                "type": "웹",
+                "connected": true
+              },
+              {
+                "logo": "googledrive",
+                "label": "Google Drive",
+                "type": "웹",
+                "connected": true
+              },
+              {
+                "logo": "notion",
+                "label": "Notion",
+                "type": "웹",
+                "connected": true
+              },
+              {
+                "logo": "github",
+                "label": "GitHub 통합",
+                "type": "웹",
+                "connected": false,
+                "badge": 1
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "GitHub 통합 연결",
+          "body": "사용자 지정 페이지의 커넥터 탭에서 GitHub 통합 옆의 연결 버튼을 눌러 계정을 연동합니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-cloud-04",
+      "template": "screen",
+      "title": "Claude GitHub App",
+      "screen": {
+        "kind": "web",
+        "url": "github.com/apps/claude",
+        "tabs": [
+          {
+            "title": "GitHub",
+            "icon": "github",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "github-app",
+          "name": "Claude",
+          "nameBadge": 1,
+          "developer": "anthropics",
+          "website": "https://claude.com",
+          "desc": [
+            "Run Claude Code from your GitHub Pull Requests and Issues to respond to reviewer feedback, fix CI errors, or modify code, turning it into a virtual teammate that works alongside your development pipelines.",
+            "This is built on the publicly available Claude Code SDK."
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "앱 이름 확인",
+          "body": "GitHub 페이지에서 Claude 라는 이름과 anthropics 라는 개발자를 확인한 뒤 설치를 진행합니다."
+        }
+      ],
+      "action": {
+        "label": "바로가기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://github.com/apps/claude",
+            "text": "github.com/apps/claude"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8-cloud-05",
+      "template": "screen",
+      "title": "클라우드 세션 답변",
+      "screen": {
+        "kind": "web",
+        "url": "claude.ai/code",
+        "tabs": [
+          {
+            "title": "Claude Code",
+            "icon": "claude",
+            "active": true
+          },
+          {
+            "title": "[GitHub] Please verify your dev",
+            "icon": "gmail"
+          }
+        ],
+        "page": {
+          "type": "claude",
+          "screen": "session",
+          "session": {
+            "header": {
+              "icon": "cloud",
+              "title": "프로젝트 현황 파악",
+              "tag": "Default · cafe-landing",
+              "tagBadge": 1,
+              "actions": [
+                {
+                  "icon": "addPage"
+                },
+                {
+                  "icon": "share"
+                }
+              ]
+            },
+            "messages": [
+              {
+                "role": "assistant",
+                "badge": 2,
+                "blocks": [
+                  {
+                    "t": "h",
+                    "text": "배포"
+                  },
+                  {
+                    "t": "p",
+                    "text": "`master`에 push하면 GitHub Actions가 `cafe-landing/` 폴더를 GitHub Pages에 올려요. 수동 실행(`workflow_dispatch`)도 가능해요."
+                  },
+                  {
+                    "t": "h",
+                    "text": "커밋 이력"
+                  },
+                  {
+                    "t": "p",
+                    "text": "처음 페이지를 만든 뒤 README 추가와 폴더 이동, Pages 배포 설정, 인기 메뉴 차트 추가, 히어로 문구 수정 순으로 진행됐어요. 마지막 두 작업은 PR #1로 `master`에 병합됐어요."
+                  },
+                  {
+                    "t": "h",
+                    "text": "눈에 띈 점 (개선 후보)"
+                  },
+                  {
+                    "t": "ol",
+                    "items": [
+                      "**README가 오래됐어요.** 구성 목록에 \"인기 메뉴\" 차트 섹션이 빠져 있어요.",
+                      "**차트 y축 글자가 너무 작아요.** `font-size=\"9\"`인데 SVG 전체가 화면에 맞춰 줄어들기 때문에, 모바일에서는 거의 읽을 수 없어요.",
+                      "**모바일에서 헤더가 넘칠 수 있어요.** 메뉴 링크 4개와 로고가 한 줄에 있어서 좁은 화면에서는 줄바꿈되거나 넘칠 가능성이 있어요.",
+                      "**이미지를 외부에서 불러와요.** Unsplash 링크를 직접 쓰고 있어서, 링크가 바뀌거나 막히면 이미지가 깨져요.",
+                      "**메타 정보가 없어요.** SEO용 `description`, OG 태그, 파비콘이 빠져 있어요."
+                    ]
+                  },
+                  {
+                    "t": "p",
+                    "text": "이 중에서 손볼 부분이 있거나 새로 추가하고 싶은 기능이 있으면 말씀해 주세요."
+                  },
+                  {
+                    "t": "asterisk"
+                  }
+                ],
+                "meta": {
+                  "time": "1시간 전"
+                }
+              }
+            ]
+          },
+          "input": {
+            "placeholder": "개선 후보 전부 수정해줘"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Default · cafe-landing",
+          "body": "제목 옆 태그로 지금 이 세션이 cafe-landing 저장소에 연결돼 있다는 것을 확인합니다."
+        },
+        {
+          "n": 2,
+          "head": "현황 답변",
+          "body": "배포 방식과 커밋 이력, 개선하면 좋을 점 다섯 가지를 클로드가 먼저 정리해서 보여줍니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-cloud-06",
+      "template": "screen",
+      "title": "클라우드 세션 다음 요청",
+      "screen": {
+        "kind": "web",
+        "url": "claude.ai/code",
+        "tabs": [
+          {
+            "title": "Claude Code",
+            "icon": "claude",
+            "active": true
+          },
+          {
+            "title": "[GitHub] Please verify your dev",
+            "icon": "gmail"
+          }
+        ],
+        "page": {
+          "type": "claude",
+          "screen": "session",
+          "session": {
+            "header": {
+              "icon": "cloud",
+              "title": "프로젝트 현황 파악",
+              "tag": "Default · cafe-landing",
+              "actions": [
+                {
+                  "icon": "addPage"
+                },
+                {
+                  "icon": "share"
+                }
+              ]
+            },
+            "messages": [
+              {
+                "role": "assistant",
+                "blocks": [
+                  {
+                    "t": "h",
+                    "text": "배포"
+                  },
+                  {
+                    "t": "p",
+                    "text": "`master`에 push하면 GitHub Actions가 `cafe-landing/` 폴더를 GitHub Pages에 올려요. 수동 실행(`workflow_dispatch`)도 가능해요."
+                  },
+                  {
+                    "t": "h",
+                    "text": "커밋 이력"
+                  },
+                  {
+                    "t": "p",
+                    "text": "처음 페이지를 만든 뒤 README 추가와 폴더 이동, Pages 배포 설정, 인기 메뉴 차트 추가, 히어로 문구 수정 순으로 진행됐어요. 마지막 두 작업은 PR #1로 `master`에 병합됐어요."
+                  },
+                  {
+                    "t": "h",
+                    "text": "눈에 띈 점 (개선 후보)"
+                  },
+                  {
+                    "t": "ol",
+                    "items": [
+                      "**README가 오래됐어요.** 구성 목록에 \"인기 메뉴\" 차트 섹션이 빠져 있어요.",
+                      "**차트 y축 글자가 너무 작아요.** `font-size=\"9\"`인데 SVG 전체가 화면에 맞춰 줄어들기 때문에, 모바일에서는 거의 읽을 수 없어요.",
+                      "**모바일에서 헤더가 넘칠 수 있어요.** 메뉴 링크 4개와 로고가 한 줄에 있어서 좁은 화면에서는 줄바꿈되거나 넘칠 가능성이 있어요.",
+                      "**이미지를 외부에서 불러와요.** Unsplash 링크를 직접 쓰고 있어서, 링크가 바뀌거나 막히면 이미지가 깨져요.",
+                      "**메타 정보가 없어요.** SEO용 `description`, OG 태그, 파비콘이 빠져 있어요."
+                    ]
+                  },
+                  {
+                    "t": "p",
+                    "text": "이 중에서 손볼 부분이 있거나 새로 추가하고 싶은 기능이 있으면 말씀해 주세요."
+                  },
+                  {
+                    "t": "asterisk"
+                  }
+                ],
+                "meta": {
+                  "time": "1시간 전"
+                }
+              }
+            ]
+          },
+          "input": {
+            "text": "해당 랜딩페이지 제일 상단에 '클라우드 세션 작업 테스트'라는 문구를 넣고 머지해줘",
+            "badge": 1
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "후속 요청 입력",
+          "body": "같은 세션 안에서 이어서 랜딩페이지 상단 문구 추가와 머지를 함께 요청합니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "해당 랜딩페이지 제일 상단에 '클라우드 세션 작업 테스트'라는 문구를 넣고 머지해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8-cloud-07",
+      "template": "screen",
+      "title": "클라우드 세션 작업 중",
+      "screen": {
+        "kind": "web",
+        "url": "claude.ai/code",
+        "tabs": [
+          {
+            "title": "Claude Code",
+            "icon": "claude",
+            "active": true
+          },
+          {
+            "title": "[GitHub] Please verify your dev",
+            "icon": "gmail"
+          }
+        ],
+        "page": {
+          "type": "claude",
+          "screen": "session",
+          "session": {
+            "header": {
+              "icon": "cloud",
+              "title": "프로젝트 현황 파악",
+              "tag": "Default · cafe-landing",
+              "actions": [
+                {
+                  "icon": "addPage"
+                },
+                {
+                  "icon": "share"
+                }
+              ]
+            },
+            "messages": [
+              {
+                "role": "user",
+                "text": "해당 랜딩페이지 제일 상단에 '클라우드 세션 작업 테스트'라는 문구를 넣고 머지해줘"
+              },
+              {
+                "role": "assistant",
+                "badge": 2,
+                "blocks": [
+                  {
+                    "t": "ran",
+                    "label": "실행됨 명령 1개, 사용함 도구 3개"
+                  },
+                  {
+                    "t": "p",
+                    "text": "랜딩페이지 맨 위에 '클라우드 세션 작업 테스트' 문구를 넣고 `master`에 머지했어요. PR은 #2예요. 브라우저에서 직접 열어 화면을 확인하지는 않았어요."
+                  },
+                  {
+                    "t": "ul",
+                    "items": [
+                      "**문구 위치**: 화면 맨 위에 고정된 띠(높이 36px)로 넣었고, 카페 강조색 배경에 굵은 글씨로 가운데 정렬했어요. 수정한 파일은 `cafe-landing/index.html` 하나예요.",
+                      "**헤더 위치 조정**: 원래 헤더도 맨 위에 고정돼 있어서 문구 띠에 가려지지 않도록 36px 아래로 내렸어요."
+                    ]
+                  },
+                  {
+                    "t": "p",
+                    "text": "`master`에 머지되면 자동 배포가 돌도록 설정돼 있어서 GitHub Pages에 곧 반영될 거예요. 배포가 실제로 끝났는지는 확인하지 않았어요."
+                  },
+                  {
+                    "t": "asterisk"
+                  }
+                ]
+              }
+            ],
+            "prBar": {
+              "number": "#2",
+              "repo": "cafe-landing",
+              "branch": "claude/compassionate-euler-y3nvgu",
+              "status": "병합됨",
+              "badge": 1
+            }
+          },
+          "input": {
+            "placeholder": "배포 완료됐는지 확인해줘"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "병합된 PR",
+          "body": "작업 내용이 PR #2 로 master 에 병합된 것을 상단 바에서 바로 확인할 수 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "머지 완료 답변",
+          "body": "요청한 문구를 넣고 master 에 머지까지 끝냈다는 결과를 알려줍니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-cloud-08",
+      "template": "screen",
+      "title": "배포 결과 확인",
+      "screen": {
+        "kind": "web",
+        "url": "student.github.io/cafe-landing/",
+        "tabs": [
+          {
+            "title": "모카빈 카페 | Mocha Bean Cafe",
+            "icon": "globe",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "image",
+          "src": "/shots/s8/cafe-landing-banner.png"
+        },
+        "pins": [
+          {
+            "n": 1,
+            "x": 50,
+            "y": 6
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "상단 문구 반영",
+          "body": "방금 클라우드 세션에 요청한 문구가 실제 배포된 페이지 맨 위에 그대로 나타납니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-cloud-09",
+      "template": "screen",
+      "title": "사이드바 세션 동기화",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "session",
+          "sidebar": {
+            "account": "수강생 · Pro",
+            "groups": [
+              {
+                "title": "agent1",
+                "rows": [
+                  {
+                    "icon": "dot",
+                    "label": "폴더 구조 설명"
+                  }
+                ]
+              },
+              {
+                "title": "cafe-landing",
+                "collapsible": true,
+                "rows": [
+                  {
+                    "icon": "branch",
+                    "label": "프로젝트 현황 파악",
+                    "active": true,
+                    "badge": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "session": {
+            "header": {
+              "icon": "cloud",
+              "title": "프로젝트 현황 파악",
+              "tag": "Default · cafe-landing",
+              "actions": [
+                {
+                  "icon": "terminal"
+                },
+                {
+                  "icon": "plus"
+                },
+                {
+                  "icon": "globe"
+                },
+                {
+                  "icon": "more"
+                }
+              ]
+            },
+            "messages": [
+              {
+                "role": "assistant",
+                "blocks": [
+                  {
+                    "t": "ran",
+                    "label": "실행됨 명령 1개, 사용함 도구 3개"
+                  },
+                  {
+                    "t": "p",
+                    "text": "랜딩페이지 맨 위에 '클라우드 세션 작업 테스트' 문구를 넣고 `master`에 머지했어요. PR은 #2예요."
+                  }
+                ]
+              }
+            ],
+            "prBar": {
+              "number": "#2",
+              "repo": "cafe-landing",
+              "branch": "claude/compassionate-euler-y3nvgu",
+              "status": "병합됨"
+            }
+          },
+          "input": {
+            "placeholder": "배포 완료됐는지 확인해줘"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "cafe-landing 세션",
+          "body": "데스크톱 앱 사이드바에서도 방금 웹에서 보던 클라우드 세션이 같은 내용으로 이어집니다."
+        }
+      ]
+    }
+  ]
+}

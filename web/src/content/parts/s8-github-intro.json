@@ -1,0 +1,161 @@
+{
+  "id": "s8-github-intro",
+  "title": "GitHub란?",
+  "summary": "GitHub 를 클라우드 공유폴더에 비유해 백업 · 불러오기 · 되돌리기 · 수정 이력이라는 네 가지 쓰임과 레포 · 커밋 · 푸시 · 클론 용어를 익힌다.",
+  "slides": [
+    {
+      "id": "s8-github-intro-01",
+      "template": "illustration",
+      "title": "GitHub = 클라우드 공유폴더",
+      "illustration": "/illustrations/s8-gh-shared-folder.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "구글 드라이브와 비슷",
+          "body": "구글 드라이브에 폴더를 올려두듯이 GitHub 도 내 폴더를 클라우드에 올려두는 공유폴더입니다."
+        },
+        {
+          "n": 2,
+          "head": "내 컴퓨터 폴더와 연결",
+          "body": "내 컴퓨터의 agent1 폴더와 GitHub 의 레포가 서로 연결되어 같은 내용을 주고받습니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-github-intro-02",
+      "template": "cards",
+      "title": "GitHub 로 하는 일 4가지",
+      "cards": [
+        {
+          "label": "백업",
+          "logo": "icon:Upload",
+          "tags": [
+            "작업 폴더를 안전하게 보관"
+          ],
+          "badge": 1
+        },
+        {
+          "label": "불러오기",
+          "logo": "icon:Download",
+          "tags": [
+            "다른 컴퓨터에서 최신 상태로"
+          ],
+          "badge": 2
+        },
+        {
+          "label": "되돌리기",
+          "logo": "icon:Undo",
+          "tags": [
+            "예전 커밋으로 복구"
+          ],
+          "badge": 2
+        },
+        {
+          "label": "수정 이력",
+          "logo": "icon:History",
+          "tags": [
+            "커밋 메모로 이유 확인"
+          ],
+          "badge": 3
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "백업",
+          "body": "지금 작업 중인 폴더를 통째로 GitHub 에 올려서 안전하게 백업해 둘 수 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "불러오기 · 되돌리기",
+          "body": "다른 컴퓨터에서 최신 상태를 불러오거나, 예전 커밋으로 되돌려 복구할 수도 있습니다."
+        },
+        {
+          "n": 3,
+          "head": "수정 이력",
+          "body": "커밋마다 왜 고쳤는지 메모가 남아서 나중에 Claude 도 그 맥락을 그대로 파악할 수 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-github-intro-03",
+      "template": "illustration",
+      "title": "되돌리기 · 수정 이력",
+      "illustration": "/illustrations/s8-gh-history.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "커밋마다 메모",
+          "body": "각 커밋에 어떤 방식으로 시도했는지 메모를 남겨서 나중에도 왜 바꿨는지 알 수 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "실패 후 새 방식",
+          "body": "A 방식이 실패하면 커밋 메모를 보고 B 방식으로 다시 시도한 이력이 그대로 남습니다."
+        },
+        {
+          "n": 3,
+          "head": "이전 커밋으로 되돌리기",
+          "body": "필요하면 화살표처럼 이전 커밋 상태로 돌아가 되돌릴 수 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-github-intro-04",
+      "template": "cards",
+      "title": "용어 4개",
+      "cards": [
+        {
+          "label": "레포",
+          "logo": "icon:Folder",
+          "tags": [
+            "Repository",
+            "공유폴더"
+          ],
+          "badge": 1
+        },
+        {
+          "label": "커밋",
+          "logo": "icon:Commit",
+          "tags": [
+            "저장 + 메모"
+          ],
+          "badge": 2
+        },
+        {
+          "label": "푸시",
+          "logo": "icon:Upload",
+          "tags": [
+            "GitHub 로 올리기"
+          ],
+          "badge": 2
+        },
+        {
+          "label": "클론",
+          "logo": "icon:Download",
+          "tags": [
+            "내 컴퓨터로 내려받기"
+          ],
+          "badge": 3
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "레포",
+          "body": "공유폴더 하나가 GitHub 에서는 레포지토리, 줄여서 레포라고 부릅니다."
+        },
+        {
+          "n": 2,
+          "head": "커밋 · 푸시",
+          "body": "작업 내용을 저장하는 것이 커밋, 그 커밋을 GitHub 로 올리는 것이 푸시입니다."
+        },
+        {
+          "n": 3,
+          "head": "클론",
+          "body": "레포를 내 컴퓨터로 통째로 내려받는 것을 클론이라고 합니다."
+        }
+      ]
+    }
+  ]
+}

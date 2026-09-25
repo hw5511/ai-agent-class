@@ -41,13 +41,19 @@ course -> session (goal, practice) -> part (table of contents) -> slide -> actio
 
 Screens also include `chat` (`app`, `logo?`, `messages`) and `browser` (`url`, `results?` or `page?`).
 
+Step 8 surfaces (each drawn from a real capture; see `schema-claude.ts`, `schema-site.ts`, `schema-phone.ts`):
+`desktop` (the Claude desktop app, `view`), `web` (a Chrome window: `url`, `tabs`, `page` = claude.ai/code body, a GitHub /
+Google / claude.com page, or a page `image`), `phone` (Claude Code on the web, mobile view). A slide never shows a state of
+these apps that no capture shows.
+
 ## Visuals first (CEO 2026-09-21: "시각적인게 약하다")
 
 - A slide about products, tools or brands shows them: `cards` with the brand logo (`/logos/*.svg`,
   `/brand/*-wordmark.png`) and a real screenshot when one exists (`/brand/*-screen.png`, `/shots/*`).
 - A process is a `flow`, not a table. A "ask a chatbot / search the web" step is a `chat` / `browser` screen.
 - Tools and concepts without a brand use `logo: "icon:<Name>"` (Read, Write, Edit, Bash, Folder, Terminal,
-  Globe, Search, Settings, Shield, Lock, Cpu, Brain, Bot, Chat, Keyboard, Click, Book, Zap).
+  Globe, Search, Settings, Shield, Lock, Cpu, Brain, Bot, Chat, Keyboard, Click, Book, Zap, Upload, Download, Undo,
+  History, Cloud, Monitor, Phone, Commit, Merge, Star).
 - `table` only for genuinely tabular facts (mode x permission, setting x value). Never as the only visual
   of a concept slide.
 

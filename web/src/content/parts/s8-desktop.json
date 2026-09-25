@@ -1,0 +1,1328 @@
+{
+  "id": "s8-desktop",
+  "title": "Claude 데스크톱 앱",
+  "summary": "claude.com 에서 데스크톱 앱을 내려받아 로그인하고, 로컬 폴더를 연결해 CLI 와 같은 작업을 창 안에서 해본다.",
+  "slides": [
+    {
+      "id": "s8-desktop-01",
+      "template": "screen",
+      "title": "Claude 다운로드",
+      "screen": {
+        "kind": "web",
+        "url": "claude.com/download",
+        "tabs": [
+          {
+            "title": "Claude",
+            "icon": "claude",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "claude-download",
+          "windowsBadge": 1,
+          "desktop": [
+            {
+              "os": "macOS"
+            },
+            {
+              "os": "Windows"
+            },
+            {
+              "os": "Windows (arm 64)"
+            },
+            {
+              "os": "Linux",
+              "note": "See docs"
+            }
+          ],
+          "mobile": [
+            {
+              "os": "iOS"
+            },
+            {
+              "os": "Android"
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Download for Windows",
+          "body": "이 버튼을 눌러 윈도우용 설치 파일을 내려받으세요."
+        }
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://claude.com/download",
+            "text": "claude.com/download"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8-desktop-02",
+      "template": "screen",
+      "title": "쿠키 동의",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "splash",
+          "cookieBanner": {
+            "agreeBadge": 1
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "동의",
+          "body": "설치 후 처음 뜨는 쿠키 배너에서 동의를 누르면 다음 화면으로 넘어갑니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-03",
+      "template": "screen",
+      "title": "시작하기",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "splash",
+          "startBadge": 1
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "시작하기",
+          "body": "이 버튼을 눌러 로그인 화면으로 이동합니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-04",
+      "template": "screen",
+      "title": "로그인",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "login",
+          "login": {
+            "googleBadge": 1
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Google로 계속하기",
+          "body": "평소 웹에서 Claude 에 로그인할 때 쓰던 구글 계정으로 바로 로그인합니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-05",
+      "template": "screen",
+      "title": "Google 계정 선택",
+      "screen": {
+        "kind": "web",
+        "url": "accounts.google.com/v3/signin/accountchooser",
+        "tabs": [
+          {
+            "title": "로그인 - Google 계정",
+            "icon": "google",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "google-chooser",
+          "app": "claude",
+          "accounts": [
+            {
+              "initial": "수",
+              "name": "수강생",
+              "email": "student@gmail.com",
+              "color": "#1a73e8",
+              "badge": 1
+            }
+          ],
+          "otherAccountBadge": 2
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "계정 선택",
+          "body": "목록에서 이 계정을 선택하면 그 계정으로 Claude 앱에 로그인됩니다."
+        },
+        {
+          "n": 2,
+          "head": "다른 계정 사용",
+          "body": "목록에 없는 다른 구글 계정으로 로그인하고 싶을 때 선택합니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-06",
+      "template": "screen",
+      "title": "Claude 열기",
+      "screen": {
+        "kind": "web",
+        "url": "claude.ai/login/popup-google-auth",
+        "tabs": [
+          {
+            "title": "Claude",
+            "icon": "claude",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "claude-open-app",
+          "openBadge": 2,
+          "dialogOpenBadge": 1
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Claude 열기",
+          "body": "브라우저가 띄운 대화상자에서 이 버튼을 눌러 데스크톱 앱으로 로그인을 이어갑니다."
+        },
+        {
+          "n": 2,
+          "head": "페이지의 열기 버튼",
+          "body": "대화상자가 자동으로 뜨지 않으면 페이지에 있는 같은 이름의 버튼으로도 앱을 열 수 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-07",
+      "template": "screen",
+      "title": "데스크톱 앱 홈",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "home",
+          "titleBar": {
+            "toggle": "code",
+            "toggleBadge": 1
+          },
+          "sidebar": {
+            "newBadge": 2,
+            "account": "수강생 · Pro"
+          },
+          "home": {
+            "greeting": "수강생님, 다음 일정은 무엇인가요?",
+            "stats": {
+              "skeleton": true
+            }
+          },
+          "env": {
+            "chips": [
+              {
+                "icon": "local",
+                "label": "로컬"
+              },
+              {
+                "icon": "folder",
+                "label": "폴더 없음",
+                "badge": 3
+              }
+            ]
+          },
+          "input": {
+            "placeholder": "작업을 설명하거나 질문하세요"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "코드 탭",
+          "body": "창 위쪽 토글에서 대화 탭과 코드 탭을 오갈 수 있고, 지금은 코드 탭이 켜져 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "새로 생성",
+          "body": "이 버튼을 누르면 새 로컬 세션을 시작할 수 있습니다."
+        },
+        {
+          "n": 3,
+          "head": "로컬 · 폴더 없음",
+          "body": "아직 연결된 폴더가 없는 상태이고, 아래 입력창에 작업을 적으면 바로 시작됩니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-08",
+      "template": "table",
+      "title": "웹 · 데스크톱 앱 · CLI",
+      "columns": [
+        "",
+        "화면",
+        "내 컴퓨터 폴더",
+        "설치"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "웹 claude.ai",
+            "브라우저",
+            "접근 불가",
+            "불필요"
+          ]
+        },
+        {
+          "cells": [
+            "데스크톱 앱",
+            "전용 창",
+            "접근 가능",
+            "설치 필요"
+          ]
+        },
+        {
+          "cells": [
+            "CLI (VS Code 터미널)",
+            "터미널",
+            "접근 가능",
+            "설치 필요"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": "!",
+          "head": "웹은 폴더 접근 불가",
+          "body": "웹은 보안상 내 컴퓨터 폴더에 접근하지 못합니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-09",
+      "template": "screen",
+      "title": "모드 메뉴",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "home",
+          "sidebar": {
+            "account": "수강생 · Pro"
+          },
+          "home": {
+            "greeting": "수강생님, 다음 일정은 무엇인가요?",
+            "stats": {
+              "skeleton": true
+            }
+          },
+          "env": {
+            "chips": [
+              {
+                "icon": "local",
+                "label": "로컬"
+              },
+              {
+                "icon": "folder",
+                "label": "폴더 없음"
+              }
+            ]
+          },
+          "input": {
+            "placeholder": "작업을 설명하거나 질문하세요"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          },
+          "menu": {
+            "kind": "mode",
+            "title": "모드",
+            "items": [
+              {
+                "label": "자동",
+                "desc": "Claude가 권한 결정을 처리합니다",
+                "shortcut": "1",
+                "check": true,
+                "badge": 1
+              },
+              {
+                "label": "수동",
+                "desc": "변경하기 전에 항상 확인",
+                "shortcut": "2"
+              },
+              {
+                "label": "편집 자동 수락",
+                "desc": "모든 파일 편집을 자동으로 수락",
+                "shortcut": "3"
+              },
+              {
+                "label": "계획",
+                "desc": "변경하기 전에 계획 세우기",
+                "shortcut": "4"
+              }
+            ],
+            "footer": {
+              "label": "권한 무시",
+              "value": "활성화",
+              "badge": 2
+            }
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "자동 (현재 모드)",
+          "body": "체크 표시가 붙은 자동 모드에서는 Claude 가 각 요청의 권한을 스스로 판단합니다."
+        },
+        {
+          "n": 2,
+          "head": "권한 무시",
+          "body": "이 항목은 기본으로 숨겨져 있고, 설정에서 따로 켜야 목록에 나타납니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-10",
+      "template": "screen",
+      "title": "모델 메뉴",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "home",
+          "sidebar": {
+            "account": "수강생 · Pro"
+          },
+          "home": {
+            "greeting": "수강생님, 다음 일정은 무엇인가요?",
+            "stats": {
+              "skeleton": true
+            }
+          },
+          "env": {
+            "chips": [
+              {
+                "icon": "local",
+                "label": "로컬"
+              },
+              {
+                "icon": "folder",
+                "label": "폴더 없음"
+              }
+            ]
+          },
+          "input": {
+            "placeholder": "작업을 설명하거나 질문하세요"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간",
+            "modelBadge": 1
+          },
+          "menu": {
+            "kind": "model",
+            "items": [
+              {
+                "label": "Opus 5.5",
+                "check": true,
+                "badge": 1
+              },
+              {
+                "label": "Fable 5.1",
+                "tag": "기본값",
+                "shortcut": "2"
+              },
+              {
+                "label": "Sonnet 5",
+                "shortcut": "3"
+              },
+              {
+                "label": "Haiku 4.5",
+                "shortcut": "4"
+              },
+              {
+                "label": "더 많은 모델",
+                "chevron": true
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "현재 모델 Opus 5.5",
+          "body": "아래 모델 버튼과 목록의 체크 표시로 지금 쓰고 있는 모델을 확인하고 바꿀 수 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-11",
+      "template": "screen",
+      "title": "플러스 메뉴",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "home",
+          "sidebar": {
+            "account": "수강생 · Pro"
+          },
+          "home": {
+            "greeting": "수강생님, 다음 일정은 무엇인가요?",
+            "stats": {
+              "skeleton": true
+            }
+          },
+          "env": {
+            "chips": [
+              {
+                "icon": "local",
+                "label": "로컬"
+              },
+              {
+                "icon": "folder",
+                "label": "폴더 없음"
+              }
+            ]
+          },
+          "input": {
+            "placeholder": "작업을 설명하거나 질문하세요"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          },
+          "menu": {
+            "kind": "plus",
+            "items": [
+              {
+                "icon": "attach",
+                "label": "파일 또는 사진 추가",
+                "shortcut": "Ctrl+U",
+                "badge": 1
+              },
+              {
+                "icon": "slash",
+                "label": "슬래시 명령어"
+              },
+              {
+                "icon": "connector",
+                "label": "커넥터",
+                "chevron": true,
+                "badge": 2
+              },
+              {
+                "icon": "plugin",
+                "label": "플러그인",
+                "chevron": true,
+                "badge": 3
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "파일 또는 사진 추가",
+          "body": "이미지나 문서 파일을 대화에 직접 첨부합니다."
+        },
+        {
+          "n": 2,
+          "head": "커넥터",
+          "body": "노션, 지메일 같은 연결된 서비스 목록으로 이동합니다."
+        },
+        {
+          "n": 3,
+          "head": "플러그인",
+          "body": "설치한 플러그인 목록으로 이동합니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-12",
+      "template": "screen",
+      "title": "폴더 메뉴",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "home",
+          "sidebar": {
+            "account": "수강생 · Pro"
+          },
+          "home": {
+            "greeting": "수강생님, 다음 일정은 무엇인가요?",
+            "stats": {
+              "skeleton": true
+            }
+          },
+          "env": {
+            "chips": [
+              {
+                "icon": "local",
+                "label": "로컬"
+              },
+              {
+                "icon": "folder",
+                "label": "폴더 없음"
+              }
+            ]
+          },
+          "input": {
+            "placeholder": "작업을 설명하거나 질문하세요"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          },
+          "menu": {
+            "kind": "folder",
+            "items": [
+              {
+                "label": "폴더 없음",
+                "check": true
+              },
+              {
+                "label": "폴더 열기...",
+                "badge": 1
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "폴더 열기",
+          "body": "이 항목을 누르면 로컬 세션에 연결할 폴더를 고르는 창이 열립니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-13",
+      "template": "screen",
+      "title": "폴더 선택",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "home",
+          "sidebar": {
+            "account": "수강생 · Pro"
+          },
+          "home": {
+            "greeting": "수강생님, 다음 일정은 무엇인가요?",
+            "stats": {
+              "skeleton": true
+            }
+          },
+          "env": {
+            "chips": [
+              {
+                "icon": "local",
+                "label": "로컬"
+              },
+              {
+                "icon": "folder",
+                "label": "폴더 없음"
+              }
+            ]
+          },
+          "input": {
+            "placeholder": "작업을 설명하거나 질문하세요"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          },
+          "dialog": {
+            "kind": "folder-picker",
+            "picker": {
+              "title": "로컬 세션용 폴더 선택",
+              "crumbs": [
+                "C:"
+              ],
+              "folders": [
+                "agent1",
+                "Program Files",
+                "Users"
+              ],
+              "selected": "agent1",
+              "selectBadge": 1
+            }
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "폴더 선택",
+          "body": "agent1 폴더를 고른 뒤 이 버튼을 눌러 로컬 세션의 작업 폴더로 지정합니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-14",
+      "template": "screen",
+      "title": "작업 공간 신뢰",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "home",
+          "sidebar": {
+            "account": "수강생 · Pro"
+          },
+          "home": {
+            "greeting": "수강생님, 다음 일정은 무엇인가요?",
+            "stats": {
+              "metrics": [
+                {
+                  "label": "세션",
+                  "value": "42"
+                },
+                {
+                  "label": "메시지",
+                  "value": "1,236"
+                },
+                {
+                  "label": "총 토큰",
+                  "value": "3.1M"
+                },
+                {
+                  "label": "활성 일수",
+                  "value": "18"
+                },
+                {
+                  "label": "최다 사용 시간",
+                  "value": "오후 8시"
+                },
+                {
+                  "label": "즐겨 사용한 모델",
+                  "value": "Opus 5.5"
+                }
+              ],
+              "heatmap": true
+            }
+          },
+          "env": {
+            "chips": [
+              {
+                "icon": "local",
+                "label": "로컬"
+              },
+              {
+                "icon": "folder",
+                "label": "agent1"
+              }
+            ]
+          },
+          "input": {
+            "placeholder": "작업을 설명하거나 질문하세요"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          },
+          "dialog": {
+            "kind": "trust",
+            "path": "C:\\agent1",
+            "confirmBadge": 1
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "작업 공간 신뢰",
+          "body": "이 폴더에서 Claude 가 파일을 읽고 쓰고 실행하도록 허용합니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-15",
+      "template": "screen",
+      "title": "폴더 연결 완료",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "home",
+          "sidebar": {
+            "account": "수강생 · Pro"
+          },
+          "home": {
+            "greeting": "수강생님, 다음 일정은 무엇인가요?",
+            "stats": {
+              "metrics": [
+                {
+                  "label": "세션",
+                  "value": "42"
+                },
+                {
+                  "label": "메시지",
+                  "value": "1,236"
+                },
+                {
+                  "label": "총 토큰",
+                  "value": "3.1M"
+                },
+                {
+                  "label": "활성 일수",
+                  "value": "18"
+                },
+                {
+                  "label": "최다 사용 시간",
+                  "value": "오후 8시"
+                },
+                {
+                  "label": "즐겨 사용한 모델",
+                  "value": "Opus 5.5"
+                }
+              ],
+              "heatmap": true
+            }
+          },
+          "env": {
+            "chips": [
+              {
+                "icon": "local",
+                "label": "로컬"
+              },
+              {
+                "icon": "folder",
+                "label": "agent1",
+                "badge": 1
+              }
+            ],
+            "addFolderBadge": 2
+          },
+          "input": {
+            "placeholder": "작업을 설명하거나 질문하세요"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "agent1 폴더 연결",
+          "body": "이제부터 이 폴더를 기준으로 로컬 세션이 진행됩니다."
+        },
+        {
+          "n": 2,
+          "head": "폴더 추가",
+          "body": "이 아이콘으로 다른 폴더를 하나 더 연결할 수 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-16",
+      "template": "screen",
+      "title": "프롬프트 입력",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "home",
+          "sidebar": {
+            "account": "수강생 · Pro"
+          },
+          "home": {
+            "greeting": "수강생님, 다음 일정은 무엇인가요?",
+            "stats": {
+              "metrics": [
+                {
+                  "label": "세션",
+                  "value": "42"
+                },
+                {
+                  "label": "메시지",
+                  "value": "1,236"
+                },
+                {
+                  "label": "총 토큰",
+                  "value": "3.1M"
+                },
+                {
+                  "label": "활성 일수",
+                  "value": "18"
+                },
+                {
+                  "label": "최다 사용 시간",
+                  "value": "오후 8시"
+                },
+                {
+                  "label": "즐겨 사용한 모델",
+                  "value": "Opus 5.5"
+                }
+              ],
+              "heatmap": true
+            }
+          },
+          "env": {
+            "chips": [
+              {
+                "icon": "local",
+                "label": "로컬"
+              },
+              {
+                "icon": "folder",
+                "label": "agent1"
+              }
+            ]
+          },
+          "input": {
+            "text": "너는 누구니? 현재 폴더구조 설명해줘",
+            "badge": 1
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "질문 입력",
+          "body": "궁금한 것을 자유롭게 적고 Enter 로 전송해 보세요."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "너는 누구니? 현재 폴더구조 설명해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8-desktop-17",
+      "template": "screen",
+      "title": "세션 답변",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "session",
+          "sidebar": {
+            "account": "수강생 · Pro",
+            "groups": [
+              {
+                "title": "agent1",
+                "rows": [
+                  {
+                    "icon": "dot",
+                    "label": "폴더 구조 설명",
+                    "active": true
+                  }
+                ]
+              }
+            ]
+          },
+          "session": {
+            "header": {
+              "icon": "local",
+              "title": "폴더 구조 설명",
+              "tag": "agent1",
+              "actions": [
+                {
+                  "icon": "terminal"
+                },
+                {
+                  "icon": "plus"
+                },
+                {
+                  "icon": "globe"
+                },
+                {
+                  "icon": "more"
+                }
+              ]
+            },
+            "messages": [
+              {
+                "role": "user",
+                "text": "너는 누구니? 현재 폴더구조 설명해줘"
+              },
+              {
+                "role": "assistant",
+                "blocks": [
+                  {
+                    "t": "notice",
+                    "headline": "자동 모드는 이제 Claude Code의 기본 권한 모드입니다.",
+                    "body": "자동 모드를 사용하면 Claude가 권한 프롬프트를 자동으로 처리합니다. Claude는 각 도구 호출을 실행하기 전에 위험한 작업과 프롬프트 인젝션 여부를 확인하고, 위험도가 낮다고 판단한 항목은 실행하며, 나머지는 차단합니다.",
+                    "link": "code.claude.com/docs/en/permission-modes"
+                  },
+                  {
+                    "t": "ran",
+                    "label": "실행됨 명령 2개",
+                    "badge": 1
+                  },
+                  {
+                    "t": "p",
+                    "text": "수강생님, 안녕하세요! 저는 이 수업의 실습 도우미 **클로드**예요."
+                  },
+                  {
+                    "t": "h",
+                    "text": "현재 폴더 구조"
+                  },
+                  {
+                    "t": "code",
+                    "badge": 2,
+                    "lines": [
+                      "agent1/",
+                      "├── CLAUDE.md          ← 제 역할과 규칙이 적힌 안내 파일",
+                      "├── .claude/",
+                      "│    └── skills/        ← 7회차에 만든 스킬 3개",
+                      "│         ├── cardnews/      카드뉴스 표지·본문 이미지 만들기",
+                      "│         ├── img2pdf/       폴더 안 이미지를 PDF 하나로 합치기",
+                      "│         └── photo-edit/    사진 밝기·대비·색조·크기 바꾸기",
+                      "└── 벚꽃축제/            ← 지금은 비어 있는 폴더"
+                    ]
+                  },
+                  {
+                    "t": "ul",
+                    "items": [
+                      "**CLAUDE.md**: 저에게 주는 안내서예요. 여기 적힌 대로 제가 움직여요.",
+                      "**.claude/skills**: 스킬마다 `SKILL.md` 파일이 하나씩 있어요.",
+                      "**벚꽃축제**: 아직 비어 있어요. 사진을 넣으면 스킬로 보정하거나 PDF로 합칠 수 있어요."
+                    ]
+                  },
+                  {
+                    "t": "p",
+                    "text": "다음으로 뭘 해볼까요?"
+                  },
+                  {
+                    "t": "asterisk"
+                  }
+                ]
+              }
+            ],
+            "anchorTop": true
+          },
+          "input": {
+            "placeholder": "카드뉴스 스킬 사용법 알려줘"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간",
+            "busy": true
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "실행된 명령 보기",
+          "body": "이 줄을 펼치면 답변을 만드는 동안 사용한 도구 호출 두 개를 볼 수 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "폴더 구조 답변",
+          "body": "agent1 폴더 아래 CLAUDE.md 와 스킬 3개, 아직 비어 있는 벚꽃축제 폴더까지 그대로 설명합니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-18",
+      "template": "screen",
+      "title": "슬래시 명령어 목록",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "session",
+          "sidebar": {
+            "account": "수강생 · Pro",
+            "groups": [
+              {
+                "title": "agent1",
+                "rows": [
+                  {
+                    "icon": "dot",
+                    "label": "폴더 구조 설명",
+                    "active": true
+                  }
+                ]
+              }
+            ]
+          },
+          "session": {
+            "header": {
+              "icon": "local",
+              "title": "폴더 구조 설명",
+              "tag": "agent1",
+              "actions": [
+                {
+                  "icon": "terminal"
+                },
+                {
+                  "icon": "plus"
+                },
+                {
+                  "icon": "globe"
+                },
+                {
+                  "icon": "more"
+                }
+              ]
+            },
+            "messages": [
+              {
+                "role": "user",
+                "text": "너는 누구니? 현재 폴더구조 설명해줘"
+              },
+              {
+                "role": "assistant",
+                "blocks": [
+                  {
+                    "t": "h",
+                    "text": "현재 폴더 구조"
+                  },
+                  {
+                    "t": "p",
+                    "text": "폴더 구조를 안내했어요."
+                  }
+                ]
+              }
+            ]
+          },
+          "input": {
+            "placeholder": "/ 입력하여 필터링"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간",
+            "busy": true
+          },
+          "menu": {
+            "kind": "slash",
+            "items": [
+              {
+                "label": "schedule"
+              },
+              {
+                "label": "btw"
+              },
+              {
+                "label": "ultrareview"
+              },
+              {
+                "label": "rewind"
+              },
+              {
+                "label": "fork"
+              },
+              {
+                "label": "mcp"
+              },
+              {
+                "label": "plugin"
+              },
+              {
+                "label": "feedback"
+              },
+              {
+                "label": "model"
+              },
+              {
+                "label": "effort",
+                "badge": 1
+              },
+              {
+                "label": "fast"
+              },
+              {
+                "label": "plan"
+              },
+              {
+                "label": "permissions"
+              },
+              {
+                "label": "skills"
+              },
+              {
+                "label": "output-style"
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "슬래시 명령어 목록",
+          "body": "/ 를 입력하면 effort 같은 명령어들이 쭉 나타나서 클릭 한 번으로 실행할 수 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-19",
+      "template": "screen",
+      "title": "/card 필터링",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "session",
+          "sidebar": {
+            "account": "수강생 · Pro",
+            "groups": [
+              {
+                "title": "agent1",
+                "rows": [
+                  {
+                    "icon": "dot",
+                    "label": "폴더 구조 설명",
+                    "active": true
+                  }
+                ]
+              }
+            ]
+          },
+          "session": {
+            "header": {
+              "icon": "local",
+              "title": "폴더 구조 설명",
+              "tag": "agent1",
+              "actions": [
+                {
+                  "icon": "terminal"
+                },
+                {
+                  "icon": "plus"
+                },
+                {
+                  "icon": "globe"
+                },
+                {
+                  "icon": "more"
+                }
+              ]
+            },
+            "messages": [
+              {
+                "role": "user",
+                "text": "너는 누구니? 현재 폴더구조 설명해줘"
+              },
+              {
+                "role": "assistant",
+                "blocks": [
+                  {
+                    "t": "h",
+                    "text": "현재 폴더 구조"
+                  },
+                  {
+                    "t": "p",
+                    "text": "폴더 구조를 안내했어요."
+                  }
+                ]
+              }
+            ]
+          },
+          "input": {
+            "text": "/card",
+            "badge": 1
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간",
+            "busy": true
+          },
+          "menu": {
+            "kind": "slash-filtered",
+            "search": "/card",
+            "tooltip": "카드뉴스 표지와 본문 이미지를 만드는 CLI 스킬 (project)",
+            "items": [
+              {
+                "label": "cardnews",
+                "bold": "card",
+                "active": true,
+                "badge": 2
+              },
+              {
+                "label": "understand-anything:understand-onboard"
+              },
+              {
+                "label": "understand-anything:understand-dashboard"
+              },
+              {
+                "label": "team-onboarding"
+              },
+              {
+                "label": "dataviz"
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "/card 로 필터링",
+          "body": "슬래시 뒤에 글자를 치면 목록이 실시간으로 좁혀집니다."
+        },
+        {
+          "n": 2,
+          "head": "cardnews",
+          "body": "7회차에 만든 스킬이 데스크톱 앱에서도 그대로 보입니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-20",
+      "template": "table",
+      "title": "데스크톱 앱 vs VS Code",
+      "columns": [
+        "",
+        "파일 탐색기",
+        "세션 목록",
+        "어울리는 일"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "데스크톱 앱",
+            "없음",
+            "사이드바 목록",
+            "단발 작업"
+          ]
+        },
+        {
+          "cells": [
+            "VS Code + Claude Code",
+            "있음",
+            "터미널 안",
+            "오래 가는 프로젝트"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": "!",
+          "head": "일에 맞게 고르기",
+          "body": "짧게 끝나는 작업은 데스크톱 앱, 오래 이어가는 프로젝트는 VS Code 가 더 어울립니다."
+        }
+      ]
+    }
+  ]
+}

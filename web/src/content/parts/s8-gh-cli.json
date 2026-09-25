@@ -1,0 +1,158 @@
+{
+  "id": "s8-gh-cli",
+  "title": "GitHub CLI 연결",
+  "summary": "GitHub 를 웹사이트, 데스크톱 앱, CLI 세 가지 방식으로 쓸 수 있다는 것을 보고, CLI 로 GitHub 로그인을 연결한다.",
+  "slides": [
+    {
+      "id": "s8-gh-cli-01",
+      "template": "cards",
+      "title": "같은 서비스, 세 가지 사용법",
+      "cards": [
+        {
+          "label": "웹사이트",
+          "logo": "icon:Globe",
+          "tags": [
+            "브라우저",
+            "마우스로 클릭"
+          ]
+        },
+        {
+          "label": "데스크톱 앱",
+          "logo": "icon:Monitor",
+          "tags": [
+            "설치 프로그램",
+            "마우스로 클릭"
+          ]
+        },
+        {
+          "label": "CLI",
+          "logo": "icon:Terminal",
+          "tags": [
+            "터미널",
+            "명령어"
+          ],
+          "highlight": true,
+          "badge": 1
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "CLI = AI 가 쓰기 편한 방식",
+          "body": "명령어로 실행하는 CLI 방식이라야 Claude 같은 AI 도 직접 실행할 수 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-gh-cli-02",
+      "template": "screen",
+      "title": "GitHub CLI 설치 · 로그인 시작",
+      "replaceWithCapture": "GH CLI 설치 및 gh auth login 백그라운드 실행 실제 터미널 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "fit": true,
+          "turns": [
+            {
+              "role": "user",
+              "text": "GH CLI를 설치하고 Github 로그인을 background로 실행해서 8자리 코드랑 링크를 알려주세요",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(winget install --id GitHub.cli -e)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(gh auth login --web &)"
+            },
+            {
+              "role": "assistant",
+              "text": "GitHub CLI 설치 완료, 로그인은 백그라운드에서 기다리는 중이에요.\n한 번만 쓰는 코드: XXXX-XXXX",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "이 링크를 열어 코드를 입력하세요: https://github.com/login/device",
+              "badge": 3
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "설치 · 로그인 요청",
+          "body": "GH CLI 를 설치하고 로그인을 background 로 실행해서 코드와 링크를 알려달라고 입력해 보세요."
+        },
+        {
+          "n": 2,
+          "head": "한 번만 쓰는 코드",
+          "body": "화면에 뜬 여덟 자리 코드를 그대로 기억해 둡니다."
+        },
+        {
+          "n": 3,
+          "head": "인증 링크 접속",
+          "body": "이 링크를 브라우저로 열어서 방금 받은 코드를 입력합니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "GH CLI를 설치하고 Github 로그인을 background로 실행해서 8자리 코드랑 링크를 알려주세요"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8-gh-cli-03",
+      "template": "screen",
+      "title": "로그인 상태 확인",
+      "replaceWithCapture": "gh auth status 실제 실행 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "fit": true,
+          "turns": [
+            {
+              "role": "user",
+              "text": "로그인 됐는지 확인해줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(gh auth status)"
+            },
+            {
+              "role": "assistant",
+              "text": "github.com 에 student 계정으로 로그인되어 있습니다.",
+              "badge": 2
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "로그인 확인 요청",
+          "body": "브라우저에서 코드를 입력한 뒤, 로그인이 됐는지 확인해달라고 입력해 보세요."
+        },
+        {
+          "n": 2,
+          "head": "계정으로 로그인 완료",
+          "body": "gh auth status 결과로 github.com 에 student 계정으로 로그인된 것을 확인할 수 있습니다."
+        }
+      ]
+    }
+  ]
+}

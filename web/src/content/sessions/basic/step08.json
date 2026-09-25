@@ -1,0 +1,28 @@
+{
+  "step": 8,
+  "title": "GitHub · Claude 데스크톱 · 클라우드 세션",
+  "hours": "2시간",
+  "goal": "GitHub 에 작업 폴더를 레포로 올려 백업하고 배포한 뒤, Claude 데스크톱 앱과 웹의 클라우드 세션으로 같은 작업을 이어가고 폰에서도 확인한다.",
+  "topics": [
+    "GitHub 개념 (클라우드 공유폴더 · 백업 · 되돌리기 · 수정 이력)",
+    "GitHub 가입과 GitHub CLI 연결",
+    "레포 만들기 · 클론으로 복구 · GitHub Pages 배포",
+    "GitHub Trending 에서 남이 만든 도구 먼저 찾기",
+    "Claude 데스크톱 앱 설치 · 폴더 · 모드 · 모델",
+    "클라우드 세션 · GitHub 연동 · 폰에서 이어 하기"
+  ],
+  "practice": "cafe-landing 페이지를 만들어 GitHub 레포로 올리고, 지웠다가 클론으로 되살린 뒤 GitHub Pages 로 배포한다. 데스크톱 앱에서 agent1 폴더로 작업하고, 웹 클라우드 세션에서 cafe-landing 을 고쳐 머지한 결과를 폰에서 확인한다.",
+  "parts": [
+    "s8-open",
+    "s8-github-intro",
+    "s8-github-signup",
+    "s8-gh-cli",
+    "s8-repo",
+    "s8-pages",
+    "s8-trending",
+    "s8-desktop",
+    "s8-cloud",
+    "s8-phone",
+    "s8-wrap"
+  ]
+}

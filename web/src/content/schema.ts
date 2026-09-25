@@ -35,6 +35,10 @@ export interface Part {
   slides: Slide[]
 }
 
+import type { ClaudeAppView } from "./schema-claude"
+import type { SitePage } from "./schema-site"
+import type { PhoneView } from "./schema-phone"
+
 // ---- slides: one template per slide, each template has its own fields -------------------------
 
 // Rule (CEO 2026-09-21): the slide area carries VISUALS only — screenshot, mockup, diagram, table,
@@ -171,7 +175,49 @@ export interface Note {
 
 // ---- screens: the mockups a slide can show ------------------------------------------------------
 
-export type Screen = VSCodeScreen | ShotScreen | VideoScreen | TerminalScreen | ChatScreen | BrowserScreen | FileScreen | AgentViewScreen | OfficeScreen
+export type Screen = VSCodeScreen | ShotScreen | VideoScreen | TerminalScreen | ChatScreen | BrowserScreen | FileScreen | AgentViewScreen | OfficeScreen | DesktopScreen | WebScreen | PhoneScreen
+
+// ---- step 8 surfaces: Claude desktop app, Chrome pages (claude.ai/code, GitHub, Google, claude.com), phone ----
+// Every mock here is drawn from a real capture (E:/wi-data/projects/ai-agent-class/s8-captures). Element badges
+// live in the view data (`badge` fields); `pins` are a fallback: badges placed in percent of the whole mock.
+
+/** A numbered badge placed in percent of the mock's box (0-100), for spots that have no element badge. */
+export interface Pin {
+  n: number
+  x: number
+  y: number
+}
+
+/** The Claude desktop app (Claude for Windows) window. */
+export interface DesktopScreen {
+  kind: "desktop"
+  view: ClaudeAppView
+  pins?: Pin[]
+}
+
+/** A Chrome window: tab strip, address bar, and one page. */
+export interface WebScreen {
+  kind: "web"
+  tabs?: { title: string; icon?: WebTabIcon; active?: boolean }[] // default: one active tab titled after the page
+  url: string
+  urlBadge?: number
+  page: WebPage
+  pins?: Pin[]
+}
+
+export type WebTabIcon = "claude" | "github" | "google" | "gmail" | "globe"
+
+export type WebPage =
+  | { type: "image"; src: string } // a real page capture without browser chrome, e.g. the deployed cafe landing page
+  | ({ type: "claude" } & ClaudeAppView) // claude.ai/code in the browser: same body as the desktop app
+  | SitePage // GitHub, Google sign-in, claude.com/download
+
+/** Claude Code on the web in a phone (mobile view, 390 x 844 capture). */
+export interface PhoneScreen {
+  kind: "phone"
+  view: PhoneView
+  pins?: Pin[]
+}
 
 /** Claude Code's full-screen Agent View (/background, or the left arrow): whole sessions listed by state. */
 export interface AgentViewScreen {

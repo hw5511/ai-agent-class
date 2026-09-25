@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs>
+<filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+<marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+</defs>
+<rect x="0" y="0" width="1600" height="900" fill="#fff"/>
+<g transform="translate(2.3,31.4) scale(0.9978)">
+
+<!-- left: my computer folder -->
+<g filter="url(#sh)">
+<rect x="120" y="220" width="440" height="400" rx="24" fill="#fff" stroke="#c9ccd1" stroke-width="3"/>
+</g>
+<text x="340" y="280" font-size="32" fill="#101113" font-weight="900" text-anchor="middle">내 컴퓨터</text>
+<path d="M180 330 h90 l20 -26 h190 a16 16 0 0 1 16 16 v170 a16 16 0 0 1 -16 16 h-300 a16 16 0 0 1 -16 -16 v-144 a16 16 0 0 1 16 -16 z" fill="#cfe5f5" stroke="#1273c4" stroke-width="4"/>
+<text x="340" y="440" font-size="30" fill="#1273c4" font-weight="800" text-anchor="middle">agent1</text>
+<rect x="230" y="470" width="220" height="46" rx="10" fill="#fff" stroke="#1273c4" stroke-width="3"/>
+<text x="340" y="500" font-size="30" fill="#1273c4" font-weight="800" text-anchor="middle">cafe-landing</text>
+
+<!-- right: GitHub repo cloud -->
+<g filter="url(#sh)">
+<rect x="1040" y="220" width="440" height="400" rx="24" fill="#fff" stroke="#c9ccd1" stroke-width="3"/>
+</g>
+<path d="M1180 340 q-42 0 -42 40 q-32 2 -32 34 q0 34 34 34 h172 q36 0 36 -36 q0 -34 -34 -36 q-2 -36 -40 -36 q-16 0 -26 10 q-10 -10 -28 -10 z" fill="#1273c4"/>
+<text x="1260" y="480" font-size="32" fill="#101113" font-weight="900" text-anchor="middle">GitHub 레포</text>
+
+<!-- secondary note card -->
+<g filter="url(#sh)">
+<rect x="1120" y="520" width="280" height="70" rx="16" fill="#fff" stroke="#c9ccd1" stroke-width="3"/>
+</g>
+<text x="1260" y="563" font-size="30" fill="#43474b" font-weight="700" text-anchor="middle">구글 드라이브처럼</text>
+
+<!-- arrows between -->
+<path d="M580 380 Q790 340 1020 380" stroke="#1273c4" stroke-width="6" fill="none" marker-end="url(#ab)"/>
+<text x="800" y="330" font-size="30" fill="#1273c4" font-weight="800" text-anchor="middle">올리기 (푸시)</text>
+
+<path d="M1020 470 Q790 510 580 470" stroke="#43474b" stroke-width="6" fill="none" marker-end="url(#ab)"/>
+<text x="800" y="540" font-size="30" fill="#43474b" font-weight="800" text-anchor="middle">내려받기 (클론)</text>
+</g>
+</svg>

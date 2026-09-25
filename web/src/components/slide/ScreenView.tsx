@@ -5,6 +5,11 @@ import { AgentTerminal } from "@/components/mock/AgentTerminal"
 import { BrowserMock, ChatMock, FileMock } from "@/components/mock/WebMocks"
 import { AgentViewMock } from "@/components/mock/AgentViewMock"
 import { OfficeMock } from "@/components/mock/OfficeMock"
+import { ClaudeAppBody, ClaudeAppWindow } from "@/components/mock/s8/ClaudeApp"
+import { SitePageBody } from "@/components/mock/s8/SitePages"
+import { PhoneMock } from "@/components/mock/s8/Phone"
+import { ChromeFrame } from "@/components/mock/s8/ChromeFrame"
+import { Pinned } from "@/components/mock/s8/Pins"
 import { NumberBadge } from "./NumberBadge"
 import { asset } from "@/lib/utils"
 
@@ -16,6 +21,24 @@ export function ScreenView({ screen }: { screen: Screen }) {
   if (screen.kind === "file") return <FileMock s={screen} />
   if (screen.kind === "agentview") return <AgentViewMock s={screen} />
   if (screen.kind === "office") return <OfficeMock s={screen} />
+  if (screen.kind === "desktop") return <Pinned pins={screen.pins}><ClaudeAppWindow v={screen.view} /></Pinned>
+  if (screen.kind === "phone") return <Pinned pins={screen.pins}><PhoneMock v={screen.view} /></Pinned>
+  if (screen.kind === "web") {
+    const p = screen.page
+    return (
+      <Pinned pins={screen.pins}>
+        <ChromeFrame s={screen}>
+          {p.type === "image" ? (
+            <img src={asset(p.src)} alt="" className="size-full object-cover object-top" />
+          ) : p.type === "claude" ? (
+            <ClaudeAppBody v={p} />
+          ) : (
+            <SitePageBody p={p} />
+          )}
+        </ChromeFrame>
+      </Pinned>
+    )
+  }
   if (screen.kind === "video")
     return (
       <div className="flex h-full min-h-0 items-center justify-center">

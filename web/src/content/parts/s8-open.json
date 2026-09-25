@@ -1,0 +1,29 @@
+{
+  "id": "s8-open",
+  "title": "오프닝",
+  "cover": false,
+  "slides": [
+    {
+      "id": "s8-open-01",
+      "template": "illustration",
+      "title": "8회차 GitHub · Claude 데스크톱 · 클라우드 세션",
+      "illustration": "/illustrations/s8-title.svg"
+    },
+    {
+      "id": "s8-open-02",
+      "template": "overview",
+      "title": "오늘의 순서",
+      "items": [
+        { "label": "GitHub란?", "meta": "4장" },
+        { "label": "GitHub 가입", "meta": "3장" },
+        { "label": "GitHub CLI 연결", "meta": "3장" },
+        { "label": "레포 만들기 · 백업 · 복구", "meta": "5장" },
+        { "label": "GitHub Pages 배포", "meta": "3장" },
+        { "label": "남이 만든 것 먼저 찾기", "meta": "4장" },
+        { "label": "Claude 데스크톱 앱", "meta": "20장" },
+        { "label": "클라우드 세션 · GitHub 연동", "meta": "9장" },
+        { "label": "폰에서 이어 하기", "meta": "2장" }
+      ]
+    }
+  ]
+}

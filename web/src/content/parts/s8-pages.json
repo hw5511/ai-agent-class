@@ -1,0 +1,66 @@
+{
+  "id": "s8-pages",
+  "title": "GitHub Pages 배포",
+  "summary": "CLI 로 GitHub Pages 를 켜서 카페 랜딩 페이지를 실제 주소로 배포한다.",
+  "slides": [
+    {
+      "id": "s8-pages-01",
+      "template": "screen",
+      "title": "Pages 배포",
+      "replaceWithCapture": "gh api 로 GitHub Pages 배포 실제 실행 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          { "name": "cafe-landing", "folder": true }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "fit": true,
+          "turns": [
+            { "role": "user", "text": "GH CLI를 사용해서 cafe-landing 을 깃허브 페이지로 배포해줘", "badge": 1 },
+            { "role": "tool", "text": "Bash(gh api repos/student/cafe-landing/pages -X POST -f \"source[branch]=main\" -f \"source[path]=/\")" },
+            { "role": "tool", "text": "Bash(gh api repos/student/cafe-landing/pages/builds/latest)", "badge": 2 },
+            { "role": "assistant", "text": "GitHub Pages 배포를 마쳤어요. https://student.github.io/cafe-landing/", "badge": 3 }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "Pages 배포 요청", "body": "GH CLI 를 써서 cafe-landing 을 깃허브 페이지로 배포해달라고 입력해 보세요." },
+        { "n": 2, "head": "배포 상태 확인", "body": "빌드가 끝났는지 GitHub Pages 배포 상태를 다시 조회합니다." },
+        { "n": 3, "head": "배포된 주소 확인", "body": "배포가 끝나면 브라우저에서 열어 볼 수 있는 실제 주소를 answer 로 받습니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "GH CLI를 사용해서 cafe-landing 을 깃허브 페이지로 배포해줘" }
+        ]
+      }
+    },
+    {
+      "id": "s8-pages-02",
+      "template": "screen",
+      "title": "배포된 카페 랜딩 페이지",
+      "screen": {
+        "kind": "web",
+        "url": "student.github.io/cafe-landing/",
+        "tabs": [{ "title": "모카빈 카페 | Mocha Bean Cafe", "icon": "globe", "active": true }],
+        "page": { "type": "image", "src": "/shots/s8/cafe-landing.png" }
+      },
+      "notes": [
+        { "n": "!", "head": "실제 주소로 접속", "body": "이제 이 주소를 아는 누구나 인터넷에서 카페 랜딩 페이지를 바로 볼 수 있습니다." }
+      ]
+    },
+    {
+      "id": "s8-pages-03",
+      "template": "illustration",
+      "title": "주소 구조",
+      "illustration": "/illustrations/s8-pages-url.svg",
+      "notes": [
+        { "n": 1, "head": "계정명.github.io", "body": "앞부분은 내 GitHub 계정 이름을 그대로 씁니다." },
+        { "n": 2, "head": "레포 이름", "body": "뒷부분은 배포한 레포 이름이 그대로 주소에 붙습니다." }
+      ]
+    }
+  ]
+}

@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url"
 const root = join(dirname(fileURLToPath(import.meta.url)), "..")
 const partsDir = join(root, "src/content/parts")
 const TEMPLATES = new Set(["screen", "compare", "table", "illustration", "overview", "cards", "flow", "stack", "lifecycle"])
-const SCREENS = new Set(["vscode", "terminal", "shot", "video", "chat", "browser", "file", "agentview", "office"])
+const SCREENS = new Set(["vscode", "terminal", "shot", "video", "chat", "browser", "file", "agentview", "office", "desktop", "web", "phone"])
 const VENDORS = new Set(["claude", "antigravity", "codex", "shell"])
 const KINDS = new Set(["copy", "link", "download"])
 
@@ -17,8 +17,20 @@ const err = (where, msg) => {
   console.log(`  ${where}: ${msg}`)
 }
 
+// step 8 mocks (desktop / web / phone): every numeric `badge` / `urlBadge` anywhere in the data, plus pins.
+function badgesDeep(o, out) {
+  if (Array.isArray(o)) return o.forEach((x) => badgesDeep(x, out))
+  if (!o || typeof o !== "object") return
+  for (const [k, v] of Object.entries(o)) {
+    if ((k === "badge" || k.endsWith("Badge")) && typeof v === "number") out.push(v)
+    else if (k === "pins" && Array.isArray(v)) for (const p of v) out.push(p.n)
+    else badgesDeep(v, out)
+  }
+}
+
 function badgesOfScreen(s, out) {
   if (!s) return
+  if (s.kind === "desktop" || s.kind === "web" || s.kind === "phone") return badgesDeep(s, out)
   if (s.kind === "vscode") {
     for (const f of s.files ?? []) if (f.badge) out.push(f.badge)
     if (s.editor?.badge) out.push(s.editor.badge)
@@ -74,6 +86,9 @@ function checkScreen(where, s) {
     if (s.app === "word" && !s.word) err(where, "office word needs word{}")
     if (s.app === "powerpoint" && !s.powerpoint) err(where, "office powerpoint needs powerpoint{}")
   }
+  if (s.kind === "web" && s.page?.type === "image" && !existsSync(join(root, "public", s.page.src ?? ""))) err(where, `missing page image ${s.page.src}`)
+  if ((s.kind === "desktop" || s.kind === "phone") && !s.view) err(where, `${s.kind} needs view{}`)
+  if (s.kind === "web" && (!s.url || !s.page)) err(where, "web needs url + page")
   if (s.kind === "agentview" && !Array.isArray(s.groups)) err(where, "agentview needs groups[]")
   if (s.kind === "vscode" && (!s.folder || !Array.isArray(s.files))) err(where, "vscode needs folder + files[]")
 }
