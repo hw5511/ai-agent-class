@@ -13,15 +13,8 @@
       "id": "s7-open-02",
       "template": "overview",
       "title": "오늘의 순서",
-      "items": [
-        { "label": "스킬이란?", "meta": "4장" },
-        { "label": "라이브러리란?", "meta": "7장" },
-        { "label": "스크립트 실습", "meta": "6장" },
-        { "label": "CLI란?", "meta": "9장" },
-        { "label": "스킬 실습 1: /cardnews", "meta": "9장" },
-        { "label": "스킬 실습 2: /img2pdf", "meta": "6장" },
-        { "label": "플러그인 실습: 미니 포토샵", "meta": "12장" }
-      ]
+      "agenda": true,
+      "items": []
     }
   ]
 }

@@ -161,10 +161,12 @@ export interface PartCoverSlide extends SlideBase {
   sections?: { title: string; count: number }[]
 }
 
-/** Part opener / session outline. */
+/** Part opener / session outline. With `agenda: true` the viewer fills `items` from the session's
+ *  covered parts (title + slide count), so the agenda can never drift from the parts it lists. */
 export interface OverviewSlide extends SlideBase {
   template: "overview"
-  items: { label: string; meta?: string; current?: boolean }[]
+  agenda?: boolean
+  items: { label: string; meta?: string; count?: number; current?: boolean }[]
 }
 
 export interface Note {

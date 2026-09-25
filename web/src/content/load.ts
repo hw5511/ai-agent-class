@@ -90,7 +90,10 @@ export const flatSlides = (s: Session) => {
   const covered = s.parts.filter((p) => p.cover !== false)
   const toc = covered.map((p) => ({ title: p.title, count: p.slides.length }))
   return s.parts.flatMap((p) => {
-    const items = p.slides.map((slide) => ({ part: p, slide }))
+    // An agenda overview lists the covered parts, numbered like their PART covers.
+    const agenda = (slide: Slide): Slide =>
+      slide.template === "overview" && slide.agenda ? { ...slide, items: covered.map((c) => ({ label: c.title, count: c.slides.length })) } : slide
+    const items = p.slides.map((slide) => ({ part: p, slide: agenda(slide) }))
     if (s.parts.length < 2 || p.cover === false) return items
     const pi = covered.indexOf(p)
     const cover: Slide = {

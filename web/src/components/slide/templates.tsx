@@ -104,18 +104,44 @@ function IllustrationT({ s }: { s: IllustrationSlide }) {
   )
 }
 
-// More than five rows (a session agenda) steps the rows down so all of them fit under the title.
+// The session agenda (and any short outline). One component for every step: rows carry a PART-style
+// number, the title and, when the item has a slide count, a bar sized by that count so the long parts
+// read as long. Up to six rows sit in one column; more split into two columns filled top-down, so an
+// 11+ part session still fits under the title without shrinking the type to nothing.
+const countOf = (it: OverviewSlide["items"][number]) => it.count ?? (it.meta ? Number(/^(\d+)장$/.exec(it.meta)?.[1]) || undefined : undefined)
+
 function OverviewT({ s }: { s: OverviewSlide }) {
-  const dense = s.items.length > 5
+  const n = s.items.length
+  const cols = n > 6 ? 2 : 1
+  const rows = Math.ceil(n / cols)
+  const max = Math.max(1, ...s.items.map((it) => countOf(it) ?? 0))
+  const big = cols === 1
+  const tight = rows > 5
+  // Rows share the body height up to a comfortable row size, so a short agenda does not float in white.
+  const rowMax = rows <= 4 ? 150 : rows === 5 ? 140 : 125
   return (
-    <div className={cn("flex h-full flex-col justify-center", dense ? "gap-3" : "gap-5")}>
-      {s.items.map((it, i) => (
-        <div key={i} className={cn("flex items-center gap-8 rounded-2xl border bg-white px-10", dense ? "py-4" : "py-7", it.current ? "border-2 border-slide-accent" : "border-neutral-200")}>
-          <NumberBadge n={i + 1} />
-          <span className={cn("flex-1 font-display font-bold text-[#101113]", dense ? "text-[34px]" : "text-[40px]")}>{it.label}</span>
-          {it.meta && <span className="font-term text-[28px] text-[#7c8288]">{it.meta}</span>}
-        </div>
-      ))}
+    <div className="flex h-full min-h-0 flex-col justify-center">
+      <div className={cn("grid min-h-0 grid-flow-col border-t-2 border-[#101113]", big ? "gap-x-0" : "gap-x-16")} style={{ height: `min(100%, ${rows * rowMax}px)`, gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))`, gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}>
+        {s.items.map((it, i) => {
+          const c = countOf(it)
+          return (
+            <div key={i} className={cn("flex min-w-0 items-center border-b border-neutral-200", big ? "gap-10" : "gap-7", it.current && "bg-[#eef5fc]")}>
+              <span className={cn("w-[1.6em] shrink-0 font-num font-medium text-slide-accent", big ? "pl-2 text-[36px]" : "pl-1 text-[30px]")}>{String(i + 1).padStart(2, "0")}</span>
+              <span className={cn("min-w-0 flex-1 truncate font-display font-bold tracking-[-0.01em] text-[#101113]", big ? "text-[46px]" : tight ? "text-[36px]" : "text-[40px]")}>{it.label}</span>
+              {c !== undefined ? (
+                <span className={cn("flex shrink-0 items-center", big ? "gap-6" : "gap-4")}>
+                  <span className={cn("h-2.5 overflow-hidden rounded-full bg-neutral-100", big ? "w-[280px]" : "w-[150px]")}>
+                    <span className="block h-full rounded-full bg-slide-accent" style={{ width: `${Math.max(6, (c / max) * 100)}%` }} />
+                  </span>
+                  <span className={cn("w-[2.6em] text-right font-num text-[#7c8288]", big ? "text-[30px]" : "text-[24px]")}>{c}<span className="font-display">장</span></span>
+                </span>
+              ) : it.meta ? (
+                <span className={cn("shrink-0 font-num text-[#7c8288]", big ? "text-[30px]" : "text-[24px]")}>{it.meta}</span>
+              ) : null}
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }
