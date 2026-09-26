@@ -7,60 +7,43 @@
   <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
   <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
 </defs>
-<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
-<rect x="60" y="90" width="740" height="660" rx="26" fill="#eaf3fb"/>
-<rect x="950" y="90" width="782" height="660" rx="26" fill="#fff6f0"/>
-<text x="420" y="145" font-size="30" font-weight="800" fill="#5b6570" text-anchor="middle">스킬 선반</text>
-<rect x="130" y="300" width="560" height="18" rx="8" fill="#b9bec5"/>
-<circle cx="170" cy="150" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="170" y="160.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
-<g transform="translate(180 191)" opacity="0.35">
-<rect x="0" y="0" width="84" height="109.2" rx="14" fill="#5aa0dc"/>
-<rect x="11.760000000000002" y="13.104" width="60.48" height="32.76" rx="6" fill="#fff" opacity="0.92"/>
-<rect x="11.760000000000002" y="61.15200000000001" width="60.48" height="34.944" rx="6" fill="#0d5c9e" opacity="0.55"/>
-</g>
-<g transform="translate(300 191)" opacity="0.35">
-<rect x="0" y="0" width="84" height="109.2" rx="14" fill="#5aa0dc"/>
-<rect x="11.760000000000002" y="13.104" width="60.48" height="32.76" rx="6" fill="#fff" opacity="0.92"/>
-<rect x="11.760000000000002" y="61.15200000000001" width="60.48" height="34.944" rx="6" fill="#0d5c9e" opacity="0.55"/>
-</g>
-<g transform="translate(420 191)" opacity="0.35">
-<rect x="0" y="0" width="84" height="109.2" rx="14" fill="#5aa0dc"/>
-<rect x="11.760000000000002" y="13.104" width="60.48" height="32.76" rx="6" fill="#fff" opacity="0.92"/>
-<rect x="11.760000000000002" y="61.15200000000001" width="60.48" height="34.944" rx="6" fill="#0d5c9e" opacity="0.55"/>
-</g>
-<g transform="translate(560 170)">
-<rect x="0" y="0" width="100" height="130.0" rx="14" fill="#1273c4"/>
-<rect x="14.000000000000002" y="15.6" width="72.0" height="39.0" rx="6" fill="#fff" opacity="0.92"/>
-<rect x="14.000000000000002" y="72.80000000000001" width="72.0" height="41.6" rx="6" fill="#0d5c9e" opacity="0.55"/>
-</g>
-<text x="610.0" y="332.0" font-size="24" font-weight="800" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">카드뉴스</text>
-<path transform="translate(90 338) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
-<rect x="70" y="480" width="480" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
-<rect x="86" y="504" width="448" height="190" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
-<rect x="205.5" y="570" width="209" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
-<text x="310.0" y="610" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">내 컴퓨터</text>
-<path d="M668 235C820 250 960 270 1040 300" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M668 235C820 250 960 270 1040 300" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1050.1 303.8L1015.3 311.2L1028.8 275.3Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
-<path transform="translate(1300 338) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
-<rect x="1000" y="480" width="700" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
-<rect x="1016" y="504" width="668" height="190" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
-<rect x="1229.5" y="570" width="241" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
-<text x="1350.0" y="610" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">Claude</text>
-<rect x="1020" y="300" width="220" height="180" rx="22" fill="#2b2f35" stroke="#aeb3ba" stroke-width="3"/>
-<rect x="1050" y="320" width="160" height="30" rx="10" fill="#0f1012"/>
-<g transform="translate(1090.0 230)">
-<rect x="0" y="0" width="80" height="104.0" rx="14" fill="#1273c4"/>
-<rect x="11.200000000000001" y="12.48" width="57.599999999999994" height="31.2" rx="6" fill="#fff" opacity="0.92"/>
-<rect x="11.200000000000001" y="58.24000000000001" width="57.599999999999994" height="33.28" rx="6" fill="#0d5c9e" opacity="0.55"/>
-</g>
-<circle cx="1190" cy="258" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1190" y="268.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
-<circle cx="1206" cy="450" r="14" fill="#12a150"/>
-<text x="1130.0" y="460" font-size="20" font-weight="800" fill="#c9ccd1" text-anchor="middle">장전됨</text>
-<rect x="1560" y="470" width="36" height="50" rx="7" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#shs)"/>
-<rect x="1566" y="482" width="24" height="18" rx="4" fill="#cfe3f5"/>
-<rect x="1600" y="462" width="36" height="50" rx="7" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#shs)"/>
-<rect x="1606" y="474" width="24" height="18" rx="4" fill="#cfe3f5"/>
-<rect x="1640" y="454" width="36" height="50" rx="7" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#shs)"/>
-<rect x="1646" y="466" width="24" height="18" rx="4" fill="#cfe3f5"/>
-<circle cx="1660" cy="438" r="20" fill="#12a150"/><path d="M1651.6 438.4l6.0 6.0 11.200000000000001-12.0" fill="none" stroke="#fff" stroke-width="4.0" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="1600" cy="390" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1600" y="400.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<rect x="134" y="220" width="480" height="504" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<text x="374.0" y="260" font-size="32" font-weight="800" fill="#101113" text-anchor="middle">스킬 선반</text>
+<text x="374.0" y="298" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">여러 스킬 중 하나를 고름</text>
+<rect x="704" y="220" width="380" height="504" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<text x="894.0" y="260" font-size="32" font-weight="800" fill="#101113" text-anchor="middle">프롬프트</text>
+<text x="894.0" y="298" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">고른 스킬을 슬롯에 끼움</text>
+<rect x="1174" y="220" width="480" height="504" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<text x="1414.0" y="260" font-size="32" font-weight="800" fill="#101113" text-anchor="middle">Claude</text>
+<text x="1414.0" y="298" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">장전됐을 때만 켜짐</text>
+<g transform="translate(194 408)" opacity="0.35"><rect x="0" y="0" width="64" height="83.2" rx="12" fill="#5aa0dc"/><rect x="8.96" y="9.984" width="46.08" height="24.96" rx="6" fill="#fff" opacity="0.92"/><rect x="8.96" y="46.592000000000006" width="46.08" height="26.624000000000002" rx="6" fill="#0d5c9e" opacity="0.55"/></g>
+<text x="226.0" y="519.2" font-size="18" font-weight="700" fill="#5b6570" text-anchor="middle">보고서</text>
+<g transform="translate(288 408)" opacity="0.35"><rect x="0" y="0" width="64" height="83.2" rx="12" fill="#5aa0dc"/><rect x="8.96" y="9.984" width="46.08" height="24.96" rx="6" fill="#fff" opacity="0.92"/><rect x="8.96" y="46.592000000000006" width="46.08" height="26.624000000000002" rx="6" fill="#0d5c9e" opacity="0.55"/></g>
+<text x="320.0" y="519.2" font-size="18" font-weight="700" fill="#5b6570" text-anchor="middle">회의록</text>
+<g transform="translate(382 408)" opacity="0.35"><rect x="0" y="0" width="64" height="83.2" rx="12" fill="#5aa0dc"/><rect x="8.96" y="9.984" width="46.08" height="24.96" rx="6" fill="#fff" opacity="0.92"/><rect x="8.96" y="46.592000000000006" width="46.08" height="26.624000000000002" rx="6" fill="#0d5c9e" opacity="0.55"/></g>
+<text x="414.0" y="519.2" font-size="18" font-weight="700" fill="#5b6570" text-anchor="middle">메모</text>
+<g transform="translate(476 408)"><rect x="0" y="0" width="64" height="83.2" rx="12" fill="#1273c4"/><rect x="8.96" y="9.984" width="46.08" height="24.96" rx="6" fill="#fff" opacity="0.92"/><rect x="8.96" y="46.592000000000006" width="46.08" height="26.624000000000002" rx="6" fill="#0d5c9e" opacity="0.55"/></g>
+<text x="508.0" y="519.2" font-size="18" font-weight="800" fill="#101113" text-anchor="middle">카드뉴스</text>
+<circle cx="508.0" cy="366" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="508.0" y="376.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<rect x="234.0" y="535.2" width="280" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="250.0" y="559.2" width="248" height="150" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="269.5" y="625.2" width="209" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<text x="374.0" y="665.2" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">내 컴퓨터</text>
+<line x1="628" y1="449.6" x2="690" y2="449.6" stroke="#9aa0a6" stroke-width="2.5" stroke-linecap="round"/><path d="M690.0 449.6L675.6 458.6L675.6 440.6Z" fill="#9aa0a6"/>
+<text x="659.0" y="423.6" font-size="20" font-weight="700" fill="#0d5c9e" text-anchor="middle">한 번 입력</text>
+<rect x="829.0" y="365.6" width="130" height="168" rx="14" fill="#f2f3f5" stroke="#aeb3ba" stroke-width="3"/>
+<g transform="translate(862.0 408.0)"><rect x="0" y="0" width="64" height="83.2" rx="12" fill="#1273c4"/><rect x="8.96" y="9.984" width="46.08" height="24.96" rx="6" fill="#fff" opacity="0.92"/><rect x="8.96" y="46.592000000000006" width="46.08" height="26.624000000000002" rx="6" fill="#0d5c9e" opacity="0.55"/></g>
+<text x="894.0" y="567.6" font-size="18" font-weight="700" fill="#5b6570" text-anchor="middle">카드뉴스 슬롯</text>
+<circle cx="894.0" cy="327.6" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="894.0" y="338.20000000000005" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<line x1="1098" y1="449.6" x2="1160" y2="449.6" stroke="#9aa0a6" stroke-width="2.5" stroke-linecap="round"/><path d="M1160.0 449.6L1145.6 458.6L1145.6 440.6Z" fill="#9aa0a6"/>
+<text x="1129.0" y="423.6" font-size="20" font-weight="700" fill="#0d5c9e" text-anchor="middle">장전</text>
+<rect x="1319.0" y="336" width="190" height="54" rx="27.0" fill="#1273c4"/>
+<circle cx="1351.0" cy="363.0" r="9" fill="#fff"/>
+<text x="1428.0" y="372.0" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">장전됨</text>
+<circle cx="1543.0" cy="363.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1543.0" y="373.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<rect x="1284.0" y="535.2" width="260" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="1300.0" y="559.2" width="228" height="150" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="1293.5" y="625.2" width="241" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<text x="1414.0" y="665.2" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">Claude</text>
+<path transform="translate(1348.0 456.55000000000007) scale(0.55)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
 </svg>

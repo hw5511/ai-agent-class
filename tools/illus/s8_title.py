@@ -57,8 +57,7 @@ b += [phone(PHONE_X, PHONE_Y, PHONE_W, phone_screen),
 # ---- travel paths, drawn last, with explicit arrowheads (PyMuPDF ignores marker-end) ----
 # 1 -> 2: papers travel up into the GitHub cloud
 pA = "M474 430C520 360 570 300 630 254"
-b += [path(pA, arrow=False), arrow_head_at(570, 300, 630, 254, 20, ACCENT),
-      doc(468, 358, 42, -14), doc(524, 296, 38, -6)]
+b += [path(pA, arrow=False), arrow_head_at(570, 300, 630, 254, 20, ACCENT)]
 # 2 -> 3: cloud to cloud
 pB = "M888 258C912 258 936 260 954 262"
 b += [path(pB, arrow=False), arrow_head_at(936, 260, 954, 262, 18, ACCENT)]

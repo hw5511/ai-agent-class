@@ -32,8 +32,7 @@ b += [mascot(z + 52, DESK1_Y - MH + 6, MS),
       laptop(cx - 6, DESK1_Y - 108, 150, folder(36, 10, 60) + text(66, 72, "agent1", 12, 700, family=MONO)),
       desk(z + 46, DESK1_Y, 308, body_h=96)]
 pth1 = f"M{cx + 66} {DESK1_Y - 100}C{cx + 96} {DESK1_Y - 200} {cx + 40} {DESK1_Y - 280} {cx - 6} {DESK1_Y - 320}"
-b += [path(pth1, arrow=False), arrow_head_at(cx + 40, DESK1_Y - 280, cx - 6, DESK1_Y - 320, 18, ACCENT),
-      doc(cx + 56, DESK1_Y - 216, 34, -8), doc(cx + 22, DESK1_Y - 268, 30, -14)]
+b += [path(pth1, arrow=False), arrow_head_at(cx + 40, DESK1_Y - 280, cx - 6, DESK1_Y - 320, 18, ACCENT)]
 b += [badge(z + 46, ZONE_Y + 46, 1), text(cx, LABEL_Y, "백업", 40, 900)]
 
 # ---- 2: 불러오기 - cloud at the top, a folder travelling DOWN into a laptop on a desk ----
@@ -45,8 +44,7 @@ DESK2_Y = 552
 b += [laptop(cx - 78, DESK2_Y - 108, 150, folder(36, 10, 60) + text(66, 72, "agent1", 12, 700, family=MONO)),
       desk(z + 46, DESK2_Y, 308, body_h=96)]
 pth2 = f"M{cx} {282}C{cx - 30} {360} {cx - 2} {410} {cx - 4} {DESK2_Y - 108}"
-b += [path(pth2, arrow=False), arrow_head_at(cx - 2, DESK2_Y - 150, cx - 4, DESK2_Y - 108, 18, ACCENT),
-      doc(cx - 26, 328, 32, 10), doc(cx - 10, 400, 36, -6)]
+b += [path(pth2, arrow=False), arrow_head_at(cx - 2, DESK2_Y - 150, cx - 4, DESK2_Y - 108, 18, ACCENT)]
 b += [badge(z + 46, ZONE_Y + 46, 2), text(cx, LABEL_Y, "불러오기", 40, 900)]
 
 # ---- 3: 되돌리기 - a fan of v1/v2/v3, a thick arrow bringing v1 back to the front, mascot beside it ----

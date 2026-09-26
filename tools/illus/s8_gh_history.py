@@ -1,61 +1,62 @@
-"""8/6 되돌리기 · 수정 이력: three commits on a rail, A 방식 -> A 실패 -> B 방식, with a clear rewind arc back to the first."""
+"""8/6 백업으로 되돌리기: 내 폴더(지금, 고장)와 GitHub 백업(예전에 저장, 온전) 둘만 놓고,
+되돌리기 화살표 하나로 "백업이 있어서 되돌릴 수 있다"만 말한다. 커밋 타임라인 없음.
+
+2026-09-26 relayout: one horizontal row, block top ~y=200 (3:1 rule). Both folders' mid-height
+is pinned to the same Y so the restore arrow runs dead straight (no arc to the canvas edge)."""
 import os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from illuskit import *
 
 b = [panel()]
 
-RAIL_Y = 640
-b.append(f'<rect x="140" y="{RAIL_Y - 6}" width="1500" height="12" rx="6" fill="{LINE}"/>')
-# faint ground ticks below the rail, for a grounded floor without an empty lower half
-for tx in range(220, 1620, 90):
-    b.append(f'<rect x="{tx}" y="{RAIL_Y + 20}" width="4" height="22" rx="2" fill="{LINE}" opacity="0.6"/>')
+# ---- left: 내 폴더 (지금) - broken ----
+LX, LY, LW = 300, 236, 240
+LH = LW * 0.775
+LCX = LX + LW / 2
+Y_ARROW = LY + LH / 2  # shared mid-height for the straight restore arrow
+b.append(folder(LX, LY, LW))
+# grey it out (broken/disabled) and mark it with a big red cross, centred on the folder
+b.append(f'<rect x="{LX}" y="{LY}" width="{LW}" height="{LH}" rx="16" fill="{MUTED}" opacity="0.55"/>')
+b.append(cross(LCX, LY + LH * 0.5, 42))
+b.append(badge(LX - 18, LY - 18, 1))
+LABEL_Y = LY + LH + 40
+b.append(text(LCX, LABEL_Y, "내 폴더 (지금)", 34, 900))
 
-STOPS = [
-    (420, "A 방식", None),
-    (900, "A 실패", "cross"),
-    (1310, "B 방식", "check"),
-]
+# small desk + mascot behind it, under 내 폴더 - stands for 내 컴퓨터
+DESK_W = 280
+DESK_X = LCX - DESK_W / 2
+MS = 0.45
+MH = 143 * MS
+MASCOT_TOP = LABEL_Y + 34  # clear of the label's descenders
+DESK_Y = MASCOT_TOP + MH - 4
+b += [mascot(DESK_X + 40, MASCOT_TOP, MS),
+      desk(DESK_X, DESK_Y, DESK_W, "내 컴퓨터", body_h=76, label_size=26)]
 
-for cx, memo, mark in STOPS:
-    b += [f'<ellipse cx="{cx}" cy="{RAIL_Y + 8}" rx="30" ry="8" fill="{INK}" opacity="0.08"/>',
-          f'<circle cx="{cx}" cy="{RAIL_Y}" r="14" fill="{ACCENT_DARK}" stroke="#fff" stroke-width="4"/>',
-          doc(cx - 62, RAIL_Y - 320, 124, 0)]
-    memo_y = RAIL_Y - 170
-    b += [f'<rect x="{cx - 98}" y="{memo_y}" width="196" height="68" rx="12" fill="#fff9e8" stroke="#e8dcae" stroke-width="2" filter="url(#shs)" transform="rotate(-2 {cx} {memo_y + 34})"/>',
-          text(cx, memo_y + 44, memo, 30, 800, INK2, family=MONO)]
-    b.append(f'<path d="M{cx} {RAIL_Y - 6}V{RAIL_Y - 98}" stroke="{LINE2}" stroke-width="3"/>')
-    if mark == "cross":
-        b.append(cross(cx + 100, RAIL_Y - 298, 26))
-    elif mark == "check":
-        b.append(check(cx + 100, RAIL_Y - 298, 26))
+# ---- right: GitHub 백업 (예전에 저장) - intact, folder's mid-height pinned to Y_ARROW ----
+RCX = 1300
+RFX, RFW = 1217, 170
+RFH = RFW * 0.775
+RFY = Y_ARROW - RFH / 2
+RCY = 305  # cloud centre chosen so the cloud comfortably encloses logo/text/folder above and below
+b.append(cloud(RCX, RCY, 0.95, fill=ACCENT_ZONE))
+b += [gh_mark(1224, RFY - 61, 38), text(1275, RFY - 26, "GitHub", 36, 900, anchor="start")]
+b.append(folder(RFX, RFY, RFW, "agent1"))
+b.append(badge(1199, RFY - 79, 2))
+cloud_bottom = RCY + 204 * 0.95
+RIGHT_LABEL_Y = cloud_bottom + 40
+b.append(text(RCX, RIGHT_LABEL_Y, "GitHub 백업 (예전에 저장)", 34, 900))
 
-# badge 1 on the memos (커밋마다 메모) - on the first memo card
-b.append(badge(420 + 98 + 16, RAIL_Y - 170 - 2, 1))
+# ---- one straight restore arrow: GitHub 백업 -> 내 폴더 (right -> left), at the folders'
+#      shared mid-height. >=30px clearance from the arrow ends to the folder/cloud shapes. ----
+cloud_left_edge = RCX - 270 * 0.95
+folder_right_edge = LX + LW
+start_x, end_x = 1000, 590
+assert cloud_left_edge - start_x >= 30 and end_x - folder_right_edge >= 30
+arrow = f"M{start_x} {Y_ARROW}L{end_x} {Y_ARROW}"
+b.append(path(arrow, color=ACCENT, arrow=True))
+mid_x = (start_x + end_x) / 2
+label_y = Y_ARROW - 63  # >=20px clear of the arrow's halo (halo top = Y_ARROW - 12)
+b.append(text(mid_x, label_y, "되돌리기", 40, 900, ACCENT))
+b.append(badge(mid_x + 130, label_y, 3))
 
-# badge 2 on the fail -> B step (실패 후 새 방식), a dotted path with an explicit arrowhead
-pf = f"M{900 + 42} {RAIL_Y} C {(900 + 1310) / 2} {RAIL_Y + 96} {(900 + 1310) / 2} {RAIL_Y + 96} {1310 - 42} {RAIL_Y}"
-b += [path(pf, color=ACCENT, arrow=False), arrow_head_at((900 + 1310) / 2, RAIL_Y + 96, 1310 - 44, RAIL_Y - 2, 18, ACCENT)]
-b.append(badge((900 + 1310) / 2, RAIL_Y + 118, 2))
-
-# mascot at the RIGHT end of the rail, behind a small desk, writing the memo for the latest commit
-DESK_X, DESK_W = 1500, 210
-MS, MH = 0.85, 143 * 0.85
-b += [f'<ellipse cx="{DESK_X + DESK_W / 2}" cy="{RAIL_Y + 8}" rx="130" ry="14" fill="{INK}" opacity="0.08"/>',
-      mascot(DESK_X + 6, RAIL_Y - 96 - MH + 8, MS),
-      doc(DESK_X + DESK_W - 78, RAIL_Y - 96 - 40, 54, -6),
-      desk(DESK_X, RAIL_Y - 96, DESK_W, body_h=96)]
-
-# big curved rewind arc: latest version back to the first, thick and accent-coloured, with a big
-# explicit arrowhead pointing at A 방식 - drawn last so it reads clearly above everything else.
-ARC_TOP = RAIL_Y - 480
-arc = f"M1310 {RAIL_Y - 340} C {(420 + 1310) / 2} {ARC_TOP} {(420 + 1310) / 2} {ARC_TOP} 420 {RAIL_Y - 340}"
-b += [path(arc, color=ACCENT, width=10, arrow=False),
-      arrow_head_at((420 + 1310) / 2, ARC_TOP, 420, RAIL_Y - 340, 30, ACCENT)]
-# a faint ghost copy of the first version, sliding back along the arc (past the fail stop, before B)
-gx, gy = 1155, ARC_TOP + 32
-b.append(f'<g opacity="0.32">{doc(gx - 54, gy, 96, 5)}</g>')
-b.append(text((420 + 1310) / 2, ARC_TOP - 38, "되돌리기", 46, 900))
-b.append(badge((420 + 1310) / 2 + 250, ARC_TOP + 26, 3))
-
-print(save("s8-gh-history.svg", b, "8/6 되돌리기 · 수정 이력 (tools/illus/s8_gh_history.py)"))
+print(save("s8-gh-history.svg", b, "8/6 백업으로 되돌리기 (tools/illus/s8_gh_history.py)"))
