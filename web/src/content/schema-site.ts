@@ -7,10 +7,13 @@ export type SitePage =
   | GithubSignupPage
   | GoogleChooserPage
   | GithubDevicePage
+  | GithubDeviceCodePage
   | GithubDashboardPage
   | GithubRepoPage
   | GithubTrendingPage
+  | GithubSearchPage
   | GithubAppPage
+  | GithubAppInstallPage
   | ClaudeOpenAppPage
   | ClaudeDownloadPage
 
@@ -41,6 +44,14 @@ export interface GithubDevicePage {
   verifyBadge?: number // green Verify button
 }
 
+/** github.com/login/device, logged in: GitHub mark, "Device Activation", 8-digit code split 4-4, green Continue. */
+export interface GithubDeviceCodePage {
+  type: "github-device-code"
+  code: string // 8 chars as "XXXX-XXXX", e.g. "A1B2-C3D4" — split into the two 4-box groups
+  codeBadge?: number // the 8 code boxes
+  continueBadge?: number // green "Continue" button
+}
+
 /** github.com dashboard (logged in): left "Top repositories", Home with Copilot ask box, Feed, right changelog. */
 export interface GithubDashboardPage {
   type: "github-dashboard"
@@ -55,6 +66,7 @@ export interface GithubDashboardPage {
 export interface GithubRepoPage {
   type: "github-repo"
   loggedIn?: boolean // true: user avatar in the black nav; default/false: Sign in / Sign up
+  zoom?: number // CSS zoom on the mock's root, e.g. 1.35 — enlarges a real-pixel-size mock so it reads from the back of the room
   owner: string
   name: string
   nameBadge?: number // badges the owner/name heading
@@ -101,6 +113,24 @@ export interface GithubTrendingPage {
   }[]
 }
 
+/** github.com/search?q=...&type=repositories: filter column + repo result rows. */
+export interface GithubSearchPage {
+  type: "github-search"
+  query: string // the text shown in the search box, e.g. "pdf to markdown"
+  resultCount: string // "6.6k results", shown next to the Repositories filter
+  searchBadge?: number // the search box
+  results: {
+    owner: string
+    name: string
+    desc: string
+    lang?: string
+    langColor?: string
+    stars: string
+    updated: string // "4 days ago"
+    badge?: number // that row
+  }[]
+}
+
 /** github.com/apps/<name>: a GitHub App's public page (used for the Claude app). */
 export interface GithubAppPage {
   type: "github-app"
@@ -109,6 +139,16 @@ export interface GithubAppPage {
   website?: string
   desc: string[] // paragraphs
   nameBadge?: number
+}
+
+/** github.com/apps/<name>/installations/new: repository access picker + green Install button. */
+export interface GithubAppInstallPage {
+  type: "github-app-install"
+  appName: string // "Claude"
+  repos: string[] // selected repository chips, e.g. ["student/cafe-landing"]
+  permissions: string[] // permission summary lines
+  selectionBadge?: number // "Only select repositories" radio + the repo chip
+  installBadge?: number // green "Install" button
 }
 
 /** claude.ai/login/popup-google-auth: grey "Claude 앱에서 로그인 완료하기" page, with the Chrome protocol dialog on top. */

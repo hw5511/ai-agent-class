@@ -19,7 +19,17 @@
           "head": "꺼도 계속 동작",
           "body": "브라우저를 닫거나 내 컴퓨터를 꺼도 클라우드 세션은 멈추지 않고 계속 작업을 이어갑니다."
         }
-      ]
+      ],
+      "action": {
+        "label": "링크",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://claude.ai/code",
+            "text": "claude.ai/code"
+          }
+        ]
+      }
     },
     {
       "id": "s8-cloud-02",
@@ -169,7 +179,17 @@
           "head": "GitHub 통합 연결",
           "body": "사용자 지정 페이지의 커넥터 탭에서 GitHub 통합 옆의 연결 버튼을 눌러 계정을 연동합니다."
         }
-      ]
+      ],
+      "action": {
+        "label": "바로가기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://claude.ai/customize/connectors",
+            "text": "claude.ai/customize/connectors"
+          }
+        ]
+      }
     },
     {
       "id": "s8-cloud-04",
@@ -214,6 +234,47 @@
           }
         ]
       }
+    },
+    {
+      "id": "s8-cloud-045",
+      "template": "screen",
+      "title": "레포 선택 · 설치",
+      "screen": {
+        "kind": "web",
+        "url": "github.com/apps/claude/installations/new",
+        "tabs": [
+          {
+            "title": "GitHub",
+            "icon": "github",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "github-app-install",
+          "appName": "Claude",
+          "repos": [
+            "student/cafe-landing"
+          ],
+          "permissions": [
+            "Read access to metadata",
+            "Read and write access to code, issues, and pull requests"
+          ],
+          "selectionBadge": 1,
+          "installBadge": 2
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "cafe-landing 만 선택",
+          "body": "Only select repositories 를 고르고 cafe-landing 레포만 선택합니다."
+        },
+        {
+          "n": 2,
+          "head": "Install",
+          "body": "Install 을 누르면 Claude 가 이 레포에 접근할 수 있게 됩니다."
+        }
+      ]
     },
     {
       "id": "s8-cloud-05",

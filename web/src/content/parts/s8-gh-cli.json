@@ -72,7 +72,7 @@
             },
             {
               "role": "assistant",
-              "text": "GitHub CLI 설치 완료, 로그인은 백그라운드에서 기다리는 중이에요.\n한 번만 쓰는 코드: XXXX-XXXX",
+              "text": "GitHub CLI 설치 완료, 로그인은 백그라운드에서 기다리는 중이에요.\n한 번만 쓰는 코드: A1B2-C3D4",
               "badge": 2
             },
             {
@@ -106,6 +106,50 @@
           {
             "kind": "copy",
             "value": "GH CLI를 설치하고 Github 로그인을 background로 실행해서 8자리 코드랑 링크를 알려주세요"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8-gh-cli-025",
+      "template": "screen",
+      "title": "기기 코드 입력",
+      "screen": {
+        "kind": "web",
+        "url": "github.com/login/device",
+        "tabs": [
+          {
+            "title": "GitHub",
+            "icon": "github",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "github-device-code",
+          "code": "A1B2-C3D4",
+          "codeBadge": 1,
+          "continueBadge": 2
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "터미널의 8자리 코드 입력",
+          "body": "터미널에 나온 8자리 코드를 칸에 그대로 입력합니다."
+        },
+        {
+          "n": 2,
+          "head": "Continue",
+          "body": "Continue 를 누르고 다음 화면에서 Authorize 로 승인하면 로그인이 끝납니다."
+        }
+      ],
+      "action": {
+        "label": "링크",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://github.com/login/device",
+            "text": "github.com/login/device"
           }
         ]
       }

@@ -16,7 +16,7 @@
 <line x1="629.3333" y1="652" x2="1162.6667" y2="652" stroke="#101113" stroke-width="2"/>
 <text x="629.3333" y="694" font-size="26" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">02</text>
 <text x="629.3333" y="772" font-size="52" font-weight="700" fill="#101113">먼저 찾기</text>
-<text x="629.3333" y="820" font-size="28" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">github.com/trending</text>
+<text x="629.3333" y="820" font-size="28" fill="#7c8288">트렌딩 · 검색</text>
 
 <!-- gutter arrow 2: on the rule's y, inside the gap (1162.6667..1258.6667) -->
 <line x1="1178.6667" y1="652" x2="1228.6667" y2="652" stroke="#1273c4" stroke-width="2"/>

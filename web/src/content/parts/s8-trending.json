@@ -276,21 +276,86 @@
     },
     {
       "id": "s8-trending-04",
-      "template": "illustration",
+      "template": "screen",
       "title": "만들기 전에 먼저 찾기",
-      "illustration": "/illustrations/s8-search-first.svg",
+      "screen": {
+        "kind": "web",
+        "url": "github.com/search?q=pdf+to+markdown&type=repositories",
+        "tabs": [
+          {
+            "title": "GitHub",
+            "icon": "github",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "github-search",
+          "query": "pdf to markdown",
+          "resultCount": "6.6k",
+          "searchBadge": 1,
+          "results": [
+            {
+              "owner": "microsoft",
+              "name": "markitdown",
+              "desc": "Python tool for converting files and office documents to Markdown.",
+              "lang": "Python",
+              "langColor": "#3572A5",
+              "stars": "187k",
+              "updated": "4 days ago",
+              "badge": 2
+            },
+            {
+              "owner": "jzillmann",
+              "name": "pdf-to-markdown",
+              "desc": "A PDF to Markdown converter",
+              "lang": "JavaScript",
+              "langColor": "#f1e05a",
+              "stars": "1.7k",
+              "updated": "3월 8일"
+            },
+            {
+              "owner": "datalab-to",
+              "name": "marker",
+              "desc": "Convert PDF to markdown + JSON quickly with high accuracy",
+              "lang": "Python",
+              "langColor": "#3572A5",
+              "stars": "40k",
+              "updated": "12 days ago"
+            },
+            {
+              "owner": "simonhaenisch",
+              "name": "md-to-pdf",
+              "desc": "Hackable CLI tool for converting Markdown files to PDF using Node.js and headless Chrome.",
+              "lang": "TypeScript",
+              "langColor": "#3178c6",
+              "stars": "2k",
+              "updated": "2025년 12월 3일"
+            }
+          ]
+        }
+      },
       "notes": [
         {
           "n": 1,
-          "head": "이미 누가 만들어 뒀을 가능성",
-          "body": "비개발자가 상상할 만한 기능은 이미 누군가 GitHub 에 만들어 뒀을 가능성이 큽니다."
+          "head": "만들고 싶은 기능으로 검색",
+          "body": "만들고 싶은 기능을 영어로 검색창에 입력해 이미 만들어진 저장소가 있는지 찾아봅니다."
         },
         {
           "n": 2,
-          "head": "검색이 먼저",
-          "body": "처음부터 새로 만들기 전에 트렌딩과 검색으로 비슷한 저장소가 있는지 먼저 찾아봅니다."
+          "head": "별이 많은 저장소부터",
+          "body": "별이 많은 저장소일수록 많은 사람이 쓰고 있어서 먼저 살펴볼 만합니다."
         }
-      ]
+      ],
+      "action": {
+        "label": "링크",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://github.com/trending",
+            "text": "github.com/trending"
+          }
+        ]
+      }
     }
   ]
 }
