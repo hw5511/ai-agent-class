@@ -15,13 +15,9 @@
     },
     {
       "id": "s7-library-02",
-      "template": "flow",
+      "template": "illustration",
       "title": "유저 지시 · Write · Bash 구조",
-      "steps": [
-        { "label": "유저 지시", "sub": "무엇을 원하는지 말함", "logo": "icon:Chat", "badge": 1 },
-        { "label": "스크립트 작성", "sub": "Write 툴", "logo": "icon:Write", "badge": 2 },
-        { "label": "실행", "sub": "Bash 툴", "logo": "icon:Bash", "badge": 3 }
-      ],
+      "illustration": "/illustrations/s7-write-bash.svg",
       "notes": [
         { "n": 1, "head": "유저 지시", "body": "무엇을 만들고 싶은지 자연어로 말합니다." },
         { "n": 2, "head": "스크립트 작성", "body": "Claude 는 그 문제를 푸는 스크립트를 Write 툴로 직접 짭니다." },
