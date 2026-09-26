@@ -109,6 +109,14 @@ export interface ClaudeEnv {
   chips: ClaudeChip[]
   addFolderBadge?: number // the small add-folder icon after the chips (desk_15 onward)
   creditBanner?: { text: string; buttonText?: string; buttonBadge?: number; closeBadge?: number }
+  repoPicker?: ClaudeRepoPicker // an open dropdown anchored to the "+ 저장소 선택..." chip, listing the student's repos
+}
+
+/** The repo-select dropdown opened from the env row's repo chip: a search box then a list of the student's
+ *  GitHub repos, one checked/selected. */
+export interface ClaudeRepoPicker {
+  query?: string // typed filter text shown in the search box, e.g. "cafe"
+  repos: { name: string; selected?: boolean; badge?: number }[]
 }
 
 export interface ClaudeChip {

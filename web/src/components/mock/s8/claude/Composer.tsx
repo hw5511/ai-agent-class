@@ -1,14 +1,14 @@
 // The bottom composer shared by home and session: the env-chip row (or the PR bar, in a session) sits above
 // the input box; the mascot floats above-right of it; the +/mic/mode/model/effort row sits below.
 import { CornerDownLeftIcon, FolderIcon, FolderPlusIcon, GiftIcon, GitPullRequestIcon, LaptopIcon, MicIcon, PlusIcon, XIcon } from "lucide-react"
-import type { ClaudeBottomBar, ClaudeChip, ClaudeEnv, ClaudeMenu, ClaudePrBar } from "@/content/schema-claude"
+import type { ClaudeBottomBar, ClaudeChip, ClaudeEnv, ClaudeMenu, ClaudePrBar, ClaudeRepoPicker } from "@/content/schema-claude"
 import { NumberBadge } from "@/components/slide/NumberBadge"
 import { Mascot } from "./util"
-import { MenuView } from "./Overlays"
+import { MenuView, RepoPickerView } from "./Overlays"
 
-// A chip is `relative` already (for its own badge), so the folder menu (desk_12) can anchor to it directly:
-// it opens upward, left-aligned with this exact chip, whatever its label width.
-function Chip({ c, menu }: { c: ClaudeChip; menu?: ClaudeMenu }) {
+// A chip is `relative` already (for its own badge), so the folder menu (desk_12) / repo picker can anchor to
+// it directly: it opens upward, left-aligned with this exact chip, whatever its label width.
+function Chip({ c, menu, repoPicker }: { c: ClaudeChip; menu?: ClaudeMenu; repoPicker?: ClaudeRepoPicker }) {
   const Icon = c.icon === "local" ? LaptopIcon : c.icon === "cloud" ? undefined : c.icon === "plus" ? PlusIcon : FolderIcon
   return (
     <span className="relative flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-3 py-1.5 font-body text-[16px] text-[#3a3a38]">
@@ -16,6 +16,7 @@ function Chip({ c, menu }: { c: ClaudeChip; menu?: ClaudeMenu }) {
       {c.label}
       {c.badge ? <span className="absolute -top-9 right-0 z-10"><NumberBadge n={c.badge} size="sm" /></span> : null}
       {menu ? <MenuView m={menu} /> : null}
+      {repoPicker ? <RepoPickerView p={repoPicker} /> : null}
     </span>
   )
 }
@@ -24,7 +25,14 @@ function EnvRow({ env, menu, bannerMascot }: { env: ClaudeEnv; menu?: ClaudeMenu
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center gap-2">
-        {env.chips.map((c, i) => <Chip key={i} c={c} menu={menu?.kind === "folder" && c.icon === "folder" ? menu : undefined} />)}
+        {env.chips.map((c, i) => (
+          <Chip
+            key={i}
+            c={c}
+            menu={menu?.kind === "folder" && c.icon === "folder" ? menu : undefined}
+            repoPicker={env.repoPicker && c.icon === "plus" ? env.repoPicker : undefined}
+          />
+        ))}
         {env.addFolderBadge !== undefined ? (
           <span className="relative flex size-8 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-500">
             <FolderPlusIcon className="size-4" />

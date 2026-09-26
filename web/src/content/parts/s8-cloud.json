@@ -277,6 +277,189 @@
       ]
     },
     {
+      "id": "s8-cloud-046",
+      "template": "screen",
+      "title": "GitHub 연결 완료",
+      "screen": {
+        "kind": "web",
+        "url": "claude.ai/code",
+        "tabs": [
+          {
+            "title": "Claude Code",
+            "icon": "claude",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "claude",
+          "screen": "home",
+          "home": {
+            "greeting": "수강생님, 다음 일정은 무엇인가요?"
+          },
+          "env": {
+            "chips": [
+              {
+                "icon": "cloud",
+                "label": "Default"
+              },
+              {
+                "icon": "plus",
+                "label": "+ 저장소 선택...",
+                "badge": 1
+              }
+            ]
+          },
+          "input": {
+            "placeholder": "작업을 설명하거나 질문하세요"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "연결 완료 후 저장소 선택",
+          "body": "연동 팝업이 사라지고 저장소 선택 칩이 남으면 이 칩을 눌러 작업할 레포를 고릅니다."
+        }
+      ],
+      "action": {
+        "label": "바로가기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://claude.ai/code",
+            "text": "claude.ai/code 열기"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8-cloud-047",
+      "template": "screen",
+      "title": "레포 선택 · cafe-landing",
+      "screen": {
+        "kind": "web",
+        "url": "claude.ai/code",
+        "tabs": [
+          {
+            "title": "Claude Code",
+            "icon": "claude",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "claude",
+          "screen": "home",
+          "home": {
+            "greeting": "수강생님, 다음 일정은 무엇인가요?"
+          },
+          "env": {
+            "chips": [
+              {
+                "icon": "cloud",
+                "label": "Default"
+              },
+              {
+                "icon": "plus",
+                "label": "+ 저장소 선택..."
+              }
+            ],
+            "repoPicker": {
+              "query": "cafe",
+              "repos": [
+                {
+                  "name": "cafe-landing",
+                  "selected": true,
+                  "badge": 1
+                },
+                {
+                  "name": "todo-app"
+                },
+                {
+                  "name": "portfolio-site"
+                }
+              ]
+            }
+          },
+          "input": {
+            "placeholder": "작업을 설명하거나 질문하세요"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "cafe-landing 선택",
+          "body": "저장소 선택 칩을 눌러 열린 목록에서 검색으로 cafe-landing 을 찾아 선택합니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-cloud-048",
+      "template": "screen",
+      "title": "현재 프로젝트 파악해줘",
+      "screen": {
+        "kind": "web",
+        "url": "claude.ai/code",
+        "tabs": [
+          {
+            "title": "Claude Code",
+            "icon": "claude",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "claude",
+          "screen": "home",
+          "home": {
+            "greeting": "수강생님, 다음 일정은 무엇인가요?"
+          },
+          "env": {
+            "chips": [
+              {
+                "icon": "cloud",
+                "label": "Default · cafe-landing"
+              }
+            ]
+          },
+          "input": {
+            "text": "현재 프로젝트 파악해줘",
+            "badge": 1
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "프로젝트 파악 요청",
+          "body": "저장소 선택이 끝나면 입력창에 현재 프로젝트 파악해줘 라고 적어 요청합니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "현재 프로젝트 파악해줘"
+          }
+        ]
+      }
+    },
+    {
       "id": "s8-cloud-05",
       "template": "screen",
       "title": "클라우드 세션 답변",
@@ -313,6 +496,10 @@
               ]
             },
             "messages": [
+              {
+                "role": "user",
+                "text": "현재 프로젝트 파악해줘"
+              },
               {
                 "role": "assistant",
                 "badge": 2,

@@ -1,7 +1,7 @@
 // Overlays drawn on top of the current screen: an open dropdown menu, the trust / folder-picker dialog, and
 // the blue GitHub-connect popover. At most one of these is present on a given view.
-import { CheckIcon, ChevronRightIcon, FolderIcon, PaperclipIcon, PlugIcon, PlugZapIcon, SlashSquareIcon } from "lucide-react"
-import type { ClaudeDialog, ClaudeGithubPopover, ClaudeMenu, ClaudeMenuItem } from "@/content/schema-claude"
+import { CheckIcon, ChevronRightIcon, FolderIcon, PaperclipIcon, PlugIcon, PlugZapIcon, SearchIcon, SlashSquareIcon } from "lucide-react"
+import type { ClaudeDialog, ClaudeGithubPopover, ClaudeMenu, ClaudeMenuItem, ClaudeRepoPicker } from "@/content/schema-claude"
 import { NumberBadge } from "@/components/slide/NumberBadge"
 import { cn } from "@/lib/utils"
 
@@ -149,6 +149,24 @@ export function DialogView({ d }: { d: ClaudeDialog }) {
           </span>
         </div>
       </div>
+    </div>
+  )
+}
+
+// The repo-select dropdown, anchored to the env row's "+ 저장소 선택..." chip (that chip is `relative`, same
+// pattern as the folder-menu anchor above it) — a search box then the student's repos, styled like MenuView.
+export function RepoPickerView({ p }: { p: ClaudeRepoPicker }) {
+  return (
+    <div className="absolute bottom-full left-0 z-30 mb-2 flex w-[260px] flex-col rounded-xl border border-neutral-200 bg-white py-2 shadow-[0_18px_40px_rgba(16,17,19,0.2)]">
+      <div className="px-3 pb-2">
+        <div className="flex items-center gap-2 rounded-lg border border-neutral-200 px-2.5 py-1.5 font-body text-[15px] text-neutral-500">
+          <SearchIcon className="size-3.5 shrink-0" />
+          <span className="truncate">{p.query || "저장소 검색"}</span>
+        </div>
+      </div>
+      {p.repos.map((r, i) => (
+        <Item key={i} it={{ label: r.name, check: r.selected, badge: r.badge }} />
+      ))}
     </div>
   )
 }
