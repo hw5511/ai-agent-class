@@ -1,42 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
-<defs>
-<filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
-</defs>
-<rect x="0" y="0" width="1600" height="900" fill="#fff"/>
-<g transform="translate(-97.4,-201.3) scale(1.121)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<rect x="0" y="0" width="1792" height="840" fill="#fff"/>
 
-<!-- big cloud containing a computer (centered around x=640) -->
-<path d="M494 305 q-70 0 -70 66 q-56 4 -56 60 q0 60 60 60 h420 q64 0 64 -62 q0 -58 -58 -62 q-4 -64 -70 -64 q-32 0 -52 20 q-20 -18 -50 -18 q-18 0 -22 4 q-14 -4 -26 -4 z" fill="#cfe5f5" stroke="#1273c4" stroke-width="5" filter="url(#sh)"/>
+<!-- left column: 0..700, opened by a 2px ink rule at the same y as the right column's first row top (383) -->
+<line x1="0" y1="383" x2="700" y2="383" stroke="#101113" stroke-width="2"/>
+<text x="0" y="430" font-size="26" fill="#7c8288">클라우드</text>
+<text x="700" y="430" font-size="26" fill="#1273c4" text-anchor="end">● 작업 중</text>
+<text x="0" y="470" font-size="28" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">claude.ai/code</text>
+<text x="0" y="690" font-size="56" font-weight="700" fill="#101113">빌려 쓰는 컴퓨터</text>
 
-<!-- computer inside cloud, centered under the cloud -->
-<rect x="530" y="355" width="220" height="140" rx="12" fill="#43474b"/>
-<rect x="550" y="373" width="180" height="90" rx="6" fill="#101113"/>
-<rect x="590" y="495" width="100" height="14" rx="4" fill="#8b9095"/>
-<rect x="550" y="509" width="180" height="12" rx="6" fill="#c9ccd1"/>
-<text x="640" y="565" font-size="32" fill="#101113" font-weight="800" text-anchor="middle">빌려 쓰는 컴퓨터</text>
+<!-- connector: from left column (x716, vertical centre of "빌려 쓰는 컴퓨터" = baseline 690 - 20 = 670)
+     to spine at x900; spine spans tick1 (399) to tick3 (714); ticks meet each row heading's cap centre -->
+<line x1="716" y1="670" x2="900" y2="670" stroke="#1273c4" stroke-width="2"/>
+<line x1="900" y1="399" x2="900" y2="714" stroke="#1273c4" stroke-width="2"/>
+<line x1="900" y1="399" x2="1024" y2="399" stroke="#1273c4" stroke-width="2"/>
+<line x1="900" y1="556.5" x2="1024" y2="556.5" stroke="#1273c4" stroke-width="2"/>
+<line x1="900" y1="714" x2="1024" y2="714" stroke="#1273c4" stroke-width="2"/>
 
-<!-- repo box: clear of the cloud, connected by dashed line, label under icon -->
-<g filter="url(#sh)">
-<rect x="1010" y="340" width="260" height="150" rx="16" fill="#fff" stroke="#1273c4" stroke-width="3"/>
+<!-- right column: rows -->
+<g transform="translate(1040,383) scale(1.667)">
+<path fill="#101113" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
 </g>
-<path d="M1110 385 q-20 0 -20 19 q-15 1 -15 17 q0 16 17 16 h80 q17 0 17 -17 q0 -15 -15 -17 q-1 -18 -19 -18 q-9 0 -14 6 q-6 -6 -14 -6 z" fill="#1273c4"/>
-<text x="1140" y="465" font-size="30" fill="#101113" font-weight="800" text-anchor="middle">GitHub 레포</text>
-<line x1="944" y1="410" x2="1006" y2="410" stroke="#1273c4" stroke-width="4" stroke-dasharray="6 8"/>
+<text x="1096" y="415" font-size="44" font-weight="700" fill="#101113">GitHub 레포</text>
+<text x="1040" y="455" font-size="28" fill="#7c8288">코드를 가져오고 올림</text>
 
-<!-- laptop, closed lid, bottom-left, symmetric with phone about x=800 -->
-<g filter="url(#sh)">
-<rect x="330" y="700" width="200" height="16" rx="6" fill="#43474b"/>
-</g>
-<rect x="350" y="664" width="160" height="36" rx="8" fill="#c9ccd1" stroke="#43474b" stroke-width="3"/>
-<rect x="350" y="664" width="160" height="10" rx="5" fill="#e8eaec"/>
-<text x="430" y="770" font-size="32" fill="#101113" font-weight="800" text-anchor="middle">내 컴퓨터 꺼도</text>
-<line x1="490" y1="664" x2="455" y2="475" stroke="#1273c4" stroke-width="4" stroke-dasharray="8 10"/>
+<line x1="1040" y1="514" x2="1792" y2="514" stroke="#d5d8dc" stroke-width="1"/>
 
-<!-- phone, bottom-right, symmetric with laptop about x=800 -->
-<rect x="1110" y="640" width="120" height="180" rx="18" fill="#fff" stroke="#1273c4" stroke-width="5"/>
-<rect x="1122" y="662" width="96" height="132" rx="4" fill="#cfe5f5"/>
-<circle cx="1170" cy="806" r="8" fill="#1273c4"/>
-<text x="1170" y="860" font-size="32" fill="#101113" font-weight="800" text-anchor="middle">폰에서도</text>
-<line x1="1110" y1="670" x2="960" y2="470" stroke="#1273c4" stroke-width="4" stroke-dasharray="8 10"/>
-</g>
+<text x="1040" y="572.5" font-size="44" font-weight="700" fill="#101113">내 컴퓨터 꺼도</text>
+<text x="1040" y="612.5" font-size="28" fill="#7c8288">계속 동작</text>
+
+<line x1="1040" y1="671" x2="1792" y2="671" stroke="#d5d8dc" stroke-width="1"/>
+
+<text x="1040" y="730" font-size="44" font-weight="700" fill="#101113">폰에서도</text>
+<text x="1040" y="770" font-size="28" fill="#7c8288">이어서 확인</text>
 </svg>

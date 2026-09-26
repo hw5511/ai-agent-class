@@ -7,6 +7,7 @@ import { Mark } from "./Mark"
 import { ScreenView } from "./ScreenView"
 import { LifecycleDiagram } from "./LifecycleDiagram"
 import { asset, cn } from "@/lib/utils"
+import type { ReactNode } from "react"
 
 export function SlideBody({ slide }: { slide: Slide }) {
   switch (slide.template) {
@@ -59,32 +60,100 @@ function CompareT({ s }: { s: CompareSlide }) {
   )
 }
 
-// Type steps down as rows grow so a long table (a /config list) still fits the body; my-auto centres a
-// short table without pushing a tall one above the frame.
-function TableT({ s }: { s: TableSlide }) {
-  const n = s.rows.length
-  const size = n <= 5 ? "text-[34px] [&_td]:py-6 [&_th]:py-6" : n <= 8 ? "text-[28px] [&_td]:py-4 [&_th]:py-4" : n <= 12 ? "text-[22px] [&_td]:py-2.5 [&_th]:py-3" : "text-[18px] [&_td]:py-1.5 [&_th]:py-2"
+// Restrained editorial table: left-aligned throughout, muted header over a 2px ink rule, hairline rows,
+// a highlighted row marked by a thin accent bar instead of an outline. Row height and type size step
+// down as rows grow so a long table (a /config list) still fits the body; 9+ rows keep the old compact
+// sizing (min 20px) since a fixed row height would no longer read as generous. Anchored to the body's
+// bottom edge (DESIGN.md principle 3), not vertically centred.
+const isPositiveCell = (v: string) => ["가능", "접근 가능", "있음", "O", "예"].includes(v.trim())
+const isNegativeCell = (v: string) => ["불가", "접근 불가", "없음", "안 됨", "X", "아니오"].includes(v.trim())
+// A command / file name: one ASCII token, no spaces, that starts with "/" or "-" or contains "." or "_".
+const isTermCell = (v: string) => {
+  const s = v.trim()
+  if (!s || /\s/.test(s) || !/^[\x00-\x7F]+$/.test(s)) return false
+  return s.startsWith("/") || s.startsWith("-") || s.includes(".") || s.includes("_")
+}
+
+// Concept templates share one vertical composition (DESIGN.md principle 3): the block sits in the lower
+// part of the body on an optical line, free space split 3:1 above/below, with a bottom margin at least
+// the side margin so it never "falls to the floor".
+function Lower({ children, tight }: { children: ReactNode; tight?: boolean }) {
   return (
     <div className="flex h-full min-h-0 flex-col overflow-hidden">
-      <table className={cn("my-auto w-full border-collapse font-display", size)}>
+      <div className="min-h-0 flex-[3]" />
+      <div className="shrink-0">{children}</div>
+      <div className={cn("flex-[1]", tight ? "min-h-0" : "min-h-[64px]")} />
+    </div>
+  )
+}
+
+// Step numbers on cards and flows: flat mono numerals in the accent colour, like the agenda and PART
+// covers. When a slide carries badges (numbers the notes refer to) only badged items show a number, and
+// it is the badge number; otherwise every item shows its position.
+function Numeral({ n }: { n?: number | "!" }) {
+  if (n === undefined) return <span />
+  return <span className="font-num text-[30px] font-medium tracking-[0.04em] text-slide-accent">{n === "!" ? "!" : String(n).padStart(2, "0")}</span>
+}
+
+function TableT({ s }: { s: TableSlide }) {
+  const n = s.rows.length
+  const cols = s.columns.length
+  const firstW = cols >= 4 ? 34 : cols === 3 ? 40 : cols === 2 ? 50 : 100 / Math.max(cols, 1)
+  const restW = cols > 1 ? (100 - firstW) / (cols - 1) : 0
+  const compact = n > 8
+  const rowH = n <= 3 ? 170 : n <= 5 ? 140 : n <= 8 ? 100 : undefined
+  const firstSize = n <= 3 ? 44 : n <= 5 ? 36 : n <= 8 ? 30 : n <= 12 ? 22 : 20
+  const valueSize = n <= 3 ? 36 : n <= 5 ? 30 : n <= 8 ? 26 : n <= 12 ? 22 : 20
+  const cellPy = compact ? (n <= 12 ? "py-2.5" : "py-1.5") : undefined
+  return (
+    <Lower tight={compact}>
+      <table className="w-full table-fixed border-collapse font-display">
+        <colgroup>
+          <col style={{ width: `${firstW}%` }} />
+          {s.columns.slice(1).map((_, i) => <col key={i} style={{ width: `${restW}%` }} />)}
+        </colgroup>
         <thead>
-          <tr className="border-b-2 border-[#101113]">
+          <tr className="border-b-2 border-[#101113]" style={{ height: 80 }}>
             {s.columns.map((c, i) => (
-              <th key={i} className={cn("px-8 text-left font-bold text-[#101113]", i > 0 && "text-center")}>{c}</th>
+              <th key={i} className={cn("align-middle text-left font-semibold text-[28px] text-[#7c8288]", i === 0 ? "pl-8" : "px-6", cellPy)}>{c}</th>
             ))}
           </tr>
         </thead>
         <tbody>
           {s.rows.map((r, ri) => (
-            <tr key={ri} className={cn("border-b border-neutral-200", r.highlight && "outline-2 -outline-offset-2 outline-slide-accent")}>
-              {r.cells.map((c, ci) => (
-                <td key={ci} className={cn("px-8 break-keep text-[#43474b]", ci === 0 ? "font-term font-bold text-[#101113]" : "text-center")}>{c}</td>
-              ))}
+            <tr key={ri} className="border-b border-[#e3e5e8]" style={rowH ? { height: rowH } : undefined}>
+              {r.cells.map((c, ci) => {
+                if (ci === 0) {
+                  const term = isTermCell(c)
+                  return (
+                    <td
+                      key={ci}
+                      className={cn("relative align-middle pl-8 break-keep font-bold", term ? "font-term" : "font-display", r.highlight ? "text-slide-accent" : "text-[#101113]", cellPy)}
+                      style={{ fontSize: firstSize }}
+                    >
+                      {r.highlight ? <span className="absolute inset-y-0 left-0 w-[6px] bg-slide-accent" /> : null}
+                      {c}
+                    </td>
+                  )
+                }
+                const positive = isPositiveCell(c)
+                const negative = isNegativeCell(c)
+                return (
+                  <td
+                    key={ci}
+                    className={cn("align-middle px-6 text-left break-keep", positive ? "font-semibold text-[#101113]" : negative ? "text-[#a3a8ad]" : "text-[#43474b]", cellPy)}
+                    style={{ fontSize: valueSize }}
+                  >
+                    {positive ? <span className="mr-[14px] inline-block size-[12px] shrink-0 rounded-full bg-slide-accent align-middle" /> : null}
+                    {c}
+                  </td>
+                )
+              })}
             </tr>
           ))}
         </tbody>
       </table>
-    </div>
+    </Lower>
   )
 }
 
@@ -125,9 +194,9 @@ function OverviewT({ s }: { s: OverviewSlide }) {
         {s.items.map((it, i) => {
           const c = countOf(it)
           return (
-            <div key={i} className={cn("flex min-w-0 items-center border-b border-neutral-200", big ? "gap-10" : "gap-7", it.current && "bg-[#eef5fc]")}>
+            <div key={i} className={cn("flex min-w-0 items-center border-b border-neutral-200", big ? "gap-10" : "gap-7", it.current && "border-b-2 border-b-slide-accent")}>
               <span className={cn("w-[1.6em] shrink-0 font-num font-medium text-slide-accent", big ? "pl-2 text-[36px]" : "pl-1 text-[30px]")}>{String(i + 1).padStart(2, "0")}</span>
-              <span className={cn("min-w-0 flex-1 truncate font-display font-bold tracking-[-0.01em] text-[#101113]", big ? "text-[46px]" : tight ? "text-[36px]" : "text-[40px]")}>{it.label}</span>
+              <span className={cn("min-w-0 flex-1 truncate font-display font-bold tracking-[-0.01em]", it.current ? "text-slide-accent" : "text-[#101113]", big ? "text-[46px]" : tight ? "text-[36px]" : "text-[40px]")}>{it.label}</span>
               {c !== undefined ? (
                 <span className={cn("flex shrink-0 items-center", big ? "gap-6" : "gap-4")}>
                   <span className={cn("h-2.5 overflow-hidden rounded-full bg-neutral-100", big ? "w-[280px]" : "w-[150px]")}>
@@ -188,26 +257,28 @@ export function PartCoverT({ s }: { s: PartCoverSlide }) {
 }
 
 // Visual cards: each thing shown by its logo and/or a real picture, with a label and short tags.
-// Cards with pictures fill the body height; icon-only cards are a compact centred group (icon, label,
-// tags stacked) so a tall card never leaves an empty gap between icon and label.
+// Cards with pictures fill the body height (unchanged). Icon-only cards are editorial columns: a 2px
+// ink rule opens each one, a badge/mark row sits under it, then a fixed gap before the large label and
+// its tag line - no boxes, no chips. The row is anchored to the bottom of the body (DESIGN.md
+// principle 3: deliberate whitespace, not a small group centred in empty space).
 function CardsT({ s }: { s: CardsSlide }) {
   const withImages = s.cards.some((c) => c.image)
+  if (!withImages) return <CardsIconOnlyT s={s} />
   return (
     <div className="flex h-full min-h-0 items-center">
-    <div className={cn("flex w-full min-h-0 items-stretch gap-8", withImages && "h-full")}>
+    <div className="flex h-full w-full min-h-0 items-stretch gap-8">
       {s.cards.map((c, i) => (
         <div
           key={i}
           className={cn(
             "relative flex min-w-0 flex-1 flex-col overflow-hidden rounded-3xl border bg-white",
-            !withImages && "items-center justify-center gap-8 px-8 py-16 text-center",
             c.highlight ? "border-2 border-slide-accent" : "border-neutral-200",
           )}
         >
           {c.badge ? <span className="absolute top-5 right-5 z-10"><NumberBadge n={c.badge} /></span> : null}
           {c.logo && (
-            <div className={cn("flex shrink-0 items-center justify-center", withImages ? "h-28 px-8" : "")}>
-              <Mark src={c.logo} px={withImages ? 56 : 120} />
+            <div className="flex h-28 shrink-0 items-center justify-center px-8">
+              <Mark src={c.logo} px={56} />
             </div>
           )}
           {c.image && (
@@ -215,10 +286,10 @@ function CardsT({ s }: { s: CardsSlide }) {
               <img src={asset(c.image)} alt="" className="size-full object-cover object-top" />
             </div>
           )}
-          <div className={cn("flex shrink-0 flex-col gap-3", withImages ? "px-8 py-6" : "items-center")}>
+          <div className="flex shrink-0 flex-col gap-3 px-8 py-6">
             <span className="font-display text-[36px] font-bold text-[#101113] break-keep">{c.label}</span>
             {c.tags?.length ? (
-              <div className={cn("flex flex-wrap gap-2", !withImages && "justify-center")}>
+              <div className="flex flex-wrap gap-2">
                 {c.tags.map((t, ti) => (
                   <span key={ti} className="rounded-full border border-neutral-200 px-4 py-1.5 font-body text-[22px] break-keep text-[#43474b]">{t}</span>
                 ))}
@@ -232,36 +303,115 @@ function CardsT({ s }: { s: CardsSlide }) {
   )
 }
 
-// Boxes and arrows. With `loop`, a return arrow runs under the row from the last step back to the first.
-function FlowT({ s }: { s: FlowSlide }) {
+function CardsIconOnlyT({ s }: { s: CardsSlide }) {
+  const n = s.cards.length
+  const cols = n <= 4 ? n : 3
+  const anyBadge = s.cards.some((c) => c.badge)
   return (
-    <div className="flex h-full min-h-0 flex-col justify-center gap-10">
-      <div className="flex items-stretch">
-        {s.steps.map((st, i) => (
-          <div key={i} className="flex flex-1 items-center">
-            <div className="relative flex min-h-[220px] flex-1 flex-col items-center justify-center gap-4 rounded-3xl border-2 border-neutral-200 bg-white px-6 py-8 text-center">
-              {st.badge ? <span className="absolute -top-5"><NumberBadge n={st.badge} /></span> : null}
-              {st.logo && <Mark src={st.logo} px={72} />}
-              <span className="font-display text-[40px] font-bold text-[#101113] break-keep">{st.label}</span>
-              {st.sub && <span className="font-body text-[22px] text-[#7c8288] break-keep">{st.sub}</span>}
+    <Lower>
+      <div className="grid w-full" style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`, columnGap: 48, rowGap: 56 }}>
+        {s.cards.map((c, i) => {
+          const brandLogo = c.logo && !c.logo.startsWith("icon:") ? c.logo : undefined
+          return (
+            <div key={i} className="flex min-w-0 flex-col">
+              {/* fixed 4px rule area so every column's content starts at the same y */}
+              <div style={{ height: 4 }}>
+                {c.highlight ? <div className="h-full bg-slide-accent" /> : <div style={{ height: 2 }} className="bg-[#101113]" />}
+              </div>
+              <div className="flex items-center justify-between" style={{ height: 56, marginTop: 28 }}>
+                <Numeral n={anyBadge ? c.badge : i + 1} />
+                {brandLogo ? <Mark src={brandLogo} px={48} /> : null}
+              </div>
+              <span
+                className={cn(
+                  "font-display font-bold leading-[1.05] tracking-[-0.02em] break-keep",
+                  c.highlight ? "text-slide-accent" : "text-[#101113]",
+                )}
+                style={{ fontSize: 72, marginTop: 24 }}
+              >
+                {c.label}
+              </span>
+              {c.tags?.length ? (
+                <span className="break-keep font-display text-[30px] text-[#43474b]" style={{ marginTop: 16 }}>
+                  {c.tags.join(" · ")}
+                </span>
+              ) : null}
             </div>
-            {i < s.steps.length - 1 && (
-              <svg viewBox="0 0 60 24" className="mx-3 h-8 w-16 shrink-0 text-slide-accent">
-                <path d="M2 12h50m-10-9 10 9-10 9" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            )}
-          </div>
-        ))}
+          )
+        })}
       </div>
-      {s.loop && (
-        <div className="relative mx-[6%] h-16">
-          <svg viewBox="0 0 1000 60" preserveAspectRatio="none" className="absolute inset-0 size-full text-slide-accent">
-            <path d="M985 0 V40 Q985 55 970 55 H30 Q15 55 15 40 V0" fill="none" stroke="currentColor" strokeWidth="3" strokeDasharray="10 8" vectorEffect="non-scaling-stroke" />
-          </svg>
-          <svg viewBox="0 0 20 16" className="absolute -top-1 left-[calc(1.5%-10px)] h-4 w-5 text-slide-accent"><path d="M10 0 20 16H0Z" fill="currentColor" /></svg>
+    </Lower>
+  )
+}
+
+const isAscii = (v: string) => /^[\x00-\x7F]+$/.test(v.trim())
+
+// A continuous timeline: one 2px ink rule spanning the body width, ending in a solid arrowhead. Steps sit
+// as equal columns under the line, each anchored by an accent dot at its left edge. `loop` draws a thin
+// accent return line under the columns, from the last step's left edge back to the first, arrow pointing
+// left. No boxes, no chips - type, rules and dots only (DESIGN.md principle 4).
+function FlowT({ s }: { s: FlowSlide }) {
+  const n = s.steps.length
+  const labelSize = n >= 5 ? 48 : 56
+  const cols = { gridTemplateColumns: `repeat(${n}, minmax(0, 1fr))`, columnGap: 48 }
+  const anyBadge = s.steps.some((st) => st.badge)
+  return (
+    <Lower>
+      <div className="relative" style={{ height: 16 }}>
+        <div className="absolute top-1/2 left-0 h-[2px] -translate-y-1/2 bg-[#101113]" style={{ right: 14 }} />
+        <svg width={12} height={16} viewBox="0 0 12 16" className="absolute top-1/2 right-0 -translate-y-1/2">
+          <path d="M0 0 L12 8 L0 16 Z" fill="#101113" />
+        </svg>
+        <div className="absolute inset-0 grid" style={cols}>
+          {s.steps.map((_, i) => (
+            <div key={i} className="relative">
+              <span
+                className="absolute top-1/2 left-0 -translate-y-1/2 rounded-full bg-slide-accent"
+                style={{ width: 16, height: 16 }}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="grid" style={{ ...cols, marginTop: 32 }}>
+        {s.steps.map((st, i) => {
+          const brandLogo = st.logo && !st.logo.startsWith("icon:") ? st.logo : undefined
+          return (
+            <div key={i} className="flex min-w-0 flex-col">
+              <div className="flex items-center justify-between" style={{ height: 56 }}>
+                <Numeral n={anyBadge ? st.badge : i + 1} />
+                {brandLogo ? <Mark src={brandLogo} px={48} /> : null}
+              </div>
+              <span
+                className="font-display leading-[1.1] font-bold break-keep text-[#101113]"
+                style={{ fontSize: labelSize, marginTop: 36 }}
+              >
+                {st.label}
+              </span>
+              {st.sub ? (
+                <span
+                  className={cn("break-keep text-[28px] text-[#7c8288]", isAscii(st.sub) ? "font-term" : "font-display")}
+                  style={{ marginTop: 14 }}
+                >
+                  {st.sub}
+                </span>
+              ) : null}
+            </div>
+          )
+        })}
+      </div>
+      {s.loop && n > 1 && (
+        <div className="grid" style={{ ...cols, marginTop: 48 }}>
+          <div className="relative" style={{ gridColumn: `1 / ${n}`, height: 24 }}>
+            <span className="absolute -top-9 right-0 font-display text-[24px] font-semibold text-slide-accent">반복</span>
+            <div className="absolute top-1/2 h-[2px] -translate-y-1/2 bg-slide-accent" style={{ left: 14, right: 0 }} />
+            <svg width={12} height={16} viewBox="0 0 12 16" className="absolute top-1/2 left-0 -translate-y-1/2">
+              <path d="M12 0 L0 8 L12 16 Z" fill="currentColor" className="text-slide-accent" />
+            </svg>
+          </div>
         </div>
       )}
-    </div>
+    </Lower>
   )
 }
 

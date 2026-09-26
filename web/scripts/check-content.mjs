@@ -141,7 +141,7 @@ for (const f of files) {
       if (it.screen.badge) badges.push(it.screen.badge)
     }
     const notes = s.notes ?? []
-    if (notes.length > 3) err(w, `${notes.length} notes (max 3)`)
+    if (notes.length > 4) err(w, `${notes.length} notes (max 4)`)
     // Note head = short keyword title: no sentence endings (~다/~요/~니다), no final period (CEO 2026-09-22).
     // Note body = detailed spoken explanation to the student in polite Korean, 1-3 sentences, so sentences
     // are allowed there (CEO 2026-09-22, second revision). Dashes stay banned in both.

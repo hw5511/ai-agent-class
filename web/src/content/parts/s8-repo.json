@@ -110,7 +110,7 @@
       "template": "flow",
       "title": "지워도 되살리기",
       "steps": [
-        { "label": "cafe-landing 폴더 삭제", "logo": "icon:Folder", "badge": 1 },
+        { "label": "폴더 삭제", "sub": "cafe-landing", "logo": "icon:Folder", "badge": 1 },
         { "label": "/clear", "sub": "대화 초기화", "logo": "icon:Terminal", "badge": 2 },
         { "label": "클론", "sub": "git clone", "logo": "icon:Download", "badge": 3 },
         { "label": "되살아난 폴더", "logo": "icon:Folder" }

@@ -65,6 +65,21 @@ these apps that no capture shows.
   (`border-neutral-200`), not a fill. The one exception is the dark product mockups (terminal, VS Code).
 - Emphasis = the blue accent as a border or badge, never a tinted background.
 
+## Concept slides: editorial minimalism (CEO 2026-09-26: "세련되면서 미니멀리즘해야해 여백같은것도 느낌있게")
+
+Cards, flow, table and illustration slides follow one look:
+- Type does the work: big bold labels, a short muted line under them. Thin rules (2px ink to open a block,
+  hairlines to separate) instead of boxes, pills, shadows or tinted fills.
+- The content block sits in the lower part of the body on one optical line (free space split 3:1 above/below,
+  at least 64px bottom margin). Whitespace above it is intentional; never a small group floating in the centre.
+- No clip-art: no cartoon people, clouds, devices, magnifiers, stars, and no lucide icons on cards/flows
+  (`icon:` logos are ignored there; brand logos stay). Illustrations are drawn with type, rules, dots and real
+  brand marks only.
+- Numbers on cards/flows are flat mono numerals (01 02) in the accent colour. When a slide has badges, only the
+  badged items show a number (the badge number = the note number); otherwise every item shows its position.
+- Illustration SVGs: `viewBox="0 0 1792 840"`, Pretendard for Korean (an `<img>` SVG cannot load webfonts),
+  a monospace stack only for ASCII code, content roughly y 320..770.
+
 ## Illustrations (CEO 2026-09-21)
 
 - Static vector illustrations only (SVG in `public/illustrations/`), centred in the slide. **No animation** in
