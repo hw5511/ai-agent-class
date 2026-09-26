@@ -1,35 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
 <rect x="0" y="0" width="1792" height="840" fill="#fff"/>
 
-<!-- left column: 0..700, opened by a 2px ink rule at the same y as the right column's first row top (383) -->
-<line x1="0" y1="383" x2="700" y2="383" stroke="#101113" stroke-width="2"/>
-<text x="0" y="430" font-size="26" fill="#7c8288">클라우드</text>
-<text x="700" y="430" font-size="26" fill="#1273c4" text-anchor="end">● 작업 중</text>
-<text x="0" y="470" font-size="28" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">claude.ai/code</text>
-<text x="0" y="690" font-size="56" font-weight="700" fill="#101113">빌려 쓰는 컴퓨터</text>
+<!-- left column: 내 컴퓨터 (x 0..420) -->
+<text x="0" y="360" font-size="25" fill="#7c8288">내 컴퓨터</text>
+<line x1="0" y1="386" x2="420" y2="386" stroke="#101113" stroke-width="2"/>
 
-<!-- connector: from left column (x716, vertical centre of "빌려 쓰는 컴퓨터" = baseline 690 - 20 = 670)
-     to spine at x900; spine spans tick1 (399) to tick3 (714); ticks meet each row heading's cap centre -->
-<line x1="716" y1="670" x2="900" y2="670" stroke="#1273c4" stroke-width="2"/>
-<line x1="900" y1="399" x2="900" y2="714" stroke="#1273c4" stroke-width="2"/>
-<line x1="900" y1="399" x2="1024" y2="399" stroke="#1273c4" stroke-width="2"/>
-<line x1="900" y1="556.5" x2="1024" y2="556.5" stroke="#1273c4" stroke-width="2"/>
-<line x1="900" y1="714" x2="1024" y2="714" stroke="#1273c4" stroke-width="2"/>
+<circle cx="24" cy="436" r="22" fill="#1273c4"/>
+<text x="24" y="444" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+<text x="64" y="444" font-size="42" font-weight="700" fill="#101113">꺼져 있어도</text>
 
-<!-- right column: rows -->
-<g transform="translate(1040,383) scale(1.667)">
+<text x="0" y="506" font-size="26"><tspan fill="#a3a8ad">●</tspan><tspan fill="#43474b"> 오프라인</tspan></text>
+<text x="0" y="546" font-size="26" fill="#7c8288">브라우저 닫음 · 전원 끔</text>
+
+<!-- centre column: 클라우드 세션 (x 468..1324) -->
+<text x="468" y="360" font-size="25" fill="#7c8288">클라우드 세션</text>
+<line x1="468" y1="386" x2="1324" y2="386" stroke="#1273c4" stroke-width="4"/>
+
+<circle cx="492" cy="436" r="22" fill="#1273c4"/>
+<text x="492" y="444" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+<text x="532" y="444" font-size="42" font-weight="700" fill="#1273c4">빌려 쓰는 컴퓨터</text>
+
+<rect x="468" y="490" width="856" height="240" rx="8" fill="none" stroke="#e3e5e8" stroke-width="1.5"/>
+<text x="496" y="538" font-size="26" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">$ git clone github.com/student/cafe-landing</text>
+<text x="496" y="582" font-size="26"><tspan fill="#1273c4">●</tspan><tspan fill="#43474b"> index.html 수정 중</tspan></text>
+<text x="496" y="626" font-size="26"><tspan fill="#1273c4">●</tspan><tspan fill="#43474b"> 커밋 · 푸시</tspan></text>
+<text x="496" y="670" font-size="26"><tspan fill="#1273c4">●</tspan><tspan fill="#43474b"> PR #2 생성</tspan></text>
+<text x="1296" y="670" font-size="24" fill="#7c8288" text-anchor="end">진행 중</text>
+
+<!-- right column: 어디서든 (x 1372..1792) -->
+<text x="1372" y="360" font-size="25" fill="#7c8288">어디서든</text>
+<line x1="1372" y1="386" x2="1792" y2="386" stroke="#101113" stroke-width="2"/>
+
+<text x="1372" y="444" font-size="28" fill="#43474b">폰에서 확인</text>
+<line x1="1372" y1="482" x2="1792" y2="482" stroke="#e3e5e8" stroke-width="1"/>
+
+<text x="1372" y="519" font-size="28" fill="#43474b">다른 PC 에서 이어서</text>
+<line x1="1372" y1="557" x2="1792" y2="557" stroke="#e3e5e8" stroke-width="1"/>
+
+<g transform="translate(1372,572) scale(1.1667)">
 <path fill="#101113" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
 </g>
-<text x="1096" y="415" font-size="44" font-weight="700" fill="#101113">GitHub 레포</text>
-<text x="1040" y="455" font-size="28" fill="#7c8288">코드를 가져오고 올림</text>
-
-<line x1="1040" y1="514" x2="1792" y2="514" stroke="#d5d8dc" stroke-width="1"/>
-
-<text x="1040" y="572.5" font-size="44" font-weight="700" fill="#101113">내 컴퓨터 꺼도</text>
-<text x="1040" y="612.5" font-size="28" fill="#7c8288">계속 동작</text>
-
-<line x1="1040" y1="671" x2="1792" y2="671" stroke="#d5d8dc" stroke-width="1"/>
-
-<text x="1040" y="730" font-size="44" font-weight="700" fill="#101113">폰에서도</text>
-<text x="1040" y="770" font-size="28" fill="#7c8288">이어서 확인</text>
+<text x="1412" y="594" font-size="28" fill="#43474b">GitHub 레포에 반영</text>
 </svg>
