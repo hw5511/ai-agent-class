@@ -104,38 +104,9 @@
     },
     {
       "id": "s2-claudemd-04",
-      "template": "cards",
+      "template": "illustration",
       "title": "이름·역할·말투·규칙 네 가지",
-      "cards": [
-        {
-          "label": "이름",
-          "logo": "icon:Bot",
-          "tags": [
-            "'ㅇㅇ' 처럼 부를 이름 하나"
-          ]
-        },
-        {
-          "label": "역할",
-          "logo": "icon:Book",
-          "tags": [
-            "'ai 에이전트 수업 도우미'"
-          ]
-        },
-        {
-          "label": "말투",
-          "logo": "icon:Chat",
-          "tags": [
-            "문장 끝 '~요' → '~용용'"
-          ]
-        },
-        {
-          "label": "하지 말 것",
-          "logo": "icon:Shield",
-          "tags": [
-            "모르면 추측하지 말고 되묻기"
-          ]
-        }
-      ],
+      "illustration": "/illustrations/s2-claudemd-identity.svg",
       "notes": [
         {
           "n": "!",

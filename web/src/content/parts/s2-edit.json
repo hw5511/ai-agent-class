@@ -5,28 +5,9 @@
   "slides": [
     {
       "id": "s2-edit-01",
-      "template": "flow",
+      "template": "illustration",
       "title": "Write와 Edit 차이",
-      "steps": [
-        {
-          "label": "파일 읽기",
-          "sub": "지금 내용 확인",
-          "logo": "icon:Read",
-          "badge": 1
-        },
-        {
-          "label": "고칠 부분 찾기",
-          "sub": "바뀔 곳만 짚기",
-          "logo": "icon:Search",
-          "badge": 2
-        },
-        {
-          "label": "그 부분만 교체",
-          "sub": "나머지는 그대로",
-          "logo": "icon:Edit",
-          "badge": 3
-        }
-      ],
+      "illustration": "/illustrations/s2-write-edit.svg",
       "notes": [
         {
           "n": 1,
