@@ -19,14 +19,14 @@ function NavItem({ label, active }: { label: string; active?: boolean }) {
 }
 
 // Settings mocks were authored at the desktop app's real pixel sizes, so on the 1920x1080 slide the panel
-// reads tiny with an empty right half. CSS zoom scales the nav + content together (keeping the window
+// reads tiny with an empty right half. A top-left scale transform scales the nav + content together (keeping the window
 // chrome, drawn by the caller, at its own size) and the 100/zoom% box keeps it reflowing to exactly fill
 // the frame with no clipping.
 const ZOOM = 1.35
 
 export function SettingsView({ s }: { s: ClaudeSettings }) {
   return (
-    <div className="h-full min-h-0 w-full overflow-hidden" style={{ zoom: ZOOM, width: `${100 / ZOOM}%`, height: `${100 / ZOOM}%` }}>
+    <div className="h-full min-h-0 w-full overflow-hidden" style={{ transform: `scale(${ZOOM})`, transformOrigin: "top left", width: `${100 / ZOOM}%`, height: `${100 / ZOOM}%` }}>
     <div className="flex h-full min-h-0 w-full bg-white font-body">
       <div className="flex w-[290px] shrink-0 flex-col gap-1 border-r border-neutral-200 bg-[#faf9f5] p-3">
         <div className="mb-2 flex h-9 items-center gap-2 rounded-lg border border-neutral-200 bg-white px-3 text-neutral-400">

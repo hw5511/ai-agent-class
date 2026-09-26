@@ -94,8 +94,8 @@ export function ChromeFrame({ s, children }: { s: WebScreen; children: React.Rea
       <div className="relative min-h-0 flex-1 overflow-hidden">
         {s.zoom && s.zoom !== 1 ? (
           <div
-            className="h-full w-full"
-            style={{ zoom: s.zoom, width: `${100 / s.zoom}%`, height: `${100 / s.zoom}%` }}
+            className="absolute left-0 top-0"
+            style={{ transform: `scale(${s.zoom})`, transformOrigin: "top left", width: `${100 / s.zoom}%`, height: `${100 / s.zoom}%` }}
           >
             {children}
           </div>
