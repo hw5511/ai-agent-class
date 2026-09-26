@@ -33,9 +33,12 @@ export function GithubRepo({ p }: { p: GithubRepoPage }) {
       {/* header */}
       <div className="flex shrink-0 items-center gap-2 border-b border-neutral-200 px-8 pt-5 pb-3">
         <BookOpenIcon className="size-5 text-neutral-500" />
-        <span className="font-display text-[22px] text-[#0969da]">{p.owner}</span>
-        <span className="text-[22px] text-neutral-400">/</span>
-        <span className="font-display text-[22px] font-bold text-[#0969da]">{p.name}</span>
+        <span className="relative flex items-center gap-2">
+          <span className="font-display text-[22px] text-[#0969da]">{p.owner}</span>
+          <span className="text-[22px] text-neutral-400">/</span>
+          <span className="font-display text-[22px] font-bold text-[#0969da]">{p.name}</span>
+          {p.nameBadge ? <span className="absolute -right-6 -top-3"><NumberBadge n={p.nameBadge} size="sm" /></span> : null}
+        </span>
         <span className="ml-1 rounded-full border border-neutral-300 px-2.5 py-0.5 text-[13px] text-neutral-500">Public</span>
         <div className="ml-auto flex items-center gap-2 text-[14px]">
           <span className="flex h-8 items-center gap-1.5 rounded-md border border-neutral-300 px-3">👁 Notifications</span>
@@ -70,10 +73,11 @@ export function GithubRepo({ p }: { p: GithubRepoPage }) {
             </span>
           </div>
 
-          <div className="flex items-center gap-2 rounded-t-md border border-b-0 border-neutral-200 bg-neutral-50 px-4 py-2 text-[14px]">
+          <div className="relative flex items-center gap-2 rounded-t-md border border-b-0 border-neutral-200 bg-neutral-50 px-4 py-2 text-[14px]">
             <span className="size-6 rounded-full bg-neutral-300" /> <b>{p.lastCommit.author}</b>
             <span className="truncate text-neutral-600">{p.lastCommit.message}</span>
             <span className="ml-auto shrink-0 text-neutral-500">{p.lastCommit.sha} · {p.lastCommit.when}</span>
+            {p.lastCommit.badge ? <span className="absolute -right-3 -top-3"><NumberBadge n={p.lastCommit.badge} size="sm" /></span> : null}
           </div>
           <div className="flex flex-col overflow-hidden rounded-b-md border border-neutral-200 text-[14px]">
             {p.files.map((f, i) => (
@@ -87,13 +91,29 @@ export function GithubRepo({ p }: { p: GithubRepoPage }) {
             ))}
           </div>
 
-          <div className="relative flex flex-1 flex-col gap-2 overflow-hidden rounded-md border border-neutral-200 px-6 py-5">
-            <div className="font-display text-[22px] font-bold">{p.readme.heading}</div>
-            {p.readme.lines.map((l, i) => (
-              <div key={i} className="text-[15px] leading-snug text-neutral-700">{l}</div>
-            ))}
-            {p.readme.badge ? <span className="absolute -right-4 -top-4"><NumberBadge n={p.readme.badge} size="sm" /></span> : null}
-          </div>
+          {p.readme ? (
+            <div className="relative flex flex-1 flex-col overflow-hidden rounded-md border border-neutral-200">
+              <div className="flex items-center gap-2 border-b border-neutral-200 bg-neutral-50 px-4 py-2.5 text-[14px] text-neutral-700">
+                <BookOpenIcon className="size-4" /> {p.readme.file ?? "README.md"}
+              </div>
+              <div className="flex flex-col gap-2 px-6 py-5">
+                <div className="font-display text-[22px] font-bold">{p.readme.heading}</div>
+                {p.readme.lines.map((l, i) => (
+                  <div key={i} className="text-[15px] leading-snug text-neutral-700">{l}</div>
+                ))}
+              </div>
+              {p.readme.badge ? <span className="absolute -right-4 -top-4"><NumberBadge n={p.readme.badge} size="sm" /></span> : null}
+            </div>
+          ) : (
+            <div className="relative flex flex-1 flex-col items-center justify-center gap-3 rounded-md border border-neutral-200 px-6 py-8 text-center">
+              <div className="font-display text-[17px] font-semibold text-[#1f2328]">Add a README</div>
+              <div className="max-w-[420px] text-[14px] leading-snug text-neutral-500">
+                Help people interested in this repository understand your project by adding a README.
+              </div>
+              <span className="rounded-md bg-[#1f883d] px-3 py-1.5 font-display text-[14px] font-semibold text-white">Add a README</span>
+              {p.readmeBadge ? <span className="absolute -right-4 -top-4"><NumberBadge n={p.readmeBadge} size="sm" /></span> : null}
+            </div>
+          )}
         </div>
 
         <div className="w-[300px] shrink-0 overflow-hidden">
@@ -102,7 +122,9 @@ export function GithubRepo({ p }: { p: GithubRepoPage }) {
               About
               {p.about.badge ? <span className="absolute -right-2 -top-2"><NumberBadge n={p.about.badge} size="sm" /></span> : null}
             </div>
-            <div className="text-[15px] leading-snug text-neutral-700">{p.about.desc}</div>
+            <div className="text-[15px] leading-snug text-neutral-500">
+              {p.about.desc ?? "No description, website, or topics provided."}
+            </div>
             <div className="flex flex-wrap gap-2">
               {p.about.topics.map((t) => (
                 <span key={t} className="rounded-full bg-[#ddf4ff] px-3 py-1 text-[13px] text-[#0969da]">{t}</span>
@@ -110,7 +132,9 @@ export function GithubRepo({ p }: { p: GithubRepoPage }) {
             </div>
             <div className="flex flex-col gap-1.5 text-[14px] text-neutral-600">
               <span className="flex items-center gap-2"><BookOpenIcon className="size-4" /> Readme</span>
-              <span className="flex items-center gap-2"><ScaleIcon className="size-4" /> {p.about.license} license</span>
+              {p.about.license ? (
+                <span className="flex items-center gap-2"><ScaleIcon className="size-4" /> {p.about.license} license</span>
+              ) : null}
               <span className="flex items-center gap-2"><StarIcon className="size-4" /> {p.about.stars} stars</span>
               <span className="flex items-center gap-2"><EyeIcon className="size-4" /> {p.about.watching} watching</span>
               <span className="flex items-center gap-2"><GitBranchIcon className="size-4" /> {p.about.forks} forks</span>

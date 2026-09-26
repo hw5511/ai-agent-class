@@ -203,6 +203,7 @@ export interface WebScreen {
   tabs?: { title: string; icon?: WebTabIcon; active?: boolean }[] // default: one active tab titled after the page
   url: string
   urlBadge?: number
+  urlMarks?: { text: string; badge: number }[] // underline this substring of `url` with a numbered badge above it
   page: WebPage
   pins?: Pin[]
 }
@@ -346,7 +347,7 @@ export interface VSCodeMenuItem {
 export interface VSCodeScreen {
   kind: "vscode"
   folder: string // explorer root, e.g. "에이전트1"
-  files: { name: string; depth?: number; folder?: boolean; active?: boolean; editing?: boolean; badge?: number }[]
+  files: { name: string; depth?: number; folder?: boolean; active?: boolean; editing?: boolean; selected?: boolean; badge?: number }[]
   editor?: { file: string; lines: string[]; badge?: number }
   terminal: Terminal
   terminalAt?: "right" | "bottom" // default right
@@ -369,6 +370,9 @@ export interface VSCodeScreen {
   toast?: { text: string; buttons: { label: string; primary?: boolean; badge?: number }[] } // bottom-right notification
   explorerAction?: { icon: "newFile" | "newFolder"; badge?: number } // the icons on the explorer header
   keycap?: { keys: string[]; times?: number; badge?: number } // a shortcut drawn over the window, e.g. ["Ctrl", "J"]
+  // VS Code's delete confirmation on Windows: a centred custom dialog over a dim backdrop (not the light
+  // OS folder-picker `dialog` above).
+  confirm?: { title: string; detail?: string; checkbox?: string; buttons: { label: string; primary?: boolean; badge?: number }[] }
 }
 
 export interface TerminalScreen {

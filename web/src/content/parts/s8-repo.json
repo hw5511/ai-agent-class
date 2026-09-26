@@ -45,80 +45,180 @@
     {
       "id": "s8-repo-02",
       "template": "screen",
-      "title": "GitHub 대시보드",
+      "title": "레포 페이지",
       "screen": {
         "kind": "web",
-        "url": "github.com",
+        "url": "github.com/student/cafe-landing",
         "tabs": [
-          { "title": "GitHub", "icon": "github", "active": true },
-          { "title": "[GitHub] Please verify your dev...", "icon": "gmail" }
+          { "title": "student/cafe-landing", "icon": "github", "active": true }
         ],
         "page": {
-          "type": "github-dashboard",
-          "repos": [{ "name": "student/cafe-landing", "badge": 1 }],
-          "newBadge": 2,
-          "askBoxBadge": 3,
-          "changelog": [
-            { "time": "5 hours ago", "title": "Require proof of presence for high-impact actions" },
-            { "time": "Yesterday", "title": "More ways to request and configure Copilot code reviews" },
-            { "time": "Yesterday", "title": "Local sandboxing in the GitHub Copilot app" }
+          "type": "github-repo",
+          "loggedIn": true,
+          "owner": "student",
+          "name": "cafe-landing",
+          "nameBadge": 1,
+          "forks": "0",
+          "stars": "0",
+          "tabs": [
+            { "label": "Code", "active": true },
+            { "label": "Issues" },
+            { "label": "Pull requests" },
+            { "label": "Actions" },
+            { "label": "Projects" },
+            { "label": "Security" },
+            { "label": "Insights" },
+            { "label": "Settings" }
           ],
-          "trending": [
-            { "owner": "NandhaKishorM", "name": "laya", "desc": "Non-autoregressive System 1 decision engine, 100+ languages.", "lang": "Python", "langColor": "#3572A5", "stars": "23.1k" }
-          ]
+          "branch": "main",
+          "branchesCount": 1,
+          "tagsCount": 0,
+          "lastCommit": { "author": "student", "message": "카페 랜딩 페이지 첫 버전", "sha": "3f2a9c1", "when": "now", "badge": 3 },
+          "files": [
+            { "name": "index.html", "message": "카페 랜딩 페이지 첫 버전", "when": "now", "badge": 2 }
+          ],
+          "about": {
+            "topics": [],
+            "stars": "0",
+            "watching": "1",
+            "forks": "0"
+          }
         }
       },
       "notes": [
-        { "n": 1, "head": "방금 올린 레포", "body": "조금 전 CLI 로 올린 cafe-landing 레포가 Top repositories 목록에 뜬 것을 확인합니다." },
-        { "n": 2, "head": "New 로 저장소 새로 만들기", "body": "다음에 새 저장소를 시작할 때는 이 초록 버튼을 누르면 됩니다." },
-        { "n": 3, "head": "Copilot 에게 바로 질문", "body": "홈 화면의 이 입력창에서 저장소나 코드에 대해 바로 물어볼 수도 있습니다." }
+        { "n": 1, "head": "student / cafe-landing", "body": "주소 그대로 내 계정 아래에 cafe-landing 레포가 새로 생긴 것을 확인합니다." },
+        { "n": 2, "head": "올라간 파일 index.html", "body": "Claude 가 만든 카페 랜딩 페이지 파일 index.html 이 그대로 올라와 있습니다." },
+        { "n": 3, "head": "커밋 메모", "body": "커밋할 때 남긴 메모 카페 랜딩 페이지 첫 버전 이 파일 옆과 맨 위에 함께 보입니다." }
       ]
     },
     {
       "id": "s8-repo-03",
-      "template": "screen",
+      "template": "compare",
       "title": "README 작성 · 업로드",
-      "replaceWithCapture": "README.md 작성 및 git push 실제 실행 결과",
-      "screen": {
-        "kind": "vscode",
-        "folder": "agent1",
-        "files": [
-          { "name": "cafe-landing", "folder": true }
-        ],
-        "terminal": {
-          "vendor": "claude",
-          "cwd": "C:\\agent1",
-          "fit": true,
-          "turns": [
-            { "role": "user", "text": "README.md 파일을 만들어서 이 폴더가 뭔지 설명하고 레포에 올려줘", "badge": 1 },
-            { "role": "tool", "text": "Write(cafe-landing/README.md)" },
-            { "role": "tool", "text": "Bash(git add README.md)" },
-            { "role": "tool", "text": "Bash(git commit -m \"README 추가\")", "badge": 2 },
-            { "role": "tool", "text": "Bash(git push)" },
-            { "role": "assistant", "text": "README.md 를 만들어서 레포에 올렸어요.", "badge": 3 }
-          ]
+      "ratio": [2, 3],
+      "left": {
+        "label": "README 작성 요청",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [
+            { "name": "cafe-landing", "folder": true }
+          ],
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "fit": true,
+            "turns": [
+              { "role": "user", "text": "README.md 파일을 만들어서 이 폴더가 뭔지 설명하고 레포에 올려줘", "badge": 1 },
+              { "role": "tool", "text": "Write(cafe-landing/README.md)" },
+              { "role": "tool", "text": "Bash(git add README.md)" },
+              { "role": "tool", "text": "Bash(git commit -m \"README 추가\")", "badge": 2 },
+              { "role": "tool", "text": "Bash(git push)" },
+              { "role": "assistant", "text": "README.md 를 만들어서 레포에 올렸어요." }
+            ]
+          }
+        }
+      },
+      "right": {
+        "label": "레포 페이지",
+        "screen": {
+          "kind": "web",
+          "url": "github.com/student/cafe-landing",
+          "tabs": [
+            { "title": "student/cafe-landing", "icon": "github", "active": true }
+          ],
+          "page": {
+            "type": "github-repo",
+            "loggedIn": true,
+            "owner": "student",
+            "name": "cafe-landing",
+            "forks": "0",
+            "stars": "0",
+            "tabs": [
+              { "label": "Code", "active": true },
+              { "label": "Issues" },
+              { "label": "Pull requests" },
+              { "label": "Actions" },
+              { "label": "Projects" },
+              { "label": "Security" },
+              { "label": "Insights" },
+              { "label": "Settings" }
+            ],
+            "branch": "main",
+            "branchesCount": 1,
+            "tagsCount": 0,
+            "lastCommit": { "author": "student", "message": "README 추가", "sha": "8b41d07", "when": "now" },
+            "files": [
+              { "name": "README.md", "message": "README 추가", "when": "now", "badge": 3 },
+              { "name": "index.html", "message": "카페 랜딩 페이지 첫 버전", "when": "5 minutes ago" }
+            ],
+            "readme": {
+              "file": "README.md",
+              "heading": "cafe-landing",
+              "lines": [
+                "간단한 카페 랜딩 페이지입니다.",
+                "index.html 하나로 카페 소개 · 메뉴 · 오시는 길을 보여줍니다.",
+                "브라우저에서 index.html 을 열면 바로 볼 수 있습니다."
+              ],
+              "badge": 4
+            },
+            "about": {
+              "topics": [],
+              "stars": "0",
+              "watching": "1",
+              "forks": "0"
+            }
+          }
         }
       },
       "notes": [
         { "n": 1, "head": "README 작성 요청", "body": "이 폴더가 뭔지 설명하는 README.md 를 만들어서 레포에 올려달라고 입력해 보세요." },
         { "n": 2, "head": "커밋 후 푸시", "body": "새로 만든 README.md 파일도 커밋하고 GitHub 로 푸시합니다." },
-        { "n": 3, "head": "레포 페이지에서 확인", "body": "레포 페이지를 열면 방금 올린 README 설명이 그대로 보입니다." }
+        { "n": 3, "head": "README.md 추가", "body": "파일 목록에 README.md 가 새로 생기고 커밋 메모 README 추가 가 함께 보입니다." },
+        { "n": 4, "head": "레포 설명", "body": "파일 목록 아래에 README 에 적은 설명이 이 레포 소개로 그대로 표시됩니다." }
       ]
     },
     {
       "id": "s8-repo-04",
-      "template": "flow",
-      "title": "지워도 되살리기",
-      "steps": [
-        { "label": "폴더 삭제", "sub": "cafe-landing", "logo": "icon:Folder", "badge": 1 },
-        { "label": "/clear", "sub": "대화 초기화", "logo": "icon:Terminal", "badge": 2 },
-        { "label": "클론", "sub": "git clone", "logo": "icon:Download", "badge": 3 },
-        { "label": "되살아난 폴더", "logo": "icon:Folder" }
-      ],
+      "template": "compare",
+      "title": "Delete 키로 폴더 삭제",
+      "ratio": [1, 1],
+      "left": {
+        "label": "Delete 키로 삭제",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [
+            { "name": "cafe-landing", "folder": true, "selected": true, "badge": 1 }
+          ],
+          "noTerminal": true,
+          "terminal": { "vendor": "claude", "cwd": "C:\\agent1", "turns": [] },
+          "keycap": { "keys": ["Delete"], "badge": 2 },
+          "confirm": {
+            "title": "Are you sure you want to delete 'cafe-landing' and its contents?",
+            "detail": "You can restore this folder from the Recycle Bin.",
+            "checkbox": "Do not ask me again",
+            "buttons": [
+              { "label": "Move to Recycle Bin", "primary": true, "badge": 3 },
+              { "label": "Cancel" }
+            ]
+          }
+        }
+      },
+      "right": {
+        "label": "삭제 후",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [],
+          "noTerminal": true,
+          "terminal": { "vendor": "claude", "cwd": "C:\\agent1", "turns": [] }
+        }
+      },
       "notes": [
-        { "n": 1, "head": "폴더 삭제", "body": "실습 삼아 컴퓨터에서 cafe-landing 폴더를 통째로 지워봅니다." },
-        { "n": 2, "head": "대화 새로 시작", "body": "지운 뒤 대화를 초기화해도 GitHub 에 올려둔 내용은 그대로 남아 있습니다." },
-        { "n": 3, "head": "클론으로 복구", "body": "레포 주소로 클론 한 번이면 지워진 폴더가 그대로 되살아납니다." }
+        { "n": 1, "head": "cafe-landing 선택", "body": "탐색기에서 cafe-landing 폴더를 한 번 클릭해 선택합니다." },
+        { "n": 2, "head": "Delete 키", "body": "키보드의 Delete 키를 누르면 정말 지울지 묻는 창이 뜹니다." },
+        { "n": 3, "head": "Move to Recycle Bin", "body": "이 버튼을 누르면 폴더가 휴지통으로 가고 탐색기에서 사라집니다." }
       ]
     },
     {
@@ -129,15 +229,18 @@
       "screen": {
         "kind": "vscode",
         "folder": "agent1",
-        "files": [],
+        "files": [
+          { "name": "cafe-landing", "folder": true, "badge": 2 }
+        ],
         "terminal": {
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "fit": true,
           "turns": [
+            { "role": "user", "text": "/clear" },
             { "role": "user", "text": "https://github.com/student/cafe-landing 이 레포를 현재 폴더에 클론 해줘", "badge": 1 },
             { "role": "tool", "text": "Bash(git clone https://github.com/student/cafe-landing)" },
-            { "role": "assistant", "text": "레포를 클론해서 cafe-landing 폴더를 되살렸어요.", "badge": 2 }
+            { "role": "assistant", "text": "레포를 클론해서 cafe-landing 폴더를 되살렸어요." }
           ]
         }
       },

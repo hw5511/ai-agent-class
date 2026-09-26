@@ -20,6 +20,7 @@ import {
   ImageIcon,
   InfoIcon,
   SettingsIcon,
+  TriangleAlertIcon,
 } from "lucide-react"
 import type { VSCodeMenuItem, VSCodeScreen } from "@/content/schema"
 import { NumberBadge } from "@/components/slide/NumberBadge"
@@ -184,7 +185,12 @@ export function VSCodeMock({ s }: { s: VSCodeScreen }) {
             {s.files.map((f) => (
               <span
                 key={f.name}
-                className={cn("flex items-center gap-2 rounded py-0.5 pr-1", f.active && "bg-[#04395e]", f.editing && "outline-2 outline-slide-accent")}
+                className={cn(
+                  "flex items-center gap-2 rounded py-0.5 pr-1",
+                  f.active && "bg-[#04395e]",
+                  f.editing && "outline-2 outline-slide-accent",
+                  f.selected && "bg-[#04395e] text-white outline outline-1 -outline-offset-1 outline-[#007fd4]",
+                )}
                 style={{ paddingLeft: 28 + (f.depth ?? 0) * 18 }}
               >
                 {f.folder ? <FolderIcon className="size-5 shrink-0" /> : <FileTypeIcon name={f.name} />}
@@ -298,6 +304,34 @@ export function VSCodeMock({ s }: { s: VSCodeScreen }) {
                 {b.badge ? <NumberBadge n={b.badge} size="sm" /> : null}
               </span>
             ))}
+          </div>
+        </div>
+      )}
+
+      {s.confirm && (
+        <div className="absolute inset-0 z-40 flex items-center justify-center bg-black/50">
+          <div className="flex w-[62%] flex-col gap-4 rounded-md border border-[#454545] bg-[#252526] p-6 font-display text-[19px] text-[#cccccc] shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+            <div className="flex gap-4">
+              <TriangleAlertIcon className="mt-0.5 size-8 shrink-0 text-[#e5b95c]" />
+              <div className="flex min-w-0 flex-1 flex-col gap-2">
+                <span className="break-keep font-bold text-[21px] text-white">{s.confirm.title}</span>
+                {s.confirm.detail && <span className="break-keep text-[17px] text-[#9d9d9d]">{s.confirm.detail}</span>}
+                {s.confirm.checkbox && (
+                  <span className="mt-1 flex items-center gap-2 text-[16px] text-[#cccccc]">
+                    <span className="size-4 shrink-0 rounded-sm border border-[#6b6b6b]" />
+                    {s.confirm.checkbox}
+                  </span>
+                )}
+              </div>
+            </div>
+            <div className="flex items-center justify-end gap-3">
+              {s.confirm.buttons.map((b, i) => (
+                <span key={i} className="flex items-center gap-2">
+                  <span className={cn("rounded-sm px-5 py-1.5 text-[17px]", b.primary ? "bg-[#0e639c] font-bold text-white" : "bg-[#3a3d41] text-[#e8e8e8]")}>{b.label}</span>
+                  {b.badge ? <NumberBadge n={b.badge} size="sm" /> : null}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       )}

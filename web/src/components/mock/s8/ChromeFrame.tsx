@@ -14,6 +14,37 @@ function TabIcon({ icon }: { icon?: WebTabIcon }) {
   return <GlobeIcon className="size-[18px] text-neutral-500" />
 }
 
+// Underlines each `marks[].text` substring of `url` with a 3px accent rule and its badge just above,
+// by splitting the url into plain/marked spans (no pixel guessing).
+function UrlWithMarks({ url, marks }: { url: string; marks: { text: string; badge: number }[] }) {
+  const found = marks
+    .map((m) => ({ ...m, idx: url.indexOf(m.text) }))
+    .filter((m) => m.idx >= 0)
+    .sort((a, b) => a.idx - b.idx)
+  const segs: { text: string; badge?: number }[] = []
+  let cursor = 0
+  for (const m of found) {
+    if (m.idx > cursor) segs.push({ text: url.slice(cursor, m.idx) })
+    segs.push({ text: url.slice(m.idx, m.idx + m.text.length), badge: m.badge })
+    cursor = m.idx + m.text.length
+  }
+  if (cursor < url.length) segs.push({ text: url.slice(cursor) })
+  return (
+    <span className="inline-flex items-center">
+      {segs.map((seg, i) =>
+        seg.badge ? (
+          <span key={i} className="relative inline-block border-b-[3px] border-[#1273c4]">
+            <span className="absolute -top-8 left-0 z-10"><NumberBadge n={seg.badge} size="sm" /></span>
+            {seg.text}
+          </span>
+        ) : (
+          <span key={i}>{seg.text}</span>
+        ),
+      )}
+    </span>
+  )
+}
+
 export function ChromeFrame({ s, children }: { s: WebScreen; children: React.ReactNode }) {
   const tabs = s.tabs ?? [{ title: s.url.split("/")[0], active: true }]
   return (
@@ -48,7 +79,7 @@ export function ChromeFrame({ s, children }: { s: WebScreen; children: React.Rea
         <RotateCwIcon className="size-5" />
         <div className="relative flex h-10 min-w-0 flex-1 items-center gap-3 rounded-full bg-[#e9eef6] px-4 font-body text-[19px] text-[#1f1f1f]">
           <SlidersHorizontalIcon className="size-4 shrink-0 text-neutral-600" />
-          <span className="min-w-0 flex-1 truncate">{s.url}</span>
+          <span className="min-w-0 flex-1 truncate">{s.urlMarks?.length ? <UrlWithMarks url={s.url} marks={s.urlMarks} /> : s.url}</span>
           <StarIcon className="size-5 shrink-0 text-neutral-600" />
           {s.urlBadge ? <span className="absolute -top-3 left-[40%] z-10"><NumberBadge n={s.urlBadge} size="sm" /></span> : null}
         </div>

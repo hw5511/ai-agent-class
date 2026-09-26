@@ -57,19 +57,22 @@ export interface GithubRepoPage {
   loggedIn?: boolean // true: user avatar in the black nav; default/false: Sign in / Sign up
   owner: string
   name: string
-  forks: string // "13.8k"
-  stars: string // "187k"
+  nameBadge?: number // badges the owner/name heading
+  forks: string // "13.8k", or "0" for a brand-new repo
+  stars: string // "187k", or "0" for a brand-new repo
   tabs: { label: string; count?: number; active?: boolean; badge?: number }[]
   branch: string // "main"
   branchesCount: number
   tagsCount: number
-  lastCommit: { author: string; message: string; sha: string; when: string }
+  lastCommit: { author: string; message: string; sha: string; when: string; badge?: number }
   files: { name: string; folder?: boolean; message: string; when: string; badge?: number }[]
-  readme: { heading: string; lines: string[]; badge?: number }
+  // Omit for a brand-new repo with no README yet: renders GitHub's "Add a README" empty state instead.
+  readme?: { file?: string; heading: string; lines: string[]; badge?: number } // file default "README.md"
+  readmeBadge?: number // badges the "Add a README" empty-state box (only used when readme is absent)
   about: {
-    desc: string
-    topics: string[]
-    license: string
+    desc?: string // omit for a brand-new repo: renders "No description, website, or topics provided."
+    topics: string[] // may be empty
+    license?: string // omit to hide the license row (no license file yet)
     stars: string
     watching: string
     forks: string

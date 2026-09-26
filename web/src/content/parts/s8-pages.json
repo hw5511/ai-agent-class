@@ -54,9 +54,18 @@
     },
     {
       "id": "s8-pages-03",
-      "template": "illustration",
+      "template": "screen",
       "title": "주소 구조",
-      "illustration": "/illustrations/s8-pages-url.svg",
+      "screen": {
+        "kind": "web",
+        "url": "student.github.io/cafe-landing/",
+        "urlMarks": [
+          { "text": "student", "badge": 1 },
+          { "text": "cafe-landing", "badge": 2 }
+        ],
+        "tabs": [{ "title": "모카빈 카페 | Mocha Bean Cafe", "icon": "globe", "active": true }],
+        "page": { "type": "image", "src": "/shots/s8/cafe-landing.png" }
+      },
       "notes": [
         { "n": 1, "head": "계정명.github.io", "body": "앞부분은 내 GitHub 계정 이름을 그대로 씁니다." },
         { "n": 2, "head": "레포 이름", "body": "뒷부분은 배포한 레포 이름이 그대로 주소에 붙습니다." }
