@@ -292,7 +292,7 @@
     {
       "id": "s5-agent-view-06",
       "template": "cards",
-      "title": "정리 · 자주 안 쓰는 이유",
+      "title": "자주 안 쓰는 이유",
       "cards": [
         {
           "label": "bypass 미적용",
