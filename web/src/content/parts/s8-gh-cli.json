@@ -129,7 +129,8 @@
           "code": "A1B2-C3D4",
           "codeBadge": 1,
           "continueBadge": 2
-        }
+        },
+        "zoom": 1.6
       },
       "notes": [
         {

@@ -206,6 +206,10 @@ export interface WebScreen {
   urlMarks?: { text: string; badge: number }[] // underline this substring of `url` with a numbered badge above it
   page: WebPage
   pins?: Pin[]
+  // >1 enlarges the page content only (CSS zoom), not the tab strip / address bar; content reflows to
+  // the frame width at that zoom, no horizontal clipping. Real pages mocked at browser pixel sizes read
+  // as tiny with empty margins on the 1920x1080 slide — this closes that gap. Default 1.
+  zoom?: number
 }
 
 export type WebTabIcon = "claude" | "github" | "google" | "gmail" | "globe"

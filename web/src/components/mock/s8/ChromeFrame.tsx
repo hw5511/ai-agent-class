@@ -91,7 +91,18 @@ export function ChromeFrame({ s, children }: { s: WebScreen; children: React.Rea
         </div>
         <UserCircleIcon className="size-7 text-neutral-600" />
       </div>
-      <div className="relative min-h-0 flex-1 overflow-hidden">{children}</div>
+      <div className="relative min-h-0 flex-1 overflow-hidden">
+        {s.zoom && s.zoom !== 1 ? (
+          <div
+            className="h-full w-full"
+            style={{ zoom: s.zoom, width: `${100 / s.zoom}%`, height: `${100 / s.zoom}%` }}
+          >
+            {children}
+          </div>
+        ) : (
+          children
+        )}
+      </div>
     </div>
   )
 }

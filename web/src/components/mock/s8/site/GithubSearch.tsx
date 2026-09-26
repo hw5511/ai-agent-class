@@ -29,16 +29,17 @@ export function GithubSearch({ p }: { p: GithubSearchPage }) {
         </div>
 
         <div className="flex min-w-0 flex-1 flex-col gap-4 overflow-hidden">
-          <div className="relative">
-            <div className="flex h-11 w-full items-center rounded-md border-2 border-[#0969da] px-4 text-[16px]">{p.query}</div>
-            {p.searchBadge ? <span className="absolute -right-4 -top-4"><NumberBadge n={p.searchBadge} size="sm" /></span> : null}
+          <div className="flex h-11 w-full items-center gap-2 rounded-md border-2 border-[#0969da] px-4 text-[16px]">
+            {p.searchBadge ? <NumberBadge n={p.searchBadge} size="sm" /> : null}
+            {p.query}
           </div>
 
           <div className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto">
             {p.results.map((r, i) => (
-              <div key={i} className="relative flex flex-col gap-1.5 border-b border-neutral-100 pb-4 last:border-0">
-                <div className="font-display text-[18px] text-[#0969da]">
-                  {r.owner}/<b>{r.name}</b>
+              <div key={i} className="flex flex-col gap-1.5 border-b border-neutral-100 pb-4 last:border-0">
+                <div className="flex items-center gap-2 font-display text-[18px] text-[#0969da]">
+                  {r.badge ? <NumberBadge n={r.badge} size="sm" /> : null}
+                  <span>{r.owner}/<b>{r.name}</b></span>
                 </div>
                 <div className="text-[15px] text-neutral-700">{r.desc}</div>
                 <div className="flex items-center gap-4 text-[14px] text-neutral-500">
@@ -48,7 +49,6 @@ export function GithubSearch({ p }: { p: GithubSearchPage }) {
                   <span className="flex items-center gap-1"><StarIcon className="size-3.5" />{r.stars}</span>
                   <span>Updated {r.updated}</span>
                 </div>
-                {r.badge ? <span className="absolute -right-4 -top-2"><NumberBadge n={r.badge} size="sm" /></span> : null}
               </div>
             ))}
           </div>
