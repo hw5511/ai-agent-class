@@ -56,24 +56,6 @@
       ]
     },
     {
-      "id": "s3-settings-02",
-      "template": "illustration",
-      "title": "주요 설정 항목",
-      "illustration": "/illustrations/s3-settings-panel.svg",
-      "notes": [
-        {
-          "n": 1,
-          "head": "permissions",
-          "body": "permissions 는 allow, deny, ask 세 목록으로 어떤 동작을 허용할지 결정합니다."
-        },
-        {
-          "n": 2,
-          "head": "model",
-          "body": "model 항목에는 세션에서 기본으로 쓸 모델을 지정합니다."
-        }
-      ]
-    },
-    {
       "id": "s3-settings-03",
       "template": "screen",
       "title": "삭제 명령어 금지",

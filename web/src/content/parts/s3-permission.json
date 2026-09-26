@@ -5,9 +5,27 @@
   "slides": [
     {
       "id": "s3-permission-01",
-      "template": "illustration",
+      "template": "table",
       "title": "Shift+Tab 모드 순환",
-      "illustration": "/illustrations/s3-mode-dial.svg",
+      "columns": ["모드", "편집", "명령 실행", "특징"],
+      "rows": [
+        {
+          "cells": ["manual mode", "권한요청", "권한요청", "편집 전 확인"]
+        },
+        {
+          "cells": ["accept edits", "허용", "권한요청", "명령만 확인"]
+        },
+        {
+          "cells": ["plan mode", "차단", "조사만", "편집 차단"]
+        },
+        {
+          "cells": ["auto mode", "허용", "허용", "감시자 판정"]
+        },
+        {
+          "cells": ["bypass 모드", "허용", "허용", "순환 밖 · 실행 옵션"],
+          "highlight": true
+        }
+      ],
       "notes": [
         {
           "n": 1,
@@ -17,7 +35,7 @@
         {
           "n": "!",
           "head": "bypass 는 순환 밖",
-          "body": "이 순환은 4단계뿐이고, bypass 모드는 이 순환에 포함되지 않고 별도의 실행 옵션으로 켭니다."
+          "body": "Shift+Tab 순환은 4단계뿐이고, bypass 모드는 이 순환에 포함되지 않고 별도의 실행 옵션으로 켭니다."
         }
       ]
     },
