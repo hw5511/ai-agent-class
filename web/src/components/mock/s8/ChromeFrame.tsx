@@ -14,8 +14,11 @@ function TabIcon({ icon }: { icon?: WebTabIcon }) {
   return <GlobeIcon className="size-[18px] text-neutral-500" />
 }
 
-// Underlines each `marks[].text` substring of `url` with a 3px accent rule and its badge just above,
-// by splitting the url into plain/marked spans (no pixel guessing).
+// Underlines each `marks[].text` substring of `url` with a 3px accent rule and drops its badge just
+// below, by splitting the url into plain/marked spans (no pixel guessing — the badge's left offset
+// comes from normal inline text flow, not a computed pixel value). The badges render below the address
+// bar, overlapping the top edge of the page area beneath it, so nothing above (the toolbar / url pill)
+// may clip them — callers must keep those ancestors overflow-visible and stacked above the page.
 function UrlWithMarks({ url, marks }: { url: string; marks: { text: string; badge: number }[] }) {
   const found = marks
     .map((m) => ({ ...m, idx: url.indexOf(m.text) }))
@@ -30,12 +33,12 @@ function UrlWithMarks({ url, marks }: { url: string; marks: { text: string; badg
   }
   if (cursor < url.length) segs.push({ text: url.slice(cursor) })
   return (
-    <span className="inline-flex items-center">
+    <span className="inline-flex items-center whitespace-nowrap">
       {segs.map((seg, i) =>
         seg.badge ? (
           <span key={i} className="relative inline-block border-b-[3px] border-[#1273c4]">
-            <span className="absolute -top-8 left-0 z-10"><NumberBadge n={seg.badge} size="sm" /></span>
             {seg.text}
+            <span className="absolute left-0 top-full z-30 mt-1"><NumberBadge n={seg.badge} size="sm" /></span>
           </span>
         ) : (
           <span key={i}>{seg.text}</span>
@@ -72,14 +75,17 @@ export function ChromeFrame({ s, children }: { s: WebScreen; children: React.Rea
           <XIcon className="size-5" />
         </span>
       </div>
-      {/* toolbar */}
-      <div className="flex h-14 shrink-0 items-center gap-5 border-b border-neutral-200 bg-white px-4 text-neutral-700">
+      {/* toolbar — relative + z-20 so its content (including urlMarks badges, which hang below it) always
+          paints above the page area, and overflow-visible throughout so those badges are never clipped */}
+      <div className="relative z-20 flex h-14 shrink-0 items-center gap-5 overflow-visible border-b border-neutral-200 bg-white px-4 text-neutral-700">
         <ArrowLeftIcon className="size-6" />
         <ArrowRightIcon className="size-6 text-neutral-400" />
         <RotateCwIcon className="size-5" />
-        <div className="relative flex h-10 min-w-0 flex-1 items-center gap-3 rounded-full bg-[#e9eef6] px-4 font-body text-[19px] text-[#1f1f1f]">
+        <div className="relative z-20 flex h-10 min-w-0 flex-1 items-center gap-3 overflow-visible rounded-full bg-[#e9eef6] px-4 font-body text-[19px] text-[#1f1f1f]">
           <SlidersHorizontalIcon className="size-4 shrink-0 text-neutral-600" />
-          <span className="min-w-0 flex-1 truncate">{s.urlMarks?.length ? <UrlWithMarks url={s.url} marks={s.urlMarks} /> : s.url}</span>
+          <span className={cn("min-w-0 flex-1", s.urlMarks?.length ? "overflow-visible" : "truncate")}>
+            {s.urlMarks?.length ? <UrlWithMarks url={s.url} marks={s.urlMarks} /> : s.url}
+          </span>
           <StarIcon className="size-5 shrink-0 text-neutral-600" />
           {s.urlBadge ? <span className="absolute -top-3 left-[40%] z-10"><NumberBadge n={s.urlBadge} size="sm" /></span> : null}
         </div>

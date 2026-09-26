@@ -55,6 +55,7 @@
         "page": {
           "type": "github-repo",
           "loggedIn": true,
+          "zoom": 1.35,
           "owner": "student",
           "name": "cafe-landing",
           "nameBadge": 1,
@@ -130,6 +131,7 @@
           "page": {
             "type": "github-repo",
             "loggedIn": true,
+            "zoom": 1.15,
             "owner": "student",
             "name": "cafe-landing",
             "forks": "0",
