@@ -93,6 +93,9 @@ export interface TableSlide extends SlideBase {
   template: "table"
   columns: string[]
   rows: { cells: string[]; highlight?: boolean }[]
+  // Two independent tables shown side by side as one 4-column table (columns 0/2 = name, 1/3 = value).
+  // Only meaningful with exactly 4 columns; the highlight accent applies to column 0 only.
+  split?: boolean
 }
 
 /** Side-by-side visual cards: a product, tool or option each, with its logo and/or a picture of it. */

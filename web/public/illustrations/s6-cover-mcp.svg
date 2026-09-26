@@ -7,7 +7,6 @@
   <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
   <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
 </defs>
-<rect x="16" y="16" width="1068" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
 <g transform="translate(550 268) scale(1.28)" filter="url(#sh)"><circle cx="-130" cy="40" r="124" fill="#eaf3fb"/><circle cx="0" cy="-32" r="162" fill="#eaf3fb"/><circle cx="136" cy="44" r="116" fill="#eaf3fb"/><rect x="-270" y="32" width="532" height="172" rx="86" fill="#eaf3fb"/></g>
 <path d="M550 380Q325.0 362.5 100 465.0" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M550 380Q325.0 362.5 100 465.0" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M90.2 469.5L109.5 439.6L125.4 474.5Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
 <path d="M550 380Q415.0 295.5 280 331.0" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M550 380Q415.0 295.5 280 331.0" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M269.6 333.7L293.7 307.5L303.5 344.7Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>

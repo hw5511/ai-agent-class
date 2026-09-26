@@ -7,7 +7,6 @@
   <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
   <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
 </defs>
-<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
 <g filter="url(#sh)"><rect x="90" y="90" width="760" height="470" rx="16" fill="#fff" stroke="#c9ccd1" stroke-width="2"/></g>
 <path d="M91 142V106a15 15 0 0 1 15-15h728a15 15 0 0 1 15 15V142z" fill="#eef1f4"/>
 <circle cx="116" cy="116" r="7" fill="#ff5f57"/><circle cx="138" cy="116" r="7" fill="#febc2e"/><circle cx="160" cy="116" r="7" fill="#28c840"/>

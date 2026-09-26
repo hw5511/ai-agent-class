@@ -152,27 +152,36 @@ export default function App() {
                       <div className={cn("grid transition-[grid-template-rows] duration-200 ease-out", unfolded ? "grid-rows-[1fr]" : "grid-rows-[0fr]")}>
                         <div className="overflow-hidden">
                           <SidebarMenuSub className="mx-0 mt-1 mb-2 ml-[22px] gap-0.5 border-l-2 border-slide-accent/20 py-0.5 pr-0 pl-2">
-                            {s.parts.map((p, pi) => {
-                              const here = open && p.id === cur?.part.id
-                              return (
-                                <SidebarMenuSubItem key={p.id}>
-                                  <SidebarMenuSubButton
-                                    isActive={here}
-                                    tabIndex={unfolded ? 0 : -1}
-                                    onClick={() => go({ step: s.step, slide: partStart(s, p.id) })}
-                                    className={cn(
-                                      "relative h-auto items-start gap-2 py-1.5 text-[13px] leading-[18px]",
-                                      here ? "bg-slide-accent/10 font-semibold text-slide-accent data-active:bg-slide-accent/10 data-active:text-slide-accent" : "text-muted-foreground hover:text-foreground",
-                                    )}
-                                  >
-                                    {here && <span className="absolute top-1.5 bottom-1.5 -left-[12px] w-[2px] rounded bg-slide-accent" />}
-                                    <span className="w-4 shrink-0 font-num text-[11px] leading-[18px] tabular-nums opacity-70">{pi + 1}</span>
-                                    <span className="min-w-0 flex-1 break-keep">{p.title}</span>
-                                    <span className="shrink-0 font-num text-[10px] leading-[18px] tabular-nums opacity-50">{p.slides.length}</span>
-                                  </SidebarMenuSubButton>
-                                </SidebarMenuSubItem>
-                              )
-                            })}
+                            {(() => {
+                              // Only covered parts (cover !== false) get a number, 1..n over just those;
+                              // a session opener (cover: false, e.g. "시작") shows no number, just the dot slot.
+                              let coveredIdx = 0
+                              return s.parts.map((p) => {
+                                const here = open && p.id === cur?.part.id
+                                const numbered = p.cover !== false
+                                const num = numbered ? ++coveredIdx : null
+                                return (
+                                  <SidebarMenuSubItem key={p.id}>
+                                    <SidebarMenuSubButton
+                                      isActive={here}
+                                      tabIndex={unfolded ? 0 : -1}
+                                      onClick={() => go({ step: s.step, slide: partStart(s, p.id) })}
+                                      className={cn(
+                                        "relative h-auto items-start gap-2 py-1.5 text-[13px] leading-[18px]",
+                                        here ? "bg-slide-accent/10 font-semibold text-slide-accent data-active:bg-slide-accent/10 data-active:text-slide-accent" : "text-muted-foreground hover:text-foreground",
+                                      )}
+                                    >
+                                      {here && <span className="absolute top-1.5 bottom-1.5 -left-[12px] w-[2px] rounded bg-slide-accent" />}
+                                      <span className="flex w-4 shrink-0 items-center justify-center font-num text-[11px] leading-[18px] tabular-nums opacity-70">
+                                        {num ?? <span className="size-1 rounded-full bg-current opacity-50" />}
+                                      </span>
+                                      <span className="min-w-0 flex-1 break-keep">{p.title}</span>
+                                      <span className="shrink-0 font-num text-[10px] leading-[18px] tabular-nums opacity-50">{p.slides.length}</span>
+                                    </SidebarMenuSubButton>
+                                  </SidebarMenuSubItem>
+                                )
+                              })
+                            })()}
                           </SidebarMenuSub>
                         </div>
                       </div>

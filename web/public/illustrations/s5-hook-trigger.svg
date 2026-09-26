@@ -1,50 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 900" width="1920" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
-<defs><filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter><filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter><marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker><marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker><marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#43474b"/></marker><marker id="ao" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d97757"/></marker></defs>
-<rect x="50.0" y="250.0" width="440.0" height="200.0" rx="14" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
-<text x="78.0" y="300.0" font-size="30" fill="#8b9095" font-weight="800" text-anchor="start">내 프롬프트</text>
-<text x="78.0" y="382.0" font-size="42" text-anchor="start"><tspan fill="#101113" font-weight="800">너는 누구니? </tspan><tspan fill="#d97757" font-weight="900">뿅</tspan></text>
-<circle cx="321.0" cy="366.0" r="31" fill="none" stroke="#d97757" stroke-width="5" stroke-dasharray="9 7"/>
-<circle cx="490.0" cy="250.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/>
-<text x="490.0" y="260.6" font-size="29" fill="#fff" font-weight="800" text-anchor="middle">1</text>
-<text x="270.0" y="510.0" font-size="34" fill="#d97757" font-weight="900" text-anchor="middle">'뿅' 감지</text>
-<path d="M510 340H578" fill="none" stroke="#1273c4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ab)"/>
-<path d="M840 10V120" fill="none" stroke="#43474b" stroke-width="5"/>
-<circle cx="840.0" cy="128.0" r="10" fill="none" stroke="#43474b" stroke-width="5"/>
-<path d="M840 138V196a34 34 0 0 1 -68 0v-26" fill="none" stroke="#43474b" stroke-width="12" stroke-linecap="round"/>
-<path d="M772 160l-15 22h30z" fill="#43474b"/>
-<rect x="910.8" y="44.5" width="358.4" height="51.0" rx="25.5" fill="#e3eefa"/>
-<text x="1090.0" y="80.8" font-size="30" fill="#1273c4" font-weight="800" text-anchor="middle">UserPromptSubmit 훅</text>
-<circle cx="1280.0" cy="70.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/>
-<text x="1280.0" y="80.6" font-size="29" fill="#fff" font-weight="800" text-anchor="middle">2</text>
-<rect x="600.0" y="236.0" width="440.0" height="150.0" rx="14" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
-<circle cx="806.0" cy="236.0" r="13" fill="#fff" stroke="#43474b" stroke-width="4"/>
-<text x="628.0" y="330.0" font-size="38" text-anchor="start"><tspan fill="#101113" font-weight="800">너는 누구니? </tspan><tspan fill="#d97757" font-weight="900">뿅</tspan></text>
-<g transform="rotate(-3 820 510)"><rect x="632" y="390" width="380" height="220" rx="6" fill="#fff1a8" stroke="#e6cf5a" stroke-width="2" filter="url(#sh)"/><rect x="780" y="376" width="84" height="30" rx="4" fill="#fff" fill-opacity="0.7" stroke="#e5e5e5"/></g>
-<text x="822.0" y="458.0" font-size="28" fill="#8a6d00" font-weight="800" text-anchor="middle">몰래 끼워 넣는 문구</text>
-<text x="822.0" y="520.0" font-size="32" fill="#101113" font-weight="700" text-anchor="middle">답변 끝에</text>
-<text x="822.0" y="570.0" font-size="32" fill="#101113" font-weight="900" text-anchor="middle">'빵빵+날짜시간' 붙이기</text>
-<path d="M1060 300C1150 300 1170 210 1250 210" fill="none" stroke="#1273c4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ab)"/>
-<g filter="url(#sh)"><rect x="1361.5" y="89.5" width="357.0" height="221.0" rx="23.8" fill="#f4f5f7" stroke="#c9ccd1" stroke-width="3"/></g>
-<rect x="1412.5" y="77.6" width="255.0" height="22.1" rx="8.5" fill="#2b2e33"/>
-<rect x="1395.5" y="251.0" width="289.0" height="18.7" rx="6.8" fill="#2b2e33"/>
-<rect x="1390.4" y="123.5" width="127.5" height="76.5" rx="13.6" fill="#101113"/>
-<path d="M1425.59 134.62h5.16v9.44h-5.16zM1425.59 143.66h5.16v9.44h-5.16zM1430.35 134.62h5.16v9.44h-5.16zM1435.11 134.62h5.16v9.44h-5.16zM1430.35 143.66h5.16v9.44h-5.16zM1439.87 134.62h5.16v9.44h-5.16zM1444.63 134.62h5.16v9.44h-5.16zM1439.87 143.66h5.16v9.44h-5.16zM1444.63 143.66h5.16v9.44h-5.16zM1449.39 134.62h5.16v9.44h-5.16zM1454.15 134.62h5.16v9.44h-5.16zM1449.39 143.66h5.16v9.44h-5.16zM1454.15 143.66h5.16v9.44h-5.16zM1458.91 134.62h5.16v9.44h-5.16zM1463.67 134.62h5.16v9.44h-5.16zM1458.91 143.66h5.16v9.44h-5.16zM1463.67 143.66h5.16v9.44h-5.16zM1468.43 134.62h5.16v9.44h-5.16zM1473.19 134.62h5.16v9.44h-5.16zM1473.19 143.66h5.16v9.44h-5.16zM1477.95 134.62h5.16v9.44h-5.16zM1477.95 143.66h5.16v9.44h-5.16zM1416.07 152.71h5.16v9.44h-5.16zM1420.83 152.71h5.16v9.44h-5.16zM1425.59 152.71h5.16v9.44h-5.16zM1425.59 161.75h5.16v9.44h-5.16zM1430.35 152.71h5.16v9.44h-5.16zM1435.11 152.71h5.16v9.44h-5.16zM1430.35 161.75h5.16v9.44h-5.16zM1435.11 161.75h5.16v9.44h-5.16zM1439.87 152.71h5.16v9.44h-5.16zM1444.63 152.71h5.16v9.44h-5.16zM1439.87 161.75h5.16v9.44h-5.16zM1444.63 161.75h5.16v9.44h-5.16zM1449.39 152.71h5.16v9.44h-5.16zM1454.15 152.71h5.16v9.44h-5.16zM1449.39 161.75h5.16v9.44h-5.16zM1454.15 161.75h5.16v9.44h-5.16zM1458.91 152.71h5.16v9.44h-5.16zM1463.67 152.71h5.16v9.44h-5.16zM1458.91 161.75h5.16v9.44h-5.16zM1463.67 161.75h5.16v9.44h-5.16zM1468.43 152.71h5.16v9.44h-5.16zM1473.19 152.71h5.16v9.44h-5.16zM1468.43 161.75h5.16v9.44h-5.16zM1473.19 161.75h5.16v9.44h-5.16zM1477.95 152.71h5.16v9.44h-5.16zM1482.71 152.71h5.16v9.44h-5.16zM1477.95 161.75h5.16v9.44h-5.16zM1487.47 152.71h5.16v9.44h-5.16zM1430.35 170.79h5.16v9.44h-5.16zM1439.87 170.79h5.16v9.44h-5.16zM1463.67 170.79h5.16v9.44h-5.16zM1473.19 170.79h5.16v9.44h-5.16z" fill="#d97757" shape-rendering="crispEdges"/>
-<circle cx="1681.1" cy="149.0" r="10.2" fill="#4ec27a"/>
-<circle cx="1647.1" cy="149.0" r="10.2" fill="#e3e5e8"/>
-<path d="M1540 330V376" fill="none" stroke="#43474b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ak)"/>
-<rect x="1220.0" y="390.0" width="640.0" height="270.0" rx="14" fill="#fffdf6" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
-<text x="1250.0" y="442.0" font-size="30" fill="#8b9095" font-weight="800" text-anchor="start">답변</text>
-<text x="1250.0" y="500.0" font-size="34" fill="#101113" font-weight="700" text-anchor="start">저는 클로드 코드예요.</text>
-<text x="1250.0" y="546.0" font-size="34" fill="#8b9095" font-weight="700" text-anchor="start">…</text>
-<rect x="1236.0" y="572.0" width="560.0" height="70.0" rx="12" fill="#fbe3d8"/>
-<text x="1256.0" y="620.0" font-size="36" fill="#d97757" font-weight="900" text-anchor="start">빵빵+2026-09-22 09:38:22</text>
-<rect x="40.0" y="770.0" width="1840.0" height="100.0" rx="24" fill="#f2f7fd" stroke="#cfe0f3" stroke-width="2"/>
-<circle cx="104.0" cy="820.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/>
-<text x="104.0" y="830.6" font-size="29" fill="#fff" font-weight="800" text-anchor="middle">!</text>
-<text x="150.0" y="834.0" font-size="36" fill="#1273c4" font-weight="900" text-anchor="start">훅 = 규칙 하나</text>
-<rect x="482.5" y="790.0" width="435.0" height="60.0" rx="30.0" fill="#fff"/>
-<text x="700.0" y="831.5" font-size="32" fill="#101113" font-weight="800" text-anchor="middle">클로드가 프롬프트를 받을 때</text>
-<path d="M960 820H1030" fill="none" stroke="#1273c4" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ab)"/>
-<rect x="1096.3" y="790.0" width="307.4" height="60.0" rx="30.0" fill="#fff"/>
-<text x="1250.0" y="831.5" font-size="32" fill="#101113" font-weight="800" text-anchor="middle">문구를 끼워 넣는다</text>
+<!-- 5/41 이벤트 감지와 실행 (tools/illus/s5_hook_trigger.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+<rect x="64" y="210" width="568" height="430" rx="16" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="96" y="268" font-size="24" font-weight="800" fill="#5b6570" text-anchor="start">내 프롬프트</text>
+<text x="96" y="360" font-size="40" font-weight="800" fill="#101113" text-anchor="start">너는 누구니?</text>
+<text x="96" y="420" font-size="40" font-weight="900" fill="#1273c4">뿅</text>
+<line x1="632" y1="425.0" x2="676" y2="425.0" stroke="#aeb3ba" stroke-width="3"/>
+<circle cx="654.0" cy="184" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="654.0" y="194.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<text x="654.0" y="150" font-size="24" font-weight="800" fill="#1273c4" text-anchor="middle">감지</text>
+<rect x="676" y="210" width="568" height="430" rx="16" fill="#fff" stroke="#1273c4" stroke-width="3"/>
+<text x="708" y="268" font-size="24" font-weight="800" fill="#1273c4" text-anchor="start">UserPromptSubmit 훅</text>
+<circle cx="1204" cy="254" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1204" y="264.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<line x1="708" y1="302" x2="1212" y2="302" stroke="#c9ccd1" stroke-width="2"/>
+<text x="708" y="378" font-size="22" font-weight="700" fill="#5b6570" text-anchor="start">끼워 넣는 문구</text>
+<text x="708" y="432" font-size="32" font-weight="800" fill="#101113" text-anchor="start">답변 끝에</text>
+<text x="708" y="480" font-size="32" font-weight="900" fill="#101113" text-anchor="start">빵빵+날짜시간 붙이기</text>
+<line x1="1244" y1="425.0" x2="1288" y2="425.0" stroke="#aeb3ba" stroke-width="3"/>
+<path transform="translate(1497.6 92) scale(0.62)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="1288" y="210" width="568" height="430" rx="16" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1320" y="268" font-size="24" font-weight="800" fill="#5b6570" text-anchor="start">답변</text>
+<text x="1320" y="338" font-size="30" font-weight="700" fill="#101113" text-anchor="start">저는 클로드 코드예요.</text>
+<text x="1320" y="382" font-size="30" font-weight="700" fill="#5b6570" text-anchor="start">…</text>
+<rect x="1320" y="420" width="504" height="70" rx="12" fill="#fff" stroke="#1273c4" stroke-width="2.5"/>
+<text x="1340" y="466" font-size="26" font-weight="900" fill="#1273c4" text-anchor="start">빵빵+2026-09-22 09:38:22</text>
+<rect x="64" y="700" width="1792" height="100" rx="20" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<circle cx="128" cy="750.0" r="28" fill="#fff" stroke="#1273c4" stroke-width="5"/><text x="128" y="760.6" font-size="29" font-weight="800" fill="#1273c4" text-anchor="middle">!</text>
+<text x="182" y="762.0" font-size="32" font-weight="900" fill="#101113" text-anchor="start">훅 = 규칙 하나</text>
+<line x1="504" y1="726" x2="504" y2="774" stroke="#c9ccd1" stroke-width="2"/>
+<text x="544" y="760.0" font-size="30" font-weight="800" fill="#101113" text-anchor="start">클로드가 프롬프트를 받을 때 문구를 끼워 넣는다</text>
 </svg>

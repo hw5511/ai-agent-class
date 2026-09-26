@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 900" width="1920" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
 <defs><filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter><filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter><marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker><marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker><marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#43474b"/></marker><marker id="ao" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d97757"/></marker></defs>
-<rect x="40.0" y="30.0" width="900.0" height="840.0" rx="26" fill="#fdf5f5" stroke="#e5e5e5" stroke-width="2"/>
+<rect x="40.0" y="30.0" width="900.0" height="840.0" rx="26" fill="#ffffff" stroke="#e5e5e5" stroke-width="2"/>
 <text x="490.0" y="94.0" font-size="40" fill="#101113" font-weight="900" text-anchor="middle">비싼 모델이 커피 심부름</text>
 <circle cx="910.0" cy="30.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/>
 <text x="910.0" y="40.6" font-size="29" fill="#fff" font-weight="800" text-anchor="middle">1</text>
 <path d="M328.00 210.00h12.40v23.20h-12.40zM328.00 232.80h12.40v23.20h-12.40zM340.00 210.00h12.40v23.20h-12.40zM352.00 210.00h12.40v23.20h-12.40zM340.00 232.80h12.40v23.20h-12.40zM364.00 210.00h12.40v23.20h-12.40zM376.00 210.00h12.40v23.20h-12.40zM364.00 232.80h12.40v23.20h-12.40zM376.00 232.80h12.40v23.20h-12.40zM388.00 210.00h12.40v23.20h-12.40zM400.00 210.00h12.40v23.20h-12.40zM388.00 232.80h12.40v23.20h-12.40zM400.00 232.80h12.40v23.20h-12.40zM412.00 210.00h12.40v23.20h-12.40zM424.00 210.00h12.40v23.20h-12.40zM412.00 232.80h12.40v23.20h-12.40zM424.00 232.80h12.40v23.20h-12.40zM436.00 210.00h12.40v23.20h-12.40zM448.00 210.00h12.40v23.20h-12.40zM448.00 232.80h12.40v23.20h-12.40zM460.00 210.00h12.40v23.20h-12.40zM460.00 232.80h12.40v23.20h-12.40zM304.00 255.60h12.40v23.20h-12.40zM316.00 255.60h12.40v23.20h-12.40zM328.00 255.60h12.40v23.20h-12.40zM328.00 278.40h12.40v23.20h-12.40zM340.00 255.60h12.40v23.20h-12.40zM352.00 255.60h12.40v23.20h-12.40zM340.00 278.40h12.40v23.20h-12.40zM352.00 278.40h12.40v23.20h-12.40zM364.00 255.60h12.40v23.20h-12.40zM376.00 255.60h12.40v23.20h-12.40zM364.00 278.40h12.40v23.20h-12.40zM376.00 278.40h12.40v23.20h-12.40zM388.00 255.60h12.40v23.20h-12.40zM400.00 255.60h12.40v23.20h-12.40zM388.00 278.40h12.40v23.20h-12.40zM400.00 278.40h12.40v23.20h-12.40zM412.00 255.60h12.40v23.20h-12.40zM424.00 255.60h12.40v23.20h-12.40zM412.00 278.40h12.40v23.20h-12.40zM424.00 278.40h12.40v23.20h-12.40zM436.00 255.60h12.40v23.20h-12.40zM448.00 255.60h12.40v23.20h-12.40zM436.00 278.40h12.40v23.20h-12.40zM448.00 278.40h12.40v23.20h-12.40zM460.00 255.60h12.40v23.20h-12.40zM472.00 255.60h12.40v23.20h-12.40zM460.00 278.40h12.40v23.20h-12.40zM484.00 255.60h12.40v23.20h-12.40zM340.00 301.20h12.40v23.20h-12.40zM364.00 301.20h12.40v23.20h-12.40zM424.00 301.20h12.40v23.20h-12.40zM448.00 301.20h12.40v23.20h-12.40z" fill="#d97757" shape-rendering="crispEdges"/>
 <path d="M376.0 255.6L400.0 279.6L424.0 255.6Z" fill="#fff"/>
-<path d="M391.0 270.6h18.0l7.5 45.0l-16.5 18.0l-16.5 -18.0z" fill="#d93a3a"/>
-<rect x="333.8" y="360.8" width="132.5" height="52.0" rx="12" fill="#e0a526" filter="url(#shs)"/>
+<path d="M391.0 270.6h18.0l7.5 45.0l-16.5 18.0l-16.5 -18.0z" fill="#43474b"/>
+<rect x="333.8" y="360.8" width="132.5" height="52.0" rx="12" fill="#43474b" filter="url(#shs)"/>
 <text x="400.0" y="397.8" font-size="32" fill="#fff" font-weight="900" text-anchor="middle">Fable</text>
-<g transform="rotate(12 100 330)"><path d="M100 330l30 -32h96.96000000000001a10 10 0 0 1 10 10v44a10 10 0 0 1 -10 10h-96.96000000000001z" fill="#fdf1d3" stroke="#b77f0e" stroke-width="3"/><circle cx="126" cy="330" r="7" fill="#fff" stroke="#b77f0e" stroke-width="3"/><text x="188.5" y="343.0" font-size="36" font-weight="900" fill="#b77f0e" text-anchor="middle">고가</text></g>
+<g><path d="M100 330l30 -32h96.96000000000001a10 10 0 0 1 10 10v44a10 10 0 0 1 -10 10h-96.96000000000001z" fill="#eef0f3" stroke="#7b8794" stroke-width="3"/><circle cx="126" cy="330" r="7" fill="#fff" stroke="#7b8794" stroke-width="3"/><text x="188.5" y="343.0" font-size="36" font-weight="900" fill="#7b8794" text-anchor="middle">고가</text></g>
 <path d="M530.0 206.8H570.0L565.0 269.3H535.0Z" fill="#fff" stroke="#43474b" stroke-width="3.125"/>
 <rect x="531.2" y="224.3" width="37.5" height="20.0" rx="0" fill="#b5785a"/>
 <rect x="526.2" y="196.8" width="47.5" height="12.5" rx="5.0" fill="#43474b"/>
@@ -24,42 +24,42 @@
 <path d="M561.0 189.3c-9.9 -11.0 9.9 -19.8 0 -33.0" fill="none" stroke="#9a9ea3" stroke-width="3.8500000000000005" stroke-linecap="round"/>
 <path d="M649.0 189.3c-9.9 -11.0 9.9 -19.8 0 -33.0" fill="none" stroke="#9a9ea3" stroke-width="3.8500000000000005" stroke-linecap="round"/>
 <path d="M671.0 189.3c-9.9 -11.0 9.9 -19.8 0 -33.0" fill="none" stroke="#9a9ea3" stroke-width="3.8500000000000005" stroke-linecap="round"/>
-<path d="M270.0 204.0C257.4 223.6 256.0 237.6 270.0 237.6C284.0 237.6 282.6 223.6 270.0 204.0Z" fill="#6fb3e8"/>
-<path d="M528.0 190.0C518.1 205.4 517.0 216.4 528.0 216.4C539.0 216.4 537.9 205.4 528.0 190.0Z" fill="#6fb3e8"/>
-<text x="605.0" y="396.8" font-size="32" fill="#d93a3a" font-weight="900" text-anchor="middle">커피 심부름 중</text>
+<path d="M270.0 204.0C257.4 223.6 256.0 237.6 270.0 237.6C284.0 237.6 282.6 223.6 270.0 204.0Z" fill="#9a9ea3"/>
+<path d="M528.0 190.0C518.1 205.4 517.0 216.4 528.0 216.4C539.0 216.4 537.9 205.4 528.0 190.0Z" fill="#9a9ea3"/>
+<text x="605.0" y="396.8" font-size="32" fill="#101113" font-weight="900" text-anchor="middle">커피 심부름 중</text>
 <path d="M190 490H730V840L696.2 854L662.5 840L628.8 854L595.0 840L561.2 854L527.5 840L493.8 854L460.0 840L426.2 854L392.5 840L358.8 854L325.0 840L291.2 854L257.5 840L223.8 854L190.0 840Z" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
 <text x="460.0" y="542.0" font-size="32" fill="#101113" font-weight="900" text-anchor="middle">영수증</text>
 <path d="M218 566H702" fill="none" stroke="#c9ccd1" stroke-width="2" stroke-dasharray="6 6"/>
 <text x="220.0" y="614.0" font-size="30" fill="#101113" font-weight="700" text-anchor="start">어려운 설계</text>
-<text x="440.0" y="614.0" font-size="30" fill="#b77f0e" font-weight="900" text-anchor="start">Fable</text>
+<text x="440.0" y="614.0" font-size="30" fill="#43474b" font-weight="900" text-anchor="start">Fable</text>
 <text x="700.0" y="614.0" font-size="30" fill="#43474b" font-weight="800" text-anchor="end">30,000원</text>
 <text x="220.0" y="664.0" font-size="30" fill="#101113" font-weight="700" text-anchor="start">커피 심부름</text>
-<text x="440.0" y="664.0" font-size="30" fill="#b77f0e" font-weight="900" text-anchor="start">Fable</text>
+<text x="440.0" y="664.0" font-size="30" fill="#43474b" font-weight="900" text-anchor="start">Fable</text>
 <text x="700.0" y="664.0" font-size="30" fill="#43474b" font-weight="800" text-anchor="end">30,000원</text>
 <text x="220.0" y="714.0" font-size="30" fill="#101113" font-weight="700" text-anchor="start">폴더 정리</text>
-<text x="440.0" y="714.0" font-size="30" fill="#b77f0e" font-weight="900" text-anchor="start">Fable</text>
+<text x="440.0" y="714.0" font-size="30" fill="#43474b" font-weight="900" text-anchor="start">Fable</text>
 <text x="700.0" y="714.0" font-size="30" fill="#43474b" font-weight="800" text-anchor="end">30,000원</text>
 <path d="M218 744H702" fill="none" stroke="#c9ccd1" stroke-width="2" stroke-dasharray="6 6"/>
 <text x="220.0" y="800.0" font-size="34" fill="#101113" font-weight="900" text-anchor="start">합계</text>
-<text x="700.0" y="800.0" font-size="34" fill="#d93a3a" font-weight="900" text-anchor="end">90,000원</text>
-<rect x="980.0" y="30.0" width="900.0" height="840.0" rx="26" fill="#f4faf6" stroke="#e5e5e5" stroke-width="2"/>
+<text x="700.0" y="800.0" font-size="34" fill="#101113" font-weight="900" text-anchor="end">90,000원</text>
+<rect x="980.0" y="30.0" width="900.0" height="840.0" rx="26" fill="#ffffff" stroke="#e5e5e5" stroke-width="2"/>
 <text x="1430.0" y="94.0" font-size="40" fill="#101113" font-weight="900" text-anchor="middle">심부름은 서브에이전트에게</text>
 <circle cx="1850.0" cy="30.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/>
 <text x="1850.0" y="40.6" font-size="29" fill="#fff" font-weight="800" text-anchor="middle">2</text>
 <path d="M1290 330L1264 430M1410 330L1436 430" fill="none" stroke="#9a9ea3" stroke-width="8" stroke-linecap="round"/>
-<path d="M1230 330L1260 210H1440L1470 330Z" fill="#2f6fb5" stroke="#23578f" stroke-width="3" filter="url(#shs)"/>
-<path d="M1252.5 240H1447.5" fill="none" stroke="#6aa0d8" stroke-width="1.5"/>
-<path d="M1245.0 270H1455.0" fill="none" stroke="#6aa0d8" stroke-width="1.5"/>
-<path d="M1237.5 300H1462.5" fill="none" stroke="#6aa0d8" stroke-width="1.5"/>
-<path d="M1296.0 210L1278.0 330" fill="none" stroke="#6aa0d8" stroke-width="1.5"/>
-<path d="M1332.0 210L1326.0 330" fill="none" stroke="#6aa0d8" stroke-width="1.5"/>
-<path d="M1368.0 210L1374.0 330" fill="none" stroke="#6aa0d8" stroke-width="1.5"/>
-<path d="M1404.0 210L1422.0 330" fill="none" stroke="#6aa0d8" stroke-width="1.5"/>
+<path d="M1230 330L1260 210H1440L1470 330Z" fill="#c9ccd1" stroke="#8a8f96" stroke-width="3" filter="url(#shs)"/>
+<path d="M1252.5 240H1447.5" fill="none" stroke="#9a9ea3" stroke-width="1.5"/>
+<path d="M1245.0 270H1455.0" fill="none" stroke="#9a9ea3" stroke-width="1.5"/>
+<path d="M1237.5 300H1462.5" fill="none" stroke="#9a9ea3" stroke-width="1.5"/>
+<path d="M1296.0 210L1278.0 330" fill="none" stroke="#9a9ea3" stroke-width="1.5"/>
+<path d="M1332.0 210L1326.0 330" fill="none" stroke="#9a9ea3" stroke-width="1.5"/>
+<path d="M1368.0 210L1374.0 330" fill="none" stroke="#9a9ea3" stroke-width="1.5"/>
+<path d="M1404.0 210L1422.0 330" fill="none" stroke="#9a9ea3" stroke-width="1.5"/>
 <path d="M1300 305L1325 245H1390L1408 305Z" fill="none" stroke="#fff" stroke-width="4"/>
 <path d="M1069.00 250.00h8.90v16.55h-8.90zM1069.00 266.15h8.90v16.55h-8.90zM1077.50 250.00h8.90v16.55h-8.90zM1086.00 250.00h8.90v16.55h-8.90zM1077.50 266.15h8.90v16.55h-8.90zM1094.50 250.00h8.90v16.55h-8.90zM1103.00 250.00h8.90v16.55h-8.90zM1094.50 266.15h8.90v16.55h-8.90zM1103.00 266.15h8.90v16.55h-8.90zM1111.50 250.00h8.90v16.55h-8.90zM1120.00 250.00h8.90v16.55h-8.90zM1111.50 266.15h8.90v16.55h-8.90zM1120.00 266.15h8.90v16.55h-8.90zM1128.50 250.00h8.90v16.55h-8.90zM1137.00 250.00h8.90v16.55h-8.90zM1128.50 266.15h8.90v16.55h-8.90zM1137.00 266.15h8.90v16.55h-8.90zM1145.50 250.00h8.90v16.55h-8.90zM1154.00 250.00h8.90v16.55h-8.90zM1154.00 266.15h8.90v16.55h-8.90zM1162.50 250.00h8.90v16.55h-8.90zM1162.50 266.15h8.90v16.55h-8.90zM1052.00 282.30h8.90v16.55h-8.90zM1060.50 282.30h8.90v16.55h-8.90zM1069.00 282.30h8.90v16.55h-8.90zM1069.00 298.45h8.90v16.55h-8.90zM1077.50 282.30h8.90v16.55h-8.90zM1086.00 282.30h8.90v16.55h-8.90zM1077.50 298.45h8.90v16.55h-8.90zM1086.00 298.45h8.90v16.55h-8.90zM1094.50 282.30h8.90v16.55h-8.90zM1103.00 282.30h8.90v16.55h-8.90zM1094.50 298.45h8.90v16.55h-8.90zM1103.00 298.45h8.90v16.55h-8.90zM1111.50 282.30h8.90v16.55h-8.90zM1120.00 282.30h8.90v16.55h-8.90zM1111.50 298.45h8.90v16.55h-8.90zM1120.00 298.45h8.90v16.55h-8.90zM1128.50 282.30h8.90v16.55h-8.90zM1137.00 282.30h8.90v16.55h-8.90zM1128.50 298.45h8.90v16.55h-8.90zM1137.00 298.45h8.90v16.55h-8.90zM1145.50 282.30h8.90v16.55h-8.90zM1154.00 282.30h8.90v16.55h-8.90zM1145.50 298.45h8.90v16.55h-8.90zM1154.00 298.45h8.90v16.55h-8.90zM1162.50 282.30h8.90v16.55h-8.90zM1171.00 282.30h8.90v16.55h-8.90zM1162.50 298.45h8.90v16.55h-8.90zM1179.50 282.30h8.90v16.55h-8.90zM1077.50 314.60h8.90v16.55h-8.90zM1094.50 314.60h8.90v16.55h-8.90zM1137.00 314.60h8.90v16.55h-8.90zM1154.00 314.60h8.90v16.55h-8.90z" fill="#d97757" shape-rendering="crispEdges"/>
-<rect x="1053.8" y="358.9" width="132.5" height="52.0" rx="12" fill="#e0a526" filter="url(#shs)"/>
+<rect x="1053.8" y="358.9" width="132.5" height="52.0" rx="12" fill="#43474b" filter="url(#shs)"/>
 <text x="1120.0" y="395.9" font-size="32" fill="#fff" font-weight="900" text-anchor="middle">Fable</text>
-<text x="1200.0" y="464.0" font-size="32" fill="#1273c4" font-weight="900" text-anchor="middle">어려운 설계만</text>
+<text x="1200.0" y="464.0" font-size="32" fill="#101113" font-weight="900" text-anchor="middle">어려운 설계만</text>
 <path d="M1550 276H1616" fill="none" stroke="#9a9ea3" stroke-width="5" stroke-linecap="round"/>
 <path d="M1538 300H1616" fill="none" stroke="#9a9ea3" stroke-width="5" stroke-linecap="round"/>
 <path d="M1526 324H1616" fill="none" stroke="#9a9ea3" stroke-width="5" stroke-linecap="round"/>
@@ -71,17 +71,17 @@
 <rect x="1726.3" y="213.6" width="27.0" height="14.4" rx="0" fill="#b5785a"/>
 <rect x="1722.7" y="193.8" width="34.2" height="9.0" rx="3.6" fill="#43474b"/>
 <rect x="1660.6" y="246.0" width="118.8" height="10.8" rx="5.4" fill="#8a8f96"/>
-<rect x="1770.0" y="310.0" width="70.0" height="54.0" rx="6" fill="#f4c96b" stroke="#c99a2e" stroke-width="2"/>
-<rect x="1770.0" y="302.0" width="30.0" height="12.0" rx="3" fill="#f4c96b" stroke="#c99a2e" stroke-width="2"/>
+<rect x="1770.0" y="310.0" width="70.0" height="54.0" rx="6" fill="#c9ccd1" stroke="#8a8f96" stroke-width="2"/>
+<rect x="1770.0" y="302.0" width="30.0" height="12.0" rx="3" fill="#c9ccd1" stroke="#8a8f96" stroke-width="2"/>
 <rect x="1620.3" y="346.7" width="159.4" height="52.0" rx="12" fill="#7b8794" filter="url(#shs)"/>
 <text x="1700.0" y="383.7" font-size="32" fill="#fff" font-weight="900" text-anchor="middle">Sonnet</text>
-<g transform="rotate(8 1495 396)"><path d="M1495 396l30 -32h85.80000000000001a10 10 0 0 1 10 10v44a10 10 0 0 1 -10 10h-85.80000000000001z" fill="#eef0f3" stroke="#7b8794" stroke-width="3"/><circle cx="1521" cy="396" r="7" fill="#fff" stroke="#7b8794" stroke-width="3"/><text x="1577.9" y="406.8" font-size="30" font-weight="900" fill="#7b8794" text-anchor="middle">저가</text></g>
-<text x="1690.0" y="464.0" font-size="32" fill="#12a150" font-weight="900" text-anchor="middle">심부름 담당</text>
+<g><path d="M1495 396l30 -32h85.80000000000001a10 10 0 0 1 10 10v44a10 10 0 0 1 -10 10h-85.80000000000001z" fill="#eef0f3" stroke="#7b8794" stroke-width="3"/><circle cx="1521" cy="396" r="7" fill="#fff" stroke="#7b8794" stroke-width="3"/><text x="1577.9" y="406.8" font-size="30" font-weight="900" fill="#7b8794" text-anchor="middle">저가</text></g>
+<text x="1690.0" y="464.0" font-size="32" fill="#101113" font-weight="900" text-anchor="middle">심부름 담당</text>
 <path d="M1160 490H1700V840L1666.2 854L1632.5 840L1598.8 854L1565.0 840L1531.2 854L1497.5 840L1463.8 854L1430.0 840L1396.2 854L1362.5 840L1328.8 854L1295.0 840L1261.2 854L1227.5 840L1193.8 854L1160.0 840Z" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
 <text x="1430.0" y="542.0" font-size="32" fill="#101113" font-weight="900" text-anchor="middle">영수증</text>
 <path d="M1188 566H1672" fill="none" stroke="#c9ccd1" stroke-width="2" stroke-dasharray="6 6"/>
 <text x="1190.0" y="614.0" font-size="30" fill="#101113" font-weight="700" text-anchor="start">어려운 설계</text>
-<text x="1410.0" y="614.0" font-size="30" fill="#b77f0e" font-weight="900" text-anchor="start">Fable</text>
+<text x="1410.0" y="614.0" font-size="30" fill="#43474b" font-weight="900" text-anchor="start">Fable</text>
 <text x="1670.0" y="614.0" font-size="30" fill="#43474b" font-weight="800" text-anchor="end">30,000원</text>
 <text x="1190.0" y="664.0" font-size="30" fill="#101113" font-weight="700" text-anchor="start">커피 심부름</text>
 <text x="1410.0" y="664.0" font-size="30" fill="#7b8794" font-weight="900" text-anchor="start">Sonnet</text>
@@ -91,6 +91,6 @@
 <text x="1670.0" y="714.0" font-size="30" fill="#43474b" font-weight="800" text-anchor="end">3,000원</text>
 <path d="M1188 744H1672" fill="none" stroke="#c9ccd1" stroke-width="2" stroke-dasharray="6 6"/>
 <text x="1190.0" y="800.0" font-size="34" fill="#101113" font-weight="900" text-anchor="start">합계</text>
-<text x="1670.0" y="800.0" font-size="34" fill="#12a150" font-weight="900" text-anchor="end">36,000원</text>
-<g transform="rotate(-14 1440 786)"><circle cx="1440" cy="786" r="52" fill="none" stroke="#12a150" stroke-width="5"/><text x="1440" y="799" font-size="36" font-weight="900" fill="#12a150" text-anchor="middle">절약</text></g>
+<text x="1670.0" y="800.0" font-size="34" fill="#1273c4" font-weight="900" text-anchor="end">36,000원</text>
+<g transform="rotate(-14 1440 786)"><circle cx="1440" cy="786" r="52" fill="none" stroke="#1273c4" stroke-width="5"/><text x="1440" y="799" font-size="36" font-weight="900" fill="#1273c4" text-anchor="middle">절약</text></g>
 </svg>

@@ -7,32 +7,32 @@
   <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
   <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
 </defs>
-<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
-<rect x="56" y="70" width="760" height="710" rx="26" fill="#eaf3fb"/>
-<text x="140" y="128" font-size="34" font-weight="900" fill="#0d5c9e" text-anchor="start">코드 보관함</text>
-<rect x="100" y="168" width="320" height="150" rx="16" fill="#cfe3f5" stroke="#1273c4" stroke-width="3"/>
-<text x="260.0" y="252.52" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">QR 코드</text>
-<rect x="446" y="168" width="320" height="150" rx="16" fill="#cfe3f5" stroke="#1273c4" stroke-width="3"/>
-<text x="606.0" y="252.52" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">이미지 처리</text>
-<rect x="100" y="344" width="320" height="150" rx="16" fill="#cfe3f5" stroke="#1273c4" stroke-width="3"/>
-<text x="260.0" y="428.52" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">PDF 합치기</text>
-<rect x="446" y="344" width="320" height="150" rx="16" fill="#cfe3f5" stroke="#1273c4" stroke-width="3"/>
-<text x="606.0" y="428.52" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">웹 데이터 수집</text>
-<rect x="100" y="520" width="320" height="150" rx="16" fill="#cfe3f5" stroke="#1273c4" stroke-width="3"/>
-<text x="260.0" y="604.52" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">번역</text>
-<rect x="446" y="520" width="320" height="150" rx="16" fill="#cfe3f5" stroke="#1273c4" stroke-width="3"/>
-<text x="606.0" y="604.52" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">날짜 계산</text>
-<circle cx="96" cy="122" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="96" y="132.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
-<path d="M766 243.0C886 243.0 850 378.0 890 388.0" fill="none" stroke="#cfe3f5" stroke-width="26.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M766 243.0C886 243.0 850 378.0 890 388.0" fill="none" stroke="#1273c4" stroke-width="14.399999999999999" stroke-linecap="round" stroke-linejoin="round"/><path d="M902.6 391.1L862.1 404.8L873.2 360.1Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
-<rect x="890" y="350" width="190" height="76" rx="16" fill="#cfe3f5" stroke="#1273c4" stroke-width="3"/>
-<text x="985.0" y="396.16" font-size="24" font-weight="800" fill="#101113" text-anchor="middle">이미지 처리</text>
-<path d="M1080 388.0C1110 390 1320 366 1420 406" fill="none" stroke="#cfe3f5" stroke-width="26.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M1080 388.0C1110 390 1320 366 1420 406" fill="none" stroke="#1273c4" stroke-width="14.399999999999999" stroke-linecap="round" stroke-linejoin="round"/><path d="M1432.0 410.8L1390.1 418.8L1407.2 376.1Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
-<path transform="translate(1190 465.85) scale(1.05)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
-<g filter="url(#shs)"><rect x="1420" y="426" width="280" height="176.4" rx="12" fill="#2b2f35"/><rect x="1430" y="436" width="260" height="156.4" rx="6" fill="#f4f8fc"/></g><g transform="translate(1430 436)"><rect x="0" y="0" width="260" height="156" fill="#f4f8fc"/><text x="16" y="40" font-size="20" font-weight="800" fill="#0d5c9e" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">이미지 처리()</text><circle cx="230" cy="40" r="20" fill="#12a150"/><path d="M221.6 40.4l6.0 6.0 11.200000000000001-12.0" fill="none" stroke="#fff" stroke-width="4.0" stroke-linecap="round" stroke-linejoin="round"/></g><rect x="1406" y="598.4" width="308" height="10" rx="5" fill="#c3c9cf"/>
-<rect x="1120" y="616" width="620" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
-<rect x="1136" y="640" width="588" height="170" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
-<rect x="1309.5" y="706" width="241" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
-<text x="1430.0" y="746" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">내 프로젝트</text>
-<text x="1560" y="320" font-size="32" font-weight="800" fill="#101113" text-anchor="middle">가져다 바로 씀</text>
-<circle cx="1698" cy="412" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1698" y="422.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<circle cx="118" cy="246" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="118" y="256.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<text x="156" y="256" font-size="32" font-weight="900" fill="#101113" text-anchor="start">기능별로 정리된 코드 상자</text>
+<text x="156" y="290" font-size="24" font-weight="600" fill="#5b6570" text-anchor="start">가져오면 바로 사용</text>
+<circle cx="1192" cy="246" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1192" y="256.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<text x="1230" y="256" font-size="32" font-weight="900" fill="#101113" text-anchor="start">가져다 바로 씀</text>
+<text x="1230" y="290" font-size="24" font-weight="600" fill="#5b6570" text-anchor="start">직접 안 짜도 됨</text>
+<rect x="96" y="324" width="240" height="130" rx="16" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<text x="216.0" y="398.52" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">QR 코드</text>
+<rect x="358" y="324" width="240" height="130" rx="16" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<text x="478.0" y="398.52" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">PDF 합치기</text>
+<rect x="620" y="324" width="240" height="130" rx="16" fill="#fff" stroke="#1273c4" stroke-width="3"/>
+<text x="740.0" y="398.52" font-size="28" font-weight="800" fill="#0d5c9e" text-anchor="middle">이미지 처리</text>
+<rect x="96" y="476" width="240" height="130" rx="16" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<text x="216.0" y="550.52" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">웹 데이터 수집</text>
+<rect x="358" y="476" width="240" height="130" rx="16" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<text x="478.0" y="550.52" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">번역</text>
+<rect x="620" y="476" width="240" height="130" rx="16" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<text x="740.0" y="550.52" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">날짜 계산</text>
+<rect x="1170" y="324" width="420" height="130" rx="16" fill="#fff" stroke="#1273c4" stroke-width="3"/>
+<text x="1210" y="385.0" font-size="28" font-weight="800" fill="#0d5c9e" text-anchor="start">이미지 처리 사용</text>
+<circle cx="1544" cy="389.0" r="24" fill="#1273c4"/><path d="M1533.92 389.48l7.199999999999999 7.199999999999999 13.440000000000001-14.399999999999999" fill="none" stroke="#fff" stroke-width="4.800000000000001" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="860" y1="389.0" x2="1170" y2="389.0" stroke="#9aa0a6" stroke-width="2.5" stroke-linecap="round"/><path d="M1170.0 389.0L1155.6 398.0L1155.6 380.0Z" fill="#9aa0a6"/>
+<line x1="1380.0" y1="454" x2="1380.0" y2="547.35" stroke="#9aa0a6" stroke-width="2.5" stroke-linecap="round"/>
+<path transform="translate(1314.0 541.35) scale(0.55)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="1230.0" y="620" width="300" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="1246.0" y="644" width="268" height="70" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="1282.0" y="710" width="196" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<text x="1380.0" y="750" font-size="26" font-weight="900" fill="#101113" text-anchor="middle">내 프로젝트</text>
 </svg>

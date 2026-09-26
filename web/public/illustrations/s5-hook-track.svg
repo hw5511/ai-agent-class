@@ -7,44 +7,44 @@
   <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
   <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
 </defs>
-<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
-<rect x="70" y="250" width="1652" height="410" rx="30" fill="#eaf3fb"/>
-<text x="110" y="225" font-size="26" font-weight="700" fill="#5b6570" text-anchor="start">도구 루프 · 도구를 쓸 때마다 반복</text>
-<line x1="110" y1="480" x2="1680" y2="480" stroke="#c9ccd1" stroke-width="10" stroke-linecap="round"/>
-<path d="M140 480L350 480L560 480L770 480L980 480L1190 480L1400 480L1610 480" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M140 480L350 480L560 480L770 480L980 480L1190 480L1400 480L1610 480" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1620.8 480.0L1590.8 499.2L1590.8 460.8Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
-<g transform="translate(140 480) scale(0.85)"><rect x="-4" y="-56" width="8" height="56" rx="4" fill="#aeb3ba"/><path d="M-24 -56C-24 -75 -13 -88 0 -88C13 -88 24 -75 24 -56C24 -49 28 -45 28 -45L-28 -45C-28 -45 -24 -49 -24 -56Z" fill="#0d5c9e"/><circle cx="0" cy="-38" r="6.5" fill="#0d5c9e"/><circle cx="0" cy="-88" r="5.5" fill="#0d5c9e"/></g>
-<text x="140" y="330" font-size="27" font-weight="800" fill="#101113" text-anchor="middle">SessionStart</text>
-<g transform="translate(350 480) scale(0.85)"><rect x="-4" y="-56" width="8" height="56" rx="4" fill="#aeb3ba"/><path d="M-24 -56C-24 -75 -13 -88 0 -88C13 -88 24 -75 24 -56C24 -49 28 -45 28 -45L-28 -45C-28 -45 -24 -49 -24 -56Z" fill="#0d5c9e"/><circle cx="0" cy="-38" r="6.5" fill="#0d5c9e"/><circle cx="0" cy="-88" r="5.5" fill="#0d5c9e"/></g>
-<text x="350" y="610" font-size="27" font-weight="800" fill="#101113" text-anchor="middle">UserPromptSubmit</text>
-<circle cx="525.2" cy="601" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="525.2" y="611.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
-<g transform="translate(560 480) scale(0.85)"><rect x="-4" y="-56" width="8" height="56" rx="4" fill="#aeb3ba"/><path d="M-24 -56C-24 -75 -13 -88 0 -88C13 -88 24 -75 24 -56C24 -49 28 -45 28 -45L-28 -45C-28 -45 -24 -49 -24 -56Z" fill="#0d5c9e"/><circle cx="0" cy="-38" r="6.5" fill="#0d5c9e"/><circle cx="0" cy="-88" r="5.5" fill="#0d5c9e"/></g>
-<text x="560" y="330" font-size="27" font-weight="800" fill="#101113" text-anchor="middle">PreToolUse</text>
-<g transform="translate(770 480) scale(0.85)"><rect x="-4" y="-56" width="8" height="56" rx="4" fill="#aeb3ba"/><path d="M-24 -56C-24 -75 -13 -88 0 -88C13 -88 24 -75 24 -56C24 -49 28 -45 28 -45L-28 -45C-28 -45 -24 -49 -24 -56Z" fill="#0d5c9e"/><circle cx="0" cy="-38" r="6.5" fill="#0d5c9e"/><circle cx="0" cy="-88" r="5.5" fill="#0d5c9e"/></g>
-<text x="770" y="610" font-size="27" font-weight="800" fill="#101113" text-anchor="middle">PermissionRequest</text>
-<g transform="translate(980 480) scale(0.85)"><rect x="-4" y="-56" width="8" height="56" rx="4" fill="#aeb3ba"/><path d="M-24 -56C-24 -75 -13 -88 0 -88C13 -88 24 -75 24 -56C24 -49 28 -45 28 -45L-28 -45C-28 -45 -24 -49 -24 -56Z" fill="#0d5c9e"/><circle cx="0" cy="-38" r="6.5" fill="#0d5c9e"/><circle cx="0" cy="-88" r="5.5" fill="#0d5c9e"/></g>
-<text x="980" y="330" font-size="27" font-weight="800" fill="#101113" text-anchor="middle">[도구 실행]</text>
-<g transform="translate(1190 480) scale(0.85)"><rect x="-4" y="-56" width="8" height="56" rx="4" fill="#aeb3ba"/><path d="M-24 -56C-24 -75 -13 -88 0 -88C13 -88 24 -75 24 -56C24 -49 28 -45 28 -45L-28 -45C-28 -45 -24 -49 -24 -56Z" fill="#0d5c9e"/><circle cx="0" cy="-38" r="6.5" fill="#0d5c9e"/><circle cx="0" cy="-88" r="5.5" fill="#0d5c9e"/></g>
-<text x="1190" y="610" font-size="27" font-weight="800" fill="#101113" text-anchor="middle">PostToolUse</text>
-<circle cx="1324.2" cy="601" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1324.2" y="611.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
-<g transform="translate(1400 480) scale(0.85)"><rect x="-4" y="-56" width="8" height="56" rx="4" fill="#aeb3ba"/><path d="M-24 -56C-24 -75 -13 -88 0 -88C13 -88 24 -75 24 -56C24 -49 28 -45 28 -45L-28 -45C-28 -45 -24 -49 -24 -56Z" fill="#0d5c9e"/><circle cx="0" cy="-38" r="6.5" fill="#0d5c9e"/><circle cx="0" cy="-88" r="5.5" fill="#0d5c9e"/></g>
-<text x="1400" y="330" font-size="27" font-weight="800" fill="#101113" text-anchor="middle">Stop</text>
-<circle cx="1476.8" cy="321" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1476.8" y="331.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
-<g transform="translate(1610 480) scale(0.85)"><rect x="-4" y="-56" width="8" height="56" rx="4" fill="#aeb3ba"/><path d="M-24 -56C-24 -75 -13 -88 0 -88C13 -88 24 -75 24 -56C24 -49 28 -45 28 -45L-28 -45C-28 -45 -24 -49 -24 -56Z" fill="#0d5c9e"/><circle cx="0" cy="-38" r="6.5" fill="#0d5c9e"/><circle cx="0" cy="-88" r="5.5" fill="#0d5c9e"/></g>
-<text x="1610" y="610" font-size="27" font-weight="800" fill="#101113" text-anchor="middle">SessionEnd</text>
-<path d="M1130 400C1130 190 700 190 700 400" fill="none" stroke="#cdeedb" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1130 400C1130 190 700 190 700 400" fill="none" stroke="#12a150" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M700.0 410.8L680.8 380.8L719.2 380.8Z" fill="#12a150" stroke="#12a150" stroke-width="7" stroke-linejoin="round"/>
-<text x="915" y="180" font-size="26" font-weight="700" fill="#0d7a3c" text-anchor="middle">다음 도구가 있으면 되돌아감</text>
-<path transform="translate(800.6 391.34000000000003) scale(0.62)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
-<text x="896" y="700" font-size="27" font-weight="800" fill="#5b6570" text-anchor="middle">따로 발생</text>
-<circle cx="290" cy="750" r="26" fill="#fff" stroke="#aeb3ba" stroke-width="4"/>
-<circle cx="290" cy="750" r="7" fill="#aeb3ba"/>
-<text x="290" y="799" font-size="26" font-weight="700" fill="#5b6570" text-anchor="middle">Notification</text>
-<circle cx="695" cy="750" r="26" fill="#fff" stroke="#aeb3ba" stroke-width="4"/>
-<circle cx="695" cy="750" r="7" fill="#aeb3ba"/>
-<text x="695" y="799" font-size="26" font-weight="700" fill="#5b6570" text-anchor="middle">PreCompact</text>
-<circle cx="1100" cy="750" r="26" fill="#fff" stroke="#aeb3ba" stroke-width="4"/>
-<circle cx="1100" cy="750" r="7" fill="#aeb3ba"/>
-<text x="1100" y="799" font-size="26" font-weight="700" fill="#5b6570" text-anchor="middle">SubagentStart</text>
-<circle cx="1505" cy="750" r="26" fill="#fff" stroke="#aeb3ba" stroke-width="4"/>
-<circle cx="1505" cy="750" r="7" fill="#aeb3ba"/>
-<text x="1505" y="799" font-size="26" font-weight="700" fill="#5b6570" text-anchor="middle">SubagentStop</text>
+<line x1="324" y1="440.0" x2="344" y2="440.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="344" y1="440.0" x2="335.3" y2="445.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="344" y1="440.0" x2="335.3" y2="435.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="618" y1="440.0" x2="638" y2="440.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="638" y1="440.0" x2="629.3" y2="445.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="638" y1="440.0" x2="629.3" y2="435.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1292" y1="440.0" x2="1312" y2="440.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1312" y1="440.0" x2="1303.3" y2="445.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1312" y1="440.0" x2="1303.3" y2="435.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1466" y1="440.0" x2="1486" y2="440.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1486" y1="440.0" x2="1477.3" y2="445.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1486" y1="440.0" x2="1477.3" y2="435.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="46" y="345" width="268" height="190" rx="20" fill="#fff" stroke="#c9ccd1" stroke-width="3"/>
+<text x="180.0" y="450.0" font-size="32" font-weight="800" fill="#101113" text-anchor="middle">SessionStart</text>
+<rect x="354" y="345" width="254" height="190" rx="20" fill="#fff" stroke="#1273c4" stroke-width="4"/>
+<text x="481.0" y="426.0" font-size="32" font-weight="800" fill="#101113" text-anchor="middle">UserPrompt</text>
+<text x="481.0" y="470.0" font-size="32" font-weight="800" fill="#101113" text-anchor="middle">Submit</text>
+<circle cx="608" cy="325" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="608" y="335.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<rect x="1322" y="345" width="134" height="190" rx="20" fill="#fff" stroke="#1273c4" stroke-width="4"/>
+<text x="1389.0" y="450.0" font-size="32" font-weight="800" fill="#101113" text-anchor="middle">Stop</text>
+<circle cx="1456" cy="325" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1456" y="335.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<rect x="1496" y="345" width="250" height="190" rx="20" fill="#fff" stroke="#c9ccd1" stroke-width="3"/>
+<text x="1621.0" y="450.0" font-size="32" font-weight="800" fill="#101113" text-anchor="middle">SessionEnd</text>
+<rect x="648" y="345" width="634" height="190" rx="20" fill="#fff" stroke="#1273c4" stroke-width="4"/>
+<text x="965.0" y="393" font-size="28" font-weight="700" fill="#5b6570" text-anchor="middle">도구 실행마다 반복</text>
+<rect x="658.0" y="415" width="188" height="76" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/>
+<text x="752.0" y="460.0" font-size="22" font-weight="700" fill="#101113" text-anchor="middle">PreToolUse</text>
+<rect x="886.0" y="415" width="144" height="76" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/>
+<text x="958.0" y="460.0" font-size="22" font-weight="700" fill="#101113" text-anchor="middle">도구 실행</text>
+<rect x="1070.0" y="415" width="202" height="76" rx="12" fill="#fff" stroke="#1273c4" stroke-width="3"/>
+<text x="1171.0" y="460.0" font-size="22" font-weight="700" fill="#101113" text-anchor="middle">PostToolUse</text>
+<line x1="854.0" y1="453.0" x2="878.0" y2="453.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="878.0" y1="453.0" x2="871.1" y2="457.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="878.0" y1="453.0" x2="871.1" y2="449.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1038.0" y1="453.0" x2="1062.0" y2="453.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1062.0" y1="453.0" x2="1055.1" y2="457.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1062.0" y1="453.0" x2="1055.1" y2="449.0" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="1272.0" cy="395" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1272.0" y="405.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<path transform="translate(117.5 245.52083333333331) scale(0.5208333333333334)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<text x="896" y="607" font-size="30" font-weight="700" fill="#5b6570" text-anchor="middle">따로 발생: Notification · PreCompact · SubagentStart · SubagentStop</text>
 </svg>

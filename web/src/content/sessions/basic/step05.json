@@ -4,7 +4,7 @@
   "hours": "2시간",
   "goal": "서브에이전트에게 일을 나눠 맡기고, 훅으로 Claude 의 동작에 규칙을 걸고, MS 오피스 안에서 Claude 를 쓰는 방법을 익힌다.",
   "topics": [
-    "서브에이전트 (백그라운드 조사 · 하청의 하청 · 커스텀 서브에이전트 · 에이전트 뷰)",
+    "서브에이전트 (백그라운드 조사 · 하청의 하청 · 커스텀 서브에이전트)",
     "훅 (UserPromptSubmit · PostToolUse · Stop)",
     "MS 오피스 Claude 추가 기능 (Excel · Word · PowerPoint)"
   ],
@@ -15,7 +15,6 @@
     "s5-agent-nested",
     "s5-agent-enter",
     "s5-agent-custom",
-    "s5-agent-view",
     "s5-hook-intro",
     "s5-hook-prompt",
     "s5-hook-toollog",

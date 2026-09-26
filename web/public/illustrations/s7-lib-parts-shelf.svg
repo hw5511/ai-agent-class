@@ -7,8 +7,7 @@
   <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
   <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
 </defs>
-<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
-<rect x="56" y="70" width="900" height="470" rx="26" fill="#eaf3fb"/>
+
 <text x="150" y="128" font-size="34" font-weight="900" fill="#0d5c9e" text-anchor="start">공개된 부품 시장</text>
 <circle cx="96" cy="122" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="96" y="132.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
 <rect x="100" y="178" width="260" height="46" rx="12" fill="#1273c4" stroke="#1273c4" stroke-width="3"/>

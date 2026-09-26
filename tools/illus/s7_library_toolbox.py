@@ -1,41 +1,52 @@
-"""7/9 라이브러리 = 남이 써둔 코드: a shelf of ready-made, function-labelled code boxes; the mascot
-takes one down and puts it straight to work on its laptop."""
+"""7/9 라이브러리 = 남이 써둔 코드: a structured diagram - a labelled 3x2 grid of ready-made function
+boxes (the library shelf) on the left, one straight neutral connector to a single result box on the
+right that is already in use, with the mascot at its small desk underneath."""
 import os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from illuskit import *
 
-b = [panel(), zone(56, 70, 760, 710, ACCENT_ZONE)]
-b += [text(140, 128, "코드 보관함", 34, 900, ACCENT_DARK, anchor="start")]
+b = []
 
-# 3x2 grid of ready-made code boxes fills the zone; the top-right box ("이미지 처리") is the one
-# the mascot picks, so its right edge opens straight into the free gap beside the zone edge -
-# no other card sits to its right or above it, so the lift-out arrow crosses nothing.
-labels = ["QR 코드", "이미지 처리", "PDF 합치기", "웹 데이터 수집", "번역", "날짜 계산"]
-BX, BY, BW, BH, GAP = 100, 168, 320, 150, 26
-positions = []
-for r in range(3):
-    for c in range(2):
-        positions.append((BX + c * (BW + GAP), BY + r * (BH + GAP)))
-for (bx, by), lab in zip(positions, labels):
-    b += [part_box(bx, by, BW, BH, lab, label_size=28)]
-b += [badge(96, 122, 1)]
+GRID_X, GRID_Y = 96, 324
+RES_X = 1170
 
-# the mascot lifts the "이미지 처리" box (top-right, positions[1]) off the shelf, out through the
-# gap to the right of the grid, onto its desk on the right
-take_x, take_y = positions[1][0] + BW, positions[1][1] + BH / 2
-FLOAT_X, FLOAT_Y, FLOAT_W, FLOAT_H = 890, 350, 190, 76
-b += [path(f"M{take_x} {take_y}C{take_x + 120} {take_y} {FLOAT_X - 40} {FLOAT_Y + FLOAT_H / 2 - 10} {FLOAT_X} {FLOAT_Y + FLOAT_H / 2}", width=6),
-      part_box(FLOAT_X, FLOAT_Y, FLOAT_W, FLOAT_H, "이미지 처리", label_size=24)]
+# ---- header: bold title + grey one-line sub-label, once per section ----
+b += [badge(GRID_X + 22, 246, 1), text(GRID_X + 60, 256, "기능별로 정리된 코드 상자", 32, 900, INK, anchor="start"),
+      text(GRID_X + 60, 290, "가져오면 바로 사용", 24, 600, MUTED, anchor="start")]
+b += [badge(RES_X + 22, 246, 2), text(RES_X + 60, 256, "가져다 바로 씀", 32, 900, INK, anchor="start"),
+      text(RES_X + 60, 290, "직접 안 짜도 됨", 24, 600, MUTED, anchor="start")]
 
-DESK_X, DESK_W, DESK_Y = 1120, 560, 616
-MS = 1.05
-b += [path(f"M{FLOAT_X + FLOAT_W} {FLOAT_Y + FLOAT_H / 2}C{FLOAT_X + 220} {FLOAT_Y + 40} {DESK_X + 200} {DESK_Y - 250} {DESK_X + 300} {DESK_Y - 210}", width=6)]
-b += [mascot(DESK_X + 70, DESK_Y - 143 * MS, MS),
-      laptop(DESK_X + 300, DESK_Y - 190, 280,
-             f'<rect x="0" y="0" width="{280 - 20}" height="{280 * 0.63 - 20:.0f}" fill="{SCREEN}"/>' +
-             text(16, 40, "이미지 처리()", 20, 800, ACCENT_DARK, anchor="start", family=MONO) +
-             check(230, 40, 20)),
-      desk(DESK_X, DESK_Y, 620, "내 프로젝트", body_h=170)]
-b += [text(DESK_X + 440, 320, "가져다 바로 씀", 32, 800, INK), badge(1698, 412, 2)]
+# ---- the grid: 3 columns x 2 rows, thin neutral borders, one accent-bordered pick ----
+labels = ["QR 코드", "PDF 합치기", "이미지 처리", "웹 데이터 수집", "번역", "날짜 계산"]
+BW, BH, GAPX, GAPY = 240, 130, 22, 22
+PICK = 2  # "이미지 처리" - top-right corner, so its connector crosses nothing
+cells = []
+for i, lab in enumerate(labels):
+    r, c = divmod(i, 3)
+    x = GRID_X + c * (BW + GAPX)
+    y = GRID_Y + r * (BH + GAPY)
+    cells.append((x, y))
+    is_pick = i == PICK
+    b += [part_box(x, y, BW, BH, lab, fill="#fff", stroke=ACCENT if is_pick else "#e5e5e5", label_size=28,
+                    label_color=ACCENT_DARK if is_pick else INK)]
+
+# ---- result box on the right, already in use, aligned with the picked cell's row ----
+px, py = cells[PICK]
+RES_Y = py
+RES_W, RES_H = 420, BH
+b += [part_box(RES_X, RES_Y, RES_W, RES_H, None, fill="#fff", stroke=ACCENT)]
+b += [text(RES_X + 40, RES_Y + RES_H / 2 - 4, "이미지 처리 사용", 28, 800, ACCENT_DARK, anchor="start"),
+      check(RES_X + RES_W - 46, RES_Y + RES_H / 2, 24, fill=ACCENT)]
+
+# ---- one straight neutral connector, picked cell -> result box ----
+b += [connector(px + BW, py + BH / 2, RES_X, RES_Y + RES_H / 2)]
+
+# ---- the mascot at its small desk, directly under the result box: it is what uses the box ----
+MS = 0.55
+DESK_W, DESK_Y, BODY_H = 300, 620, 70
+desk_x = RES_X + (RES_W - DESK_W) / 2
+b += [connector(RES_X + RES_W / 2, RES_Y + RES_H, RES_X + RES_W / 2, DESK_Y - 143 * MS + 6, head=False)]
+b += [mascot(desk_x + (DESK_W - 240 * MS) / 2, DESK_Y - 143 * MS, MS),
+      desk(desk_x, DESK_Y, DESK_W, "내 프로젝트", body_h=BODY_H, label_size=26)]
 
 print(save("s7-library-toolbox.svg", b, "7/9 라이브러리 = 남이 써둔 코드 (tools/illus/s7_library_toolbox.py)"))

@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
 <defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter></defs>
-<rect x="40" y="40" width="740" height="780" rx="22" fill="#f3f8fd" stroke="#e5e5e5" stroke-width="2"/>
 <text x="410" y="98" font-size="32" fill="#101113" font-weight="900" text-anchor="middle">CLI</text>
 <text x="410" y="134" font-size="22" fill="#5b6167" text-anchor="middle">Command Line Interface</text>
 <rect x="130" y="200" width="560" height="330" rx="18" fill="#0c0d0e" filter="url(#sh)"/>
@@ -15,7 +14,6 @@
 <text x="410" y="600" font-size="24" fill="#43474b" text-anchor="middle">글자로 정확히 지시</text>
 <circle cx="740" cy="60" r="26" fill="#1273c4" stroke="#fff" stroke-width="3"/>
 <text x="740" y="70" font-size="26" font-weight="800" fill="#fff" text-anchor="middle">1</text>
-<rect x="820" y="40" width="740" height="780" rx="22" fill="#fdf6f6" stroke="#e5e5e5" stroke-width="2"/>
 <text x="1190" y="98" font-size="32" fill="#101113" font-weight="900" text-anchor="middle">GUI</text>
 <text x="1190" y="134" font-size="22" fill="#5b6167" text-anchor="middle">Graphic User Interface</text>
 <rect x="910" y="200" width="560" height="330" rx="14" fill="#fff" stroke="#c9ccd1" stroke-width="2" filter="url(#sh)"/>

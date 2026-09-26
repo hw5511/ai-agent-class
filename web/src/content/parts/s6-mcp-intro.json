@@ -74,24 +74,6 @@
       ]
     },
     {
-      "id": "s6-mcp-intro-04",
-      "template": "illustration",
-      "title": "버튼 시동 vs 전선 직결",
-      "illustration": "/illustrations/s6-car-api.svg",
-      "notes": [
-        {
-          "n": 1,
-          "head": "버튼 시동",
-          "body": "왼쪽 자동차는 화면 버튼 하나만 눌러도 부릉 하고 시동이 걸려요. 방법을 몰라도 버튼만 누르면 되니까 훨씬 쉽습니다."
-        },
-        {
-          "n": 2,
-          "head": "전선 직결 = API",
-          "body": "오른쪽처럼 배선 커버를 열어 전선을 직접 연결해서 시동을 거는 것이 API 라고 생각하면 됩니다. 같은 결과를 얻지만 규칙을 알고 직접 손을 대야 하는 방식이에요."
-        }
-      ]
-    },
-    {
       "id": "s6-mcp-intro-05",
       "template": "illustration",
       "title": "명령어 모음집 = MCP",

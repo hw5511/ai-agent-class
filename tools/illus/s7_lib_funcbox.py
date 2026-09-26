@@ -1,32 +1,35 @@
-"""7/12 함수 상자: a black box on a desk with two example runs passing through it (1 -> 4, 2 -> 5) and
-the rule (+3) written on the outside - the mascot never needs to know what happens inside."""
+"""7/12 함수 상자: a structured diagram - one function box on a centre column, two aligned input/output
+rows passing straight through it (1 -> 4, 2 -> 5), and the rule written in a plain accent-bordered box
+underneath. One small mascot + desk sits below, clear of every label."""
 import os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from illuskit import *
 
-b = [panel()]
+b = []
 
-BOX_X, BOX_Y, BOX_W, BOX_H = 780, 150, 260, 330
-b += [part_box(BOX_X, BOX_Y, BOX_W, BOX_H, None, fill=INK2, stroke=INK)]
-b += [text(BOX_X + BOX_W / 2, BOX_Y + BOX_H / 2 - 24, "?", 90, 900, "#fff"),
-      text(BOX_X + BOX_W / 2, BOX_Y + BOX_H / 2 + 44, "내부는 몰라도 됨", 22, 700, "#c9ccd1")]
+BOX_X, BOX_Y, BOX_W, BOX_H = 780, 320, 260, 220
+b += [part_box(BOX_X, BOX_Y, BOX_W, BOX_H, None, fill=INK2, stroke=INK2)]
+b += [text(BOX_X + BOX_W / 2, BOX_Y + BOX_H / 2 - 16, "?", 72, 900, "#fff"),
+      text(BOX_X + BOX_W / 2, BOX_Y + BOX_H / 2 + 36, "내부는 몰라도 됨", 24, 700, "#c9ccd1")]
 
-lanes = [(150, "1", "4", ACCENT, "#eaf3fb", 1), (380, "2", "5", GREEN, "#d9f2e3", 2)]
-for cy, in_n, out_n, color, fill, badge_n in lanes:
-    b += [part_box(180, cy - 50, 130, 100, in_n, fill=fill, stroke=color, label_size=48, label_color=color),
-          part_box(1490, cy - 50, 130, 100, out_n, fill=fill, stroke=color, label_size=48, label_color=color)]
-    b += [path(f"M310 {cy}C480 {cy} 610 {cy} {BOX_X} {cy}", width=6, color=color)]
-    b += [path(f"M{BOX_X + BOX_W} {cy}C{BOX_X + BOX_W + 190} {cy} 1320 {cy} 1490 {cy}", width=6, color=color)]
-    b += [badge(180, cy - 86, badge_n)]
+IN_X, OUT_X, ROW_W, ROW_H = 150, 1440, 150, 100
+lanes = [(BOX_Y + 55, "1", "4", 1), (BOX_Y + 165, "2", "5", 2)]
+for cy, in_n, out_n, badge_n in lanes:
+    b += [part_box(IN_X, cy - ROW_H / 2, ROW_W, ROW_H, in_n, fill="#fff", stroke="#e5e5e5", label_size=44, label_color=INK),
+          part_box(OUT_X, cy - ROW_H / 2, ROW_W, ROW_H, out_n, fill="#fff", stroke="#e5e5e5", label_size=44, label_color=INK)]
+    b += [connector(IN_X + ROW_W, cy, BOX_X, cy), connector(BOX_X + BOX_W, cy, OUT_X, cy)]
+    b += [badge(IN_X - 44, cy, badge_n)]
 
-b += [part_box(BOX_X - 30, 530, BOX_W + 60, 84, "규칙: 항상 +3", fill="#fff", stroke=ACCENT, label_size=32, label_color=ACCENT)]
-b += [badge(BOX_X + BOX_W + 66, 572, 3)]
+RULE_X, RULE_Y, RULE_W, RULE_H = BOX_X - 30, 548, BOX_W + 60, 56
+b += [part_box(RULE_X, RULE_Y, RULE_W, RULE_H, "규칙: 항상 +3", fill="#fff", stroke=ACCENT, label_size=30, label_color=ACCENT_DARK)]
+b += [connector(BOX_X + BOX_W / 2, BOX_Y + BOX_H, BOX_X + BOX_W / 2, RULE_Y, head=False)]
+bx3, by3 = RULE_X + RULE_W + 34, RULE_Y + RULE_H / 2
+b += [badge(bx3, by3, 3), text(bx3 + 34, by3 + 8, "수식 몰라도 설명 가능", 24, 600, MUTED, anchor="start")]
 
-MASCOT_X = 1180
-DESK_W, DESK_Y = 560, 664
-DESK_X = MASCOT_X - (DESK_W - 240) / 2
-MS = 1.0
-b += [mascot(MASCOT_X, DESK_Y - 143 * MS, MS),
-      desk(DESK_X, DESK_Y, DESK_W, "함수 상자 사용법", body_h=130, label_size=32)]
+MS = 0.45
+DESK_W, DESK_Y, BODY_H = 260, 700, 30
+desk_x = BOX_X + BOX_W / 2 - DESK_W / 2
+b += [mascot(desk_x + (DESK_W - 240 * MS) / 2, DESK_Y - 143 * MS, MS),
+      desk(desk_x, DESK_Y, DESK_W, None, body_h=BODY_H)]
 
 print(save("s7-lib-funcbox.svg", b, "7/12 함수 상자 · 내부 몰라도 규칙은 앎 (tools/illus/s7_lib_funcbox.py)"))

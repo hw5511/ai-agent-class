@@ -7,8 +7,7 @@
   <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
   <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
 </defs>
-<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
-<rect x="58" y="66" width="800" height="668" rx="26" fill="#eaf3fb"/>
+
 <text x="458" y="128" font-size="36" font-weight="900" fill="#0d5c9e" text-anchor="middle">웹 커넥터</text>
 <g filter="url(#sh)"><rect x="128" y="160" width="660" height="150" rx="16" fill="#fff" stroke="#c9ccd1" stroke-width="2"/></g>
 <path d="M129 212V176a15 15 0 0 1 15-15h628a15 15 0 0 1 15 15V212z" fill="#eef1f4"/>
@@ -53,7 +52,6 @@
 </g>
 <text x="691" y="720" font-size="26" font-weight="800" fill="#101113" text-anchor="middle">구글 캘린더</text>
 <text x="458" y="480" font-size="26" font-weight="800" fill="#0d5c9e" text-anchor="middle">전부 클라우드에서</text>
-<rect x="920" y="66" width="812" height="668" rx="26" fill="#fff6f0"/>
 <text x="1326" y="128" font-size="36" font-weight="900" fill="#d97757" text-anchor="middle">로컬 MCP</text>
 <g filter="url(#sh)"><rect x="980" y="168" width="560" height="300" rx="16" fill="#fff" stroke="#c9ccd1" stroke-width="2"/></g>
 <path d="M981 220V184a15 15 0 0 1 15-15h528a15 15 0 0 1 15 15V220z" fill="#eef1f4"/>

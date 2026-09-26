@@ -83,12 +83,22 @@ def save(name: str, body: list[str] | str, comment: str = "") -> str:
 
 
 # ---------- frame and zones ----------
+# 2026-09-26 (CEO "회색박스 둥근모서리" 제거): illustrations sit directly on the
+# white slide now, so panel() no longer draws the grey rounded stage, and
+# zone() no longer draws its tinted rounded background when called with one
+# of the standard tint fills. Signatures are unchanged so existing call
+# sites keep working untouched.
+_ZONE_TINTS = {PANEL, ACCENT_ZONE, WARM_ZONE}
+
+
 def panel() -> str:
-    """The light rounded stage the 5/2 benchmark sits on."""
-    return f'<rect x="16" y="16" width="{W - 32}" height="{H - 32}" rx="28" fill="{PANEL}" stroke="#e5e5e5" stroke-width="2"/>'
+    """Formerly drew the light rounded stage under every illustration; now a no-op."""
+    return ""
 
 
 def zone(x, y, w, h, fill=ACCENT_ZONE, rx=26) -> str:
+    if fill in _ZONE_TINTS:
+        return ""
     return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="{fill}"/>'
 
 
@@ -391,6 +401,24 @@ def brand_icon(name, x, y, size=64) -> str:
     ox = x + (size - vb_w * s) / 2 - vb_x * s
     oy = y + (size - vb_h * s) / 2 - vb_y * s
     return f'<g transform="translate({ox} {oy}) scale({s})">{inner}</g>'
+
+
+def connector(x1, y1, x2, y2, color="#9aa0a6", width=2.5, head=True, head_size=9) -> str:
+    """A thin, straight, neutral-grey connector for structured/diagram-style slides (owner 2026-09-26:
+    aligned boxes, one flow direction, thin connectors instead of swooping arrows) - a plain line with
+    at most a small filled triangular head at the end. This is not the deck's thick path() travel arrow
+    (see ARROW-NOTE) and should only be used where a slide is explicitly asked to look like a structured
+    diagram rather than a scene."""
+    import math
+    out = [f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{color}" stroke-width="{width}" stroke-linecap="round"/>']
+    if head:
+        ang = math.atan2(y2 - y1, x2 - x1)
+        hx, hy = x2, y2
+        bx, by = hx - head_size * 1.6 * math.cos(ang), hy - head_size * 1.6 * math.sin(ang)
+        px, py = -math.sin(ang), math.cos(ang)
+        pts = f"M{hx:.1f} {hy:.1f}L{bx + head_size * px:.1f} {by + head_size * py:.1f}L{bx - head_size * px:.1f} {by - head_size * py:.1f}Z"
+        out.append(f'<path d="{pts}" fill="{color}"/>')
+    return "".join(out)
 
 
 def brand_tile(x, y, size=64, pad=10, fill="#fff") -> str:

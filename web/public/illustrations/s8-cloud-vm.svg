@@ -7,7 +7,6 @@
   <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
   <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
 </defs>
-<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
 <g filter="url(#shs)"><rect x="120" y="468" width="196" height="123.48" rx="12" fill="#2b2f35"/><rect x="130" y="478" width="176" height="103.48" rx="6" fill="#f4f8fc"/></g><g transform="translate(130 478)"><rect x="0" y="0" width="176" height="103" fill="#101113"/></g><rect x="106" y="587.48" width="224" height="10" rx="5" fill="#c3c9cf"/>
 <text x="226" y="424" font-size="26" font-weight="700" fill="#5b6570" text-anchor="middle">전원 꺼짐</text>
 <circle cx="322" cy="420" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="322" y="430.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
@@ -15,7 +14,6 @@
 <rect x="74" y="636" width="308" height="150" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
 <rect x="137.5" y="702" width="181" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
 <text x="228.0" y="742" font-size="28" font-weight="900" fill="#101113" text-anchor="middle">내 컴퓨터</text>
-<rect x="430" y="66" width="740" height="706" rx="26" fill="#eaf3fb"/>
 <text x="650" y="118" font-size="38" font-weight="900" fill="#0d5c9e" text-anchor="start">클라우드 세션</text>
 <text x="650" y="154" font-size="24" font-weight="700" fill="#5b6570" text-anchor="start">빌려 쓰는 컴퓨터</text>
 <g filter="url(#sh)"><rect x="760" y="372" width="300" height="220" rx="16" fill="#fff" stroke="#c9ccd1" stroke-width="2"/></g>

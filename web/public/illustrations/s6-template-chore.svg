@@ -7,113 +7,65 @@
   <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
   <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
 </defs>
-<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
-<rect x="66" y="90" width="430" height="620" rx="26" fill="#eaf3fb"/>
-<text x="281" y="148" font-size="32" font-weight="900" fill="#0d5c9e" text-anchor="middle">템플릿 갤러리</text>
-<rect x="96" y="178" width="172" height="148" rx="14" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#shs)"/>
-<rect x="96" y="178" width="172" height="34" rx="14" fill="#1273c4"/>
-<rect x="96" y="196" width="172" height="16" fill="#1273c4"/>
-<rect x="112" y="244" width="140" height="8" rx="4" fill="#d5d8dc"/>
-<rect x="112" y="266" width="84.0" height="8" rx="4" fill="#d5d8dc"/>
-<text x="182.0" y="306" font-size="22" font-weight="800" fill="#101113" text-anchor="middle">여행 일정</text>
-<rect x="288" y="178" width="172" height="148" rx="14" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#shs)"/>
-<rect x="288" y="178" width="172" height="34" rx="14" fill="#12a150"/>
-<rect x="288" y="196" width="172" height="16" fill="#12a150"/>
-<rect x="304" y="244" width="140" height="8" rx="4" fill="#d5d8dc"/>
-<rect x="304" y="266" width="84.0" height="8" rx="4" fill="#d5d8dc"/>
-<text x="374.0" y="306" font-size="22" font-weight="800" fill="#101113" text-anchor="middle">가계부</text>
-<rect x="96" y="346" width="172" height="148" rx="14" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#shs)"/>
-<rect x="96" y="346" width="172" height="34" rx="14" fill="#d97757"/>
-<rect x="96" y="364" width="172" height="16" fill="#d97757"/>
-<rect x="112" y="412" width="140" height="8" rx="4" fill="#d5d8dc"/>
-<rect x="112" y="434" width="84.0" height="8" rx="4" fill="#d5d8dc"/>
-<text x="182.0" y="474" font-size="22" font-weight="800" fill="#101113" text-anchor="middle">회의록</text>
-<rect x="288" y="346" width="172" height="148" rx="14" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#shs)"/>
-<rect x="288" y="346" width="172" height="34" rx="14" fill="#5aa0dc"/>
-<rect x="288" y="364" width="172" height="16" fill="#5aa0dc"/>
-<rect x="304" y="412" width="140" height="8" rx="4" fill="#d5d8dc"/>
-<rect x="304" y="434" width="84.0" height="8" rx="4" fill="#d5d8dc"/>
-<text x="374.0" y="474" font-size="22" font-weight="800" fill="#101113" text-anchor="middle">다이어트</text>
-<rect x="96" y="514" width="172" height="148" rx="14" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#shs)"/>
-<rect x="96" y="514" width="172" height="34" rx="14" fill="#d64545"/>
-<rect x="96" y="532" width="172" height="16" fill="#d64545"/>
-<rect x="112" y="580" width="140" height="8" rx="4" fill="#d5d8dc"/>
-<rect x="112" y="602" width="84.0" height="8" rx="4" fill="#d5d8dc"/>
-<text x="182.0" y="642" font-size="22" font-weight="800" fill="#101113" text-anchor="middle">독서 기록</text>
-<rect x="288" y="514" width="172" height="148" rx="14" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#shs)"/>
-<rect x="288" y="514" width="172" height="34" rx="14" fill="#0d5c9e"/>
-<rect x="288" y="532" width="172" height="16" fill="#0d5c9e"/>
-<rect x="304" y="580" width="140" height="8" rx="4" fill="#d5d8dc"/>
-<rect x="304" y="602" width="84.0" height="8" rx="4" fill="#d5d8dc"/>
-<text x="374.0" y="642" font-size="22" font-weight="800" fill="#101113" text-anchor="middle">운동 계획</text>
-<circle cx="474" cy="122" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="474" y="132.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
-<rect x="560" y="700" width="320" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
-<rect x="576" y="724" width="288" height="90" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
-<path transform="translate(600 542.7) scale(1.1)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
-<path transform="translate(808 516.7) scale(1.25)" d="M0 0C7 10 12 17 12 23a12 12 0 1 1-24 0C-12 17-7 10 0 0Z" fill="#5aa0dc"/>
-<text x="718" y="486.70000000000005" font-size="30" font-weight="800" fill="#5b6570" text-anchor="middle">휴우...</text>
-<g transform="translate(850 360) scale(1.0)" filter="url(#shs)">
-<rect x="0" y="0" width="180" height="232" rx="12" fill="#fff" stroke="#aeb3ba" stroke-width="2.4"/>
-<rect x="18" y="22" width="90" height="14" rx="4" fill="#2b2f35"/>
-<rect x="18" y="64" width="144" height="4" fill="#d5d8dc"/>
-<rect x="18" y="76" width="144" height="20" rx="4" fill="none" stroke="#c9ccd1" stroke-width="2" stroke-dasharray="4 6"/>
-<rect x="18" y="100" width="144" height="4" fill="#d5d8dc"/>
-<rect x="18" y="112" width="144" height="20" rx="4" fill="none" stroke="#c9ccd1" stroke-width="2" stroke-dasharray="4 6"/>
-<rect x="18" y="136" width="144" height="4" fill="#d5d8dc"/>
-<rect x="18" y="148" width="144" height="20" rx="4" fill="none" stroke="#c9ccd1" stroke-width="2" stroke-dasharray="4 6"/>
-<rect x="18" y="172" width="144" height="4" fill="#d5d8dc"/>
-<rect x="18" y="184" width="144" height="20" rx="4" fill="none" stroke="#c9ccd1" stroke-width="2" stroke-dasharray="4 6"/>
-</g>
-<g transform="translate(876 340) scale(1.0)" filter="url(#shs)">
-<rect x="0" y="0" width="180" height="232" rx="12" fill="#fff" stroke="#aeb3ba" stroke-width="2.4"/>
-<rect x="18" y="22" width="90" height="14" rx="4" fill="#2b2f35"/>
-<rect x="18" y="64" width="144" height="4" fill="#d5d8dc"/>
-<rect x="18" y="76" width="144" height="20" rx="4" fill="none" stroke="#c9ccd1" stroke-width="2" stroke-dasharray="4 6"/>
-<rect x="18" y="100" width="144" height="4" fill="#d5d8dc"/>
-<rect x="18" y="112" width="144" height="20" rx="4" fill="none" stroke="#c9ccd1" stroke-width="2" stroke-dasharray="4 6"/>
-<rect x="18" y="136" width="144" height="4" fill="#d5d8dc"/>
-<rect x="18" y="148" width="144" height="20" rx="4" fill="none" stroke="#c9ccd1" stroke-width="2" stroke-dasharray="4 6"/>
-<rect x="18" y="172" width="144" height="4" fill="#d5d8dc"/>
-<rect x="18" y="184" width="144" height="20" rx="4" fill="none" stroke="#c9ccd1" stroke-width="2" stroke-dasharray="4 6"/>
-</g>
-<g transform="translate(902 320) scale(1.0)" filter="url(#shs)">
-<rect x="0" y="0" width="180" height="232" rx="12" fill="#fff" stroke="#aeb3ba" stroke-width="2.4"/>
-<rect x="18" y="22" width="90" height="14" rx="4" fill="#2b2f35"/>
-<rect x="18" y="64" width="144" height="4" fill="#d5d8dc"/>
-<rect x="18" y="76" width="144" height="20" rx="4" fill="none" stroke="#c9ccd1" stroke-width="2" stroke-dasharray="4 6"/>
-<rect x="18" y="100" width="144" height="4" fill="#d5d8dc"/>
-<rect x="18" y="112" width="144" height="20" rx="4" fill="none" stroke="#c9ccd1" stroke-width="2" stroke-dasharray="4 6"/>
-<rect x="18" y="136" width="144" height="4" fill="#d5d8dc"/>
-<rect x="18" y="148" width="144" height="20" rx="4" fill="none" stroke="#c9ccd1" stroke-width="2" stroke-dasharray="4 6"/>
-<rect x="18" y="172" width="144" height="4" fill="#d5d8dc"/>
-<rect x="18" y="184" width="144" height="20" rx="4" fill="none" stroke="#c9ccd1" stroke-width="2" stroke-dasharray="4 6"/>
-</g>
-<text x="946" y="282" font-size="30" font-weight="900" fill="#101113" text-anchor="middle">채우기 귀찮음</text>
-<circle cx="1060" cy="296" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1060" y="306.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
-<path d="M1060 420C1190 470 1270 460 1310 440" fill="none" stroke="#cdeedb" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1060 420C1190 470 1270 460 1310 440" fill="none" stroke="#12a150" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M1310.0 440.0L1293.8 469.0L1277.0 435.6Z" fill="#12a150" stroke="#12a150" stroke-width="7" stroke-linejoin="round"/>
-<rect x="1140" y="650" width="560" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
-<rect x="1156" y="674" width="528" height="116" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
-<rect x="1299.5" y="740" width="241" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
-<text x="1420.0" y="780" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">Claude</text>
-<path transform="translate(1180 507) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
-<g transform="translate(1470 460) scale(1.0)" filter="url(#shs)">
-<rect x="0" y="0" width="180" height="232" rx="12" fill="#fff" stroke="#aeb3ba" stroke-width="2.4"/>
-<rect x="18" y="22" width="90" height="14" rx="4" fill="#2b2f35"/>
-<rect x="18" y="64" width="144" height="4" fill="#d5d8dc"/>
-<rect x="18" y="76" width="144" height="20" rx="4" fill="#12a150" opacity="0.16"/>
-<rect x="18" y="76" width="144" height="20" rx="4" fill="none" stroke="#12a150" stroke-width="2.6"/>
-<rect x="18" y="100" width="144" height="4" fill="#d5d8dc"/>
-<rect x="18" y="112" width="144" height="20" rx="4" fill="#12a150" opacity="0.16"/>
-<rect x="18" y="112" width="144" height="20" rx="4" fill="none" stroke="#12a150" stroke-width="2.6"/>
-<rect x="18" y="136" width="144" height="4" fill="#d5d8dc"/>
-<rect x="18" y="148" width="144" height="20" rx="4" fill="#12a150" opacity="0.16"/>
-<rect x="18" y="148" width="144" height="20" rx="4" fill="none" stroke="#12a150" stroke-width="2.6"/>
-<rect x="18" y="172" width="144" height="4" fill="#d5d8dc"/>
-<rect x="18" y="184" width="144" height="20" rx="4" fill="#12a150" opacity="0.16"/>
-<rect x="18" y="184" width="144" height="20" rx="4" fill="none" stroke="#12a150" stroke-width="2.6"/>
-</g>
-<circle cx="1665" cy="465" r="28" fill="#12a150"/><path d="M1653.24 465.56l8.4 8.4 15.680000000000001-16.8" fill="none" stroke="#fff" stroke-width="5.6000000000000005" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="1630" y="410" font-size="30" font-weight="900" fill="#12a150" text-anchor="end">AI 가 대신 채움</text>
-<circle cx="1666" cy="400" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1666" y="410.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<rect x="64" y="56" width="1664" height="698" rx="18" fill="#fff" stroke="#e9e9e7" stroke-width="2"/>
+<rect x="100" y="88" width="26" height="20.8" rx="4" fill="none" stroke="#787774" stroke-width="2"/><line x1="108.84" y1="88" x2="108.84" y2="108.8" stroke="#787774" stroke-width="2"/>
+<path transform="translate(148 82) scale(0.16)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<text x="202" y="112" font-size="34" font-weight="800" fill="#37352f" text-anchor="start">여행 계획</text>
+<circle cx="1670" cy="100" r="3.4" fill="#787774"/><circle cx="1681" cy="100" r="3.4" fill="#787774"/><circle cx="1692" cy="100" r="3.4" fill="#787774"/>
+<line x1="100" y1="150" x2="1692" y2="150" stroke="#e9e9e7" stroke-width="2"/>
+<text x="100" y="184" font-size="24" font-weight="500" fill="#787774" text-anchor="start">'/' 를 입력해 명령어 사용</text>
+<text x="100" y="256" font-size="26" font-weight="800" fill="#37352f" text-anchor="start">템플릿 갤러리</text>
+<circle cx="288" cy="242" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="288" y="252.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<rect x="100" y="284" width="195" height="170" rx="8" fill="#fff" stroke="#e9e9e7" stroke-width="1.6"/>
+<rect x="100" y="284" width="195" height="100" rx="8" fill="#f1f1ef"/>
+<rect x="100" y="368" width="195" height="16" fill="#f1f1ef"/>
+<text x="118" y="418" font-size="22" font-weight="700" fill="#37352f" text-anchor="start">여행 일정</text>
+<rect x="315" y="284" width="195" height="170" rx="8" fill="#fff" stroke="#e9e9e7" stroke-width="1.6"/>
+<rect x="315" y="284" width="195" height="100" rx="8" fill="#f1f1ef"/>
+<rect x="315" y="368" width="195" height="16" fill="#f1f1ef"/>
+<text x="333" y="418" font-size="22" font-weight="700" fill="#37352f" text-anchor="start">가계부</text>
+<rect x="530" y="284" width="195" height="170" rx="8" fill="#fff" stroke="#e9e9e7" stroke-width="1.6"/>
+<rect x="530" y="284" width="195" height="100" rx="8" fill="#f1f1ef"/>
+<rect x="530" y="368" width="195" height="16" fill="#f1f1ef"/>
+<text x="548" y="418" font-size="22" font-weight="700" fill="#37352f" text-anchor="start">회의록</text>
+<rect x="100" y="474" width="195" height="170" rx="8" fill="#fff" stroke="#e9e9e7" stroke-width="1.6"/>
+<rect x="100" y="474" width="195" height="100" rx="8" fill="#f1f1ef"/>
+<rect x="100" y="558" width="195" height="16" fill="#f1f1ef"/>
+<text x="118" y="608" font-size="22" font-weight="700" fill="#37352f" text-anchor="start">다이어트</text>
+<rect x="315" y="474" width="195" height="170" rx="8" fill="#fff" stroke="#e9e9e7" stroke-width="1.6"/>
+<rect x="315" y="474" width="195" height="100" rx="8" fill="#f1f1ef"/>
+<rect x="315" y="558" width="195" height="16" fill="#f1f1ef"/>
+<text x="333" y="608" font-size="22" font-weight="700" fill="#37352f" text-anchor="start">독서 기록</text>
+<rect x="530" y="474" width="195" height="170" rx="8" fill="#fff" stroke="#e9e9e7" stroke-width="1.6"/>
+<rect x="530" y="474" width="195" height="100" rx="8" fill="#f1f1ef"/>
+<rect x="530" y="558" width="195" height="16" fill="#f1f1ef"/>
+<text x="548" y="608" font-size="22" font-weight="700" fill="#37352f" text-anchor="start">운동 계획</text>
+<text x="830" y="256" font-size="26" font-weight="800" fill="#787774" text-anchor="start">여행 DB</text>
+<text x="846" y="311" font-size="22" font-weight="800" fill="#787774" text-anchor="start">목적지</text>
+<text x="1146" y="311" font-size="22" font-weight="800" fill="#787774" text-anchor="start">예산</text>
+<text x="1321" y="311" font-size="22" font-weight="800" fill="#787774" text-anchor="start">날짜</text>
+<line x1="830" y1="324" x2="1480" y2="324" stroke="#e9e9e7" stroke-width="1.6"/>
+<line x1="830" y1="284" x2="830" y2="644" stroke="#e9e9e7" stroke-width="1.2"/>
+<line x1="1130" y1="284" x2="1130" y2="644" stroke="#e9e9e7" stroke-width="1.2"/>
+<line x1="1305" y1="284" x2="1305" y2="644" stroke="#e9e9e7" stroke-width="1.2"/>
+<line x1="1480" y1="284" x2="1480" y2="644" stroke="#e9e9e7" stroke-width="1.2"/>
+<line x1="830" y1="404" x2="1480" y2="404" stroke="#e9e9e7" stroke-width="1.2"/>
+<line x1="830" y1="484" x2="1480" y2="484" stroke="#e9e9e7" stroke-width="1.2"/>
+<line x1="830" y1="564" x2="1480" y2="564" stroke="#e9e9e7" stroke-width="1.2"/>
+<line x1="830" y1="284" x2="830" y2="284" stroke="none"/>
+<text x="846" y="372" font-size="22" font-weight="500" fill="#bdbdb8" text-anchor="start">비어 있음</text>
+<text x="846" y="452" font-size="22" font-weight="500" fill="#bdbdb8" text-anchor="start">비어 있음</text>
+<circle cx="1435" cy="364.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1435" y="374.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<rect x="830" y="484" width="4" height="80" fill="#1273c4"/>
+<text x="846" y="532" font-size="22" font-weight="700" fill="#37352f" text-anchor="start">바르셀로나</text>
+<text x="1146" y="532" font-size="22" font-weight="700" fill="#37352f" text-anchor="start">150만원</text>
+<text x="1321" y="532" font-size="22" font-weight="700" fill="#37352f" text-anchor="start">10/12</text>
+<rect x="830" y="564" width="4" height="80" fill="#1273c4"/>
+<text x="846" y="612" font-size="22" font-weight="700" fill="#37352f" text-anchor="start">도쿄</text>
+<text x="1146" y="612" font-size="22" font-weight="700" fill="#37352f" text-anchor="start">80만원</text>
+<text x="1321" y="612" font-size="22" font-weight="700" fill="#37352f" text-anchor="start">11/03</text>
+<line x1="833.0" y1="682" x2="847.0" y2="682" stroke="#787774" stroke-width="2.4" stroke-linecap="round"/><line x1="840" y1="675.0" x2="840" y2="689.0" stroke="#787774" stroke-width="2.4" stroke-linecap="round"/>
+<text x="860" y="688" font-size="22" font-weight="500" fill="#787774" text-anchor="start">새 페이지</text>
+<path transform="translate(1515 512.52) scale(0.72)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<circle cx="1601.4" cy="467.52" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1601.4" y="478.12" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
 </svg>

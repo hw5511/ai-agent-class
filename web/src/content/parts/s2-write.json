@@ -444,8 +444,7 @@
               },
               {
                 "role": "assistant",
-                "text": "Bash(start poster.html)",
-                "badge": 2
+                "text": "Bash(start poster.html)"
               },
               {
                 "role": "assistant",
@@ -465,13 +464,13 @@
       "notes": [
         {
           "n": 1,
-          "head": "요청을 그대로 실행",
-          "body": "1번 배지의 요청대로 Claude가 포스터를 만들고 이어서 크롬으로 여는 작업까지 한 번에 수행합니다."
+          "head": "요청 하나로 작성부터 실행까지",
+          "body": "1번 배지의 요청대로 poster.html을 Write로 만들고 Bash(start poster.html)로 크롬까지 자동으로 엽니다."
         },
         {
           "n": 2,
-          "head": "Bash로 자동 실행까지",
-          "body": "2번 배지처럼 poster.html을 Write로 만든 뒤 Bash(start poster.html)를 실행해서 크롬 창을 자동으로 띄웁니다."
+          "head": "크롬에 뜬 포스터",
+          "body": "2번 배지는 크롬에서 열린 poster.html 결과 화면입니다."
         },
         {
           "n": "!",
@@ -521,11 +520,16 @@
       "notes": [
         {
           "n": 1,
-          "head": "Windows는 그대로 입력",
+          "head": "Windows는 프롬프트 그대로 입력",
           "body": "Windows에서는 화면의 프롬프트를 그대로 입력하면 파이썬과 tkinter 설치부터 계산기 실행까지 한 번에 진행됩니다."
         },
         {
           "n": 2,
+          "head": "calculator.py 실행 결과",
+          "body": "2번 배지는 계산기 프로그램을 실행해서 뜬 계산기 창입니다."
+        },
+        {
+          "n": "!",
           "head": "macOS 미실행 시 대응",
           "body": "맥에서 tkinter 창이 뜨지 않으면 아래 macOS 오류 시 프롬프트를 그대로 입력해서 python-tk를 설치하고 계산기를 다시 실행하면 됩니다."
         }
@@ -581,8 +585,7 @@
               },
               {
                 "role": "assistant",
-                "text": "Write(calculator.py)",
-                "badge": 2
+                "text": "Write(calculator.py)"
               },
               {
                 "role": "assistant",
@@ -607,12 +610,12 @@
         {
           "n": 1,
           "head": "설치, 생성, 실행을 한 번에 요청",
-          "body": "1번 배지의 요청 하나로 파이썬과 tkinter 설치부터 계산기 프로그램 작성까지 Claude에게 맡깁니다."
+          "body": "1번 배지의 요청 하나로 파이썬과 tkinter 설치부터 Write로 calculator.py 작성, Bash(python calculator.py) 실행까지 Claude가 이어서 처리합니다."
         },
         {
           "n": 2,
-          "head": "생성부터 실행까지 한 번에",
-          "body": "2번 배지처럼 Write로 calculator.py 파일을 만든 뒤 Bash(python calculator.py)를 실행해서 계산기 창을 바로 띄웁니다."
+          "head": "계산기 창 실행 결과",
+          "body": "2번 배지는 계산기 프로그램을 실행해서 뜬 계산기 창입니다."
         }
       ]
     },
@@ -654,8 +657,7 @@
               },
               {
                 "role": "assistant",
-                "text": "Write(tetris.py)",
-                "badge": 2
+                "text": "Write(tetris.py)"
               },
               {
                 "role": "assistant",
@@ -680,12 +682,12 @@
         {
           "n": 1,
           "head": "같은 방식으로 또 요청",
-          "body": "1번 배지처럼 같은 방식으로 간단한 테트리스 만들어줘라는 말만으로도 Claude가 앞선 대화 맥락을 이어서 새 프로그램을 만들어줍니다."
+          "body": "1번 배지처럼 같은 방식으로 간단한 테트리스 만들어줘라는 말만으로도 Claude가 앞선 대화 맥락을 이어서 Write로 tetris.py를 만들고 Bash(python tetris.py)로 실행까지 처리합니다."
         },
         {
           "n": 2,
-          "head": "게임도 코드로 제작 가능",
-          "body": "2번 배지처럼 Write로 tetris.py 파일을 만들고 Bash(python tetris.py)로 실행하면 게임도 파이썬 파일 하나로 창이 열립니다."
+          "head": "테트리스 창 실행 결과",
+          "body": "2번 배지는 테트리스 게임을 실행해서 뜬 게임 창입니다."
         }
       ],
       "action": {
