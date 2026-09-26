@@ -53,9 +53,9 @@ Seven top-level sections, matching the template's chapters:
 ```json
 {
   "cover":      {"title": "...", "subtitle": "...", "report_no": "RPT-2026-017",
-                 "date": "2026년 09월 26일", "author": "양희우 / 기획팀",
+                 "date": "2026년 09월 26일", "author": "홍길동 / 기획팀",
                  "recipient": "김부장 / 경영기획실", "grade": "대외비",
-                 "company": "우희인더스트리", "department": "기획팀"},
+                 "company": "한빛상사", "department": "기획팀"},
   "overview":   {"background": "...", "scope_desc": "...", "scope_items": ["...", "..."]},
   "analysis":   {"current_desc": "...", "table_caption": "현황 데이터 요약",
                  "table_rows": [{"item": "결제 전환율", "current": "1.9%", "target": "3.0%", "rate": "63%"}],
@@ -66,7 +66,7 @@ Seven top-level sections, matching the template's chapters:
                  "budget_desc": "..."},
   "effects":    {"intro": "...", "quantitative": ["매출 증가: ...", "비용 절감: ..."], "qualitative": "..."},
   "conclusion": {"summary": "...", "recommend_desc": "...", "recommendations": ["...", "..."],
-                 "approval": {"작성자": {"name": "양희우", "position": "기획팀 대리", "sign": "", "date": "2026-09-26"},
+                 "approval": {"작성자": {"name": "홍길동", "position": "기획팀 대리", "sign": "", "date": "2026-09-26"},
                               "검토자": {"name": "김부장", "position": "경영기획실 부장", "sign": "", "date": ""},
                               "승인자": {"name": "박대표", "position": "대표이사", "sign": "", "date": ""}}},
   "appendix":   {"desc": "...", "items": ["...", "..."]}
@@ -167,14 +167,14 @@ produced it is kept in `assets/build_notice_template.js` only for template redes
   "post_date": "2026. 09. 26.",
   "department": "경영지원팀",
   "period": "2026. 09. 26. ~ 2026. 10. 17.",
-  "contact": "양희우 / 내선 204",
+  "contact": "홍길동 / 내선 204",
   "overview": "개요 문단 (필수)",
   "details": [{"label": "일시", "value": "2026. 10. 17. (금)  09:30 ~ 17:00"},
               {"label": "장소", "value": "본사 3층 대회의실"}],
   "notes": ["유의사항 1", "유의사항 2"],
   "image": "photo.jpg",
   "sign_date": "2026. 09. 26.",
-  "company": "우희인더스트리 주식회사",
+  "company": "한빛상사 주식회사",
   "sign_department": "경영지원팀",
   "footer_note": "본 공지는 사내 게시용이며 외부 반출을 금합니다."
 }

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- A1/2 AI 작동 원리 · 지시사항 -> 스크립트 작성 -> bash 실행 (tools/illus/a1_why_flow.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+<circle cx="98" cy="260" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="98" y="270.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<text x="136" y="270" font-size="32" font-weight="900" fill="#101113" text-anchor="start">지시사항</text>
+<text x="136" y="304" font-size="24" font-weight="600" fill="#5b6570" text-anchor="start">자연어로 요청</text>
+<circle cx="658" cy="260" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="658" y="270.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<text x="696" y="270" font-size="32" font-weight="900" fill="#101113" text-anchor="start">스크립트 작성</text>
+<text x="696" y="304" font-size="24" font-weight="600" fill="#5b6570" text-anchor="start">openpyxl 로 작성</text>
+<circle cx="1218" cy="260" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1218" y="270.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<text x="1256" y="270" font-size="32" font-weight="900" fill="#101113" text-anchor="start">bash 툴로 실행</text>
+<text x="1256" y="304" font-size="24" font-weight="600" fill="#5b6570" text-anchor="start">실행해서 결과 생성</text>
+<rect x="116" y="348" width="440" height="100" rx="28" fill="#fff" stroke="#aeb3ba" stroke-width="3" filter="url(#shs)"/><path d="M320.0 447L352.0 447L336.0 470Z" fill="#fff" stroke="#aeb3ba" stroke-width="3"/><rect x="320.0" y="444" width="32" height="6" fill="#fff"/><text x="336.0" y="407.18" font-size="27" font-weight="900" fill="#0d5c9e" text-anchor="middle">매출 합계 엑셀로 정리해줘</text>
+<text x="336.0" y="510" font-size="24" font-weight="800" fill="#101113" text-anchor="middle">학생</text>
+<g filter="url(#sh)"><rect x="666" y="334" width="460" height="190" rx="16" fill="#1e1f22" stroke="#3a3d42" stroke-width="2"/></g>
+<path d="M667 386V350a15 15 0 0 1 15-15h428a15 15 0 0 1 15 15V386z" fill="#2b2d31"/>
+<circle cx="692" cy="360" r="7" fill="#ff5f57"/><circle cx="714" cy="360" r="7" fill="#febc2e"/><circle cx="736" cy="360" r="7" fill="#28c840"/>
+<text x="896.0" y="368" font-size="20" font-weight="700" fill="#c9ccd1" text-anchor="middle">make_report.py</text>
+<g transform="translate(666 386)"><text x="20" y="34" font-size="19" font-weight="700" fill="#5aa0dc" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">import openpyxl</text><text x="20" y="62" font-size="19" font-weight="700" fill="#e7e9ec" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">wb = openpyxl.Workbook()</text><text x="20" y="90" font-size="19" font-weight="700" fill="#e7e9ec" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">ws.append(total)</text><text x="20" y="118" font-size="19" font-weight="700" fill="#e7e9ec" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">wb.save('report.xlsx')</text></g>
+<g filter="url(#sh)"><rect x="1226" y="334" width="460" height="190" rx="16" fill="#1e1f22" stroke="#3a3d42" stroke-width="2"/></g>
+<path d="M1227 386V350a15 15 0 0 1 15-15h428a15 15 0 0 1 15 15V386z" fill="#2b2d31"/>
+<circle cx="1252" cy="360" r="7" fill="#ff5f57"/><circle cx="1274" cy="360" r="7" fill="#febc2e"/><circle cx="1296" cy="360" r="7" fill="#28c840"/>
+<text x="1456.0" y="368" font-size="20" font-weight="700" fill="#c9ccd1" text-anchor="middle">terminal</text>
+<g transform="translate(1226 386)"><text x="20" y="34" font-size="20" font-weight="700" fill="#c9ccd1" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">$ python make_report.py</text><text x="20" y="66" font-size="20" font-weight="700" fill="#5aa0dc" text-anchor="start">매출 집계 완료</text></g>
+<circle cx="1254" cy="484" r="18" fill="#12a150"/><path d="M1246.44 484.36l5.3999999999999995 5.3999999999999995 10.080000000000002-10.799999999999999" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="translate(1282 470)"><path d="M2 2h11l7 7v15a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" fill="#2b2d31" stroke="#12a150" stroke-width="2"/><path d="M13 2v7h7" fill="none" stroke="#12a150" stroke-width="2"/></g>
+<text x="1316" y="490" font-size="22" font-weight="800" fill="#e7e9ec" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">report.xlsx</text>
+<line x1="596" y1="429.0" x2="636" y2="429.0" stroke="#9aa0a6" stroke-width="2.5" stroke-linecap="round"/><path d="M636.0 429.0L621.6 438.0L621.6 420.0Z" fill="#9aa0a6"/>
+<line x1="1156" y1="429.0" x2="1196" y2="429.0" stroke="#9aa0a6" stroke-width="2.5" stroke-linecap="round"/><path d="M1196.0 429.0L1181.6 438.0L1181.6 420.0Z" fill="#9aa0a6"/>
+<path d="M636 564V574H1716V564" fill="none" stroke="#5b6570" stroke-width="2.5"/>
+<text x="1176.0" y="608" font-size="26" font-weight="800" fill="#0d5c9e" text-anchor="middle">Claude 가 하는 일</text>
+<path transform="translate(1110.0 627.35) scale(0.55)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="1046.0" y="706" width="260" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="1062.0" y="730" width="228" height="54" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+</svg>

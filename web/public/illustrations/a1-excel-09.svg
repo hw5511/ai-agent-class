@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- A1 엑셀/9 만드는 과정 vs 쓰는 과정 (tools/illus/a1_excel_09.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+<rect x="110" y="200" width="792" height="560" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="2.5"/>
+<rect x="962" y="200" width="720" height="560" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="2.5"/>
+<text x="506.0" y="246" font-size="32" font-weight="800" fill="#101113" text-anchor="middle">만드는 과정 · 한 번만</text>
+<text x="506.0" y="282" font-size="23" font-weight="600" fill="#5b6570" text-anchor="middle">템플릿 분석부터 스킬화까지</text>
+<text x="1322.0" y="246" font-size="32" font-weight="800" fill="#101113" text-anchor="middle">쓰는 과정 · 매번</text>
+<text x="1322.0" y="282" font-size="23" font-weight="600" fill="#5b6570" text-anchor="middle">스킬 이름만 부르면 완성</text>
+<rect x="150.0" y="320" width="460" height="60" rx="14" fill="#1e1f22"/><circle cx="174.0" cy="350.0" r="6" fill="#ff5f57"/><circle cx="194.0" cy="350.0" r="6" fill="#febc2e"/><circle cx="214.0" cy="350.0" r="6" fill="#28c840"/><text x="240.0" y="357.0" font-size="20" font-weight="700" fill="#7fd7ff" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">@매출데이터_템플릿.xlsx 분석</text>
+<text x="636" y="358.0" font-size="22" font-weight="700" fill="#0d5c9e" text-anchor="start">템플릿 분석</text>
+<rect x="150.0" y="410" width="460" height="60" rx="14" fill="#1e1f22"/><circle cx="174.0" cy="440.0" r="6" fill="#ff5f57"/><circle cx="194.0" cy="440.0" r="6" fill="#febc2e"/><circle cx="214.0" cy="440.0" r="6" fill="#28c840"/><text x="240.0" y="447.0" font-size="20" font-weight="700" fill="#7fd7ff" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">샘플 json + 스크립트 생성</text>
+<text x="636" y="448.0" font-size="22" font-weight="700" fill="#0d5c9e" text-anchor="start">샘플·스크립트 제작</text>
+<rect x="150.0" y="500" width="460" height="60" rx="14" fill="#1e1f22"/><circle cx="174.0" cy="530.0" r="6" fill="#ff5f57"/><circle cx="194.0" cy="530.0" r="6" fill="#febc2e"/><circle cx="214.0" cy="530.0" r="6" fill="#28c840"/><text x="240.0" y="537.0" font-size="20" font-weight="700" fill="#7fd7ff" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">/skill-creator → excel-filler</text>
+<text x="636" y="538.0" font-size="22" font-weight="700" fill="#0d5c9e" text-anchor="start">스킬로 저장</text>
+<line x1="380.0" y1="380" x2="380.0" y2="410" stroke="#9aa0a6" stroke-width="2.5" stroke-linecap="round"/><path d="M380.0 410.0L371.0 395.6L389.0 395.6Z" fill="#9aa0a6"/>
+<line x1="380.0" y1="470" x2="380.0" y2="500" stroke="#9aa0a6" stroke-width="2.5" stroke-linecap="round"/><path d="M380.0 500.0L371.0 485.6L389.0 485.6Z" fill="#9aa0a6"/>
+<circle cx="116" cy="350.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="116" y="360.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<line x1="380.0" y1="560" x2="380.0" y2="600" stroke="#9aa0a6" stroke-width="2.5" stroke-linecap="round"/><path d="M380.0 600.0L371.0 585.6L389.0 585.6Z" fill="#9aa0a6"/>
+<g transform="translate(315.0 600) scale(0.8125)">
+<path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
+<rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
+<rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
+<rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
+</g>
+<text x="380.0" y="728.375" font-size="24" font-weight="800" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">excel-filler</text>
+<text x="490.0" y="652" font-size="20" font-weight="600" fill="#5b6570" text-anchor="start">.claude/skills/ 에 저장</text>
+<g filter="url(#sh)"><rect x="972.0" y="306" width="420" height="150" rx="16" fill="#1e1f22" stroke="#3a3d42" stroke-width="2"/></g>
+<path d="M973.0 358V322a15 15 0 0 1 15-15h388a15 15 0 0 1 15 15V358z" fill="#2b2d31"/>
+<circle cx="998.0" cy="332" r="7" fill="#ff5f57"/><circle cx="1020.0" cy="332" r="7" fill="#febc2e"/><circle cx="1042.0" cy="332" r="7" fill="#28c840"/>
+<g transform="translate(972.0 358)"><text x="20" y="34" font-size="20" font-weight="700" fill="#c9ccd1" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">/clear</text><text x="20" y="78" font-size="20" font-weight="800" fill="#7fd7ff" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">/excel-filler 30개 매출보고서</text></g>
+<circle cx="1418.0" cy="381.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1418.0" y="391.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<line x1="1182" y1="456" x2="1182" y2="520" stroke="#9aa0a6" stroke-width="2.5" stroke-linecap="round"/><path d="M1182.0 520.0L1173.0 505.6L1191.0 505.6Z" fill="#9aa0a6"/>
+<rect x="1052.0" y="526" width="260" height="148" rx="12" fill="#fff" stroke="#aeb3ba" stroke-width="2.5" filter="url(#shs)"/>
+<line x1="1052.0" y1="563" x2="1312.0" y2="563" stroke="#d5d8dc" stroke-width="2"/>
+<line x1="1052.0" y1="600" x2="1312.0" y2="600" stroke="#d5d8dc" stroke-width="2"/>
+<line x1="1052.0" y1="637" x2="1312.0" y2="637" stroke="#d5d8dc" stroke-width="2"/>
+<line x1="1161" y1="526" x2="1161" y2="674" stroke="#d5d8dc" stroke-width="2"/>
+<rect x="1052.0" y="526" width="260" height="37" fill="#cfe3f5"/>
+<circle cx="1308.0" cy="522" r="18" fill="#1273c4"/><path d="M1300.44 522.36l5.3999999999999995 5.3999999999999995 10.080000000000002-10.799999999999999" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1182" y="706" font-size="22" font-weight="800" fill="#101113" text-anchor="middle">매출보고서 완성</text>
+<path transform="translate(1447.0 521.35) scale(0.55)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="1388" y="600.0" width="250" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="1404" y="624.0" width="218" height="130" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="1392.5" y="690.0" width="241" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<text x="1513.0" y="730.0" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">Claude</text>
+</svg>

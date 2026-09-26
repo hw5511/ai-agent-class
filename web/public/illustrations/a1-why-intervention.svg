@@ -7,26 +7,55 @@
   <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
   <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
 </defs>
-
-
-<rect x="726" y="330" width="340" height="100" rx="28" fill="#fff" stroke="#1273c4" stroke-width="3" filter="url(#shs)"/><path d="M880 429L912 429L896 452Z" fill="#fff" stroke="#1273c4" stroke-width="3"/><rect x="880" y="426" width="32" height="6" fill="#fff"/><text x="896.0" y="388.5" font-size="25" font-weight="900" fill="#1273c4" text-anchor="middle">코드에 AI 개입이
-필요한가?</text>
-<circle cx="1120" cy="315" r="28" fill="#fff" stroke="#1273c4" stroke-width="5"/><text x="1120" y="325.6" font-size="29" font-weight="800" fill="#1273c4" text-anchor="middle">!</text>
-<rect x="156" y="460" width="460" height="120" rx="18" fill="#fff" stroke="#aeb3ba" stroke-width="3"/>
-<text x="386.0" y="508" font-size="26" font-weight="900" fill="#101113" text-anchor="middle">지능적 판단·분기</text>
-<text x="386.0" y="548" font-size="21" font-weight="600" fill="#5b6570" text-anchor="middle">A 냐 B 냐</text>
-<circle cx="186" cy="460" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="186" y="470.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
-<path d="M386.0 580C386.0 615 603 635 820 656" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M386.0 580C386.0 615 603 635 820 656" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M830.7 657.0L799.0 673.3L802.7 635.0Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
-<rect x="666" y="460" width="460" height="120" rx="18" fill="#fff" stroke="#aeb3ba" stroke-width="3"/>
-<text x="896.0" y="508" font-size="26" font-weight="900" fill="#101113" text-anchor="middle">대량 텍스트·코드 정리</text>
-<text x="896.0" y="548" font-size="21" font-weight="600" fill="#5b6570" text-anchor="middle">많은 자료 분석</text>
-<circle cx="696" cy="460" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="696" y="470.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
-<path d="M896.0 580C896.0 615 901 635 906 656" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M896.0 580C896.0 615 901 635 906 656" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M908.5 666.5L882.9 641.8L920.2 632.9Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
-<rect x="1176" y="460" width="460" height="120" rx="18" fill="#fff" stroke="#aeb3ba" stroke-width="3"/>
-<text x="1406.0" y="508" font-size="26" font-weight="900" fill="#101113" text-anchor="middle">텍스트 생성</text>
-<text x="1406.0" y="548" font-size="21" font-weight="600" fill="#5b6570" text-anchor="middle">코딩·원고 작성</text>
-<circle cx="1206" cy="460" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1206" y="470.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
-<path d="M1406.0 580C1406.0 615 1199 635 992 656" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1406.0 580C1406.0 615 1199 635 992 656" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M981.3 657.1L1009.2 635.0L1013.0 673.2Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
-<path transform="translate(786 690) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
-<text x="1050" y="765" font-size="30" font-weight="900" fill="#101113" text-anchor="start">Claude</text>
+<line x1="96" y1="134" x2="1696" y2="134" stroke="#c9ccd1" stroke-width="2"/>
+<text x="876.0" y="178" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">이 코드에 AI 개입이 필요한가?</text>
+<circle cx="1676" cy="156" r="28" fill="#fff" stroke="#1273c4" stroke-width="5"/><text x="1676" y="166.6" font-size="29" font-weight="800" fill="#1273c4" text-anchor="middle">!</text>
+<line x1="96" y1="202" x2="1696" y2="202" stroke="#c9ccd1" stroke-width="2"/>
+<rect x="156" y="268" width="460" height="292" rx="18" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<circle cx="186" cy="268" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="186" y="278.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<text x="386.0" y="308" font-size="27" font-weight="900" fill="#101113" text-anchor="middle">지능적 판단·분기</text>
+<rect x="666" y="268" width="460" height="292" rx="18" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<circle cx="696" cy="268" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="696" y="278.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<text x="896.0" y="308" font-size="27" font-weight="900" fill="#101113" text-anchor="middle">대량 텍스트·코드 정리</text>
+<rect x="1176" y="268" width="460" height="292" rx="18" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<circle cx="1206" cy="268" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1206" y="278.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<text x="1406.0" y="308" font-size="27" font-weight="900" fill="#101113" text-anchor="middle">텍스트 생성</text>
+<rect x="196" y="326" width="380" height="54" rx="27.0" fill="#fff" stroke="#aeb3ba" stroke-width="3" filter="url(#shs)"/><path d="M370.0 379L402.0 379L386.0 402Z" fill="#fff" stroke="#aeb3ba" stroke-width="3"/><rect x="370.0" y="376" width="32" height="6" fill="#fff"/><text x="386.0" y="360.48" font-size="22" font-weight="900" fill="#2b2f35" text-anchor="middle">환불하고 싶어요</text>
+<path d="M386.0 433.0L461.0 464L386.0 495.0L311.0 464Z" fill="#cfe3f5" stroke="#1273c4" stroke-width="3"/>
+<text x="386.0" y="471" font-size="20" font-weight="800" fill="#0d5c9e" text-anchor="middle">환불 요청?</text>
+<line x1="317.0" y1="476" x2="228" y2="530" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="455.0" y1="476" x2="544" y2="530" stroke="#aeb3ba" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="228" cy="530" r="18" fill="#12a150"/><path d="M220.44 530.36l5.3999999999999995 5.3999999999999995 10.080000000000002-10.799999999999999" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="256" y="536" font-size="20" font-weight="800" fill="#101113" text-anchor="start">A 승인</text>
+<circle cx="516" cy="530" r="18" fill="#d64545"/><path d="M509.52 523.52L522.48 536.48M522.48 523.52L509.52 536.48" stroke="#fff" stroke-width="3.6" stroke-linecap="round"/>
+<text x="488" y="536" font-size="20" font-weight="800" fill="#101113" text-anchor="end">B 거절</text>
+<g transform="translate(710 364) rotate(-8 27.0 33.75) scale(0.84375)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#5aa0dc"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<g transform="translate(722 352) rotate(-2 27.0 33.75) scale(0.84375)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#5aa0dc"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<g transform="translate(734 340) rotate(5 27.0 33.75) scale(0.84375)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#5aa0dc"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<text x="762" y="458" font-size="19" font-weight="700" fill="#5b6570" text-anchor="middle">문서 여러 건</text>
+<line x1="816" y1="418" x2="874" y2="418" stroke="#9aa0a6" stroke-width="2.5" stroke-linecap="round"/><path d="M874.0 418.0L859.6 427.0L859.6 409.0Z" fill="#9aa0a6"/>
+<rect x="882" y="334" width="208" height="170" rx="8" fill="#fff" stroke="#aeb3ba" stroke-width="2.5"/>
+<line x1="882" y1="382" x2="1090" y2="382" stroke="#d5d8dc" stroke-width="2"/>
+<line x1="882" y1="422" x2="1090" y2="422" stroke="#d5d8dc" stroke-width="2"/>
+<line x1="882" y1="463" x2="1090" y2="463" stroke="#d5d8dc" stroke-width="2"/>
+<line x1="986.0" y1="334" x2="986.0" y2="504" stroke="#d5d8dc" stroke-width="2"/>
+<text x="934.0" y="357.8" font-size="17" font-weight="800" fill="#101113" text-anchor="middle">제품</text>
+<text x="1038.0" y="357.8" font-size="17" font-weight="800" fill="#101113" text-anchor="middle">금액</text>
+<text x="934.0" y="405.40000000000003" font-size="17" font-weight="700" fill="#2b2f35" text-anchor="middle">우산</text>
+<text x="1038.0" y="405.40000000000003" font-size="17" font-weight="700" fill="#2b2f35" text-anchor="middle">12,000</text>
+<text x="934.0" y="446.2" font-size="17" font-weight="700" fill="#2b2f35" text-anchor="middle">장갑</text>
+<text x="1038.0" y="446.2" font-size="17" font-weight="700" fill="#2b2f35" text-anchor="middle">8,000</text>
+<text x="934.0" y="487.0" font-size="17" font-weight="700" fill="#2b2f35" text-anchor="middle">모자</text>
+<text x="1038.0" y="487.0" font-size="17" font-weight="700" fill="#2b2f35" text-anchor="middle">15,000</text>
+<text x="896.0" y="530" font-size="19" font-weight="700" fill="#5b6570" text-anchor="middle">정리된 표</text>
+<g transform="translate(1236 334)"><path d="M6 2h52l29 29v80a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#aeb3ba" stroke-width="3"/><path d="M61 2v23a4 4 0 0 0 4 4h23" fill="none" stroke="#aeb3ba" stroke-width="3"/></g>
+<text x="1282" y="475.0" font-size="19" font-weight="700" fill="#5b6570" text-anchor="middle">빈 페이지</text>
+<line x1="1352" y1="394" x2="1420" y2="394" stroke="#9aa0a6" stroke-width="2.5" stroke-linecap="round"/><path d="M1420.0 394.0L1405.6 403.0L1405.6 385.0Z" fill="#9aa0a6"/>
+<g transform="translate(1428 334) rotate(0 46.0 57.5) scale(1.4375)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<text x="1474" y="475.0" font-size="19" font-weight="700" fill="#5b6570" text-anchor="middle">완성된 글</text>
+<path d="M386.0 560C386.0 600 603 620 820 638" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M386.0 560C386.0 600 603 620 820 638" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M830.8 638.9L799.3 655.5L802.5 617.3Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<path d="M896.0 560C896.0 600 901 620 906 638" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M896.0 560C896.0 600 901 620 906 638" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M908.9 648.4L882.4 624.6L919.4 614.4Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<path d="M1406.0 560C1406.0 600 1199 620 992 638" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1406.0 560C1406.0 600 1199 620 992 638" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M981.2 638.9L1009.5 617.2L1012.8 655.5Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<path transform="translate(786 650) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<text x="1050" y="726" font-size="30" font-weight="900" fill="#101113" text-anchor="start">Claude</text>
 </svg>

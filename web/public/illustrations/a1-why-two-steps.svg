@@ -7,26 +7,47 @@
   <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
   <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
 </defs>
-
-
-<path transform="translate(180 460) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
-<rect x="100" y="600" width="300" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
-<rect x="116" y="624" width="268" height="190" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
-<rect x="129.5" y="690" width="241" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
-<text x="250.0" y="730" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">Claude</text>
-<g filter="url(#sh)"><rect x="470" y="320" width="300" height="170" rx="16" fill="#1e1f22" stroke="#3a3d42" stroke-width="2"/></g>
-<path d="M471 372V336a15 15 0 0 1 15-15h268a15 15 0 0 1 15 15V372z" fill="#2b2d31"/>
-<circle cx="496" cy="346" r="7" fill="#ff5f57"/><circle cx="518" cy="346" r="7" fill="#febc2e"/><circle cx="540" cy="346" r="7" fill="#28c840"/>
-<text x="620.0" y="354" font-size="20" font-weight="700" fill="#c9ccd1" text-anchor="middle">content.json</text>
-<g transform="translate(470 372)"><text x="16" y="32" font-size="18" font-weight="700" fill="#7fd7ff" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">{ "title":</text><text x="16" y="58" font-size="18" font-weight="700" fill="#e6e8eb" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">  "..." }</text></g>
-<circle cx="770" cy="330" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="770" y="340.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
-<path d="M420 500C450 470 460 440 468 410" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M420 500C450 470 460 440 468 410" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M470.8 399.6L481.6 433.5L444.5 423.6Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
-<rect x="880" y="400" width="260" height="140" rx="16" fill="#fff" stroke="#1273c4" stroke-width="3"/>
-<text x="1010.0" y="478.84" font-size="26" font-weight="800" fill="#101113" text-anchor="middle">스크립트 실행</text>
-<circle cx="880" cy="400" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="880" y="410.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
-<path d="M770 400C820 400 830 400 880 460" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M770 400C820 400 830 400 880 460" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M886.9 468.3L853.0 457.5L882.5 433.0Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
-<path d="M1140 460C1260 460 1320 480 1380 500" fill="none" stroke="#cdeedb" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1140 460C1260 460 1320 480 1380 500" fill="none" stroke="#12a150" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1390.2 503.4L1355.7 512.1L1367.9 475.7Z" fill="#12a150" stroke="#12a150" stroke-width="7" stroke-linejoin="round"/>
-<g transform="translate(1440 420) rotate(-4 50.0 62.5) scale(1.5625)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#12a150"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
-<circle cx="1540" cy="480" r="26" fill="#12a150"/><path d="M1529.08 480.52l7.8 7.8 14.560000000000002-15.6" fill="none" stroke="#fff" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="1490" y="600" font-size="26" font-weight="800" fill="#12a150" text-anchor="middle">완성된 결과물</text>
+<rect x="90" y="150" width="1204" height="640" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<rect x="1318" y="150" width="384" height="640" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<text x="692.0" y="194" font-size="32" font-weight="800" fill="#101113" text-anchor="middle">템플릿 워크플로 · 2단계</text>
+<text x="692.0" y="230" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">데이터 작성 → 스크립트 실행</text>
+<text x="1510.0" y="194" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">카드뉴스 CLI</text>
+<text x="1510.0" y="226" font-size="20" font-weight="600" fill="#5b6570" text-anchor="middle">7회차와 같은 구조</text>
+<g filter="url(#sh)"><rect x="160" y="345" width="470" height="190" rx="16" fill="#1e1f22" stroke="#3a3d42" stroke-width="2"/></g>
+<path d="M161 397V361a15 15 0 0 1 15-15h438a15 15 0 0 1 15 15V397z" fill="#2b2d31"/>
+<circle cx="186" cy="371" r="7" fill="#ff5f57"/><circle cx="208" cy="371" r="7" fill="#febc2e"/><circle cx="230" cy="371" r="7" fill="#28c840"/>
+<text x="395.0" y="379" font-size="20" font-weight="700" fill="#c9ccd1" text-anchor="middle">data.json</text>
+<g transform="translate(160 397)"><text x="16" y="24" font-size="16" font-weight="700" fill="#7fd7ff" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">{ "title": "8월 매출보고서",</text><text x="16" y="50" font-size="16" font-weight="700" fill="#e6e8eb" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">  "rows": [</text><text x="16" y="76" font-size="16" font-weight="700" fill="#e6e8eb" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">    { "부서": "영업1팀", "매출": 42000000 },</text><text x="16" y="102" font-size="16" font-weight="700" fill="#e6e8eb" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">    { "부서": "영업2팀", "매출": 35500000 }</text><text x="16" y="128" font-size="16" font-weight="700" fill="#e6e8eb" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">  ] }</text></g>
+<circle cx="622" cy="337" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="622" y="347.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<path d="M630 440C670 440 680 440 720 440" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M630 440C670 440 680 440 720 440" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M730.8 440.0L700.8 459.2L700.8 420.8Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<rect x="720" y="380.0" width="220" height="120" rx="14" fill="#2b2f35" stroke="#2b2f35" stroke-width="3"/>
+<text x="830.0" y="434.0" font-size="24" font-weight="800" fill="#fff" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">fill.py</text>
+<text x="830.0" y="468.0" font-size="18" font-weight="700" fill="#c9ccd1" text-anchor="middle">data.json 채움</text>
+<circle cx="932" cy="372.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="932" y="382.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<line x1="220" y1="535" x2="220" y2="595" stroke="#9aa0a6" stroke-width="2.5" stroke-linecap="round"/>
+<g filter="url(#sh)"><rect x="160" y="595" width="400" height="110" rx="16" fill="#1e1f22" stroke="#3a3d42" stroke-width="2"/></g>
+<path d="M161 647V611a15 15 0 0 1 15-15h368a15 15 0 0 1 15 15V647z" fill="#2b2d31"/>
+<circle cx="186" cy="621" r="7" fill="#ff5f57"/><circle cx="208" cy="621" r="7" fill="#febc2e"/><circle cx="230" cy="621" r="7" fill="#28c840"/>
+<g transform="translate(160 647)"><text x="14" y="34" font-size="18" font-weight="700" fill="#e6e8eb" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">$ python fill.py data.json</text></g>
+<path d="M940 440C990 440 990 420.0 1040 420.0" fill="none" stroke="#cdeedb" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M940 440C990 440 990 420.0 1040 420.0" fill="none" stroke="#12a150" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1050.8 420.0L1020.8 439.2L1020.8 400.8Z" fill="#12a150" stroke="#12a150" stroke-width="7" stroke-linejoin="round"/>
+<g transform="translate(1030 380.0) rotate(-3 55.0 68.75) scale(1.71875)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#12a150"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<circle cx="1126" cy="398.0" r="26" fill="#12a150"/><path d="M1115.08 398.52l7.8 7.8 14.560000000000002-15.6" fill="none" stroke="#fff" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1085" y="540.0" font-size="24" font-weight="800" fill="#12a150" text-anchor="middle">완성된 보고서</text>
+<g filter="url(#sh)"><rect x="1358" y="320" width="304" height="90" rx="16" fill="#1e1f22" stroke="#3a3d42" stroke-width="2"/></g>
+<path d="M1359 372V336a15 15 0 0 1 15-15h272a15 15 0 0 1 15 15V372z" fill="#2b2d31"/>
+<circle cx="1384" cy="346" r="7" fill="#ff5f57"/><circle cx="1406" cy="346" r="7" fill="#febc2e"/><circle cx="1428" cy="346" r="7" fill="#28c840"/>
+<text x="1510.0" y="354" font-size="20" font-weight="700" fill="#c9ccd1" text-anchor="middle">terminal</text>
+<g transform="translate(1358 372)"><text x="14" y="30" font-size="20" font-weight="800" fill="#7fd7ff" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">/cardnews</text></g>
+<line x1="1510.0" y1="410" x2="1510.0" y2="470" stroke="#9aa0a6" stroke-width="2.5" stroke-linecap="round"/><path d="M1510.0 470.0L1501.0 455.6L1519.0 455.6Z" fill="#9aa0a6"/>
+<rect x="1442.0" y="480" width="62" height="84" rx="8" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#shs)"/>
+<rect x="1450.0" y="492" width="46" height="20" rx="4" fill="#cfe3f5"/>
+<rect x="1450.0" y="520" width="46" height="6" rx="3" fill="#d5d8dc"/>
+<rect x="1450.0" y="532" width="34" height="6" rx="3" fill="#d5d8dc"/>
+<rect x="1516.0" y="474" width="62" height="84" rx="8" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#shs)"/>
+<rect x="1524.0" y="486" width="46" height="20" rx="4" fill="#cfe3f5"/>
+<rect x="1524.0" y="514" width="46" height="6" rx="3" fill="#d5d8dc"/>
+<rect x="1524.0" y="526" width="34" height="6" rx="3" fill="#d5d8dc"/>
+<text x="1510.0" y="610" font-size="20" font-weight="800" fill="#101113" text-anchor="middle">카드 이미지 완성</text>
+<circle cx="1358" cy="744" r="28" fill="#fff" stroke="#1273c4" stroke-width="5"/><text x="1358" y="754.6" font-size="29" font-weight="800" fill="#1273c4" text-anchor="middle">!</text>
+<text x="1400" y="752" font-size="20" font-weight="700" fill="#5b6570" text-anchor="start">같은 2단계 구조</text>
 </svg>

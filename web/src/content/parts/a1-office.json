@@ -16,35 +16,24 @@
     },
     {
       "id": "a1-office-02",
-      "template": "table",
+      "template": "illustration",
       "title": "확장자와 전용 라이브러리",
-      "columns": ["확장자", "라이브러리"],
-      "rows": [
-        { "cells": [".xlsx", "openpyxl"] },
-        { "cells": [".docx", "python-docx"] },
-        { "cells": [".pptx", "python-pptx"] },
-        { "cells": [".pdf", "pypdf"] }
-      ],
+      "illustration": "/illustrations/a1-office-02.svg",
       "notes": [
-        { "n": 1, "head": "확장자마다 전용 라이브러리", "body": "엑셀, 워드, 파워포인트, PDF 는 각각 다루는 라이브러리가 따로 있습니다." },
-        { "n": 2, "head": "이미 만들어져 있음", "body": "이미 만들어져 있어서 직접 만들 필요 없이 가져다 쓰면 됩니다." }
+        { "n": 1, "head": "확장자마다 정해진 파일 모양", "body": "엑셀 .xlsx, 워드 .docx, 파워포인트 .pptx, PDF 파일은 안에 든 내용의 모양부터 다릅니다." },
+        { "n": 2, "head": "파일에 맞는 도구상자 골라 씀", "body": "openpyxl, python-docx, python-pptx, pypdf 는 이미 만들어진 도구상자라서 맞는 것만 가져다 쓰면 됩니다." }
       ]
     },
     {
       "id": "a1-office-03",
-      "template": "cards",
+      "template": "illustration",
       "title": "Claude 공식 문서 스킬 4종",
-      "cards": [
-        { "label": "docx", "logo": "/logos/claude.svg", "tags": ["읽기", "수정", "생성"], "badge": 1 },
-        { "label": "xlsx", "logo": "/logos/claude.svg", "tags": ["읽기", "수정", "생성"], "badge": 2 },
-        { "label": "pptx", "logo": "/logos/claude.svg", "tags": ["읽기", "수정", "생성"], "badge": 3 },
-        { "label": "pdf", "logo": "/logos/claude.svg", "tags": ["읽기", "수정", "생성"], "badge": 4 }
-      ],
+      "illustration": "/illustrations/a1-office-03.svg",
       "notes": [
-        { "n": 1, "head": "docx · 워드", "body": "워드 문서를 읽고 수정하고 새로 만들 수 있는 범용 스킬입니다." },
-        { "n": 2, "head": "xlsx · 엑셀", "body": "엑셀 파일을 읽고 수정하고 새로 만들 수 있는 범용 스킬입니다." },
-        { "n": 3, "head": "pptx · 파워포인트", "body": "슬라이드를 읽고 수정하고 새로 만들 수 있는 범용 스킬입니다." },
-        { "n": 4, "head": "pdf · PDF", "body": "PDF 문서를 읽고 수정하고 새로 만들 수 있는 범용 스킬입니다." }
+        { "n": 1, "head": "docx 폴더", "body": "워드 문서를 읽고 편집하고 새로 만들 수 있는 범용 스킬입니다." },
+        { "n": 2, "head": "xlsx 폴더", "body": "엑셀 파일을 읽고 편집하고 새로 만들 수 있는 범용 스킬입니다." },
+        { "n": 3, "head": "pptx 폴더", "body": "슬라이드를 읽고 편집하고 새로 만들 수 있는 범용 스킬입니다." },
+        { "n": 4, "head": "pdf 폴더", "body": "PDF 문서를 읽고 편집하고 새로 만들 수 있는 범용 스킬입니다." }
       ]
     },
     {

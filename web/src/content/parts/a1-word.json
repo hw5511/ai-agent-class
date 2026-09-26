@@ -171,6 +171,12 @@
           }
         }
       },
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "/word-filler" }
+        ]
+      },
       "notes": [
         { "n": 1, "head": "assets · references 자료 보관", "body": "원본 템플릿 사본은 assets 폴더에, json 작성 때 참고할 예시 데이터는 references 폴더에 들어가 있습니다." },
         { "n": 2, "head": "scripts · 실행·검증 코드", "body": "템플릿에 값을 채우는 스크립트와 결과를 검증하는 스크립트가 scripts 폴더에 들어가 있습니다." },
@@ -199,6 +205,7 @@
       "action": {
         "label": "프롬프트 복사",
         "items": [
+          { "kind": "copy", "value": "/clear", "desc": "먼저 입력" },
           { "kind": "copy", "value": "웹조사로 한국의 벚꽃축제에 대해서 조사해서 자사 상품으로 팝업스토어를 기획해서 기획안을 워드 보고서로 만들어줘" }
         ]
       }
