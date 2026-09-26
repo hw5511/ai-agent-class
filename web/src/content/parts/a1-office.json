@@ -1,0 +1,110 @@
+{
+  "id": "a1-office",
+  "title": "오피스 스킬 설치",
+  "cover": false,
+  "summary": "확장자별 라이브러리 개념을 복습하고, Claude 공식 오피스 문서 스킬 4종을 실습 폴더에 설치해 확인한다.",
+  "slides": [
+    {
+      "id": "a1-office-01",
+      "template": "illustration",
+      "title": "라이브러리 복습",
+      "illustration": "/illustrations/s7-library-toolbox.svg",
+      "notes": [
+        { "n": 1, "head": "기능별 코드 상자", "body": "이미지 처리, PDF 병합처럼 기능별로 이미 짜여 있는 코드 상자입니다." },
+        { "n": 2, "head": "가져다 바로 씀", "body": "직접 코드를 짜지 않고 가져다 쓰기만 하면 됩니다." }
+      ]
+    },
+    {
+      "id": "a1-office-02",
+      "template": "table",
+      "title": "확장자와 전용 라이브러리",
+      "columns": ["확장자", "라이브러리"],
+      "rows": [
+        { "cells": [".xlsx", "openpyxl"] },
+        { "cells": [".docx", "python-docx"] },
+        { "cells": [".pptx", "python-pptx"] },
+        { "cells": [".pdf", "pypdf"] }
+      ],
+      "notes": [
+        { "n": 1, "head": "확장자마다 전용 라이브러리", "body": "엑셀, 워드, 파워포인트, PDF 는 각각 다루는 라이브러리가 따로 있습니다." },
+        { "n": 2, "head": "이미 만들어져 있음", "body": "이미 만들어져 있어서 직접 만들 필요 없이 가져다 쓰면 됩니다." }
+      ]
+    },
+    {
+      "id": "a1-office-03",
+      "template": "cards",
+      "title": "Claude 공식 문서 스킬 4종",
+      "cards": [
+        { "label": "docx", "logo": "/logos/claude.svg", "tags": ["읽기", "수정", "생성"], "badge": 1 },
+        { "label": "xlsx", "logo": "/logos/claude.svg", "tags": ["읽기", "수정", "생성"], "badge": 2 },
+        { "label": "pptx", "logo": "/logos/claude.svg", "tags": ["읽기", "수정", "생성"], "badge": 3 },
+        { "label": "pdf", "logo": "/logos/claude.svg", "tags": ["읽기", "수정", "생성"], "badge": 4 }
+      ],
+      "notes": [
+        { "n": 1, "head": "docx · 워드", "body": "워드 문서를 읽고 수정하고 새로 만들 수 있는 범용 스킬입니다." },
+        { "n": 2, "head": "xlsx · 엑셀", "body": "엑셀 파일을 읽고 수정하고 새로 만들 수 있는 범용 스킬입니다." },
+        { "n": 3, "head": "pptx · 파워포인트", "body": "슬라이드를 읽고 수정하고 새로 만들 수 있는 범용 스킬입니다." },
+        { "n": 4, "head": "pdf · PDF", "body": "PDF 문서를 읽고 수정하고 새로 만들 수 있는 범용 스킬입니다." }
+      ]
+    },
+    {
+      "id": "a1-office-04",
+      "template": "screen",
+      "title": "설치 프롬프트 실행",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv01-rehearsal",
+          "turns": [
+            { "role": "user", "text": "클로드 공식 스킬 깃허브에서 pptx,xlsx,docx,pdf 스킬들 현재폴더의 .claude/skills 폴더에 설치해줘", "badge": 1 },
+            { "role": "tool", "text": "Bash(git clone github.com/anthropics/skills)" },
+            { "role": "tool", "text": "Bash(스파스 체크아웃으로 pptx, xlsx, docx, pdf 만 복사)" },
+            { "role": "assistant", "text": "설치가 완료되었습니다. pptx, xlsx, docx, pdf 스킬을 .claude/skills 폴더에 넣었어요", "badge": 2 }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "설치 프롬프트 입력", "body": "깃허브의 공식 스킬 저장소를 지정해서 pptx, xlsx, docx, pdf 스킬 설치를 요청합니다." },
+        { "n": 2, "head": "설치 완료 응답", "body": "요청한 4개 스킬이 .claude/skills 폴더에 설치되었다는 응답을 받습니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "클로드 공식 스킬 깃허브에서 pptx,xlsx,docx,pdf 스킬들 현재폴더의 .claude/skills 폴더에 설치해줘" }
+        ]
+      }
+    },
+    {
+      "id": "a1-office-05",
+      "template": "screen",
+      "title": "설치된 스킬 확인",
+      "replaceWithCapture": "adv01-rehearsal 폴더 .claude/skills 실제 캡처",
+      "screen": {
+        "kind": "vscode",
+        "folder": "adv01-rehearsal",
+        "noTerminal": true,
+        "terminal": { "vendor": "shell", "cwd": "C:\\tmp\\adv01-rehearsal", "turns": [] },
+        "files": [
+          { "name": ".claude", "folder": true },
+          { "name": "skills", "folder": true, "depth": 1 },
+          { "name": "docx", "folder": true, "depth": 2, "badge": 1 },
+          { "name": "pdf", "folder": true, "depth": 2, "badge": 2, "active": true },
+          { "name": "forms.md", "depth": 3 },
+          { "name": "LICENSE.txt", "depth": 3 },
+          { "name": "reference.md", "depth": 3 },
+          { "name": "scripts", "folder": true, "depth": 3 },
+          { "name": "SKILL.md", "depth": 3 },
+          { "name": "pptx", "folder": true, "depth": 2, "badge": 3 },
+          { "name": "xlsx", "folder": true, "depth": 2, "badge": 4 }
+        ]
+      },
+      "notes": [
+        { "n": 1, "head": "docx 폴더", "body": "docx 폴더 안에는 SKILL.md, scripts, LICENSE.txt 가 들어 있습니다." },
+        { "n": 2, "head": "pdf 폴더", "body": "pdf 폴더에는 SKILL.md 외에 forms.md 와 reference.md 가 더 들어 있습니다." },
+        { "n": 3, "head": "pptx 폴더", "body": "pptx 폴더 안에는 SKILL.md, scripts, LICENSE.txt 가 들어 있습니다." },
+        { "n": 4, "head": "xlsx 폴더", "body": "xlsx 폴더 안에는 SKILL.md, scripts, LICENSE.txt 가 들어 있습니다." }
+      ]
+    }
+  ]
+}

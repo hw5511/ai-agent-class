@@ -1,0 +1,220 @@
+{
+  "id": "a1-word",
+  "title": "워드 필러 스킬 만들기",
+  "summary": "회사 보고서 템플릿을 Claude 에게 분석시키고, 샘플로 채워보게 한 뒤, 그 방식을 그대로 재사용 가능한 word-filler CLI 스킬로 만든다.",
+  "slides": [
+    {
+      "id": "a1-word-01",
+      "template": "screen",
+      "title": "보고서 작성 템플릿",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a1/word_template_crop.png"
+      },
+      "notes": [
+        { "n": 1, "head": "실습용 워드 보고서 템플릿 다운로드", "body": "이번 실습에서 쓸 사내 보고서 템플릿을 받아서 실습 폴더에 저장합니다." },
+        { "n": 2, "head": "8페이지 · 자리표시자 방식", "body": "표지부터 붙임까지 8페이지로 구성되어 있고 대괄호로 감싼 자리표시자만 채우면 됩니다." },
+        { "n": 3, "head": "목차·결재란 자동 구성", "body": "목차는 TOC 필드로 자동 채워지고 결재란에는 작성자, 검토자, 승인자 칸이 표로 들어가 있습니다." }
+      ],
+      "action": {
+        "label": "템플릿 다운로드",
+        "items": [
+          { "kind": "download", "href": "/assets/advanced/step01/templates/보고서_템플릿.docx", "text": "보고서_템플릿.docx" }
+        ]
+      }
+    },
+    {
+      "id": "a1-word-02",
+      "template": "screen",
+      "title": "템플릿 분석 요청",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv01-rehearsal",
+          "turns": [
+            { "role": "user", "text": "@보고서_템플릿.docx 이 템플릿을 분석해서 설명해줘", "badge": 1 },
+            { "role": "tool", "text": "Read(보고서_템플릿.docx)" },
+            { "role": "assistant", "text": "8페이지 사내 기획·현황 보고서 템플릿이고 대괄호 자리표시자를 채우는 방식입니다. 표지, 목차, 개요, 현황 분석, 추진 계획, 기대 효과, 결론, 붙임 순서로 구성되어 있고 대제목마다 페이지가 나뉩니다. 다만 번호 목록이 절 구분 없이 이어서 매겨지는 결함, 한글 글꼴이 지정되지 않은 점, 용지가 A4가 아닌 US Letter인 점도 함께 짚었습니다.", "badge": 2 }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "@ 로 파일 지정 후 분석 요청", "body": "@ 뒤에 파일 이름을 붙이면 그 워드 파일을 열어서 분석해달라는 뜻이 됩니다." },
+        { "n": 2, "head": "구성과 결함을 함께 짚음", "body": "8개 장 구성뿐 아니라 번호가 이어서 매겨지는 문제, 용지가 Letter인 점까지 찾아서 설명해줍니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "@보고서_템플릿.docx 이 템플릿을 분석해서 설명해줘" }
+        ]
+      }
+    },
+    {
+      "id": "a1-word-03",
+      "template": "screen",
+      "title": "샘플 데이터·스크립트 생성 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "adv01-rehearsal",
+        "files": [
+          { "name": "보고서_템플릿.docx" },
+          { "name": "sample_data.json", "badge": 1 },
+          { "name": "fill_report.py", "badge": 2 },
+          { "name": "보고서_샘플.docx", "badge": 3, "active": true }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv01-rehearsal",
+          "turns": [],
+          "input": { "text": "이 템플릿을 복제한다음 샘플데이터를 json파일로 작성후 기입하는 스크립트를 현재폴더에 만들어서 샘플파일을 만들어줘" },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "sample_data.json", "body": "표지, 개요, 현황 분석, 추진 계획, 기대 효과, 결론, 붙임 7개 섹션이 담긴 샘플 데이터 파일이 만들어집니다." },
+        { "n": 2, "head": "fill_report.py", "body": "템플릿 docx를 zip 단위로 복제한 뒤 문서 본문만 다시 써서 채우는 스크립트가 만들어집니다." },
+        { "n": 3, "head": "보고서_샘플.docx", "body": "스크립트를 실행한 결과물로 남은 자리표시자 없이 내용이 채워진 샘플 파일이 나옵니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "이 템플릿을 복제한다음 샘플데이터를 json파일로 작성후 기입하는 스크립트를 현재폴더에 만들어서 샘플파일을 만들어줘" }
+        ]
+      }
+    },
+    {
+      "id": "a1-word-04",
+      "template": "screen",
+      "title": "샘플 보고서 결과",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a1/word_sample_spread.png"
+      },
+      "notes": [
+        { "n": 1, "head": "표지·문서정보 채움", "body": "보고서 번호, 작성일, 작성자, 대외비 등급까지 표지 정보가 모두 채워졌습니다." },
+        { "n": 2, "head": "현황표 5행으로 확장", "body": "템플릿 표의 첫 행을 복제해 방문자 수부터 재구매율까지 다섯 개 지표와 달성률이 채워졌습니다." }
+      ]
+    },
+    {
+      "id": "a1-word-05",
+      "template": "screen",
+      "title": "skill-creator 로 스킬화 요청",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv01-rehearsal",
+          "turns": [
+            { "role": "user", "text": "/skill-creator 방금 작업한 방식을 토대로, 해당 템플릿을 assets 폴더에 보관해두고, 워드보고서를 만들어달라고 하면, 데이터를 json파일에 정리후 템플릿 복제본에 주입해서 생성하는 cli 스킬을 word filler라는 스킬로 현재폴더의 .claude/skills 폴더에 만들어줘", "badge": 1 }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "템플릿을 assets 폴더에 보관", "body": "원본 템플릿을 스킬 안 assets 폴더에 넣어서 어디서든 같은 템플릿을 복제해 쓸 수 있게 합니다." },
+        { "n": 2, "head": "json 정리 후 템플릿에 주입", "body": "데이터를 json 파일로 먼저 정리하고 그 값을 템플릿 복제본에 주입하는 절차를 그대로 스킬 절차로 넣습니다." },
+        { "n": 3, "head": "word filler 스킬로 저장", "body": ".claude/skills 폴더 안에 word-filler 라는 이름으로 스킬을 만들어달라고 요청합니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "/skill-creator 방금 작업한 방식을 토대로, 해당 템플릿을 assets 폴더에 보관해두고, 워드보고서를 만들어달라고 하면, 데이터를 json파일에 정리후 템플릿 복제본에 주입해서 생성하는 cli 스킬을 word filler라는 스킬로 현재폴더의 .claude/skills 폴더에 만들어줘" }
+        ]
+      }
+    },
+    {
+      "id": "a1-word-06",
+      "template": "compare",
+      "title": "생성된 word-filler 스킬 확인",
+      "left": {
+        "label": "스킬 폴더 구조",
+        "screen": {
+          "kind": "vscode",
+          "folder": "adv01-rehearsal",
+          "noTerminal": true,
+          "terminal": { "vendor": "shell", "cwd": "C:\\tmp\\adv01-rehearsal", "turns": [] },
+          "files": [
+            { "name": ".claude", "folder": true },
+            { "name": "skills", "folder": true, "depth": 1 },
+            { "name": "word-filler", "folder": true, "depth": 2, "active": true },
+            { "name": "assets", "folder": true, "depth": 3, "badge": 1 },
+            { "name": "보고서_템플릿.docx", "depth": 4 },
+            { "name": "references", "folder": true, "depth": 3, "badge": 1 },
+            { "name": "example_data.json", "depth": 4 },
+            { "name": "scripts", "folder": true, "depth": 3, "badge": 2 },
+            { "name": "fill_template.py", "depth": 4 },
+            { "name": "verify_output.py", "depth": 4 },
+            { "name": "SKILL.md", "depth": 3, "badge": 3 }
+          ]
+        }
+      },
+      "right": {
+        "label": "슬래시 명령어로 등록",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv01-rehearsal",
+            "turns": [
+              { "role": "user", "text": "/word-filler", "badge": 4 }
+            ],
+            "panel": {
+              "title": "word-filler",
+              "rows": [
+                {
+                  "seg": [
+                    { "t": "Generate a Korean business report as a Word document (워드 보고서, 보고서 docx, 기획 보고서, 추진 계획 보고서, 현황 보고서) by organizing the user's content into a JSON file and injecting it into the bundled company report template with a CLI script. Use this whenever the user asks for a 보고서를 워드로, 워드 보고서 만들어줘, docx 보고서, 보고서 템플릿에 넣어줘, or wants report content (배경, 현황, 문제점, 추진 계획, 일정, 예산, 기대 효과, 결론, 건의) turned into the company report format, even if they just paste notes, bullet points, or numbers and say \"보고서로 정리해줘\". Do not use for Word documents unrelated to the report template (letters, contracts, free-form docs); use the docx skill for those. Do not use for 한글 hwpx files.", "c": "dim" }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "assets · references 자료 보관", "body": "원본 템플릿 사본은 assets 폴더에, json 작성 때 참고할 예시 데이터는 references 폴더에 들어가 있습니다." },
+        { "n": 2, "head": "scripts · 실행·검증 코드", "body": "템플릿에 값을 채우는 스크립트와 결과를 검증하는 스크립트가 scripts 폴더에 들어가 있습니다." },
+        { "n": 3, "head": "SKILL.md · 절차 설명", "body": "트리거 조건과 작성 절차, json 구조가 SKILL.md 에 적혀 있습니다." },
+        { "n": 4, "head": "/word-filler 로 바로 호출", "body": "슬래시 명령어 목록에 word-filler 가 등록되어 있어 이름만 입력하면 바로 실행됩니다." }
+      ]
+    },
+    {
+      "id": "a1-word-07",
+      "template": "screen",
+      "title": "/clear 후 벚꽃 팝업스토어 기획안 요청",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv01-rehearsal",
+          "turns": [
+            { "role": "user", "text": "/clear" },
+            { "role": "user", "text": "웹조사로 한국의 벚꽃축제에 대해서 조사해서 자사 상품으로 팝업스토어를 기획해서 기획안을 워드 보고서로 만들어줘", "badge": 1 }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "스킬 이름 없이도 알아서 선택", "body": "/clear 로 대화를 비운 뒤 스킬 이름을 부르지 않아도 워드 보고서라는 말만으로 word filler 스킬을 스스로 골라 씁니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "웹조사로 한국의 벚꽃축제에 대해서 조사해서 자사 상품으로 팝업스토어를 기획해서 기획안을 워드 보고서로 만들어줘" }
+        ]
+      }
+    },
+    {
+      "id": "a1-word-08",
+      "template": "screen",
+      "title": "완성된 팝업스토어 기획안 결과",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a1/word_cherry_crop.png"
+      },
+      "notes": [
+        { "n": 1, "head": "웹조사 결과를 현황표로 정리", "body": "여의도 봄꽃축제 360만 명 방문, 석촌호수 축제 9일 연장 같은 조사 결과가 현황표에 담겼습니다." },
+        { "n": 2, "head": "목표·달성률까지 자동 구성", "body": "자사몰 신규 가입 목표 6,000명 등 목표 수치와 달성률까지 표 형태로 채워졌습니다." }
+      ]
+    }
+  ]
+}

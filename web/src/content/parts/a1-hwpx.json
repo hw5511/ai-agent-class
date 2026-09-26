@@ -1,0 +1,448 @@
+{
+  "id": "a1-hwpx",
+  "title": "hwpx 스킬 실습",
+  "summary": "공식 hwpx 스킬을 설치해 hwp 변환과 텍스트 겹침 버그까지 고치고, 완성된 스킬로 실제 안내문을 만들어본다.",
+  "slides": [
+    {
+      "id": "a1-hwpx-01",
+      "template": "screen",
+      "title": "gonggong_hwpxskills 저장소",
+      "screen": {
+        "kind": "web",
+        "url": "github.com/Canine89/gonggong_hwpxskills",
+        "tabs": [
+          {
+            "title": "Canine89/gonggong_hwpxskills",
+            "icon": "github",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "github-repo",
+          "zoom": 1.2,
+          "owner": "Canine89",
+          "name": "gonggong_hwpxskills",
+          "nameBadge": 1,
+          "forks": "33",
+          "stars": "73",
+          "tabs": [
+            {
+              "label": "Code",
+              "active": true
+            },
+            {
+              "label": "Issues"
+            },
+            {
+              "label": "Pull requests"
+            },
+            {
+              "label": "Actions"
+            },
+            {
+              "label": "Projects"
+            },
+            {
+              "label": "Security"
+            },
+            {
+              "label": "Insights"
+            },
+            {
+              "label": "Settings"
+            }
+          ],
+          "branch": "main",
+          "branchesCount": 1,
+          "tagsCount": 0,
+          "lastCommit": {
+            "author": "EditorP",
+            "message": "Add files via upload",
+            "sha": "618ca4c",
+            "when": "Feb 13"
+          },
+          "files": [
+            {
+              "name": "SKILL.md",
+              "message": "Add files via upload",
+              "when": "Feb 13"
+            },
+            {
+              "name": "assets",
+              "folder": true,
+              "message": "Add files via upload",
+              "when": "Feb 13"
+            },
+            {
+              "name": "evals",
+              "folder": true,
+              "message": "Add files via upload",
+              "when": "Feb 13"
+            },
+            {
+              "name": "references",
+              "folder": true,
+              "message": "Add files via upload",
+              "when": "Feb 13"
+            },
+            {
+              "name": "scripts",
+              "folder": true,
+              "message": "Add files via upload",
+              "when": "Feb 13",
+              "badge": 3
+            }
+          ],
+          "about": {
+            "desc": "HWPX 확장자 한글 문서를 작성해 주는 스킬. 공문서 템플릿을 첨부하면 그 양식으로, 없으면 기본 양식으로 작성",
+            "topics": [],
+            "stars": "73",
+            "watching": "0",
+            "forks": "33",
+            "badge": 2
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "gonggong_hwpxskills 저장소",
+          "body": "Canine89 가 공개한 HWPX 한글 문서 작성 스킬 저장소이고 별이 73개, 포크가 33개입니다."
+        },
+        {
+          "n": 2,
+          "head": "SKILL.md 스킬 설명",
+          "body": "공문서 템플릿을 첨부하면 그 양식으로, 없으면 기본 양식으로 hwpx 문서를 만들어 주는 스킬이라고 적혀 있습니다."
+        },
+        {
+          "n": 3,
+          "head": "scripts 폴더",
+          "body": "스킬을 실제로 실행하는 스크립트가 scripts 폴더 안에 들어 있습니다."
+        }
+      ],
+      "action": {
+        "label": "저장소 열기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://github.com/Canine89/gonggong_hwpxskills",
+            "text": "Canine89/gonggong_hwpxskills",
+            "desc": "HWPX 한글 문서 작성 스킬"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a1-hwpx-02",
+      "template": "cards",
+      "title": "설치 · 변환 업그레이드 · 겹침 해결",
+      "cards": [
+        {
+          "label": "스킬 설치",
+          "tags": [
+            "hwpx 이름으로 설치"
+          ],
+          "badge": 1
+        },
+        {
+          "label": "hwp → hwpx 변환",
+          "tags": [
+            "hwp2hwpx 참고 업그레이드"
+          ],
+          "badge": 2
+        },
+        {
+          "label": "겹침 해결 반복",
+          "tags": [
+            "생성, 이미지화, 확인 반복"
+          ],
+          "badge": 3
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "hwpx 이름으로 스킬 설치",
+          "body": "gonggong_hwpxskills 저장소를 .claude/skills 폴더 안에 hwpx 라는 이름으로 설치해 달라고 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "hwp2hwpx 참고해 업그레이드",
+          "body": "neolord0/hwp2hwpx 저장소를 참고해서 hwp 파일이 들어와도 자동으로 hwpx 로 변환해서 쓰도록 스킬을 업그레이드해 달라고 요청합니다."
+        },
+        {
+          "n": 3,
+          "head": "겹침 현상 반복 테스트로 해결",
+          "body": "내장 템플릿에 텍스트를 채운 문서를 만들고 이미지로 바꿔 확인하는 과정을 반복하면서 한 줄에 텍스트가 겹치는 현상을 고쳐 달라고 요청합니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사 · 참고 저장소",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "https://github.com/Canine89/gonggong_hwpxskills 스킬을 현재폴더의 .claude/skills에 hwpx 스킬이름으로 설치해줘. 그다음 https://github.com/neolord0/hwp2hwpx도 참고해서 그 스킬에 hwp가 들어와도 hwpx로 변환해서 사용할수 있게끔 업그레이드해줘. 그다음 필요한 라이브러리 설치하고 내장된 hwpx 템플릿으로 테스트를 진행해주는데, 이때 텍스트를 기입하면 hwpx파일을 열었을때 한줄에 텍스트들이 모두 겹치는 현상 있는데 이거를 테스트로 문서를 텍스트 주입해서 생성하고, 이미지화 시켜서 확인하고를 반복하면서 해결해줘"
+          },
+          {
+            "kind": "link",
+            "href": "https://github.com/neolord0/hwp2hwpx",
+            "text": "neolord0/hwp2hwpx",
+            "desc": "hwp 를 hwpx 로 변환하는 참고 오픈소스"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a1-hwpx-03",
+      "template": "compare",
+      "title": "겹침 버그 수정 전 · 후",
+      "left": {
+        "label": "수정 전 · 겹침",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a1/hwpx_overlap_before.png"
+        }
+      },
+      "right": {
+        "label": "수정 후 · 정상",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a1/hwpx_overlap_after.png"
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "수정 전 · 한 줄에 겹침",
+          "body": "양식이 예전 한 줄짜리 배치를 그대로 기억하고 있어서, 더 길어진 새 텍스트도 그 한 줄에 눌려서 겹칩니다."
+        },
+        {
+          "n": 2,
+          "head": "수정 후 · 줄바꿈 정상",
+          "body": "클로드가 텍스트를 채울 때 그 기억된 배치를 비워주게 만들어서, 이제는 줄이 정상적으로 나뉘어 보입니다."
+        }
+      ]
+    },
+    {
+      "id": "a1-hwpx-04",
+      "template": "screen",
+      "title": "설치된 hwpx 스킬 확인",
+      "replaceWithCapture": "adv01-rehearsal .claude/skills/hwpx 폴더 실제 캡처",
+      "screen": {
+        "kind": "vscode",
+        "folder": "adv01-rehearsal",
+        "noTerminal": true,
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\tmp\\adv01-rehearsal",
+          "turns": []
+        },
+        "files": [
+          {
+            "name": ".claude",
+            "folder": true
+          },
+          {
+            "name": "skills",
+            "folder": true,
+            "depth": 1
+          },
+          {
+            "name": "hwpx",
+            "folder": true,
+            "depth": 2,
+            "active": true
+          },
+          {
+            "name": "SKILL.md",
+            "depth": 3
+          },
+          {
+            "name": "assets",
+            "folder": true,
+            "depth": 3,
+            "badge": 1
+          },
+          {
+            "name": "report-template.hwpx",
+            "depth": 4
+          },
+          {
+            "name": "lib",
+            "folder": true,
+            "depth": 3,
+            "badge": 2
+          },
+          {
+            "name": "hwp2hwpx-cli.jar",
+            "depth": 4
+          },
+          {
+            "name": "hwplib-1.1.11.jar",
+            "depth": 4
+          },
+          {
+            "name": "hwpxlib-1.0.9.jar",
+            "depth": 4
+          },
+          {
+            "name": "references",
+            "folder": true,
+            "depth": 3,
+            "badge": 3
+          },
+          {
+            "name": "official-doc-style.md",
+            "depth": 4
+          },
+          {
+            "name": "report-style.md",
+            "depth": 4
+          },
+          {
+            "name": "xml-internals.md",
+            "depth": 4
+          },
+          {
+            "name": "scripts",
+            "folder": true,
+            "depth": 3,
+            "badge": 4
+          },
+          {
+            "name": "hwp_to_hwpx.py",
+            "depth": 4
+          },
+          {
+            "name": "hwpx_tools.py",
+            "depth": 4
+          },
+          {
+            "name": "render_preview.py",
+            "depth": 4
+          },
+          {
+            "name": "selftest.py",
+            "depth": 4
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "assets · 내장 템플릿",
+          "body": "보고서 기본 서식인 report-template.hwpx 가 assets 폴더에 들어 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "lib · 변환용 jar",
+          "body": "한컴오피스 없이도 hwp 를 hwpx 로 바꿔 주는 hwp2hwpx, hwplib, hwpxlib jar 파일이 들어 있습니다."
+        },
+        {
+          "n": 3,
+          "head": "references · 문서 서식 규칙",
+          "body": "공문서 서식과 보고서 서식, xml 내부 구조를 정리한 참고 문서 3개가 들어 있습니다."
+        },
+        {
+          "n": 4,
+          "head": "scripts · 실행 코드",
+          "body": "hwp 변환, 치환, 렌더링, 회귀 테스트를 담당하는 파이썬 스크립트들이 들어 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "a1-hwpx-05",
+      "template": "screen",
+      "title": "/hwpx 로 벚꽃축제 안내문 생성",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv01-rehearsal",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/clear"
+            },
+            {
+              "role": "user",
+              "text": "/hwpx 벚꽃축제 안내문을 내장된 템플릿으로 만들어줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python scripts/render_preview.py --check)"
+            },
+            {
+              "role": "assistant",
+              "text": "벚꽃축제 안내문을 내장 보고서 템플릿으로 만들었습니다. 4쪽 문서이고 렌더링 검사에서 겹침 0건, 눌린 줄 0건입니다.",
+              "badge": 2
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "/clear 후 스킬 이름만 호출",
+          "body": "대화를 새로 비운 뒤 /hwpx 명령어와 만들고 싶은 문서 제목만 입력합니다."
+        },
+        {
+          "n": 2,
+          "head": "겹침 검증까지 통과한 결과",
+          "body": "표지, 목차, 본문까지 4쪽짜리 안내문이 만들어지고 렌더링 검사에서 겹침과 눌린 줄이 모두 0건으로 나옵니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/hwpx 벚꽃축제 안내문을 내장된 템플릿으로 만들어줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a1-hwpx-06",
+      "template": "screen",
+      "title": "폴라리스 오피스 웹에서 결과 확인",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a1/hwpx_polaris.png"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "읽기 전용으로 열기",
+          "body": "hwpx 파일을 올리면 HWP 로 변환할지 묻는 창이 뜹니다. 읽기 전용으로 열기를 누르면 됩니다."
+        },
+        {
+          "n": 2,
+          "head": "한컴 없이 브라우저로 확인",
+          "body": "한컴오피스가 없어도 폴라리스 오피스 웹에서 방금 만든 안내문을 그대로 열어 볼 수 있습니다."
+        },
+        {
+          "n": 3,
+          "head": "표지 제목과 날짜",
+          "body": "내장 템플릿 표지에 벚꽃축제 안내 제목과 작성일이 채워져 있습니다. 본문 쪽도 줄이 겹치지 않고 표시됩니다."
+        }
+      ],
+      "action": {
+        "label": "결과 확인",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://hwp.polarisoffice.com/",
+            "text": "hwp.polarisoffice.com"
+          },
+          {
+            "kind": "download",
+            "href": "/assets/advanced/step01/examples/hwpx/벚꽃축제_안내문.hwpx",
+            "text": "벚꽃축제_안내문.hwpx"
+          }
+        ]
+      }
+    }
+  ]
+}

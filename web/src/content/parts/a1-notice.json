@@ -1,0 +1,163 @@
+{
+  "id": "a1-notice",
+  "title": "공지사항 템플릿 추가",
+  "summary": "워드로 사내 공지사항 양식을 직접 설계해 word-filler 스킬에 등록하고, 완성된 스킬로 추석 연휴 공지문까지 만들어본다.",
+  "slides": [
+    {
+      "id": "a1-notice-01",
+      "template": "illustration",
+      "title": "워드로 공지사항 양식 만들기",
+      "illustration": "/illustrations/a1-why-build-vs-use.svg",
+      "notes": [
+        { "n": 1, "head": "지금은 스킬을 만드는 과정", "body": "지금은 사내 게시판에 붙일 공지사항 양식을 워드로 직접 만들고, 그 틀을 다시 쓸 수 있게 word-filler 스킬에 등록하는 과정입니다." },
+        { "n": 2, "head": "추석 공지문은 쓰는 과정", "body": "나중에 추석 공지문을 쓸 때는 /clear 로 새로 시작한 뒤 /word-filler 스킬을 불러와 완성합니다." }
+      ]
+    },
+    {
+      "id": "a1-notice-02",
+      "template": "screen",
+      "title": "공지사항 양식 설계 요청",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv01-rehearsal",
+          "turns": [
+            { "role": "user", "text": "/docx 사내 게시판에 부착해서 사용할 공지사항 양식 템플릿을 만들어줘. notosans 폰트를 기반으로 깔끔하게 틀과 구조를 디자인해서 세련되고 심플하고 모던하게 흑백 테마 기반으로 만들어줘. 공지사항의 아래 영역에는 무료 스톡이미지 다운받아서 넣을 적절한 이미지 공간도 잡아줘. 생성 후에는 이미지화 시켜서 검수해서 수정/보완 반복하면서 완성해줘", "badge": 1 },
+            { "role": "tool", "text": "Write(build_notice.js)" },
+            { "role": "tool", "text": "Bash(node build_notice.js && python render.py)" },
+            { "role": "assistant", "text": "공지사항 템플릿을 완성했습니다. Noto Sans KR 기반 흑백 테마로 상단 NOTICE 라벨과 문서번호, 개요·주요 내용·유의사항 3단 구성에 하단 17×4cm 이미지 영역까지 넣었고, 렌더링과 검수를 4회 반복해 여백과 줄 간격을 줄여 A4 1페이지에 맞췄습니다.", "badge": 2 }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "notosans 기반 흑백 모던 요청", "body": "노토산스 폰트를 기반으로 세련되고 심플한 흑백 테마 양식을 요청하면서, 아래쪽에 무료 스톡이미지를 넣을 이미지 공간도 함께 잡아 달라고 합니다." },
+        { "n": 2, "head": "이미지화 검수 반복 4회", "body": "만든 문서를 그때그때 이미지로 바꿔서 확인하고 여백과 줄 간격을 수정하는 과정을 네 번 반복해 A4 한 페이지에 맞춰 완성합니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "/docx 사내 게시판에 부착해서 사용할 공지사항 양식 템플릿을 만들어줘. notosans 폰트를 기반으로 깔끔하게 틀과 구조를 디자인해서 세련되고 심플하고 모던하게 흑백 테마 기반으로 만들어줘. 공지사항의 아래 영역에는 무료 스톡이미지 다운받아서 넣을 적절한 이미지 공간도 잡아줘. 생성 후에는 이미지화 시켜서 검수해서 수정/보완 반복하면서 완성해줘" }
+        ]
+      }
+    },
+    {
+      "id": "a1-notice-03",
+      "template": "screen",
+      "title": "완성된 공지사항 양식 템플릿",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a1/notice_template_crop.png"
+      },
+      "notes": [
+        { "n": 1, "head": "NOTICE 라벨 · 문서번호", "body": "상단에 굵은 NOTICE 라벨과 문서번호를 두고 검정 구분선으로 본문과 나눴습니다." },
+        { "n": 2, "head": "개요 · 주요 내용 · 유의사항", "body": "01 개요, 02 주요 내용 표, 03 유의사항 순서로 3단 구성이 잡혀 있고 게시일·담당부서 같은 메타 정보도 표로 정리되어 있습니다." },
+        { "n": 3, "head": "하단 이미지 영역 4:1", "body": "가로세로 17×4cm 점선 박스가 있고, 무료 스톡이미지를 다운받아 그 자리에 넣으라는 안내 문구가 적혀 있습니다." }
+      ],
+      "action": {
+        "label": "템플릿 다운로드",
+        "items": [
+          { "kind": "download", "href": "/assets/advanced/step01/examples/word/공지사항_템플릿.docx", "text": "공지사항_템플릿.docx" }
+        ]
+      }
+    },
+    {
+      "id": "a1-notice-04",
+      "template": "compare",
+      "title": "word-filler 스킬에 양식 통합",
+      "left": {
+        "label": "word-filler 스킬 폴더",
+        "screen": {
+          "kind": "vscode",
+          "folder": "adv01-rehearsal",
+          "noTerminal": true,
+          "terminal": { "vendor": "shell", "cwd": "C:\\tmp\\adv01-rehearsal", "turns": [] },
+          "files": [
+            { "name": ".claude", "folder": true },
+            { "name": "skills", "folder": true, "depth": 1 },
+            { "name": "word-filler", "folder": true, "depth": 2, "active": true },
+            { "name": "SKILL.md", "depth": 3 },
+            { "name": "assets", "folder": true, "depth": 3 },
+            { "name": "build_notice_template.js", "depth": 4 },
+            { "name": "공지사항_템플릿.docx", "depth": 4, "badge": 1 },
+            { "name": "보고서_템플릿.docx", "depth": 4 },
+            { "name": "references", "folder": true, "depth": 3 },
+            { "name": "example_data.json", "depth": 4 },
+            { "name": "notice_example.json", "depth": 4, "badge": 2 },
+            { "name": "scripts", "folder": true, "depth": 3 },
+            { "name": "fill_notice.py", "depth": 4, "badge": 3 },
+            { "name": "fill_template.py", "depth": 4 },
+            { "name": "verify_output.py", "depth": 4 }
+          ]
+        }
+      },
+      "right": {
+        "label": "word-filler 통합 요청",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv01-rehearsal",
+            "turns": [
+              { "role": "user", "text": "/word-filler에다가 이거 공지사항 양식 템플릿도 보관한다음에, 공지사항 만들어달라고 하면 이 cli스킬 사용하게 해줘", "badge": 4 },
+              { "role": "assistant", "text": "공지사항 템플릿을 word-filler 스킬에 통합했습니다. 이제 사내 게시판에 붙일 공지사항을 만들어달라고 하면 이 스킬의 CLI가 자동으로 사용됩니다." }
+            ]
+          }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "공지사항_템플릿.docx 보관", "body": "완성한 공지사항 양식을 word-filler 의 assets 폴더에 넣어서 언제든 같은 템플릿을 복제해 쓸 수 있게 합니다." },
+        { "n": 2, "head": "notice_example.json 예시 추가", "body": "공지 내용을 json으로 정리할 때 참고할 예시 데이터가 references 폴더에 새로 추가됩니다." },
+        { "n": 3, "head": "fill_notice.py 신규 CLI", "body": "json 데이터를 받아 템플릿 자리표시자를 채우고 주요 내용 표와 유의사항 목록을 개수만큼 복제하는 스크립트가 scripts 폴더에 추가됩니다." },
+        { "n": 4, "head": "word-filler 스킬에 통합 요청", "body": "만든 공지사항 템플릿을 word-filler 스킬에 보관해서, 앞으로 공지사항을 만들어달라고 하면 이 스킬이 쓰이게 해 달라고 요청합니다." }
+      ]
+    },
+    {
+      "id": "a1-notice-05",
+      "template": "screen",
+      "title": "쓰는 과정 · 추석 공지문 요청",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv01-rehearsal",
+          "turns": [
+            { "role": "user", "text": "/clear" },
+            { "role": "user", "text": "/word-filler 사내 추석 연휴 안내 공지문 만들어줘, 휴가기간 + 명절 선물 수령 장소 및 일정 이런식으로", "badge": 1 },
+            { "role": "assistant", "text": "추석 연휴 안내 공지문을 만들었습니다. 휴가 기간, 정상 근무 재개일, 선물 수령 장소와 일정, 대상까지 주요 내용 표에 채워서 1페이지로 완성했습니다.", "badge": 2 }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "스킬을 사용하는 과정", "body": "/clear 로 대화를 비운 뒤에도 /word-filler 스킬 이름과 원하는 공지 내용만 말하면, 앞서 만든 공지사항 양식 그대로 문서를 만들어 줍니다." },
+        { "n": 2, "head": "휴가 기간 · 선물 수령 안내", "body": "휴가 기간과 정상 근무 재개일, 선물 수령 장소와 일정, 대상까지 요청한 항목을 그대로 주요 내용 표에 채워 넣습니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "/word-filler 사내 추석 연휴 안내 공지문 만들어줘, 휴가기간 + 명절 선물 수령 장소 및 일정 이런식으로" }
+        ]
+      }
+    },
+    {
+      "id": "a1-notice-06",
+      "template": "screen",
+      "title": "완성된 추석 연휴 공지문",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a1/notice_chuseok_crop.png"
+      },
+      "notes": [
+        { "n": 1, "head": "휴가 기간 9/14 ~ 9/19", "body": "법정 공휴일에 회사 지정 휴무일을 더해 6일간 휴가 기간이 잡혔고 정상 근무 재개일도 함께 적혀 있습니다." },
+        { "n": 2, "head": "선물 수령 장소 · 일정", "body": "본사 1층 로비 총무팀 부스에서 9/9부터 9/13까지 시간대별로 선물을 수령할 수 있다고 안내되어 있습니다." },
+        { "n": 3, "head": "유의사항 3가지", "body": "사원증 제시와 대리 수령 기준, 지사·재택 근무자 택배 신청, 연휴 중 비상연락과 소등 확인까지 유의사항에 정리되어 있습니다." }
+      ],
+      "action": {
+        "label": "결과 다운로드",
+        "items": [
+          { "kind": "download", "href": "/assets/advanced/step01/examples/word/공지사항_추석연휴_20260926.docx", "text": "공지사항_추석연휴_20260926.docx" }
+        ]
+      }
+    }
+  ]
+}

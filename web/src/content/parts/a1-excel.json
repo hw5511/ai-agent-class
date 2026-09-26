@@ -1,0 +1,235 @@
+{
+  "id": "a1-excel",
+  "title": "엑셀 필러 스킬 만들기",
+  "summary": "회사 매출 템플릿을 Claude 에게 분석시키고, 샘플로 채워보게 한 뒤, 그 방식을 그대로 재사용 가능한 excel-filler CLI 스킬로 만든다.",
+  "slides": [
+    {
+      "id": "a1-excel-01",
+      "template": "screen",
+      "title": "매출 데이터 입력 템플릿",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a1/excel_template_crop.png"
+      },
+      "notes": [
+        { "n": 1, "head": "실습용 매출 템플릿 다운로드", "body": "이번 실습에서 쓸 매출 데이터 템플릿을 받아서 실습 폴더에 저장합니다." },
+        { "n": 2, "head": "시트 3개 · 30행 입력칸", "body": "매출 데이터, 월별 요약, 사용 안내 시트로 구성되어 있고 매출 데이터 시트에 30행이 비어 있습니다." },
+        { "n": 3, "head": "파란 셀만 입력", "body": "파란 배경 셀만 직접 입력하고 매출액, 할인 후 매출, 합계는 수식으로 자동 계산됩니다." }
+      ],
+      "action": {
+        "label": "템플릿 다운로드",
+        "items": [
+          { "kind": "download", "href": "/assets/advanced/step01/templates/매출데이터_템플릿.xlsx", "text": "매출데이터_템플릿.xlsx" }
+        ]
+      }
+    },
+    {
+      "id": "a1-excel-02",
+      "template": "screen",
+      "title": "템플릿 분석 요청",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv01-rehearsal",
+          "turns": [
+            { "role": "user", "text": "@매출데이터_템플릿.xlsx 이 템플릿을 분석해서 설명해줘", "badge": 1 },
+            { "role": "tool", "text": "Read(매출데이터_템플릿.xlsx)" },
+            { "role": "assistant", "text": "시트 3개: 매출 데이터(30행 입력) · 월별 요약 · 사용 안내. 매출액은 수량×단가, 할인 후 매출은 매출액×(1-할인율)로 자동 계산되고 35행 합계도 수식입니다. 카테고리는 7종 드롭다운이고, 월별 요약의 실제 매출은 메인 시트와 연동되어 있지 않아 수동 집계가 필요합니다.", "badge": 2 }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "@ 로 파일 지정 후 분석 요청", "body": "@ 뒤에 파일 이름을 붙이면 그 엑셀 파일을 열어서 분석해달라는 뜻이 됩니다." },
+        { "n": 2, "head": "입력 칸과 자동 계산 칸 구분", "body": "어떤 열이 직접 입력하는 칸이고 어떤 열이 수식으로 자동 계산되는 칸인지 구분해서 설명해줍니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "@매출데이터_템플릿.xlsx 이 템플릿을 분석해서 설명해줘" }
+        ]
+      }
+    },
+    {
+      "id": "a1-excel-03",
+      "template": "screen",
+      "title": "샘플 데이터·스크립트 생성 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "adv01-rehearsal",
+        "files": [
+          { "name": "매출데이터_템플릿.xlsx" },
+          { "name": "sample_data.json", "badge": 1 },
+          { "name": "fill_template.py", "badge": 2 },
+          { "name": "매출데이터_샘플.xlsx", "badge": 3, "active": true }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv01-rehearsal",
+          "turns": [],
+          "input": { "text": "이 템플릿을 복제한다음 샘플데이터를 json파일로 작성후 기입하는 스크립트를 현재폴더에 만들어서 샘플파일을 만들어줘" },
+          "fit": true
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "sample_data.json", "body": "매출 20건과 월별 목표가 담긴 샘플 데이터 파일이 만들어집니다." },
+        { "n": 2, "head": "fill_template.py", "body": "템플릿을 복제한 뒤 json 데이터를 입력 셀에만 채워 넣는 스크립트가 만들어집니다." },
+        { "n": 3, "head": "매출데이터_샘플.xlsx", "body": "스크립트를 실행한 결과물로 파란 셀 서식과 드롭다운이 그대로 유지된 샘플 파일이 나옵니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "이 템플릿을 복제한다음 샘플데이터를 json파일로 작성후 기입하는 스크립트를 현재폴더에 만들어서 샘플파일을 만들어줘" }
+        ]
+      }
+    },
+    {
+      "id": "a1-excel-04",
+      "template": "screen",
+      "title": "샘플 매출 데이터 결과",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a1/excel_sample_crop.png"
+      },
+      "notes": [
+        { "n": 1, "head": "20건 데이터 기입 완료", "body": "2025년 1~3월 매출 20건이 카테고리 7종을 모두 포함해서 채워졌습니다." },
+        { "n": 2, "head": "합계·할인율 자동 계산", "body": "매출액 합계 48,084,000원, 할인 후 매출 합계 46,121,900원, 평균 할인율 4.1%가 수식으로 자동 계산되었습니다." }
+      ]
+    },
+    {
+      "id": "a1-excel-05",
+      "template": "screen",
+      "title": "skill-creator 로 스킬화 요청",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv01-rehearsal",
+          "turns": [
+            { "role": "user", "text": "/skill-creator 방금 작업한 방식을 토대로, 해당 템플릿을 assets 폴더에 보관해두고, 매출보고서를 만들어달라고 하면, 데이터를 json파일에 정리후 템플릿 복제본에 주입해서 생성하는 cli 스킬을 excel filler라는 스킬로 현재폴더의 .claude/skills 폴더에 만들어줘", "badge": 1 }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "템플릿을 assets 폴더에 보관", "body": "원본 템플릿을 스킬 안 assets 폴더에 넣어서 어디서든 같은 템플릿을 복제해 쓸 수 있게 합니다." },
+        { "n": 2, "head": "json 정리 후 템플릿에 주입", "body": "데이터를 json 파일로 먼저 정리하고 그 값을 템플릿 복제본에 주입하는 절차를 그대로 스킬 절차로 넣습니다." },
+        { "n": 3, "head": "excel filler 스킬로 저장", "body": ".claude/skills 폴더 안에 excel-filler 라는 이름으로 스킬을 만들어달라고 요청합니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "/skill-creator 방금 작업한 방식을 토대로, 해당 템플릿을 assets 폴더에 보관해두고, 매출보고서를 만들어달라고 하면, 데이터를 json파일에 정리후 템플릿 복제본에 주입해서 생성하는 cli 스킬을 excel filler라는 스킬로 현재폴더의 .claude/skills 폴더에 만들어줘" }
+        ]
+      }
+    },
+    {
+      "id": "a1-excel-06",
+      "template": "compare",
+      "title": "생성된 excel-filler 스킬 확인",
+      "left": {
+        "label": "스킬 폴더 구조",
+        "screen": {
+          "kind": "vscode",
+          "folder": "adv01-rehearsal",
+          "noTerminal": true,
+          "terminal": { "vendor": "shell", "cwd": "C:\\tmp\\adv01-rehearsal", "turns": [] },
+          "files": [
+            { "name": ".claude", "folder": true },
+            { "name": "skills", "folder": true, "depth": 1 },
+            { "name": "excel-filler", "folder": true, "depth": 2, "active": true },
+            { "name": "assets", "folder": true, "depth": 3, "badge": 1 },
+            { "name": "매출데이터_템플릿.xlsx", "depth": 4 },
+            { "name": "references", "folder": true, "depth": 3, "badge": 1 },
+            { "name": "example_data.json", "depth": 4 },
+            { "name": "scripts", "folder": true, "depth": 3, "badge": 2 },
+            { "name": "fill_template.py", "depth": 4 },
+            { "name": "verify_output.py", "depth": 4 },
+            { "name": "SKILL.md", "depth": 3, "badge": 3 }
+          ]
+        }
+      },
+      "right": {
+        "label": "슬래시 명령어로 등록",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv01-rehearsal",
+            "turns": [
+              { "role": "user", "text": "/excel-filler", "badge": 4 }
+            ],
+            "panel": {
+              "title": "excel-filler",
+              "rows": [
+                {
+                  "seg": [
+                    { "t": "Generate a Korean sales report workbook (매출 보고서, 매출 데이터, 월별 매출 요약) by organizing the user's sales figures into a JSON file and injecting them into the bundled Excel template with a CLI script.", "c": "dim" }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "assets · references 자료 보관", "body": "원본 템플릿 사본은 assets 폴더에, json 작성 때 참고할 예시 데이터는 references 폴더에 들어가 있습니다." },
+        { "n": 2, "head": "scripts · 실행·검증 코드", "body": "템플릿에 값을 채우는 스크립트와 결과를 검증하는 스크립트가 scripts 폴더에 들어가 있습니다." },
+        { "n": 3, "head": "SKILL.md · 절차 설명", "body": "데이터 수집부터 보고까지 5단계 절차와 트리거 조건이 SKILL.md 에 적혀 있습니다." },
+        { "n": 4, "head": "/excel-filler 로 바로 호출", "body": "슬래시 명령어 목록에 excel-filler 가 등록되어 있어 이름만 입력하면 바로 실행됩니다." }
+      ]
+    },
+    {
+      "id": "a1-excel-07",
+      "template": "screen",
+      "title": "/clear 후 스킬로 매출보고서 요청",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv01-rehearsal",
+          "turns": [
+            { "role": "user", "text": "/clear" },
+            { "role": "user", "text": "/excel-filler 30개정도의 샘플데이터로 지난달 매출보고서 만들어줘", "badge": 1 }
+          ]
+        }
+      },
+      "notes": [
+        { "n": 1, "head": "새 세션에서 스킬만으로 실행", "body": "/clear 로 대화를 비운 뒤에도 스킬 이름만 부르면 방금까지 하던 작업 없이도 같은 방식으로 보고서를 만들어줍니다." }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "/excel-filler 30개정도의 샘플데이터로 지난달 매출보고서 만들어줘" }
+        ]
+      }
+    },
+    {
+      "id": "a1-excel-08",
+      "template": "screen",
+      "title": "완성된 매출보고서 결과",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a1/excel_report_crop.png"
+      },
+      "notes": [
+        { "n": 1, "head": "30건 · 템플릿 최대치", "body": "8월 한 달 영업일에 거래처 7곳과 카테고리 7종을 배치해 템플릿이 채울 수 있는 최대 30건을 채웠습니다." },
+        { "n": 2, "head": "합계·달성률 자동 계산", "body": "매출액 합계 62,549,000원, 할인 후 매출 60,698,300원, 목표 대비 달성률 134.9%가 수식으로 계산되었습니다." }
+      ]
+    },
+    {
+      "id": "a1-excel-09",
+      "template": "flow",
+      "title": "만드는 과정 vs 쓰는 과정",
+      "steps": [
+        { "label": "템플릿 분석", "sub": "만드는 과정", "badge": 1 },
+        { "label": "샘플·스크립트 제작", "sub": "만드는 과정" },
+        { "label": "excel-filler 스킬화", "sub": "만드는 과정" },
+        { "label": "/excel-filler 로 실행", "sub": "쓰는 과정", "badge": 2 }
+      ],
+      "notes": [
+        { "n": 1, "head": "1~3단계는 한 번만", "body": "템플릿 분석, 샘플 제작, 스킬화까지 세 단계는 처음 한 번만 만들어두면 됩니다." },
+        { "n": 2, "head": "이후엔 스킬 호출만", "body": "한번 스킬로 만들어두면 다음부터는 /excel-filler 명령어 하나로 매번 새 보고서를 받을 수 있습니다." }
+      ]
+    }
+  ]
+}

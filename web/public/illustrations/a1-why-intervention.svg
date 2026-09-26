@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- A1/3 AI 개입이 필요한 3가지 경우 (tools/illus/a1_why_intervention.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+
+
+<rect x="726" y="330" width="340" height="100" rx="28" fill="#fff" stroke="#1273c4" stroke-width="3" filter="url(#shs)"/><path d="M880 429L912 429L896 452Z" fill="#fff" stroke="#1273c4" stroke-width="3"/><rect x="880" y="426" width="32" height="6" fill="#fff"/><text x="896.0" y="388.5" font-size="25" font-weight="900" fill="#1273c4" text-anchor="middle">코드에 AI 개입이
+필요한가?</text>
+<circle cx="1120" cy="315" r="28" fill="#fff" stroke="#1273c4" stroke-width="5"/><text x="1120" y="325.6" font-size="29" font-weight="800" fill="#1273c4" text-anchor="middle">!</text>
+<rect x="156" y="460" width="460" height="120" rx="18" fill="#fff" stroke="#aeb3ba" stroke-width="3"/>
+<text x="386.0" y="508" font-size="26" font-weight="900" fill="#101113" text-anchor="middle">지능적 판단·분기</text>
+<text x="386.0" y="548" font-size="21" font-weight="600" fill="#5b6570" text-anchor="middle">A 냐 B 냐</text>
+<circle cx="186" cy="460" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="186" y="470.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<path d="M386.0 580C386.0 615 603 635 820 656" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M386.0 580C386.0 615 603 635 820 656" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M830.7 657.0L799.0 673.3L802.7 635.0Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<rect x="666" y="460" width="460" height="120" rx="18" fill="#fff" stroke="#aeb3ba" stroke-width="3"/>
+<text x="896.0" y="508" font-size="26" font-weight="900" fill="#101113" text-anchor="middle">대량 텍스트·코드 정리</text>
+<text x="896.0" y="548" font-size="21" font-weight="600" fill="#5b6570" text-anchor="middle">많은 자료 분석</text>
+<circle cx="696" cy="460" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="696" y="470.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<path d="M896.0 580C896.0 615 901 635 906 656" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M896.0 580C896.0 615 901 635 906 656" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M908.5 666.5L882.9 641.8L920.2 632.9Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<rect x="1176" y="460" width="460" height="120" rx="18" fill="#fff" stroke="#aeb3ba" stroke-width="3"/>
+<text x="1406.0" y="508" font-size="26" font-weight="900" fill="#101113" text-anchor="middle">텍스트 생성</text>
+<text x="1406.0" y="548" font-size="21" font-weight="600" fill="#5b6570" text-anchor="middle">코딩·원고 작성</text>
+<circle cx="1206" cy="460" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1206" y="470.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<path d="M1406.0 580C1406.0 615 1199 635 992 656" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1406.0 580C1406.0 615 1199 635 992 656" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M981.3 657.1L1009.2 635.0L1013.0 673.2Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<path transform="translate(786 690) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<text x="1050" y="765" font-size="30" font-weight="900" fill="#101113" text-anchor="start">Claude</text>
+</svg>
