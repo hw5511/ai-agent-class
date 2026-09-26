@@ -241,7 +241,7 @@
       "title": "레포 선택 · 설치",
       "screen": {
         "kind": "web",
-        "zoom": 1.5, "url": "github.com/apps/claude/installations/new",
+        "zoom": 1.35, "url": "github.com/apps/claude/installations/new",
         "tabs": [
           {
             "title": "GitHub",
