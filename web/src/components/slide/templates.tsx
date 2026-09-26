@@ -101,9 +101,9 @@ function TableT({ s }: { s: TableSlide }) {
   const firstW = cols >= 4 ? 34 : cols === 3 ? 40 : cols === 2 ? 50 : 100 / Math.max(cols, 1)
   const restW = cols > 1 ? (100 - firstW) / (cols - 1) : 0
   const compact = n > 8
-  const rowH = n <= 3 ? 170 : n <= 5 ? 140 : n <= 8 ? 100 : undefined
-  const firstSize = n <= 3 ? 44 : n <= 5 ? 36 : n <= 8 ? 30 : n <= 12 ? 22 : 20
-  const valueSize = n <= 3 ? 36 : n <= 5 ? 30 : n <= 8 ? 26 : n <= 12 ? 22 : 20
+  const rowH = n <= 3 ? 140 : n <= 5 ? 120 : n <= 8 ? 92 : undefined
+  const firstSize = n <= 3 ? 38 : n <= 5 ? 34 : n <= 8 ? 28 : n <= 12 ? 22 : 20
+  const valueSize = n <= 3 ? 32 : n <= 5 ? 28 : n <= 8 ? 26 : n <= 12 ? 22 : 20
   const cellPy = compact ? (n <= 12 ? "py-2.5" : "py-1.5") : undefined
   return (
     <Lower tight={compact}>
@@ -327,12 +327,12 @@ function CardsIconOnlyT({ s }: { s: CardsSlide }) {
                   "font-display font-bold leading-[1.05] tracking-[-0.02em] break-keep",
                   c.highlight ? "text-slide-accent" : "text-[#101113]",
                 )}
-                style={{ fontSize: 72, marginTop: 24 }}
+                style={{ fontSize: 60, marginTop: 24 }}
               >
                 {c.label}
               </span>
               {c.tags?.length ? (
-                <span className="break-keep font-display text-[30px] text-[#43474b]" style={{ marginTop: 16 }}>
+                <span className="break-keep font-display text-[28px] text-[#43474b]" style={{ marginTop: 16 }}>
                   {c.tags.join(" · ")}
                 </span>
               ) : null}
@@ -352,7 +352,7 @@ const isAscii = (v: string) => /^[\x00-\x7F]+$/.test(v.trim())
 // left. No boxes, no chips - type, rules and dots only (DESIGN.md principle 4).
 function FlowT({ s }: { s: FlowSlide }) {
   const n = s.steps.length
-  const labelSize = n >= 5 ? 48 : 56
+  const labelSize = n >= 5 ? 42 : 48
   const cols = { gridTemplateColumns: `repeat(${n}, minmax(0, 1fr))`, columnGap: 48 }
   const anyBadge = s.steps.some((st) => st.badge)
   return (

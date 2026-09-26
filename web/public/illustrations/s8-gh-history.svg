@@ -8,22 +8,22 @@
 <!-- node 1: 첫 페이지 -->
 <circle cx="10" cy="560" r="10" fill="#1273c4"/>
 <text x="0" y="610" font-size="26" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">a1f3c2e</text>
-<text x="0" y="662" font-size="44" font-weight="700" fill="#101113">첫 페이지</text>
+<text x="0" y="662" font-size="38" font-weight="700" fill="#101113">첫 페이지</text>
 
 <!-- node 2: A 방식 -->
 <circle cx="470" cy="560" r="10" fill="#1273c4"/>
 <text x="460" y="610" font-size="26" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">7b9d014</text>
-<text x="460" y="662" font-size="44" font-weight="700" fill="#101113">A 방식</text>
+<text x="460" y="662" font-size="38" font-weight="700" fill="#101113">A 방식</text>
 
 <!-- node 3: A 방식 실패 -->
 <circle cx="930" cy="560" r="10" fill="#fff" stroke="#c43d30" stroke-width="3"/>
 <text x="920" y="610" font-size="26" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">c4e8a67</text>
-<text x="920" y="662" font-size="44" font-weight="700" fill="#c43d30">A 방식 실패</text>
+<text x="920" y="662" font-size="38" font-weight="700" fill="#c43d30">A 방식 실패</text>
 
 <!-- node 4: B 방식 -->
 <circle cx="1390" cy="560" r="10" fill="#1273c4"/>
 <text x="1380" y="610" font-size="26" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">91be3d2</text>
-<text x="1380" y="662" font-size="44" font-weight="700" fill="#101113">B 방식</text>
+<text x="1380" y="662" font-size="38" font-weight="700" fill="#101113">B 방식</text>
 
 <!-- revert arc: from failed node back to A 방식, arrowhead points into A 방식 -->
 <path d="M930 530 Q700 380 470 530" fill="none" stroke="#1273c4" stroke-width="3"/>

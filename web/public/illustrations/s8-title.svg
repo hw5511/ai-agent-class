@@ -10,7 +10,7 @@
 </g>
 <line x1="0" y1="710" x2="412" y2="710" stroke="#101113" stroke-width="2"/>
 <text x="0" y="752" font-size="26" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">01</text>
-<text x="0" y="820" font-size="52" font-weight="700" fill="#101113">GitHub</text>
+<text x="0" y="820" font-size="45" font-weight="700" fill="#101113">GitHub</text>
 
 <!-- column 2: 데스크톱 앱 (mark: 40 units, right-aligned to column right edge 872, centred on numeral row) -->
 <g transform="translate(832,722) scale(1.66667)">
@@ -18,16 +18,16 @@
 </g>
 <line x1="460" y1="710" x2="872" y2="710" stroke="#101113" stroke-width="2"/>
 <text x="460" y="752" font-size="26" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">02</text>
-<text x="460" y="820" font-size="52" font-weight="700" fill="#101113">데스크톱 앱</text>
+<text x="460" y="820" font-size="45" font-weight="700" fill="#101113">데스크톱 앱</text>
 
 <!-- column 3: 클라우드 세션 -->
 <line x1="920" y1="710" x2="1332" y2="710" stroke="#101113" stroke-width="2"/>
 <text x="920" y="752" font-size="26" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">03</text>
-<text x="920" y="820" font-size="52" font-weight="700" fill="#101113">클라우드 세션</text>
+<text x="920" y="820" font-size="45" font-weight="700" fill="#101113">클라우드 세션</text>
 
 <!-- column 4: 폰 -->
 <line x1="1380" y1="710" x2="1792" y2="710" stroke="#101113" stroke-width="2"/>
 <text x="1380" y="752" font-size="26" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">04</text>
-<text x="1380" y="820" font-size="52" font-weight="700" fill="#101113">폰</text>
+<text x="1380" y="820" font-size="45" font-weight="700" fill="#101113">폰</text>
 </g>
 </svg>

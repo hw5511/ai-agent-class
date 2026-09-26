@@ -1,36 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
-<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
-<filter id="shs" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#101113" flood-opacity="0.14"/></filter>
-<marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#43474b"/></marker>
-<marker id="arb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
-<marker id="aro" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d97757"/></marker>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs>
+<marker id="ar-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+<marker id="ar-acc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
 </defs>
-<rect x="0" y="600" width="1600" height="300" fill="#eaf4fb"/><path d="M380 680 q60 -14 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0" fill="none" stroke="#cfe5f5" stroke-width="4"/><path d="M380 760 q60 -14 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0" fill="none" stroke="#cfe5f5" stroke-width="4"/><path d="M380 840 q60 -14 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0" fill="none" stroke="#cfe5f5" stroke-width="4"/><path d="M0 560 H340 Q390 560 400 640 L410 900 H0Z" fill="#fdf1ea"/><path d="M1600 560 H1180 Q1130 560 1120 640 L1110 900 H1600Z" fill="#eef7ea"/><path d="M380 580 Q760 120 1140 580" fill="none" stroke="#1273c4" stroke-width="18" stroke-linecap="round"/><line x1="443" y1="510" x2="443" y2="570" stroke="#6aa6d9" stroke-width="5"/><line x1="507" y1="452" x2="507" y2="570" stroke="#6aa6d9" stroke-width="5"/><line x1="570" y1="408" x2="570" y2="570" stroke="#6aa6d9" stroke-width="5"/><line x1="633" y1="376" x2="633" y2="570" stroke="#6aa6d9" stroke-width="5"/><line x1="697" y1="356" x2="697" y2="570" stroke="#6aa6d9" stroke-width="5"/><line x1="760" y1="350" x2="760" y2="570" stroke="#6aa6d9" stroke-width="5"/><line x1="823" y1="356" x2="823" y2="570" stroke="#6aa6d9" stroke-width="5"/><line x1="887" y1="376" x2="887" y2="570" stroke="#6aa6d9" stroke-width="5"/><line x1="950" y1="408" x2="950" y2="570" stroke="#6aa6d9" stroke-width="5"/><line x1="1013" y1="452" x2="1013" y2="570" stroke="#6aa6d9" stroke-width="5"/><line x1="1077" y1="510" x2="1077" y2="570" stroke="#6aa6d9" stroke-width="5"/><rect x="340" y="566" width="840" height="28" rx="8" fill="#0d5c9e"/><rect x="380" y="594" width="28" height="140" fill="#0d5c9e"/><rect x="1112" y="594" width="28" height="140" fill="#0d5c9e"/><rect x="640" y="300" width="240" height="96" rx="20" fill="#fff" stroke="#1273c4" stroke-width="5" filter="url(#sh)"/>
-<text x="760" y="364" font-size="52" fill="#1273c4" font-weight="900" text-anchor="middle" >MCP</text>
-<rect x="450" y="500" width="130" height="56" rx="12" fill="#fff4ef" stroke="#f0c9b8" stroke-width="2"/>
-<text x="515" y="538" font-size="26" fill="#d97757" font-weight="800" text-anchor="middle" >요청</text>
-<rect x="940" y="500" width="130" height="56" rx="12" fill="#eef7ea" stroke="#bfe0c8" stroke-width="2"/>
-<text x="1005" y="538" font-size="26" fill="#2f9e6e" font-weight="800" text-anchor="middle" >결과</text>
-<path d="M592 528 H660" stroke="#d97757" stroke-width="5" marker-end="url(#aro)"/><path d="M928 528 H860" stroke="#2f9e6e" stroke-width="5" marker-end="url(#ar)"/><rect x="60.0" y="275.0" width="250" height="250" rx="28" fill="#fff4ef" stroke="#f0c9b8" stroke-width="2" filter="url(#sh)"/>
-<g shape-rendering="crispEdges" fill="#d97757"><rect x="139.2" y="311.1" width="8.0" height="21.7"/><rect x="139.2" y="332.4" width="8.0" height="21.7"/><rect x="146.8" y="311.1" width="8.0" height="21.7"/><rect x="154.4" y="311.1" width="8.0" height="21.7"/><rect x="146.8" y="332.4" width="8.0" height="21.7"/><rect x="162.1" y="311.1" width="8.0" height="21.7"/><rect x="169.7" y="311.1" width="8.0" height="21.7"/><rect x="162.1" y="332.4" width="8.0" height="21.7"/><rect x="169.7" y="332.4" width="8.0" height="21.7"/><rect x="177.4" y="311.1" width="8.0" height="21.7"/><rect x="185.0" y="311.1" width="8.0" height="21.7"/><rect x="177.4" y="332.4" width="8.0" height="21.7"/><rect x="185.0" y="332.4" width="8.0" height="21.7"/><rect x="192.6" y="311.1" width="8.0" height="21.7"/><rect x="200.3" y="311.1" width="8.0" height="21.7"/><rect x="192.6" y="332.4" width="8.0" height="21.7"/><rect x="200.3" y="332.4" width="8.0" height="21.7"/><rect x="207.9" y="311.1" width="8.0" height="21.7"/><rect x="215.6" y="311.1" width="8.0" height="21.7"/><rect x="215.6" y="332.4" width="8.0" height="21.7"/><rect x="223.2" y="311.1" width="8.0" height="21.7"/><rect x="223.2" y="332.4" width="8.0" height="21.7"/><rect x="123.9" y="353.7" width="8.0" height="21.7"/><rect x="131.5" y="353.7" width="8.0" height="21.7"/><rect x="139.2" y="353.7" width="8.0" height="21.7"/><rect x="139.2" y="375.0" width="8.0" height="21.7"/><rect x="146.8" y="353.7" width="8.0" height="21.7"/><rect x="154.4" y="353.7" width="8.0" height="21.7"/><rect x="146.8" y="375.0" width="8.0" height="21.7"/><rect x="154.4" y="375.0" width="8.0" height="21.7"/><rect x="162.1" y="353.7" width="8.0" height="21.7"/><rect x="169.7" y="353.7" width="8.0" height="21.7"/><rect x="162.1" y="375.0" width="8.0" height="21.7"/><rect x="169.7" y="375.0" width="8.0" height="21.7"/><rect x="177.4" y="353.7" width="8.0" height="21.7"/><rect x="185.0" y="353.7" width="8.0" height="21.7"/><rect x="177.4" y="375.0" width="8.0" height="21.7"/><rect x="185.0" y="375.0" width="8.0" height="21.7"/><rect x="192.6" y="353.7" width="8.0" height="21.7"/><rect x="200.3" y="353.7" width="8.0" height="21.7"/><rect x="192.6" y="375.0" width="8.0" height="21.7"/><rect x="200.3" y="375.0" width="8.0" height="21.7"/><rect x="207.9" y="353.7" width="8.0" height="21.7"/><rect x="215.6" y="353.7" width="8.0" height="21.7"/><rect x="207.9" y="375.0" width="8.0" height="21.7"/><rect x="215.6" y="375.0" width="8.0" height="21.7"/><rect x="223.2" y="353.7" width="8.0" height="21.7"/><rect x="230.8" y="353.7" width="8.0" height="21.7"/><rect x="223.2" y="375.0" width="8.0" height="21.7"/><rect x="238.5" y="353.7" width="8.0" height="21.7"/><rect x="146.8" y="396.3" width="8.0" height="21.7"/><rect x="162.1" y="396.3" width="8.0" height="21.7"/><rect x="200.3" y="396.3" width="8.0" height="21.7"/><rect x="215.6" y="396.3" width="8.0" height="21.7"/></g>
-<text x="185" y="505.0" font-size="37" fill="#d97757" font-weight="800" text-anchor="middle" >Claude</text>
-<rect x="1210.0" y="140.0" width="120" height="120" rx="22" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
-<rect x="1240.0" y="162.0" width="60.0" height="60.0" rx="12.0" fill="#fff" stroke="#101113" stroke-width="3.5999999999999996"/><text x="1270" y="205.2" font-size="37.2" font-family="Georgia, serif" font-weight="700" fill="#101113" text-anchor="middle">N</text>
-<text x="1270" y="294.0" font-size="24" fill="#43474b" font-weight="700" text-anchor="middle" >노션</text>
-<rect x="1390.0" y="140.0" width="120" height="120" rx="22" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
-<rect x="1420.0" y="162.0" width="60.0" height="60.0" rx="10.799999999999999" fill="#fff" stroke="#dadce0" stroke-width="1.7999999999999998"/><rect x="1420.0" y="162.0" width="60.0" height="15.600000000000001" rx="10.799999999999999" fill="#4285f4"/><rect x="1420.0" y="170.4" width="60.0" height="7.199999999999999" fill="#4285f4"/><text x="1450" y="210.0" font-size="25.2" font-weight="800" fill="#4285f4" text-anchor="middle">31</text>
-<text x="1450" y="294.0" font-size="24" fill="#43474b" font-weight="700" text-anchor="middle" >캘린더</text>
-<rect x="1210.0" y="325.0" width="120" height="120" rx="22" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
-<g transform="translate(1270 377)"><path d="M-15.0 -24.0 L15.0 -24.0 L30.0 1.5 L15.0 1.5 Z" fill="#fbbc04"/><path d="M-15.0 -24.0 L-30.0 1.5 L-15.0 25.5 L0 0 Z" fill="#0f9d58"/><path d="M-15.0 25.5 L15.0 25.5 L30.0 1.5 L-1.5 1.5 Z" fill="#4285f4"/></g>
-<text x="1270" y="479.0" font-size="24" fill="#43474b" font-weight="700" text-anchor="middle" >드라이브</text>
-<rect x="1390.0" y="325.0" width="120" height="120" rx="22" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
-<rect x="1420.0" y="355.4" width="60.0" height="43.199999999999996" rx="4.8" fill="#fff" stroke="#dadce0" stroke-width="1.7999999999999998"/><path d="M1426.0 394.28 V363.176 L1450 382.18399999999997 L1474.0 363.176 V394.28" fill="none" stroke="#ea4335" stroke-width="7.199999999999999" stroke-linejoin="round"/>
-<text x="1450" y="479.0" font-size="24" fill="#43474b" font-weight="700" text-anchor="middle" >Gmail</text>
-<rect x="1300.0" y="510.0" width="120" height="120" rx="22" fill="#fff" stroke="#e5e5e5" stroke-width="2" filter="url(#sh)"/>
-<circle cx="1360" cy="562" r="25.2" fill="#ea7600"/><circle cx="1363.78" cy="560.74" r="13.860000000000001" fill="#fff"/><circle cx="1363.78" cy="560.74" r="7.56" fill="#265787"/><path d="M1333.54 567.04 L1351.18 555.7" stroke="#ea7600" stroke-width="7.056" stroke-linecap="round"/>
-<text x="1360" y="664.0" font-size="24" fill="#43474b" font-weight="700" text-anchor="middle" >블렌더</text>
-<text x="760" y="810" font-size="36" fill="#101113" font-weight="900" text-anchor="middle" >AI 와 외부 서비스를 잇는 다리</text>
-<circle cx="305" cy="280" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="305" y="289" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
-<circle cx="880" cy="300" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="880" y="309" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">2</text>
-<circle cx="1535" cy="130" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1535" y="139" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<rect x="0" y="0" width="1792" height="840" fill="#fff"/>
+
+<!-- left column: Claude -->
+<line x1="0" y1="330" x2="360" y2="330" stroke="#101113" stroke-width="2"/>
+<text x="0" y="372" font-size="26" fill="#7c8288">AI</text>
+<circle cx="22" cy="441" r="22" fill="#1273c4"/><text x="22" y="450" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+<g transform="translate(60,417) scale(2)" fill="#D97757"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></g>
+<text x="124" y="460" font-size="45" font-weight="700" fill="#101113">Claude</text>
+
+<!-- centre: MCP + request/result lines -->
+<line x1="480" y1="491" x2="1060" y2="491" stroke="#101113" stroke-width="3" marker-end="url(#ar-ink)"/>
+<text x="770" y="467" font-size="28" font-weight="700" fill="#101113" text-anchor="middle">요청</text>
+<text x="770" y="620" font-size="83" font-weight="900" fill="#1273c4" text-anchor="middle">MCP</text>
+<line x1="1060" y1="660" x2="480" y2="660" stroke="#1273c4" stroke-width="3" marker-end="url(#ar-acc)"/>
+<text x="770" y="698" font-size="28" font-weight="700" fill="#1273c4" text-anchor="middle">결과</text>
+<circle cx="630" cy="585" r="22" fill="#1273c4"/><text x="630" y="594" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+
+<!-- right column: external services -->
+<line x1="1180" y1="330" x2="1792" y2="330" stroke="#101113" stroke-width="2"/>
+<circle cx="1202" cy="363" r="22" fill="#1273c4"/><text x="1202" y="372" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">3</text>
+<text x="1240" y="372" font-size="26" fill="#7c8288">외부 서비스</text>
+
+<line x1="1180" y1="410" x2="1792" y2="410" stroke="#d5d8dc" stroke-width="2"/>
+<g transform="translate(1180,418) scale(0.6875)"><path d="M18 16 L40 16 L46 22 L46 48 L24 48 L18 42 Z" fill="#ffffff" stroke="#101113" stroke-width="2.4"/><text x="32" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="900" fill="#101113">N</text></g>
+<text x="1250" y="452" font-size="32" font-weight="700" fill="#101113">노션</text>
+
+<line x1="1180" y1="472" x2="1792" y2="472" stroke="#d5d8dc" stroke-width="2"/>
+<g transform="translate(1180,480) scale(0.6875)"><rect x="15" y="15" width="34" height="34" fill="#ffffff" stroke="#dadce0" stroke-width="1.5"/><rect x="15" y="15" width="34" height="10" fill="#4285f4"/><text x="32" y="41" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="800" fill="#1a73e8">31</text></g>
+<text x="1250" y="514" font-size="32" font-weight="700" fill="#101113">캘린더</text>
+
+<line x1="1180" y1="534" x2="1792" y2="534" stroke="#d5d8dc" stroke-width="2"/>
+<g transform="translate(1180,542) scale(0.6875)"><polygon points="24,10 40,10 56,38 40,38" fill="#ffcf63"/><polygon points="24,10 8,38 16,52 40,52 32,38" fill="#00ac47"/><polygon points="40,38 16,38 8,38 16,52" fill="#00832d"/><polygon points="40,38 56,38 48,52 24,52 32,38" fill="#2684fc"/></g>
+<text x="1250" y="576" font-size="32" font-weight="700" fill="#101113">드라이브</text>
+
+<line x1="1180" y1="596" x2="1792" y2="596" stroke="#d5d8dc" stroke-width="2"/>
+<g transform="translate(1180,604) scale(1.833)" fill="#ea4335"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></g>
+<text x="1250" y="638" font-size="32" font-weight="700" fill="#101113">Gmail</text>
+
+<line x1="1180" y1="658" x2="1792" y2="658" stroke="#d5d8dc" stroke-width="2"/>
+<g transform="translate(1180,666) scale(0.6875)"><rect x="0" y="0" width="64" height="64" fill="#ea7600"/><ellipse cx="32" cy="34" rx="19" ry="14" fill="#265787"/><ellipse cx="32" cy="34" rx="12" ry="8.4" fill="#ea7600"/><circle cx="32" cy="34" r="4.6" fill="#265787"/><ellipse cx="32" cy="17" rx="6.2" ry="5.4" fill="#265787"/></g>
+<text x="1250" y="700" font-size="32" font-weight="700" fill="#101113">블렌더</text>
+
+<line x1="0" y1="730" x2="1792" y2="730" stroke="#e3e5e8" stroke-width="2"/>
+<text x="0" y="770" font-size="30" fill="#43474b">AI 와 외부 서비스를 잇는 다리</text>
 </svg>
