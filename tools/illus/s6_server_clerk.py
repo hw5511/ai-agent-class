@@ -26,16 +26,16 @@ b += [brand_tile(_np_icon_cx - _np_icon_size / 2, _np_icon_cy - _np_icon_size / 
 
 # right: the clerk desk (서버), a filing cabinet behind the clerk
 DESK_R_X = 1230
-CAB_X, CAB_Y, CAB_W, CAB_H = 1622, 380, 106, 290
+CAB_X, CAB_Y, CAB_W, CAB_H = 1604, 340, 86, 260
 b += [f'<rect x="{CAB_X}" y="{CAB_Y}" width="{CAB_W}" height="{CAB_H}" rx="14" fill="{DESK}" stroke="{LINE2}" stroke-width="2.5"/>']
 for i in range(3):
     yy = CAB_Y + 28 + i * 82
     b += [f'<rect x="{CAB_X + 14}" y="{yy}" width="{CAB_W - 28}" height="60" rx="6" fill="#fff" stroke="{LINE2}" stroke-width="2"/>',
-          f'<rect x="{CAB_X + 38}" y="{yy + 25}" width="30" height="8" rx="4" fill="{LINE2}"/>']
-b += [text(CAB_X + CAB_W / 2, CAB_Y - 20, "서류함", 24, 700, MUTED)]
+          f'<rect x="{CAB_X + CAB_W / 2 - 15}" y="{yy + 25}" width="30" height="8" rx="4" fill="{LINE2}"/>']
+b += [text(CAB_X + CAB_W / 2, CAB_Y - 72, "서류함", 24, 700, MUTED)]
 b += [mascot(DESK_R_X + DESK_L_W / 2 - 240 * 1.15 / 2, DESK_TOP_Y - mascot_h, 1.15),
       desk(DESK_R_X, DESK_TOP_Y, DESK_L_W, "총무 (서버)", body_h=160)]
-b += [folder(1548, 618, 70)]
+b += [folder(CAB_X + 8, CAB_Y - 56, 70)]  # pulled out, resting on the cabinet top
 
 # 1: request slip travels from Claude to the clerk desk, arcing up through the empty upper stage
 REQ_D = "M480 480C700 170 1080 170 1300 480"

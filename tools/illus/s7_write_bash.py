@@ -45,7 +45,7 @@ b += [check(cx, 390, 26), text(cx, 452, "결과 완성", 26, 800, GREEN)]
 b += [mascot(cx - 240 * MS / 2, DESK_Y - 143 * MS, MS), desk(z + 46, DESK_Y, ZONE_W - 92, "Claude", body_h=150)]
 
 # ---- solid arrows carrying the request across the gaps: bubble -> script, script -> terminal ----
-b += [path(f"M{zones[0] + ZONE_W - 4} {230}C{zones[0] + ZONE_W + 90} {230} {zones[1] + 60} {220} {zones[1] + 175} {220}", width=6)]
-b += [path(f"M{zones[1] + ZONE_W - 20} {260}C{zones[1] + ZONE_W + 90} {250} {zones[2] + 30} {230} {zones[2] + 66} {232}", width=6)]
+b += [path(f"M{zones[0] + ZONE_W - 60} {250}C{zones[0] + ZONE_W + 40} {250} {zones[1] + 90} {262} {zones[1] + 174} {262}", width=6)]
+b += [path(f"M{zones[1] + ZONE_W / 2 + 92} {300}C{zones[1] + ZONE_W + 20} {300} {zones[2] + 10} {262} {zones[2] + 58} {262}", width=6)]
 
 print(save("s7-write-bash.svg", b, "7/10 유저 지시 · Write · Bash 구조 (tools/illus/s7_write_bash.py)"))
