@@ -222,3 +222,61 @@ def badge(cx, cy, n) -> str:
                 f'<text x="{cx}" y="{cy + 10.6}" font-size="29" font-weight="800" fill="{ACCENT}" text-anchor="middle">!</text>')
     return (f'<circle cx="{cx}" cy="{cy}" r="28" fill="{ACCENT}" stroke="#fff" stroke-width="4"/>'
             f'<text x="{cx}" y="{cy + 10.6}" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">{n}</text>')
+
+
+# ---------- real service logos (inlined so an <img> is never needed) ----------
+def logo_svg(rel_path: str, x, y, size=64) -> str:
+    """Inlines web/public/logos/<rel_path> (a 0 0 64 64 viewBox icon) at top-left (x, y), scaled to `size`."""
+    src = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "web", "public", "logos", rel_path))
+    with open(src, "r", encoding="utf-8") as f:
+        content = f.read()
+    start = content.index(">", content.index("<svg")) + 1
+    end = content.rindex("</svg>")
+    inner = content[start:end]
+    s = size / 64
+    return f'<g transform="translate({x} {y}) scale({s})">{inner}</g>'
+
+
+# ---------- custom canvas size (some slides need a non-default stage) ----------
+def svg_sized(body: list[str] | str, w: int, h: int, comment: str = "") -> str:
+    """Like svg(), but for a canvas other than the default W x H."""
+    inner = body if isinstance(body, str) else "\n".join(body)
+    c = f"<!-- {comment} -->\n" if comment else ""
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" font-family="{FONT}">\n'
+            f"{c}{DEFS}\n{inner}\n</svg>\n")
+
+
+def save_sized(name: str, body: list[str] | str, w: int, h: int, comment: str = "") -> str:
+    """Like save(), but for a canvas other than the default W x H."""
+    path = os.path.normpath(os.path.join(OUT_DIR, name))
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(svg_sized(body, w, h, comment))
+    return path
+
+
+def panel_sized(w: int, h: int) -> str:
+    """Like panel(), but for a canvas other than the default W x H."""
+    return f'<rect x="16" y="16" width="{w - 32}" height="{h - 32}" rx="28" fill="{PANEL}" stroke="#e5e5e5" stroke-width="2"/>'
+
+
+# ---------- explicit arrowheads (PyMuPDF does not draw SVG <marker> arrowheads or dash patterns,
+# so any arrowhead that matters to the reading needs a real filled polygon, not marker-end) ----------
+def arrow_head(tip_x, tip_y, angle_deg, size=20, color=ACCENT) -> str:
+    """A solid triangular arrowhead, tip at (tip_x, tip_y), pointing along angle_deg
+    (0 = +x / right, 90 = +y / down, standard atan2 convention on an SVG y-down canvas)."""
+    import math
+    a = math.radians(angle_deg)
+    back, half = size * 1.7, size * 0.95
+    bx, by = tip_x - back * math.cos(a), tip_y - back * math.sin(a)
+    px, py = -math.sin(a), math.cos(a)
+    x1, y1 = bx + half * px, by + half * py
+    x2, y2 = bx - half * px, by - half * py
+    return f'<path d="M{tip_x:.1f} {tip_y:.1f}L{x1:.1f} {y1:.1f}L{x2:.1f} {y2:.1f}Z" fill="{color}"/>'
+
+
+def arrow_head_at(cp_x, cp_y, tip_x, tip_y, size=20, color=ACCENT) -> str:
+    """arrow_head() aimed by the direction from a path's last control point (cp_x, cp_y) to its
+    endpoint/tip (tip_x, tip_y) - the tangent of a cubic bezier's final segment."""
+    import math
+    angle = math.degrees(math.atan2(tip_y - cp_y, tip_x - cp_x))
+    return arrow_head(tip_x, tip_y, angle, size, color)

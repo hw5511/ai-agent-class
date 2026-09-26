@@ -80,153 +80,361 @@
       }
     },
     {
-      "id": "s8-trending-02",
+      "id": "s8-trending-p1",
       "template": "screen",
-      "title": "저장소 화면",
-      "screen": {
-        "kind": "web",
-        "url": "github.com/microsoft/markitdown",
-        "tabs": [
-          {
-            "title": "GitHub",
-            "icon": "github",
-            "active": true
-          }
-        ],
-        "page": {
-          "type": "github-repo",
-          "loggedIn": false,
-          "owner": "microsoft",
-          "name": "markitdown",
-          "forks": "13.8k",
-          "stars": "187k",
-          "starBadge": 1,
-          "tabs": [
-            {
-              "label": "Code",
-              "active": true
-            },
-            {
-              "label": "Issues",
-              "count": 327
-            },
-            {
-              "label": "Pull requests",
-              "count": 368
-            },
-            {
-              "label": "Discussions"
-            },
-            {
-              "label": "Actions"
-            },
-            {
-              "label": "Projects"
-            },
-            {
-              "label": "Security and quality"
-            },
-            {
-              "label": "Insights"
-            }
-          ],
-          "branch": "main",
-          "branchesCount": 7,
-          "tagsCount": 25,
-          "lastCommit": {
-            "author": "Adam Fourney",
-            "message": "Bump versions or markitdown and markitdown-ocr (#2545)",
-            "sha": "b8f79c5",
-            "when": "3 days ago"
-          },
-          "files": [
-            {
-              "name": ".github",
-              "folder": true,
-              "message": "fix: bump youtube-transcript-api",
-              "when": "3 days ago"
-            },
-            {
-              "name": "packages",
-              "folder": true,
-              "message": "Bump versions or markitdown and markitdown-ocr (#2545)",
-              "when": "3 days ago"
-            },
-            {
-              "name": "README.md",
-              "message": "fix: bump youtube-transcript-api",
-              "when": "3 days ago"
-            },
-            {
-              "name": "LICENSE",
-              "message": "LICENSE committed",
-              "when": "2 years ago"
-            }
-          ],
-          "readme": {
-            "heading": "MarkItDown",
-            "lines": [
-              "Python tool for converting files and office documents to Markdown.",
-              "MIT licensed, maintained by Microsoft."
-            ]
-          },
-          "about": {
-            "desc": "Python tool for converting files and office documents to Markdown.",
-            "topics": [
-              "autogen",
-              "langchain",
-              "markdown",
-              "openai",
-              "pdf"
-            ],
-            "license": "MIT",
-            "stars": "187k",
-            "watching": "588",
-            "forks": "13.8k",
-            "badge": 2
-          },
-          "releases": {
-            "version": "Version 0.1.8",
-            "latest": true,
-            "when": "3 days ago",
-            "count": 23
-          }
-        }
-      },
-      "notes": [
-        {
-          "n": 1,
-          "head": "로그인 없이도 스타 수 확인",
-          "body": "로그인하지 않아도 저장소의 스타 수와 인기를 그대로 볼 수 있습니다."
-        },
-        {
-          "n": 2,
-          "head": "About 요약",
-          "body": "설명, 주제 태그, 라이선스, 스타 수를 오른쪽 About 에서 한눈에 확인합니다."
-        }
-      ],
-      "action": {
-        "label": "저장소 열기",
-        "items": [
-          {
-            "kind": "link",
-            "href": "https://github.com/microsoft/markitdown",
-            "text": "github.com/microsoft/markitdown"
-          }
-        ]
-      }
-    },
-    {
-      "id": "s8-trending-03",
-      "template": "screen",
-      "title": "markitdown 설치",
-      "replaceWithCapture": "pip install markitdown[all] 실제 실행 결과",
+      "title": "markitdown · PDF 를 요약 노트로",
+      "replaceWithCapture": "pip install markitdown[all] 및 변환·요약 실제 실행 결과",
       "screen": {
         "kind": "vscode",
         "folder": "agent1",
         "files": [
           {
-            "name": "cafe-landing",
+            "name": "강의자료.pdf"
+          },
+          {
+            "name": "강의자료.md",
+            "badge": 3
+          },
+          {
+            "name": "요약노트.md",
+            "badge": 3
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "fit": true,
+          "turns": [
+            {
+              "role": "user",
+              "text": "markitdown 설치해서 이 PDF 강의자료를 마크다운으로 바꾸고, 핵심만 요약 노트로 만들어줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(pip install 'markitdown[all]')"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(markitdown 강의자료.pdf -o 강의자료.md)",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "Write(요약노트.md)"
+            },
+            {
+              "role": "assistant",
+              "text": "강의자료.pdf 를 강의자료.md 로 바꾸고, 핵심만 추려 요약노트.md 로 정리했어요.",
+              "badge": 3
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "변환과 요약을 한 번에 요청",
+          "body": "PDF 강의자료를 마크다운으로 바꾸고 핵심만 요약 노트로 만들어 달라고 한 문장으로 요청해 보세요."
+        },
+        {
+          "n": 2,
+          "head": "설치 후 바로 변환",
+          "body": "markitdown 을 설치한 다음 명령 하나로 PDF 를 마크다운 파일로 바꿉니다."
+        },
+        {
+          "n": 3,
+          "head": "요약노트 파일 생성",
+          "body": "변환된 문서를 읽고 핵심만 추린 요약노트.md 를 탐색기에 새로 만들어 줍니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 · 저장소",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "markitdown 설치해서 이 PDF 강의자료를 마크다운으로 바꾸고, 핵심만 요약 노트로 만들어줘"
+          },
+          {
+            "kind": "link",
+            "href": "https://github.com/microsoft/markitdown",
+            "text": "microsoft/markitdown",
+            "desc": "PDF · Word · Excel 같은 문서를 AI 가 읽기 좋은 마크다운으로 변환"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8-trending-p2",
+      "template": "screen",
+      "title": "ai-engineering-from-scratch · AI 선생님 모드",
+      "replaceWithCapture": "git clone 및 첫 레슨 설명·퀴즈 실제 실행 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          {
+            "name": "ai-engineering-from-scratch",
+            "folder": true,
+            "badge": 2
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "fit": true,
+          "turns": [
+            {
+              "role": "user",
+              "text": "이 레포 클론해서 첫 장부터 AI 선생님처럼 나한테 하나씩 가르쳐줘. 한 단락 설명하고 퀴즈 하나씩 내줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(git clone https://github.com/rohitg00/ai-engineering-from-scratch.git)"
+            },
+            {
+              "role": "tool",
+              "text": "Read(ai-engineering-from-scratch/phases/00-setup-and-tooling/01-dev-environment/docs/en.md)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "첫 레슨은 개발 환경 준비예요. Python, Node.js, Rust 를 처음부터 세팅해서 어떤 프로젝트에서도 똑같이 재현되는 환경을 만드는 게 목표예요.",
+              "badge": 3
+            },
+            {
+              "role": "assistant",
+              "text": "퀴즈: AI 프로젝트마다 가상환경을 따로 만드는 이유는 무엇일까요?"
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "클론과 선생님 모드 요청",
+          "body": "레포를 클론해서 첫 장부터 한 단락씩 설명하고 퀴즈를 내 달라고 요청해 보세요."
+        },
+        {
+          "n": 2,
+          "head": "첫 레슨 문서 확인",
+          "body": "레포를 내려받은 다음 첫 번째 레슨 문서를 찾아 읽습니다."
+        },
+        {
+          "n": 3,
+          "head": "설명과 퀴즈로 진행",
+          "body": "레슨 내용을 한 단락으로 설명하고 이해를 확인하는 퀴즈를 하나 내고 답을 기다립니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 · 저장소",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "이 레포 클론해서 첫 장부터 AI 선생님처럼 나한테 하나씩 가르쳐줘. 한 단락 설명하고 퀴즈 하나씩 내줘"
+          },
+          {
+            "kind": "link",
+            "href": "https://github.com/rohitg00/ai-engineering-from-scratch",
+            "text": "rohitg00/ai-engineering-from-scratch",
+            "desc": "523개 레슨짜리 무료 AI 엔지니어링 커리큘럼 · AI 선생님 모드로 배우기"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8-trending-p3",
+      "template": "screen",
+      "title": "CLI-Anything · GIMP 를 CLI 로",
+      "replaceWithCapture": "cli-hub install gimp 및 cli-anything-gimp 흑백 변환 실제 실행 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          {
+            "name": "photos",
+            "folder": true
+          },
+          {
+            "name": "cafe.jpg",
+            "depth": 1
+          },
+          {
+            "name": "photos_bw",
+            "folder": true
+          },
+          {
+            "name": "cafe.jpg",
+            "depth": 1,
+            "badge": 3
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "fit": true,
+          "turns": [
+            {
+              "role": "user",
+              "text": "CLI-Anything 으로 GIMP 를 CLI 로 설치해서, 네가 직접 조작해서 photos/cafe.jpg 사진을 흑백으로 바꿔줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(pip install cli-anything-hub)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(cli-hub install gimp)",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "Bash(cli-anything-gimp project new -o edit.json)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(cli-anything-gimp --project edit.json layer add-from-file photos/cafe.jpg)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(cli-anything-gimp --project edit.json filter add grayscale --layer 0)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(cli-anything-gimp --project edit.json export render photos_bw/cafe.jpg)"
+            },
+            {
+              "role": "assistant",
+              "text": "GIMP CLI 로 cafe.jpg 에 흑백 필터를 적용해서 photos_bw/cafe.jpg 로 저장했어요.",
+              "badge": 3
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "프로그램을 CLI 로 요청",
+          "body": "내 컴퓨터에 있는 프로그램 이름과 원하는 결과물을 말하면 CLI-Anything 이 그 프로그램을 명령으로 조작할 수 있게 만들어 줍니다."
+        },
+        {
+          "n": 2,
+          "head": "CLI 허브에서 설치",
+          "body": "CLI-Anything 이 이미 만들어 둔 GIMP CLI 를 허브에서 바로 설치합니다."
+        },
+        {
+          "n": 3,
+          "head": "직접 조작해서 결과물 생성",
+          "body": "설치된 GIMP CLI 로 사진을 불러와 흑백 필터를 적용하고 photos_bw 폴더에 새 파일로 저장합니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 · 저장소",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "CLI-Anything 으로 GIMP 를 CLI 로 설치해서, 네가 직접 조작해서 photos/cafe.jpg 사진을 흑백으로 바꿔줘"
+          },
+          {
+            "kind": "link",
+            "href": "https://github.com/HKUDS/CLI-Anything",
+            "text": "HKUDS/CLI-Anything",
+            "desc": "GIMP · LibreOffice 같은 데스크톱 프로그램을 AI 에이전트가 쓰는 CLI 로 바꿔줌"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8-trending-p4",
+      "template": "screen",
+      "title": "financial-services · 실적 분석 한 장",
+      "replaceWithCapture": "claude plugin install 및 /earnings 실제 실행 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          {
+            "name": "애플_실적분석.md",
+            "badge": 3
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\agent1",
+          "fit": true,
+          "turns": [
+            {
+              "role": "user",
+              "text": "financial-services 레포 플러그인 설치하고, 애플 최근 실적으로 간단한 재무 분석 한 장 만들어줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(claude plugin marketplace add anthropics/financial-services)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(claude plugin install equity-research@claude-for-financial-services)",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "Write(애플_실적분석.md)"
+            },
+            {
+              "role": "assistant",
+              "text": "equity-research 스킬로 애플 최근 분기 실적을 정리해서 애플_실적분석.md 한 장으로 만들었어요.",
+              "badge": 3
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "플러그인 설치와 분석 요청",
+          "body": "financial-services 레포의 플러그인을 설치하고 특정 기업의 최근 실적 분석을 만들어 달라고 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "증권 리서치 스킬 설치",
+          "body": "마켓플레이스를 추가한 다음 실적 분석에 쓰는 equity-research 플러그인을 설치합니다."
+        },
+        {
+          "n": 3,
+          "head": "한 장짜리 분석 파일",
+          "body": "설치된 스킬로 최근 실적을 정리해 한 장짜리 분석 파일을 만들어 줍니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 · 저장소",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "financial-services 레포 플러그인 설치하고, 애플 최근 실적으로 간단한 재무 분석 한 장 만들어줘"
+          },
+          {
+            "kind": "link",
+            "href": "https://github.com/anthropics/financial-services",
+            "text": "anthropics/financial-services",
+            "desc": "Anthropic 공식 금융 업무용 에이전트 · 스킬 모음, 증권·회계 분석 초안 작성"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s8-trending-04",
+      "template": "screen",
+      "title": "만들기 전에 먼저 찾기",
+      "replaceWithCapture": "웹·GitHub 조사 및 저장소 추천 실제 실행 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "agent1",
+        "files": [
+          {
+            "name": "project",
             "folder": true
           }
         ],
@@ -237,17 +445,38 @@
           "turns": [
             {
               "role": "user",
-              "text": "https://github.com/microsoft/markitdown 설치해서 쓸 수 있게 해줘",
+              "text": "PDF 강의자료를 요약 노트로 바꿔주는 도구를 만들고 싶은데, 이걸 구현하기 위한 라이브러리, 오픈소스 등 이미 참고할만한 게 있는지 깃허브나 웹 조사를 진행해줘",
               "badge": 1
             },
             {
               "role": "tool",
-              "text": "Bash(pip install 'markitdown[all]')"
+              "text": "WebSearch(PDF 요약 노트 변환 도구 오픈소스 비교)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(gh search repos \"pdf to markdown\" --sort stars --limit 8)",
+              "badge": 2
             },
             {
               "role": "assistant",
-              "text": "markitdown 설치를 마쳤어요. PDF, Word, Excel, PowerPoint, 이미지, HTML 을 마크다운으로 바꿔드릴 수 있어요.",
-              "badge": 2
+              "text": "조사해 보니 참고할 만한 오픈소스가 여럿 있었어요.",
+              "badge": 3
+            },
+            {
+              "role": "assistant",
+              "text": "⎿  microsoft/markitdown · ⭐187k · PDF·Word·Excel 등 문서를 마크다운으로 변환"
+            },
+            {
+              "role": "assistant",
+              "text": "⎿  datalab-to/marker · ⭐40k · 표와 레이아웃까지 살려 PDF 를 마크다운으로 변환"
+            },
+            {
+              "role": "assistant",
+              "text": "⎿  MarkPDFdown/markpdfdown · ⭐2.3k · 비전 LLM 으로 PDF 를 마크다운으로 변환"
+            },
+            {
+              "role": "assistant",
+              "text": "⎿  jzillmann/pdf-to-markdown · ⭐1.7k · 브라우저에서 바로 PDF 를 마크다운으로 변환"
             }
           ]
         }
@@ -255,132 +484,20 @@
       "notes": [
         {
           "n": 1,
-          "head": "저장소 주소로 설치 요청",
-          "body": "찾은 저장소 주소를 그대로 붙여넣고 설치해서 쓸 수 있게 해달라고 입력해 보세요."
+          "head": "만들려는 도구를 설명하고 조사 요청",
+          "body": "무엇을 만들고 싶은지 설명하고, 참고할 라이브러리나 오픈소스가 있는지 깃허브와 웹에서 찾아봐 달라고 요청합니다."
         },
         {
           "n": 2,
-          "head": "바로 변환 가능",
-          "body": "설치가 끝나면 PDF, Word, Excel, PowerPoint, 이미지, HTML 문서를 바로 마크다운으로 바꿀 수 있습니다."
-        }
-      ],
-      "action": {
-        "label": "프롬프트 · 추천 저장소",
-        "items": [
-          {
-            "kind": "copy",
-            "value": "https://github.com/microsoft/markitdown 설치해서 쓸 수 있게 해줘"
-          },
-          {
-            "kind": "link",
-            "href": "https://github.com/microsoft/markitdown",
-            "text": "microsoft/markitdown",
-            "desc": "PDF · Word · Excel 같은 문서를 AI 가 읽기 좋은 마크다운으로 변환"
-          },
-          {
-            "kind": "link",
-            "href": "https://github.com/rohitg00/ai-engineering-from-scratch",
-            "text": "rohitg00/ai-engineering-from-scratch",
-            "desc": "AI 엔지니어링 무료 커리큘럼 · Claude 에게 이 저장소로 가르쳐 달라고 하는 AI 선생님 모드용"
-          },
-          {
-            "kind": "link",
-            "href": "https://github.com/HKUDS/CLI-Anything",
-            "text": "HKUDS/CLI-Anything",
-            "desc": "다른 프로그램에 CLI 를 만들어 AI 에이전트가 직접 조작하게 해줌 · 7회차 CLI 와 연결"
-          },
-          {
-            "kind": "link",
-            "href": "https://github.com/anthropics/financial-services",
-            "text": "anthropics/financial-services",
-            "desc": "Anthropic 공식 금융 업무용 에이전트 · 스킬 예시 모음"
-          }
-        ]
-      }
-    },
-    {
-      "id": "s8-trending-04",
-      "template": "screen",
-      "title": "만들기 전에 먼저 찾기",
-      "screen": {
-        "kind": "web",
-        "url": "github.com/search?q=pdf+to+markdown&type=repositories",
-        "tabs": [
-          {
-            "title": "GitHub",
-            "icon": "github",
-            "active": true
-          }
-        ],
-        "page": {
-          "type": "github-search",
-          "query": "pdf to markdown",
-          "resultCount": "6.6k",
-          "searchBadge": 1,
-          "results": [
-            {
-              "owner": "microsoft",
-              "name": "markitdown",
-              "desc": "Python tool for converting files and office documents to Markdown.",
-              "lang": "Python",
-              "langColor": "#3572A5",
-              "stars": "187k",
-              "updated": "4 days ago",
-              "badge": 2
-            },
-            {
-              "owner": "jzillmann",
-              "name": "pdf-to-markdown",
-              "desc": "A PDF to Markdown converter",
-              "lang": "JavaScript",
-              "langColor": "#f1e05a",
-              "stars": "1.7k",
-              "updated": "3월 8일"
-            },
-            {
-              "owner": "datalab-to",
-              "name": "marker",
-              "desc": "Convert PDF to markdown + JSON quickly with high accuracy",
-              "lang": "Python",
-              "langColor": "#3572A5",
-              "stars": "40k",
-              "updated": "12 days ago"
-            },
-            {
-              "owner": "simonhaenisch",
-              "name": "md-to-pdf",
-              "desc": "Hackable CLI tool for converting Markdown files to PDF using Node.js and headless Chrome.",
-              "lang": "TypeScript",
-              "langColor": "#3178c6",
-              "stars": "2k",
-              "updated": "2025년 12월 3일"
-            }
-          ]
-        },
-        "zoom": 1.35
-      },
-      "notes": [
-        {
-          "n": 1,
-          "head": "만들고 싶은 기능으로 검색",
-          "body": "만들고 싶은 기능을 영어로 검색창에 입력해 이미 만들어진 저장소가 있는지 찾아봅니다."
+          "head": "웹 검색과 GitHub 검색",
+          "body": "웹을 검색하고 GitHub 에서 관련 저장소를 별이 많은 순으로 찾아봅니다."
         },
         {
-          "n": 2,
-          "head": "별이 많은 저장소부터",
-          "body": "별이 많은 저장소일수록 많은 사람이 쓰고 있어서 먼저 살펴볼 만합니다."
+          "n": 3,
+          "head": "저장소 목록으로 답변",
+          "body": "찾은 저장소를 스타 수와 한 줄 설명과 함께 정리해서 알려줍니다."
         }
-      ],
-      "action": {
-        "label": "링크",
-        "items": [
-          {
-            "kind": "link",
-            "href": "https://github.com/trending",
-            "text": "github.com/trending"
-          }
-        ]
-      }
+      ]
     }
   ]
 }

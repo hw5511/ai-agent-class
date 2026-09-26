@@ -28,42 +28,9 @@
     },
     {
       "id": "s8-github-intro-02",
-      "template": "cards",
+      "template": "illustration",
       "title": "GitHub 로 하는 일 4가지",
-      "cards": [
-        {
-          "label": "백업",
-          "logo": "icon:Upload",
-          "tags": [
-            "작업 폴더를 안전하게 보관"
-          ],
-          "badge": 1
-        },
-        {
-          "label": "불러오기",
-          "logo": "icon:Download",
-          "tags": [
-            "다른 컴퓨터에서 최신 상태로"
-          ],
-          "badge": 2
-        },
-        {
-          "label": "되돌리기",
-          "logo": "icon:Undo",
-          "tags": [
-            "예전 커밋으로 복구"
-          ],
-          "badge": 3
-        },
-        {
-          "label": "수정 이력",
-          "logo": "icon:History",
-          "tags": [
-            "커밋 메모로 이유 확인"
-          ],
-          "badge": 4
-        }
-      ],
+      "illustration": "/illustrations/s8-gh-four-uses.svg",
       "notes": [
         {
           "n": 1,
@@ -112,43 +79,9 @@
     },
     {
       "id": "s8-github-intro-04",
-      "template": "cards",
+      "template": "illustration",
       "title": "용어 4개",
-      "cards": [
-        {
-          "label": "레포",
-          "logo": "icon:Folder",
-          "tags": [
-            "Repository",
-            "공유폴더"
-          ],
-          "badge": 1
-        },
-        {
-          "label": "커밋",
-          "logo": "icon:Commit",
-          "tags": [
-            "저장 + 메모"
-          ],
-          "badge": 2
-        },
-        {
-          "label": "푸시",
-          "logo": "icon:Upload",
-          "tags": [
-            "GitHub 로 올리기"
-          ],
-          "badge": 3
-        },
-        {
-          "label": "클론",
-          "logo": "icon:Download",
-          "tags": [
-            "내 컴퓨터로 내려받기"
-          ],
-          "badge": 4
-        }
-      ],
+      "illustration": "/illustrations/s8-gh-terms.svg",
       "notes": [
         {
           "n": 1,

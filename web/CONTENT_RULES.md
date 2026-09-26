@@ -76,13 +76,30 @@ Cards, flow, table and illustration slides follow one look:
   hairlines to separate) instead of boxes, pills, shadows or tinted fills.
 - The content block sits in the lower part of the body on one optical line (free space split 3:1 above/below,
   at least 64px bottom margin). Whitespace above it is intentional; never a small group floating in the centre.
-- No clip-art: no cartoon people, clouds, devices, magnifiers, stars, and no lucide icons on cards/flows
-  (`icon:` logos are ignored there; brand logos stay). Illustrations are drawn with type, rules, dots and real
-  brand marks only.
+- No lucide icons on cards/flows (`icon:` logos are ignored there; brand logos stay).
+- A concept slide is never carried by type and rules alone. See "Concept illustrations" below: the idea is drawn.
 - Numbers on cards/flows are flat mono numerals (01 02) in the accent colour. When a slide has badges, only the
   badged items show a number (the badge number = the note number); otherwise every item shows its position.
 - Illustration SVGs: `viewBox="0 0 1792 840"`, Pretendard for Korean (an `<img>` SVG cannot load webfonts),
   a monospace stack only for ASCII code, content roughly y 320..770.
+
+## Concept illustrations (CEO 2026-09-26: "시각적인 백터일러스트로 설명잘하라고")
+
+The 09-26 minimalism pass read "refined and simple" as "delete the picture" and left step 8's concept slides as a
+few words and hairlines. The owner rejected that. Minimalism = a calm layout around a strong, clear picture.
+
+**Reference = basic 5/2 "메인 클로드의 하청"** (`s5-subcontract.svg` as of commit 6872b7c). Every concept or
+comparison slide (what something is, how things relate, A vs B) is drawn in that language:
+- Characters as actors: the Claude pixel mascot sits at desks and does the job, so a role reads as someone working.
+- The metaphor is physical: real objects (desks, laptops, folders, papers, clouds, windows, phones, boxes).
+- One frame tells the story in reading order; numbered badges on the objects (badge = note number); things move
+  along dotted accent paths.
+- A soft tinted zone marks "the other place" (cloud, workers). Short labels sit on the objects, never in a legend.
+- The picture fills the stage. No small group floating in the centre, no text table as the only visual.
+- Build with `tools/illuskit.py` (mascot, desk, folder, doc, laptop, window, phone, cloud, path, badge, check/cross) and
+  one generator per slide in `tools/illus/`, so the whole course keeps one illustration language.
+
+Action-screen slides still show the real screen; this section is about concept slides.
 
 ## Illustrations (CEO 2026-09-21)
 

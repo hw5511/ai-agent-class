@@ -1,44 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
-<rect x="0" y="0" width="1792" height="840" fill="#fff"/>
-
-<!-- left column: 내 컴퓨터 (x 0..420) -->
-<text x="0" y="360" font-size="25" fill="#7c8288">내 컴퓨터</text>
-<line x1="0" y1="386" x2="420" y2="386" stroke="#101113" stroke-width="2"/>
-
-<circle cx="24" cy="436" r="22" fill="#1273c4"/>
-<text x="24" y="444" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">2</text>
-<text x="64" y="444" font-size="42" font-weight="700" fill="#101113">꺼져 있어도</text>
-
-<text x="0" y="506" font-size="26"><tspan fill="#a3a8ad">●</tspan><tspan fill="#43474b"> 오프라인</tspan></text>
-<text x="0" y="546" font-size="26" fill="#7c8288">브라우저 닫음 · 전원 끔</text>
-
-<!-- centre column: 클라우드 세션 (x 468..1324) -->
-<text x="468" y="360" font-size="25" fill="#7c8288">클라우드 세션</text>
-<line x1="468" y1="386" x2="1324" y2="386" stroke="#1273c4" stroke-width="4"/>
-
-<circle cx="492" cy="436" r="22" fill="#1273c4"/>
-<text x="492" y="444" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">1</text>
-<text x="532" y="444" font-size="42" font-weight="700" fill="#1273c4">빌려 쓰는 컴퓨터</text>
-
-<rect x="468" y="490" width="856" height="240" rx="8" fill="none" stroke="#e3e5e8" stroke-width="1.5"/>
-<text x="496" y="538" font-size="26" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">$ git clone github.com/student/cafe-landing</text>
-<text x="496" y="582" font-size="26"><tspan fill="#1273c4">●</tspan><tspan fill="#43474b"> index.html 수정 중</tspan></text>
-<text x="496" y="626" font-size="26"><tspan fill="#1273c4">●</tspan><tspan fill="#43474b"> 커밋 · 푸시</tspan></text>
-<text x="496" y="670" font-size="26"><tspan fill="#1273c4">●</tspan><tspan fill="#43474b"> PR #2 생성</tspan></text>
-<text x="1296" y="670" font-size="24" fill="#7c8288" text-anchor="end">진행 중</text>
-
-<!-- right column: 어디서든 (x 1372..1792) -->
-<text x="1372" y="360" font-size="25" fill="#7c8288">어디서든</text>
-<line x1="1372" y1="386" x2="1792" y2="386" stroke="#101113" stroke-width="2"/>
-
-<text x="1372" y="444" font-size="28" fill="#43474b">폰에서 확인</text>
-<line x1="1372" y1="482" x2="1792" y2="482" stroke="#e3e5e8" stroke-width="1"/>
-
-<text x="1372" y="519" font-size="28" fill="#43474b">다른 PC 에서 이어서</text>
-<line x1="1372" y1="557" x2="1792" y2="557" stroke="#e3e5e8" stroke-width="1"/>
-
-<g transform="translate(1372,572) scale(1.1667)">
-<path fill="#101113" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-</g>
-<text x="1412" y="594" font-size="28" fill="#43474b">GitHub 레포에 반영</text>
+<!-- 8/56 클라우드 세션 = 빌려 쓰는 컴퓨터 (tools/illus/s8_cloud_vm.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
+<g filter="url(#shs)"><rect x="120" y="468" width="196" height="123.48" rx="12" fill="#2b2f35"/><rect x="130" y="478" width="176" height="103.48" rx="6" fill="#f4f8fc"/></g><g transform="translate(130 478)"><rect x="0" y="0" width="176" height="103" fill="#101113"/></g><rect x="106" y="587.48" width="224" height="10" rx="5" fill="#c3c9cf"/>
+<text x="226" y="424" font-size="26" font-weight="700" fill="#5b6570" text-anchor="middle">전원 꺼짐</text>
+<circle cx="322" cy="420" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="322" y="430.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<rect x="58" y="612" width="340" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="74" y="636" width="308" height="150" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="137.5" y="702" width="181" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<text x="228.0" y="742" font-size="28" font-weight="900" fill="#101113" text-anchor="middle">내 컴퓨터</text>
+<rect x="430" y="66" width="740" height="706" rx="26" fill="#eaf3fb"/>
+<text x="650" y="118" font-size="38" font-weight="900" fill="#0d5c9e" text-anchor="start">클라우드 세션</text>
+<text x="650" y="154" font-size="24" font-weight="700" fill="#5b6570" text-anchor="start">빌려 쓰는 컴퓨터</text>
+<g filter="url(#sh)"><rect x="760" y="372" width="300" height="220" rx="16" fill="#fff" stroke="#c9ccd1" stroke-width="2"/></g>
+<path d="M761 424V388a15 15 0 0 1 15-15h268a15 15 0 0 1 15 15V424z" fill="#eef1f4"/>
+<circle cx="786" cy="398" r="7" fill="#ff5f57"/><circle cx="808" cy="398" r="7" fill="#febc2e"/><circle cx="830" cy="398" r="7" fill="#28c840"/>
+<text x="910.0" y="406" font-size="20" font-weight="700" fill="#5b6570" text-anchor="middle">cafe-landing</text>
+<g transform="translate(760 424)"><g transform="translate(20 20) rotate(-6 23.0 28.75) scale(0.71875)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g><g transform="translate(70 44) rotate(4 23.0 28.75) scale(0.71875)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#12a150"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g><g transform="translate(120 20) rotate(-3 23.0 28.75) scale(0.71875)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g><text x="20" y="116" font-size="24" font-weight="700" fill="#5b6570" text-anchor="start">수정 중</text></g>
+<circle cx="1056" cy="376" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1056" y="386.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<path transform="translate(490 449) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="450" y="592" width="640" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="466" y="616" width="608" height="160" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="598.0" y="682" width="344" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<text x="770.0" y="722" font-size="26" font-weight="900" fill="#101113" text-anchor="middle">cafe-landing</text>
+<path d="M1060 418C1150 382 1180 190 1278 145" fill="none" stroke="#1273c4" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 15" marker-end="url(#ab)"/>
+<path transform="translate(1290 118) scale(2.0833333333333335)" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="#101113"/>
+<text x="1358" y="156" font-size="30" font-weight="800" fill="#101113" text-anchor="start">레포에 반영</text>
+<path d="M1060 482.0C1250 482.0 1420 460 1495 462" fill="none" stroke="#1273c4" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 15" marker-end="url(#ab)"/>
+<g filter="url(#sh)"><rect x="1500" y="372" width="100" height="200.0" rx="16.0" fill="#2b2f35"/><rect x="1508" y="380" width="84" height="184.0" rx="12.0" fill="#f4f8fc"/></g><rect x="1528.0" y="388" width="44" height="8" rx="4" fill="#2b2f35"/><g transform="translate(1508 404)"><rect x="0" y="0" width="84" height="136" fill="#f4f8fc"/><rect x="8" y="14" width="68" height="10" rx="4" fill="#cfe3f5"/><rect x="8" y="32" width="50" height="10" rx="4" fill="#cfe3f5"/></g>
+<text x="1550" y="358" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">폰에서 확인</text>
+<path d="M1060 562C1220 652 1340 600 1425 612" fill="none" stroke="#1273c4" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 15" marker-end="url(#ab)"/>
+<g filter="url(#shs)"><rect x="1430" y="590" width="150" height="94.5" rx="12" fill="#2b2f35"/><rect x="1440" y="600" width="130" height="74.5" rx="6" fill="#f4f8fc"/></g><g transform="translate(1440 600)"><g transform="translate(4 2) scale(0.3875)">
+<path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
+<rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
+<rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
+<rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
+</g></g><rect x="1416" y="680.5" width="178" height="10" rx="5" fill="#c3c9cf"/>
+<text x="1505" y="762" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">다른 PC 에서 이어서</text>
 </svg>

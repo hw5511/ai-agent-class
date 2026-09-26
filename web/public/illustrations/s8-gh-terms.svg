@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- 8/7 GitHub 용어 4개 (tools/illus/s8_gh_terms.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
+<rect x="60" y="90" width="395" height="690" rx="26" fill="#eaf3fb"/>
+<rect x="485" y="90" width="395" height="690" rx="26" fill="#eaf3fb"/>
+<rect x="910" y="90" width="395" height="690" rx="26" fill="#eaf3fb"/>
+<rect x="1335" y="90" width="395" height="690" rx="26" fill="#eaf3fb"/>
+<path transform="translate(96.5 451.6) scale(0.8)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="92.5" y="560" width="330" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="108.5" y="584" width="298" height="78" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<text x="257.5" y="632" font-size="22" font-weight="800" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">cafe-landing</text>
+<g transform="translate(286.0 439.7) rotate(-16 17.0 21.25) scale(0.53125)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<g transform="translate(320.0 407.7) rotate(-6 19.0 23.75) scale(0.59375)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<g transform="translate(352.0 385.7) rotate(4 20.0 25.0) scale(0.625)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<g transform="translate(382.0 417.7) rotate(14 17.0 21.25) scale(0.53125)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<g transform="translate(270.0 457.7) scale(0.825)">
+<path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
+<rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
+<rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
+<rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
+</g>
+<circle cx="384.0" cy="379.7" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="384.0" y="390.3" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<text x="257.5" y="722" font-size="44" font-weight="900" fill="#101113" text-anchor="middle">레포</text>
+<text x="257.5" y="758" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">Repository</text>
+<path transform="translate(521.5 451.6) scale(0.8)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="517.5" y="560" width="330" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="533.5" y="584" width="298" height="78" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<text x="682.5" y="632" font-size="22" font-weight="800" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">cafe-landing</text>
+<g transform="translate(695.0 457.7) scale(0.825)">
+<path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
+<rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
+<rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
+<rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
+</g>
+<rect x="744.0" y="377.7" width="34" height="38" rx="7" fill="#1273c4"/>
+<rect x="713.0" y="411.7" width="96" height="52" rx="12" fill="#2b2f35" filter="url(#shs)"/>
+<circle cx="761.0" cy="437.7" r="15" fill="#1273c4"/>
+<circle cx="761.0" cy="437.7" r="7" fill="#fff"/>
+<path d="M757.0 375.7C705.0 333.7 747.5 250 747.5 240" fill="none" stroke="#12a150" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 15" marker-end="url(#ag)"/>
+<rect x="577.5" y="150" width="210" height="90" rx="14" fill="#fff" stroke="#c9ccd1" stroke-width="2" filter="url(#shs)"/>
+<text x="599.5" y="184" font-size="17" font-weight="700" fill="#5b6570" text-anchor="start">커밋 메모</text>
+<text x="599.5" y="218" font-size="25" font-weight="800" fill="#101113" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">메뉴 추가</text>
+<circle cx="769.5" cy="168" r="18" fill="#12a150"/><path d="M761.94 168.36l5.3999999999999995 5.3999999999999995 10.080000000000002-10.799999999999999" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="701.0" cy="407.7" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="701.0" y="418.3" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<text x="682.5" y="722" font-size="44" font-weight="900" fill="#101113" text-anchor="middle">커밋</text>
+<text x="682.5" y="758" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">Commit</text>
+<path transform="translate(946.5 451.6) scale(0.8)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="942.5" y="560" width="330" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="958.5" y="584" width="298" height="78" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<text x="1107.5" y="632" font-size="22" font-weight="800" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">cafe-landing</text>
+<g transform="translate(1122.0 460.8) scale(0.8)">
+<path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
+<rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
+<rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
+<rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
+</g>
+<g transform="translate(1137.5 178) scale(0.42)" filter="url(#sh)"><circle cx="-130" cy="40" r="124" fill="#fff"/><circle cx="0" cy="-32" r="162" fill="#fff"/><circle cx="136" cy="44" r="116" fill="#fff"/><rect x="-270" y="32" width="532" height="172" rx="86" fill="#fff"/></g>
+<path transform="translate(1049.5 128) scale(1.5)" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="#101113"/>
+<text x="1095.5" y="154" font-size="27" font-weight="900" fill="#101113" text-anchor="start">GitHub</text>
+<path d="M1186.0 456.8C1161.75 392.4 1161.75 332.4 1137.5 268" fill="none" stroke="#1273c4" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 15"/>
+<g transform="translate(1135.75 332.4) scale(0.325)">
+<path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
+<rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
+<rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
+<rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
+</g>
+<path d="M1137.5 268.0L1161.3 288.1L1132.9 298.8Z" fill="#1273c4"/>
+<circle cx="1241.5" cy="144" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1241.5" y="154.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<text x="1107.5" y="722" font-size="44" font-weight="900" fill="#101113" text-anchor="middle">푸시</text>
+<text x="1107.5" y="758" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">Push</text>
+<path transform="translate(1371.5 451.6) scale(0.8)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="1367.5" y="560" width="330" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="1383.5" y="584" width="298" height="78" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<g transform="translate(1562.5 178) scale(0.42)" filter="url(#sh)"><circle cx="-130" cy="40" r="124" fill="#fff"/><circle cx="0" cy="-32" r="162" fill="#fff"/><circle cx="136" cy="44" r="116" fill="#fff"/><rect x="-270" y="32" width="532" height="172" rx="86" fill="#fff"/></g>
+<path transform="translate(1474.5 128) scale(1.5)" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="#101113"/>
+<text x="1520.5" y="154" font-size="27" font-weight="900" fill="#101113" text-anchor="start">GitHub</text>
+<g filter="url(#shs)"><rect x="1533.5" y="462.35" width="155" height="97.65" rx="12" fill="#2b2f35"/><rect x="1543.5" y="472.35" width="135" height="77.65" rx="6" fill="#f4f8fc"/></g><g transform="translate(1543.5 472.35)"><g transform="translate(51.5 10) scale(0.325)">
+<path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
+<rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
+<rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
+<rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
+</g></g><rect x="1519.5" y="556.0" width="183" height="10" rx="5" fill="#c3c9cf"/>
+<path d="M1562.5 268C1586.75 332.175 1586.75 392.175 1611.0 456.35" fill="none" stroke="#1273c4" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 15"/>
+<g transform="translate(1562.75 350.175) scale(0.3)">
+<path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
+<rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
+<rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
+<rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
+</g>
+<path d="M1611.0 456.4L1587.2 436.3L1615.6 425.5Z" fill="#1273c4"/>
+<circle cx="1666.5" cy="144" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1666.5" y="154.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">4</text>
+<text x="1532.5" y="722" font-size="44" font-weight="900" fill="#101113" text-anchor="middle">클론</text>
+<text x="1532.5" y="758" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">Clone</text>
+</svg>

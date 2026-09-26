@@ -1,33 +1,67 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
-<rect x="0" y="0" width="1792" height="840" fill="#fff"/>
-
-<g transform="translate(0,-50)">
-<!-- 4 columns, gap 48 -> width 412, x = 0, 460, 920, 1380 -->
-
-<!-- column 1: GitHub (mark: 40 units, right-aligned to column right edge 412, centred on numeral row) -->
-<g transform="translate(372,722) scale(1.66667)">
-<path fill="#101113" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+<!-- 8/1 title - desk -> GitHub -> cloud session -> Claude app -> phone (tools/illus/s8_title.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
+<path transform="translate(88 434) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<g filter="url(#shs)"><rect x="300" y="452" width="196" height="123.48" rx="12" fill="#2b2f35"/><rect x="310" y="462" width="176" height="103.48" rx="6" fill="#f4f8fc"/></g><g transform="translate(310 462)"><g transform="translate(48 14) scale(0.5)">
+<path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
+<rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
+<rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
+<rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
+</g><text x="88" y="96" font-size="17" font-weight="700" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">agent1</text></g><rect x="286" y="571.48" width="224" height="10" rx="5" fill="#c3c9cf"/>
+<rect x="60" y="574" width="460" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="76" y="598" width="428" height="190" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="185.5" y="664" width="209" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<text x="290.0" y="704" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">내 컴퓨터</text>
+<g transform="translate(730 270) scale(0.64)" filter="url(#sh)"><circle cx="-130" cy="40" r="124" fill="#eaf3fb"/><circle cx="0" cy="-32" r="162" fill="#eaf3fb"/><circle cx="136" cy="44" r="116" fill="#eaf3fb"/><rect x="-270" y="32" width="532" height="172" rx="86" fill="#eaf3fb"/></g>
+<path transform="translate(658 155) scale(1.5)" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="#101113"/>
+<text x="710" y="186" font-size="32" font-weight="900" fill="#101113" text-anchor="start">GitHub</text>
+<g transform="translate(658 244) scale(0.9)">
+<path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
+<rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
+<rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
+<rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
 </g>
-<line x1="0" y1="710" x2="412" y2="710" stroke="#101113" stroke-width="2"/>
-<text x="0" y="752" font-size="26" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">01</text>
-<text x="0" y="820" font-size="45" font-weight="700" fill="#101113">GitHub</text>
-
-<!-- column 2: 데스크톱 앱 (mark: 40 units, right-aligned to column right edge 872, centred on numeral row) -->
-<g transform="translate(832,722) scale(1.66667)">
-<path fill="#D97757" d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/>
-</g>
-<line x1="460" y1="710" x2="872" y2="710" stroke="#101113" stroke-width="2"/>
-<text x="460" y="752" font-size="26" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">02</text>
-<text x="460" y="820" font-size="45" font-weight="700" fill="#101113">데스크톱 앱</text>
-
-<!-- column 3: 클라우드 세션 -->
-<line x1="920" y1="710" x2="1332" y2="710" stroke="#101113" stroke-width="2"/>
-<text x="920" y="752" font-size="26" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">03</text>
-<text x="920" y="820" font-size="45" font-weight="700" fill="#101113">클라우드 세션</text>
-
-<!-- column 4: 폰 -->
-<line x1="1380" y1="710" x2="1792" y2="710" stroke="#101113" stroke-width="2"/>
-<text x="1380" y="752" font-size="26" fill="#7c8288" font-family="'D2Coding', Consolas, 'Courier New', monospace">04</text>
-<text x="1380" y="820" font-size="45" font-weight="700" fill="#101113">폰</text>
-</g>
+<text x="730.0" y="386.20000000000005" font-size="27" font-weight="800" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">agent1</text>
+<g transform="translate(1090 270) scale(0.6)" filter="url(#sh)"><circle cx="-130" cy="40" r="124" fill="#eaf3fb"/><circle cx="0" cy="-32" r="162" fill="#eaf3fb"/><circle cx="136" cy="44" r="116" fill="#eaf3fb"/><rect x="-270" y="32" width="532" height="172" rx="86" fill="#eaf3fb"/></g>
+<rect x="1038.0" y="208" width="104" height="72" rx="8" fill="#2b2f35"/><rect x="1046.0" y="216" width="88" height="54" rx="4" fill="#f4f8fc"/><rect x="1060.0" y="232" width="60" height="5" rx="2.5" fill="#1273c4"/><rect x="1060.0" y="244" width="46" height="5" rx="2.5" fill="#d5d8dc"/><rect x="1082" y="280" width="16" height="12" fill="#2b2f35"/><rect x="1062" y="292" width="56" height="7" rx="3.5" fill="#b9bec5"/>
+<text x="1090" y="378" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">클라우드 세션</text>
+<path transform="translate(988 434) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<g filter="url(#sh)"><rect x="1193.0" y="424" width="210" height="150" rx="16" fill="#fff" stroke="#c9ccd1" stroke-width="2"/></g>
+<path d="M1194.0 476V440a15 15 0 0 1 15-15h178a15 15 0 0 1 15 15V476z" fill="#eef1f4"/>
+<circle cx="1219.0" cy="450" r="7" fill="#ff5f57"/><circle cx="1241.0" cy="450" r="7" fill="#febc2e"/><circle cx="1263.0" cy="450" r="7" fill="#28c840"/>
+<g transform="translate(1193.0 476)"><g transform="translate(6 6) scale(0.3625)">
+<path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
+<rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
+<rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
+<rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
+</g><text x="36" y="70" font-size="14" font-weight="700" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">agent1</text><rect x="6" y="94" width="150" height="11" rx="5.5" fill="#c9ccd1"/><rect x="6" y="114" width="104" height="11" rx="5.5" fill="#c9ccd1"/></g>
+<text x="1328.0" y="458" font-size="20" font-weight="700" fill="#5b6570" text-anchor="middle">Claude</text>
+<rect x="960" y="574" width="460" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="976" y="598" width="428" height="190" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="1069.5" y="664" width="241" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<text x="1190.0" y="704" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">데스크톱 앱</text>
+<g filter="url(#sh)"><rect x="1545.0" y="354" width="110" height="220.0" rx="17.6" fill="#2b2f35"/><rect x="1553.0" y="362" width="94" height="204.0" rx="13.2" fill="#f4f8fc"/></g><rect x="1578.0" y="370" width="44" height="8" rx="4" fill="#2b2f35"/><g transform="translate(1553.0 386)"><g transform="translate(2 6) scale(0.275)">
+<path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
+<rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
+<rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
+<rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
+</g><text x="26" y="58" font-size="12" font-weight="700" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">agent1</text><rect x="2" y="80" width="80" height="9" rx="4.5" fill="#c9ccd1"/><rect x="2" y="96" width="56" height="9" rx="4.5" fill="#c9ccd1"/></g>
+<text x="1600" y="630" font-size="40" font-weight="900" fill="#101113" text-anchor="middle">폰</text>
+<path d="M474 430C520 360 570 300 630 254" fill="none" stroke="#1273c4" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 15" marker-end="url(#ab)"/>
+<path d="M630.0 254.0L614.6 289.8L591.5 259.6Z" fill="#1273c4"/>
+<g transform="translate(468 358) rotate(-14 21.0 26.25) scale(0.65625)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<g transform="translate(524 296) rotate(-6 19.0 23.75) scale(0.59375)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<path d="M888 258C912 258 936 260 954 262" fill="none" stroke="#1273c4" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 15" marker-end="url(#ab)"/>
+<path d="M954.0 262.0L921.7 275.6L925.5 241.6Z" fill="#1273c4"/>
+<path d="M1236 330C1262 360 1276 384 1290 412" fill="none" stroke="#1273c4" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 15" marker-end="url(#ab)"/>
+<path d="M1290.0 412.0L1261.0 392.3L1291.6 377.0Z" fill="#1273c4"/>
+<path d="M1416 500C1460 490 1500 480 1536 470" fill="none" stroke="#1273c4" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 15" marker-end="url(#ab)"/>
+<path d="M1536.0 470.0L1511.1 494.7L1501.9 461.7Z" fill="#1273c4"/>
 </svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- 8/40 웹 · 데스크톱 앱 · CLI (tools/illus/s8_claude_three_ways.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
+<text x="40" y="470" font-size="28" font-weight="800" fill="#101113" text-anchor="start">내 컴퓨터</text>
+<text x="40" y="506" font-size="28" font-weight="800" fill="#101113" text-anchor="start">폴더</text>
+<text x="40" y="630" font-size="28" font-weight="800" fill="#101113" text-anchor="start">설치</text>
+<g filter="url(#sh)"><rect x="220" y="86" width="480" height="284" rx="16" fill="#fff" stroke="#c9ccd1" stroke-width="2"/></g>
+<path d="M221 138V102a15 15 0 0 1 15-15h448a15 15 0 0 1 15 15V138z" fill="#eef1f4"/>
+<circle cx="246" cy="112" r="7" fill="#ff5f57"/><circle cx="268" cy="112" r="7" fill="#febc2e"/><circle cx="290" cy="112" r="7" fill="#28c840"/>
+<rect x="316" y="98" width="364" height="30" rx="15" fill="#fff" stroke="#c9ccd1" stroke-width="1.5"/>
+<text x="336" y="120" font-size="18" font-weight="500" fill="#5b6570" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">claude.ai</text>
+<g transform="translate(220 138)"><g transform="translate(24 24)"><rect x="0" y="0" width="302" height="34" rx="17.0" fill="#f7f8fa"/><rect x="0" y="60" width="150" height="34" rx="17.0" fill="#cfe3f5"/><rect x="0" y="134" width="432" height="50" rx="14" fill="#fff" stroke="#c9ccd1" stroke-width="2"/><text x="16" y="167" font-size="18" font-weight="500" fill="#5b6570" text-anchor="start">메시지를 입력하세요</text></g></g>
+<text x="460.0" y="404" font-size="26" font-weight="800" fill="#101113" text-anchor="middle">웹 (claude.ai)</text>
+<g transform="translate(410.0 440) scale(0.625)">
+<path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
+<rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
+<rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
+<rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
+</g>
+<circle cx="504.0" cy="446" r="24" fill="#d64545"/><path d="M495.36 437.36L512.64 454.64M512.64 437.36L495.36 454.64" stroke="#fff" stroke-width="4.800000000000001" stroke-linecap="round"/>
+<circle cx="406.0" cy="523.5" r="28" fill="#fff" stroke="#1273c4" stroke-width="5"/><text x="406.0" y="534.1" font-size="29" font-weight="800" fill="#1273c4" text-anchor="middle">!</text>
+<rect x="429.0" y="592" width="62" height="62" rx="12" fill="none" stroke="#aeb3ba" stroke-width="5"/>
+<path d="M460.0 604V629.2M447.0 616.2L460.0 629.2L473.0 616.2" fill="none" stroke="#aeb3ba" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M439.0 639H481.0" stroke="#aeb3ba" stroke-width="5" stroke-linecap="round"/>
+<line x1="435.0" y1="648" x2="485.0" y2="598" stroke="#5b6570" stroke-width="5" stroke-linecap="round"/>
+<text x="460.0" y="688" font-size="26" font-weight="800" fill="#5b6570" text-anchor="middle">불필요</text>
+<g filter="url(#sh)"><rect x="745" y="86" width="480" height="284" rx="16" fill="#fff" stroke="#c9ccd1" stroke-width="2"/></g>
+<path d="M746 138V102a15 15 0 0 1 15-15h448a15 15 0 0 1 15 15V138z" fill="#eef1f4"/>
+<circle cx="771" cy="112" r="7" fill="#ff5f57"/><circle cx="793" cy="112" r="7" fill="#febc2e"/><circle cx="815" cy="112" r="7" fill="#28c840"/>
+<text x="985.0" y="120" font-size="20" font-weight="700" fill="#5b6570" text-anchor="middle">Claude</text>
+<g transform="translate(745 138)"><g transform="translate(24 24)"><rect x="0" y="0" width="130" height="184" rx="10" fill="#f4f6f8"/><text x="16" y="26" font-size="18" font-weight="700" fill="#101113" text-anchor="start">최근 대화</text><rect x="150" y="10" width="282" height="34" rx="17.0" fill="#cfe3f5"/><rect x="150" y="134" width="282" height="50" rx="14" fill="#fff" stroke="#c9ccd1" stroke-width="2"/><text x="166" y="167" font-size="18" font-weight="500" fill="#5b6570" text-anchor="start">메시지를 입력하세요</text></g></g>
+<text x="985.0" y="404" font-size="26" font-weight="800" fill="#101113" text-anchor="middle">데스크톱 앱</text>
+<g transform="translate(935.0 440) scale(0.625)">
+<path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
+<rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
+<rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
+<rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
+</g>
+<circle cx="1029.0" cy="446" r="24" fill="#12a150"/><path d="M1018.92 446.48l7.199999999999999 7.199999999999999 13.440000000000001-14.399999999999999" fill="none" stroke="#fff" stroke-width="4.800000000000001" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="954.0" y="592" width="62" height="62" rx="12" fill="none" stroke="#1273c4" stroke-width="5"/>
+<path d="M985.0 604V629.2M972.0 616.2L985.0 629.2L998.0 616.2" fill="none" stroke="#1273c4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M964.0 639H1006.0" stroke="#1273c4" stroke-width="5" stroke-linecap="round"/>
+<text x="985.0" y="688" font-size="26" font-weight="800" fill="#5b6570" text-anchor="middle">필요</text>
+<g filter="url(#sh)"><rect x="1270" y="86" width="480" height="284" rx="16" fill="#1e1f22" stroke="#3a3d42" stroke-width="2"/></g>
+<path d="M1271 138V102a15 15 0 0 1 15-15h448a15 15 0 0 1 15 15V138z" fill="#2b2d31"/>
+<circle cx="1296" cy="112" r="7" fill="#ff5f57"/><circle cx="1318" cy="112" r="7" fill="#febc2e"/><circle cx="1340" cy="112" r="7" fill="#28c840"/>
+<text x="1510.0" y="120" font-size="20" font-weight="700" fill="#c9ccd1" text-anchor="middle">VS Code - 터미널</text>
+<g transform="translate(1270 138)"><g transform="translate(24 24)"><text x="0" y="26" font-size="20" font-weight="700" fill="#12a150" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">$ claude</text><path transform="translate(322 4) scale(0.4)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/></g></g>
+<text x="1510.0" y="404" font-size="26" font-weight="800" fill="#101113" text-anchor="middle">CLI (VS Code)</text>
+<g transform="translate(1460.0 440) scale(0.625)">
+<path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
+<rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
+<rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
+<rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
+</g>
+<circle cx="1554.0" cy="446" r="24" fill="#12a150"/><path d="M1543.92 446.48l7.199999999999999 7.199999999999999 13.440000000000001-14.399999999999999" fill="none" stroke="#fff" stroke-width="4.800000000000001" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1479.0" y="592" width="62" height="62" rx="12" fill="none" stroke="#1273c4" stroke-width="5"/>
+<path d="M1510.0 604V629.2M1497.0 616.2L1510.0 629.2L1523.0 616.2" fill="none" stroke="#1273c4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1489.0 639H1531.0" stroke="#1273c4" stroke-width="5" stroke-linecap="round"/>
+<text x="1510.0" y="688" font-size="26" font-weight="800" fill="#5b6570" text-anchor="middle">필요</text>
+</svg>

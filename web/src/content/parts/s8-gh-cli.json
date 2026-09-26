@@ -5,36 +5,9 @@
   "slides": [
     {
       "id": "s8-gh-cli-01",
-      "template": "cards",
+      "template": "illustration",
       "title": "같은 서비스, 세 가지 사용법",
-      "cards": [
-        {
-          "label": "웹사이트",
-          "logo": "icon:Globe",
-          "tags": [
-            "브라우저",
-            "마우스로 클릭"
-          ]
-        },
-        {
-          "label": "데스크톱 앱",
-          "logo": "icon:Monitor",
-          "tags": [
-            "설치 프로그램",
-            "마우스로 클릭"
-          ]
-        },
-        {
-          "label": "CLI",
-          "logo": "icon:Terminal",
-          "tags": [
-            "터미널",
-            "명령어"
-          ],
-          "highlight": true,
-          "badge": 1
-        }
-      ],
+      "illustration": "/illustrations/s8-three-ways.svg",
       "notes": [
         {
           "n": 1,
