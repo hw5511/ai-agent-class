@@ -1,32 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- 7/35 스킬 = 계약 (tools/illus/s7_cardnews_contract.py) -->
 <defs>
-<filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
-<marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
-<marker id="ao" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d97757"/></marker>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
 </defs>
-<rect x="0" y="0" width="1600" height="900" fill="#fff"/>
-
-<circle cx="270" cy="400" r="110" fill="#eaf4fb" stroke="#1273c4" stroke-width="4"/>
-<text x="270" y="412" font-size="40" fill="#1273c4" font-weight="900" text-anchor="middle">학생</text>
-<circle cx="1330" cy="400" r="110" fill="#fff4ef" stroke="#f0c9b8" stroke-width="3"/>
-<text x="1330" y="412" font-size="40" fill="#d97757" font-weight="900" text-anchor="middle">Claude</text>
-
-<path d="M400 380 L560 340" fill="none" stroke="#1273c4" stroke-width="5" marker-end="url(#ab)"/>
-<path d="M1200 380 L1040 340" fill="none" stroke="#d97757" stroke-width="5" marker-end="url(#ao)"/>
-
-<g filter="url(#sh)">
-<rect x="560" y="180" width="480" height="330" rx="18" fill="#fff" stroke="#c9ccd1" stroke-width="3"/>
-</g>
-<text x="800" y="240" font-size="34" fill="#101113" font-weight="900" text-anchor="middle">작업 계약서</text>
-<line x1="592" y1="264" x2="1008" y2="264" stroke="#dadce0" stroke-width="3"/>
-<rect x="592" y="288" width="416" height="56" rx="10" fill="#eaf4fb" stroke="#1273c4" stroke-width="3"/>
-<text x="800" y="324" font-size="26" font-weight="800" fill="#1273c4" text-anchor="middle">SKILL.md · 작업 방식</text>
-<rect x="592" y="360" width="416" height="56" rx="10" fill="#f4f5f6" stroke="#c9ccd1" stroke-width="3"/>
-<text x="800" y="396" font-size="26" font-weight="800" fill="#43474b" text-anchor="middle">cardnews.py · CLI 스크립트</text>
-<text x="800" y="460" font-size="24" fill="#8b9095" text-anchor="middle">미리 정해 둔 약속</text>
-<circle cx="1000" cy="205" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1000" y="214" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
-<circle cx="260" cy="290" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="260" y="299" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">2</text>
-<circle cx="1340" cy="290" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1340" y="299" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">3</text>
-
-<text x="800" y="780" font-size="40" fill="#101113" font-weight="900" text-anchor="middle">다음부터는 논의 없이 바로 작업이 시작된다</text>
+<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
+<rect x="60" y="90" width="800" height="660" rx="26" fill="#fff6f0"/>
+<rect x="930" y="90" width="802" height="660" rx="26" fill="#eaf3fb"/>
+<text x="896" y="150" font-size="26" font-weight="800" fill="#5b6570" text-anchor="middle">학생과 클로드</text>
+<circle cx="1010" cy="150" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1010" y="160.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<rect x="726" y="230" width="380" height="300" rx="20" fill="#fff" stroke="#aeb3ba" stroke-width="3" filter="url(#sh)"/>
+<rect x="876.0" y="214" width="80" height="32" rx="10" fill="#b9bec5"/>
+<text x="916.0" y="275" font-size="32" font-weight="900" fill="#101113" text-anchor="middle">계약서</text>
+<g transform="translate(770 300) rotate(-6 39.0 48.75) scale(1.21875)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<g transform="translate(960 300) rotate(6 39.0 48.75) scale(1.21875)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#0d5c9e"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<text x="809" y="458" font-size="20" font-weight="800" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">SKILL.md</text>
+<text x="999" y="458" font-size="18" font-weight="800" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">cardnews.py</text>
+<circle cx="1064" cy="258" r="20" fill="#12a150"/><path d="M1055.6 258.4l6.0 6.0 11.200000000000001-12.0" fill="none" stroke="#fff" stroke-width="4.0" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="782" cy="272" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="782" y="282.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<path transform="translate(120 338) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="60" y="480" width="460" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="76" y="504" width="428" height="190" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="230.0" y="570" width="120" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<text x="290.0" y="610" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">학생</text>
+<path d="M350 400C480 382 590 382 720 388" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M350 400C480 382 590 382 720 388" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M730.8 388.5L699.9 406.3L701.7 367.9Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<path transform="translate(1460 338) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="1150" y="480" width="550" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="1166" y="504" width="518" height="190" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="1304.5" y="570" width="241" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<text x="1425.0" y="610" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">Claude</text>
+<g filter="url(#sh)"><rect x="1180" y="350" width="240" height="130" rx="16" fill="#1e1f22" stroke="#3a3d42" stroke-width="2"/></g>
+<path d="M1181 402V366a15 15 0 0 1 15-15h208a15 15 0 0 1 15 15V402z" fill="#2b2d31"/>
+<circle cx="1206" cy="376" r="7" fill="#ff5f57"/><circle cx="1228" cy="376" r="7" fill="#febc2e"/><circle cx="1250" cy="376" r="7" fill="#28c840"/>
+<text x="1300.0" y="384" font-size="20" font-weight="700" fill="#c9ccd1" text-anchor="middle">terminal</text>
+<g transform="translate(1180 402)"><text x="16" y="58" font-size="22" font-weight="800" fill="#7fd7ff" text-anchor="start">실행 중</text></g>
+<path d="M1106 388C1145 392 1160 405 1180 418" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1106 388C1145 392 1160 405 1180 418" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1189.1 423.9L1153.4 423.6L1174.4 391.4Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<circle cx="1350" cy="320" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1350" y="330.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
 </svg>

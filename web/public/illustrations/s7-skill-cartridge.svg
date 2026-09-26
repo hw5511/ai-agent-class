@@ -1,50 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- 7/6 필요할 때만 장전하는 스킬 (tools/illus/s7_skill_cartridge.py) -->
 <defs>
-<filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
-<marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
 </defs>
-<rect x="0" y="0" width="1600" height="900" fill="#fff"/>
-
-<!-- shelf of cartridges (skills waiting) -->
-<rect x="120" y="560" width="360" height="16" rx="6" fill="#c9ccd1"/>
-<g filter="url(#sh)">
-<rect x="150" y="380" width="90" height="180" rx="10" fill="#f4f5f7" stroke="#c9ccd1" stroke-width="3"/>
-<rect x="260" y="380" width="90" height="180" rx="10" fill="#f4f5f7" stroke="#c9ccd1" stroke-width="3"/>
+<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
+<rect x="60" y="90" width="740" height="660" rx="26" fill="#eaf3fb"/>
+<rect x="950" y="90" width="782" height="660" rx="26" fill="#fff6f0"/>
+<text x="420" y="145" font-size="30" font-weight="800" fill="#5b6570" text-anchor="middle">스킬 선반</text>
+<rect x="130" y="300" width="560" height="18" rx="8" fill="#b9bec5"/>
+<circle cx="170" cy="150" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="170" y="160.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<g transform="translate(180 191)" opacity="0.35">
+<rect x="0" y="0" width="84" height="109.2" rx="14" fill="#5aa0dc"/>
+<rect x="11.760000000000002" y="13.104" width="60.48" height="32.76" rx="6" fill="#fff" opacity="0.92"/>
+<rect x="11.760000000000002" y="61.15200000000001" width="60.48" height="34.944" rx="6" fill="#0d5c9e" opacity="0.55"/>
 </g>
-<rect x="165" y="400" width="60" height="24" rx="6" fill="#c9ccd1"/>
-<rect x="275" y="400" width="60" height="24" rx="6" fill="#c9ccd1"/>
-<text x="195" y="500" font-size="20" fill="#8b9095" font-weight="700" text-anchor="middle">스킬</text>
-<text x="305" y="500" font-size="20" fill="#8b9095" font-weight="700" text-anchor="middle">스킬</text>
-
-<!-- highlighted cartridge moving toward the slot -->
-<g filter="url(#sh)">
-<rect x="420" y="340" width="120" height="220" rx="12" fill="#fff" stroke="#1273c4" stroke-width="5"/>
+<g transform="translate(300 191)" opacity="0.35">
+<rect x="0" y="0" width="84" height="109.2" rx="14" fill="#5aa0dc"/>
+<rect x="11.760000000000002" y="13.104" width="60.48" height="32.76" rx="6" fill="#fff" opacity="0.92"/>
+<rect x="11.760000000000002" y="61.15200000000001" width="60.48" height="34.944" rx="6" fill="#0d5c9e" opacity="0.55"/>
 </g>
-<rect x="444" y="364" width="72" height="30" rx="8" fill="#fff" stroke="#1273c4" stroke-width="4"/>
-<text x="480" y="470" font-size="26" fill="#1273c4" font-weight="900" text-anchor="middle">카드뉴스</text>
-
-<path d="M556 450 Q660 420 760 450" fill="none" stroke="#1273c4" stroke-width="6" marker-end="url(#ab)"/>
-
-<!-- console with slot -->
-<g filter="url(#sh)">
-<rect x="780" y="330" width="220" height="300" rx="20" fill="#2b2e33"/>
+<g transform="translate(420 191)" opacity="0.35">
+<rect x="0" y="0" width="84" height="109.2" rx="14" fill="#5aa0dc"/>
+<rect x="11.760000000000002" y="13.104" width="60.48" height="32.76" rx="6" fill="#fff" opacity="0.92"/>
+<rect x="11.760000000000002" y="61.15200000000001" width="60.48" height="34.944" rx="6" fill="#0d5c9e" opacity="0.55"/>
 </g>
-<rect x="820" y="380" width="140" height="40" rx="8" fill="#101113"/>
-<rect x="830" y="392" width="120" height="16" rx="6" fill="#43474b"/>
-<circle cx="890" cy="560" r="26" fill="#3a3e44"/>
-<text x="890" y="700" font-size="26" fill="#101113" font-weight="800" text-anchor="middle">프롬프트</text>
-
-<path d="M1010 460 Q1090 440 1170 460" fill="none" stroke="#43474b" stroke-width="6" marker-end="url(#ab)"/>
-
-<!-- Claude, active -->
-<circle cx="1330" cy="460" r="120" fill="#fff4ef" stroke="#f0c9b8" stroke-width="3" filter="url(#sh)"/>
-<text x="1330" y="475" font-size="46" fill="#d97757" font-weight="900" text-anchor="middle">Claude</text>
-<circle cx="1420" cy="360" r="18" fill="#2f9e6e"/>
-<text x="1420" y="398" font-size="20" fill="#2f9e6e" font-weight="800" text-anchor="middle">ON</text>
-
-<text x="800" y="800" font-size="40" fill="#101113" font-weight="900" text-anchor="middle">필요할 때만 장전하는 스킬</text>
-
-<circle cx="480" cy="315" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="480" y="324" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">1</text>
-<circle cx="890" cy="365" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="890" y="374" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">2</text>
-<circle cx="1240" cy="360" r="24" fill="#1273c4" stroke="#fff" stroke-width="3"/><text x="1240" y="369" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<g transform="translate(560 170)">
+<rect x="0" y="0" width="100" height="130.0" rx="14" fill="#1273c4"/>
+<rect x="14.000000000000002" y="15.6" width="72.0" height="39.0" rx="6" fill="#fff" opacity="0.92"/>
+<rect x="14.000000000000002" y="72.80000000000001" width="72.0" height="41.6" rx="6" fill="#0d5c9e" opacity="0.55"/>
+</g>
+<text x="610.0" y="332.0" font-size="24" font-weight="800" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">카드뉴스</text>
+<path transform="translate(90 338) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="70" y="480" width="480" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="86" y="504" width="448" height="190" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="205.5" y="570" width="209" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<text x="310.0" y="610" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">내 컴퓨터</text>
+<path d="M668 235C820 250 960 270 1040 300" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M668 235C820 250 960 270 1040 300" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1050.1 303.8L1015.3 311.2L1028.8 275.3Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<path transform="translate(1300 338) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="1000" y="480" width="700" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="1016" y="504" width="668" height="190" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="1229.5" y="570" width="241" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<text x="1350.0" y="610" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">Claude</text>
+<rect x="1020" y="300" width="220" height="180" rx="22" fill="#2b2f35" stroke="#aeb3ba" stroke-width="3"/>
+<rect x="1050" y="320" width="160" height="30" rx="10" fill="#0f1012"/>
+<g transform="translate(1090.0 230)">
+<rect x="0" y="0" width="80" height="104.0" rx="14" fill="#1273c4"/>
+<rect x="11.200000000000001" y="12.48" width="57.599999999999994" height="31.2" rx="6" fill="#fff" opacity="0.92"/>
+<rect x="11.200000000000001" y="58.24000000000001" width="57.599999999999994" height="33.28" rx="6" fill="#0d5c9e" opacity="0.55"/>
+</g>
+<circle cx="1190" cy="258" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1190" y="268.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<circle cx="1206" cy="450" r="14" fill="#12a150"/>
+<text x="1130.0" y="460" font-size="20" font-weight="800" fill="#c9ccd1" text-anchor="middle">장전됨</text>
+<rect x="1560" y="470" width="36" height="50" rx="7" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#shs)"/>
+<rect x="1566" y="482" width="24" height="18" rx="4" fill="#cfe3f5"/>
+<rect x="1600" y="462" width="36" height="50" rx="7" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#shs)"/>
+<rect x="1606" y="474" width="24" height="18" rx="4" fill="#cfe3f5"/>
+<rect x="1640" y="454" width="36" height="50" rx="7" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#shs)"/>
+<rect x="1646" y="466" width="24" height="18" rx="4" fill="#cfe3f5"/>
+<circle cx="1660" cy="438" r="20" fill="#12a150"/><path d="M1651.6 438.4l6.0 6.0 11.200000000000001-12.0" fill="none" stroke="#fff" stroke-width="4.0" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1600" cy="390" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1600" y="400.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
 </svg>
