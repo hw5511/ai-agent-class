@@ -20,15 +20,15 @@
 <rect x="185.5" y="664" width="209" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
 <text x="290.0" y="704" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">내 컴퓨터</text>
 <g transform="translate(730 270) scale(0.64)" filter="url(#sh)"><circle cx="-130" cy="40" r="124" fill="#eaf3fb"/><circle cx="0" cy="-32" r="162" fill="#eaf3fb"/><circle cx="136" cy="44" r="116" fill="#eaf3fb"/><rect x="-270" y="32" width="532" height="172" rx="86" fill="#eaf3fb"/></g>
-<path transform="translate(658 155) scale(1.5)" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="#101113"/>
-<text x="710" y="186" font-size="32" font-weight="900" fill="#101113" text-anchor="start">GitHub</text>
-<g transform="translate(658 244) scale(0.9)">
+<path transform="translate(660 186) scale(1.5)" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="#101113"/>
+<text x="704" y="214" font-size="28" font-weight="900" fill="#101113" text-anchor="start">GitHub</text>
+<g transform="translate(674 236) scale(0.7)">
 <path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
 <rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
 <rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
 <rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
 </g>
-<text x="730.0" y="386.20000000000005" font-size="27" font-weight="800" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">agent1</text>
+<text x="730.0" y="346.6" font-size="21" font-weight="800" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">agent1</text>
 <g transform="translate(1090 270) scale(0.6)" filter="url(#sh)"><circle cx="-130" cy="40" r="124" fill="#eaf3fb"/><circle cx="0" cy="-32" r="162" fill="#eaf3fb"/><circle cx="136" cy="44" r="116" fill="#eaf3fb"/><rect x="-270" y="32" width="532" height="172" rx="86" fill="#eaf3fb"/></g>
 <rect x="1038.0" y="208" width="104" height="72" rx="8" fill="#2b2f35"/><rect x="1046.0" y="216" width="88" height="54" rx="4" fill="#f4f8fc"/><rect x="1060.0" y="232" width="60" height="5" rx="2.5" fill="#1273c4"/><rect x="1060.0" y="244" width="46" height="5" rx="2.5" fill="#d5d8dc"/><rect x="1082" y="280" width="16" height="12" fill="#2b2f35"/><rect x="1062" y="292" width="56" height="7" rx="3.5" fill="#b9bec5"/>
 <text x="1090" y="378" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">클라우드 세션</text>

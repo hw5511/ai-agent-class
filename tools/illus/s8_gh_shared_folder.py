@@ -4,8 +4,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from illuskit import *
 
 b = [panel(), cloud(896, 285, 1.15)]
-b += [gh_mark(800, 98, 52), text(866, 142, "GitHub", 46, 900, anchor="start"),
-      folder(786, 172, 220, "agent1"), text(896, 442, "구글 드라이브처럼", 28, 600, MUTED)]
+b += [gh_mark(804, 118, 50), text(866, 160, "GitHub", 44, 900, anchor="start"),
+      folder(796, 192, 200, "agent1"), text(896, 446, "구글 드라이브처럼", 28, 600, MUTED)]
 for mx, lx, dx, name in [(92, 360, 70, "내 컴퓨터"), (1460, 1236, 1222, "다른 컴퓨터")]:
     b += [mascot(mx, 432), laptop(lx, 452, 196, folder(48, 14, 80) + text(88, 96, "agent1", 17, 700, family=MONO)),
           desk(dx, 574, 500, name)]

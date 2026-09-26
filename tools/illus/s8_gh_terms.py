@@ -3,9 +3,9 @@ import os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from illuskit import *
 
-ZONE_W, ZONE_GAP, ZONE_X0, ZONE_Y, ZONE_H = 395, 30, 60, 90, 690
+ZONE_W, ZONE_GAP, ZONE_X0, ZONE_Y, ZONE_H = 395, 30, 60, 70, 738
 ZONE_XS = [ZONE_X0 + i * (ZONE_W + ZONE_GAP) for i in range(4)]
-BIG_Y, ENG_Y = 722, 758
+BIG_Y, DEF_Y, ENG_Y = 716, 756, 790
 MS = 0.8  # same mascot scale in every scene
 MW, MH = 240 * MS, 143 * MS
 FOOT = 560  # shared baseline: mascot feet AND desk top surface, in every zone
@@ -79,8 +79,8 @@ def scene_push(zx):
     fy = FOOT - fh
     out.append(folder(fx, fy, fw))
     ccx = zx + ZONE_W / 2 + 30
-    out += [cloud(ccx, 178, 0.42, fill="#fff"), gh_mark(ccx - 88, 128, 36),
-            text(ccx - 42, 154, "GitHub", 27, 900, anchor="start")]
+    out += [cloud(ccx, 178, 0.42, fill="#fff"), gh_mark(ccx - 26, 152, 52),
+            text(ccx, 236, "GitHub", 24, 900)]
     start_x, start_y = fx + fw / 2, fy - 4
     end_x, end_y = ccx, 268
     ctrl_x = (start_x + end_x) / 2
@@ -98,8 +98,8 @@ def scene_clone(zx):
     into the laptop on the desk top; mascot beside it."""
     out, mx, my, dx = _actor_desk(zx)
     ccx = zx + ZONE_W / 2 + 30
-    out += [cloud(ccx, 178, 0.42, fill="#fff"), gh_mark(ccx - 88, 128, 36),
-            text(ccx - 42, 154, "GitHub", 27, 900, anchor="start")]
+    out += [cloud(ccx, 178, 0.42, fill="#fff"), gh_mark(ccx - 26, 152, 52),
+            text(ccx, 236, "GitHub", 24, 900)]
     lw = DESK_W - 10
     lh = lw * 0.63
     lx = dx + (DESK_W - lw) / 2
@@ -122,12 +122,13 @@ b = [panel()]
 for zx in ZONE_XS:
     b.append(zone(zx, ZONE_Y, ZONE_W, ZONE_H))
 
-scenes = [(scene_repo, "레포", "Repository"), (scene_commit, "커밋", "Commit"),
-          (scene_push, "푸시", "Push"), (scene_clone, "클론", "Clone")]
-for (fn, kor, eng), zx in zip(scenes, ZONE_XS):
+scenes = [(scene_repo, "레포", "Repository", "공유폴더"), (scene_commit, "커밋", "Commit", "변경사항 저장하기"),
+          (scene_push, "푸시", "Push", "업로드"), (scene_clone, "클론", "Clone", "백업본 다운받기")]
+for (fn, kor, eng, meaning), zx in zip(scenes, ZONE_XS):
     cx = zx + ZONE_W / 2
     b += fn(zx)
     b.append(text(cx, BIG_Y, kor, 44, 900))
-    b.append(text(cx, ENG_Y, eng, 24, 600, MUTED))
+    b.append(text(cx, DEF_Y, f"{kor} = {meaning}", 27, 800, ACCENT))
+    b.append(text(cx, ENG_Y, eng, 20, 600, MUTED))
 
 print(save("s8-gh-terms.svg", b, "8/7 GitHub 용어 4개 (tools/illus/s8_gh_terms.py)"))

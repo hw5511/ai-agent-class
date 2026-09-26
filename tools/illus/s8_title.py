@@ -14,9 +14,9 @@ b += [mascot(88, 434),
 # ---- stop 2: GitHub cloud holding the agent1 folder (top, x ~560..900) ----
 CB_X, CB_Y, CB_S = 730, 270, 0.64
 b += [cloud(CB_X, CB_Y, CB_S, fill=ACCENT_ZONE),
-      gh_mark(CB_X - 72, CB_Y - 115, 36),
-      text(CB_X - 20, CB_Y - 84, "GitHub", 32, 900, anchor="start"),
-      folder(CB_X - 72, CB_Y - 26, 144, "agent1")]
+      gh_mark(CB_X - 70, CB_Y - 84, 36),
+      text(CB_X - 26, CB_Y - 56, "GitHub", 28, 900, anchor="start"),
+      folder(CB_X - 56, CB_Y - 34, 112, "agent1")]
 
 # ---- stop 3: 클라우드 세션 cloud, a small monitor inside (top, x ~930..1250) ----
 CC_X, CC_Y, CC_S = 1090, 270, 0.60
