@@ -268,32 +268,32 @@
       "title": "웹 · 데스크톱 앱 · CLI",
       "columns": [
         "",
-        "화면",
-        "내 컴퓨터 폴더",
-        "설치"
+        "웹 claude.ai",
+        "데스크톱 앱",
+        "CLI (VS Code 터미널)"
       ],
       "rows": [
         {
           "cells": [
-            "웹 claude.ai",
+            "화면",
             "브라우저",
-            "접근 불가",
-            "불필요"
-          ]
-        },
-        {
-          "cells": [
-            "데스크톱 앱",
             "전용 창",
-            "접근 가능",
-            "설치 필요"
+            "터미널"
           ]
         },
         {
           "cells": [
-            "CLI (VS Code 터미널)",
-            "터미널",
+            "내 컴퓨터 폴더",
+            "접근 불가",
             "접근 가능",
+            "접근 가능"
+          ]
+        },
+        {
+          "cells": [
+            "설치",
+            "불필요",
+            "설치 필요",
             "설치 필요"
           ]
         }
@@ -388,6 +388,37 @@
           "n": 2,
           "head": "권한 무시",
           "body": "이 항목은 기본으로 숨겨져 있고, 설정에서 따로 켜야 목록에 나타납니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-09b",
+      "template": "screen",
+      "title": "권한 무시 설정 켜기",
+      "screen": {
+        "kind": "desktop",
+        "view": {
+          "screen": "settings",
+          "settings": {
+            "navActive": "Claude Code",
+            "section": "로컬 세션",
+            "rows": [
+              {
+                "title": "권한 우회 모드 허용",
+                "desc": "모든 권한 확인을 우회하고 Claude가 중단 없이 작업하도록 합니다. 이는 린트 오류 수정이나 보일러플레이트 코드 생성과 같은 워크플로에 적합합니다. Claude가 임의의 명령을 실행하도록 허용하는 것은 위험하며 데이터 손실, 시스템 손상 또는 데이터 유출(예: 프롬프트 인젝션 공격)을 초래할 수 있습니다.",
+                "link": "안전한 사용을 위한 모범 사례 보기",
+                "on": false,
+                "badge": 1
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "권한 무시 허용 켜기",
+          "body": "설정의 Claude Code 화면에서 로컬 세션 아래 권한 우회 모드 허용 스위치를 켜면 모드 메뉴에 권한 무시 항목이 나타납니다."
         }
       ]
     },
@@ -1290,37 +1321,224 @@
     },
     {
       "id": "s8-desktop-20",
-      "template": "table",
+      "template": "compare",
       "title": "데스크톱 앱 vs VS Code",
+      "left": {
+        "label": "데스크톱 앱 · 왼쪽 = 세션 목록",
+        "screen": {
+          "kind": "desktop",
+          "view": {
+            "screen": "session",
+            "sidebar": {
+              "account": "수강생 · Pro",
+              "groups": [
+                {
+                  "title": "agent1",
+                  "rows": [
+                    {
+                      "icon": "dot",
+                      "label": "폴더 구조 설명",
+                      "active": true,
+                      "badge": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            "session": {
+              "header": {
+                "icon": "local",
+                "title": "폴더 구조 설명",
+                "tag": "agent1",
+                "actions": [
+                  {
+                    "icon": "terminal"
+                  },
+                  {
+                    "icon": "plus"
+                  },
+                  {
+                    "icon": "globe"
+                  },
+                  {
+                    "icon": "more"
+                  }
+                ]
+              },
+              "messages": [
+                {
+                  "role": "user",
+                  "text": "너는 누구니? 현재 폴더구조 설명해줘"
+                },
+                {
+                  "role": "assistant",
+                  "blocks": [
+                    {
+                      "t": "notice",
+                      "headline": "자동 모드는 이제 Claude Code의 기본 권한 모드입니다.",
+                      "body": "자동 모드를 사용하면 Claude가 권한 프롬프트를 자동으로 처리합니다. Claude는 각 도구 호출을 실행하기 전에 위험한 작업과 프롬프트 인젝션 여부를 확인하고, 위험도가 낮다고 판단한 항목은 실행하며, 나머지는 차단합니다.",
+                      "link": "code.claude.com/docs/en/permission-modes"
+                    },
+                    {
+                      "t": "ran",
+                      "label": "실행됨 명령 2개"
+                    },
+                    {
+                      "t": "p",
+                      "text": "수강생님, 안녕하세요! 저는 이 수업의 실습 도우미 **클로드**예요."
+                    },
+                    {
+                      "t": "h",
+                      "text": "현재 폴더 구조"
+                    },
+                    {
+                      "t": "code",
+                      "lines": [
+                        "agent1/",
+                        "├── CLAUDE.md          ← 제 역할과 규칙이 적힌 안내 파일",
+                        "├── .claude/",
+                        "│    └── skills/        ← 7회차에 만든 스킬 3개",
+                        "│         ├── cardnews/      카드뉴스 표지·본문 이미지 만들기",
+                        "│         ├── img2pdf/       폴더 안 이미지를 PDF 하나로 합치기",
+                        "│         └── photo-edit/    사진 밝기·대비·색조·크기 바꾸기",
+                        "└── 벚꽃축제/            ← 지금은 비어 있는 폴더"
+                      ]
+                    },
+                    {
+                      "t": "ul",
+                      "items": [
+                        "**CLAUDE.md**: 저에게 주는 안내서예요. 여기 적힌 대로 제가 움직여요.",
+                        "**.claude/skills**: 스킬마다 `SKILL.md` 파일이 하나씩 있어요.",
+                        "**벚꽃축제**: 아직 비어 있어요. 사진을 넣으면 스킬로 보정하거나 PDF로 합칠 수 있어요."
+                      ]
+                    },
+                    {
+                      "t": "p",
+                      "text": "다음으로 뭘 해볼까요?"
+                    },
+                    {
+                      "t": "asterisk"
+                    }
+                  ]
+                }
+              ],
+              "anchorTop": true
+            },
+            "input": {
+              "placeholder": "카드뉴스 스킬 사용법 알려줘"
+            },
+            "bottomBar": {
+              "mode": "자동",
+              "model": "Opus 5.5",
+              "effort": "중간",
+              "busy": true
+            }
+          }
+        }
+      },
+      "right": {
+        "label": "VS Code · 왼쪽 = 폴더 탐색기",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [
+            {
+              "name": "cafe-landing",
+              "folder": true,
+              "badge": 2
+            },
+            {
+              "name": "docs",
+              "folder": true
+            },
+            {
+              "name": "images",
+              "folder": true
+            },
+            {
+              "name": "CLAUDE.md"
+            },
+            {
+              "name": "README.md"
+            },
+            {
+              "name": "메모.txt"
+            }
+          ],
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\u0007gent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "cafe-landing 메뉴 페이지 고쳐줘"
+              },
+              {
+                "role": "tool",
+                "text": "Edit(cafe-landing/menu.html)"
+              },
+              {
+                "role": "assistant",
+                "text": "메뉴 페이지를 수정했습니다."
+              }
+            ]
+          }
+        }
+      },
+      "ratio": [
+        1,
+        1
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "GUI 라 직관적 · 폴더는 안 보임",
+          "body": "데스크톱 앱은 버튼으로 쓰기 쉽지만 왼쪽이 세션 목록이라 지금 폴더 안에 어떤 파일이 있는지 보이지 않습니다."
+        },
+        {
+          "n": 2,
+          "head": "폴더와 파일이 한눈에",
+          "body": "VS Code 는 왼쪽 탐색기에 폴더와 파일이 모두 보여서 무엇이 어디 있는지 바로 확인할 수 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "s8-desktop-20b",
+      "template": "table",
+      "title": "언제 무엇을",
       "columns": [
         "",
-        "파일 탐색기",
-        "세션 목록",
-        "어울리는 일"
+        "데스크톱 앱",
+        "VS Code + Claude Code"
       ],
       "rows": [
         {
           "cells": [
-            "데스크톱 앱",
-            "없음",
-            "사이드바 목록",
-            "단발 작업"
+            "장점",
+            "GUI 라 직관적",
+            "폴더 · 파일 관리"
           ]
         },
         {
           "cells": [
-            "VS Code + Claude Code",
-            "있음",
-            "터미널 안",
-            "오래 가는 프로젝트"
+            "단점",
+            "폴더 구조가 안 보임",
+            "처음엔 낯섦"
+          ]
+        },
+        {
+          "cells": [
+            "어울리는 일",
+            "단발 작업",
+            "코드 · 문서가 쌓이는 프로젝트"
           ]
         }
       ],
       "notes": [
         {
           "n": "!",
-          "head": "일에 맞게 고르기",
-          "body": "짧게 끝나는 작업은 데스크톱 앱, 오래 이어가는 프로젝트는 VS Code 가 더 어울립니다."
+          "head": "파일이 쌓이면 VS Code",
+          "body": "단발 작업은 데스크톱 앱으로 충분하지만 AI 를 본격적으로 쓰면서 폴더에 코드와 문서가 많아지면 관리를 위해 VS Code 가 필요해집니다."
         }
       ]
     }

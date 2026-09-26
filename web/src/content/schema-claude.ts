@@ -5,7 +5,7 @@
 // Fixed chrome text that is identical in every capture (splash copy, "새로 생성", "Artifacts", ...) is hard-coded
 // in ClaudeApp.tsx; everything else (greetings, session content, account name, folder names) comes from here.
 export interface ClaudeAppView {
-  screen: "splash" | "login" | "home" | "session" | "customize" // which body this view renders
+  screen: "splash" | "login" | "home" | "session" | "customize" | "settings" // which body this view renders
 
   // ---- title bar (ClaudeAppWindow only; the browser's own chrome covers this for the web captures) ----
   titleBar?: ClaudeTitleBar
@@ -43,6 +43,9 @@ export interface ClaudeAppView {
 
   // ---- customize (사용자 지정) page (connectors.png) ----
   customize?: ClaudeCustomize
+
+  // ---- settings (설정 > Claude Code) page, e.g. desktop-settings.png reference ----
+  settings?: ClaudeSettings
 }
 
 /** Desktop window chrome: ≡ / sidebar toggle / back / forward on the left, a chat-code toggle in the middle
@@ -237,6 +240,23 @@ export interface ClaudeCustomize {
   rows: ClaudeCustomizeRow[]
   directoryBadge?: number // "디렉토리에 제출" button
   docsBadge?: number // "개발자 문서" link
+}
+
+/** The "설정" (Settings) window: a fixed left nav (드로잉 hard-coded in the component, same on every page)
+ *  and one section of toggle rows on the right, e.g. "로컬 세션" / "권한 무시 허용" (desktop-settings.png
+ *  reference, from claude.ai/settings/claude-code — the desktop app renders the same UI). */
+export interface ClaudeSettings {
+  navActive: string // which left-nav label is highlighted, e.g. "Claude Code"
+  section: string // section heading above the rows, e.g. "로컬 세션"
+  rows: ClaudeSettingsRow[]
+}
+
+export interface ClaudeSettingsRow {
+  title: string // e.g. "권한 무시 허용"
+  desc: string // the grey explanation line under the title
+  link?: string // an underlined link at the end of desc, e.g. "안전한 사용을 위한 모범 사례 보기"
+  on: boolean // toggle state
+  badge?: number
 }
 
 export interface ClaudeCustomizeRow {

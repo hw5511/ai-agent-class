@@ -13,6 +13,7 @@ import { Composer } from "./claude/Composer"
 import { Message } from "./claude/Session"
 import { MenuView, DialogView, GithubPopoverView } from "./claude/Overlays"
 import { CustomizeView } from "./claude/Customize"
+import { SettingsView } from "./claude/Settings"
 
 function WindowButtons() {
   return (
@@ -102,6 +103,7 @@ function MainContent({ v }: { v: ClaudeAppView }) {
   // session screen (desk_17..19, cs_08..10). `v.mascot` set explicitly (true or false) always wins.
   const mascot = v.mascot ?? v.screen === "home"
   if (v.screen === "customize" && v.customize) return <CustomizeView c={v.customize} />
+  if (v.screen === "settings" && v.settings) return <SettingsView s={v.settings} />
   if (v.screen === "session" && v.session) {
     // Anchor the transcript to the bottom (newest message visible, clipped at the top) like the real app
     // scrolled to the end, unless the slide asks to keep the top of the conversation visible instead. A
