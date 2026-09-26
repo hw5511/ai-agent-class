@@ -57,6 +57,10 @@
         "items": [
           {
             "kind": "copy",
+            "value": "/clear"
+          },
+          {
+            "kind": "copy",
             "value": "현재 시스템시간을 알아서 체크한다음, 'AI트렌드'관련 뉴스를 그 날짜를 기준으로 7일 이내에 발행된 것들로만 주요 뉴스 5가지를 웹서치로 조사해서, 현재폴더에 오늘 날짜를 기반으로 한 md파일로 보고서 작성까지 작업하는 sonnet서브에이전트를 만들고싶어. 현재폴더의 .claude/agents 폴더에 서브에이전트를 만들어줘"
           }
         ]
@@ -237,7 +241,16 @@
           "head": "description 노출",
           "body": "description 문구까지 함께 보여서 main 이 언제 이 서브에이전트를 부를지 판단합니다."
         }
-      ]
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/context"
+          }
+        ]
+      }
     },
     {
       "id": "s5-agent-custom-05",
@@ -422,6 +435,10 @@
       "action": {
         "label": "프롬프트 복사",
         "items": [
+          {
+            "kind": "copy",
+            "value": "/clear"
+          },
           {
             "kind": "copy",
             "value": "ai트렌드 조사해줘"

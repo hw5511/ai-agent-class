@@ -46,6 +46,10 @@
         "items": [
           {
             "kind": "copy",
+            "value": "/clear"
+          },
+          {
+            "kind": "copy",
             "value": "현재폴더에 toollog.md파일을 만들고 posttooluse훅으로 너가 tool을 사용할때 마다 그 이력이 기록되게 만들어줘"
           }
         ]

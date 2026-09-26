@@ -178,7 +178,13 @@
         { "n": 2, "head": "커밋 후 푸시", "body": "새로 만든 README.md 파일도 커밋하고 GitHub 로 푸시합니다." },
         { "n": 3, "head": "README.md 추가", "body": "파일 목록에 README.md 가 새로 생기고 커밋 메모 README 추가 가 함께 보입니다." },
         { "n": 4, "head": "레포 설명", "body": "파일 목록 아래에 README 에 적은 설명이 이 레포 소개로 그대로 표시됩니다." }
-      ]
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          { "kind": "copy", "value": "README.md 파일을 만들어서 이 폴더가 뭔지 설명하고 레포에 올려줘" }
+        ]
+      }
     },
     {
       "id": "s8-repo-04",
@@ -253,6 +259,7 @@
       "action": {
         "label": "프롬프트 복사",
         "items": [
+          { "kind": "copy", "value": "/clear" },
           { "kind": "copy", "value": "https://github.com/student/cafe-landing 이 레포를 현재 폴더에 클론 해줘" }
         ]
       }

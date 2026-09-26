@@ -187,7 +187,22 @@
           "head": "붙여넣고 Enter",
           "body": "복사한 명령을 아래 터미널에 붙여넣고 Enter 를 누르면 claude --version 에서 버전이 나타납니다."
         }
-      ]
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc",
+            "desc": "PATH 등록"
+          },
+          {
+            "kind": "copy",
+            "value": "claude --version",
+            "desc": "버전 확인"
+          }
+        ]
+      }
     },
     {
       "id": "s1-cli-install-03",
@@ -326,7 +341,22 @@
           "head": "붙여넣고 Enter",
           "body": "복사한 명령을 아래 터미널에 붙여넣고 Enter 를 누르면 codex --version 에서 버전이 나타납니다."
         }
-      ]
+      ],
+      "action": {
+        "label": "명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc",
+            "desc": "PATH 등록"
+          },
+          {
+            "kind": "copy",
+            "value": "codex --version",
+            "desc": "버전 확인"
+          }
+        ]
+      }
     },
     {
       "id": "s1-cli-install-04",
