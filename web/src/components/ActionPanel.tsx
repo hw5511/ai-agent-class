@@ -73,10 +73,18 @@ function Item({ it }: { it: ActionItem }) {
     )
   }
   const Icon = it.kind === "download" ? DownloadIcon : LinkIcon
-  return (
+  const button = (
     <Button variant="outline" className="min-w-0 justify-start" render={<a href={asset(it.href)} target="_blank" rel="noopener" title={it.href} />}>
       <Icon data-icon="inline-start" />
-      <span className="min-w-0 truncate">{it.desc ? `${it.desc} — ` : ""}{it.text}</span>
+      <span className="min-w-0 truncate">{it.text}</span>
     </Button>
+  )
+  if (!it.desc) return button
+  // A link with a note: the button, then one muted line saying what it is for (never cut off).
+  return (
+    <div className="flex flex-col gap-1">
+      {button}
+      <span className="px-1 text-sm text-muted-foreground">{it.desc}</span>
+    </div>
   )
 }
