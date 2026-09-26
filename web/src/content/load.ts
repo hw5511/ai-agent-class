@@ -104,6 +104,7 @@ export const flatSlides = (s: Session) => {
       parts: toc,
       slideTitles: p.slides.map((x) => x.title),
       sections: p.sections,
+      art: p.coverArt,
       notes: p.summary ? [{ n: pi + 1, head: p.title, body: p.summary }] : undefined,
     }
     return [{ part: p, slide: cover }, ...items]

@@ -228,11 +228,23 @@ export function PartCoverT({ s }: { s: PartCoverSlide }) {
           </div>
         ))}
       </div>
+      {s.art ? (
+        <div className="flex min-h-0 flex-1 items-center gap-16 pt-10">
+          <div className="flex w-[34%] shrink-0 flex-col gap-6">
+            <span className="font-num text-[40px] font-medium tracking-[0.1em] text-slide-accent">PART {String(s.partIndex + 1).padStart(2, "0")}</span>
+            <h1 className="font-display text-[96px] leading-[1.08] font-bold tracking-[-0.03em] break-keep text-balance text-[#101113]">{s.title}</h1>
+          </div>
+          <div className="flex h-full min-h-0 min-w-0 flex-1 items-center justify-center">
+            <img src={asset(s.art)} alt={s.title} className="max-h-full w-full object-contain" />
+          </div>
+        </div>
+      ) : (
       <div className="flex flex-1 flex-col justify-center gap-6">
         <span className="font-num text-[40px] font-medium tracking-[0.1em] text-slide-accent">PART {String(s.partIndex + 1).padStart(2, "0")}</span>
         <h1 className="font-display text-[120px] leading-[1.05] font-bold tracking-[-0.03em] break-keep text-balance text-[#101113]">{s.title}</h1>
       </div>
-      {s.sections?.length ? (
+      )}
+      {s.art ? null : s.sections?.length ? (
         <div className="grid grid-cols-2 gap-x-12 gap-y-4">
           {s.sections.map((sec, i) => (
             <div key={i} className="flex items-center gap-5 border-b border-neutral-200 pb-4">

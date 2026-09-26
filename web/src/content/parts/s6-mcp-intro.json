@@ -1,6 +1,7 @@
 {
   "id": "s6-mcp-intro",
   "title": "MCP 란?",
+  "coverArt": "/illustrations/s6-cover-mcp.svg",
   "summary": "AI 가 외부 서비스와 어떻게 연결되는지 다리 · 총무 · 배선 · API 비유로 이해한다.",
   "slides": [
     {

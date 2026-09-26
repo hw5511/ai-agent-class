@@ -1,32 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- 6/3 서버 = 총무 (tools/illus/s6_server_clerk.py) -->
 <defs>
-<marker id="ar-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
-<marker id="ar-acc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
 </defs>
-<rect x="0" y="0" width="1792" height="840" fill="#fff"/>
-
-<!-- left column: 나 = 클라이언트 -->
-<line x1="0" y1="330" x2="420" y2="330" stroke="#101113" stroke-width="2"/>
-<text x="0" y="372" font-size="26" fill="#7c8288">나</text>
-<text x="0" y="440" font-size="48" font-weight="700" fill="#101113">클라이언트</text>
-
-<!-- right column: 서버 = 총무 -->
-<line x1="1372" y1="330" x2="1792" y2="330" stroke="#101113" stroke-width="2"/>
-<text x="1372" y="372" font-size="26" fill="#7c8288">서버</text>
-<text x="1372" y="440" font-size="48" font-weight="700" fill="#101113">총무</text>
-<text x="1372" y="480" font-size="28" fill="#43474b">요청 받으면 찾아서 보내줌</text>
-
-<!-- middle: three exchange rows -->
-<circle cx="502" cy="490" r="22" fill="#1273c4"/><text x="502" y="499" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">1</text>
-<line x1="540" y1="490" x2="1312" y2="490" stroke="#101113" stroke-width="2" marker-end="url(#ar-ink)"/>
-<text x="716" y="466" font-size="30" font-weight="700" fill="#101113">전화로 요청<tspan font-size="28" font-weight="400" fill="#7c8288" dx="6"> "자료 좀 보내주세요"</tspan></text>
-
-<circle cx="502" cy="580" r="22" fill="#1273c4"/><text x="502" y="589" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">2</text>
-<line x1="1312" y1="580" x2="540" y2="580" stroke="#1273c4" stroke-width="2" marker-end="url(#ar-acc)"/>
-<text x="926" y="556" font-size="30" font-weight="700" fill="#1273c4" text-anchor="middle">"네"</text>
-
-<circle cx="502" cy="670" r="22" fill="#1273c4"/><text x="502" y="679" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">3</text>
-<line x1="1312" y1="670" x2="540" y2="670" stroke="#101113" stroke-width="2" marker-end="url(#ar-ink)"/>
-<text x="926" y="646" font-size="30" font-weight="700" fill="#101113" text-anchor="middle">팩스 · 메일로 전달</text>
-<text x="926" y="710" font-size="26" fill="#7c8288" text-anchor="middle">요청한 자료.pdf</text>
+<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
+<rect x="40" y="120" width="560" height="660" rx="26" fill="#fff6f0"/>
+<rect x="1180" y="120" width="560" height="660" rx="26" fill="#eaf3fb"/>
+<path transform="translate(182.0 435.55) scale(1.15)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="90" y="600" width="460" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="106" y="624" width="428" height="160" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="199.5" y="690" width="241" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<text x="320.0" y="730" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">Claude</text>
+<rect x="1622" y="380" width="106" height="290" rx="14" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2.5"/>
+<rect x="1636" y="408" width="78" height="60" rx="6" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="1660" y="433" width="30" height="8" rx="4" fill="#aeb3ba"/>
+<rect x="1636" y="490" width="78" height="60" rx="6" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="1660" y="515" width="30" height="8" rx="4" fill="#aeb3ba"/>
+<rect x="1636" y="572" width="78" height="60" rx="6" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="1660" y="597" width="30" height="8" rx="4" fill="#aeb3ba"/>
+<text x="1675.0" y="360" font-size="24" font-weight="700" fill="#5b6570" text-anchor="middle">서류함</text>
+<path transform="translate(1322.0 435.55) scale(1.15)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="1230" y="600" width="460" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="1246" y="624" width="428" height="160" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="1323.0" y="690" width="274" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<text x="1460.0" y="730" font-size="34" font-weight="900" fill="#101113" text-anchor="middle">총무 (서버)</text>
+<g transform="translate(1548 618) scale(0.4375)">
+<path d="M0 16a12 12 0 0 1 12-12h42l14 14h80a12 12 0 0 1 12 12v82a12 12 0 0 1-12 12H12A12 12 0 0 1 0 112z" fill="#0d5c9e"/>
+<rect x="14" y="20" width="132" height="62" rx="6" fill="#fff"/>
+<rect x="26" y="32" width="70" height="6" rx="3" fill="#cfe3f5"/><rect x="26" y="46" width="96" height="6" rx="3" fill="#cfe3f5"/>
+<rect x="0" y="40" width="160" height="84" rx="12" fill="#1273c4"/>
+</g>
+<path d="M480 480C700 170 1080 170 1300 480" fill="none" stroke="#1273c4" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 15"/>
+<path d="M1300.0 480.0L1261.3 461.6L1295.4 437.4Z" fill="#1273c4"/>
+<g transform="translate(860 205) rotate(-6 23.0 28.75) scale(0.71875)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<text x="890" y="150" font-size="42" font-weight="900" fill="#1273c4" text-anchor="middle">요청</text>
+<circle cx="560" cy="380" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="560" y="390.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<path d="M1400 180a70 46 0 0 1 70 -46h140a70 46 0 0 1 70 46v20a70 46 0 0 1 -70 46h-96l-30 34l-4 -34h-40a70 46 0 0 1 -70 -46z" fill="#fff" stroke="#aeb3ba" stroke-width="3" filter="url(#shs)"/>
+<text x="1550" y="216" font-size="44" font-weight="900" fill="#1273c4" text-anchor="middle">네!</text>
+<circle cx="1660" cy="148" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1660" y="158.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<path d="M1300 500C1050 565 750 565 480 500" fill="none" stroke="#12a150" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 15"/>
+<path d="M480.0 500.0L521.3 488.4L511.5 529.1Z" fill="#12a150"/>
+<g transform="translate(860 512) rotate(8 23.0 28.75) scale(0.71875)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#12a150"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<text x="890" y="660" font-size="36" font-weight="900" fill="#12a150" text-anchor="middle">결과 전달</text>
+<circle cx="1010" cy="646" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1010" y="656.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
 </svg>

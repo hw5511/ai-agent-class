@@ -1,27 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
-<rect x="0" y="0" width="1792" height="840" fill="#fff"/>
-
-<!-- left column: button start -->
-<line x1="0" y1="330" x2="800" y2="330" stroke="#101113" stroke-width="2"/>
-<circle cx="22" cy="470" r="22" fill="#1273c4"/><text x="22" y="479" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">1</text>
-<text x="60" y="486" font-size="38" font-weight="700" fill="#101113">화면 버튼 = 시동 버튼</text>
-
-<rect x="0" y="544" width="220" height="88" rx="44" fill="#1273c4"/>
-<text x="110" y="598" font-size="30" font-weight="700" fill="#fff" text-anchor="middle">START</text>
-
-<text x="0" y="712" font-size="30" fill="#43474b">눌러서 켜기 · 방법 몰라도 됨</text>
-<text x="0" y="770" font-size="28" font-weight="700" fill="#1273c4">시동 ON</text>
-
-<!-- right column: direct wiring -->
-<line x1="992" y1="330" x2="1792" y2="330" stroke="#101113" stroke-width="2"/>
-<circle cx="1014" cy="470" r="22" fill="#1273c4"/><text x="1014" y="479" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">2</text>
-<text x="1052" y="486" font-size="38" font-weight="700" fill="#101113">API = 전선 직결</text>
-
-<line x1="1052" y1="530" x2="1232" y2="588" stroke="#101113" stroke-width="2"/>
-<line x1="1052" y1="646" x2="1232" y2="588" stroke="#1273c4" stroke-width="2"/>
-<circle cx="1232" cy="588" r="10" fill="#101113"/>
-<line x1="1232" y1="588" x2="1412" y2="588" stroke="#101113" stroke-width="2"/>
-
-<text x="992" y="712" font-size="30" fill="#43474b">선을 직접 연결 · 규칙을 알아야 함</text>
-<text x="992" y="770" font-size="28" font-weight="700" fill="#1273c4">시동 ON</text>
+<!-- 6/5 버튼 시동 vs 전선 직결 (tools/illus/s6_car_api.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
+<rect x="40" y="100" width="850" height="660" rx="26" fill="#fff6f0"/>
+<rect x="920" y="100" width="830" height="660" rx="26" fill="#eaf3fb"/>
+<g transform="translate(110 300) scale(1.0)">
+<path d="M10 200 Q10 130 70 118 L165 118 L210 34 Q226 16 252 16 L410 16 Q440 16 456 38 L452 118 L560 118 Q612 118 612 158 L612 200 Z" fill="#5aa0dc" filter="url(#shs)"/>
+<rect x="10" y="186" width="602" height="20" fill="#0d5c9e"/>
+<path d="M188 112 L222 42 Q234 28 256 28 L404 28 Q426 28 438 48 L432 112 Z" fill="#f4f8fc" stroke="#0d5c9e" stroke-width="4"/>
+<g transform="translate(240 30) scale(0.55)"><path transform="translate(0 0) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/></g>
+<circle cx="400" cy="96" r="40" fill="#fff" filter="url(#shs)"/>
+<circle cx="400" cy="96" r="32" fill="#1273c4" stroke="#fff" stroke-width="4"/>
+<text x="400" y="103" font-size="19" font-weight="900" fill="#fff" text-anchor="middle">시동</text>
+<path d="M350 96q9 13 0 26M450 96q-9 13 0 26" fill="none" stroke="#1273c4" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+<circle cx="140" cy="200" r="42" fill="#2b2f35"/><circle cx="140" cy="200" r="17" fill="#c9ccd1"/>
+<circle cx="530" cy="200" r="42" fill="#2b2f35"/><circle cx="530" cy="200" r="17" fill="#c9ccd1"/>
+</g>
+<circle cx="550.0" cy="356.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="550.0" y="366.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<text x="465" y="660" font-size="44" font-weight="900" fill="#101113" text-anchor="middle">버튼 시동</text>
+<text x="465" y="706" font-size="26" font-weight="700" fill="#5b6570" text-anchor="middle">누르기만 하면 됨</text>
+<g transform="translate(960 300) scale(1.0)">
+<path d="M10 200 Q10 130 70 118 L165 118 L210 34 Q226 16 252 16 L410 16 Q440 16 456 38 L452 118 L560 118 Q612 118 612 158 L612 200 Z" fill="#5aa0dc" filter="url(#shs)"/>
+<rect x="10" y="186" width="602" height="20" fill="#0d5c9e"/>
+<path d="M188 112 L222 42 Q234 28 256 28 L404 28 Q426 28 438 48 L432 112 Z" fill="#f4f8fc" stroke="#0d5c9e" stroke-width="4"/>
+<path d="M452 118 L560 118 Q612 118 612 158 L612 200 L452 200 Z" fill="#2b2f35"/>
+<circle cx="490" cy="158" r="10" fill="#3a3f46"/>
+<circle cx="520" cy="158" r="10" fill="#3a3f46"/>
+<circle cx="550" cy="158" r="10" fill="#3a3f46"/>
+<g transform="rotate(-108 452 118)"><path d="M452 118 L560 118 Q612 118 612 158 L612 200 L452 200 Z" fill="#5aa0dc" stroke="#0d5c9e" stroke-width="3" filter="url(#shs)"/></g>
+<circle cx="140" cy="200" r="42" fill="#2b2f35"/><circle cx="140" cy="200" r="17" fill="#c9ccd1"/>
+<circle cx="530" cy="200" r="42" fill="#2b2f35"/><circle cx="530" cy="200" r="17" fill="#c9ccd1"/>
+</g>
+<path transform="translate(1600.0 402.76) scale(0.68)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<path d="M1616.32 431.64C1520.0 410.0 1484.0 428.0 1460.0 440.0" fill="none" stroke="#1273c4" stroke-width="8" stroke-linecap="round"/>
+<path d="M1616.32 463.64C1520.0 466.0 1484.0 450.0 1460.0 440.0" fill="none" stroke="#d97757" stroke-width="8" stroke-linecap="round"/>
+<circle cx="1460.0" cy="440.0" r="11" fill="#101113"/>
+<path d="M1436.0 406.0l10 -20l6 13l14 -9l-8 20l16 2l-18 10l4 17l-16 -11l-10 15z" fill="#d97757" stroke="#fff" stroke-width="2"/>
+<circle cx="1450.0" cy="380.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1450.0" y="390.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<text x="1336" y="660" font-size="44" font-weight="900" fill="#101113" text-anchor="middle">전선 직결 = API</text>
+<text x="1336" y="706" font-size="26" font-weight="700" fill="#5b6570" text-anchor="middle">규칙대로 직접 연결</text>
 </svg>

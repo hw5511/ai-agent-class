@@ -1,74 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
-<rect x="0" y="0" width="1792" height="840" fill="#fff"/>
-
-<!-- left column: 페이지 (x 0..720) -->
-<circle cx="22" cy="300" r="22" fill="#1273c4"/><text x="22" y="308" font-size="26" font-weight="700" fill="#fff" text-anchor="middle">1</text>
-<line x1="0" y1="340" x2="720" y2="340" stroke="#101113" stroke-width="2"/>
-
-<!-- meta row: notion mark (36) + 페이지 -->
-<g transform="translate(-20.25,336) scale(1.125)">
-<path d="M18 16 L40 16 L46 22 L46 48 L24 48 L18 42 Z" fill="#ffffff" stroke="#101113" stroke-width="2.4"/>
-<text x="32" y="42" text-anchor="middle" font-family="Arial, 'Segoe UI', sans-serif" font-size="26" font-weight="900" fill="#101113">N</text>
-</g>
-<text x="48" y="384" font-size="26" fill="#7c8288">페이지</text>
-
-<text x="0" y="434" font-size="41" font-weight="700" fill="#101113">여행 준비</text>
-<text x="0" y="468" font-size="28" fill="#7c8288">문서처럼 자유롭게 쓰는 페이지</text>
-
-<rect x="0" y="506" width="24" height="24" rx="4" fill="none" stroke="#d5d8dc" stroke-width="2"/>
-<path d="M5 519 L10 525 L19 512" fill="none" stroke="#101113" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="44" y="526" font-size="27" fill="#7c8288" text-decoration="line-through">항공권 예약</text>
-
-<rect x="0" y="558" width="24" height="24" rx="4" fill="none" stroke="#d5d8dc" stroke-width="2"/>
-<path d="M5 571 L10 577 L19 564" fill="none" stroke="#101113" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="44" y="578" font-size="27" fill="#7c8288" text-decoration="line-through">숙소 비교</text>
-
-<rect x="0" y="610" width="24" height="24" rx="4" fill="none" stroke="#d5d8dc" stroke-width="2"/>
-<text x="44" y="630" font-size="27" fill="#101113">환전하기</text>
-
-<rect x="0" y="662" width="24" height="24" rx="4" fill="none" stroke="#d5d8dc" stroke-width="2"/>
-<text x="44" y="682" font-size="27" fill="#101113">짐 싸기</text>
-
-<!-- right column: 데이터베이스 (x 880..1792) -->
-<circle cx="902" cy="300" r="22" fill="#1273c4"/><text x="902" y="308" font-size="26" font-weight="700" fill="#fff" text-anchor="middle">2</text>
-<line x1="880" y1="340" x2="1792" y2="340" stroke="#101113" stroke-width="2"/>
-<text x="880" y="384" font-size="26" fill="#7c8288">데이터베이스</text>
-<text x="880" y="434" font-size="41" font-weight="700" fill="#101113">여행 일정 DB</text>
-<text x="880" y="468" font-size="28" fill="#7c8288">엑셀처럼 정리되는 데이터베이스</text>
-
-<text x="880" y="508" font-size="26" fill="#7c8288">일정</text>
-<text x="1180" y="508" font-size="26" fill="#7c8288">상태</text>
-<text x="1400" y="508" font-size="26" fill="#7c8288">담당</text>
-<text x="1600" y="508" font-size="26" fill="#7c8288">날짜</text>
-<line x1="880" y1="522" x2="1792" y2="522" stroke="#101113" stroke-width="1"/>
-
-<text x="880" y="556" font-size="27" font-weight="700" fill="#101113">공항 도착</text>
-<text x="1180" y="556" font-size="27" font-weight="700" fill="#1273c4">완료</text>
-<text x="1400" y="556" font-size="27" fill="#43474b">하늘</text>
-<text x="1600" y="556" font-size="27" fill="#43474b">5/1</text>
-<line x1="880" y1="574" x2="1792" y2="574" stroke="#d5d8dc" stroke-width="1"/>
-
-<text x="880" y="608" font-size="27" font-weight="700" fill="#101113">박물관</text>
-<text x="1180" y="608" font-size="27" font-weight="700" fill="#101113">진행중</text>
-<text x="1400" y="608" font-size="27" fill="#43474b">바다</text>
-<text x="1600" y="608" font-size="27" fill="#43474b">5/2</text>
-<line x1="880" y1="626" x2="1792" y2="626" stroke="#d5d8dc" stroke-width="1"/>
-
-<text x="880" y="660" font-size="27" font-weight="700" fill="#101113">야시장</text>
-<text x="1180" y="660" font-size="27" font-weight="700" fill="#7c8288">예정</text>
-<text x="1400" y="660" font-size="27" fill="#43474b">별이</text>
-<text x="1600" y="660" font-size="27" fill="#43474b">5/2</text>
-<line x1="880" y1="678" x2="1792" y2="678" stroke="#d5d8dc" stroke-width="1"/>
-
-<text x="880" y="712" font-size="27" font-weight="700" fill="#101113">쇼핑</text>
-<text x="1180" y="712" font-size="27" font-weight="700" fill="#7c8288">예정</text>
-<text x="1400" y="712" font-size="27" fill="#43474b">하늘</text>
-<text x="1600" y="712" font-size="27" fill="#43474b">5/3</text>
-
-<!-- bottom-right: collaborators (below table, right-aligned, badge 3) -->
-<circle cx="1472" cy="758" r="22" fill="#1273c4"/><text x="1472" y="766" font-size="26" font-weight="700" fill="#fff" text-anchor="middle">3</text>
-<circle cx="1530" cy="758" r="20" fill="none" stroke="#101113" stroke-width="1.5"/><text x="1530" y="765" font-size="18" font-weight="700" fill="#101113" text-anchor="middle">하</text>
-<circle cx="1578" cy="758" r="20" fill="none" stroke="#101113" stroke-width="1.5"/><text x="1578" y="765" font-size="18" font-weight="700" fill="#101113" text-anchor="middle">바</text>
-<circle cx="1626" cy="758" r="20" fill="none" stroke="#101113" stroke-width="1.5"/><text x="1626" y="765" font-size="18" font-weight="700" fill="#101113" text-anchor="middle">별</text>
-<text x="1788" y="770" font-size="28" fill="#43474b" text-anchor="end">같이 편집</text>
+<!-- 6/15 노션이란? (tools/illus/s6_notion_what.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
+<g filter="url(#sh)"><rect x="90" y="90" width="760" height="470" rx="16" fill="#fff" stroke="#c9ccd1" stroke-width="2"/></g>
+<path d="M91 142V106a15 15 0 0 1 15-15h728a15 15 0 0 1 15 15V142z" fill="#eef1f4"/>
+<circle cx="116" cy="116" r="7" fill="#ff5f57"/><circle cx="138" cy="116" r="7" fill="#febc2e"/><circle cx="160" cy="116" r="7" fill="#28c840"/>
+<text x="470.0" y="124" font-size="20" font-weight="700" fill="#5b6570" text-anchor="middle">여행 계획</text>
+<g transform="translate(90 142)"><g transform="translate(0 0) scale(0.6875)"><rect x="3" y="3" width="58" height="58" rx="13" fill="#ffffff" stroke="#101113" stroke-width="3"/><path d="M18 16 L40 16 L46 22 L46 48 L24 48 L18 42 Z" fill="#ffffff" stroke="#101113" stroke-width="2.4"/><text x="32" y="42" text-anchor="middle" font-family="Arial, 'Segoe UI', sans-serif" font-size="26" font-weight="900" fill="#101113">N</text></g><text x="56" y="32" font-size="30" font-weight="900" fill="#101113" text-anchor="start">Notion</text><text x="0" y="96" font-size="40" font-weight="900" fill="#101113" text-anchor="start">여행 계획</text><rect x="0" y="126" width="22" height="22" rx="5" fill="#12a150"/><path d="M4 138l6 6 10-12" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><text x="36" y="144" font-size="28" font-weight="700" fill="#5b6570" text-anchor="start">항공권 예약</text><line x1="36" y1="135" x2="230" y2="135" stroke="#5b6570" stroke-width="2.4"/><rect x="0" y="178" width="22" height="22" rx="5" fill="#fff" stroke="#aeb3ba" stroke-width="2.4"/><text x="36" y="196" font-size="28" font-weight="700" fill="#101113" text-anchor="start">숙소 예약</text><rect x="0" y="230" width="22" height="22" rx="5" fill="#fff" stroke="#aeb3ba" stroke-width="2.4"/><text x="36" y="248" font-size="28" font-weight="700" fill="#101113" text-anchor="start">캐리어 싸기</text><line x1="0" y1="292" x2="664" y2="292" stroke="#c9ccd1" stroke-width="2"/><text x="0" y="330" font-size="26" font-weight="800" fill="#5b6570" text-anchor="start">메모</text><rect x="0" y="346" width="664" height="14" rx="6" fill="#d5d8dc"/><rect x="0" y="370" width="464.79999999999995" height="14" rx="6" fill="#d5d8dc"/></g>
+<text x="130" y="74" font-size="30" font-weight="900" fill="#0d5c9e" text-anchor="start">문서</text>
+<circle cx="94" cy="86" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="94" y="96.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<g filter="url(#sh)"><rect x="940" y="90" width="760" height="470" rx="16" fill="#fff" stroke="#c9ccd1" stroke-width="2"/></g>
+<path d="M941 142V106a15 15 0 0 1 15-15h728a15 15 0 0 1 15 15V142z" fill="#eef1f4"/>
+<circle cx="966" cy="116" r="7" fill="#ff5f57"/><circle cx="988" cy="116" r="7" fill="#febc2e"/><circle cx="1010" cy="116" r="7" fill="#28c840"/>
+<text x="1320.0" y="124" font-size="20" font-weight="700" fill="#5b6570" text-anchor="middle">일정 관리</text>
+<g transform="translate(940 142)"><text x="14" y="26" font-size="24" font-weight="800" fill="#5b6570" text-anchor="start">항목</text>
+<text x="224" y="26" font-size="24" font-weight="800" fill="#5b6570" text-anchor="start">상태</text>
+<text x="414" y="26" font-size="24" font-weight="800" fill="#5b6570" text-anchor="start">담당</text>
+<text x="564" y="26" font-size="24" font-weight="800" fill="#5b6570" text-anchor="start">날짜</text>
+<line x1="0" y1="42" x2="664" y2="42" stroke="#c9ccd1" stroke-width="2"/>
+<line x1="0" y1="66" x2="664" y2="66" stroke="#d5d8dc" stroke-width="1.6"/>
+<text x="14" y="94" font-size="24" font-weight="700" fill="#101113" text-anchor="start">숙소 예약</text>
+<rect x="224" y="74" width="66" height="36" rx="18" fill="#12a150"/>
+<text x="257.0" y="98" font-size="22" font-weight="800" fill="#fff" text-anchor="middle">완료</text>
+<text x="414" y="94" font-size="24" font-weight="700" fill="#2b2f35" text-anchor="start">나</text>
+<text x="564" y="94" font-size="24" font-weight="700" fill="#5b6570" text-anchor="start">9/20</text>
+<line x1="0" y1="132" x2="664" y2="132" stroke="#d5d8dc" stroke-width="1.6"/>
+<text x="14" y="160" font-size="24" font-weight="700" fill="#101113" text-anchor="start">캐리어 싸기</text>
+<rect x="224" y="140" width="84" height="36" rx="18" fill="#1273c4"/>
+<text x="266.0" y="164" font-size="22" font-weight="800" fill="#fff" text-anchor="middle">진행중</text>
+<text x="414" y="160" font-size="24" font-weight="700" fill="#2b2f35" text-anchor="start">동료</text>
+<text x="564" y="160" font-size="24" font-weight="700" fill="#5b6570" text-anchor="start">9/24</text>
+<line x1="0" y1="198" x2="664" y2="198" stroke="#d5d8dc" stroke-width="1.6"/>
+<text x="14" y="226" font-size="24" font-weight="700" fill="#101113" text-anchor="start">여행자보험</text>
+<rect x="224" y="206" width="66" height="36" rx="18" fill="#5b6570"/>
+<text x="257.0" y="230" font-size="22" font-weight="800" fill="#fff" text-anchor="middle">예정</text>
+<text x="414" y="226" font-size="24" font-weight="700" fill="#2b2f35" text-anchor="start">나</text>
+<text x="564" y="226" font-size="24" font-weight="700" fill="#5b6570" text-anchor="start">9/25</text></g>
+<text x="980" y="74" font-size="30" font-weight="900" fill="#0d5c9e" text-anchor="start">데이터베이스</text>
+<circle cx="944" cy="86" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="944" y="96.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<path transform="translate(150 590) scale(0.86)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<path transform="translate(380 590) scale(0.86)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges" opacity="0.55"/>
+<g transform="translate(120 500)"><path d="M0 0L0 22L5.5 17.2L9 24.8L13 22.8L9.5 15.4L17 15.4Z" fill="#1273c4"/><rect x="12" y="22" width="31" height="26" rx="8" fill="#1273c4"/><text x="27.5" y="40" font-size="20" font-weight="800" fill="#fff" text-anchor="middle">나</text></g>
+<g transform="translate(350 526)"><path d="M0 0L0 22L5.5 17.2L9 24.8L13 22.8L9.5 15.4L17 15.4Z" fill="#d97757"/><rect x="12" y="22" width="44" height="26" rx="8" fill="#d97757"/><text x="34.0" y="40" font-size="20" font-weight="800" fill="#fff" text-anchor="middle">동료</text></g>
+<circle cx="365" cy="650" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="365" y="660.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<text x="660" y="690" font-size="34" font-weight="900" fill="#101113" text-anchor="start">같이 편집하는 협업툴</text>
 </svg>

@@ -31,6 +31,7 @@ export interface Part {
   title: string // "개발 환경 준비"
   summary?: string // one line: what this part is for — shown on the part cover's right panel
   sections?: { title: string; count: number }[] // detailed table of contents shown on the part cover instead of every slide title
+  coverArt?: string // an illustration (public/illustrations/*.svg) drawn on this part's generated cover
   cover?: false // no generated cover and not counted in the covers' table of contents (a session opener)
   slides: Slide[]
 }
@@ -159,6 +160,7 @@ export interface PartCoverSlide extends SlideBase {
   parts: { title: string; count: number }[] // the whole session's table of contents
   slideTitles: string[] // what this part covers
   sections?: { title: string; count: number }[]
+  art?: string // cover illustration, from the part's coverArt
 }
 
 /** Part opener / session outline. With `agenda: true` the viewer fills `items` from the session's

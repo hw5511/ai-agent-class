@@ -1,30 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- 6/4 버튼 뒤의 배선 (tools/illus/s6_button_wiring.py) -->
 <defs>
-<marker id="ar-acc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
 </defs>
-<rect x="0" y="0" width="1792" height="840" fill="#fff"/>
-
-<!-- left: order button wireframe -->
-<rect x="40" y="380" width="440" height="380" rx="20" fill="none" stroke="#d5d8dc" stroke-width="2"/>
-<circle cx="22" cy="439" r="22" fill="#1273c4"/><text x="22" y="448" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">1</text>
-<text x="76" y="452" font-size="36" font-weight="700" fill="#101113">아이스 아메리카노</text>
-<text x="76" y="500" font-size="30" fill="#7c8288">4,500원</text>
-<rect x="76" y="600" width="240" height="86" rx="8" fill="#1273c4"/>
-<text x="196" y="654" font-size="34" font-weight="700" fill="#fff" text-anchor="middle">주문하기</text>
-
-<!-- connecting line to the command -->
-<line x1="316" y1="643" x2="900" y2="643" stroke="#1273c4" stroke-width="3" marker-end="url(#ar-acc)"/>
-<circle cx="608" cy="609" r="22" fill="#1273c4"/><text x="608" y="618" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">2</text>
-
-<!-- right: request command -->
-<line x1="920" y1="400" x2="1768" y2="400" stroke="#101113" stroke-width="2"/>
-<circle cx="942" cy="437" r="22" fill="#1273c4"/><text x="942" y="446" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">3</text>
-<text x="1004" y="446" font-size="26" fill="#7c8288">서버 요청 명령어</text>
-
-<text x="920" y="530" font-size="34" font-weight="700" fill="#101113" font-family="'D2Coding', Consolas, 'Courier New', monospace">POST /orders</text>
-<text x="920" y="580" font-size="30" fill="#43474b" font-family="'D2Coding', Consolas, 'Courier New', monospace">{ "menu": "americano" }</text>
-<text x="920" y="660" font-size="34" font-weight="700" fill="#1273c4" font-family="'D2Coding', Consolas, 'Courier New', monospace">→ 200 OK</text>
-<text x="1180" y="660" font-size="34" font-weight="700" fill="#101113">주문 완료</text>
-
-<text x="920" y="770" font-size="30" fill="#43474b">버튼을 누르면 이 명령어가 서버로 날아감</text>
+<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
+<path transform="translate(170 408.7) scale(1.1)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="90" y="560" width="790" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="106" y="584" width="758" height="176" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<g filter="url(#sh)"><rect x="528" y="156" width="300" height="430" rx="16" fill="#fff" stroke="#c9ccd1" stroke-width="2"/></g>
+<path d="M529 208V172a15 15 0 0 1 15-15h268a15 15 0 0 1 15 15V208z" fill="#eef1f4"/>
+<circle cx="554" cy="182" r="7" fill="#ff5f57"/><circle cx="576" cy="182" r="7" fill="#febc2e"/><circle cx="598" cy="182" r="7" fill="#28c840"/>
+<text x="678.0" y="190" font-size="20" font-weight="700" fill="#5b6570" text-anchor="middle">주문 앱</text>
+<g transform="translate(528 208)"><rect x="20" y="20" width="260" height="92" rx="14" fill="#eaf3fb"/><text x="50" y="60" font-size="27" font-weight="800" fill="#101113" text-anchor="start">아메리카노</text><text x="50" y="92" font-size="22" font-weight="600" fill="#5b6570" text-anchor="start">4,500원</text><rect x="20" y="146" width="260" height="150" rx="24" fill="#1273c4"/><text x="150" y="232" font-size="42" font-weight="900" fill="#fff" text-anchor="middle">주문하기</text></g>
+<circle cx="788" cy="378" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="788" y="388.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<rect x="828" y="140" width="470" height="620" rx="16" fill="#b9bec5"/>
+<path d="M850 166 L1268 166 L1280 247.1 L1240 328.3 L1280 409.4 L1240 490.6 L1280 571.7 L1240 652.9 L1244 734 L850 734 Z" fill="#f7f8fa" stroke="#aeb3ba" stroke-width="3"/>
+<text x="1063.0" y="116" font-size="40" font-weight="900" fill="#101113" text-anchor="middle">배선</text>
+<path d="M824 200C918 180 1088 220 1328 200" fill="none" stroke="#1273c4" stroke-width="9" stroke-linecap="round"/>
+<path d="M824 270C918 250 1088 290 1328 270" fill="none" stroke="#12a150" stroke-width="9" stroke-linecap="round"/>
+<path d="M824 340C918 320 1088 360 1328 340" fill="none" stroke="#d97757" stroke-width="9" stroke-linecap="round"/>
+<path d="M824 410C918 390 1088 430 1328 410" fill="none" stroke="#0d5c9e" stroke-width="9" stroke-linecap="round"/>
+<path d="M824 480C918 460 1088 500 1328 480" fill="none" stroke="#5aa0dc" stroke-width="9" stroke-linecap="round"/>
+<circle cx="1063.0" cy="786" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1063.0" y="796.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<rect x="1328" y="140" width="250" height="620" rx="18" fill="#2b2f35"/>
+<rect x="1354" y="170.0" width="198" height="56.0" rx="6" fill="#2f333a"/>
+<circle cx="1376" cy="198.0" r="8" fill="#12a150"/>
+<rect x="1354" y="240.0" width="198" height="56.0" rx="6" fill="#2f333a"/>
+<circle cx="1376" cy="268.0" r="8" fill="#12a150"/>
+<rect x="1354" y="310.0" width="198" height="56.0" rx="6" fill="#2f333a"/>
+<circle cx="1376" cy="338.0" r="8" fill="#12a150"/>
+<rect x="1354" y="380.0" width="198" height="56.0" rx="6" fill="#2f333a"/>
+<circle cx="1376" cy="408.0" r="8" fill="#12a150"/>
+<rect x="1354" y="450.0" width="198" height="56.0" rx="6" fill="#2f333a"/>
+<circle cx="1376" cy="478.0" r="8" fill="#5aa0dc"/>
+<rect x="1354" y="520.0" width="198" height="56.0" rx="6" fill="#2f333a"/>
+<circle cx="1376" cy="548.0" r="8" fill="#12a150"/>
+<rect x="1354" y="590.0" width="198" height="56.0" rx="6" fill="#2f333a"/>
+<circle cx="1376" cy="618.0" r="8" fill="#12a150"/>
+<rect x="1354" y="660.0" width="198" height="56.0" rx="6" fill="#2f333a"/>
+<circle cx="1376" cy="688.0" r="8" fill="#12a150"/>
+<text x="1453.0" y="800" font-size="36" font-weight="900" fill="#101113" text-anchor="middle">서버</text>
+<rect x="1088" y="358" width="210" height="92" rx="12" fill="#fff" stroke="#aeb3ba" stroke-width="2.5" filter="url(#shs)"/>
+<text x="1193.0" y="396" font-size="25" font-weight="700" fill="#0d5c9e" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">POST /orders</text>
+<text x="1193.0" y="426" font-size="17" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">{ item: “아메리카노” }</text>
+<path d="M1298 404.0C1318 404.0 1302 404.0 1318 404.0" fill="none" stroke="#1273c4" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 15"/>
+<path d="M1326.0 404.0L1298.8 419.2L1298.8 388.8Z" fill="#1273c4"/>
+<circle cx="1193.0" cy="332" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1193.0" y="342.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<rect x="1612" y="360.0" width="180" height="180" rx="16" fill="#fff" stroke="#aeb3ba" stroke-width="2.5" filter="url(#shs)"/>
+<circle cx="1702.0" cy="422.0" r="34" fill="#12a150"/><path d="M1687.72 422.68l10.2 10.2 19.040000000000003-20.4" fill="none" stroke="#fff" stroke-width="6.800000000000001" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1702.0" y="482.0" font-size="26" font-weight="800" fill="#12a150" text-anchor="middle">200 OK</text>
+<text x="1702.0" y="512.0" font-size="22" font-weight="700" fill="#5b6570" text-anchor="middle">주문 완료</text>
+<path d="M1578 450.0C1598 450.0 1586 450.0 1602 450.0" fill="none" stroke="#12a150" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 15"/>
+<path d="M1610.0 450.0L1582.8 465.2L1582.8 434.8Z" fill="#12a150"/>
 </svg>
