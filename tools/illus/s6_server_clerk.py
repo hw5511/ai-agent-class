@@ -1,5 +1,6 @@
 """6/3 서버 = 총무: Claude at its desk sends a request slip to the clerk desk, the clerk answers "네", pulls a
-folder from the filing cabinet, and a result paper travels back."""
+folder from the filing cabinet, and a result paper travels back. Owner 2026-09-26: a small real Claude
+brand icon sits beside the "Claude" nameplate on the left desk."""
 import os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from illuskit import *
@@ -12,6 +13,16 @@ DESK_L_X, DESK_TOP_Y, DESK_L_W = 90, 600, 460
 mascot_h = 143 * 1.15
 b += [mascot(DESK_L_X + DESK_L_W / 2 - 240 * 1.15 / 2, DESK_TOP_Y - mascot_h, 1.15),
       desk(DESK_L_X, DESK_TOP_Y, DESK_L_W, "Claude", body_h=160)]
+
+# a small real Claude brand icon riding beside the "Claude" nameplate (nameplate geometry mirrors desk()'s own)
+_np_label = "Claude"
+_np_pw = max(120, int(len(_np_label) * 34 * 0.95) + 48)
+_np_cx = DESK_L_X + DESK_L_W / 2
+_np_icon_size = 40
+_np_icon_cx = _np_cx + _np_pw / 2 + 34
+_np_icon_cy = DESK_TOP_Y + 90 + 28
+b += [brand_tile(_np_icon_cx - _np_icon_size / 2, _np_icon_cy - _np_icon_size / 2, _np_icon_size, 8),
+      brand_icon("claude", _np_icon_cx - _np_icon_size / 2, _np_icon_cy - _np_icon_size / 2, _np_icon_size)]
 
 # right: the clerk desk (서버), a filing cabinet behind the clerk
 DESK_R_X = 1230

@@ -1,5 +1,7 @@
 """6/6 명령어 모음집 = MCP: a toolbox of command cards, plugged by an MCP cable into the mascot's desk,
-Claude picks a card and runs it, a result pops out."""
+Claude picks a card and runs it, a result pops out. Owner 2026-09-26: each card that maps to a real
+service carries that service's real brand icon (페이지 만들기=Notion, 일정 추가=Google Calendar,
+메일 보내기=Gmail, 파일 올리기=Google Drive); 검색 has none."""
 import os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from illuskit import *
@@ -14,13 +16,21 @@ b += [f'<rect x="{BOX_X}" y="{BOX_Y}" width="{BOX_W}" height="{BOX_H}" rx="24" f
       f'<rect x="{BOX_X}" y="{BOX_Y + 40}" width="{BOX_W}" height="30" fill="{ACCENT_MID}"/>',
       text(BOX_X + BOX_W / 2, BOX_Y + 46, "명령어 모음집", 32, 900, "#fff")]
 
-cards = ["페이지 만들기", "검색", "일정 추가", "메일 보내기", "파일 올리기", "· · ·"]
+cards = [("페이지 만들기", "notion"), ("검색", None), ("일정 추가", "googlecalendar"),
+         ("메일 보내기", "gmail"), ("파일 올리기", "googledrive"), ("· · ·", None)]
 CW, CH, GAP = 196, 92, 18
+ICON_S = 34
 gx0, gy0 = BOX_X + 24, BOX_Y + 70 + 24
-for i, label in enumerate(cards):
+for i, (label, icon) in enumerate(cards):
     cx, cy = gx0 + (i % 2) * (CW + GAP), gy0 + (i // 2) * (CH + GAP)
-    b += [f'<rect x="{cx}" y="{cy}" width="{CW}" height="{CH}" rx="14" fill="#fff" stroke="{LINE2}" stroke-width="2" filter="url(#shs)"/>',
-          text(cx + CW / 2, cy + CH / 2 + 10, label, 26, 800, ACCENT_DARK if label != "· · ·" else MUTED, family=MONO)]
+    b += [f'<rect x="{cx}" y="{cy}" width="{CW}" height="{CH}" rx="14" fill="#fff" stroke="{LINE2}" stroke-width="2" filter="url(#shs)"/>']
+    if icon:
+        icon_x = cx + CW / 2 - ICON_S / 2
+        icon_y = cy + 12
+        b += [brand_icon(icon, icon_x, icon_y, ICON_S),
+              text(cx + CW / 2, cy + 12 + ICON_S + 26, label, 26, 800, ACCENT_DARK, family=MONO)]
+    else:
+        b += [text(cx + CW / 2, cy + CH / 2 + 10, label, 26, 800, ACCENT_DARK if label != "· · ·" else MUTED, family=MONO)]
 b += [badge(BOX_X + BOX_W - 6, BOX_Y - 6, 1)]
 
 # ---- (b) the MCP cable, plugged into the mascot's desk ----

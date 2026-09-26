@@ -1,6 +1,7 @@
 """6/73 웹 커넥터 vs 로컬 MCP: left - a claude.ai browser window (no invented copy) reaches Notion and
 Google Calendar through a tinted cloud; right - the mascot at a desk fully inside the panel, a monitor
-running Blender (real logo + a wireframe cube) wired straight to the mascot's side."""
+running Blender (real logo + a wireframe cube) wired straight to the mascot's side.
+Owner 2026-09-26: real brand_icon() marks for Notion, Google Calendar and Blender."""
 import os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from illuskit import *
@@ -39,8 +40,8 @@ b += [cloud(CLOUD_CX, CLOUD_CY, 0.74, fill=ACCENT_TINT)]
 b += [badge(CLOUD_CX + 210, CLOUD_CY - 110, 1)]
 b += [path(f"M458 {BW_Y + BW_H}C458 420 458 400 458 384", dotted=True)]
 b += [path("M388 552C300 592 268 606 246 632", dotted=True), path("M528 552C616 592 648 606 670 632", dotted=True)]
-b += [logo_svg("notion.svg", 160, 632, 62), text(191, 720, "Notion", 26, 800, INK, anchor="middle")]
-b += [logo_svg("googlecalendar.svg", 660, 632, 62), text(691, 720, "구글 캘린더", 26, 800, INK, anchor="middle")]
+b += [brand_icon("notion", 160, 632, 62), text(191, 720, "Notion", 26, 800, INK, anchor="middle")]
+b += [brand_icon("googlecalendar", 660, 632, 62), text(691, 720, "구글 캘린더", 26, 800, INK, anchor="middle")]
 b += [text(458, 480, "전부 클라우드에서", 26, 800, ACCENT_DARK, anchor="middle")]
 
 # ---- right: the mascot at a desk, a PC monitor running Blender, wired to the mascot's side ----
@@ -48,7 +49,7 @@ b += [zone(920, 66, 812, 668, WARM_ZONE)]
 b += [text(1326, 128, "로컬 MCP", 36, 900, MASCOT, anchor="middle")]
 
 PC_X, PC_Y, PC_W, PC_H = 980, 168, 560, 300
-blender_body = (logo_svg("blender.svg", 0, 0, 46) + text(64, 34, "Blender", 30, 900, INK, anchor="start"))
+blender_body = (brand_icon("blender", 0, 0, 46) + text(64, 34, "Blender", 30, 900, INK, anchor="start"))
 viewport_w, viewport_h = PC_W - 96, PC_H - 76 - 76
 blender_body += f'<rect x="0" y="58" width="{viewport_w}" height="{viewport_h}" rx="10" fill="#1e1f22"/>'
 blender_body += cube_wireframe(viewport_w / 2, 58 + viewport_h / 2 - 10, 46)

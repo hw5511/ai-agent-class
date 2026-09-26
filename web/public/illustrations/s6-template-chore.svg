@@ -90,8 +90,8 @@
 </g>
 <text x="946" y="282" font-size="30" font-weight="900" fill="#101113" text-anchor="middle">채우기 귀찮음</text>
 <circle cx="1060" cy="296" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1060" y="306.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
-<path d="M1060 420C1190 470 1270 460 1310 440" fill="none" stroke="#12a150" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 15"/>
-<path d="M1310.0 440.0L1288.1 472.2L1271.1 438.2Z" fill="#12a150"/>
+<path d="M1060 420C1190 470 1270 460 1310 440" fill="none" stroke="#cdeedb" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1060 420C1190 470 1270 460 1310 440" fill="none" stroke="#12a150" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1310.0 440.0L1293.8 469.0L1277.0 435.6Z" fill="#12a150" stroke="#12a150" stroke-width="7" stroke-linejoin="round"/>
 <rect x="1140" y="650" width="560" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
 <rect x="1156" y="674" width="528" height="116" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
 <rect x="1299.5" y="740" width="241" height="56" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>

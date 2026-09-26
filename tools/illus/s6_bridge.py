@@ -1,5 +1,8 @@
 """6/2 다리 역할 · Claude 와 외부 서비스: Claude's bank, an arched MCP bridge over the gap, three service
-buildings (Notion / Google Calendar / Google Drive) on the far bank, a mascot walking the bridge with a paper."""
+buildings (Notion / Google Calendar / Google Drive) on the far bank, a mascot walking the bridge with a paper.
+Owner 2026-09-26: real brand_icon() marks. Gmail/GitHub buildings were tried but do not fit the far-bank
+strip (bridge pier to panel edge is ~626px) without shrinking icons below the 56px floor, so it stays at
+three buildings, now with the real marks instead of drawn stand-ins."""
 import os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from illuskit import *
@@ -32,18 +35,18 @@ my = (1 - mt) ** 2 * 730 + 2 * (1 - mt) * mt * 130 + mt ** 2 * 730
 ms = 0.6
 b += [mascot(mx - 240 * ms / 2, my - 143 * ms, ms), doc(mx + 55, my - 143 * ms - 10, 36, rot=14)]
 
-# right bank: three service buildings with real logos
-buildings = [("notion.svg", "노션"), ("googlecalendar.svg", "구글 캘린더"), ("googledrive.svg", "구글 드라이브")]
+# right bank: three service buildings with real brand icons
+buildings = [("notion", "노션"), ("googlecalendar", "구글 캘린더"), ("googledrive", "구글 드라이브")]
 xs = [1160, 1365, 1570]
 BW, WALL_H, ROOF_H, BOTTOM = 160, 260, 46, 760
-for x, (logo, label) in zip(xs, buildings):
+for x, (name, label) in zip(xs, buildings):
     cx = x + BW / 2
     top_wall = BOTTOM - WALL_H
     roof_peak = top_wall - ROOF_H
     b += [f'<polygon points="{x - 6},{top_wall} {x + BW + 6},{top_wall} {cx},{roof_peak}" fill="{DESK_TOP}"/>',
           f'<rect x="{x}" y="{top_wall}" width="{BW}" height="{WALL_H}" fill="#fff" stroke="{LINE2}" stroke-width="2.5"/>',
           f'<rect x="{cx - 23}" y="{BOTTOM - 70}" width="46" height="70" rx="4" fill="{ACCENT_TINT}" stroke="{LINE2}" stroke-width="2"/>',
-          logo_svg(logo, cx - 32, top_wall + 40, 64),
+          brand_icon(name, cx - 32, top_wall + 40, 64),
           text(cx, roof_peak - 16, label, 28, 800, INK)]
 b += [badge(1445, 375, 3)]
 

@@ -57,16 +57,16 @@ b += [phone(PHONE_X, PHONE_Y, PHONE_W, phone_screen),
 # ---- travel paths, drawn last, with explicit arrowheads (PyMuPDF ignores marker-end) ----
 # 1 -> 2: papers travel up into the GitHub cloud
 pA = "M474 430C520 360 570 300 630 254"
-b += [path(pA), arrow_head_at(570, 300, 630, 254, 20, ACCENT),
+b += [path(pA, arrow=False), arrow_head_at(570, 300, 630, 254, 20, ACCENT),
       doc(468, 358, 42, -14), doc(524, 296, 38, -6)]
 # 2 -> 3: cloud to cloud
 pB = "M888 258C912 258 936 260 954 262"
-b += [path(pB), arrow_head_at(936, 260, 954, 262, 18, ACCENT)]
+b += [path(pB, arrow=False), arrow_head_at(936, 260, 954, 262, 18, ACCENT)]
 # 3 -> 4: cloud curving down into the desktop app window
 pC = "M1236 330C1262 360 1276 384 1290 412"
-b += [path(pC), arrow_head_at(1276, 384, 1290, 412, 18, ACCENT)]
+b += [path(pC, arrow=False), arrow_head_at(1276, 384, 1290, 412, 18, ACCENT)]
 # 4 -> 5: desk area curving up into the phone
 pD = "M1416 500C1460 490 1500 480 1536 470"
-b += [path(pD), arrow_head_at(1500, 480, 1536, 470, 18, ACCENT)]
+b += [path(pD, arrow=False), arrow_head_at(1500, 480, 1536, 470, 18, ACCENT)]
 
 print(save("s8-title.svg", b, "8/1 title - desk -> GitHub -> cloud session -> Claude app -> phone (tools/illus/s8_title.py)"))

@@ -35,7 +35,7 @@ b.append(badge(420 + 98 + 16, RAIL_Y - 170 - 2, 1))
 
 # badge 2 on the fail -> B step (실패 후 새 방식), a dotted path with an explicit arrowhead
 pf = f"M{900 + 42} {RAIL_Y} C {(900 + 1310) / 2} {RAIL_Y + 96} {(900 + 1310) / 2} {RAIL_Y + 96} {1310 - 42} {RAIL_Y}"
-b += [path(pf, color=ACCENT), arrow_head_at((900 + 1310) / 2, RAIL_Y + 96, 1310 - 44, RAIL_Y - 2, 18, ACCENT)]
+b += [path(pf, color=ACCENT, arrow=False), arrow_head_at((900 + 1310) / 2, RAIL_Y + 96, 1310 - 44, RAIL_Y - 2, 18, ACCENT)]
 b.append(badge((900 + 1310) / 2, RAIL_Y + 118, 2))
 
 # mascot at the RIGHT end of the rail, behind a small desk, writing the memo for the latest commit

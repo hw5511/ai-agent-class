@@ -32,7 +32,7 @@ b += [mascot(z + 52, DESK1_Y - MH + 6, MS),
       laptop(cx - 6, DESK1_Y - 108, 150, folder(36, 10, 60) + text(66, 72, "agent1", 12, 700, family=MONO)),
       desk(z + 46, DESK1_Y, 308, body_h=96)]
 pth1 = f"M{cx + 66} {DESK1_Y - 100}C{cx + 96} {DESK1_Y - 200} {cx + 40} {DESK1_Y - 280} {cx - 6} {DESK1_Y - 320}"
-b += [path(pth1), arrow_head_at(cx + 40, DESK1_Y - 280, cx - 6, DESK1_Y - 320, 18, ACCENT),
+b += [path(pth1, arrow=False), arrow_head_at(cx + 40, DESK1_Y - 280, cx - 6, DESK1_Y - 320, 18, ACCENT),
       doc(cx + 56, DESK1_Y - 216, 34, -8), doc(cx + 22, DESK1_Y - 268, 30, -14)]
 b += [badge(z + 46, ZONE_Y + 46, 1), text(cx, LABEL_Y, "백업", 40, 900)]
 
@@ -45,7 +45,7 @@ DESK2_Y = 552
 b += [laptop(cx - 78, DESK2_Y - 108, 150, folder(36, 10, 60) + text(66, 72, "agent1", 12, 700, family=MONO)),
       desk(z + 46, DESK2_Y, 308, body_h=96)]
 pth2 = f"M{cx} {282}C{cx - 30} {360} {cx - 2} {410} {cx - 4} {DESK2_Y - 108}"
-b += [path(pth2), arrow_head_at(cx - 2, DESK2_Y - 150, cx - 4, DESK2_Y - 108, 18, ACCENT),
+b += [path(pth2, arrow=False), arrow_head_at(cx - 2, DESK2_Y - 150, cx - 4, DESK2_Y - 108, 18, ACCENT),
       doc(cx - 26, 328, 32, 10), doc(cx - 10, 400, 36, -6)]
 b += [badge(z + 46, ZONE_Y + 46, 2), text(cx, LABEL_Y, "불러오기", 40, 900)]
 
@@ -60,7 +60,7 @@ b += [doc(v3[0] - 34, v3[1] - 4, 68, 5, stroke=LINE), text(v3[0], v3[1] + 116, "
 b += [doc(v2[0] - 34, v2[1] - 4, 68, 0, stroke=LINE), text(v2[0], v2[1] + 116, "v2", 26, 800, MUTED, family=MONO)]
 b += [doc(v1[0] - 38, v1[1] - 10, 76, -5, accent=GREEN, stroke=ACCENT_DARK), text(v1[0], v1[1] + 116, "v1", 28, 900, ACCENT_DARK, family=MONO)]
 arc3 = f"M{v3[0] + 34} {v3[1] - 14}C{v3[0] + 60} {v3[1] - 110} {v1[0] - 30} {v1[1] - 110} {v1[0] - 4} {v1[1] - 24}"
-b += [path(arc3, color=ACCENT, width=9), arrow_head_at(v1[0] - 30, v1[1] - 78, v1[0] - 4, v1[1] - 24, 24, ACCENT)]
+b += [path(arc3, color=ACCENT, width=9, arrow=False), arrow_head_at(v1[0] - 30, v1[1] - 78, v1[0] - 4, v1[1] - 24, 24, ACCENT)]
 DESK3_Y = 552
 b += [mascot(z + 52, DESK3_Y - MH + 6, MS), desk(z + 46, DESK3_Y, 308, body_h=96)]
 b += [badge(z + 46, ZONE_Y + 46, 3), text(cx, LABEL_Y, "되돌리기", 40, 900)]

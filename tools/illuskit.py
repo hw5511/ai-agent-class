@@ -201,12 +201,34 @@ def cross(cx, cy, r=26, fill=RED) -> str:
 
 
 # ---------- movement, labels, badges ----------
+_HALO = {ACCENT: ACCENT_TINT, GREEN: "#cdeedb", INK: "#d5d8dc", RED: "#f6d0d0", MASCOT: "#f6d9cc"}
+
+
+def _rounded_head(tx, ty, ang, length, half, color) -> str:
+    """The deck's one arrowhead: a filled triangle with rounded corners, tip at (tx, ty) along ang (radians)."""
+    import math
+    bx, by = tx - length * math.cos(ang), ty - length * math.sin(ang)
+    px, py = -math.sin(ang), math.cos(ang)
+    pts = f"M{tx:.1f} {ty:.1f}L{bx + half * px:.1f} {by + half * py:.1f}L{bx - half * px:.1f} {by - half * py:.1f}Z"
+    return f'<path d="{pts}" fill="{color}" stroke="{color}" stroke-width="7" stroke-linejoin="round"/>'
+
+
 def path(d, color=ACCENT, dotted=True, arrow=True, width=5) -> str:
-    """A travel path. dotted = the 5/2 dotted trail; arrow at the end."""
-    marker = {ACCENT: "ab", INK: "ak", GREEN: "ag"}.get(color, "ab")
-    dash = ' stroke-dasharray="2 15"' if dotted else ""
-    m = f' marker-end="url(#{marker})"' if arrow else ""
-    return f'<path d="{d}" fill="none" stroke="{color}" stroke-width="{width}" stroke-linecap="round"{dash}{m}/>'
+    """The deck's one travel arrow (owner 2026-09-26: no thin dotted arrows): a thick, round-capped solid
+    band on a soft halo, ending in a rounded filled head. Blue = send, green = return. `dotted` is ignored
+    (kept for old callers); `width` is the old hairline width and is scaled up."""
+    import math, re
+    w = max(11.0, width * 2.4)
+    halo = _HALO.get(color, "#e3e8ee")
+    nums = [float(n) for n in re.findall(r"-?\d+(?:\.\d+)?", d)]
+    out = [f'<path d="{d}" fill="none" stroke="{halo}" stroke-width="{w + 12}" stroke-linecap="round" stroke-linejoin="round"/>',
+           f'<path d="{d}" fill="none" stroke="{color}" stroke-width="{w}" stroke-linecap="round" stroke-linejoin="round"/>']
+    if arrow and len(nums) >= 4:
+        ex, ey, cx, cy = nums[-2], nums[-1], nums[-4], nums[-3]
+        ang = math.atan2(ey - cy, ex - cx)
+        tx, ty = ex + w * 0.9 * math.cos(ang), ey + w * 0.9 * math.sin(ang)
+        out.append(_rounded_head(tx, ty, ang, w * 2.5, w * 1.6, color))
+    return "".join(out)
 
 
 def text(x, y, s, size=34, weight=800, fill=INK, anchor="middle", family=None) -> str:
@@ -262,16 +284,11 @@ def panel_sized(w: int, h: int) -> str:
 # ---------- explicit arrowheads (PyMuPDF does not draw SVG <marker> arrowheads or dash patterns,
 # so any arrowhead that matters to the reading needs a real filled polygon, not marker-end) ----------
 def arrow_head(tip_x, tip_y, angle_deg, size=20, color=ACCENT) -> str:
-    """A solid triangular arrowhead, tip at (tip_x, tip_y), pointing along angle_deg
-    (0 = +x / right, 90 = +y / down, standard atan2 convention on an SVG y-down canvas)."""
+    """The deck's rounded arrowhead (same shape as path()'s), tip at (tip_x, tip_y), pointing along angle_deg
+    (0 = +x / right, 90 = +y / down). Small sizes are raised so heads match the thick path band."""
     import math
-    a = math.radians(angle_deg)
-    back, half = size * 1.7, size * 0.95
-    bx, by = tip_x - back * math.cos(a), tip_y - back * math.sin(a)
-    px, py = -math.sin(a), math.cos(a)
-    x1, y1 = bx + half * px, by + half * py
-    x2, y2 = bx - half * px, by - half * py
-    return f'<path d="M{tip_x:.1f} {tip_y:.1f}L{x1:.1f} {y1:.1f}L{x2:.1f} {y2:.1f}Z" fill="{color}"/>'
+    s = max(size, 22)
+    return _rounded_head(tip_x, tip_y, math.radians(angle_deg), s * 1.25, s * 0.85, color)
 
 
 def arrow_head_at(cp_x, cp_y, tip_x, tip_y, size=20, color=ACCENT) -> str:
@@ -280,3 +297,105 @@ def arrow_head_at(cp_x, cp_y, tip_x, tip_y, size=20, color=ACCENT) -> str:
     import math
     angle = math.degrees(math.atan2(tip_y - cp_y, tip_x - cp_x))
     return arrow_head(tip_x, tip_y, angle, size, color)
+
+
+# ---------- small schematic icons (flat, single-color; used as chips or overlays) ----------
+def icon_search(cx, cy, r=22, color=INK, sw=6) -> str:
+    """A magnifying-glass icon centred at (cx, cy) (the loupe), handle toward bottom-right."""
+    hx, hy = cx + r * 0.72, cy + r * 0.72
+    return (f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{color}" stroke-width="{sw}"/>'
+            f'<line x1="{hx}" y1="{hy}" x2="{hx + r * 0.62}" y2="{hy + r * 0.62}" stroke="{color}" stroke-width="{sw}" stroke-linecap="round"/>')
+
+
+def icon_pencil(cx, cy, size=40, color=INK, rot=-45) -> str:
+    """A pencil icon centred at (cx, cy), tip pointing along `rot` degrees (0 = +x)."""
+    w, h = size, size * 0.26
+    return (f'<g transform="translate({cx} {cy}) rotate({rot})">'
+            f'<rect x="{-w / 2}" y="{-h / 2}" width="{w * 0.78}" height="{h}" rx="{h / 2}" fill="{color}"/>'
+            f'<path d="M{w * 0.28} {-h / 2}L{w / 2} 0L{w * 0.28} {h / 2}Z" fill="{color}"/></g>')
+
+
+def icon_cursor(x, y, size=40, color=INK) -> str:
+    """A mouse-pointer icon, tip at top-left (x, y), pointing down-right."""
+    s = size / 40
+    return (f'<g transform="translate({x} {y}) scale({s})">'
+            f'<path d="M0 0L0 34L8 26L14 40L20 37L14 23L26 23Z" fill="{color}" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></g>')
+
+
+def icon_book(cx, cy, size=48, color=ACCENT) -> str:
+    """A simple open-book icon centred at (cx, cy)."""
+    w, h = size, size * 0.62
+    x0, y0 = cx - w / 2, cy - h / 2
+    return (f'<g transform="translate({x0} {y0})">'
+            f'<path d="M{w / 2} 6C{w * 0.36} -2 {w * 0.12} -2 0 4V{h - 6}C{w * 0.12} {h - 12} {w * 0.36} {h - 12} {w / 2} {h - 4}Z" fill="{color}"/>'
+            f'<path d="M{w / 2} 6C{w * 0.64} -2 {w * 0.88} -2 {w} 4V{h - 6}C{w * 0.88} {h - 12} {w * 0.64} {h - 12} {w / 2} {h - 4}Z" fill="{color}"/></g>')
+
+
+# ---------- generic labelled box (function box / toolbox / tray / machine body) ----------
+def part_box(x, y, w, h, label: str | None = None, fill=ACCENT_TINT, stroke=ACCENT, label_size=26,
+             corner=16, weight=800, label_color=INK) -> str:
+    """A simple rounded rect 'part': a code/function box, a tray, or a machine body. Label centred inside."""
+    out = [f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{corner}" fill="{fill}" stroke="{stroke}" stroke-width="3"/>']
+    if label:
+        out.append(text(x + w / 2, y + h / 2 + label_size * 0.34, label, label_size, weight, label_color))
+    return "\n".join(out)
+
+
+def bubble(x, y, w, h, s: str, size=40, fill="#fff", stroke=LINE2, text_color=ACCENT, tail_x=None) -> str:
+    """A speech/callout bubble (rounded rect + downward tail), top-left (x, y). `s` is centred inside.
+    `tail_x` (default: centre) is the tail's x position, absolute."""
+    r = min(28, h / 2)
+    tx = tail_x if tail_x is not None else x + w / 2
+    tx = max(x + r + 22, min(x + w - r - 22, tx))
+    return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{r}" fill="{fill}" stroke="{stroke}" stroke-width="3" filter="url(#shs)"/>'
+            f'<path d="M{tx - 16} {y + h - 1}L{tx + 16} {y + h - 1}L{tx} {y + h + 22}Z" fill="{fill}" stroke="{stroke}" stroke-width="3"/>'
+            f'<rect x="{tx - 16}" y="{y + h - 4}" width="32" height="6" fill="{fill}"/>'
+            f'{text(x + w / 2, y + h / 2 + size * 0.34, s, size, 900, text_color)}')
+
+
+# ---------- real, full-colour service marks (owner 2026-09-26: no drawn stand-ins for MCP part) ----------
+def brand_icon(name, x, y, size=64) -> str:
+    """Inlines web/public/brand/icons/<name>.svg (an official, full-colour service mark: notion,
+    googlecalendar, googledrive, gmail, blender, github, claude) at top-left (x, y), fitted into a
+    size x size box the same way a nested <svg x y width height viewBox> with the default
+    preserveAspectRatio ("xMidYMid meet") would: scaled to fit keeping its own aspect ratio, centred.
+    Implemented as a <g transform="translate() scale()"> (like logo_svg()) rather than a literal
+    nested <svg> tag: PyMuPDF - this deck's required render-and-look checker - ignores x/y on a
+    nested <svg> and draws it at the parent's origin instead, which this sidesteps while producing
+    the same pixels in a real browser. Every id="..." and url(#...) / href="#..." reference inside
+    it is prefixed with `name-` so gradients/clipPaths never collide when several brand icons sit in
+    one parent SVG."""
+    import re as _re
+    src = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "web", "public", "brand", "icons", f"{name}.svg"))
+    with open(src, "r", encoding="utf-8") as f:
+        content = f.read()
+    content = _re.sub(r"<\?xml[^>]*\?>", "", content)
+    content = _re.sub(r"<!DOCTYPE[^>]*>", "", content, flags=_re.IGNORECASE)
+    tag_start = content.index("<svg")
+    start = content.index(">", tag_start) + 1
+    end = content.rindex("</svg>")
+    header = content[tag_start:start]
+    inner = content[start:end]
+    vb_m = _re.search(r'viewBox="([^"]+)"', header)
+    if vb_m:
+        vb_x, vb_y, vb_w, vb_h = [float(v) for v in vb_m.group(1).split()]
+    else:
+        vb_x, vb_y, vb_w, vb_h = 0.0, 0.0, float(size), float(size)
+
+    prefix = f"{name}-"
+    inner = _re.sub(r'id="([^"]+)"', lambda m: f'id="{prefix}{m.group(1)}"', inner)
+    inner = _re.sub(r'url\(#([^)]+)\)', lambda m: f'url(#{prefix}{m.group(1)})', inner)
+    inner = _re.sub(r'href="#([^"]+)"', lambda m: f'href="#{prefix}{m.group(1)}"', inner)
+
+    s = size / max(vb_w, vb_h)
+    ox = x + (size - vb_w * s) / 2 - vb_x * s
+    oy = y + (size - vb_h * s) / 2 - vb_y * s
+    return f'<g transform="translate({ox} {oy}) scale({s})">{inner}</g>'
+
+
+def brand_tile(x, y, size=64, pad=10, fill="#fff") -> str:
+    """A white rounded tile behind a brand_icon() call for contrast on busy/dark backgrounds.
+    Draw this first, then brand_icon() at (x - pad, y - pad, size=size + 2*pad) on top... simpler:
+    call brand_tile(x, y, size) then brand_icon(name, x, y, size) at the SAME (x, y, size) - the
+    tile is drawn pad px larger on every side."""
+    return f'<rect x="{x - pad}" y="{y - pad}" width="{size + 2 * pad}" height="{size + 2 * pad}" rx="{max(8, pad + 4)}" fill="{fill}" filter="url(#shs)"/>'
