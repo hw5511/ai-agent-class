@@ -18,54 +18,64 @@
     },
     {
       "id": "s2-bash-03",
-      "template": "screen",
+      "template": "compare",
       "title": "카카오톡 실행",
-      "screen": {
-        "kind": "vscode",
-        "folder": "agent1",
-        "files": [
-          {
-            "name": "자기소개서.txt"
-          },
-          {
-            "name": "강아지.svg"
-          },
-          {
-            "name": "포스터.html"
-          },
-          {
-            "name": "계산기.html"
-          },
-          {
-            "name": "테트리스.html"
-          },
-          {
-            "name": "practice_files",
-            "folder": true
-          }
-        ],
-        "terminal": {
-          "vendor": "claude",
-          "cwd": "C:\\agent1",
-          "turns": [
+      "left": {
+        "label": "Claude Code",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [
             {
-              "role": "user",
-              "text": "컴퓨터에 설치된 PC 카카오톡 찾아서 실행해줘",
-              "badge": 1
+              "name": "자기소개서.txt"
             },
             {
-              "role": "tool",
-              "text": "Bash(설치된 프로그램 목록에서 카카오톡 검색 → KakaoTalk.exe 실행)",
-              "badge": 2
+              "name": "강아지.svg"
             },
             {
-              "role": "assistant",
-              "text": "카카오톡을 찾아서 실행했어요."
+              "name": "포스터.html"
+            },
+            {
+              "name": "계산기.html"
+            },
+            {
+              "name": "테트리스.html"
+            },
+            {
+              "name": "practice_files",
+              "folder": true
             }
           ],
-          "input": {
-            "placeholder": "메시지를 입력하세요..."
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "컴퓨터에 설치된 PC 카카오톡 찾아서 실행해줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "Bash(설치된 프로그램 목록에서 카카오톡 검색 → KakaoTalk.exe 실행)",
+                "badge": 2
+              },
+              {
+                "role": "assistant",
+                "text": "카카오톡을 찾아서 실행했어요."
+              }
+            ],
+            "input": {
+              "placeholder": "메시지를 입력하세요..."
+            }
           }
+        }
+      },
+      "right": {
+        "label": "카카오톡",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/s2_bash_kakao.svg"
         }
       },
       "notes": [
@@ -97,54 +107,64 @@
     },
     {
       "id": "s2-bash-04",
-      "template": "screen",
+      "template": "compare",
       "title": "브라우저로 사이트 열기",
-      "screen": {
-        "kind": "vscode",
-        "folder": "agent1",
-        "files": [
-          {
-            "name": "자기소개서.txt"
-          },
-          {
-            "name": "강아지.svg"
-          },
-          {
-            "name": "포스터.html"
-          },
-          {
-            "name": "계산기.html"
-          },
-          {
-            "name": "테트리스.html"
-          },
-          {
-            "name": "practice_files",
-            "folder": true
-          }
-        ],
-        "terminal": {
-          "vendor": "claude",
-          "cwd": "C:\\agent1",
-          "turns": [
+      "left": {
+        "label": "Claude Code",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [
             {
-              "role": "user",
-              "text": "크롬으로 유튜브 실행해줘",
-              "badge": 1
+              "name": "자기소개서.txt"
             },
             {
-              "role": "tool",
-              "text": "Bash(크롬 실행 → https://www.youtube.com 접속)",
-              "badge": 2
+              "name": "강아지.svg"
             },
             {
-              "role": "assistant",
-              "text": "크롬으로 유튜브를 열었어요."
+              "name": "포스터.html"
+            },
+            {
+              "name": "계산기.html"
+            },
+            {
+              "name": "테트리스.html"
+            },
+            {
+              "name": "practice_files",
+              "folder": true
             }
           ],
-          "input": {
-            "placeholder": "메시지를 입력하세요..."
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "크롬으로 유튜브 실행해줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "Bash(크롬 실행 → https://www.youtube.com 접속)",
+                "badge": 2
+              },
+              {
+                "role": "assistant",
+                "text": "크롬으로 유튜브를 열었어요."
+              }
+            ],
+            "input": {
+              "placeholder": "메시지를 입력하세요..."
+            }
           }
+        }
+      },
+      "right": {
+        "label": "YouTube — Chrome",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/s2_bash_youtube.svg"
         }
       },
       "notes": [
@@ -176,54 +196,64 @@
     },
     {
       "id": "s2-bash-05",
-      "template": "screen",
+      "template": "compare",
       "title": "바탕화면에 txt 파일 만들기",
-      "screen": {
-        "kind": "vscode",
-        "folder": "agent1",
-        "files": [
-          {
-            "name": "자기소개서.txt"
-          },
-          {
-            "name": "강아지.svg"
-          },
-          {
-            "name": "포스터.html"
-          },
-          {
-            "name": "계산기.html"
-          },
-          {
-            "name": "테트리스.html"
-          },
-          {
-            "name": "practice_files",
-            "folder": true
-          }
-        ],
-        "terminal": {
-          "vendor": "claude",
-          "cwd": "C:\\agent1",
-          "turns": [
+      "left": {
+        "label": "Claude Code",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [
             {
-              "role": "user",
-              "text": "바탕화면에 메모.txt 파일을 만들고 오늘 할 일 세 가지를 적어줘",
-              "badge": 1
+              "name": "자기소개서.txt"
             },
             {
-              "role": "tool",
-              "text": "Bash(바탕화면에 메모.txt 만들기)",
-              "badge": 2
+              "name": "강아지.svg"
             },
             {
-              "role": "assistant",
-              "text": "바탕화면에 메모.txt를 만들고 할 일 세 가지를 적었어요."
+              "name": "포스터.html"
+            },
+            {
+              "name": "계산기.html"
+            },
+            {
+              "name": "테트리스.html"
+            },
+            {
+              "name": "practice_files",
+              "folder": true
             }
           ],
-          "input": {
-            "placeholder": "메시지를 입력하세요..."
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "바탕화면에 메모.txt 파일을 만들고 오늘 할 일 세 가지를 적어줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "Bash(바탕화면에 메모.txt 만들기)",
+                "badge": 2
+              },
+              {
+                "role": "assistant",
+                "text": "바탕화면에 메모.txt를 만들고 할 일 세 가지를 적었어요."
+              }
+            ],
+            "input": {
+              "placeholder": "메시지를 입력하세요..."
+            }
           }
+        }
+      },
+      "right": {
+        "label": "바탕화면 — 메모.txt",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/s2_bash_desktop_txt.svg"
         }
       },
       "notes": [
@@ -250,54 +280,64 @@
     },
     {
       "id": "s2-bash-05b",
-      "template": "screen",
+      "template": "compare",
       "title": "바탕화면 파일 지우기",
-      "screen": {
-        "kind": "vscode",
-        "folder": "agent1",
-        "files": [
-          {
-            "name": "자기소개서.txt"
-          },
-          {
-            "name": "강아지.svg"
-          },
-          {
-            "name": "포스터.html"
-          },
-          {
-            "name": "계산기.html"
-          },
-          {
-            "name": "테트리스.html"
-          },
-          {
-            "name": "practice_files",
-            "folder": true
-          }
-        ],
-        "terminal": {
-          "vendor": "claude",
-          "cwd": "C:\\agent1",
-          "turns": [
+      "left": {
+        "label": "Claude Code",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [
             {
-              "role": "user",
-              "text": "바탕화면에 만든 메모.txt 지워줘",
-              "badge": 1
+              "name": "자기소개서.txt"
             },
             {
-              "role": "tool",
-              "text": "Bash(바탕화면의 메모.txt 삭제)",
-              "badge": 2
+              "name": "강아지.svg"
             },
             {
-              "role": "assistant",
-              "text": "바탕화면의 메모.txt를 지웠어요."
+              "name": "포스터.html"
+            },
+            {
+              "name": "계산기.html"
+            },
+            {
+              "name": "테트리스.html"
+            },
+            {
+              "name": "practice_files",
+              "folder": true
             }
           ],
-          "input": {
-            "placeholder": "메시지를 입력하세요..."
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "바탕화면에 만든 메모.txt 지워줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "Bash(바탕화면의 메모.txt 삭제)",
+                "badge": 2
+              },
+              {
+                "role": "assistant",
+                "text": "바탕화면의 메모.txt를 지웠어요."
+              }
+            ],
+            "input": {
+              "placeholder": "메시지를 입력하세요..."
+            }
           }
+        }
+      },
+      "right": {
+        "label": "바탕화면",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/s2_bash_desktop_deleted.svg"
         }
       },
       "notes": [
@@ -329,7 +369,7 @@
     },
     {
       "id": "s2-bash-06",
-      "template": "screen",
+      "template": "compare",
       "title": "파일 목록 확인",
       "notes": [
         {
@@ -357,105 +397,125 @@
           }
         ]
       },
-      "screen": {
-        "kind": "vscode",
-        "folder": "agent1",
-        "files": [
-          {
-            "name": "자기소개서.txt"
-          },
-          {
-            "name": "강아지.svg"
-          },
-          {
-            "name": "포스터.html"
-          },
-          {
-            "name": "계산기.html"
-          },
-          {
-            "name": "테트리스.html"
-          },
-          {
-            "name": "practice_files",
-            "folder": true
-          }
-        ],
-        "terminal": {
-          "vendor": "claude",
-          "cwd": "C:\\agent1",
-          "turns": [
+      "left": {
+        "label": "Claude Code",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [
             {
-              "role": "user",
-              "text": "현재 폴더의 파일 목록을 설명해줘",
-              "badge": 1
+              "name": "자기소개서.txt"
             },
             {
-              "role": "tool",
-              "text": "Bash(파일 목록 보기)",
-              "badge": 2
+              "name": "강아지.svg"
             },
             {
-              "role": "assistant",
-              "text": "6개 항목을 찾았어요. 지금까지 만든 게 다 있고, practice_files 폴더도 그대로 있어요."
+              "name": "포스터.html"
+            },
+            {
+              "name": "계산기.html"
+            },
+            {
+              "name": "테트리스.html"
+            },
+            {
+              "name": "practice_files",
+              "folder": true
             }
           ],
-          "input": {
-            "placeholder": "메시지를 입력하세요..."
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "현재 폴더의 파일 목록을 설명해줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "Bash(파일 목록 보기)",
+                "badge": 2
+              },
+              {
+                "role": "assistant",
+                "text": "6개 항목을 찾았어요. 지금까지 만든 게 다 있고, practice_files 폴더도 그대로 있어요."
+              }
+            ],
+            "input": {
+              "placeholder": "메시지를 입력하세요..."
+            }
           }
+        }
+      },
+      "right": {
+        "label": "agent1 — 파일 탐색기",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/s2_bash_file_list.svg"
         }
       }
     },
     {
       "id": "s2-bash-07",
-      "template": "screen",
+      "template": "compare",
       "title": "만든 파일 찾아서 실행",
-      "screen": {
-        "kind": "vscode",
-        "folder": "agent1",
-        "files": [
-          {
-            "name": "자기소개서.txt"
-          },
-          {
-            "name": "강아지.svg"
-          },
-          {
-            "name": "포스터.html"
-          },
-          {
-            "name": "계산기.html"
-          },
-          {
-            "name": "테트리스.html"
-          },
-          {
-            "name": "practice_files",
-            "folder": true
-          }
-        ],
-        "terminal": {
-          "vendor": "claude",
-          "cwd": "C:\\agent1",
-          "turns": [
+      "left": {
+        "label": "Claude Code",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [
             {
-              "role": "user",
-              "text": "현재 폴더에 테트리스 파일 찾아서 실행해줘",
-              "badge": 1
+              "name": "자기소개서.txt"
             },
             {
-              "role": "tool",
-              "text": "Bash(테트리스 파일 찾기)",
-              "badge": 2
+              "name": "강아지.svg"
             },
             {
-              "role": "assistant",
-              "text": "테트리스.html을 찾아서 기본 브라우저로 열었어요."
+              "name": "포스터.html"
+            },
+            {
+              "name": "계산기.html"
+            },
+            {
+              "name": "테트리스.html"
+            },
+            {
+              "name": "practice_files",
+              "folder": true
             }
           ],
-          "input": {
-            "placeholder": "메시지를 입력하세요..."
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "현재 폴더에 테트리스 파일 찾아서 실행해줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "Bash(테트리스 파일 찾기)",
+                "badge": 2
+              },
+              {
+                "role": "assistant",
+                "text": "테트리스.html을 찾아서 기본 브라우저로 열었어요."
+              }
+            ],
+            "input": {
+              "placeholder": "메시지를 입력하세요..."
+            }
           }
+        }
+      },
+      "right": {
+        "label": "테트리스.html — 기본 브라우저",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/s2_bash_tetris_run.svg"
         }
       },
       "notes": [
@@ -487,9 +547,72 @@
     },
     {
       "id": "s2-bash-08",
-      "template": "illustration",
+      "template": "compare",
       "title": "바탕화면 위젯 만들기",
-      "illustration": "/illustrations/s2-widget-flow.svg",
+      "left": {
+        "label": "Claude Code",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [
+            {
+              "name": "자기소개서.txt"
+            },
+            {
+              "name": "강아지.svg"
+            },
+            {
+              "name": "포스터.html"
+            },
+            {
+              "name": "계산기.html"
+            },
+            {
+              "name": "테트리스.html"
+            },
+            {
+              "name": "slime_widget.py",
+              "active": true
+            },
+            {
+              "name": "practice_files",
+              "folder": true
+            }
+          ],
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "svg로 귀여운 슬라임 같은 캐릭터를 간단하게 디자인해서, 바탕화면에 떠서 마우스로 들었다 놓을 수 있는(중력 적용) 프로그램을 파이썬으로 만들어서 실행해줄래? 슬라임 우클릭 또는 트레이 아이콘에 \"종료\" 메뉴를 넣어줘"
+              },
+              {
+                "role": "tool",
+                "text": "Write(slime_widget.py)"
+              },
+              {
+                "role": "tool",
+                "text": "Bash(pystray, pillow 설치 → python slime_widget.py 실행)"
+              },
+              {
+                "role": "assistant",
+                "text": "슬라임 위젯을 만들어서 실행했어요."
+              }
+            ],
+            "input": {
+              "placeholder": "메시지를 입력하세요..."
+            }
+          }
+        }
+      },
+      "right": {
+        "label": "바탕화면 — 슬라임 위젯",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/s2_bash_slime_widget.svg"
+        }
+      },
       "notes": [
         {
           "n": "!",
@@ -509,9 +632,72 @@
     },
     {
       "id": "s2-bash-09",
-      "template": "illustration",
+      "template": "compare",
       "title": "바탕화면 위젯 동작 확인",
-      "illustration": "/illustrations/desktop-slime-widget.svg",
+      "left": {
+        "label": "Claude Code",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [
+            {
+              "name": "자기소개서.txt"
+            },
+            {
+              "name": "강아지.svg"
+            },
+            {
+              "name": "포스터.html"
+            },
+            {
+              "name": "계산기.html"
+            },
+            {
+              "name": "테트리스.html"
+            },
+            {
+              "name": "slime_widget.py",
+              "active": true
+            },
+            {
+              "name": "practice_files",
+              "folder": true
+            }
+          ],
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "svg로 귀여운 슬라임 같은 캐릭터를 간단하게 디자인해서, 바탕화면에 떠서 마우스로 들었다 놓을 수 있는(중력 적용) 프로그램을 파이썬으로 만들어서 실행해줄래? 슬라임 우클릭 또는 트레이 아이콘에 \"종료\" 메뉴를 넣어줘"
+              },
+              {
+                "role": "tool",
+                "text": "Write(slime_widget.py)"
+              },
+              {
+                "role": "tool",
+                "text": "Bash(pystray, pillow 설치 → python slime_widget.py 실행)"
+              },
+              {
+                "role": "assistant",
+                "text": "슬라임 위젯을 만들어서 실행했어요."
+              }
+            ],
+            "input": {
+              "placeholder": "메시지를 입력하세요..."
+            }
+          }
+        }
+      },
+      "right": {
+        "label": "바탕화면 — 슬라임 위젯 동작",
+        "screen": {
+          "kind": "shot",
+          "src": "/illustrations/desktop-slime-widget.svg"
+        }
+      },
       "notes": [
         {
           "n": 1,

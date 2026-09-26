@@ -482,30 +482,40 @@
     },
     {
       "id": "s2-write-12",
-      "template": "screen",
+      "template": "compare",
       "title": "계산기 만들기",
-      "screen": {
-        "kind": "vscode",
-        "folder": "agent1",
-        "files": [
-          {
-            "name": "자기소개.md"
-          },
-          {
-            "name": "자전거_강아지.svg"
-          },
-          {
-            "name": "poster.html"
+      "left": {
+        "label": "Claude Code",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [
+            {
+              "name": "자기소개.md"
+            },
+            {
+              "name": "자전거_강아지.svg"
+            },
+            {
+              "name": "poster.html"
+            }
+          ],
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [],
+            "input": {
+              "text": "파이썬과 tkinter를 설치해서 간단한 계산기 프로그램 만들어줘",
+              "badge": 1
+            }
           }
-        ],
-        "terminal": {
-          "vendor": "claude",
-          "cwd": "C:\\agent1",
-          "turns": [],
-          "input": {
-            "text": "파이썬과 tkinter를 설치해서 간단한 계산기 프로그램 만들어줘",
-            "badge": 1
-          }
+        }
+      },
+      "right": {
+        "label": "calculator.py — 실행 결과",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/s2_write_calc_0.svg"
         }
       },
       "notes": [
@@ -538,49 +548,59 @@
     },
     {
       "id": "s2-write-13",
-      "template": "screen",
+      "template": "compare",
       "title": "계산기 창",
-      "screen": {
-        "kind": "vscode",
-        "folder": "agent1",
-        "files": [
-          {
-            "name": "자기소개.md"
-          },
-          {
-            "name": "자전거_강아지.svg"
-          },
-          {
-            "name": "poster.html"
-          },
-          {
-            "name": "calculator.py",
-            "active": true
-          }
-        ],
-        "terminal": {
-          "vendor": "claude",
-          "cwd": "C:\\agent1",
-          "turns": [
+      "left": {
+        "label": "Claude Code",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [
             {
-              "role": "user",
-              "text": "파이썬과 tkinter를 설치해서 간단한 계산기 프로그램 만들어줘",
-              "badge": 1
+              "name": "자기소개.md"
             },
             {
-              "role": "assistant",
-              "text": "Write(calculator.py)",
-              "badge": 2
+              "name": "자전거_강아지.svg"
             },
             {
-              "role": "assistant",
-              "text": "Bash(python calculator.py)"
+              "name": "poster.html"
             },
             {
-              "role": "assistant",
-              "text": "계산기 창이 열렸습니다."
+              "name": "calculator.py",
+              "active": true
             }
-          ]
+          ],
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "파이썬과 tkinter를 설치해서 간단한 계산기 프로그램 만들어줘",
+                "badge": 1
+              },
+              {
+                "role": "assistant",
+                "text": "Write(calculator.py)",
+                "badge": 2
+              },
+              {
+                "role": "assistant",
+                "text": "Bash(python calculator.py)"
+              },
+              {
+                "role": "assistant",
+                "text": "계산기 창이 열렸습니다."
+              }
+            ]
+          }
+        }
+      },
+      "right": {
+        "label": "calculator.py — 실행 결과",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/s2_write_calc_128.svg"
         }
       },
       "notes": [
@@ -598,52 +618,62 @@
     },
     {
       "id": "s2-write-14",
-      "template": "screen",
+      "template": "compare",
       "title": "같은 방식으로 테트리스",
-      "screen": {
-        "kind": "vscode",
-        "folder": "agent1",
-        "files": [
-          {
-            "name": "자기소개.md"
-          },
-          {
-            "name": "자전거_강아지.svg"
-          },
-          {
-            "name": "poster.html"
-          },
-          {
-            "name": "calculator.py"
-          },
-          {
-            "name": "tetris.py",
-            "active": true
-          }
-        ],
-        "terminal": {
-          "vendor": "claude",
-          "cwd": "C:\\agent1",
-          "turns": [
+      "left": {
+        "label": "Claude Code",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [
             {
-              "role": "user",
-              "text": "같은 방식으로 간단한 테트리스 만들어줘",
-              "badge": 1
+              "name": "자기소개.md"
             },
             {
-              "role": "assistant",
-              "text": "Write(tetris.py)",
-              "badge": 2
+              "name": "자전거_강아지.svg"
             },
             {
-              "role": "assistant",
-              "text": "Bash(python tetris.py)"
+              "name": "poster.html"
             },
             {
-              "role": "assistant",
-              "text": "테트리스 창이 열렸습니다."
+              "name": "calculator.py"
+            },
+            {
+              "name": "tetris.py",
+              "active": true
             }
-          ]
+          ],
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [
+              {
+                "role": "user",
+                "text": "같은 방식으로 간단한 테트리스 만들어줘",
+                "badge": 1
+              },
+              {
+                "role": "assistant",
+                "text": "Write(tetris.py)",
+                "badge": 2
+              },
+              {
+                "role": "assistant",
+                "text": "Bash(python tetris.py)"
+              },
+              {
+                "role": "assistant",
+                "text": "테트리스 창이 열렸습니다."
+              }
+            ]
+          }
+        }
+      },
+      "right": {
+        "label": "tetris.py — 실행 결과",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/s2_write_tetris.svg"
         }
       },
       "notes": [

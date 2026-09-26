@@ -4,29 +4,6 @@
   "summary": "이미 있는 파일에서 필요한 부분만 고치는 Edit 툴을 실습한다.",
   "slides": [
     {
-      "id": "s2-edit-01",
-      "template": "illustration",
-      "title": "Write와 Edit 차이",
-      "illustration": "/illustrations/s2-write-edit.svg",
-      "notes": [
-        {
-          "n": 1,
-          "head": "1. 파일 읽기",
-          "body": "먼저 Read로 지금 파일 내용을 확인합니다."
-        },
-        {
-          "n": 2,
-          "head": "2. 고칠 부분 찾기",
-          "body": "그다음 파일 전체가 아니라 바뀔 곳만 짚어냅니다."
-        },
-        {
-          "n": 3,
-          "head": "3. 그 부분만 교체",
-          "body": "짚어낸 그 부분만 새 내용으로 교체하고 나머지는 그대로 둡니다."
-        }
-      ]
-    },
-    {
       "id": "s2-edit-03",
       "template": "screen",
       "title": "테트리스 개선 요청",

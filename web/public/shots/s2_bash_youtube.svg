@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" width="1000" height="760" font-family="Pretendard, 'Malgun Gothic', sans-serif">
+<defs>
+  <filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.18"/></filter>
+</defs>
+<rect width="1000" height="760" fill="#eef0f3"/>
+
+<g filter="url(#sh)">
+  <rect x="16" y="16" width="968" height="728" rx="14" fill="#ffffff" stroke="#e2e4e8" stroke-width="1.5"/>
+</g>
+
+<!-- tab strip -->
+<path d="M16 30a14 14 0 0 1 14-14h920a14 14 0 0 1 14 14v40h-948z" fill="#f3f4f6"/>
+<rect x="16" y="16" width="968" height="54" fill="none" stroke="#e2e4e8" stroke-width="1.5"/>
+<rect x="40" y="24" width="220" height="38" rx="10" fill="#ffffff"/>
+<rect x="58" y="34" width="20" height="16" rx="3" fill="#ff0033"/>
+<path d="M64 38l10 4-10 4z" fill="#ffffff"/>
+<text x="88" y="49" font-size="22" fill="#1c1e21">YouTube</text>
+
+<!-- address bar -->
+<rect x="16" y="70" width="968" height="70" fill="#fbfbfc"/>
+<line x1="16" y1="140" x2="984" y2="140" stroke="#e2e4e8" stroke-width="1.4"/>
+<rect x="60" y="86" width="700" height="40" rx="20" fill="#f1f2f4"/>
+<circle cx="90" cy="106" r="8" fill="none" stroke="#6b7280" stroke-width="1.8"/>
+<text x="112" y="113" font-size="24" fill="#3c4043">https://www.youtube.com</text>
+
+<!-- page header -->
+<rect x="16" y="140" width="968" height="90" fill="#ffffff"/>
+<line x1="16" y1="230" x2="984" y2="230" stroke="#eef0f3" stroke-width="1.4"/>
+<rect x="60" y="168" width="40" height="30" rx="7" fill="#ff0033"/>
+<path d="M76 176l18 8-18 8z" fill="#ffffff"/>
+<text x="116" y="196" font-size="36" font-weight="800" fill="#0f0f0f">YouTube</text>
+
+<rect x="420" y="168" width="400" height="46" rx="23" fill="#f8f8f8" stroke="#e2e4e8" stroke-width="1.4"/>
+<text x="448" y="198" font-size="22" fill="#9aa0a6">검색</text>
+<circle cx="920" cy="191" r="22" fill="#e6e6e6"/>
+<circle cx="920" cy="184" r="8" fill="#9aa0a6"/>
+<path d="M902 202c3-8 11-12 18-12s15 4 18 12" fill="#9aa0a6"/>
+
+<!-- content: recommended videos, fewer and bigger -->
+<text x="60" y="272" font-size="24" font-weight="700" fill="#1c1e21">추천 동영상</text>
+
+<g>
+  <!-- video 1 -->
+  <rect x="60" y="292" width="424" height="243" rx="10" fill="#e4e6e9"/>
+  <path d="M254 388l30 24-30 24z" fill="#ffffff"/>
+  <text x="60" y="569" font-size="26" font-weight="700" fill="#1c1e21">고양이 브이로그 모음</text>
+  <text x="60" y="600" font-size="22" fill="#6b7280">우리집 채널</text>
+
+  <!-- video 2 -->
+  <rect x="516" y="292" width="424" height="243" rx="10" fill="#e4e6e9"/>
+  <path d="M710 388l30 24-30 24z" fill="#ffffff"/>
+  <text x="516" y="569" font-size="26" font-weight="700" fill="#1c1e21">코딩 입문 강의 1강</text>
+  <text x="516" y="600" font-size="22" fill="#6b7280">배움채널</text>
+</g>
+</svg>
