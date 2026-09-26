@@ -136,14 +136,9 @@
     },
     {
       "id": "s7-plugin-05",
-      "template": "flow",
+      "template": "illustration",
       "title": "스킬 크리에이터",
-      "loop": true,
-      "steps": [
-        { "label": "관찰", "sub": "반복 작업 찾기", "logo": "icon:Search", "badge": 1 },
-        { "label": "정리", "sub": "가이드로 문서화", "logo": "icon:Book" },
-        { "label": "저장", "sub": "SKILL.md 로 저장", "logo": "icon:Write" }
-      ],
+      "illustration": "/illustrations/s7-skill-creator.svg",
       "notes": [
         { "n": 1, "head": "스킬 만드는 과정도 반복", "body": "관찰하고 정리해서 SKILL.md 로 저장하는 이 스킬 제작 과정 자체도 매번 똑같이 반복됩니다." },
         { "n": "!", "head": "그래서 스킬크리에이터", "body": "반복되는 과정이니 이것도 스킬로 만들어둔 것이 바로 스킬크리에이터입니다." }
@@ -358,14 +353,9 @@
     },
     {
       "id": "s7-plugin-12",
-      "template": "flow",
+      "template": "illustration",
       "title": "같은 로직, 다른 조작판",
-      "steps": [
-        { "label": "사람", "sub": "GUI 로 값 찾기", "logo": "icon:Click", "badge": 1 },
-        { "label": "명령어 복사", "sub": "찾은 값 그대로", "logo": "icon:Terminal" },
-        { "label": "클로드에게 전달", "sub": "프롬프트로 전달", "logo": "icon:Chat" },
-        { "label": "AI 가 반복", "sub": "여러 장 자동 처리", "logo": "icon:Bot", "badge": 2 }
-      ],
+      "illustration": "/illustrations/s7-two-panels.svg",
       "notes": [
         { "n": 1, "head": "사람은 GUI 로 눈대중", "body": "사람은 GUI 슬라이더를 움직이며 눈으로 보고 원하는 값을 찾습니다." },
         { "n": 2, "head": "AI 는 명령어로 반복", "body": "그 값을 명령어로 복사해 클로드에게 전달하면 AI 가 같은 계산을 여러 장에 반복해서 처리합니다." }

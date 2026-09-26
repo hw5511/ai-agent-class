@@ -15,14 +15,9 @@
     },
     {
       "id": "s7-cli-02",
-      "template": "flow",
+      "template": "illustration",
       "title": "코드 직접 수정 반복",
-      "loop": true,
-      "steps": [
-        { "label": "Read", "sub": "현재 코드 확인", "logo": "icon:Read", "badge": 1 },
-        { "label": "Edit", "sub": "바뀔 값 수정", "logo": "icon:Edit", "badge": 2 },
-        { "label": "Bash", "sub": "다시 실행", "logo": "icon:Bash", "badge": 3 }
-      ],
+      "illustration": "/illustrations/s7-edit-loop.svg",
       "notes": [
         { "n": 1, "head": "Read 로 확인", "body": "지금 코드에서 어떤 값이 어디에 적혀 있는지 먼저 읽어서 확인합니다." },
         { "n": 2, "head": "Edit 로 값 수정", "body": "바꾸고 싶은 제목이나 색상 값을 코드 안에서 직접 찾아 고칩니다." },
