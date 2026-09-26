@@ -28,66 +28,9 @@
     },
     {
       "id": "s5-hook-intro-02",
-      "template": "lifecycle",
+      "template": "illustration",
       "title": "훅 라이프사이클",
-      "start": [
-        {
-          "label": "SessionStart"
-        }
-      ],
-      "turnStart": [
-        {
-          "label": "UserPromptSubmit",
-          "highlight": true,
-          "badge": 1
-        }
-      ],
-      "loop": [
-        {
-          "label": "PreToolUse"
-        },
-        {
-          "label": "PermissionRequest"
-        },
-        {
-          "label": "[도구 실행]"
-        },
-        {
-          "label": "PostToolUse",
-          "highlight": true,
-          "badge": 2
-        }
-      ],
-      "turnEnd": [
-        {
-          "label": "Stop",
-          "highlight": true,
-          "badge": 3
-        }
-      ],
-      "end": [
-        {
-          "label": "SessionEnd"
-        }
-      ],
-      "side": [
-        {
-          "label": "Notification",
-          "muted": true
-        },
-        {
-          "label": "PreCompact",
-          "muted": true
-        },
-        {
-          "label": "SubagentStart",
-          "muted": true
-        },
-        {
-          "label": "SubagentStop",
-          "muted": true
-        }
-      ],
+      "illustration": "/illustrations/s5-hook-track.svg",
       "notes": [
         {
           "n": 1,

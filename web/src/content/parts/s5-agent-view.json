@@ -291,34 +291,9 @@
     },
     {
       "id": "s5-agent-view-06",
-      "template": "cards",
+      "template": "illustration",
       "title": "자주 안 쓰는 이유",
-      "cards": [
-        {
-          "label": "bypass 미적용",
-          "logo": "icon:Lock",
-          "tags": [
-            "bypass 모드 안 걸림"
-          ],
-          "badge": 1
-        },
-        {
-          "label": "분할 터미널",
-          "logo": "/logos/visualstudiocode.svg",
-          "tags": [
-            "VS Code 가 더 편함"
-          ],
-          "badge": 2
-        },
-        {
-          "label": "Enter 로 복귀",
-          "logo": "icon:Keyboard",
-          "tags": [
-            "Working 세션 선택 후"
-          ],
-          "badge": 3
-        }
-      ],
+      "illustration": "/illustrations/s5-agentview-friction.svg",
       "notes": [
         {
           "n": 1,

@@ -5,43 +5,9 @@
   "slides": [
     {
       "id": "s5-office-excel-01",
-      "template": "cards",
+      "template": "illustration",
       "title": "Office 3종 + Claude 추가 기능",
-      "cards": [
-        {
-          "label": "Excel",
-          "tags": [
-            "스프레드시트",
-            "표 계산"
-          ],
-          "logo": "/logos/excel.svg"
-        },
-        {
-          "label": "Word",
-          "tags": [
-            "문서",
-            "보고서"
-          ],
-          "logo": "/logos/word.svg"
-        },
-        {
-          "label": "PowerPoint",
-          "tags": [
-            "슬라이드",
-            "발표자료"
-          ],
-          "logo": "/logos/powerpoint.svg"
-        },
-        {
-          "label": "Claude 추가 기능",
-          "logo": "/logos/claude.svg",
-          "tags": [
-            "세 앱 공통 설치"
-          ],
-          "highlight": true,
-          "badge": 1
-        }
-      ],
+      "illustration": "/illustrations/s5-office-plugin.svg",
       "notes": [
         {
           "n": 1,
