@@ -425,7 +425,7 @@ function StackT({ s }: { s: StackSlide }) {
           <div className={cn("min-h-0", it.grow && "flex-1")}><ScreenView screen={it.screen} /></div>
           {i < s.items.length - 1 && (
             <svg viewBox="0 0 24 40" className="mx-auto my-2 h-10 w-6 shrink-0 text-slide-accent">
-              <path d="M12 2v32m-9-9 9 9 9-9" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M12 2v32m-9-9 9 9 9-9" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           )}
         </div>
@@ -434,9 +434,9 @@ function StackT({ s }: { s: StackSlide }) {
   )
   if (!s.frame) return body
   return (
-    <div className="relative h-full min-h-0 rounded-3xl border-2 border-slide-accent px-8 pt-10 pb-8">
-      <span className="absolute -top-5 left-8 rounded-full bg-slide-accent px-5 py-1.5 font-display text-[22px] font-bold text-white">{s.frame}</span>
-      {body}
+    <div className="flex h-full min-h-0 flex-col gap-5">
+      <div className="shrink-0 border-t-2 border-[#101113] pt-3 font-display text-[26px] font-semibold text-slide-accent">{s.frame}</div>
+      <div className="min-h-0 flex-1">{body}</div>
     </div>
   )
 }
