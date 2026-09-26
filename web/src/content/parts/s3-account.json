@@ -196,28 +196,9 @@
     },
     {
       "id": "s3-account-07",
-      "template": "cards",
+      "template": "illustration",
       "title": "5시간 창 · 주간 한도",
-      "cards": [
-        {
-          "label": "5시간 창",
-          "logo": "icon:Zap",
-          "tags": [
-            "사용 시작 → 창 열림",
-            "5시간 후 자동 초기화"
-          ],
-          "badge": 1
-        },
-        {
-          "label": "주간 한도",
-          "logo": "icon:Cpu",
-          "tags": [
-            "7일 합계 상한",
-            "5시간 창과는 별도"
-          ],
-          "badge": 2
-        }
-      ],
+      "illustration": "/illustrations/s3-limits.svg",
       "notes": [
         {
           "n": 1,

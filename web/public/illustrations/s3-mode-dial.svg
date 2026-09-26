@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- 3/19 Shift+Tab 모드 순환 (tools/illus/s3_mode_dial.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+<rect x="16" y="16" width="1760" height="808" rx="28" fill="#f7f8fa" stroke="#e5e5e5" stroke-width="2"/>
+<rect x="40" y="40" width="1230" height="776" rx="26" fill="#fff6f0"/>
+<rect x="1290" y="40" width="460" height="776" rx="26" fill="#eaf3fb"/>
+<circle cx="650.0" cy="180.0" r="60" fill="#fff" stroke="#1273c4" stroke-width="4" filter="url(#shs)"/>
+<rect x="630.0" y="172.0" width="40" height="32" rx="6" fill="#1273c4"/><path d="M637.0 172.0v-13a13 13 0 0 1 26 0v13" fill="none" stroke="#1273c4" stroke-width="7"/>
+<text x="650.0" y="100.0" font-size="28" font-weight="900" fill="#101113" text-anchor="middle">manual mode</text>
+<text x="650.0" y="74.0" font-size="19" font-weight="600" fill="#5b6570" text-anchor="middle">편집 전 확인</text>
+<circle cx="762.0" cy="136.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="762.0" y="146.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<circle cx="940.0" cy="320.0" r="60" fill="#fff" stroke="#1273c4" stroke-width="4" filter="url(#shs)"/>
+<path d="M920.0 334.0l4 -22l32 -32l17 17l-32 32z" fill="#1273c4"/><path d="M941.0 280.0l17 17" stroke="#fff" stroke-width="5"/>
+<text x="1020.0" y="314.0" font-size="28" font-weight="900" fill="#101113" text-anchor="start">accept edits</text>
+<text x="1020.0" y="342.0" font-size="19" font-weight="600" fill="#5b6570" text-anchor="start">명령만 확인</text>
+<circle cx="650.0" cy="460.0" r="60" fill="#fff" stroke="#1273c4" stroke-width="4" filter="url(#shs)"/>
+<path d="M627.0 440.0h19a8 8 0 0 1 8 8v27h-27z" fill="#1273c4"/><path d="M673.0 440.0h-19a8 8 0 0 0 -8 8v27h27z" fill="#0d5c9e"/>
+<text x="650.0" y="558.0" font-size="28" font-weight="900" fill="#101113" text-anchor="middle">plan mode</text>
+<text x="650.0" y="586.0" font-size="19" font-weight="600" fill="#5b6570" text-anchor="middle">조사만, 편집 차단</text>
+<circle cx="360.0" cy="320.0" r="60" fill="#fff" stroke="#1273c4" stroke-width="4" filter="url(#shs)"/>
+<rect x="339.0" y="302.0" width="42" height="30" rx="8" fill="#1273c4"/><circle cx="352.0" cy="317.0" r="4.5" fill="#fff"/><circle cx="368.0" cy="317.0" r="4.5" fill="#fff"/><line x1="360.0" y1="302.0" x2="360.0" y2="293.0" stroke="#1273c4" stroke-width="4.5"/>
+<text x="276.0" y="314.0" font-size="28" font-weight="900" fill="#101113" text-anchor="end">auto mode</text>
+<text x="276.0" y="342.0" font-size="19" font-weight="600" fill="#5b6570" text-anchor="end">클로드 판단</text>
+<path d="M696 202Q966 167 894 298" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M696 202Q966 167 894 298" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M888.8 307.5L886.4 271.9L920.1 290.4Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<path d="M894 342Q966 473 696 438" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M894 342Q966 473 696 438" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M685.3 436.6L717.5 421.4L712.6 459.5Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<path d="M604 438Q334 473 406 342" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M604 438Q334 473 406 342" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M411.2 332.5L413.6 368.1L379.9 349.6Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<path d="M406 298Q334 167 604 202" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M406 298Q334 167 604 202" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M614.7 203.4L582.5 218.6L587.4 180.5Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<path transform="translate(566.0 609.9) scale(0.7)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="440" y="710" width="420" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="456" y="734" width="388" height="75" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<rect x="475" y="746.5" width="170" height="50" rx="10" fill="#fff" stroke="#aeb3ba" stroke-width="2"/>
+<text x="560" y="780.5" font-size="26" font-weight="900" fill="#101113" text-anchor="middle">Claude</text>
+<rect x="675" y="746.5" width="150" height="50" rx="10" fill="#fff" stroke="#1273c4" stroke-width="4"/>
+<text x="750" y="767.5" font-size="16" font-weight="900" fill="#1273c4" text-anchor="middle">Shift</text>
+<text x="750" y="789.5" font-size="16" font-weight="900" fill="#1273c4" text-anchor="middle">+ Tab</text>
+<text x="1520.0" y="108" font-size="38" font-weight="900" fill="#101113" text-anchor="middle">bypass 모드</text>
+<text x="1520.0" y="146" font-size="23" font-weight="700" fill="#5b6570" text-anchor="middle">이 순환 밖의 별도 옵션</text>
+<rect x="1420.0" y="366" width="200" height="108" rx="54" fill="#d64545"/>
+<circle cx="1566.0" cy="420" r="46" fill="#fff" filter="url(#shs)"/>
+<text x="1520.0" y="538" font-size="27" font-weight="800" fill="#101113" text-anchor="middle">실행 옵션으로 켠다</text>
+<circle cx="1374.0" cy="420" r="28" fill="#fff" stroke="#1273c4" stroke-width="5"/><text x="1374.0" y="430.6" font-size="29" font-weight="800" fill="#1273c4" text-anchor="middle">!</text>
+</svg>

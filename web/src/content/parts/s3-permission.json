@@ -5,32 +5,9 @@
   "slides": [
     {
       "id": "s3-permission-01",
-      "template": "flow",
+      "template": "illustration",
       "title": "Shift+Tab 모드 순환",
-      "loop": true,
-      "steps": [
-        {
-          "label": "manual mode",
-          "sub": "편집 전 확인",
-          "logo": "icon:Lock",
-          "badge": 1
-        },
-        {
-          "label": "accept edits",
-          "sub": "편집 자동, 명령만 확인",
-          "logo": "icon:Edit"
-        },
-        {
-          "label": "plan mode",
-          "sub": "조사만, 편집 차단",
-          "logo": "icon:Book"
-        },
-        {
-          "label": "auto mode",
-          "sub": "클로드 판단",
-          "logo": "icon:Bot"
-        }
-      ],
+      "illustration": "/illustrations/s3-mode-dial.svg",
       "notes": [
         {
           "n": 1,

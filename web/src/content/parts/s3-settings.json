@@ -57,43 +57,9 @@
     },
     {
       "id": "s3-settings-02",
-      "template": "cards",
+      "template": "illustration",
       "title": "주요 설정 항목",
-      "cards": [
-        {
-          "label": "permissions",
-          "logo": "icon:Shield",
-          "tags": [
-            "allow / deny / ask",
-            "\"deny\": [\"Bash(rm:*)\"]"
-          ],
-          "highlight": true
-        },
-        {
-          "label": "model",
-          "logo": "icon:Cpu",
-          "tags": [
-            "세션 기본 모델",
-            "\"model\": \"claude-sonnet-5\""
-          ]
-        },
-        {
-          "label": "env",
-          "logo": "icon:Settings",
-          "tags": [
-            "환경변수 전달",
-            "\"env\": { \"MY_VAR\": \"value\" }"
-          ]
-        },
-        {
-          "label": "hooks",
-          "logo": "icon:Zap",
-          "tags": [
-            "도구 전후 실행",
-            "\"hooks\": { \"PreToolUse\": [...] }"
-          ]
-        }
-      ],
+      "illustration": "/illustrations/s3-settings-panel.svg",
       "notes": [
         {
           "n": 1,

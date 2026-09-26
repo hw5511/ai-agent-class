@@ -640,29 +640,9 @@
     },
     {
       "id": "s4-background-22",
-      "template": "flow",
+      "template": "illustration",
       "title": "사용량 감지 알림 원리",
-      "steps": [
-        {
-          "label": "/usage 사용량",
-          "sub": "5시간 · 주간 한도 %",
-          "badge": 1
-        },
-        {
-          "label": "파일에 기록",
-          "sub": "상태줄 스크립트"
-        },
-        {
-          "label": "monitor 감지",
-          "sub": "90% 넘는 순간",
-          "badge": 2
-        },
-        {
-          "label": "Claude 알림",
-          "sub": "⚠️ 한도 도달",
-          "badge": 3
-        }
-      ],
+      "illustration": "/illustrations/s4-usage-watch.svg",
       "notes": [
         {
           "n": 1,

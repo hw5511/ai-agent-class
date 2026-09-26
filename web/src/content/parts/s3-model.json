@@ -70,41 +70,9 @@
     },
     {
       "id": "s3-model-02",
-      "template": "cards",
+      "template": "illustration",
       "title": "haiku → sonnet → opus → fable",
-      "cards": [
-        {
-          "label": "Haiku",
-          "logo": "icon:Feather",
-          "tags": [
-            "빠르고 저렴",
-            "사용량 덜 쓴다"
-          ]
-        },
-        {
-          "label": "Sonnet",
-          "logo": "icon:Music",
-          "tags": [
-            "빠름 ↔ 똑똑함 사이"
-          ]
-        },
-        {
-          "label": "Opus",
-          "logo": "icon:Crown",
-          "tags": [
-            "똑똑함 ↔ 빠름 사이"
-          ]
-        },
-        {
-          "label": "Fable",
-          "logo": "icon:Sparkles",
-          "tags": [
-            "더 똑똑함",
-            "사용량 더 쓴다"
-          ],
-          "highlight": true
-        }
-      ],
+      "illustration": "/illustrations/s3-model-lineup.svg",
       "notes": [
         {
           "n": 1,
