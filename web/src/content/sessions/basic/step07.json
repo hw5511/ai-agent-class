@@ -20,7 +20,6 @@
     "s7-cli",
     "s7-cardnews",
     "s7-img2pdf",
-    "s7-plugin",
-    "s7-wrap"
+    "s7-plugin"
   ]
 }

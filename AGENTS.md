@@ -17,6 +17,8 @@ AI 에이전트 강의 수업자료.
 | 새 슬라이드 (CEO 검수 완료: basic 1~4회차) | `web/src/content/sessions/<course>/stepNN.json` + `web/src/content/parts/<part-id>.json` | 템플릿 + 목업 화면 + 설명(notes) + 액션박스. 회차 파일은 파트 id 목록만 갖는다 |
 | 기존 슬라이드 (basic 5~8회차, advanced 전체) | `courses/<course>/stepNN.json` + `assets/...` 이미지 | 옛 덱을 그대로 이미지 슬라이드로 보여주고 액션박스를 붙인다. 같은 회차에 새 세션 파일이 생기면 그쪽이 대체한다 |
 
+**회차 구성 규칙 (CEO, 반복 지시):** 어느 회차에도 `정리` · `마무리` 파트를 넣지 않는다. `check-content.mjs` 가 막는다.
+
 **새 슬라이드를 고칠 때:**
 1. 규칙 = `web/CONTENT_RULES.md` (시각요소만 슬라이드에 · 설명은 키워드로 notes 에 · 번호 배지 = notes 번호).
 2. `node web/scripts/check-content.mjs` 가 0 errors 여야 한다 (배지↔설명 짝 · 문장형 제목 · AI 말투 검사).

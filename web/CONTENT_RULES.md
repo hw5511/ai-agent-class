@@ -9,6 +9,10 @@ is the content. Writing a lesson means writing JSON; no page code changes per le
 course -> session (goal, practice) -> part (table of contents) -> slide -> action box
 ```
 
+## No wrap-up part (owner rule, repeated 2026-09-26)
+
+No session has a 정리 / 마무리 (summary, wrap-up) part. `scripts/check-content.mjs` fails a session that lists one.
+
 ## The one rule for slides (CEO 2026-09-21)
 
 **The slide area is visuals only. Explanations go to the right panel.**

@@ -93,6 +93,20 @@ function checkScreen(where, s) {
   if (s.kind === "vscode" && (!s.folder || !Array.isArray(s.files))) err(where, "vscode needs folder + files[]")
 }
 
+// Owner rule (2026-09-26, repeated): no 정리 / 마무리 (wrap-up) part in any session. A session may not list one.
+const sessionsDir = join(root, "src", "content", "sessions")
+for (const course of readdirSync(sessionsDir)) {
+  for (const sf of readdirSync(join(sessionsDir, course)).filter((f) => f.endsWith(".json"))) {
+    const sess = JSON.parse(readFileSync(join(sessionsDir, course, sf), "utf8"))
+    for (const pid of sess.parts ?? []) {
+      const id = typeof pid === "string" ? pid : pid.id
+      const pf = join(partsDir, `${id}.json`)
+      const title = typeof pid === "string" ? (existsSync(pf) ? JSON.parse(readFileSync(pf, "utf8")).title : "") : pid.title
+      if (/^(정리|마무리)/.test(title ?? "")) err(`${course}/${sf}`, `part "${title}" is a wrap-up part; the owner rule is no 정리 part in any step`)
+    }
+  }
+}
+
 const files = readdirSync(partsDir).filter((f) => f.endsWith(".json"))
 for (const f of files) {
   let part
