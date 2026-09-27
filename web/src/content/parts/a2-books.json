@@ -1,0 +1,387 @@
+{
+  "id": "a2-books",
+  "title": "Playwright MCP 실습 · 책 사이트 탐색",
+  "summary": "Playwright MCP 로 실제 서점 연습 사이트(books.toscrape.com)에 접속해 카테고리를 찾아 들어가고, 크롤링·스크래핑의 뜻과 유의사항을 익힌다.",
+  "slides": [
+    {
+      "id": "a2-books-01",
+      "template": "compare",
+      "title": "books.toscrape.com 접속",
+      "left": {
+        "label": "크롬 · books.toscrape.com",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a2/a2-books-01-home.png"
+        }
+      },
+      "right": {
+        "label": "클로드 터미널",
+        "screen": {
+          "kind": "vscode",
+          "folder": "work2",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+            "turns": [
+              {
+                "role": "user",
+                "text": "https://books.toscrape.com/ 접속해줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "browser_navigate(https://books.toscrape.com/)"
+              },
+              {
+                "role": "assistant",
+                "text": "books.toscrape.com에 접속 완료했습니다. 페이지 제목은 \"All products | Books to Scrape - Sandbox\"입니다. 이 사이트에서 특정 작업(예: 특정 책 검색, 데이터 추출, 스크린샷)이 필요하면 말씀해주세요.",
+                "badge": 2
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "사이트 접속 요청",
+          "body": "books.toscrape.com 주소를 그대로 주고 접속해 달라고 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "접속 완료 답변",
+          "body": "클로드가 접속을 마치고 페이지 제목까지 확인해서 알려줍니다."
+        },
+        {
+          "n": "!",
+          "head": "새 크롬 확인",
+          "body": "클로드가 playwright mcp 를 사용하면 새 크롬이 실행되니 작업표시줄에 새롭게 실행된 크롬이 있는지 확인해주세요."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "https://books.toscrape.com/ 접속해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2-books-02",
+      "template": "illustration",
+      "title": "크롤링과 스크래핑",
+      "illustration": "/illustrations/a2-books-crawl.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "크롤링 = 페이지 이동 수집",
+          "body": "링크를 따라 페이지에서 페이지로 이동하면서 여러 페이지를 통째로 모아옵니다."
+        },
+        {
+          "n": 2,
+          "head": "스크래핑 = 특정 데이터 추출",
+          "body": "한 페이지 안에서 책 제목, 가격처럼 필요한 데이터만 뽑아냅니다."
+        },
+        {
+          "n": 3,
+          "head": "이번 실습은 두 방식 함께",
+          "body": "판타지 카테고리와 페이지를 옮겨 다니는 크롤링과, 마지막 책의 정보를 뽑아내는 스크래핑을 함께 사용합니다."
+        }
+      ]
+    },
+    {
+      "id": "a2-books-03",
+      "template": "illustration",
+      "title": "스크래핑 유의사항",
+      "illustration": "/illustrations/a2-books-caution.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "접근 권한 없는 정보",
+          "body": "권한 없는 사이트 정보를 가져오면 사실상 해킹으로 취급됩니다."
+        },
+        {
+          "n": 2,
+          "head": "서버 부하",
+          "body": "수강신청·티켓팅처럼 요청이 몰리면 서버가 먹통이 되고, 손해배상·복구비용 책임까지 질 수 있습니다."
+        },
+        {
+          "n": 3,
+          "head": "저작권",
+          "body": "서평·블로그 글도 창작물이라 저작권이 있어, 잡코리아·사람인 크롤링 소송처럼 무단 수집은 법적 책임으로 이어질 수 있습니다."
+        },
+        {
+          "n": "!",
+          "head": "연습용 사이트라 안심",
+          "body": "크롤링·스크래핑 자체는 불법이 아니고, 지금 쓰는 books.toscrape.com은 스크래핑 연습용이라 안심하고 사용할 수 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "a2-books-04",
+      "template": "screen",
+      "title": "판타지 카테고리 분석 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "work2",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+          "turns": [
+            {
+              "role": "user",
+              "text": "현재 사이트에서 판타지 카테고리를 찾아서 들어가고, 책목록에서 마지막 페이지로 가서, 마지막 책을 찾아서 그 책의 상세페이지 구조를 분석해서 내용을 설명해줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "ToolSearch(browser_snapshot, browser_click 스키마 조회)"
+            },
+            {
+              "role": "tool",
+              "text": "browser_snapshot()"
+            },
+            {
+              "role": "tool",
+              "text": "browser_click(Fantasy category link)"
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "복합 작업 프롬프트",
+          "body": "카테고리 찾기부터 마지막 페이지 이동, 마지막 책 상세 구조 분석까지 한 번에 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "도구 스키마부터 조회",
+          "body": "ToolSearch 로 browser_snapshot, browser_click 같은 필요한 도구부터 불러옵니다."
+        },
+        {
+          "n": 3,
+          "head": "화면 구조 먼저 확인",
+          "body": "browser_snapshot 으로 현재 화면 구조를 확인한 뒤 Fantasy 링크를 클릭합니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "현재 사이트에서 판타지 카테고리를 찾아서 들어가고, 책목록에서 마지막 페이지로 가서, 마지막 책을 찾아서 그 책의 상세페이지 구조를 분석해서 내용을 설명해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2-books-05",
+      "template": "compare",
+      "title": "판타지 카테고리 접속",
+      "left": {
+        "label": "크롬 · Fantasy 카테고리",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a2/a2-books-05-fantasy.png"
+        }
+      },
+      "right": {
+        "label": "클로드 터미널",
+        "screen": {
+          "kind": "vscode",
+          "folder": "work2",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+            "turns": [
+              {
+                "role": "tool",
+                "text": "browser_click(target=e55, Fantasy category link)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_snapshot()"
+              },
+              {
+                "role": "assistant",
+                "text": "Fantasy 카테고리 링크(ref=e55)를 찾았습니다. 클릭해서 이동하겠습니다.",
+                "badge": 2
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "ref 로 재시도 클릭",
+          "body": "텍스트만으로 못 찾아 ref=e55 값으로 다시 클릭해 Fantasy 카테고리로 이동합니다."
+        },
+        {
+          "n": 2,
+          "head": "3페이지 · 48권 확인",
+          "body": "Fantasy 카테고리는 총 48권, 3페이지라는 걸 스냅샷으로 확인합니다."
+        }
+      ]
+    },
+    {
+      "id": "a2-books-06",
+      "template": "compare",
+      "title": "책 목록 마지막 페이지",
+      "left": {
+        "label": "크롬 · page-3.html",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a2/a2-books-06-lastpage.png"
+        }
+      },
+      "right": {
+        "label": "클로드 터미널",
+        "screen": {
+          "kind": "vscode",
+          "folder": "work2",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+            "turns": [
+              {
+                "role": "tool",
+                "text": "browser_navigate(.../fantasy_19/page-3.html)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_snapshot()"
+              },
+              {
+                "role": "assistant",
+                "text": "마지막 책은 \"Myriad (Prentor #1)\"입니다. 상세 페이지로 이동하겠습니다.",
+                "badge": 2
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "마지막 페이지로 바로 이동",
+          "body": "3페이지가 마지막인 걸 확인하고 page-3.html 주소로 바로 이동합니다."
+        },
+        {
+          "n": 2,
+          "head": "마지막 책 확인",
+          "body": "41번째부터 48번째까지 나열된 책 중 마지막 책 Myriad (Prentor #1)을 찾아냅니다."
+        }
+      ]
+    },
+    {
+      "id": "a2-books-07",
+      "template": "compare",
+      "title": "Myriad (Prentor #1) 상세 페이지",
+      "left": {
+        "label": "크롬 · 책 상세 페이지",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a2/a2-books-07-detail.png"
+        }
+      },
+      "right": {
+        "label": "클로드 터미널",
+        "screen": {
+          "kind": "vscode",
+          "folder": "work2",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+            "turns": [
+              {
+                "role": "tool",
+                "text": "browser_click(Myriad (Prentor #1) book link)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_snapshot()"
+              },
+              {
+                "role": "tool",
+                "text": "browser_evaluate(rating, breadcrumb, title 확인)"
+              },
+              {
+                "role": "assistant",
+                "text": "별점은 4점(Four)으로 확인됐습니다. 이제 전체 구조와 내용을 정리해서 설명드리겠습니다.",
+                "badge": 2
+              }
+            ],
+            "fit": true
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "상세 페이지 구조부터 확인",
+          "body": "표지, 가격, 재고, 별점, 설명, 정보 표까지 상세 페이지 구조를 스냅샷으로 확인합니다."
+        },
+        {
+          "n": 2,
+          "head": "별점 값 코드로 재확인",
+          "body": "browser_evaluate 로 DOM에서 star-rating 클래스를 직접 조회해 별점이 4점(Four)임을 확정합니다."
+        }
+      ]
+    },
+    {
+      "id": "a2-books-08",
+      "template": "screen",
+      "title": "책 내용 설명",
+      "screen": {
+        "kind": "vscode",
+        "folder": "work2",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "## 분석 대상\n**Fantasy 카테고리 (총 48권, 3페이지)의 마지막 페이지 → 마지막 책: \"Myriad (Prentor #1)\"**\nURL: `https://books.toscrape.com/catalogue/myriad-prentor-1_36/index.html`\n\n**1. Breadcrumb (탐색 경로)**\nHome / Books / Fantasy / Myriad (Prentor #1)\n\n**2. 상품 헤더 영역 (`<article class=\"product_page\">`)**\n- 가격: **£58.75**\n- 재고 상태: `In stock (1 available)` — 재고 수량까지 명시\n- 별점: `<p class=\"star-rating Four\">` → 클래스명에 등급(Four)이 워딩으로 박혀 있는 독특한 방식 (숫자가 아니라 One~Five 단어), 사이트 안내대로 실제로는 무작위 값\n\n**3. Product Description**\n- 내용: 주인공 Kalin(warlock)이 자신의 능력을 부정당하며 살다가 18세에 집을 떠나고, 왕실을 위협하는 다크 워락을 막을 특별한 힘을 가졌다는 사실을 알게 되는 판타지 노벨라(약 27,000단어 분량)\n\n**4. Product Information (표)**\n| UPC | 63e20a0f98218a87 |\n| Availability | In stock (1 available) |\n\n**스크래핑 관점 요약**: 이 상세 페이지는 books.toscrape.com의 표준 템플릿을 그대로 따르며, `UPC`가 각 책의 고유 식별자이고 `star-rating` 클래스의 단어(One~Five)를 파싱해 별점 숫자로 변환하는 것이 이 사이트 스크래핑 연습의 전형적인 포인트입니다.",
+              "badge": 1
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "구조부터 설명",
+          "body": "탐색 경로, 상품 헤더, 설명, 정보 표 순서로 페이지 구조를 짚어줍니다."
+        },
+        {
+          "n": 2,
+          "head": "책 줄거리까지 요약",
+          "body": "주인공 Kalin 의 이야기와 27,000단어 분량이라는 점까지 상세 설명에 포함됩니다."
+        },
+        {
+          "n": 3,
+          "head": "스크래핑 포인트로 마무리",
+          "body": "UPC 와 star-rating 단어 표기를 이 사이트 스크래핑 실습의 핵심 포인트로 짚으며 답을 정리합니다."
+        }
+      ]
+    }
+  ]
+}
