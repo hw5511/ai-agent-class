@@ -27,12 +27,12 @@
       "title": "skill-creator 로 book-search 만들기",
       "screen": {
         "kind": "vscode",
-        "folder": "work2",
+        "folder": "work3",
         "files": [],
         "noSidebar": true,
         "terminal": {
           "vendor": "claude",
-          "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
           "turns": [
             {
               "role": "user",
@@ -41,56 +41,48 @@
             },
             {
               "role": "tool",
-              "text": "Bash(실제 사이트 HTML 다운로드해 셀렉터 확인)"
+              "text": "Bash(node/python/playwright 설치 확인)"
             },
             {
               "role": "tool",
-              "text": "Write(cli.mjs)"
+              "text": "AskUserQuestion(구현 언어 · CLI 설계 · 검증 방식)"
             },
             {
               "role": "tool",
-              "text": "Bash(npm install)"
+              "text": "Write(scripts/book_search.py)"
             },
             {
               "role": "tool",
-              "text": "Bash(node cli.mjs categories)"
+              "text": "Bash(categories/list/detail 실행 테스트)"
+            },
+            {
+              "role": "tool",
+              "text": "Write(SKILL.md)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(잘못된 카테고리·페이지 범위 에러 확인)"
             },
             {
               "role": "assistant",
-              "text": "book-search 스킬은 다음 경로에 생성 완료했습니다.",
+              "text": ".claude/skills/book-search/ 에 스킬을 만들고 세 명령(categories, list, detail)을 실제 사이트에 대해 직접 실행해 모두 검증했습니다.",
               "badge": 2
             },
             {
               "role": "assistant",
-              "text": ".claude/skills/book-search/"
+              "text": "Fantasy 카테고리 마지막 페이지→마지막 책 조회 결과가 이전 대화의 수동 탐색 결과와 정확히 일치했고, 잘못된 카테고리명/범위 밖 페이지 번호에 대한 에러 메시지도 확인했습니다."
             },
             {
               "role": "assistant",
-              "text": "  SKILL.md       # 스킬 설명 및 사용법"
+              "text": "python scripts/book_search.py categories [--json]"
             },
             {
               "role": "assistant",
-              "text": "  cli.mjs        # 실제 CLI 로직"
+              "text": "python scripts/book_search.py list <category> [--page N|last] [--json]"
             },
             {
               "role": "assistant",
-              "text": "구현된 3개 명령"
-            },
-            {
-              "role": "assistant",
-              "text": "- node cli.mjs categories — 전체 카테고리 목록(이름+URL)"
-            },
-            {
-              "role": "assistant",
-              "text": "- node cli.mjs list \"<category-url>\" [--page N] — 카테고리별 책 목록(페이지네이션 지원)"
-            },
-            {
-              "role": "assistant",
-              "text": "- node cli.mjs detail \"<book-url>\" — 책 상세정보(가격/재고/별점/설명/상품정보 표/브레드크럼)"
-            },
-            {
-              "role": "assistant",
-              "text": "categories 명령: 실제 실행 성공 — 실 사이트에서 Travel, Mystery, Historical Fiction... 등 정상 파싱 확인"
+              "text": "python scripts/book_search.py detail <book> [--json]"
             }
           ],
           "fit": true
@@ -104,8 +96,8 @@
         },
         {
           "n": 2,
-          "head": "3개 명령 생성, categories 실행 검증",
-          "body": "SKILL.md·package.json·cli.mjs 세 파일을 만들고, categories 명령을 실제 사이트에 실행해 확인합니다."
+          "head": "명령 3개 생성, 실제 실행으로 검증",
+          "body": "SKILL.md와 scripts/book_search.py 를 만들고, categories·list·detail 세 명령과 잘못된 입력의 에러 처리까지 실제 사이트에 실행해 확인합니다."
         }
       ],
       "action": {
@@ -121,10 +113,65 @@
     {
       "id": "a2-booksearch-03",
       "template": "screen",
+      "title": "3단계 확인 질문에 추천 옵션 선택",
+      "screen": {
+        "kind": "vscode",
+        "folder": "work3",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "환경 확인 결과 Python 3.13 + playwright 1.48.0가 이미 설치되어 있네요. 몇 가지만 확정하고 바로 만들겠습니다.",
+              "badge": 1
+            }
+          ],
+          "picker": {
+            "title": "CLI 구현 언어는 무엇으로 할까요?",
+            "items": [
+              {
+                "name": "Python + playwright (Recommended)",
+                "meta": "이미 설치되어 있어 바로 사용 가능. requests 없이 실제 브라우저 렌더링 기반으로 동작.",
+                "selected": true,
+                "badge": 2
+              },
+              {
+                "name": "Node.js + playwright",
+                "meta": "node는 있지만 playwright 패키지 설치와 브라우저 다운로드가 추가로 필요."
+              }
+            ]
+          },
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "환경 확인 후 질문 3단계 시작",
+          "body": "Python·playwright 가 이미 설치된 것을 확인하고, 구현 언어부터 확정하기 위해 첫 질문을 띄웁니다."
+        },
+        {
+          "n": 2,
+          "head": "추천 옵션 Enter 로 선택",
+          "body": "Python + playwright 가 Recommended 로 미리 강조돼 있어 Enter 키만 누르면 그대로 선택됩니다."
+        },
+        {
+          "n": "!",
+          "head": "CLI 설계·검증 방식도 같은 방식",
+          "body": "이어지는 CLI 명령 구조 질문과 검증 방식 질문도 똑같이 Recommended 옵션(서브커맨드 3개 + JSON 출력 / 빠른 빌드 + 직접 실행 검증)을 골라 세 질문을 모두 제출합니다."
+        }
+      ]
+    },
+    {
+      "id": "a2-booksearch-04",
+      "template": "screen",
       "title": "완성된 book-search 스킬 폴더",
       "screen": {
         "kind": "vscode",
-        "folder": "work2",
+        "folder": "work3",
         "sidebar": "explorer",
         "files": [
           {
@@ -149,36 +196,32 @@
             "active": true
           },
           {
-            "name": "cli.mjs",
-            "depth": 3,
-            "badge": 2
-          },
-          {
-            "name": "package.json",
-            "depth": 3
-          },
-          {
-            "name": "node_modules",
+            "name": "scripts",
             "folder": true,
             "depth": 3
+          },
+          {
+            "name": "book_search.py",
+            "depth": 4,
+            "badge": 2
           }
         ],
         "editor": {
           "file": "SKILL.md",
           "lines": [
             "### 1. List categories",
-            "node cli.mjs categories",
-            "### 2. List books in a category (paged)",
-            "node cli.mjs list \"<category-url>\" [--page N]",
-            "### 3. Get a book's detail page",
-            "node cli.mjs detail \"<book-url>\""
+            "python scripts/book_search.py categories [--json]",
+            "### 2. List books in a category",
+            "python scripts/book_search.py list <category> [--page N|last] [--json]",
+            "### 3. Fetch a book's detail page",
+            "python scripts/book_search.py detail <book> [--json]"
           ],
           "badge": 3
         },
         "noTerminal": true,
         "terminal": {
           "vendor": "shell",
-          "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
           "turns": []
         }
       },
@@ -190,8 +233,8 @@
         },
         {
           "n": 2,
-          "head": "cli.mjs · Playwright 로직",
-          "body": "Playwright 로 헤드리스 크롬을 띄워 사이트를 읽는 실제 코드가 이 한 파일에 들어 있습니다."
+          "head": "book_search.py · Playwright 로직",
+          "body": "Python + Playwright 로 헤드리스 크롬을 띄워 사이트를 읽는 실제 코드가 scripts 폴더 안 이 한 파일에 들어 있습니다."
         },
         {
           "n": 3,
@@ -201,17 +244,17 @@
       ]
     },
     {
-      "id": "a2-booksearch-04",
+      "id": "a2-booksearch-05",
       "template": "screen",
       "title": "/book-search 로 3번째 책 찾기",
       "screen": {
         "kind": "vscode",
-        "folder": "work2",
+        "folder": "work3",
         "files": [],
         "noSidebar": true,
         "terminal": {
           "vendor": "claude",
-          "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
           "turns": [
             {
               "role": "user",
@@ -220,31 +263,42 @@
             },
             {
               "role": "tool",
-              "text": "Bash(node cli.mjs categories)",
+              "text": "Bash(python scripts/book_search.py list Fiction --page 3 --json)",
               "badge": 2
             },
             {
               "role": "tool",
-              "text": "Bash(node cli.mjs list \".../fiction_10/index.html\" --page 3)",
-              "badge": 2
-            },
-            {
-              "role": "tool",
-              "text": "Bash(node cli.mjs detail \".../the-firm_404/index.html\")",
+              "text": "Bash(python scripts/book_search.py detail the-firm_404 --json)",
               "badge": 2
             },
             {
               "role": "assistant",
-              "text": "3번째 책은 \"The Firm\"입니다.",
+              "text": "Fiction 카테고리 3페이지 3번째 책: The Firm",
               "badge": 3
             },
             {
               "role": "assistant",
-              "text": "가격: £45.56 / 재고: 5권 (In stock) / 평점: 3/5 (Three)."
+              "text": "가격: £45.56 (세금 포함/제외 동일, 세금 £0.00)"
             },
             {
               "role": "assistant",
-              "text": "줄거리: 미치 맥디어(Mitch McDeere)는 멤피스의 로펌 Bendini, Lambert & Locke에 채용되면서 아내 애비(Abby)와 함께 성공가도에 들어섰다고 생각한다. 하지만 결국 FBI가 이 로펌의 비밀을 캐내고 미치의 도움을 요구하면서, 그는 살아남기 위해 진퇴양난의 상황에 놓이게 된다."
+              "text": "재고: In stock (5 available)"
+            },
+            {
+              "role": "assistant",
+              "text": "평점: 3/5"
+            },
+            {
+              "role": "assistant",
+              "text": "젊은 변호사 미치 맥디어(Mitch McDeere)는 멤피스의 로펌 벤디니, 램버트 & 로크(Bendini, Lambert & Locke)에 스카우트되면서 아내 애비(Abby)와 함께 성공한 인생을 살게 될 거라 생각한다."
+            },
+            {
+              "role": "assistant",
+              "text": "하지만 FBI가 그의 로펌에 대한 비리 정보를 쥐고 그의 협조를 요구하면서, 미치는 살아남기 위해 선택의 여지가 없는 진퇴양난 상황에 놓이게 된다."
+            },
+            {
+              "role": "assistant",
+              "text": "법률 스릴러 장르로, 존 그리샴(John Grisham)의 대표작입니다."
             }
           ],
           "fit": true
@@ -258,8 +312,8 @@
         },
         {
           "n": 2,
-          "head": "categories → list → detail 3번 호출",
-          "body": "브라우저를 조작하는 대신 cli.mjs 를 세 번 호출해 카테고리, 목록, 상세 정보를 순서대로 가져옵니다."
+          "head": "list → detail 2번 호출",
+          "body": "카테고리 이름을 이미 알고 있어 categories 호출 없이 list 로 3페이지를 받고, detail 로 상세 정보를 가져옵니다."
         },
         {
           "n": 3,
@@ -278,17 +332,17 @@
       }
     },
     {
-      "id": "a2-booksearch-05",
+      "id": "a2-booksearch-06",
       "template": "screen",
       "title": "이어서 사이언스카테고리 5번째 책",
       "screen": {
         "kind": "vscode",
-        "folder": "work2",
+        "folder": "work3",
         "files": [],
         "noSidebar": true,
         "terminal": {
           "vendor": "claude",
-          "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
           "turns": [
             {
               "role": "user",
@@ -297,21 +351,17 @@
             },
             {
               "role": "tool",
-              "text": "Bash(node cli.mjs list \".../science_22/index.html\" --page 1)",
+              "text": "Bash(python scripts/book_search.py list Science --json)",
               "badge": 2
             },
             {
               "role": "assistant",
-              "text": "5번째 책은 \"The Fabric of the Cosmos: Space, Time, and the Texture of Reality\"입니다.",
+              "text": "Science 카테고리 5번째 책은 \"The Fabric of the Cosmos: Space, Time, and the Texture of Reality\"(£55.91, 재고 있음, 평점 1/5)입니다.",
               "badge": 3
             },
             {
               "role": "assistant",
-              "text": "가격: £55.91 / 재고: In stock / 평점: 1/5 (One)."
-            },
-            {
-              "role": "assistant",
-              "text": "책 내용도 설명해드릴까요? (상세 페이지를 조회해서 줄거리를 가져올 수 있습니다.)"
+              "text": "네, 지금 상세 설명도 가져올까요? 필요하시면 말씀해주세요."
             }
           ]
         }
@@ -325,7 +375,7 @@
         {
           "n": 2,
           "head": "list 명령 1번으로 위치 확인",
-          "body": "categories 는 이미 알고 있어 list 명령 한 번만 호출해 5번째 책을 찾습니다."
+          "body": "카테고리 이름을 알고 있어 list 명령 한 번만 호출해 5번째 책을 찾습니다."
         },
         {
           "n": 3,
@@ -344,7 +394,7 @@
       }
     },
     {
-      "id": "a2-booksearch-06",
+      "id": "a2-booksearch-07",
       "template": "compare",
       "title": "Playwright MCP vs book-search 스킬",
       "left": {
@@ -417,7 +467,7 @@
           "kind": "terminal",
           "terminal": {
             "vendor": "claude",
-            "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
             "turns": [
               {
                 "role": "user",
@@ -425,15 +475,11 @@
               },
               {
                 "role": "tool",
-                "text": "node cli.mjs categories"
+                "text": "python scripts/book_search.py list Fiction --page 3 --json"
               },
               {
                 "role": "tool",
-                "text": "node cli.mjs list \".../fiction_10\" --page 3"
-              },
-              {
-                "role": "tool",
-                "text": "node cli.mjs detail \".../the-firm_404\"",
+                "text": "python scripts/book_search.py detail the-firm_404 --json",
                 "badge": 3
               },
               {
@@ -442,7 +488,7 @@
               },
               {
                 "role": "tool",
-                "text": "node cli.mjs list \".../science_22\" --page 1",
+                "text": "python scripts/book_search.py list Science --json",
                 "badge": 3
               }
             ],
@@ -463,8 +509,8 @@
         },
         {
           "n": 3,
-          "head": "스킬은 3번, 이어서 1번 호출",
-          "body": "첫 질문은 categories·list·detail 3번, 다음 질문은 카테고리를 이미 알아 list 한 번으로 끝납니다."
+          "head": "스킬은 2번, 이어서 1번 호출",
+          "body": "첫 질문은 list·detail 2번, 다음 질문은 카테고리를 이미 알아 list 한 번으로 끝납니다."
         },
         {
           "n": "!",
