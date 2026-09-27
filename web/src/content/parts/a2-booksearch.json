@@ -1,0 +1,432 @@
+{
+  "id": "a2-booksearch",
+  "title": "book-search 스킬 만들기",
+  "summary": "books.toscrape.com 을 반복해서 뒤지는 작업을 skill-creator 로 book-search CLI 스킬로 만들고, 같은 질문을 Playwright MCP 로 풀 때와 나란히 비교한다.",
+  "slides": [
+    {
+      "id": "a2-booksearch-01",
+      "template": "illustration",
+      "title": "반복 작업을 스킬로",
+      "illustration": "/illustrations/a2-booksearch-repeat.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "질문마다 클릭 세 번 반복",
+          "body": "카테고리를 찾고, 페이지를 옮기고, 책을 클릭하는 세 단계를 새 질문이 올 때마다 처음부터 다시 거칩니다."
+        },
+        {
+          "n": 2,
+          "head": "스킬 하나로 대체",
+          "body": "같은 작업을 CLI 스킬로 만들어두면 슬래시 명령 한 번이 categories·list·detail 호출로 이어져 바로 답이 나옵니다."
+        }
+      ]
+    },
+    {
+      "id": "a2-booksearch-02",
+      "template": "screen",
+      "title": "skill-creator 로 book-search 만들기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "work2",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/skill-creator 방금 작업한 방식을 토대로, playwright 라이브러리를 이용해서 이 사이트에 카테고리 목록 조회, 카테고리별 책 목록 페이지별 책 목록 조회, 어떤 책의 상세페이지 내용 조회, 하는 cli 스킬을 현재폴더의 .claude/skills 폴더에 book search 스킬로 만들어줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(실제 사이트 HTML 다운로드해 셀렉터 확인)"
+            },
+            {
+              "role": "tool",
+              "text": "Write(cli.mjs)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(npm install)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(node cli.mjs categories)"
+            },
+            {
+              "role": "assistant",
+              "text": "book-search 스킬은 다음 경로에 생성 완료했습니다.\n\n.claude/skills/book-search/\n  SKILL.md       # 스킬 설명 및 사용법\n  package.json   # playwright 의존성\n  cli.mjs        # 실제 CLI 로직\n\n구현된 3개 명령\n- node cli.mjs categories — 전체 카테고리 목록(이름+URL)\n- node cli.mjs list \"<category-url>\" [--page N] — 카테고리별 책 목록(페이지네이션 지원)\n- node cli.mjs detail \"<book-url>\" — 책 상세정보(가격/재고/별점/설명/상품정보 표/브레드크럼)\n\ncategories 명령: 실제 실행 성공 — 실 사이트에서 Travel, Mystery, Historical Fiction... 등 정상 파싱 확인",
+              "badge": 2
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "방금 작업 방식 그대로 스킬화 요청",
+          "body": "카테고리 조회, 페이지별 책 목록 조회, 책 상세 조회 세 기능을 book-search 라는 이름의 CLI 스킬로 만들어달라고 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "3개 명령 생성, categories 실행 검증",
+          "body": "SKILL.md·package.json·cli.mjs 세 파일을 만들고, categories 명령은 실제 사이트에 접속해 정상 동작까지 확인했습니다."
+        },
+        {
+          "n": "!",
+          "head": "실제 소요 시간 644.8초",
+          "body": "이 작업은 리허설에서 총 644.8초가 걸렸고, list·detail 명령은 다른 프로세스로 컴퓨터가 느려진 상태라 실행 검증이 지연됐습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/skill-creator 방금 작업한 방식을 토대로, playwright 라이브러리를 이용해서 이 사이트에 카테고리 목록 조회, 카테고리별 책 목록 페이지별 책 목록 조회, 어떤 책의 상세페이지 내용 조회, 하는 cli 스킬을 현재폴더의 .claude/skills 폴더에 book search 스킬로 만들어줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2-booksearch-03",
+      "template": "screen",
+      "title": "완성된 book-search 스킬 폴더",
+      "screen": {
+        "kind": "vscode",
+        "folder": "work2",
+        "sidebar": "explorer",
+        "files": [
+          {
+            "name": ".claude",
+            "folder": true
+          },
+          {
+            "name": "skills",
+            "folder": true,
+            "depth": 1
+          },
+          {
+            "name": "book-search",
+            "folder": true,
+            "depth": 2,
+            "active": true
+          },
+          {
+            "name": "SKILL.md",
+            "depth": 3,
+            "badge": 1,
+            "active": true
+          },
+          {
+            "name": "cli.mjs",
+            "depth": 3,
+            "badge": 2
+          },
+          {
+            "name": "package.json",
+            "depth": 3
+          },
+          {
+            "name": "node_modules",
+            "folder": true,
+            "depth": 3
+          }
+        ],
+        "editor": {
+          "file": "SKILL.md",
+          "lines": [
+            "### 1. List categories",
+            "node cli.mjs categories",
+            "### 2. List books in a category (paged)",
+            "node cli.mjs list \"<category-url>\" [--page N]",
+            "### 3. Get a book's detail page",
+            "node cli.mjs detail \"<book-url>\""
+          ],
+          "badge": 3
+        },
+        "noTerminal": true,
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+          "turns": []
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "SKILL.md · 스킬 설명",
+          "body": "이름과 설명, 사용법이 담긴 SKILL.md 가 스킬 폴더 맨 위에 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "cli.mjs · Playwright 로직",
+          "body": "Playwright 로 헤드리스 크롬을 띄워 사이트를 읽는 실제 코드가 이 한 파일에 들어 있습니다."
+        },
+        {
+          "n": 3,
+          "head": "categories · list · detail 3개 명령",
+          "body": "카테고리 조회, 페이지별 책 목록 조회, 책 상세 조회를 각각 명령 하나씩으로 호출합니다."
+        }
+      ]
+    },
+    {
+      "id": "a2-booksearch-04",
+      "template": "screen",
+      "title": "/book-search 로 3번째 책 찾기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "work2",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/book-search 픽션카테고리의 3페이지 3번째 책을 찾아서 책 내용 설명해줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(node cli.mjs categories)",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "Bash(node cli.mjs list \".../fiction_10/index.html\" --page 3)",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "Bash(node cli.mjs detail \".../the-firm_404/index.html\")",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "3번째 책은 \"The Firm\"입니다.\n\n가격: £45.56 / 재고: 5권 (In stock) / 평점: 3/5 (Three).\n\n줄거리: 미치 맥디어(Mitch McDeere)는 멤피스의 로펌 Bendini, Lambert & Locke에 채용되면서 아내 애비(Abby)와 함께 성공가도에 들어섰다고 생각한다. 하지만 결국 FBI가 이 로펌의 비밀을 캐내고 미치의 도움을 요구하면서, 그는 살아남기 위해 진퇴양난의 상황에 놓이게 된다.",
+              "badge": 3
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "스킬 이름으로 바로 호출",
+          "body": "픽션 카테고리 3페이지 3번째 책을 찾아 내용까지 설명해달라고 스킬 이름 하나로 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "categories → list → detail 3번 호출",
+          "body": "브라우저를 조작하는 대신 cli.mjs 를 세 번 호출해 카테고리, 목록, 상세 정보를 순서대로 가져옵니다."
+        },
+        {
+          "n": 3,
+          "head": "The Firm 답변 완료",
+          "body": "가격·재고·평점과 줄거리까지 담아 The Firm 이라는 책을 찾아 설명합니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/book-search 픽션카테고리의 3페이지 3번째 책을 찾아서 책 내용 설명해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2-booksearch-05",
+      "template": "screen",
+      "title": "이어서 사이언스카테고리 5번째 책",
+      "screen": {
+        "kind": "vscode",
+        "folder": "work2",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+          "turns": [
+            {
+              "role": "user",
+              "text": "이번엔 사이언스카테고리에서 5번째 책 찾아줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(node cli.mjs list \".../science_22/index.html\" --page 1)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "5번째 책은 \"The Fabric of the Cosmos: Space, Time, and the Texture of Reality\"입니다.\n\n가격: £55.91 / 재고: In stock / 평점: 1/5 (One).\n\n책 내용도 설명해드릴까요? (상세 페이지를 조회해서 줄거리를 가져올 수 있습니다.)",
+              "badge": 3
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "카테고리만 바꿔 다시 요청",
+          "body": "같은 세션에서 카테고리와 순번만 바꿔 다음 질문을 이어갑니다."
+        },
+        {
+          "n": 2,
+          "head": "list 명령 1번으로 위치 확인",
+          "body": "categories 는 이미 알고 있어 list 명령 한 번만 호출해 5번째 책을 찾습니다."
+        },
+        {
+          "n": 3,
+          "head": "내용 설명은 다시 물어봄",
+          "body": "이번 질문은 책을 찾아달라는 것만 물어서, detail 조회 없이 위치와 가격까지만 답하고 설명 여부를 되묻습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "이번엔 사이언스카테고리에서 5번째 책 찾아줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2-booksearch-06",
+      "template": "compare",
+      "title": "Playwright MCP vs book-search 스킬",
+      "left": {
+        "label": "Playwright MCP · 매번 클릭 반복",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+            "turns": [
+              {
+                "role": "user",
+                "text": "playwright mcp로 픽션카테고리의 3페이지 3번째 책을 찾아서 책 내용 설명해줘. 스킬은 쓰지 마.",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "ToolSearch(browser_navigate 스키마 조회)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_navigate(.../fiction_10/index.html)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_navigate(.../fiction_10/page-3.html)"
+              },
+              {
+                "role": "tool",
+                "text": "Read(page-3 스냅샷 yml)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_click(The Firm 책 링크)"
+              },
+              {
+                "role": "tool",
+                "text": "Read(상세페이지 스냅샷 yml)",
+                "badge": 2
+              },
+              {
+                "role": "user",
+                "text": "이번엔 playwright mcp로 사이언스카테고리에서 5번째 책 찾아줘. 스킬은 쓰지 마."
+              },
+              {
+                "role": "tool",
+                "text": "browser_navigate(.../science_22/index.html)"
+              },
+              {
+                "role": "tool",
+                "text": "Read(카테고리 스냅샷 yml)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_click(The Fabric of the Cosmos 책 링크)"
+              },
+              {
+                "role": "tool",
+                "text": "Read(상세페이지 스냅샷 yml)",
+                "badge": 2
+              }
+            ]
+          }
+        }
+      },
+      "right": {
+        "label": "book-search 스킬 · CLI 호출",
+        "screen": {
+          "kind": "terminal",
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+            "turns": [
+              {
+                "role": "user",
+                "text": "/book-search 픽션카테고리의 3페이지 3번째 책을 찾아서 책 내용 설명해줘"
+              },
+              {
+                "role": "tool",
+                "text": "node cli.mjs categories"
+              },
+              {
+                "role": "tool",
+                "text": "node cli.mjs list \".../fiction_10\" --page 3"
+              },
+              {
+                "role": "tool",
+                "text": "node cli.mjs detail \".../the-firm_404\"",
+                "badge": 3
+              },
+              {
+                "role": "user",
+                "text": "이번엔 사이언스카테고리에서 5번째 책 찾아줘"
+              },
+              {
+                "role": "tool",
+                "text": "node cli.mjs list \".../science_22\" --page 1",
+                "badge": 3
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "같은 두 질문, 같은 정답",
+          "body": "픽션 3페이지 3번째(The Firm)와 사이언스 5번째 책 모두 두 경로에서 같은 결과를 찾아냅니다."
+        },
+        {
+          "n": 2,
+          "head": "MCP 는 6번, 이어서 4번 호출",
+          "body": "첫 질문은 이동·스냅샷 읽기·클릭까지 6번, 이미 방문한 사이트인데도 다음 질문에 또 4번 도구를 호출합니다."
+        },
+        {
+          "n": 3,
+          "head": "스킬은 3번, 이어서 1번 호출",
+          "body": "첫 질문은 categories·list·detail 3번, 다음 질문은 카테고리를 이미 알아 list 한 번으로 끝납니다."
+        },
+        {
+          "n": "!",
+          "head": "완전히 새 세션이면 MCP 11번까지",
+          "body": "사이트를 한 번도 안 가본 새 세션에서는 같은 종류의 질문에 MCP 도구 호출이 11번까지 늘어난 적도 있습니다."
+        }
+      ]
+    }
+  ]
+}
