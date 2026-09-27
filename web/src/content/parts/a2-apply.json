@@ -1,0 +1,351 @@
+{
+  "id": "a2-apply",
+  "title": "Playwright MCP 응용하기",
+  "summary": "Playwright MCP 로 네이버 날씨 카드에 자바스크립트 글로우 효과를 입히고, 데모 커뮤니티 사용법을 빨간 하이라이트 녹화와 ffmpeg 자막으로 가이드 영상까지 만든다.",
+  "slides": [
+    {
+      "id": "a2-apply-01",
+      "template": "compare",
+      "title": "날씨 카드에 하늘색 테두리 효과",
+      "left": {
+        "label": "네이버 · 날씨 카드",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a2/a2-apply-01-weather.png"
+        }
+      },
+      "right": {
+        "label": "클로드 터미널",
+        "screen": {
+          "kind": "vscode",
+          "folder": "work3",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
+            "turns": [
+              {
+                "role": "user",
+                "text": "playwright mcp로 naver.com 접속한다음, 날씨를 보여주는 카드가 어디있는지 구조를 분석해서 해당 날씨 카드에 js로 하늘색 반짝이는 테두리 효과를 적용하고 스크롤을 맞춰서 내가 찾을 수 있게 해줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "ToolSearch(browser_snapshot/browser_evaluate 스키마 조회)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_navigate(naver.com)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_evaluate(weather 클래스 후보 요소 탐색)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_evaluate(info_weather 부모 체인 확인)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_evaluate(글로우 애니메이션 적용 + 스크롤)",
+                "badge": 2
+              },
+              {
+                "role": "tool",
+                "text": "ToolSearch(browser_take_screenshot 스키마 조회)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_take_screenshot()"
+              },
+              {
+                "role": "assistant",
+                "text": "날씨 카드에 하늘색 반짝이는 테두리 효과가 적용됐고 화면 중앙으로 스크롤도 맞춰졌습니다.",
+                "badge": 3
+              },
+              {
+                "role": "assistant",
+                "text": "날씨 카드는 DailyBoardView-module__daily_board_area___xxx 클래스의 div로, 온도(info_weather), 아이콘, 미세먼지 정보(link_weather_dust), 시간별 예보(weather_list)를 모두 포함하는 우측 정보 패널의 카드입니다."
+              },
+              {
+                "role": "assistant",
+                "text": "@keyframes로 1.2초 주기의 box-shadow + outline 펄스 애니메이션(하늘색 계열, rgba(64,180,255,...))을 만들어 weather-card-glow-highlight 클래스로 적용"
+              },
+              {
+                "role": "assistant",
+                "text": "scrollIntoView({block: 'center'})로 카드가 화면 중앙에 오도록 스크롤"
+              }
+            ],
+            "fit": true
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "날씨 카드 글로우 요청",
+          "body": "네이버에 접속해서 날씨 카드 구조를 분석하고 하늘색 반짝이는 테두리를 입혀 화면 중앙으로 스크롤까지 맞춰 달라고 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "browser_evaluate 로 스타일 직접 주입",
+          "body": "keyframes 펄스 애니메이션을 만들어 날씨 카드 클래스에 적용하고 scrollIntoView 로 스크롤을 맞춥니다."
+        },
+        {
+          "n": 3,
+          "head": "글로우 적용 완료 답변",
+          "body": "테두리 효과와 스크롤이 모두 적용됐다고 확인하고 날씨 카드의 실제 클래스 구조까지 설명합니다."
+        },
+        {
+          "n": "!",
+          "head": "41.4초 · 도구 7회",
+          "body": "리허설에서는 도구 7번 호출, 41.4초가 걸렸습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "playwright mcp로 naver.com 접속한다음, 날씨를 보여주는 카드가 어디있는지 구조를 분석해서 해당 날씨 카드에 js로 하늘색 반짝이는 테두리 효과를 적용하고 스크롤을 맞춰서 내가 찾을 수 있게 해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2-apply-02",
+      "template": "compare",
+      "title": "가이드 영상 녹화, 빨간 글로우",
+      "left": {
+        "label": "크롬 · 클릭 요소 하이라이트",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a2/a2-apply-02-record.png"
+        }
+      },
+      "right": {
+        "label": "클로드 터미널",
+        "screen": {
+          "kind": "vscode",
+          "folder": "work3",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
+            "turns": [
+              {
+                "role": "user",
+                "text": "그러면 playwright mcp로 데모 커뮤니티 사이트 접속해서, '회원가입 과정부터 로그인과정, 그다음 자유게시판으로 이동해서 게시글을 작성하고 해당 게시물로 들어가 거기에 댓글을 쓰는 과정까지를 설명해주는 가이드 영상을 만들고 싶어. 각 화면에 들어가서 클릭해야하는 요소 등을 빨간색 반짝이는 테두리로 효과를 주면서 쭉 모든 과정을 녹화한다음, ffmpeg을 설치하고 필요한 부분들에 검은배경에 흰색 글자로 설명을 자막으로 달아서 가이드영상을 모두 만들어줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "Bash(ffmpeg -version 확인)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_run_code_unsafe(회원가입~로그인 화면 녹화)",
+                "badge": 2
+              },
+              {
+                "role": "tool",
+                "text": "browser_run_code_unsafe(글쓰기 화면 녹화)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_run_code_unsafe(댓글 작성 화면 녹화)"
+              },
+              {
+                "role": "tool",
+                "text": "Write(manifest.json, 캡션 타이밍 기록)"
+              },
+              {
+                "role": "tool",
+                "text": "Write(build_video.py, ffmpeg drawtext 자막 스크립트)",
+                "badge": 3
+              },
+              {
+                "role": "tool",
+                "text": "Bash(python build_video.py 실행)"
+              },
+              {
+                "role": "tool",
+                "text": "Edit(build_video.py, fps 옵션 수정)"
+              },
+              {
+                "role": "tool",
+                "text": "Bash(재실행 후 영상 길이 확인 + 미리보기 프레임 추출)",
+                "badge": 4
+              },
+              {
+                "role": "assistant",
+                "text": "가이드 영상 제작이 완료됐습니다.",
+                "badge": 4
+              }
+            ],
+            "fit": true
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "가이드 영상 제작 요청",
+          "body": "회원가입부터 댓글 작성까지 전체 과정을 빨간색 반짝이는 테두리로 녹화하고 ffmpeg 자막까지 넣어 가이드 영상을 만들어 달라고 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "클릭 요소마다 빨간 글로우 녹화",
+          "body": "회원가입 로그인 글쓰기 댓글 작성까지 각 클릭 요소에 빨간색 펄스 테두리를 입히고 화면 중앙으로 스크롤해 스크린샷을 연속으로 찍습니다."
+        },
+        {
+          "n": 3,
+          "head": "ffmpeg 자막 스크립트 작성",
+          "body": "찍은 스크린샷을 이어 붙이고 drawtext 필터로 검은 배경 흰 글자 자막을 넣는 build_video.py 를 작성합니다."
+        },
+        {
+          "n": 4,
+          "head": "영상 완성, 미리보기로 검증",
+          "body": "완성된 영상에서 프레임 3장을 뽑아 하이라이트와 자막이 제대로 나오는지 확인합니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "그러면 playwright mcp로 데모 커뮤니티 사이트 접속해서, '회원가입 과정부터 로그인과정, 그다음 자유게시판으로 이동해서 게시글을 작성하고 해당 게시물로 들어가 거기에 댓글을 쓰는 과정까지를 설명해주는 가이드 영상을 만들고 싶어. 각 화면에 들어가서 클릭해야하는 요소 등을 빨간색 반짝이는 테두리로 효과를 주면서 쭉 모든 과정을 녹화한다음, ffmpeg을 설치하고 필요한 부분들에 검은배경에 흰색 글자로 설명을 자막으로 달아서 가이드영상을 모두 만들어줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2-apply-03",
+      "template": "compare",
+      "title": "완성된 가이드 영상",
+      "left": {
+        "label": "영상 · 회원가입 입력창",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a2/a2-apply-03-frame1.png"
+        }
+      },
+      "right": {
+        "label": "영상 · 마지막 장면",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a2/a2-apply-03-frame2.png"
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "48초 가이드 영상 완성",
+          "body": "회원가입부터 댓글 작성까지 전체 과정을 담은 48초짜리 영상이 완성됩니다."
+        },
+        {
+          "n": 2,
+          "head": "검은 배경, 흰 글자 자막",
+          "body": "각 장면 아래에 검은 배경 흰 글자로 지금 어떤 동작을 하는지 자막이 나옵니다."
+        },
+        {
+          "n": "!",
+          "head": "ffmpeg 이미 설치돼 설치 단계 없음",
+          "body": "리허설 컴퓨터에는 ffmpeg 이 이미 설치돼 있어서 별도 설치 과정 없이 바로 영상을 만들었습니다."
+        }
+      ],
+      "action": {
+        "label": "다운로드",
+        "items": [
+          {
+            "kind": "download",
+            "href": "/shots/a2/a2-apply-guide.mp4",
+            "text": "가이드 영상 예시"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2-apply-04",
+      "template": "screen",
+      "title": "가이드 영상 완성 답변",
+      "screen": {
+        "kind": "vscode",
+        "folder": "work3",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "가이드 영상 제작이 완료됐습니다.",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "결과물: C:\\tmp\\adv02-rehearsal2\\work3\\guide_video\\community_guide.mp4 (약 48초, 1280x900, H.264)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "진행 과정:",
+              "badge": 3
+            },
+            {
+              "role": "assistant",
+              "text": "1. 회원가입 — 회원가입 탭 → 아이디/비밀번호/닉네임 입력 → 가입하기 버튼까지 각 요소에 빨간색 반짝이는 테두리(펄스 애니메이션) 적용"
+            },
+            {
+              "role": "assistant",
+              "text": "2. 로그인 — 아이디/비밀번호 입력 후 로그인 버튼 클릭"
+            },
+            {
+              "role": "assistant",
+              "text": "3. 자유게시판 이동 → 글쓰기 — 사이드바 클릭, 글쓰기 버튼, 게시판 선택, 제목/내용 입력, 등록까지"
+            },
+            {
+              "role": "assistant",
+              "text": "4. 작성한 게시물 재진입 → 댓글 작성 — 목록으로 돌아가 방금 쓴 글 클릭, 댓글 입력 후 등록"
+            },
+            {
+              "role": "assistant",
+              "text": "각 클릭 대상 요소마다 자동으로 화면 중앙으로 스크롤 + 빨간 글로우 펄스 효과를 준 상태로 스크린샷 시퀀스를 캡처했고, ffmpeg으로 이를 이어붙인 뒤(drawtext 필터, 맑은 고딕 폰트) 검은 배경/흰 글자 자막을 각 구간에 맞춰 하단에 삽입했습니다."
+            },
+            {
+              "role": "assistant",
+              "text": "3장의 미리보기 프레임(회원가입 탭 클릭, 글쓰기 버튼 클릭, 최종 완료 화면)으로 하이라이트와 자막이 정상 렌더링되는 것을 확인했습니다. ffmpeg은 이미 설치되어 있어 별도 설치는 필요 없었습니다.",
+              "badge": 4
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "제작 완료 한 줄 요약",
+          "body": "회원가입부터 댓글 작성까지 담은 가이드 영상 제작이 끝났다고 답합니다."
+        },
+        {
+          "n": 2,
+          "head": "결과물 파일 경로와 사양",
+          "body": "완성된 영상 파일 경로와 48초, 1280x900 해상도까지 알려줍니다."
+        },
+        {
+          "n": 3,
+          "head": "회원가입부터 댓글까지 4단계",
+          "body": "회원가입 로그인 글쓰기 댓글 작성 네 단계로 나눠 각 단계에서 무엇을 클릭하고 입력했는지 정리합니다."
+        },
+        {
+          "n": 4,
+          "head": "ffmpeg 이미 설치, 프레임으로 검증",
+          "body": "ffmpeg 은 이미 설치돼 있어 따로 설치하지 않았고, 미리보기 프레임 3장으로 자막과 하이라이트를 확인했다고 답합니다."
+        }
+      ]
+    }
+  ]
+}

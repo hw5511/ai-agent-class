@@ -5,9 +5,10 @@
   "goal": "Playwright 라이브러리와 Playwright MCP 로 Claude 가 실제 브라우저를 조작하는 원리를 이해하고, 도서 사이트 탐색부터 위키 사전 스킬, 데모 커뮤니티 사이트 실습까지 반복 작업을 CLI 스킬로 만드는 과정을 거쳐 네이버 응용까지 실습한다.",
   "topics": [
     "Playwright 라이브러리",
-    "Playwright MCP 실습 1",
-    "Playwright MCP 실습 2",
-    "Playwright MCP 실습 3",
+    "Playwright MCP 실습 · 책 사이트 탐색",
+    "book-search 스킬 만들기",
+    "위키백과 사전 스킬 만들기",
+    "데모 커뮤니티 스킬 만들기",
     "Playwright MCP 응용하기"
   ],
   "practice": "Playwright MCP 를 설치해 books.toscrape.com 을 탐색하고 book-search CLI 스킬로 반복 작업을 대체한 뒤, 위키백과 검색 결과를 wiki-dic 스킬로 캐싱하고, 데모 커뮤니티 사이트에 회원가입부터 게시물·댓글 작성까지 자동화하는 스킬을 만들고, 네이버 페이지 조작과 가이드 영상 제작까지 응용한다.",
@@ -16,6 +17,7 @@
     "a2-books",
     "a2-booksearch",
     "a2-wiki",
-    "a2-community"
+    "a2-community",
+    "a2-apply"
   ]
 }
