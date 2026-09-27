@@ -18,12 +18,12 @@
         "label": "클로드 터미널",
         "screen": {
           "kind": "vscode",
-          "folder": "work2",
+          "folder": "work3",
           "files": [],
           "noSidebar": true,
           "terminal": {
             "vendor": "claude",
-            "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
             "turns": [
               {
                 "role": "user",
@@ -40,7 +40,7 @@
               },
               {
                 "role": "assistant",
-                "text": "Playwright MCP 도구를 다시 불러오겠습니다. 위키백과 대문(https://ko.wikipedia.org/wiki/위키백과:대문)에 접속했습니다. 페이지 제목은 \"위키백과, 우리 모두의 백과사전\"입니다. 추가로 페이지 내용을 확인하거나 특정 작업을 원하시면 말씀해 주세요.",
+                "text": "한국어 위키백과 대문(https://ko.wikipedia.org/wiki/위키백과:대문)에 접속했습니다. 페이지 제목은 \"위키백과, 우리 모두의 백과사전\"입니다.",
                 "badge": 2
               }
             ]
@@ -84,12 +84,12 @@
         "label": "클로드 터미널",
         "screen": {
           "kind": "vscode",
-          "folder": "work2",
+          "folder": "work3",
           "files": [],
           "noSidebar": true,
           "terminal": {
             "vendor": "claude",
-            "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
             "turns": [
               {
                 "role": "user",
@@ -98,20 +98,28 @@
               },
               {
                 "role": "tool",
-                "text": "Read(페이지 스냅샷 yml)"
+                "text": "ToolSearch(browser_snapshot/click/type 스키마 조회)"
               },
               {
                 "role": "tool",
-                "text": "ToolSearch(browser_type 스키마 조회)"
+                "text": "browser_snapshot()"
               },
               {
                 "role": "tool",
-                "text": "browser_type(검색창 e24, \"인공지능\", submit=true)",
+                "text": "browser_click(검색 버튼, e18)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_snapshot()"
+              },
+              {
+                "role": "tool",
+                "text": "browser_type(위키백과 검색 입력창 e627, \"인공지능\", submit=true)",
                 "badge": 2
               },
               {
                 "role": "assistant",
-                "text": "현재 페이지 스냅샷에서 검색창을 찾아보겠습니다. 검색창(e24)과 검색버튼(e26)을 찾았습니다. \"인공지능\"을 입력하고 검색하겠습니다. \"인공지능\" 검색 후 해당 문서(https://ko.wikipedia.org/wiki/인공지능)로 바로 진입했습니다. 페이지 제목: \"인공지능 - 위키백과, 우리 모두의 백과사전\".",
+                "text": "'인공지능' 검색 결과 페이지(https://ko.wikipedia.org/wiki/인공지능)로 정상 이동했습니다.",
                 "badge": 3
               }
             ]
@@ -121,8 +129,8 @@
       "notes": [
         {
           "n": 1,
-          "head": "검색창·검색버튼 위치 확인",
-          "body": "스냅샷에서 검색창(e24)과 검색버튼(e26)의 위치를 먼저 찾습니다."
+          "head": "검색버튼·검색창 찾아 검색 요청",
+          "body": "검색 버튼과 검색창을 찾아 인공지능을 검색해 달라고 요청합니다."
         },
         {
           "n": 2,
@@ -131,8 +139,8 @@
         },
         {
           "n": 3,
-          "head": "인공지능 문서로 바로 진입",
-          "body": "제목이 정확히 일치해 검색 결과 목록 없이 인공지능 문서로 바로 이동합니다."
+          "head": "인공지능 문서로 이동 완료",
+          "body": "검색 결과 페이지로 바로 이동했다고 답합니다."
         }
       ],
       "action": {
@@ -160,12 +168,12 @@
         "label": "클로드 터미널",
         "screen": {
           "kind": "vscode",
-          "folder": "work2",
+          "folder": "work3",
           "files": [],
           "noSidebar": true,
           "terminal": {
             "vendor": "claude",
-            "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
             "turns": [
               {
                 "role": "user",
@@ -174,49 +182,41 @@
               },
               {
                 "role": "tool",
-                "text": "Read(전체 페이지 스냅샷 yml)"
+                "text": "browser_snapshot()"
               },
               {
                 "role": "tool",
-                "text": "Grep(목차/heading 패턴 검색)",
+                "text": "Grep(스냅샷에서 heading 패턴 검색)",
                 "badge": 2
               },
               {
                 "role": "tool",
-                "text": "Grep(주요_능력과_연구_분야 좁혀서 재검색)"
+                "text": "Read(스냅샷 파일 일부 읽기)"
               },
               {
                 "role": "assistant",
-                "text": "내용을 다 읽었습니다. 정리해서 설명드립니다.",
+                "text": "목차 구조 (상위 목차, level=2)"
+              },
+              {
+                "role": "assistant",
+                "text": "3. 주요 능력과 연구 분야 ← 세 번째 목차",
                 "badge": 3
               },
               {
                 "role": "assistant",
-                "text": "목차 구조 (상위)"
+                "text": "① 추론, 문제 해결과 지식 표현"
               },
               {
                 "role": "assistant",
-                "text": "3. 주요 능력과 연구 분야 ← 세 번째 목차"
+                "text": "② 학습과 예측"
               },
               {
                 "role": "assistant",
-                "text": "개요: 인공지능 연구는 시스템을 \"어떻게\" 만드는지뿐 아니라 \"무엇을 할 수 있는지\"를 기준으로도 분류된다. 아래 4가지 하위 분야로 나뉘며, 실제 시스템(예: 길 안내 서비스)은 여러 능력을 함께 사용한다."
+                "text": "③ 언어와 지각"
               },
               {
                 "role": "assistant",
-                "text": "3.1 추론, 문제 해결과 지식 표현"
-              },
-              {
-                "role": "assistant",
-                "text": "3.2 학습과 예측"
-              },
-              {
-                "role": "assistant",
-                "text": "3.3 언어와 지각"
-              },
-              {
-                "role": "assistant",
-                "text": "3.4 계획, 의사 결정과 로봇공학"
+                "text": "④ 계획, 의사 결정과 로봇공학"
               }
             ],
             "fit": true
@@ -232,12 +232,12 @@
         {
           "n": 2,
           "head": "스냅샷에서 목차 재확인",
-          "body": "Read 와 Grep 으로 이미 열려 있는 페이지 스냅샷에서 목차 구조를 다시 찾아냅니다."
+          "body": "Grep 과 Read 로 이미 열려 있는 페이지 스냅샷에서 목차 구조를 다시 찾아냅니다."
         },
         {
           "n": 3,
           "head": "3번째 목차, 하위 4개 항목",
-          "body": "주요 능력과 연구 분야를 3.1~3.4 네 개 하위 목차와 함께 설명합니다."
+          "body": "주요 능력과 연구 분야를 하위 4개 항목과 함께 설명합니다."
         }
       ],
       "action": {
@@ -256,12 +256,12 @@
       "title": "/skill-creator 로 wiki-dic 요청",
       "screen": {
         "kind": "vscode",
-        "folder": "work2",
+        "folder": "work3",
         "files": [],
         "noSidebar": true,
         "terminal": {
           "vendor": "claude",
-          "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
           "turns": [
             {
               "role": "user",
@@ -270,35 +270,19 @@
             },
             {
               "role": "tool",
-              "text": "Bash(work2/.claude/skills 폴더 목록 확인)"
+              "text": "Read(book-search/SKILL.md, book_search.py 템플릿으로 확인)"
             },
             {
               "role": "tool",
-              "text": "Read(book-search/SKILL.md, cli.mjs 템플릿으로 확인)"
+              "text": "Bash(Playwright로 위키백과 실제 HTML 구조 직접 확인)"
             },
             {
               "role": "tool",
-              "text": "browser_run_code_unsafe(위키백과 실제 DOM 구조 확인)"
+              "text": "Write(scripts/wiki_dic.py)"
             },
             {
               "role": "tool",
-              "text": "Write(package.json)"
-            },
-            {
-              "role": "tool",
-              "text": "Write(cli.mjs)"
-            },
-            {
-              "role": "tool",
-              "text": "Bash(npm install)"
-            },
-            {
-              "role": "tool",
-              "text": "Bash(node cli.mjs search \"인공지능\")"
-            },
-            {
-              "role": "tool",
-              "text": "Edit(cli.mjs, 목차 번호 버그 수정)",
+              "text": "Edit(wiki_dic.py, 목차 헤딩 파싱 버그 수정)",
               "badge": 2
             },
             {
@@ -307,32 +291,16 @@
             },
             {
               "role": "assistant",
-              "text": "/skill-creator 명령은 이 세션에 설치되어 있지 않아 실행되지 않았지만, book-search 스킬의 구조를 참고해 동일한 방식으로 wiki-dic 스킬을 직접 만들어 .claude/skills/wiki-dic에 두었고 방금 새 스킬로 인식됐습니다(위 system-reminder에 등록 확인).",
+              "text": ".claude/skills/wiki-dic 스킬을 만들고 실제 동작까지 검증했습니다.",
               "badge": 3
             },
             {
               "role": "assistant",
-              "text": "만든 것"
+              "text": "\"인공지능\" 검색 → 목차가 아까 수동으로 확인했던 것과 완전히 동일하게 나옴"
             },
             {
               "role": "assistant",
-              "text": ".claude/skills/wiki-dic/ (cli.mjs, package.json, SKILL.md, cache/)"
-            },
-            {
-              "role": "assistant",
-              "text": "- search \"<키워드>\": 대문 페이지 → 검색창에 타이핑 → Enter 실행 후, 문서 전체를 파싱해 cache/<키워드>.json에 저장하고 목차만 출력."
-            },
-            {
-              "role": "assistant",
-              "text": "- section \"<키워드>\" <인덱스>: 캐시에서 해당 목차 번호(\"3\", \"3.2\" 등)의 상세 내용을 하위 목차 구조까지 포함해서 재귀적으로 출력."
-            },
-            {
-              "role": "assistant",
-              "text": "- toc \"<키워드>\": 캐시된 목차만 네트워크 없이 재출력."
-            },
-            {
-              "role": "assistant",
-              "text": "실제 위키백과 HTML 구조를 Playwright로 직접 확인한 뒤 그에 맞춰 파서를 작성했고, \"인공지능\" 키워드로 search/toc/section(3번, 0번)/검색결과없음 케이스를 모두 실제 실행해 검증했습니다."
+              "text": "3번 목차(주요 능력과 연구 분야) 상세 조회 → 표까지 포함해 방금 제가 직접 읽어드린 내용과 일치"
             }
           ],
           "fit": true
@@ -352,12 +320,12 @@
         {
           "n": 3,
           "head": "wiki-dic 스킬 완성",
-          "body": "cli.mjs·package.json·SKILL.md·cache 폴더까지 갖춘 wiki-dic 스킬이 만들어집니다."
+          "body": "검색·목차 상세 조회를 수동 확인 결과와 대조해 정확히 일치함을 직접 검증합니다."
         },
         {
           "n": "!",
-          "head": "351초 · 도구 20회",
-          "body": "리허설에서는 도구 20번 호출, 351초가 걸렸습니다."
+          "head": "501초 · 도구 33회",
+          "body": "리허설에서는 도구 33번 호출, 501초가 걸렸습니다."
         }
       ],
       "action": {
@@ -376,7 +344,7 @@
       "title": "완성된 wiki-dic 스킬 폴더",
       "screen": {
         "kind": "vscode",
-        "folder": "work2",
+        "folder": "work3",
         "sidebar": "explorer",
         "files": [
           {
@@ -401,17 +369,18 @@
             "active": true
           },
           {
-            "name": "cli.mjs",
-            "depth": 3,
+            "name": "requirements.txt",
+            "depth": 3
+          },
+          {
+            "name": "scripts",
+            "folder": true,
+            "depth": 3
+          },
+          {
+            "name": "wiki_dic.py",
+            "depth": 4,
             "badge": 2
-          },
-          {
-            "name": "package.json",
-            "depth": 3
-          },
-          {
-            "name": "package-lock.json",
-            "depth": 3
           },
           {
             "name": "cache",
@@ -422,19 +391,17 @@
         "editor": {
           "file": "SKILL.md",
           "lines": [
-            "### 1. Search a keyword (fetch + cache + print table of contents)",
-            "node cli.mjs search \"<keyword>\"",
-            "### 2. Re-print a cached table of contents (no network call)",
-            "node cli.mjs toc \"<keyword>\"",
-            "### 3. Read a section's detailed content",
-            "node cli.mjs section \"<keyword>\" <index>"
+            "### 1단계 — 검색해서 목차 구조 보기",
+            "python scripts/wiki_dic.py search \"<키워드>\" [--refresh] [--json]",
+            "### 2단계 — 원하는 목차의 상세 내용 읽기",
+            "python scripts/wiki_dic.py show \"<키워드>\" \"<목차>\" [--full] [--json]"
           ],
           "badge": 3
         },
         "noTerminal": true,
         "terminal": {
           "vendor": "shell",
-          "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
           "turns": []
         }
       },
@@ -442,17 +409,17 @@
         {
           "n": 1,
           "head": "SKILL.md · 스킬 설명",
-          "body": "이름·설명과 search/toc/section 세 명령의 사용법이 담긴 SKILL.md 가 스킬 폴더 맨 위에 있습니다."
+          "body": "이름·설명과 search/show 두 명령의 사용법이 담긴 SKILL.md 가 스킬 폴더 맨 위에 있습니다."
         },
         {
           "n": 2,
-          "head": "cli.mjs · Playwright 로직",
-          "body": "Playwright 로 헤드리스 크롬을 띄워 위키백과를 읽고 파싱하는 코드가 이 한 파일에 들어 있습니다."
+          "head": "wiki_dic.py · Playwright 로직",
+          "body": "Playwright 와 BeautifulSoup 으로 위키백과를 읽고 파싱하는 코드가 scripts 폴더 안 이 한 파일에 들어 있습니다."
         },
         {
           "n": 3,
-          "head": "search · toc · section 세 명령",
-          "body": "키워드 검색과 캐싱, 캐시 재출력, 하위 목차까지 포함한 상세 내용 조회를 각각 명령 하나로 호출합니다."
+          "head": "search · show 두 명령",
+          "body": "키워드 검색과 캐싱, 목차 번호나 이름으로 하위 목차까지 포함한 상세 내용 조회를 각각 명령 하나로 호출합니다."
         }
       ]
     },
@@ -462,12 +429,12 @@
       "title": "두쫀쿠, 모른다는 답",
       "screen": {
         "kind": "vscode",
-        "folder": "work2",
+        "folder": "work3",
         "files": [],
         "noSidebar": true,
         "terminal": {
           "vendor": "claude",
-          "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
           "turns": [
             {
               "role": "user",
@@ -476,12 +443,8 @@
             },
             {
               "role": "assistant",
-              "text": "\"두쫀쿠\"가 뭔지는 제가 아는 정보나 검색 없이는 알 수 없어요 — 일반적으로 통용되는 용어가 아니고, 개인적인 별명이나 특정 커뮤니티/게임/밈 용어일 가능성이 높아 보여요. 스킬은 쓰지 말라고 하셨으니 검색은 안 했습니다.",
+              "text": "두쫀쿠는 모르는 용어예요 — 특정 밈, 게임 캐릭터, 아니면 다른 뜻으로 쓰신 건가요? 조금 더 맥락을 알려주시면 답해드릴게요.",
               "badge": 2
-            },
-            {
-              "role": "assistant",
-              "text": "무엇을 의미하시는지 알려주시면 이어서 도와드릴게요."
             }
           ]
         }
@@ -494,13 +457,13 @@
         },
         {
           "n": 2,
-          "head": "모른다는 답, 검색 없이",
-          "body": "검색 없이는 알 수 없다고 답하고, 스킬을 쓰지 말라 했으니 검색도 안 했다고 밝힙니다."
+          "head": "모르는 용어라는 답",
+          "body": "도구 호출 없이 모르는 용어라고 답하고 맥락을 되묻습니다."
         },
         {
           "n": "!",
-          "head": "5.6초 · 도구 0회",
-          "body": "리허설에서는 도구 호출이 0번, 5.6초 만에 끝난 답변입니다."
+          "head": "2.0초 · 도구 0회",
+          "body": "리허설에서는 도구 호출이 0번, 2초 만에 끝난 답변입니다."
         }
       ],
       "action": {
@@ -519,12 +482,12 @@
       "title": "/wiki-dic 으로 조사",
       "screen": {
         "kind": "vscode",
-        "folder": "work2",
+        "folder": "work3",
         "files": [],
         "noSidebar": true,
         "terminal": {
           "vendor": "claude",
-          "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
           "turns": [
             {
               "role": "user",
@@ -533,41 +496,41 @@
             },
             {
               "role": "tool",
-              "text": "Bash(node cli.mjs search \"두쫀쿠\")"
+              "text": "Bash(python scripts/wiki_dic.py search \"두쫀쿠\")"
             },
             {
               "role": "tool",
-              "text": "Bash(node cli.mjs search \"두쫀쿠\", 재확인)"
+              "text": "Bash(python scripts/wiki_dic.py show \"두쫀쿠\" \"lead\")"
             },
             {
               "role": "tool",
-              "text": "Bash(node cli.mjs section \"두쫀쿠\" 0)",
+              "text": "Bash(python scripts/wiki_dic.py show \"두쫀쿠\" \"1\")",
               "badge": 2
             },
             {
-              "role": "tool",
-              "text": "Bash(node cli.mjs section \"두쫀쿠\" 1·2)"
-            },
-            {
               "role": "assistant",
-              "text": "두쫀쿠는 \"두바이 쫀득 쿠키\"의 줄임말이라는 걸 확인했다. 이제 개요(도입부)와 주요 섹션 내용을 읽어서 설명을 준비하겠다.",
+              "text": "두쫀쿠 = \"두바이 쫀득 쿠키\"의 줄임말로, 2025년 하반기 대한민국에서 크게 유행한 디저트예요.",
               "badge": 3
             },
             {
               "role": "assistant",
-              "text": "두쫀쿠 = \"두바이 쫀득 쿠키\"의 줄임말"
+              "text": "- 원산지/유행 시기: 대한민국, 2025년 발명 · 소셜미디어 통해 전국적 유행"
             },
             {
               "role": "assistant",
-              "text": "2025년 하반기 대한민국에서 유행한 디저트로, 위키백과에 등재된 항목이에요."
+              "text": "- 정체: 2022년부터 세계적으로 화제였던 \"두바이 초콜릿\"(카다이프 면 반죽 + 피스타치오 크림을 넣은 초콜릿)에서 파생된 한국형 베이커리 디저트"
             },
             {
               "role": "assistant",
-              "text": "정체: 2022년부터 세계적으로 화제였던 \"두바이 초콜릿\"(카다이프+피스타치오 크림을 채운 초콜릿)의 조합을 한국식 \"쫀득 쿠키\"에 접목한 한국형 베이커리 상품"
+              "text": "- 특징: 겉은 쫀득하고 속은 바삭한 식감. 마시멜로를 녹인 쫀득한 반죽 안에 피스타치오 크림 + 카다이프(얇은 면 형태 반죽)를 채워 넣음. 중동식 디저트 요소 + 한국식 쫀득 쿠키를 결합"
             },
             {
               "role": "assistant",
-              "text": "더 자세한 \"평가\", \"파생 상품\", \"논란\" 등 섹션도 있는데 필요하면 이어서 조사해줄게요."
+              "text": "- 비유: 겉모습은 쿠키지만 식감은 찹쌀떡에 가깝다고 평가됨"
+            },
+            {
+              "role": "assistant",
+              "text": "더 자세한 내용(유행 경과, 평가, 파생 상품 등)도 궁금하시면 말씀해주세요."
             }
           ],
           "fit": true
@@ -581,18 +544,18 @@
         },
         {
           "n": 2,
-          "head": "search 로 캐싱 후 section 조회",
-          "body": "search 로 문서를 캐시에 저장한 다음, section 명령으로 개요와 하위 섹션 내용을 차례로 읽습니다."
+          "head": "search 로 캐싱 후 섹션 조회",
+          "body": "search 로 문서를 캐시에 저장한 다음, show 명령으로 머리말과 첫 섹션 내용을 차례로 읽습니다."
         },
         {
           "n": 3,
           "head": "두바이 쫀득 쿠키, 상세 설명",
-          "body": "두바이 쫀득 쿠키의 줄임말이라는 것과 2025년 하반기 유행 디저트라는 점, 정체까지 설명합니다."
+          "body": "두바이 쫀득 쿠키의 줄임말이라는 것과 2025년 하반기 유행 디저트라는 점, 특징까지 설명합니다."
         },
         {
           "n": "!",
-          "head": "36.0초 · cache/두쫀쿠.json 저장",
-          "body": "리허설에서는 36.0초가 걸렸고, 조사 결과가 스킬의 cache 폴더에 두쫀쿠.json 으로 저장됩니다."
+          "head": "15.8초 · cache/두쫀쿠.json 저장",
+          "body": "리허설에서는 15.8초가 걸렸고, 조사 결과가 스킬의 cache 폴더에 두쫀쿠.json 으로 저장됩니다."
         }
       ],
       "action": {
