@@ -1,7 +1,6 @@
 {
   "id": "a1-office",
   "title": "오피스 스킬 설치",
-  "cover": false,
   "summary": "확장자별 라이브러리 개념을 복습하고, Claude 공식 오피스 문서 스킬 4종을 실습 폴더에 설치해 확인한다.",
   "slides": [
     {
