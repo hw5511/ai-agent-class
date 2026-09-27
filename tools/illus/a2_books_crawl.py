@@ -17,7 +17,8 @@ WIN_Y, WIN_H = 350, 124
 GAP = 60  # gap between page windows: wide enough that the arrow's control points never cross
 
 # window widths: page 1/2 short, page-3.html needs a wider pill so the url fits with padding
-PAGE_W = [190, 190, 260]
+# (owner fix 2026-09-28: "page 1"/"page 2" labels were touching their pill's right edge - widened)
+PAGE_W = [220, 220, 260]
 labels = ["page 1", "page 2", "page-3.html"]
 
 pages_x = []
@@ -110,10 +111,12 @@ b += [badge(cards_x + CARD_W - 8, card1_y - 16, 2)]
 b += [text(cards_x + CARD_W / 2, LABEL_Y, "스크래핑 · 필요한 값만 추출", 24, 800, MUTED)]
 
 # ---- bottom: one wide arc ties crawling + scraping into the one practice run ----
-ARC_Y = 700
+# (owner fix 2026-09-28: the label used to sit right on top of the arc's dip - shallowed the
+# arc and moved the label below its lowest point with clear margin)
+ARC_Y = 690
 arc_x0, arc_x1 = pages_x[0] + 30, cards_x + CARD_W / 2
-b += [f'<path d="M{arc_x0} {ARC_Y}C{arc_x0} {ARC_Y + 40} {arc_x1} {ARC_Y + 40} {arc_x1} {ARC_Y}" fill="none" stroke="{ACCENT_TINT}" stroke-width="10" stroke-linecap="round"/>']
-b += [badge(arc_x0 + 30, ARC_Y + 10, 3)]
-b += [text((arc_x0 + arc_x1) / 2, ARC_Y + 34, "이번 실습은 크롤링 + 스크래핑을 함께 사용", 24, 800, ACCENT_DARK)]
+b += [f'<path d="M{arc_x0} {ARC_Y}C{arc_x0} {ARC_Y + 22} {arc_x1} {ARC_Y + 22} {arc_x1} {ARC_Y}" fill="none" stroke="{ACCENT_TINT}" stroke-width="10" stroke-linecap="round"/>']
+b += [badge(arc_x0 + 30, ARC_Y + 4, 3)]
+b += [text((arc_x0 + arc_x1) / 2, ARC_Y + 62, "이번 실습은 크롤링 + 스크래핑을 함께 사용", 24, 800, ACCENT_DARK)]
 
 print(save("a2-books-crawl.svg", b, "A2-books/2 크롤링과 스크래핑 (tools/illus/a2_books_crawl.py)"))

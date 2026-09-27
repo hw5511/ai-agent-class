@@ -20,9 +20,12 @@ b += [text(RX + RW / 2, RY + 42, "book-search 스킬 하나", 32, 800, INK)]
 b += [text(RX + RW / 2, RY + 78, "슬래시 명령 한 번이면 끝", 23, 600, MUTED)]
 
 # ---------------- left panel: three mini browser windows in a loop ----------------
-WIN_W, WIN_H = 190, 132
+# (owner fix 2026-09-28: windows narrowed and the gap between them tightened so the row leaves
+# clear room on the right for the mascot to stand beside it, instead of it floating alone below)
+WIN_W, WIN_H = 175, 132
+GAP3 = 40
 win_y = LY + 150
-xs = [LX + 60, LX + 60 + (WIN_W + 60), LX + 60 + 2 * (WIN_W + 60)]
+xs = [LX + 60, LX + 60 + (WIN_W + GAP3), LX + 60 + 2 * (WIN_W + GAP3)]
 labels = ["카테고리", "페이지 이동", "책 클릭"]
 
 for i, (wx, lb) in enumerate(zip(xs, labels)):
@@ -44,20 +47,27 @@ b += [path(
     color=INK,
 )]
 b += [badge(mid_x, loop_y + 8, 1)]
-b += [text(mid_x, loop_y + 52, "새 질문마다 처음부터", 22, 700, MUTED)]
+# (owner fix 2026-09-28: label used to start right under the badge and clipped into it - pushed down)
+b += [text(mid_x, loop_y + 66, "새 질문마다 처음부터", 22, 700, MUTED)]
 
-# Claude mascot at a desk under the loop, watching the browser windows (small, off to one side)
-DESK_W = 150
-DESK_X = LX + LW - DESK_W - 40
-DESK_Y = LY + LH - 130
-MS2 = 0.42
-b += [desk(DESK_X, DESK_Y, DESK_W, body_h=60)]
-b += [mascot(DESK_X + DESK_W / 2 - 240 * MS2 / 2, DESK_Y - 143 * MS2, MS2)]
-b += [text(DESK_X + DESK_W / 2, DESK_Y + 24 + 60 + 30, "Claude", 20, 800, INK)]
+# Claude mascot at a small desk beside the page row (owner fix 2026-09-28: used to float alone in
+# the panel's bottom-right corner, disconnected from the scene - now sits right beside the third
+# ("책 클릭") window, at the row's own height, so it reads as Claude doing the clicking)
+DESK_W = 100
+DESK_X = xs[2] + WIN_W + 20
+DESK_Y = win_y + WIN_H - 70
+MS2 = 0.32
+b += [desk(DESK_X, DESK_Y, DESK_W, body_h=44)]
+b += [mascot(DESK_X + DESK_W / 2 - 240 * MS2 / 2, DESK_Y - 143 * MS2 + 6, MS2)]
+b += [icon_cursor(xs[2] + WIN_W - 12, win_y + WIN_H / 2 + 8, 24, INK)]
 
 # ---------------- right panel: one slash command -> CLI -> answer, twice ----------------
 TERM_X, TERM_Y, TERM_W, TERM_H = RX + 60, RY + 140, RW - 120, 108
-term_body = text(18, 30, "/book-search ...3페이지 3번째 책...", 18, 700, "#7fd7ff", anchor="start", family=MONO)
+# (owner fix 2026-09-28: the MONO stack (D2Coding/Consolas/Courier New) has no Hangul glyphs, so
+# the Korean words in this line rendered as tofu boxes in a raster render; dropped MONO so the
+# line falls back to the deck's default Pretendard stack, and spelled out the full readable
+# command instead of an ellipsis-truncated fragment)
+term_body = text(18, 30, "/book-search 픽션카테고리 3페이지 3번째 책", 18, 700, "#7fd7ff", anchor="start")
 b += [window(TERM_X, TERM_Y, TERM_W, TERM_H, kind="terminal", title="terminal", body=term_body)]
 b += [badge(TERM_X + TERM_W - 10, TERM_Y - 22, 2)]
 
