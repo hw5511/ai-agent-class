@@ -1,0 +1,597 @@
+{
+  "id": "a2-community",
+  "title": "데모 커뮤니티 스킬 만들기",
+  "summary": "회원가입, 로그인, 게시글 작성과 댓글까지 있는 데모 커뮤니티 사이트를 Playwright MCP 로 직접 조작한 다음, 같은 작업을 demo-community CLI 스킬로 만들어 게시판 4곳에 글을 쓰고 댓글을 단다.",
+  "slides": [
+    {
+      "id": "a2-community-01",
+      "template": "compare",
+      "title": "데모 커뮤니티 사이트 접속",
+      "left": {
+        "label": "크롬 · 데모 커뮤니티",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a2/a2-community-01-open.png"
+        }
+      },
+      "right": {
+        "label": "클로드 터미널",
+        "screen": {
+          "kind": "vscode",
+          "folder": "work3",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
+            "turns": [
+              {
+                "role": "user",
+                "text": "https://hw5511.github.io/ai-agent-class/playwright_demo/ 접속해줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "ToolSearch(browser_navigate 스키마 조회)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_navigate(playwright_demo)"
+              },
+              {
+                "role": "assistant",
+                "text": "페이지에 접속했습니다. \"커뮤니티 - Playwright 실습 사이트\"라는 제목의 페이지입니다. 다음으로 무엇을 하고 싶으신가요?",
+                "badge": 2
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "사이트 주소 주고 접속 요청",
+          "body": "데모 커뮤니티 사이트 주소를 그대로 주고 접속해 달라고 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "로그인 요구 화면 확인",
+          "body": "접속하자마자 로그인 화면이 뜨는 것을 확인하고 페이지 제목까지 알려줍니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "https://hw5511.github.io/ai-agent-class/playwright_demo/ 접속해줘"
+          },
+          {
+            "kind": "link",
+            "href": "https://hw5511.github.io/ai-agent-class/playwright_demo/",
+            "text": "데모 커뮤니티 사이트"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2-community-02",
+      "template": "compare",
+      "title": "회원가입 진행하고 로그인",
+      "left": {
+        "label": "크롬 · 회원가입 화면",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a2/a2-community-02-signup.png"
+        }
+      },
+      "right": {
+        "label": "클로드 터미널",
+        "screen": {
+          "kind": "vscode",
+          "folder": "work3",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
+            "turns": [
+              {
+                "role": "user",
+                "text": "회원가입 진행하고 로그인해줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "browser_snapshot()"
+              },
+              {
+                "role": "tool",
+                "text": "browser_click(회원가입 탭, e8)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_fill_form(아이디 testuser01, 비밀번호 test1234, 닉네임 테스트유저)",
+                "badge": 2
+              },
+              {
+                "role": "tool",
+                "text": "browser_click(회원가입 버튼, e32)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_fill_form(아이디 testuser01, 비밀번호 test1234)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_click(로그인 버튼, e17)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_snapshot()"
+              }
+            ],
+            "fit": true
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "회원가입과 로그인 한 번에 요청",
+          "body": "아이디나 비밀번호를 정해주지 않고 회원가입과 로그인을 한 번에 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "testuser01 계정 직접 결정",
+          "body": "클로드가 아이디 testuser01, 비밀번호 test1234, 닉네임 테스트유저를 직접 정해 폼을 채웁니다."
+        },
+        {
+          "n": "!",
+          "head": "거부하면 실습 사이트라고 설득",
+          "body": "회원가입을 못 한다고 하면 Playwright 연습용 데모 사이트라 괜찮다고 알려주면 됩니다"
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "회원가입 진행하고 로그인해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2-community-03",
+      "template": "compare",
+      "title": "로그인 완료, 테스트유저 님",
+      "left": {
+        "label": "크롬 · 로그인 완료",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a2/a2-community-03-loggedin.png"
+        }
+      },
+      "right": {
+        "label": "클로드 터미널",
+        "screen": {
+          "kind": "vscode",
+          "folder": "work3",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
+            "turns": [
+              {
+                "role": "assistant",
+                "text": "회원가입과 로그인이 모두 성공적으로 완료되었습니다. 우측 상단에 \"테스트유저 님\"으로 표시되며 로그인된 상태입니다.",
+                "badge": 1
+              },
+              {
+                "role": "assistant",
+                "text": "- 아이디: `testuser01`"
+              },
+              {
+                "role": "assistant",
+                "text": "- 비밀번호: `test1234`"
+              },
+              {
+                "role": "assistant",
+                "text": "- 닉네임: `테스트유저`"
+              },
+              {
+                "role": "assistant",
+                "text": "현재 자유게시판 목록 화면이 보이고 있습니다. 다음으로 무엇을 해드릴까요?",
+                "badge": 2
+              }
+            ],
+            "fit": true
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "헤더에 테스트유저 님 표시",
+          "body": "화면 우측 상단이 테스트유저 님으로 바뀌어 로그인 상태를 바로 확인할 수 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "만든 계정 정보까지 정리",
+          "body": "직접 정한 아이디 비밀번호 닉네임을 정리해서 알려주고 자유게시판이 보이는 상태라고 답합니다."
+        }
+      ]
+    },
+    {
+      "id": "a2-community-04",
+      "template": "screen",
+      "title": "/skill-creator 로 demo-community 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "work3",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/skill-creator 지금까지 작업했던 방식을 토대로, 현재 사이트의 모든 페이지 구조를 분석해줘. 그래서 이 커뮤니티 사이트에 회원가입,로그인, 그리고 게시판별 게시물 목록 조회와 게시물 상세 내용 조회, 댓글조회, 그리고 게시물 작성과 댓글 작성 기능을 구현해서 playwright 라이브러리를 활용해서 cli스킬로 현재폴더에 .claude/skills 폴더에 demo-community 스킬로 만들어줘. 스킬은 playwright mcp와 같은 .playwright-profile 폴더를 쓰고, 스킬을 실행하기 전에 playwright mcp 브라우저가 열려 있으면 먼저 닫고, 작업이 끝나면 playwright mcp로 방금 작업한 페이지를 다시 열어서 보여주도록 해줘.",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "browser_network_requests(static)"
+            },
+            {
+              "role": "tool",
+              "text": "browser_evaluate(페이지 전체 HTML 저장)"
+            },
+            {
+              "role": "tool",
+              "text": "Read(page_source.html)"
+            },
+            {
+              "role": "tool",
+              "text": "Grep(seedDemoData/onLoggedIn/showModal 패턴 검색)",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python, playwright 설치 여부 확인)"
+            },
+            {
+              "role": "tool",
+              "text": "browser_navigate(playwright_demo)"
+            },
+            {
+              "role": "tool",
+              "text": "browser_snapshot()"
+            },
+            {
+              "role": "tool",
+              "text": "Write(scripts/community_cli.py)"
+            },
+            {
+              "role": "tool",
+              "text": "browser_close()",
+              "badge": 3
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python community_cli.py signup --auto-login)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(.playwright-profile 이 MCP 브라우저와 같은 프로필인지 확인)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python community_cli.py whoami)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python community_cli.py list --board free)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python community_cli.py detail --board free --post-id f1)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python community_cli.py write --board free --title \"...\")"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python community_cli.py comment --board free --post-id ... --text \"...\")"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python community_cli.py logout / login testuser01 재확인)"
+            },
+            {
+              "role": "tool",
+              "text": "Write(SKILL.md)"
+            },
+            {
+              "role": "tool",
+              "text": "browser_navigate(playwright_demo)",
+              "badge": 4
+            },
+            {
+              "role": "tool",
+              "text": "browser_snapshot()"
+            },
+            {
+              "role": "assistant",
+              "text": "`demo-community` 스킬 생성과 검증이 완료되었습니다. Playwright MCP 브라우저에서 확인해보니 CLI로 작성한 \"CLI 스킬 테스트 게시글\"과 댓글이 실제로 보입니다 (게시글 수 15→16개로 증가) — CLI와 MCP 브라우저가 같은 `.playwright-profile`을 공유하기 때문입니다.",
+              "badge": 4
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "회원가입부터 댓글까지 통째로 스킬화 요청",
+          "body": "회원가입 로그인 게시글 목록 상세 댓글 조회 작성 기능을 전부 담은 demo-community 스킬을 한 번에 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "페이지 구조부터 직접 분석",
+          "body": "HTML 전체를 저장해 읽고 로그인 성공 처리 코드까지 검색하며 사이트가 로컬스토리지 기반 SPA임을 확인합니다."
+        },
+        {
+          "n": 3,
+          "head": "CLI 검증 전 MCP 브라우저 먼저 닫기",
+          "body": "프로필 폴더가 겹치지 않도록 CLI 명령을 실행하기 전에 MCP 브라우저를 닫습니다."
+        },
+        {
+          "n": 4,
+          "head": "닫고 실행하고 다시 열어 직접 확인",
+          "body": "signup부터 comment까지 8개 명령을 모두 실행해 검증한 다음 MCP 브라우저로 같은 페이지를 다시 열어 게시글 수가 15에서 16개로 늘어난 것을 확인합니다. 리허설에서는 도구 34번 호출, 656초가 걸렸습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/skill-creator 지금까지 작업했던 방식을 토대로, 현재 사이트의 모든 페이지 구조를 분석해줘. 그래서 이 커뮤니티 사이트에 회원가입,로그인, 그리고 게시판별 게시물 목록 조회와 게시물 상세 내용 조회, 댓글조회, 그리고 게시물 작성과 댓글 작성 기능을 구현해서 playwright 라이브러리를 활용해서 cli스킬로 현재폴더에 .claude/skills 폴더에 demo-community 스킬로 만들어줘. 스킬은 playwright mcp와 같은 .playwright-profile 폴더를 쓰고, 스킬을 실행하기 전에 playwright mcp 브라우저가 열려 있으면 먼저 닫고, 작업이 끝나면 playwright mcp로 방금 작업한 페이지를 다시 열어서 보여주도록 해줘."
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2-community-05",
+      "template": "screen",
+      "title": "완성된 demo-community 스킬 폴더",
+      "screen": {
+        "kind": "vscode",
+        "folder": "work3",
+        "sidebar": "explorer",
+        "files": [
+          {
+            "name": ".claude",
+            "folder": true
+          },
+          {
+            "name": "skills",
+            "folder": true,
+            "depth": 1
+          },
+          {
+            "name": "demo-community",
+            "folder": true,
+            "depth": 2,
+            "active": true
+          },
+          {
+            "name": "SKILL.md",
+            "depth": 3,
+            "badge": 1,
+            "active": true
+          },
+          {
+            "name": "scripts",
+            "folder": true,
+            "depth": 3
+          },
+          {
+            "name": "community_cli.py",
+            "depth": 4,
+            "badge": 2
+          }
+        ],
+        "editor": {
+          "file": "SKILL.md",
+          "lines": [
+            "| Command | Required options |",
+            "| signup | --username --password --nickname |",
+            "| login | --username --password |",
+            "| logout | - |",
+            "| whoami | - |",
+            "| list | --board {free,qna,notice,info,humor} |",
+            "| detail | --board ... --post-id ID |",
+            "| write | --board ... --title ... --content ... |",
+            "| comment | --board ... --post-id ID --text ... |"
+          ],
+          "badge": 3
+        },
+        "noTerminal": true,
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
+          "turns": []
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "SKILL.md · 스킬 설명",
+          "body": "이름 설명과 프로필 공유 방식, 명령어 레퍼런스가 담긴 SKILL.md 가 스킬 폴더 맨 위에 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "community_cli.py · Playwright 로직",
+          "body": "회원가입부터 댓글 작성까지 실제 화면을 조작하는 코드가 scripts 폴더 안 이 한 파일에 들어 있습니다."
+        },
+        {
+          "n": 3,
+          "head": "8개 명령으로 전체 기능",
+          "body": "signup login logout whoami list detail write comment 여덟 명령이 사이트의 모든 기능을 담당합니다."
+        }
+      ]
+    },
+    {
+      "id": "a2-community-06",
+      "template": "screen",
+      "title": "/demo-community 로 게시글 4개, 댓글 4개",
+      "screen": {
+        "kind": "vscode",
+        "folder": "work3",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work3",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/demo-community 테스트로 각 게시판별로 하나씩 공지사항 게시판외에 게시물을 적절하게 달아주고, 그 게시물들 이외에 다른 게시판별 게시물들을 너가 맘에드는걸 조회해서 댓글을 적절하게 총 4개 달아줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "browser_close()",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python community_cli.py write --board free --title \"오늘 날씨가 너무 좋네요\")",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python community_cli.py write --board humor --title \"개발자 야근하는 이유 레전드\")"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python community_cli.py list --board free / qna / info / humor)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python community_cli.py detail --board free --post-id f15)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python community_cli.py comment --board free --post-id f15 --text \"...\")",
+              "badge": 3
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python community_cli.py comment --board humor --post-id h14 --text \"...\")"
+            },
+            {
+              "role": "tool",
+              "text": "browser_navigate(playwright_demo)",
+              "badge": 4
+            },
+            {
+              "role": "assistant",
+              "text": "완료했습니다.",
+              "badge": 4
+            },
+            {
+              "role": "assistant",
+              "text": "MCP 브라우저를 다시 열어 사이트에 접속해뒀으니 화면에서 확인하실 수 있습니다."
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "게시판 4곳 글쓰기, 댓글 4개 한 번에 요청",
+          "body": "공지사항을 뺀 나머지 게시판마다 글 하나씩, 마음에 드는 게시물 4개에 댓글까지 한 번에 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "MCP 브라우저 닫고 write 명령 4번",
+          "body": "SKILL.md 순서대로 먼저 MCP 브라우저를 닫고, 자유게시판 질문답변 정보공유 유머잡담에 write 명령으로 글을 한 편씩 올립니다."
+        },
+        {
+          "n": 3,
+          "head": "detail로 조회 후 comment 4번",
+          "body": "각 게시판 게시물을 detail 로 살펴본 뒤 마음에 드는 글 4개에 comment 명령으로 댓글을 답니다."
+        },
+        {
+          "n": 4,
+          "head": "재오픈하고 제목까지 정리해 답변",
+          "body": "모든 CLI 작업이 끝난 뒤 MCP 브라우저로 사이트를 다시 열고 완료 답변을 줍니다. 리허설에서는 도구 21번 호출, 132초가 걸렸습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/demo-community 테스트로 각 게시판별로 하나씩 공지사항 게시판외에 게시물을 적절하게 달아주고, 그 게시물들 이외에 다른 게시판별 게시물들을 너가 맘에드는걸 조회해서 댓글을 적절하게 총 4개 달아줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2-community-07",
+      "template": "compare",
+      "title": "게시판마다 올라온 새 글",
+      "left": {
+        "label": "크롬 · 자유게시판",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a2/a2-community-07-board.png"
+        }
+      },
+      "right": {
+        "label": "크롬 · 새 글 상세",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a2/a2-community-07-newpost.png"
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "자유게시판 맨 위, 새 글",
+          "body": "테스트유저 이름으로 방금 쓴 오늘 날씨가 너무 좋네요 글이 목록 맨 위에 보입니다."
+        },
+        {
+          "n": 2,
+          "head": "글 상세 화면도 정상 등록",
+          "body": "글을 눌러 들어가면 클로드가 쓴 본문 내용이 그대로 등록돼 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "a2-community-08",
+      "template": "screen",
+      "title": "테스트유저가 남긴 댓글",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a2/a2-community-08-comment.png"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "다른 사람 글에 댓글 등록",
+          "body": "찰리가 쓴 글 아래 댓글 목록 맨 아래에 테스트유저 이름으로 댓글이 달려 있습니다."
+        }
+      ]
+    }
+  ]
+}

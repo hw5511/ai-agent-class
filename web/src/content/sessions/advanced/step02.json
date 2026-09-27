@@ -15,6 +15,7 @@
     "a2-playwright",
     "a2-books",
     "a2-booksearch",
-    "a2-wiki"
+    "a2-wiki",
+    "a2-community"
   ]
 }
