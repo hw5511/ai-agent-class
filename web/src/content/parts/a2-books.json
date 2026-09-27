@@ -358,8 +358,42 @@
           "turns": [
             {
               "role": "assistant",
-              "text": "## 분석 대상\n**Fantasy 카테고리 (총 48권, 3페이지)의 마지막 페이지 → 마지막 책: \"Myriad (Prentor #1)\"**\nURL: `https://books.toscrape.com/catalogue/myriad-prentor-1_36/index.html`\n\n**1. Breadcrumb (탐색 경로)**\nHome / Books / Fantasy / Myriad (Prentor #1)\n\n**2. 상품 헤더 영역 (`<article class=\"product_page\">`)**\n- 가격: **£58.75**\n- 재고 상태: `In stock (1 available)` — 재고 수량까지 명시\n- 별점: `<p class=\"star-rating Four\">` → 클래스명에 등급(Four)이 워딩으로 박혀 있는 독특한 방식 (숫자가 아니라 One~Five 단어), 사이트 안내대로 실제로는 무작위 값\n\n**3. Product Description**\n- 내용: 주인공 Kalin(warlock)이 자신의 능력을 부정당하며 살다가 18세에 집을 떠나고, 왕실을 위협하는 다크 워락을 막을 특별한 힘을 가졌다는 사실을 알게 되는 판타지 노벨라(약 27,000단어 분량)\n\n**4. Product Information (표)**\n| UPC | 63e20a0f98218a87 |\n| Availability | In stock (1 available) |\n\n**스크래핑 관점 요약**: 이 상세 페이지는 books.toscrape.com의 표준 템플릿을 그대로 따르며, `UPC`가 각 책의 고유 식별자이고 `star-rating` 클래스의 단어(One~Five)를 파싱해 별점 숫자로 변환하는 것이 이 사이트 스크래핑 연습의 전형적인 포인트입니다.",
+              "text": "분석 대상"
+            },
+            {
+              "role": "assistant",
+              "text": "Fantasy 카테고리 (총 48권, 3페이지)의 마지막 페이지 → 마지막 책: \"Myriad (Prentor #1)\""
+            },
+            {
+              "role": "assistant",
+              "text": "1. Breadcrumb (탐색 경로)",
               "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "Home / Books / Fantasy / Myriad (Prentor #1)"
+            },
+            {
+              "role": "assistant",
+              "text": "2. 상품 헤더 영역 (<article class=\"product_page\">)"
+            },
+            {
+              "role": "assistant",
+              "text": "3. Product Description"
+            },
+            {
+              "role": "assistant",
+              "text": "- 내용: 주인공 Kalin(warlock)이 자신의 능력을 부정당하며 살다가 18세에 집을 떠나고, 왕실을 위협하는 다크 워락을 막을 특별한 힘을 가졌다는 사실을 알게 되는 판타지 노벨라(약 27,000단어 분량)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "4. Product Information (표)"
+            },
+            {
+              "role": "assistant",
+              "text": "스크래핑 관점 요약: 이 상세 페이지는 books.toscrape.com의 표준 템플릿을 그대로 따르며, UPC가 각 책의 고유 식별자이고 star-rating 클래스의 단어(One~Five)를 파싱해 별점 숫자로 변환하는 것이 이 사이트 스크래핑 연습의 전형적인 포인트입니다.",
+              "badge": 3
             }
           ],
           "fit": true

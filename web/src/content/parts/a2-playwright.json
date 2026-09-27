@@ -109,8 +109,29 @@
             },
             {
               "role": "assistant",
-              "badge": 2,
-              "text": "모든 설정과 테스트를 완료했습니다. 결과 요약:\n\n설치/설정 완료\n  · claude plugin install playwright@claude-plugins-official --scope project 로 설치 완료 (project 스코프)\n  · .mcp.json은 생성되지 않음 (확인 완료)\n\n결론\n설정이 전부 디스크(.claude/settings.json)에 저장되어 세션 상태에 의존하지 않고, Node/Chrome/Chromium 바이너리도 이미 설치되어 있어 재다운로드가 필요 없습니다. Claude 종료 후 재부팅해도 바로 인식되어 사용 가능한 상태입니다. 종료 후 재부팅하셔도 됩니다."
+              "text": "모든 설정과 테스트를 완료했습니다. 결과 요약:",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "설치/설정 완료"
+            },
+            {
+              "role": "assistant",
+              "text": "  · claude plugin install playwright@claude-plugins-official --scope project 로 설치 완료 (project 스코프)"
+            },
+            {
+              "role": "assistant",
+              "text": "  · .mcp.json은 생성되지 않음 (확인 완료)"
+            },
+            {
+              "role": "assistant",
+              "text": "결론"
+            },
+            {
+              "role": "assistant",
+              "text": "설정이 전부 디스크(.claude/settings.json)에 저장되어 세션 상태에 의존하지 않고, Node/Chrome/Chromium 바이너리도 이미 설치되어 있어 재다운로드가 필요 없습니다. Claude 종료 후 재부팅해도 바로 인식되어 사용 가능한 상태입니다. 종료 후 재부팅하셔도 됩니다.",
+              "badge": 3
             }
           ],
           "fit": true

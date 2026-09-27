@@ -57,8 +57,40 @@
             },
             {
               "role": "assistant",
-              "text": "book-search 스킬은 다음 경로에 생성 완료했습니다.\n\n.claude/skills/book-search/\n  SKILL.md       # 스킬 설명 및 사용법\n  package.json   # playwright 의존성\n  cli.mjs        # 실제 CLI 로직\n\n구현된 3개 명령\n- node cli.mjs categories — 전체 카테고리 목록(이름+URL)\n- node cli.mjs list \"<category-url>\" [--page N] — 카테고리별 책 목록(페이지네이션 지원)\n- node cli.mjs detail \"<book-url>\" — 책 상세정보(가격/재고/별점/설명/상품정보 표/브레드크럼)\n\ncategories 명령: 실제 실행 성공 — 실 사이트에서 Travel, Mystery, Historical Fiction... 등 정상 파싱 확인",
+              "text": "book-search 스킬은 다음 경로에 생성 완료했습니다.",
               "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": ".claude/skills/book-search/"
+            },
+            {
+              "role": "assistant",
+              "text": "  SKILL.md       # 스킬 설명 및 사용법"
+            },
+            {
+              "role": "assistant",
+              "text": "  cli.mjs        # 실제 CLI 로직"
+            },
+            {
+              "role": "assistant",
+              "text": "구현된 3개 명령"
+            },
+            {
+              "role": "assistant",
+              "text": "- node cli.mjs categories — 전체 카테고리 목록(이름+URL)"
+            },
+            {
+              "role": "assistant",
+              "text": "- node cli.mjs list \"<category-url>\" [--page N] — 카테고리별 책 목록(페이지네이션 지원)"
+            },
+            {
+              "role": "assistant",
+              "text": "- node cli.mjs detail \"<book-url>\" — 책 상세정보(가격/재고/별점/설명/상품정보 표/브레드크럼)"
+            },
+            {
+              "role": "assistant",
+              "text": "categories 명령: 실제 실행 성공 — 실 사이트에서 Travel, Mystery, Historical Fiction... 등 정상 파싱 확인"
             }
           ],
           "fit": true
@@ -73,12 +105,7 @@
         {
           "n": 2,
           "head": "3개 명령 생성, categories 실행 검증",
-          "body": "SKILL.md·package.json·cli.mjs 세 파일을 만들고, categories 명령은 실제 사이트에 접속해 정상 동작까지 확인했습니다."
-        },
-        {
-          "n": "!",
-          "head": "실제 소요 시간 644.8초",
-          "body": "이 작업은 리허설에서 총 644.8초가 걸렸고, list·detail 명령은 다른 프로세스로 컴퓨터가 느려진 상태라 실행 검증이 지연됐습니다."
+          "body": "SKILL.md·package.json·cli.mjs 세 파일을 만들고, categories 명령을 실제 사이트에 실행해 확인합니다."
         }
       ],
       "action": {
@@ -208,8 +235,16 @@
             },
             {
               "role": "assistant",
-              "text": "3번째 책은 \"The Firm\"입니다.\n\n가격: £45.56 / 재고: 5권 (In stock) / 평점: 3/5 (Three).\n\n줄거리: 미치 맥디어(Mitch McDeere)는 멤피스의 로펌 Bendini, Lambert & Locke에 채용되면서 아내 애비(Abby)와 함께 성공가도에 들어섰다고 생각한다. 하지만 결국 FBI가 이 로펌의 비밀을 캐내고 미치의 도움을 요구하면서, 그는 살아남기 위해 진퇴양난의 상황에 놓이게 된다.",
+              "text": "3번째 책은 \"The Firm\"입니다.",
               "badge": 3
+            },
+            {
+              "role": "assistant",
+              "text": "가격: £45.56 / 재고: 5권 (In stock) / 평점: 3/5 (Three)."
+            },
+            {
+              "role": "assistant",
+              "text": "줄거리: 미치 맥디어(Mitch McDeere)는 멤피스의 로펌 Bendini, Lambert & Locke에 채용되면서 아내 애비(Abby)와 함께 성공가도에 들어섰다고 생각한다. 하지만 결국 FBI가 이 로펌의 비밀을 캐내고 미치의 도움을 요구하면서, 그는 살아남기 위해 진퇴양난의 상황에 놓이게 된다."
             }
           ],
           "fit": true
@@ -267,8 +302,16 @@
             },
             {
               "role": "assistant",
-              "text": "5번째 책은 \"The Fabric of the Cosmos: Space, Time, and the Texture of Reality\"입니다.\n\n가격: £55.91 / 재고: In stock / 평점: 1/5 (One).\n\n책 내용도 설명해드릴까요? (상세 페이지를 조회해서 줄거리를 가져올 수 있습니다.)",
+              "text": "5번째 책은 \"The Fabric of the Cosmos: Space, Time, and the Texture of Reality\"입니다.",
               "badge": 3
+            },
+            {
+              "role": "assistant",
+              "text": "가격: £55.91 / 재고: In stock / 평점: 1/5 (One)."
+            },
+            {
+              "role": "assistant",
+              "text": "책 내용도 설명해드릴까요? (상세 페이지를 조회해서 줄거리를 가져올 수 있습니다.)"
             }
           ]
         }
@@ -363,7 +406,8 @@
                 "text": "Read(상세페이지 스냅샷 yml)",
                 "badge": 2
               }
-            ]
+            ],
+            "fit": true
           }
         }
       },
@@ -401,7 +445,8 @@
                 "text": "node cli.mjs list \".../science_22\" --page 1",
                 "badge": 3
               }
-            ]
+            ],
+            "fit": true
           }
         }
       },
@@ -423,8 +468,8 @@
         },
         {
           "n": "!",
-          "head": "완전히 새 세션이면 MCP 11번까지",
-          "body": "사이트를 한 번도 안 가본 새 세션에서는 같은 종류의 질문에 MCP 도구 호출이 11번까지 늘어난 적도 있습니다."
+          "head": "처음 탐색할 땐 MCP 11번",
+          "body": "사이트 구조를 처음 익히던 판타지 카테고리 실습에서는 MCP 도구 호출이 11번이었습니다."
         }
       ]
     }

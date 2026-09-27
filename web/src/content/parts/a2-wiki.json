@@ -1,0 +1,460 @@
+{
+  "id": "a2-wiki",
+  "title": "위키백과 사전 스킬 만들기",
+  "summary": "Playwright MCP 로 위키백과 대문에 접속해 검색하고 목차를 분석한 뒤, 같은 방식을 wiki-dic CLI 스킬로 만들어 캐시 기반 검색·목차·상세 조회로 대체한다.",
+  "slides": [
+    {
+      "id": "a2-wiki-01",
+      "template": "compare",
+      "title": "위키백과 대문 접속",
+      "left": {
+        "label": "크롬 · 위키백과 대문",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a2/a2-wiki-01-main.png"
+        }
+      },
+      "right": {
+        "label": "클로드 터미널",
+        "screen": {
+          "kind": "vscode",
+          "folder": "work2",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+            "turns": [
+              {
+                "role": "user",
+                "text": "playwright mcp로 https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:%EB%8C%80%EB%AC%B8 접속해줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "ToolSearch(browser_navigate 스키마 조회)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_navigate(위키백과:대문)"
+              },
+              {
+                "role": "assistant",
+                "text": "Playwright MCP 도구를 다시 불러오겠습니다. 위키백과 대문(https://ko.wikipedia.org/wiki/위키백과:대문)에 접속했습니다. 페이지 제목은 \"위키백과, 우리 모두의 백과사전\"입니다. 추가로 페이지 내용을 확인하거나 특정 작업을 원하시면 말씀해 주세요.",
+                "badge": 2
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "대문 접속 요청",
+          "body": "위키백과 대문 주소를 그대로 주고 접속해 달라고 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "접속 완료 답변",
+          "body": "클로드가 접속을 마치고 페이지 제목까지 확인해서 알려줍니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "playwright mcp로 https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:%EB%8C%80%EB%AC%B8 접속해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2-wiki-02",
+      "template": "compare",
+      "title": "'인공지능' 검색",
+      "left": {
+        "label": "크롬 · 인공지능 문서",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a2/a2-wiki-02-search.png"
+        }
+      },
+      "right": {
+        "label": "클로드 터미널",
+        "screen": {
+          "kind": "vscode",
+          "folder": "work2",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+            "turns": [
+              {
+                "role": "user",
+                "text": "현재 화면에서 검색버튼과 검색창을 찾고, '인공지능'을 검색해서 페이지 들어가줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "Read(페이지 스냅샷 yml)"
+              },
+              {
+                "role": "tool",
+                "text": "ToolSearch(browser_type 스키마 조회)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_type(검색창 e24, \"인공지능\", submit=true)",
+                "badge": 2
+              },
+              {
+                "role": "assistant",
+                "text": "현재 페이지 스냅샷에서 검색창을 찾아보겠습니다. 검색창(e24)과 검색버튼(e26)을 찾았습니다. \"인공지능\"을 입력하고 검색하겠습니다. \"인공지능\" 검색 후 해당 문서(https://ko.wikipedia.org/wiki/인공지능)로 바로 진입했습니다. 페이지 제목: \"인공지능 - 위키백과, 우리 모두의 백과사전\".",
+                "badge": 3
+              }
+            ]
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "검색창·검색버튼 위치 확인",
+          "body": "스냅샷에서 검색창(e24)과 검색버튼(e26)의 위치를 먼저 찾습니다."
+        },
+        {
+          "n": 2,
+          "head": "입력과 Enter 한 번에",
+          "body": "browser_type 호출에 submit:true 를 함께 줘서 타이핑과 Enter 를 한 번에 실행합니다."
+        },
+        {
+          "n": 3,
+          "head": "인공지능 문서로 바로 진입",
+          "body": "제목이 정확히 일치해 검색 결과 목록 없이 인공지능 문서로 바로 이동합니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "현재 화면에서 검색버튼과 검색창을 찾고, '인공지능'을 검색해서 페이지 들어가줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2-wiki-03",
+      "template": "compare",
+      "title": "목차 구조 분석",
+      "left": {
+        "label": "크롬 · 인공지능 문서",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a2/a2-wiki-03-toc.png"
+        }
+      },
+      "right": {
+        "label": "클로드 터미널",
+        "screen": {
+          "kind": "vscode",
+          "folder": "work2",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+            "turns": [
+              {
+                "role": "user",
+                "text": "현재 페이지의 목차구조를 분석한다음, 위에서 세번째 목차에 있는 내용들 읽어서 하위목차구조와 함께 설명해줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "Read(전체 페이지 스냅샷 yml)"
+              },
+              {
+                "role": "tool",
+                "text": "Grep(목차/heading 패턴 검색)",
+                "badge": 2
+              },
+              {
+                "role": "tool",
+                "text": "Grep(주요_능력과_연구_분야 좁혀서 재검색)"
+              },
+              {
+                "role": "assistant",
+                "text": "내용을 다 읽었습니다. 정리해서 설명드립니다.",
+                "badge": 3
+              },
+              {
+                "role": "assistant",
+                "text": "목차 구조 (상위)"
+              },
+              {
+                "role": "assistant",
+                "text": "3. 주요 능력과 연구 분야 ← 세 번째 목차"
+              },
+              {
+                "role": "assistant",
+                "text": "개요: 인공지능 연구는 시스템을 \"어떻게\" 만드는지뿐 아니라 \"무엇을 할 수 있는지\"를 기준으로도 분류된다. 아래 4가지 하위 분야로 나뉘며, 실제 시스템(예: 길 안내 서비스)은 여러 능력을 함께 사용한다."
+              },
+              {
+                "role": "assistant",
+                "text": "3.1 추론, 문제 해결과 지식 표현"
+              },
+              {
+                "role": "assistant",
+                "text": "3.2 학습과 예측"
+              },
+              {
+                "role": "assistant",
+                "text": "3.3 언어와 지각"
+              },
+              {
+                "role": "assistant",
+                "text": "3.4 계획, 의사 결정과 로봇공학"
+              }
+            ],
+            "fit": true
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "목차 분석 요청",
+          "body": "목차를 분석하고 위에서 세 번째 목차 내용을 하위 목차까지 설명해 달라고 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "스냅샷에서 목차 재확인",
+          "body": "Read 와 Grep 으로 이미 열려 있는 페이지 스냅샷에서 목차 구조를 다시 찾아냅니다."
+        },
+        {
+          "n": 3,
+          "head": "3번째 목차, 하위 4개 항목",
+          "body": "주요 능력과 연구 분야를 3.1~3.4 네 개 하위 목차와 함께 설명합니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "현재 페이지의 목차구조를 분석한다음, 위에서 세번째 목차에 있는 내용들 읽어서 하위목차구조와 함께 설명해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2-wiki-04",
+      "template": "screen",
+      "title": "/skill-creator 로 wiki-dic 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "work2",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/skill-creator 현재 진행한 방식을 토대로, playwright 라이브러리를 활용해서 cli스킬을 만들어줘. 검색어 키워드를 사용하면 그 키워드의 검색결과를 구조화된 문서형태로 스킬폴더에 캐시폴더에 저장하고, 우선 키워드검색하면 목차구조를 출력하고, 이후 키워드와 상세 목차를 선택해서 사용하면 상세 내용을 출력하는 방식으로, 현재폴더의 .claude/skills폴더에 wiki-dic이라는 스킬로 만들어줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(work2/.claude/skills 폴더 목록 확인)"
+            },
+            {
+              "role": "tool",
+              "text": "Read(book-search/SKILL.md, cli.mjs 템플릿으로 확인)"
+            },
+            {
+              "role": "tool",
+              "text": "browser_run_code_unsafe(위키백과 실제 DOM 구조 확인)"
+            },
+            {
+              "role": "tool",
+              "text": "Write(package.json)"
+            },
+            {
+              "role": "tool",
+              "text": "Write(cli.mjs)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(npm install)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(node cli.mjs search \"인공지능\")"
+            },
+            {
+              "role": "tool",
+              "text": "Edit(cli.mjs, 목차 번호 버그 수정)",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "Write(SKILL.md)"
+            },
+            {
+              "role": "assistant",
+              "text": "/skill-creator 명령은 이 세션에 설치되어 있지 않아 실행되지 않았지만, book-search 스킬의 구조를 참고해 동일한 방식으로 wiki-dic 스킬을 직접 만들어 .claude/skills/wiki-dic에 두었고 방금 새 스킬로 인식됐습니다(위 system-reminder에 등록 확인).",
+              "badge": 3
+            },
+            {
+              "role": "assistant",
+              "text": "만든 것"
+            },
+            {
+              "role": "assistant",
+              "text": ".claude/skills/wiki-dic/ (cli.mjs, package.json, SKILL.md, cache/)"
+            },
+            {
+              "role": "assistant",
+              "text": "- search \"<키워드>\": 대문 페이지 → 검색창에 타이핑 → Enter 실행 후, 문서 전체를 파싱해 cache/<키워드>.json에 저장하고 목차만 출력."
+            },
+            {
+              "role": "assistant",
+              "text": "- section \"<키워드>\" <인덱스>: 캐시에서 해당 목차 번호(\"3\", \"3.2\" 등)의 상세 내용을 하위 목차 구조까지 포함해서 재귀적으로 출력."
+            },
+            {
+              "role": "assistant",
+              "text": "- toc \"<키워드>\": 캐시된 목차만 네트워크 없이 재출력."
+            },
+            {
+              "role": "assistant",
+              "text": "실제 위키백과 HTML 구조를 Playwright로 직접 확인한 뒤 그에 맞춰 파서를 작성했고, \"인공지능\" 키워드로 search/toc/section(3번, 0번)/검색결과없음 케이스를 모두 실제 실행해 검증했습니다."
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "검색·목차·상세조회 스킬 요청",
+          "body": "검색·목차·상세 조회 세 기능을 캐시까지 포함해 wiki-dic 스킬로 만들어 달라고 한 번에 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "DOM 직접 확인 후 버그 수정",
+          "body": "book-search 파일을 템플릿 삼고 위키백과 실제 HTML 구조를 코드로 확인한 뒤, 목차 번호가 잘못 매겨지는 버그를 찾아 고칩니다."
+        },
+        {
+          "n": 3,
+          "head": "wiki-dic 스킬 완성",
+          "body": "cli.mjs·package.json·SKILL.md·cache 폴더까지 갖춘 wiki-dic 스킬이 만들어집니다."
+        },
+        {
+          "n": "!",
+          "head": "351초 · 도구 20회",
+          "body": "리허설에서는 도구 20번 호출, 351초가 걸렸습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/skill-creator 현재 진행한 방식을 토대로, playwright 라이브러리를 활용해서 cli스킬을 만들어줘. 검색어 키워드를 사용하면 그 키워드의 검색결과를 구조화된 문서형태로 스킬폴더에 캐시폴더에 저장하고, 우선 키워드검색하면 목차구조를 출력하고, 이후 키워드와 상세 목차를 선택해서 사용하면 상세 내용을 출력하는 방식으로, 현재폴더의 .claude/skills폴더에 wiki-dic이라는 스킬로 만들어줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2-wiki-05",
+      "template": "screen",
+      "title": "완성된 wiki-dic 스킬 폴더",
+      "screen": {
+        "kind": "vscode",
+        "folder": "work2",
+        "sidebar": "explorer",
+        "files": [
+          {
+            "name": ".claude",
+            "folder": true
+          },
+          {
+            "name": "skills",
+            "folder": true,
+            "depth": 1
+          },
+          {
+            "name": "wiki-dic",
+            "folder": true,
+            "depth": 2,
+            "active": true
+          },
+          {
+            "name": "SKILL.md",
+            "depth": 3,
+            "badge": 1,
+            "active": true
+          },
+          {
+            "name": "cli.mjs",
+            "depth": 3,
+            "badge": 2
+          },
+          {
+            "name": "package.json",
+            "depth": 3
+          },
+          {
+            "name": "package-lock.json",
+            "depth": 3
+          },
+          {
+            "name": "cache",
+            "folder": true,
+            "depth": 3
+          }
+        ],
+        "editor": {
+          "file": "SKILL.md",
+          "lines": [
+            "### 1. Search a keyword (fetch + cache + print table of contents)",
+            "node cli.mjs search \"<keyword>\"",
+            "### 2. Re-print a cached table of contents (no network call)",
+            "node cli.mjs toc \"<keyword>\"",
+            "### 3. Read a section's detailed content",
+            "node cli.mjs section \"<keyword>\" <index>"
+          ],
+          "badge": 3
+        },
+        "noTerminal": true,
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\tmp\\adv02-rehearsal2\\work2",
+          "turns": []
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "SKILL.md · 스킬 설명",
+          "body": "이름·설명과 search/toc/section 세 명령의 사용법이 담긴 SKILL.md 가 스킬 폴더 맨 위에 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "cli.mjs · Playwright 로직",
+          "body": "Playwright 로 헤드리스 크롬을 띄워 위키백과를 읽고 파싱하는 코드가 이 한 파일에 들어 있습니다."
+        },
+        {
+          "n": 3,
+          "head": "search · toc · section 세 명령",
+          "body": "키워드 검색과 캐싱, 캐시 재출력, 하위 목차까지 포함한 상세 내용 조회를 각각 명령 하나로 호출합니다."
+        }
+      ]
+    }
+  ]
+}

@@ -11,5 +11,10 @@
     "Playwright MCP 응용하기"
   ],
   "practice": "Playwright MCP 를 설치해 books.toscrape.com 을 탐색하고 book-search CLI 스킬로 반복 작업을 대체한 뒤, 위키백과 검색 결과를 wiki-dic 스킬로 캐싱하고, 데모 커뮤니티 사이트에 회원가입부터 게시물·댓글 작성까지 자동화하는 스킬을 만들고, 네이버 페이지 조작과 가이드 영상 제작까지 응용한다.",
-  "parts": ["a2-playwright", "a2-books"]
+  "parts": [
+    "a2-playwright",
+    "a2-books",
+    "a2-booksearch",
+    "a2-wiki"
+  ]
 }
