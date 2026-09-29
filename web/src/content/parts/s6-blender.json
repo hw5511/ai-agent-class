@@ -160,7 +160,7 @@
               "title": "",
               "rows": [
                 { "seg": [{ "t": "● get_scene_info()", "c": "bold" }], "badge": 1 },
-                { "seg": [{ "t": "  ⎿  blender MCP connected", "c": "dim" }], "badge": 2 },
+                { "seg": [{ "t": "  ⎿  blender MCP connected", "c": "green" }], "badge": 2 },
                 { "seg": [{ "t": "  ⎿  scene: Cube, Camera, Light", "c": "dim" }] },
                 { "seg": [] },
                 { "seg": [{ "t": "  ⎿  addon protocol 5, expected 9 (update recommended)", "c": "dim" }] }
