@@ -20,14 +20,21 @@
           "fit": true,
           "turns": [
             { "role": "user", "text": "cafe-landing 이라는 폴더를 만들고 여기에 간단한 카페 랜딩 페이지를 만들어서 새로운 레포로 업로드 해줘", "badge": 1 },
-            { "role": "tool", "text": "Bash(mkdir cafe-landing)" },
+            { "role": "tool", "text": "PowerShell(mkdir cafe-landing)" },
             { "role": "tool", "text": "Write(cafe-landing/index.html)" },
-            { "role": "tool", "text": "Bash(git init)" },
-            { "role": "tool", "text": "Bash(git add .)" },
-            { "role": "tool", "text": "Bash(git commit -m \"카페 랜딩 페이지 첫 버전\")", "badge": 2 },
-            { "role": "tool", "text": "Bash(gh repo create student/cafe-landing --public --source . --push)" },
+            { "role": "tool", "text": "PowerShell(git init)" },
+            { "role": "tool", "text": "PowerShell(git add .)" },
+            { "role": "tool", "text": "PowerShell(git commit -m \"카페 랜딩 페이지 첫 버전\")", "badge": 2 },
+            { "role": "tool", "text": "PowerShell(gh repo create student/cafe-landing --public --source . --push)" },
             { "role": "assistant", "text": "cafe-landing 폴더를 만들고 레포에 업로드했어요. https://github.com/student/cafe-landing", "badge": 3 }
-          ]
+          ],
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              { "t": "⏵⏵ bypass permissions on", "c": "red" },
+              { "t": " (shift+tab to cycle)", "c": "dim" }
+            ]
+          }
         }
       },
       "notes": [
@@ -112,11 +119,18 @@
             "turns": [
               { "role": "user", "text": "README.md 파일을 만들어서 이 폴더가 뭔지 설명하고 레포에 올려줘", "badge": 1 },
               { "role": "tool", "text": "Write(cafe-landing/README.md)" },
-              { "role": "tool", "text": "Bash(git add README.md)" },
-              { "role": "tool", "text": "Bash(git commit -m \"README 추가\")", "badge": 2 },
-              { "role": "tool", "text": "Bash(git push)" },
+              { "role": "tool", "text": "PowerShell(git add README.md)" },
+              { "role": "tool", "text": "PowerShell(git commit -m \"README 추가\")", "badge": 2 },
+              { "role": "tool", "text": "PowerShell(git push)" },
               { "role": "assistant", "text": "README.md 를 만들어서 레포에 올렸어요." }
-            ]
+            ],
+            "footer": {
+              "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+              "seg": [
+                { "t": "⏵⏵ bypass permissions on", "c": "red" },
+                { "t": " (shift+tab to cycle)", "c": "dim" }
+              ]
+            }
           }
         }
       },
@@ -200,7 +214,7 @@
             { "name": "cafe-landing", "folder": true, "selected": true, "badge": 1 }
           ],
           "noTerminal": true,
-          "terminal": { "vendor": "claude", "cwd": "C:\\agent1", "turns": [] },
+          "terminal": { "vendor": "claude", "cwd": "C:\\agent1", "turns": [], "footer": { "text": "⏵⏵ bypass permissions on (shift+tab to cycle)", "seg": [ { "t": "⏵⏵ bypass permissions on", "c": "red" }, { "t": " (shift+tab to cycle)", "c": "dim" } ] } },
           "keycap": { "keys": ["Delete"], "badge": 2 },
           "confirm": {
             "title": "Are you sure you want to delete 'cafe-landing' and its contents?",
@@ -220,7 +234,7 @@
           "folder": "agent1",
           "files": [],
           "noTerminal": true,
-          "terminal": { "vendor": "claude", "cwd": "C:\\agent1", "turns": [] }
+          "terminal": { "vendor": "claude", "cwd": "C:\\agent1", "turns": [], "footer": { "text": "⏵⏵ bypass permissions on (shift+tab to cycle)", "seg": [ { "t": "⏵⏵ bypass permissions on", "c": "red" }, { "t": " (shift+tab to cycle)", "c": "dim" } ] } }
         }
       },
       "notes": [
@@ -247,20 +261,27 @@
           "turns": [
             { "role": "user", "text": "/clear" },
             { "role": "user", "text": "https://github.com/student/cafe-landing 이 레포를 현재 폴더에 클론 해줘", "badge": 1 },
-            { "role": "tool", "text": "Bash(git clone https://github.com/student/cafe-landing)" },
+            { "role": "tool", "text": "PowerShell(git clone https://github.com/student/cafe-landing)" },
             { "role": "assistant", "text": "레포를 클론해서 cafe-landing 폴더를 되살렸어요." }
-          ]
+          ],
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              { "t": "⏵⏵ bypass permissions on", "c": "red" },
+              { "t": " (shift+tab to cycle)", "c": "dim" }
+            ]
+          }
         }
       },
       "notes": [
-        { "n": 1, "head": "레포 주소로 클론 요청", "body": "지워진 레포 주소를 그대로 붙여넣고 현재 폴더에 클론해달라고 입력해 보세요." },
+        { "n": 1, "head": "레포 주소로 클론 요청", "body": "지워진 레포 주소를 그대로 붙여넣되 student 를 내 GitHub 계정 이름으로 바꿔서 현재 폴더에 클론해달라고 입력해 보세요." },
         { "n": 2, "head": "폴더 복구 완료", "body": "클론이 끝나면 탐색기에 cafe-landing 폴더가 다시 나타납니다." }
       ],
       "action": {
         "label": "프롬프트 복사",
         "items": [
           { "kind": "copy", "value": "/clear" },
-          { "kind": "copy", "value": "https://github.com/student/cafe-landing 이 레포를 현재 폴더에 클론 해줘" }
+          { "kind": "copy", "value": "https://github.com/student/cafe-landing 이 레포를 현재 폴더에 클론 해줘", "desc": "student 를 내 GitHub 계정 이름으로 바꿔서 보내세요" }
         ]
       }
     }

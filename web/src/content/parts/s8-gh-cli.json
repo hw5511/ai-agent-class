@@ -53,7 +53,20 @@
               "text": "이 링크를 열어 코드를 입력하세요: https://github.com/login/device",
               "badge": 3
             }
-          ]
+          ],
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         }
       },
       "notes": [
@@ -149,14 +162,27 @@
             },
             {
               "role": "tool",
-              "text": "Bash(gh auth status)"
+              "text": "PowerShell(gh auth status)"
             },
             {
               "role": "assistant",
               "text": "github.com 에 student 계정으로 로그인되어 있습니다.",
               "badge": 2
             }
-          ]
+          ],
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         }
       },
       "notes": [

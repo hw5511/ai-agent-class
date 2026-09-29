@@ -18,7 +18,20 @@
             { "role": "user", "text": "내가 카드뉴스를 만들고 싶은데 어떤 파이썬 라이브러리를 쓰면 좋을지 추천해줘", "badge": 1 },
             { "role": "assistant", "text": "이미지 위에 글자와 도형을 얹어 카드뉴스를 만들기엔 Pillow 라이브러리가 좋습니다", "badge": 2 }
           ],
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         }
       },
       "notes": [
@@ -28,6 +41,7 @@
       "action": {
         "label": "프롬프트 복사",
         "items": [
+          { "kind": "copy", "value": "claude --dangerously-skip-permissions", "desc": "VS Code 터미널에서 클로드를 bypass 모드로 켜기" },
           { "kind": "copy", "value": "내가 카드뉴스를 만들고 싶은데 어떤 파이썬 라이브러리를 쓰면 좋을지 추천해줘" }
         ]
       }
@@ -45,7 +59,20 @@
           "cwd": "C:\\agent1",
           "turns": [],
           "input": { "text": "그걸로 'ai트렌드'를 제목으로 하는 인스타용 카드뉴스 표지를 만들기 위한 스크립트를 현재폴더에 작성해서 만들어줘", "badge": 1 },
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         }
       },
       "notes": [
@@ -76,15 +103,28 @@
           "turns": [
             { "role": "user", "text": "그걸로 'ai트렌드'를 제목으로 하는 인스타용 카드뉴스 표지를 만들기 위한 스크립트를 현재폴더에 작성해서 만들어줘" },
             { "role": "assistant", "text": "Write(cardnews_cover.py)", "badge": 1 },
-            { "role": "assistant", "text": "Bash(python cardnews_cover.py)", "badge": 2 }
+            { "role": "assistant", "text": "PowerShell(python cardnews_cover.py)", "badge": 2 }
           ],
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         },
         "imageEditor": { "file": "ai트렌드_표지.png", "src": "/shots/s7/ai-trend-cover.png", "meta": "1080 x 1350", "badge": 3 }
       },
       "notes": [
         { "n": 1, "head": "Write 로 스크립트 작성", "body": "Write 툴이 cardnews_cover.py 파일에 표지를 그리는 코드를 새로 작성합니다." },
-        { "n": 2, "head": "Bash 로 바로 실행", "body": "이어서 Bash 툴이 python cardnews_cover.py 를 실행해서 스크립트를 곧바로 돌립니다." },
+        { "n": 2, "head": "PowerShell 로 바로 실행", "body": "이어서 PowerShell 툴이 python cardnews_cover.py 를 실행해서 스크립트를 곧바로 돌립니다." },
         { "n": 3, "head": "표지 이미지 생성", "body": "실행이 끝나면 ai트렌드_표지.png 파일이 새로 생기고, 열어보면 제목이 들어간 카드뉴스 표지가 보입니다." }
       ]
     },
@@ -104,7 +144,20 @@
           "cwd": "C:\\agent1",
           "turns": [],
           "input": { "text": "색상테마를 녹색으로 바꿔주고, 디자인을 좀더 세련되게 수정해줘", "badge": 1 },
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         }
       },
       "notes": [
@@ -134,23 +187,36 @@
           "cwd": "C:\\agent1",
           "turns": [
             { "role": "user", "text": "색상테마를 녹색으로 바꿔주고, 디자인을 좀더 세련되게 수정해줘" },
-            { "role": "assistant", "text": "Edit(cardnews_cover.py)", "badge": 1 },
-            { "role": "assistant", "text": "Bash(python cardnews_cover.py)", "badge": 2 }
+            { "role": "assistant", "text": "Update(cardnews_cover.py)", "badge": 1 },
+            { "role": "assistant", "text": "PowerShell(python cardnews_cover.py)", "badge": 2 }
           ],
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         },
         "imageEditor": { "file": "ai트렌드_표지.png", "src": "/shots/s7/ai-trend-cover-green.png", "meta": "1080 x 1350", "badge": 3 }
       },
       "notes": [
-        { "n": 1, "head": "Edit 로 코드만 수정", "body": "Write 대신 Edit 툴이 cardnews_cover.py 안에서 색상과 레이아웃에 해당하는 부분만 골라 고칩니다." },
-        { "n": 2, "head": "다시 Bash 로 실행", "body": "고친 코드를 Bash 툴이 다시 실행해서 바뀐 스크립트를 곧바로 반영합니다." },
+        { "n": 1, "head": "Update 로 코드만 수정", "body": "Write 대신 Edit 툴이 cardnews_cover.py 안에서 색상과 레이아웃에 해당하는 부분만 골라 고치고, 화면에는 Update(cardnews_cover.py)로 표시됩니다." },
+        { "n": 2, "head": "다시 PowerShell 로 실행", "body": "고친 코드를 PowerShell 툴이 다시 실행해서 바뀐 스크립트를 곧바로 반영합니다." },
         { "n": 3, "head": "같은 파일이 새 모습으로", "body": "ai트렌드_표지.png 를 다시 열어보면 같은 파일 이름인데 녹색 테마의 더 세련된 표지로 바뀌어 있습니다." }
       ]
     },
     {
       "id": "s7-script-06",
       "template": "screen",
-      "title": "유저 지시 → Write 툴 → Bash 툴",
+      "title": "유저 지시 → Write 툴 → PowerShell 툴",
       "screen": {
         "kind": "terminal",
         "terminal": {
@@ -159,15 +225,28 @@
           "turns": [
             { "role": "user", "text": "그걸로 'ai트렌드'를 제목으로 하는 인스타용 카드뉴스 표지를 만들기 위한 스크립트를 현재폴더에 작성해서 만들어줘", "badge": 1 },
             { "role": "assistant", "text": "Write(cardnews_cover.py)", "badge": 2 },
-            { "role": "assistant", "text": "Bash(python cardnews_cover.py)", "badge": 3 }
+            { "role": "assistant", "text": "PowerShell(python cardnews_cover.py)", "badge": 3 }
           ],
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         }
       },
       "notes": [
         { "n": 1, "head": "유저 지시", "body": "사람이 무엇을 만들지 문장으로 지시하는 부분이 대화의 시작입니다." },
         { "n": 2, "head": "Write 툴", "body": "지시를 이해한 Claude 가 문제를 해결할 스크립트를 코드로 작성하는 단계입니다." },
-        { "n": 3, "head": "Bash 툴", "body": "작성한 스크립트를 그 자리에서 직접 실행해 결과물을 만들어내는 단계입니다." }
+        { "n": 3, "head": "PowerShell 툴", "body": "작성한 스크립트를 그 자리에서 직접 실행해 결과물을 만들어내는 단계입니다." }
       ]
     }
   ]
