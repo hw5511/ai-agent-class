@@ -103,16 +103,16 @@
             },
             {
               "role": "assistant",
-              "text": "Edit(tetris.py) — 시작 버튼 추가",
+              "text": "Update(tetris.py) — 시작 버튼 추가",
               "badge": 2
             },
             {
               "role": "assistant",
-              "text": "Edit(tetris.py) — 블록 베벨 효과"
+              "text": "Update(tetris.py) — 블록 베벨 효과"
             },
             {
               "role": "assistant",
-              "text": "Edit(tetris.py) — 셀 크기 확대"
+              "text": "Update(tetris.py) — 셀 크기 확대"
             }
           ]
         }

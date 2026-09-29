@@ -422,7 +422,7 @@
         {
           "n": 1,
           "head": "입력 대기 상태",
-          "body": "입력창이 비어 있는 대기 상태에서 Ctrl + C 를 누릅니다."
+          "body": "입력창이 비어 있는 대기 상태에서 Ctrl + C 를 약 0.8초 안에 두 번 누릅니다."
         }
       ]
     },
@@ -448,6 +448,14 @@
           "vendor": "shell",
           "cwd": "C:\\Users\\student\\에이전트1",
           "turns": [
+            {
+              "role": "assistant",
+              "text": "Resume this session with:"
+            },
+            {
+              "role": "assistant",
+              "text": "claude --resume [세션 id]"
+            },
             {
               "role": "user",
               "text": ""
