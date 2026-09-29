@@ -112,7 +112,20 @@
           "cwd": "C:\\agent1",
           "turns": [],
           "input": { "text": "현재 카드뉴스 스크립트에서 모든 매개변수 종류를 설명해줘", "badge": 1 },
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         }
       },
       "notes": [
@@ -141,7 +154,20 @@
           "cwd": "C:\\agent1",
           "turns": [],
           "input": { "text": "그 매개변수들을 인자로 하는 cli스크립트를 현재 폴더에 작성해서 3개 정도 테스트해줘", "badge": 1 },
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         }
       },
       "notes": [
@@ -174,16 +200,29 @@
           "turns": [
             { "role": "user", "text": "그 매개변수들을 인자로 하는 cli스크립트를 현재 폴더에 작성해서 3개 정도 테스트해줘" },
             { "role": "assistant", "text": "Write(cardnews_cli.py)" },
-            { "role": "assistant", "text": "Bash(python cardnews_cli.py --title \"AI 트렌드\" --bg-color \"#1e5b3a\" --output cli-test-1.png)", "badge": 1 },
-            { "role": "assistant", "text": "Bash(python cardnews_cli.py --title \"생산성 팁\" --bg-color \"#173a2a\" --output cli-test-2.png)", "badge": 2 },
-            { "role": "assistant", "text": "Bash(python cardnews_cli.py --title \"AI 에이전트\" --bg-color \"#132d45\" --output cli-test-3.png)", "badge": 3 }
+            { "role": "assistant", "text": "PowerShell(python cardnews_cli.py --title \"주간 AI 뉴스\" --bg-color \"#0c2a1c\" --output cli-test-1.png)", "badge": 1 },
+            { "role": "assistant", "text": "PowerShell(python cardnews_cli.py --title \"생산성 꿀팁\" --bg-color \"#171c35\" --output cli-test-2.png)", "badge": 2 },
+            { "role": "assistant", "text": "PowerShell(python cardnews_cli.py --title \"신제품 소개\" --bg-color \"#2c0f24\" --output cli-test-3.png)", "badge": 3 }
           ],
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         },
         "imageEditor": { "file": "cli-test-3.png", "src": "/shots/s7/cli-tests.png", "meta": "1080 x 1350 · 3장" }
       },
       "notes": [
-        { "n": 1, "head": "코드 수정 없이 실행", "body": "cardnews_cli.py 코드는 그대로 두고 옵션 값만 바꿔서 Bash 로 첫 번째 테스트를 실행합니다." },
+        { "n": 1, "head": "코드 수정 없이 실행", "body": "cardnews_cli.py 코드는 그대로 두고 옵션 값만 바꿔서 PowerShell 로 첫 번째 테스트를 실행합니다." },
         { "n": 2, "head": "옵션만 바꿔 재실행", "body": "제목과 배경 색상 옵션만 다시 바꿔서 두 번째 카드뉴스를 만듭니다." },
         { "n": 3, "head": "세 번째까지 반복", "body": "같은 방식으로 세 번째까지 실행하면 코드를 한 번도 고치지 않고 서로 다른 카드뉴스 3장이 만들어집니다." }
       ]

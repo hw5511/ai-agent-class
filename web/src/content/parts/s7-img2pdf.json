@@ -68,7 +68,20 @@
             { "role": "user", "text": "내가 여러 이미지들을 pdf로 병합하고 싶은데 어떤 파이썬 라이브러리를 쓰면 좋을지 추천해줘", "badge": 1 },
             { "role": "assistant", "text": "이미지를 PDF 로 병합할 땐 img2pdf 라이브러리가 좋습니다", "badge": 2 }
           ],
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         }
       },
       "notes": [
@@ -95,19 +108,32 @@
           "cwd": "C:\\agent1",
           "turns": [],
           "input": {
-            "text": "그걸 이용해서 [벚꽃축제 카드뉴스 폴더 경로] 여기에 있는 이미지들을 pdf로 병합하는 스크립트를 현재폴더에 작성해서 만들어줘",
+            "text": "그걸 이용해서 현재폴더에 있는 벚꽃축제 카드뉴스 폴더의 이미지들을 pdf로 병합하는 스크립트를 현재폴더에 작성해서 만들어줘",
             "badge": 1
           },
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         }
       },
       "notes": [
-        { "n": 1, "head": "폴더 경로 자리 채우기", "body": "대괄호 자리에 실제 벚꽃축제 카드뉴스 폴더 경로를 넣어서 그대로 입력합니다." }
+        { "n": 1, "head": "폴더 이름 없이 요청", "body": "앞에서 만든 벚꽃축제 카드뉴스 폴더를 클로드가 현재 폴더에서 찾아 쓰므로 경로를 따로 적지 않고 그대로 입력하면 됩니다." }
       ],
       "action": {
         "label": "프롬프트 복사",
         "items": [
-          { "kind": "copy", "value": "그걸 이용해서 [벚꽃축제 카드뉴스 폴더 경로] 여기에 있는 이미지들을 pdf로 병합하는 스크립트를 현재폴더에 작성해서 만들어줘" }
+          { "kind": "copy", "value": "그걸 이용해서 현재폴더에 있는 벚꽃축제 카드뉴스 폴더의 이미지들을 pdf로 병합하는 스크립트를 현재폴더에 작성해서 만들어줘" }
         ]
       }
     },
@@ -129,10 +155,23 @@
           "cwd": "C:\\agent1",
           "turns": [
             { "role": "assistant", "text": "Write(merge_images.py)" },
-            { "role": "assistant", "text": "Bash(python merge_images.py)", "badge": 3 },
+            { "role": "assistant", "text": "PowerShell(python merge_images.py)", "badge": 3 },
             { "role": "assistant", "text": "✔ 벚꽃축제_카드뉴스.pdf 만들었어요" }
           ],
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         }
       },
       "notes": [
@@ -157,7 +196,20 @@
             "text": "그 스크립트를 현재폴더의 .claude/skills 폴더에 img2pdf폴더를 만들어서 거기에 cli스크립트로 만들어서 작성한뒤, cli스크립트의사용법을 SKILL.md로 기록해줘",
             "badge": 1
           },
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         }
       },
       "notes": [
@@ -190,7 +242,20 @@
               { "seg": [{ "t": "/img2pdf  이미지를 pdf로 병합한다 (project)" }], "badge": 1 }
             ]
           },
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         }
       },
       "notes": [
@@ -201,6 +266,7 @@
         "label": "명령어 복사",
         "items": [
           { "kind": "copy", "value": "/clear" },
+          { "kind": "copy", "value": "/img2pdf" },
           { "kind": "copy", "value": "/reload-skills" }
         ]
       }

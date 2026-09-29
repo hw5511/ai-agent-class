@@ -112,11 +112,11 @@
             },
             {
               "role": "tool",
-              "text": "Bash(pip install 'markitdown[all]')"
+              "text": "PowerShell(pip install 'markitdown[all]')"
             },
             {
               "role": "tool",
-              "text": "Bash(markitdown 강의자료.pdf -o 강의자료.md)",
+              "text": "PowerShell(markitdown 강의자료.pdf -o 강의자료.md)",
               "badge": 2
             },
             {
@@ -128,7 +128,14 @@
               "text": "강의자료.pdf 를 강의자료.md 로 바꾸고, 핵심만 추려 요약노트.md 로 정리했어요.",
               "badge": 3
             }
-          ]
+          ],
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              { "t": "⏵⏵ bypass permissions on", "c": "red" },
+              { "t": " (shift+tab to cycle)", "c": "dim" }
+            ]
+          }
         }
       },
       "notes": [
@@ -191,7 +198,7 @@
             },
             {
               "role": "tool",
-              "text": "Bash(git clone https://github.com/rohitg00/ai-engineering-from-scratch.git)"
+              "text": "PowerShell(git clone https://github.com/rohitg00/ai-engineering-from-scratch.git)"
             },
             {
               "role": "tool",
@@ -207,7 +214,14 @@
               "role": "assistant",
               "text": "퀴즈: AI 프로젝트마다 가상환경을 따로 만드는 이유는 무엇일까요?"
             }
-          ]
+          ],
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              { "t": "⏵⏵ bypass permissions on", "c": "red" },
+              { "t": " (shift+tab to cycle)", "c": "dim" }
+            ]
+          }
         }
       },
       "notes": [
@@ -282,35 +296,42 @@
             },
             {
               "role": "tool",
-              "text": "Bash(pip install cli-anything-hub)"
+              "text": "PowerShell(pip install cli-anything-hub)"
             },
             {
               "role": "tool",
-              "text": "Bash(cli-hub install gimp)",
+              "text": "PowerShell(cli-hub install gimp)",
               "badge": 2
             },
             {
               "role": "tool",
-              "text": "Bash(cli-anything-gimp project new -o edit.json)"
+              "text": "PowerShell(cli-anything-gimp project new -o edit.json)"
             },
             {
               "role": "tool",
-              "text": "Bash(cli-anything-gimp --project edit.json layer add-from-file photos/cafe.jpg)"
+              "text": "PowerShell(cli-anything-gimp --project edit.json layer add-from-file photos/cafe.jpg)"
             },
             {
               "role": "tool",
-              "text": "Bash(cli-anything-gimp --project edit.json filter add grayscale --layer 0)"
+              "text": "PowerShell(cli-anything-gimp --project edit.json filter add grayscale --layer 0)"
             },
             {
               "role": "tool",
-              "text": "Bash(cli-anything-gimp --project edit.json export render photos_bw/cafe.jpg)"
+              "text": "PowerShell(cli-anything-gimp --project edit.json export render photos_bw/cafe.jpg)"
             },
             {
               "role": "assistant",
               "text": "GIMP CLI 로 cafe.jpg 에 흑백 필터를 적용해서 photos_bw/cafe.jpg 로 저장했어요.",
               "badge": 3
             }
-          ]
+          ],
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              { "t": "⏵⏵ bypass permissions on", "c": "red" },
+              { "t": " (shift+tab to cycle)", "c": "dim" }
+            ]
+          }
         }
       },
       "notes": [
@@ -372,11 +393,11 @@
             },
             {
               "role": "tool",
-              "text": "Bash(claude plugin marketplace add anthropics/financial-services)"
+              "text": "PowerShell(claude plugin marketplace add anthropics/financial-services)"
             },
             {
               "role": "tool",
-              "text": "Bash(claude plugin install equity-research@claude-for-financial-services)",
+              "text": "PowerShell(claude plugin install equity-research@claude-for-financial-services)",
               "badge": 2
             },
             {
@@ -388,7 +409,14 @@
               "text": "equity-research 스킬로 애플 최근 분기 실적을 정리해서 애플_실적분석.md 한 장으로 만들었어요.",
               "badge": 3
             }
-          ]
+          ],
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              { "t": "⏵⏵ bypass permissions on", "c": "red" },
+              { "t": " (shift+tab to cycle)", "c": "dim" }
+            ]
+          }
         }
       },
       "notes": [
@@ -454,7 +482,7 @@
             },
             {
               "role": "tool",
-              "text": "Bash(gh search repos \"pdf to markdown\" --sort stars --limit 8)",
+              "text": "PowerShell(gh search repos \"pdf to markdown\" --sort stars --limit 8)",
               "badge": 2
             },
             {
@@ -478,7 +506,14 @@
               "role": "assistant",
               "text": "⎿  jzillmann/pdf-to-markdown · ⭐1.7k · 브라우저에서 바로 PDF 를 마크다운으로 변환"
             }
-          ]
+          ],
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              { "t": "⏵⏵ bypass permissions on", "c": "red" },
+              { "t": " (shift+tab to cycle)", "c": "dim" }
+            ]
+          }
         }
       },
       "notes": [

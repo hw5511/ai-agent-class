@@ -41,7 +41,20 @@
             "text": "만들어둔 카드뉴스 cli스크립트를 표지 말고 본문도 만들수 있게 템플릿을 디자인해서 cli옵션으로 만들고, 현재폴더의 .claude/skills폴더에 cardnews라는 폴더를 만든다음 거기에 cli스크립트를 옮겨두고, 그 cli 스크립트의 사용법을 SKILL.md파일로 가이드를 기록해놔줘",
             "badge": 1
           },
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         }
       },
       "notes": [
@@ -110,7 +123,20 @@
               { "seg": [{ "t": "/cardnews  카드뉴스 표지·본문 이미지를 만든다 (project)" }], "badge": 1 }
             ]
           },
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         }
       },
       "notes": [
@@ -121,6 +147,7 @@
         "label": "명령어 복사",
         "items": [
           { "kind": "copy", "value": "/clear" },
+          { "kind": "copy", "value": "/cardnews" },
           { "kind": "copy", "value": "/reload-skills" }
         ]
       }
@@ -141,7 +168,20 @@
             "text": "/cardnews 한국의 벚꽃축제에 대해 웹조사한다음 6장 정도 분량의 카드뉴스를 현재폴더에 저장폴더를 만들고 거기에 만들어줘",
             "badge": 1
           },
-          "fit": true
+          "fit": true,
+          "footer": {
+            "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+            "seg": [
+              {
+                "t": "⏵⏵ bypass permissions on",
+                "c": "red"
+              },
+              {
+                "t": " (shift+tab to cycle)",
+                "c": "dim"
+              }
+            ]
+          }
         }
       },
       "notes": [
@@ -173,7 +213,20 @@
               { "role": "user", "text": "한국의 벚꽃축제에 대해 웹조사한다음 6장 정도 분량의 카드뉴스를 현재폴더에 저장폴더를 만들고 거기에 만들어줘" },
               { "role": "assistant", "text": "어떤 방식으로 만들까요? 디자인은요?", "badge": 1 }
             ],
-            "fit": true
+            "fit": true,
+            "footer": {
+              "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+              "seg": [
+                {
+                  "t": "⏵⏵ bypass permissions on",
+                  "c": "red"
+                },
+                {
+                  "t": " (shift+tab to cycle)",
+                  "c": "dim"
+                }
+              ]
+            }
           }
         }
       },
@@ -190,14 +243,27 @@
             "turns": [
               { "role": "user", "text": "/cardnews 한국의 벚꽃축제에 대해 웹조사한다음 6장 정도 분량의 카드뉴스를 현재폴더에 저장폴더를 만들고 거기에 만들어줘", "badge": 2 },
               { "role": "assistant", "text": "WebSearch(\"한국 벚꽃축제 2026\")", "badge": 3 },
-              { "role": "assistant", "text": "Bash(cardnews.py --type cover --title 한국의 벚꽃축제 --output 01.png)" },
-              { "role": "assistant", "text": "Bash(cardnews.py --type body --title 진해군항제 --output 02.png)" },
-              { "role": "assistant", "text": "Bash(cardnews.py --type body --title 여의도 봄꽃축제 --output 03.png)" },
-              { "role": "assistant", "text": "Bash(cardnews.py --type body --title 경주 대릉원·보문 --output 04.png)" },
-              { "role": "assistant", "text": "Bash(cardnews.py --type body --title 석촌호수 --output 05.png)" },
-              { "role": "assistant", "text": "Bash(cardnews.py --type body --title 관람 팁 --output 06.png)" }
+              { "role": "assistant", "text": "PowerShell(cardnews.py --type cover --title 한국의 벚꽃축제 --output 01.png)" },
+              { "role": "assistant", "text": "PowerShell(cardnews.py --type body --title 진해군항제 --output 02.png)" },
+              { "role": "assistant", "text": "PowerShell(cardnews.py --type body --title 여의도 봄꽃축제 --output 03.png)" },
+              { "role": "assistant", "text": "PowerShell(cardnews.py --type body --title 경주 대릉원·보문 --output 04.png)" },
+              { "role": "assistant", "text": "PowerShell(cardnews.py --type body --title 석촌호수 --output 05.png)" },
+              { "role": "assistant", "text": "PowerShell(cardnews.py --type body --title 관람 팁 --output 06.png)" }
             ],
-            "fit": true
+            "fit": true,
+            "footer": {
+              "text": "⏵⏵ bypass permissions on (shift+tab to cycle)",
+              "seg": [
+                {
+                  "t": "⏵⏵ bypass permissions on",
+                  "c": "red"
+                },
+                {
+                  "t": " (shift+tab to cycle)",
+                  "c": "dim"
+                }
+              ]
+            }
           }
         }
       },
