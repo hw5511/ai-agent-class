@@ -172,6 +172,17 @@ for (const f of files) {
       if (!KINDS.has(it.kind)) err(w, `action kind ${it.kind}`)
       // action boxes: download a file, open a link, copy a prompt/command — never a key press or a bare name
       if (it.kind === "copy" && /^(Enter|Esc|Space|Tab|Shift\s*\+|Ctrl\s*\+|Cmd\s*\+|[↑↓←→])/i.test(it.value.trim())) err(w, `action is a key press: ${it.value}`)
+      // link/download href must be an absolute URL, mailto, a root path (asset() adds BASE_URL), or an
+      // existing relative asset path (web/public, or the repo-root assets/ that CI copies next to the
+      // build, since the web/public/assets junction exists only locally) — never a bare domain like "claude.ai/x" (issue #57: renders as a
+      // relative link into the class site instead of opening the real site).
+      if ((it.kind === "link" || it.kind === "download") && it.href) {
+        const ok =
+          /^(https?:|mailto:)/i.test(it.href) ||
+          it.href.startsWith("/") ||
+          (!/^[a-z0-9-]+(\.[a-z0-9-]+)+(\/|$)/i.test(it.href) && (existsSync(join(root, "public", it.href)) || existsSync(join(root, "..", it.href))))
+        if (!ok) err(w, `action href is not an absolute URL, root path or existing asset: ${it.href}`)
+      }
     }
     if (s.action && !s.action.label) err(w, "action.label missing")
   }
