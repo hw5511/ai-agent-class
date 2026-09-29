@@ -18,7 +18,11 @@
       "notes": [
         { "n": 1, "head": "커넥터 검색창", "body": "화면 위쪽 디렉터리 검색창에 Google Calendar 를 입력해 보세요. 그러면 이름에 캘린더가 들어간 커넥터들이 목록으로 쭉 나타납니다." },
         { "n": 2, "head": "공식 캘린더 커넥터", "body": "목록 맨 위에 있고 이름 옆에 체크 표시가 붙은 Google Calendar 항목이 Claude 가 공식으로 제공하는 커넥터예요. 이걸 눌러야 안전하게 연결할 수 있습니다." }
-      ]
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [{ "kind": "link", "href": "https://claude.ai/directory", "text": "claude.ai/directory" }]
+      }
     },
     {
       "id": "s6-gcal-02",
@@ -33,29 +37,39 @@
     {
       "id": "s6-gcal-03",
       "template": "screen",
-      "title": "액세스 동의",
-      "screen": { "kind": "shot", "src": "/shots/s6/20_cal_4_step.png" },
+      "title": "로그인 확인",
+      "screen": { "kind": "shot", "src": "/shots/s6/20_cal_3_step.png" },
       "notes": [
-        { "n": 1, "head": "요청 권한 확인", "body": "Claude for Google Calendar 가 무엇을 할 수 있게 해달라고 요청하는지 화면에 나온 권한 목록을 한 번 읽어보세요." },
-        { "n": 2, "head": "계속 눌러 승인", "body": "권한 내용을 확인했다면 화면 아래 계속 버튼을 눌러야 클로드가 실제로 내 캘린더에 접근할 수 있게 승인됩니다." }
+        { "n": 1, "head": "로그인 계정 확인", "body": "화면 가운데 표시된 구글 계정으로 Claude for Google Calendar 에 로그인한다는 안내가 나와요. 앞서 고른 계정이 맞는지 한 번 확인해 보세요." },
+        { "n": 2, "head": "계속 눌러 진행", "body": "화면 아래 계속 버튼을 눌러야 다음 단계인 권한 확인 화면으로 넘어갑니다." }
       ]
     },
     {
       "id": "s6-gcal-04",
       "template": "screen",
+      "title": "액세스 동의",
+      "screen": { "kind": "shot", "src": "/shots/s6/20_cal_4_step.png" },
+      "notes": [
+        { "n": 1, "head": "이미 권한 있음 안내", "body": "앞서 노션 커넥터를 연결할 때 이미 동의한 권한이 있어서, 화면 위쪽에 Claude for Google Calendar 에 이미 일부 액세스 권한이 있다는 안내 박스가 떠요." },
+        { "n": 2, "head": "계속 눌러 승인", "body": "안내를 확인했다면 화면 아래 계속 버튼을 눌러야 클로드가 실제로 내 캘린더에 접근할 수 있게 승인됩니다." }
+      ]
+    },
+    {
+      "id": "s6-gcal-05",
+      "template": "screen",
       "title": "연결 확인",
       "screen": { "kind": "shot", "src": "/shots/s6/20_cal_9_yours.png" },
       "notes": [
         { "n": 1, "head": "내 항목에 추가됨", "body": "사용자 지정 화면의 내 항목 탭을 열어보면 방금 연결한 Google Calendar 카드가 목록에 새로 생긴 것을 볼 수 있어요." },
-        { "n": 2, "head": "체크 표시로 확인", "body": "카드 이름 옆에 초록색 체크 표시가 떠 있으면 연결이 정상적으로 끝났다는 뜻이니 다음 단계로 넘어가면 됩니다." }
+        { "n": 2, "head": "상태 열에 체크 표시", "body": "오른쪽 상태 칸에 초록색 체크 표시가 떠 있으면 연결이 정상적으로 끝났다는 뜻이니 다음 단계로 넘어가면 됩니다." }
       ],
       "action": {
         "label": "링크 열기",
-        "items": [{ "kind": "link", "href": "claude.ai/customize/connectors", "text": "claude.ai/customize/connectors" }]
+        "items": [{ "kind": "link", "href": "https://claude.ai/customize/connectors", "text": "claude.ai/customize/connectors" }]
       }
     },
     {
-      "id": "s6-gcal-05",
+      "id": "s6-gcal-06",
       "template": "screen",
       "title": "재실행 · /mcp 확인",
       "screen": {
@@ -82,7 +96,7 @@
         }
       },
       "notes": [
-        { "n": 1, "head": "claude.ai 서버 하나", "body": "터미널에서 claude --dangerously-skip-permissions 로 클로드 코드를 다시 실행한 뒤 /mcp 를 입력해 보세요. claude.ai 라는 서버 하나 아래 지금까지 연결한 커넥터들이 한 번에 모여 있는 걸 볼 수 있습니다." },
+        { "n": 1, "head": "claude.ai 묶음 아래 서버 두 개", "body": "터미널에서 claude --dangerously-skip-permissions 로 클로드 코드를 다시 실행한 뒤 /mcp 를 입력해 보세요. claude.ai 묶음 아래 연결한 커넥터마다 서버가 한 줄씩 생기고, 위의 servers 숫자도 하나씩 늘어나요." },
         { "n": 2, "head": "구글 캘린더 연결됨", "body": "목록 중 claude.ai Google Calendar 줄 옆에 초록색 connected 표시와 9 tools 라는 숫자가 새로 보이면, 방금 연결한 캘린더 도구를 클로드 코드에서도 바로 쓸 수 있다는 뜻이에요." }
       ],
       "action": {
@@ -94,7 +108,7 @@
       }
     },
     {
-      "id": "s6-gcal-06",
+      "id": "s6-gcal-07",
       "template": "screen",
       "title": "프롬프트 · 할 수 있는 일 묻기",
       "screen": {
@@ -118,7 +132,7 @@
       }
     },
     {
-      "id": "s6-gcal-07",
+      "id": "s6-gcal-08",
       "template": "screen",
       "title": "결과 · 할 수 있는 일 목록",
       "replaceWithCapture": "구글 캘린더 mcp 툴목록 질문 실제 결과",
@@ -152,7 +166,7 @@
       ]
     },
     {
-      "id": "s6-gcal-08",
+      "id": "s6-gcal-09",
       "template": "screen",
       "title": "실습 · 이벤트 추가 · 조회 · 반복 · 삭제",
       "replaceWithCapture": "이벤트 추가 · 조회 · 반복 · 삭제 실습 실제 결과",
@@ -167,8 +181,8 @@
           "turns": [
             { "role": "user", "text": "내일 오후 3시에 '팀 회의' 일정 1시간짜리로 캘린더에 추가해줘", "badge": 1 },
             { "role": "assistant", "text": "✔ '팀 회의' 일정을 내일 15:00~16:00 에 추가했어요" },
-            { "role": "user", "text": "오늘 내 캘린더에 뭐 있는지 보여줘" },
-            { "role": "assistant", "text": "오늘 일정은 '팀 회의' 15:00~16:00 하나예요" },
+            { "role": "user", "text": "내일 내 캘린더에 뭐 있는지 보여줘" },
+            { "role": "assistant", "text": "내일 일정은 '팀 회의' 15:00~16:00 하나예요" },
             { "role": "user", "text": "매주 월요일 오전 10시에 '주간 스크럼' 반복 일정으로 만들어줘", "badge": 2 },
             { "role": "assistant", "text": "✔ 매주 월요일 10:00 에 '주간 스크럼' 반복 일정을 만들었어요" },
             { "role": "user", "text": "방금 만든 '주간 스크럼' 일정 삭제해줘" },
@@ -178,7 +192,7 @@
         }
       },
       "notes": [
-        { "n": 1, "head": "이벤트 추가 · 조회", "body": "먼저 내일 오후 3시에 '팀 회의' 일정 1시간짜리로 캘린더에 추가해줘 라고 입력해 보세요. 클로드가 실제로 캘린더에 일정을 넣고, 이어서 오늘 일정을 물어보면 방금 넣은 일정을 그대로 읽어서 알려줍니다." },
+        { "n": 1, "head": "이벤트 추가 · 조회", "body": "먼저 내일 오후 3시에 '팀 회의' 일정 1시간짜리로 캘린더에 추가해줘 라고 입력해 보세요. 클로드가 실제로 캘린더에 일정을 넣고, 이어서 내일 일정을 물어보면 방금 넣은 일정을 그대로 읽어서 알려줍니다." },
         { "n": 2, "head": "반복 일정 · 삭제", "body": "이번에는 매주 월요일 오전 10시에 '주간 스크럼' 반복 일정으로 만들어줘 라고 입력하면 매주 반복되는 일정이 새로 생겨요. 마지막으로 방금 만든 일정을 지워달라고 하면 실제로 삭제까지 해 줍니다." },
         { "n": "!", "head": "날짜와 시간은 정확히", "body": "날짜와 시간을 정확히 적어야 원하는 시각의 일정으로 만들어집니다." }
       ],
@@ -186,14 +200,14 @@
         "label": "프롬프트 복사",
         "items": [
           { "kind": "copy", "value": "내일 오후 3시에 '팀 회의' 일정 1시간짜리로 캘린더에 추가해줘", "desc": "이벤트 추가" },
-          { "kind": "copy", "value": "오늘 내 캘린더에 뭐 있는지 보여줘", "desc": "일정 읽기" },
+          { "kind": "copy", "value": "내일 내 캘린더에 뭐 있는지 보여줘", "desc": "일정 읽기" },
           { "kind": "copy", "value": "매주 월요일 오전 10시에 '주간 스크럼' 반복 일정으로 만들어줘", "desc": "반복 일정" },
           { "kind": "copy", "value": "방금 만든 '주간 스크럼' 일정 삭제해줘", "desc": "삭제" }
         ]
       }
     },
     {
-      "id": "s6-gcal-09",
+      "id": "s6-gcal-10",
       "template": "screen",
       "title": "실습 · Meet 링크 · 빈 시간 찾기",
       "replaceWithCapture": "Meet 링크 · 빈 시간 찾기 실습 실제 결과",
