@@ -276,7 +276,7 @@ export interface OfficeExcel {
   formula?: string // formula bar text, e.g. "=VLOOKUP(B8,$H$5:$J$10,2,FALSE)"
   formulaBadge?: number
   cols: { label: string; width?: number }[] // column headers A, B, C ...; width in px at zoom 1 (default 120)
-  rows: { cells: string[]; style?: "title" | "sub" | "head" | "total" | "note" | "blank"; badge?: number }[] // row 1 = rows[0]
+  rows: { cells: string[]; style?: "title" | "sub" | "head" | "total" | "note" | "blank"; badge?: number; n?: number }[] // row 1 = rows[0]; n = real sheet row number when the crop doesn't start at row 1
   selected?: string // highlighted cell address, e.g. "F8"
   sheets?: string[] // sheet tabs, first one active
 }

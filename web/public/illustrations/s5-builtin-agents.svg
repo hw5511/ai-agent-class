@@ -47,6 +47,6 @@
 <rect x="1388" y="584" width="188" height="168" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
 <g transform="translate(1548 616) scale(1.0)"><rect x="-24" y="-20" width="48" height="40" rx="6" fill="#43474b"/><circle cx="0" cy="0" r="13" fill="none" stroke="#fff" stroke-width="3"/><line x1="-16" y1="-11" x2="-6" y2="-11" stroke="#fff" stroke-width="3"/><line x1="6" y1="11" x2="16" y2="11" stroke="#fff" stroke-width="3"/></g>
 <text x="1482.0" y="668" font-size="27" font-weight="900" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">Plan</text>
-<text x="1482.0" y="796" font-size="25" font-weight="600" fill="#5b6570" text-anchor="middle">계획 전용 · 선택 내장</text>
+<text x="1482.0" y="796" font-size="25" font-weight="600" fill="#5b6570" text-anchor="middle">계획 전용 · 기본 내장</text>
 <circle cx="1360.0" cy="504" r="28" fill="#fff" stroke="#1273c4" stroke-width="5"/><text x="1360.0" y="514.6" font-size="29" font-weight="800" fill="#1273c4" text-anchor="middle">!</text>
 </svg>

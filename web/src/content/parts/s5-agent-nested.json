@@ -88,7 +88,7 @@
               },
               {
                 "name": "general-purpose",
-                "count": 2,
+                "count": 3,
                 "label": "진해군항제 심층조사(하위 에이전트 수합)",
                 "meta": "19s · ↓ 63.7k tokens",
                 "badge": 1

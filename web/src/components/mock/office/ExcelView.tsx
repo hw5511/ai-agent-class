@@ -69,15 +69,16 @@ export function ExcelView({ e, selected, zoom = 1 }: { e: OfficeExcel; selected?
                 const style = row.style ?? "blank"
                 const isTotal = style === "total"
                 const isHead = style === "head"
+                const rowNum = row.n ?? ri + 1
                 return (
                   <tr key={ri} style={{ height: ROW_H }} className={isHead ? "bg-black" : undefined}>
                     <td
                       className={cn(
                         "relative border border-[#e1e1e1] bg-[#f3f3f3] text-center font-body text-[13px] text-[#3b3b3b]",
-                        String(ri + 1) === selRow && "bg-[#c6e0c6] font-bold text-[#0f6b37]",
+                        String(rowNum) === selRow && "bg-[#c6e0c6] font-bold text-[#0f6b37]",
                       )}
                     >
-                      {ri + 1}
+                      {rowNum}
                       {/* absolute + centred over the cell: marks the row without growing it (a fixed
                           row height must survive a badge taller than the row) */}
                       {row.badge ? (
@@ -88,7 +89,7 @@ export function ExcelView({ e, selected, zoom = 1 }: { e: OfficeExcel; selected?
                     </td>
                     {cols.map((c, ci) => {
                       const text = row.cells[ci] ?? ""
-                      const addr = `${c.label}${ri + 1}`
+                      const addr = `${c.label}${rowNum}`
                       const isSel = addr === selected
                       return (
                         <td

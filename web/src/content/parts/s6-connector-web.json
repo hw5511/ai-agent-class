@@ -14,7 +14,7 @@
       ],
       "action": {
         "label": "링크 열기",
-        "items": [{ "kind": "link", "href": "claude.ai/directory", "text": "claude.ai/directory" }]
+        "items": [{ "kind": "link", "href": "https://claude.ai/directory", "text": "claude.ai/directory" }]
       }
     },
     {
@@ -58,7 +58,7 @@
       ],
       "action": {
         "label": "링크 열기",
-        "items": [{ "kind": "link", "href": "claude.ai/customize/connectors", "text": "claude.ai/customize/connectors" }]
+        "items": [{ "kind": "link", "href": "https://claude.ai/customize/connectors", "text": "claude.ai/customize/connectors" }]
       }
     },
     {
@@ -78,7 +78,7 @@
             "title": "",
             "rows": [
               { "seg": [{ "t": "Manage MCP servers", "c": "bold" }] },
-              { "seg": [{ "t": "1 servers", "c": "dim" }] },
+              { "seg": [{ "t": "1 server", "c": "dim" }] },
               { "seg": [] },
               { "seg": [{ "t": "claude.ai", "c": "bold" }], "badge": 1 },
               { "seg": [{ "t": "  claude.ai Notion · ✔ connected · 45 tools", "c": "green" }], "badge": 2 }
@@ -88,7 +88,7 @@
         }
       },
       "notes": [
-        { "n": 1, "head": "claude.ai 서버", "body": "터미널에서 /mcp 를 입력하면 claude.ai 라는 이름으로 서버 하나가 등록된 걸 볼 수 있어요. 웹에서 연결한 커넥터가 Claude Code 에서도 그대로 잡히는지 이렇게 확인합니다." },
+        { "n": 1, "head": "claude.ai 묶음 아래 서버 하나", "body": "터미널에서 /mcp 를 입력하면 claude.ai 묶음 아래 claude.ai Notion 서버 하나가 등록된 걸 볼 수 있어요. 웹에서 연결한 커넥터가 Claude Code 에서도 그대로 잡히는지 이렇게 확인합니다." },
         { "n": 2, "head": "Notion 연결됨", "body": "claude.ai Notion 옆에 connected 표시와 함께 사용 가능한 도구 45 개가 보여요. 이 숫자가 뜬다면 노션 연결이 Claude Code 에서도 제대로 되어 있다는 뜻입니다." }
       ],
       "action": {
