@@ -1,7 +1,7 @@
 {
   "id": "s6-gmail",
   "title": "Gmail",
-  "summary": "Gmail 커넥터를 연결하고, Claude Code 로 최근 메일을 조회하고 실제로 테스트 메일을 보내본다.",
+  "summary": "Gmail 커넥터를 연결하고, Claude Code 로 최근 메일을 조회하고 외부 이미지와 버튼이 들어간 HTML 메일을 나에게 테스트로 보내본다.",
   "slides": [
     {
       "id": "s6-gmail-01",
@@ -225,7 +225,7 @@
     {
       "id": "s6-gmail-11",
       "template": "screen",
-      "title": "프롬프트 · 나에게 테스트 메일 보내기",
+      "title": "프롬프트 · 나에게 HTML 메일 보내기",
       "screen": {
         "kind": "vscode",
         "folder": "agent1",
@@ -234,47 +234,61 @@
           "vendor": "claude",
           "cwd": "C:\\agent1",
           "turns": [],
-          "input": { "text": "나한테 테스트 메일 하나 보내줘 제목이랑 내용은 아무거나 넣어서", "badge": 1 },
+          "input": { "text": "나에게 보내기로 외부 이미지를 활용해서 뭔가 실제 플랫폼에서 보낸 것 같은 이메일을 버튼 같은 걸 포함해서 html로 테스트로 발송해줘", "badge": 1 },
           "fit": true
         }
       },
       "notes": [
-        { "n": 1, "head": "실제로 전송되는 메일", "body": "터미널 입력창에 나한테 테스트 메일 하나 보내줘 제목이랑 내용은 아무거나 넣어서 라고 입력해 보세요. 이 프롬프트는 클로드가 제목과 내용을 알아서 지어내 실제로 메일 한 통을 진짜로 전송하게 만듭니다." }
+        { "n": 1, "head": "나에게 보내는 HTML 테스트 메일", "body": "터미널 입력창에 이 프롬프트를 그대로 입력해 보세요. 받는 사람이 내 지메일 주소라서 다른 사람에게는 가지 않고, 클로드가 외부 이미지와 버튼을 넣은 HTML 메일을 직접 만들어 실제로 발송합니다." },
+        { "n": "!", "head": "외부 이미지와 버튼", "body": "외부 이미지는 파일을 첨부하는 대신 인터넷에 올라와 있는 이미지 주소를 메일 본문에 넣는 방식이고, 버튼은 링크를 버튼 모양으로 꾸민 것입니다." }
       ],
       "action": {
         "label": "프롬프트 복사",
-        "items": [{ "kind": "copy", "value": "나한테 테스트 메일 하나 보내줘 제목이랑 내용은 아무거나 넣어서" }]
+        "items": [{ "kind": "copy", "value": "나에게 보내기로 외부 이미지를 활용해서 뭔가 실제 플랫폼에서 보낸 것 같은 이메일을 버튼 같은 걸 포함해서 html로 테스트로 발송해줘" }]
       }
     },
     {
       "id": "s6-gmail-12",
-      "template": "screen",
-      "title": "결과 · 보낸 메일 도착",
-      "replaceWithCapture": "테스트 메일 실제 전송 결과",
-      "screen": {
-        "kind": "vscode",
-        "folder": "agent1",
-        "files": [],
-        "noSidebar": true,
-        "terminal": {
-          "vendor": "claude",
-          "cwd": "C:\\agent1",
-          "turns": [{ "role": "user", "text": "나한테 테스트 메일 하나 보내줘 제목이랑 내용은 아무거나 넣어서" }],
-          "panel": {
-            "title": "",
-            "rows": [
-              { "seg": [{ "t": "● 메일 전송 완료", "c": "bold" }], "badge": 1 },
-              { "seg": [{ "t": "  받는사람: student@gmail.com", "c": "dim" }] },
-              { "seg": [{ "t": "  제목: 안녕하세요, 테스트 메일입니다", "c": "dim" }], "badge": 2 },
-              { "seg": [{ "t": "  ⎿  받은편지함에 도착했습니다", "c": "dim" }] }
-            ]
-          },
-          "fit": true
+      "template": "compare",
+      "ratio": [1, 1],
+      "title": "결과 · 받은편지함에 도착한 HTML 메일",
+      "replaceWithCapture": "HTML 테스트 메일 실제 전송 결과 (받은편지함에서 연 메일 + 터미널)",
+      "left": {
+        "label": "터미널 결과",
+        "screen": {
+          "kind": "vscode",
+          "folder": "agent1",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\agent1",
+            "turns": [{ "role": "user", "text": "나에게 보내기로 외부 이미지를 활용해서 뭔가 실제 플랫폼에서 보낸 것 같은 이메일을 버튼 같은 걸 포함해서 html로 테스트로 발송해줘" }],
+            "panel": {
+              "title": "",
+              "rows": [
+                { "seg": [{ "t": "● HTML 메일 전송 완료", "c": "bold" }], "badge": 1 },
+                { "seg": [{ "t": "  받는사람: student@gmail.com", "c": "dim" }] },
+                { "seg": [{ "t": "  제목: [테스트] 이번 주 추천 소식이 도착했어요", "c": "dim" }] },
+                { "seg": [{ "t": "  ⎿  외부 이미지 1장 · 버튼 1개 포함", "c": "dim" }] },
+                { "seg": [{ "t": "  ⎿  받은편지함에 도착했습니다", "c": "dim" }] }
+              ]
+            },
+            "fit": true
+          }
+        }
+      },
+      "right": {
+        "label": "받은편지함에서 연 메일",
+        "screen": {
+          "kind": "shot",
+          "src": "/illustrations/s6-gmail-html-mail.svg",
+          "badges": [{ "n": 2, "x": 58.1, "y": 76.7 }]
         }
       },
       "notes": [
-        { "n": 1, "head": "전송 완료 보고", "body": "메일 전송 완료 라는 문구와 함께 받는사람이 student@gmail.com 으로, 제목이 안녕하세요, 테스트 메일입니다 로 채워져 실제로 전송됐다는 결과가 나타납니다." },
-        { "n": 2, "head": "받은편지함에서 확인", "body": "화면에 나온 제목 그대로 잠시 뒤 받은편지함을 열어보면 방금 클로드가 보낸 테스트 메일이 실제로 도착해 있는 걸 확인할 수 있어요." }
+        { "n": 1, "head": "전송 완료 보고", "body": "터미널에 HTML 메일 전송 완료 라는 문구와 함께 받는사람 student@gmail.com 과 클로드가 지은 제목이 나타납니다. 제목과 내용은 보낼 때마다 달라져요." },
+        { "n": 2, "head": "플랫폼 알림 같은 메일", "body": "받은편지함에서 메일을 열면 위쪽 이미지와 제목, 파란 버튼까지 실제 서비스에서 보낸 알림 메일처럼 꾸며진 화면을 볼 수 있어요." }
       ],
       "action": {
         "label": "링크 열기",
