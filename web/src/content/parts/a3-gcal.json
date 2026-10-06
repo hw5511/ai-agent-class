@@ -1,0 +1,490 @@
+{
+  "id": "a3-gcal",
+  "title": "구글 캘린더",
+  "summary": "gws 로 구글 캘린더 명령어를 분석하고 gcal-cli 스킬로 만든 뒤, 일정과 매주 반복 일정을 말로 추가한다.",
+  "slides": [
+    {
+      "id": "a3-gcal-01",
+      "template": "screen",
+      "title": "명령어 분석 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "gws-class",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\gws-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "gws cli 명령어로 구글캘린더 명령어 종류를 분석해줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(Show gws and calendar help)",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "Bash(List methods per calendar resource)"
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "캘린더 명령어 분석 요청",
+          "body": "gws 로 쓸 수 있는 구글 캘린더 명령어가 어떤 종류인지 분석해 달라고 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "도움말을 직접 조회",
+          "body": "Claude 가 gws 도움말을 두 번 실행해서 캘린더의 리소스와 메서드 목록을 직접 읽어 옵니다."
+        },
+        {
+          "n": "!",
+          "head": "38.2초 · Bash 2회",
+          "body": "리허설에서는 Bash 도구 2번, 38.2초가 걸렸습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "gws cli 명령어로 구글캘린더 명령어 종류를 분석해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a3-gcal-02",
+      "template": "screen",
+      "title": "분석 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "gws-class",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\gws-class",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "gws calendar 명령어 분석"
+            },
+            {
+              "role": "assistant",
+              "text": "구조: gws calendar <resource> <method> [--params JSON] [--json 본문JSON]",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "1. 헬퍼 명령 (+ 접두사, 간편 단축형)"
+            },
+            {
+              "role": "assistant",
+              "text": "+agenda | 모든 캘린더의 예정 일정 조회 (읽기 전용). --today/--tomorrow/--week/--days N/--calendar/--timezone"
+            },
+            {
+              "role": "assistant",
+              "text": "+insert | 일정 생성. --summary --start --end 필수, --location --description --attendee(복수) --meet(Meet 링크)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "2. 리소스별 API 메서드 (8개 리소스)"
+            },
+            {
+              "role": "assistant",
+              "text": "events (핵심) | list, get, insert, update, patch, delete, quickAdd(자연어 텍스트로 생성), import(비공개 사본 가져오기), move(다른 캘린더로 이동), instances(반복 일정의 개별 인스턴스), watch | 일정 CRUD 및 부가 기능",
+              "badge": 3
+            },
+            {
+              "role": "assistant",
+              "text": "calendars | get, insert, update, patch, delete, clear(기본 캘린더 일정 전체 삭제), transferOwnership | 캘린더 자체(메타데이터) 관리"
+            },
+            {
+              "role": "assistant",
+              "text": "freebusy | query | 여러 캘린더의 바쁨/한가함 조회"
+            },
+            {
+              "role": "assistant",
+              "text": "읽기 전용: +agenda, settings, colors, freebusy"
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "gws calendar 기본 구조",
+          "body": "리소스와 메서드를 이어 쓰고, 값은 params 와 json 으로 넘기는 형태입니다."
+        },
+        {
+          "n": 2,
+          "head": "헬퍼 명령 +agenda +insert",
+          "body": "앞에 + 가 붙은 두 명령이 일정 조회와 일정 생성을 짧게 줄여 줍니다."
+        },
+        {
+          "n": 3,
+          "head": "events 가 핵심 리소스",
+          "body": "일정 목록, 생성, 수정, 삭제는 모두 events 에 있고 quickAdd 와 instances 같은 부가 기능도 여기 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "a3-gcal-03",
+      "template": "screen",
+      "title": "/skill-creator 로 gcal-cli",
+      "screen": {
+        "kind": "vscode",
+        "folder": "gws-class",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\gws-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/skill-creator gcal-cli 스킬을 현재폴더의 .claude/skills 폴더에 만들어줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Write(C:\\gws-class\\.claude\\skills\\gcal-cli\\SKILL.md)"
+            },
+            {
+              "role": "assistant",
+              "text": "`gcal-cli` 스킬을 만들었습니다: C:\\gws-class\\.claude\\skills\\gcal-cli\\SKILL.md",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "앞서 분석한 `gws calendar` 명령을 바탕으로 아래 내용을 담았습니다."
+            },
+            {
+              "role": "assistant",
+              "text": "트리거 설명: 일정 확인·추가·수정·삭제, 빈 시간 확인, 캘린더 공유 같은 요청이나 \"캘린더\", \"일정\", \"미팅 잡아줘\"가 나오면 사용되도록 넓게 잡았습니다."
+            },
+            {
+              "role": "assistant",
+              "text": "안전 원칙: 쓰기 작업 전에 `--dry-run`이나 사용자 확인을 거칩니다."
+            },
+            {
+              "role": "assistant",
+              "text": "작업별 명령 예시: `+agenda`, `events list`, `+insert`, `quickAdd`, `patch`와 `update`의 차이, `freebusy`, 리소스별 요약표."
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "/skill-creator 로 스킬 요청",
+          "body": "앞에 /skill-creator 를 붙이고, 스킬 이름과 만들 위치인 현재 폴더의 .claude/skills 를 적어 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "SKILL.md 한 파일 작성",
+          "body": "Write 도구로 gcal-cli 폴더의 SKILL.md 한 파일을 만들고, 어떤 요청에 쓰이는지와 안전 원칙을 요약해서 알려 줍니다."
+        },
+        {
+          "n": "!",
+          "head": "질문이 뜨면 (Recommended)",
+          "body": "Claude 가 선택지를 물어 오면 (Recommended) 가 붙은 항목을 고르세요. 이번 리허설에서는 질문이 뜨지 않았습니다."
+        },
+        {
+          "n": "!",
+          "head": "40.9초 · Write 1회",
+          "body": "리허설에서는 Write 도구 1번, 40.9초가 걸렸습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/skill-creator gcal-cli 스킬을 현재폴더의 .claude/skills 폴더에 만들어줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a3-gcal-04",
+      "template": "screen",
+      "title": "완성된 스킬 폴더",
+      "screen": {
+        "kind": "vscode",
+        "folder": "gws-class",
+        "sidebar": "explorer",
+        "files": [
+          {
+            "name": ".claude",
+            "folder": true
+          },
+          {
+            "name": "skills",
+            "folder": true,
+            "depth": 1
+          },
+          {
+            "name": "gcal-cli",
+            "folder": true,
+            "depth": 2,
+            "active": true
+          },
+          {
+            "name": "SKILL.md",
+            "depth": 3,
+            "badge": 1,
+            "active": true
+          }
+        ],
+        "editor": {
+          "file": "SKILL.md",
+          "lines": [
+            "---",
+            "name: gcal-cli",
+            "description: Google Calendar를 `gws` CLI(Google Workspace CLI)로 조회·생성·수정·삭제하는 방법. 사용자가 일정 확인(오늘/이번 주 일정, agenda), 일정 추가·변경·삭제, 회의 잡기, Meet 링크 추가, 빈 시간(free/busy) 확인, 캘린더 공유(ACL)·목록·설정·색상 조회 등 구글 캘린더 관련 작업을 요청하면 반드시 이 스킬을 사용할 것.",
+            "---",
+            "# gcal-cli — `gws calendar` 사용 가이드",
+            "`gws`는 Google Workspace CLI다. 캘린더 작업은 `gws calendar ...`로 수행한다.",
+            "## 기본 규칙"
+          ],
+          "badge": 2
+        },
+        "noTerminal": true,
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\gws-class",
+          "turns": []
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "SKILL.md 한 파일",
+          "body": "gcal-cli 폴더 안에는 SKILL.md 하나만 만들어졌습니다. 스크립트 없이 사용 안내문만 있는 스킬입니다."
+        },
+        {
+          "n": 2,
+          "head": "이름과 설명 머리글",
+          "body": "맨 위의 name 과 description 은 Claude 가 이 스킬을 언제 쓸지 판단하는 기준이 됩니다."
+        }
+      ]
+    },
+    {
+      "id": "a3-gcal-05",
+      "template": "compare",
+      "ratio": [2, 3],
+      "title": "오늘 오후 10시 테스트일정",
+      "left": {
+        "label": "클로드 터미널",
+        "screen": {
+          "kind": "vscode",
+          "folder": "gws-class",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\gws-class",
+            "turns": [
+              {
+                "role": "user",
+                "text": "오늘 오후 10시에 테스트일정 추가해줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "Bash(gws calendar +insert --summary '테스트일정' --start '2026-10-06T22:00:00+09:00' --end '2026-10-06T23:00:00+09:00')",
+                "badge": 2
+              },
+              {
+                "role": "assistant",
+                "text": "오늘(2026-10-06) 22:00에 \"테스트일정\"을 추가했습니다."
+              },
+              {
+                "role": "assistant",
+                "text": "시간: 22:00~23:00 (Asia/Seoul). 종료 시간을 말씀하지 않으셔서 1시간으로 잡았습니다."
+              },
+              {
+                "role": "assistant",
+                "text": "참석자: 없음. 초대는 발송되지 않았습니다."
+              }
+            ],
+            "fit": true
+          }
+        }
+      },
+      "right": {
+        "label": "크롬 · 구글 캘린더",
+        "screen": {
+          "kind": "web",
+          "url": "calendar.google.com/calendar/u/0/r/week",
+          "tabs": [
+            {
+              "title": "Google Calendar - 2026년 10월 4일~10일",
+              "icon": "calendar",
+              "active": true
+            }
+          ],
+          "page": {
+            "type": "image",
+            "src": "/shots/a3/a3-gcal-05-week.svg"
+          },
+          "pins": [
+            {
+              "n": 3,
+              "x": 50,
+              "y": 81
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "일정 추가 요청",
+          "body": "오늘 오후 10시에 테스트일정을 넣어 달라고 평소 말투로 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "gws +insert 실행",
+          "body": "Claude 가 헬퍼 명령 gws calendar +insert 에 제목과 시작, 종료 시각을 담아 실행합니다. 끝나는 시간을 말하지 않으면 1시간짜리로 잡습니다."
+        },
+        {
+          "n": 3,
+          "head": "캘린더에 테스트일정",
+          "body": "구글 캘린더 주간 보기에서 화요일 오후 10시 칸에 22:00~23:00 테스트일정이 보입니다."
+        },
+        {
+          "n": "!",
+          "head": "지난 시각이어도 추가",
+          "body": "입력 시점에 22:00 이 이미 지났는데도 확인 질문 없이 요청대로 추가됐습니다. 리허설은 Bash 1회, 23.0초였습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "오늘 오후 10시에 테스트일정 추가해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a3-gcal-06",
+      "template": "compare",
+      "ratio": [2, 3],
+      "title": "매주 수요일 회의 반복일정",
+      "left": {
+        "label": "클로드 터미널",
+        "screen": {
+          "kind": "vscode",
+          "folder": "gws-class",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\gws-class",
+            "turns": [
+              {
+                "role": "user",
+                "text": "매주 수요일 7시에 회의 반복일정 추가해줘",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "Bash(gws calendar events insert --params '{\"calendarId\":\"primary\"}' --json '{\"summary\":\"회의\",\"start\":{\"dateTime\":\"2026-10-07T19:00:00+09:00\",\"timeZone\":\"Asia/Seoul\"},\"end\":{\"dateTime\":\"2026-10-07T20:00:00+09:00\",\"timeZone\":\"Asia/Seoul\"},\"recurrence\":[\"RRULE:FREQ=WEEKLY;BYDAY=WE\"]}')",
+                "badge": 2
+              },
+              {
+                "role": "assistant",
+                "text": "\"회의\" 반복 일정을 추가했습니다."
+              },
+              {
+                "role": "assistant",
+                "text": "반복: 매주 수요일, 종료일 없음 (`RRULE:FREQ=WEEKLY;BYDAY=WE`)"
+              },
+              {
+                "role": "assistant",
+                "text": "시간: 19:00~20:00 (Asia/Seoul). 첫 회차는 내일 2026-10-07(수)입니다."
+              },
+              {
+                "role": "assistant",
+                "text": "\"7시\"를 오후 7시로, 길이를 1시간으로 가정했습니다. 오전 7시이거나 종료 시간, 반복 종료일, 참석자, Meet 링크가 필요하면 말씀해 주세요. 바로 수정하겠습니다."
+              }
+            ],
+            "fit": true
+          }
+        }
+      },
+      "right": {
+        "label": "크롬 · 구글 캘린더",
+        "screen": {
+          "kind": "web",
+          "url": "calendar.google.com/calendar/u/0/r/week",
+          "tabs": [
+            {
+              "title": "Google Calendar - 2026년 10월 4일~10일",
+              "icon": "calendar",
+              "active": true
+            }
+          ],
+          "page": {
+            "type": "image",
+            "src": "/shots/a3/a3-gcal-06-weekly.svg"
+          },
+          "pins": [
+            {
+              "n": 3,
+              "x": 64,
+              "y": 53
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "반복 일정 요청",
+          "body": "매주 수요일 7시에 회의가 반복되도록 넣어 달라고 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "events insert 와 RRULE",
+          "body": "반복 일정은 events insert 로 만들고, 반복 규칙은 RRULE:FREQ=WEEKLY;BYDAY=WE 로 적습니다. 리허설은 Bash 1회, 28.9초였습니다."
+        },
+        {
+          "n": 3,
+          "head": "수요일 회의에 반복 표시",
+          "body": "캘린더 수요일 오후 7시 칸의 회의에 반복 아이콘이 붙어 있고, 첫 회차는 내일 수요일입니다."
+        },
+        {
+          "n": "!",
+          "head": "7시는 저녁 7시로 해석",
+          "body": "7시처럼 오전·저녁이 모호하면 Claude 가 저녁 7시로 정함 · 원하는 쪽이 있으면 '오전 7시' / '저녁 7시' 로 적기"
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "매주 수요일 7시에 회의 반복일정 추가해줘"
+          }
+        ]
+      }
+    }
+  ]
+}

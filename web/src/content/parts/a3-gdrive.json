@@ -1,0 +1,581 @@
+{
+  "id": "a3-gdrive",
+  "title": "구글 드라이브",
+  "summary": "gws drive 명령어를 분석하고 /skill-creator 로 gdrive-cli 스킬을 만든 뒤, 폴더와 파일을 올려 뷰어 공유 링크를 만들고 크롬에서 연다.",
+  "slides": [
+    {
+      "id": "a3-gdrive-01",
+      "template": "screen",
+      "title": "드라이브 명령어 분석 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "gws-class",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\gws-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "gws cli 명령어로 구글드라이브 명령어 종류를 분석해줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(Show gws and drive help)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(List methods per drive resource)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "`gws drive` 명령어 분석",
+              "badge": 3
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "명령어 분석 요청",
+          "body": "gws 로 구글 드라이브에서 쓸 수 있는 명령어 종류를 분석해 달라고 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "--help 로 직접 확인",
+          "body": "Claude 가 gws drive 의 도움말을 두 번 실행해 리소스마다 메서드를 읽어 옵니다."
+        },
+        {
+          "n": 3,
+          "head": "분석 시작",
+          "body": "도움말 확인이 끝나면 분석 답변이 나오기 시작합니다. 결과는 다음 슬라이드입니다."
+        },
+        {
+          "n": "!",
+          "head": "35.4초 · 도구 2회",
+          "body": "리허설에서는 Bash 도구를 2번 호출했고 35.4초가 걸렸습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "gws cli 명령어로 구글드라이브 명령어 종류를 분석해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a3-gdrive-02",
+      "template": "screen",
+      "title": "드라이브 명령어 분석 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "gws-class",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\gws-class",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "`gws drive` 명령어 분석",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "gws drive <resource> [method] --params '{쿼리 JSON}' --json '{본문 JSON}' [옵션]",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "Drive API v3를 그대로 감싼 CLI입니다. 리소스 14개와 헬퍼 1개가 있고, 메서드는 총 약 60개입니다."
+            },
+            {
+              "role": "assistant",
+              "text": "files  list, get, create, update, copy, delete, download, export, emptyTrash ...",
+              "badge": 3
+            },
+            {
+              "role": "assistant",
+              "text": "+upload  파일 업로드 시 MIME 타입과 파일명을 자동으로 처리합니다. `--parent`, `--name` 옵션을 씁니다."
+            },
+            {
+              "role": "assistant",
+              "text": "permissions  list, get, create, update, delete"
+            },
+            {
+              "role": "assistant",
+              "text": "주의할 점",
+              "badge": 4
+            },
+            {
+              "role": "assistant",
+              "text": "1. 되돌릴 수 없는 명령: `files delete`는 휴지통을 거치지 않고 영구 삭제하고, `files emptyTrash`와 `drives delete`, `revisions delete`도 복구할 수 없습니다."
+            },
+            {
+              "role": "assistant",
+              "text": "2. 외부 노출: `permissions create`에서 `type: anyone`을 쓰면 링크가 공개됩니다."
+            },
+            {
+              "role": "assistant",
+              "text": "4. 폴더 처리: 별도의 폴더 명령은 없습니다. `files create`에 `mimeType: application/vnd.google-apps.folder`를 지정해서 만듭니다."
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "분석 결과",
+          "body": "gws drive 를 리소스별로 나눠 정리해 줍니다. 리소스는 14개, 메서드는 약 60개입니다."
+        },
+        {
+          "n": 2,
+          "head": "명령어 기본 구조",
+          "body": "gws drive 뒤에 리소스와 메서드를 쓰고, 조건은 --params, 본문은 --json 으로 넘깁니다."
+        },
+        {
+          "n": 3,
+          "head": "files 와 +upload",
+          "body": "파일과 폴더는 files, 업로드는 + 로 시작하는 헬퍼 +upload 가 맡습니다. permissions 가 공유 설정입니다."
+        },
+        {
+          "n": 4,
+          "head": "주의할 점",
+          "body": "영구 삭제 명령과 type anyone 공유는 조심해야 합니다. 폴더는 files create 에 mimeType 을 지정해 만듭니다."
+        }
+      ]
+    },
+    {
+      "id": "a3-gdrive-03",
+      "template": "screen",
+      "title": "/skill-creator 로 gdrive-cli 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "gws-class",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\gws-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/skill-creator gdrive-cli 스킬을 현재폴더의 .claude/skills 폴더에 만들어줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Write(.claude\\skills\\gdrive-cli\\SKILL.md)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "gdrive-cli 스킬을 만들었습니다. 위치는 C:\\gws-class\\.claude\\skills\\gdrive-cli\\SKILL.md입니다.",
+              "badge": 3
+            },
+            {
+              "role": "assistant",
+              "text": "테스트 케이스 실행이나 평가는 아직 하지 않았습니다."
+            },
+            {
+              "role": "assistant",
+              "text": "스킬 구성"
+            },
+            {
+              "role": "assistant",
+              "text": "- description: 구글 드라이브, gws, 업로드/다운로드, 공유, 내보내기 같은 키워드가 나오면 트리거되도록 적극적으로 썼습니다."
+            },
+            {
+              "role": "assistant",
+              "text": "- 명령어 표: 리소스 14개와 +upload 헬퍼의 메서드를 한눈에 정리했습니다."
+            },
+            {
+              "role": "assistant",
+              "text": "- 레시피: 폴더 목록, 폴더 생성, 업로드, 내보내기, 이동, 휴지통 이동, 공유, 권한 감사를 담았습니다."
+            },
+            {
+              "role": "assistant",
+              "text": "- 안전 규칙: 영구 삭제 명령은 --dry-run과 사용자 확인을 먼저 거치게 했습니다. 공개 공유(anyone)와 일괄 작업도 확인 후 진행하도록 했습니다."
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "스킬 만들기 요청",
+          "body": "/skill-creator 뒤에 gdrive-cli 이름과 저장 위치를 적어 요청합니다. 앞에서 분석한 내용을 바탕으로 만듭니다."
+        },
+        {
+          "n": 2,
+          "head": "SKILL.md 작성",
+          "body": "Claude 가 SKILL.md 파일 하나를 씁니다. 리허설에서는 Write 1회, 24.1초가 걸렸습니다."
+        },
+        {
+          "n": 3,
+          "head": "skill-creator 설치 필요",
+          "body": "기초 7회차에서 설치한 skill-creator 는 그 폴더에 project scope 로 설치했습니다. 이 새 폴더에서는 /plugin 에서 skill-creator 를 검색해 설치하고 /reload-plugins 를 입력해야 합니다. 설치 전에는 Unknown command: /skill-creator 가 나옵니다."
+        },
+        {
+          "n": "!",
+          "head": "질문이 나오면 Recommended",
+          "body": "Claude 가 선택지로 질문하면(AskUserQuestion) (Recommended) 가 붙은 항목을 고르세요. 리허설에서는 질문이 나오지 않았습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 · 명령어 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/skill-creator gdrive-cli 스킬을 현재폴더의 .claude/skills 폴더에 만들어줘"
+          },
+          {
+            "kind": "copy",
+            "value": "/plugin",
+            "desc": "skill-creator 가 없을 때만"
+          },
+          {
+            "kind": "copy",
+            "value": "/reload-plugins",
+            "desc": "skill-creator 가 없을 때만"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a3-gdrive-04",
+      "template": "screen",
+      "title": "완성된 gdrive-cli 스킬 폴더",
+      "screen": {
+        "kind": "vscode",
+        "folder": "gws-class",
+        "sidebar": "explorer",
+        "files": [
+          {
+            "name": ".claude",
+            "folder": true
+          },
+          {
+            "name": "skills",
+            "folder": true,
+            "depth": 1
+          },
+          {
+            "name": "gdrive-cli",
+            "folder": true,
+            "depth": 2,
+            "active": true
+          },
+          {
+            "name": "SKILL.md",
+            "depth": 3,
+            "badge": 1,
+            "active": true
+          }
+        ],
+        "editor": {
+          "file": "SKILL.md",
+          "lines": [
+            "name: gdrive-cli",
+            "# gdrive-cli: Google Drive via `gws drive`",
+            "## Command shape",
+            "## Resources and methods",
+            "## Recipes",
+            "## Safety rules",
+            "## Gotchas"
+          ],
+          "badge": 2
+        },
+        "noTerminal": true,
+        "terminal": {
+          "vendor": "shell",
+          "cwd": "C:\\gws-class",
+          "turns": []
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "SKILL.md 한 파일",
+          "body": "C:\\gws-class\\.claude\\skills\\gdrive-cli 폴더 안에 SKILL.md 하나만 만들어졌습니다."
+        },
+        {
+          "n": 2,
+          "head": "스킬 내용",
+          "body": "명령어 모양, 리소스 표, 레시피, 안전 규칙, 주의사항이 차례로 들어 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "a3-gdrive-05",
+      "template": "screen",
+      "title": "폴더 만들고 공유 링크",
+      "screen": {
+        "kind": "vscode",
+        "folder": "gws-class",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\gws-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "gws테스트폴더를 만들고 test.txt 파일을 생성 후 업로드하고 공유링크를 웹에 있는 모든 사용자 뷰어로 한 다음 공유링크를 크롬에서 열어줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(Create local test.txt and Drive folder)",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "Bash(Upload test.txt into the folder)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(Make file public viewer and get link)",
+              "badge": 3
+            },
+            {
+              "role": "tool",
+              "text": "PowerShell(Open share link in Chrome)"
+            },
+            {
+              "role": "assistant",
+              "text": "요청하신 작업을 모두 마쳤고, 공유 링크를 크롬에서 열었습니다. 크롬 창이 실제로 떴는지는 확인하지 못했습니다."
+            },
+            {
+              "role": "assistant",
+              "text": "1. gws테스트 폴더를 만들었습니다."
+            },
+            {
+              "role": "assistant",
+              "text": "2. 로컬에 test.txt를 만들어 그 폴더에 업로드했습니다."
+            },
+            {
+              "role": "assistant",
+              "text": "3. test.txt의 공유 설정을 \"링크가 있는 모든 사용자 – 뷰어\"로 바꿨습니다. 검색에는 노출되지 않습니다(allowFileDiscovery: false)."
+            },
+            {
+              "role": "assistant",
+              "text": "4. 공유 링크: https://drive.google.com/file/d/1AbC...xYz/view?usp=drivesdk"
+            },
+            {
+              "role": "assistant",
+              "text": "링크를 아는 사람은 누구나 test.txt를 볼 수 있습니다. 공유는 파일에만 걸었고 폴더는 비공개입니다."
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "한 번에 요청",
+          "body": "폴더 만들기, 파일 만들기, 업로드, 공유 설정, 크롬 열기를 한 문장으로 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "폴더와 test.txt",
+          "body": "Claude 가 로컬에 test.txt 를 만들고 드라이브 폴더를 만듭니다. 폴더 이름은 gws테스트 로 만들어졌습니다."
+        },
+        {
+          "n": 3,
+          "head": "뷰어 공유 설정",
+          "body": "업로드한 파일에 링크가 있는 모든 사용자, 뷰어 권한을 줍니다."
+        },
+        {
+          "n": "!",
+          "head": "40.6초 · 도구 4회",
+          "body": "Bash 3번 뒤 PowerShell 의 Start-Process 로 크롬에서 링크를 열었고 40.6초가 걸렸습니다. 앞에서 만든 gdrive-cli 스킬은 호출되지 않았습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "gws테스트폴더를 만들고 test.txt 파일을 생성 후 업로드하고 공유링크를 웹에 있는 모든 사용자 뷰어로 한 다음 공유링크를 크롬에서 열어줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a3-gdrive-06",
+      "template": "compare",
+      "ratio": [3, 2],
+      "title": "크롬에서 연 공유 링크",
+      "left": {
+        "label": "크롬 · 드라이브 파일 보기",
+        "screen": {
+          "kind": "web",
+          "url": "drive.google.com/file/d/1AbC...xYz/view",
+          "tabs": [
+            {
+              "title": "test.txt - Google Drive",
+              "icon": "google",
+              "active": true
+            }
+          ],
+          "page": {
+            "type": "image",
+            "src": "/shots/a3/a3-gdrive-06-file.svg"
+          },
+          "pins": [
+            {
+              "n": 1,
+              "x": 24,
+              "y": 19.5
+            },
+            {
+              "n": 2,
+              "x": 74,
+              "y": 35
+            },
+            {
+              "n": 3,
+              "x": 80,
+              "y": 19.5
+            }
+          ]
+        }
+      },
+      "right": {
+        "label": "클로드 터미널",
+        "screen": {
+          "kind": "vscode",
+          "folder": "gws-class",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\gws-class",
+            "turns": [
+              {
+                "role": "assistant",
+                "text": "요청하신 작업을 모두 마쳤고, 공유 링크를 크롬에서 열었습니다. 크롬 창이 실제로 떴는지는 확인하지 못했습니다."
+              },
+              {
+                "role": "assistant",
+                "text": "2. 로컬에 test.txt를 만들어 그 폴더에 업로드했습니다."
+              },
+              {
+                "role": "assistant",
+                "text": "3. test.txt의 공유 설정을 \"링크가 있는 모든 사용자 – 뷰어\"로 바꿨습니다."
+              },
+              {
+                "role": "assistant",
+                "text": "링크를 아는 사람은 누구나 test.txt를 볼 수 있습니다. 공유는 파일에만 걸었고 폴더는 비공개입니다."
+              }
+            ],
+            "fit": true
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "test.txt 파일 보기",
+          "body": "크롬 새 탭에 드라이브의 test.txt 보기 화면이 열렸습니다."
+        },
+        {
+          "n": 2,
+          "head": "gws test file",
+          "body": "파일 안의 내용이 그대로 보입니다. 로컬에서 만든 test.txt 의 한 줄입니다."
+        },
+        {
+          "n": 3,
+          "head": "공유 버튼",
+          "body": "오른쪽 위 공유 버튼으로 공유 설정 창을 열 수 있습니다. 다음 슬라이드에서 확인합니다."
+        },
+        {
+          "n": "!",
+          "head": "실제 창 확인",
+          "body": "Claude 도 크롬 창이 떴는지는 확인하지 못했다고 답했습니다. 직접 화면을 보세요."
+        }
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://drive.google.com/",
+            "text": "구글 드라이브"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a3-gdrive-07",
+      "template": "screen",
+      "title": "공유 설정 확인",
+      "screen": {
+        "kind": "web",
+        "url": "drive.google.com/file/d/1AbC...xYz/view",
+        "tabs": [
+          {
+            "title": "test.txt - Google Drive",
+            "icon": "google",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "image",
+          "src": "/shots/a3/a3-gdrive-07-share.svg"
+        },
+        "pins": [
+          {
+            "n": 1,
+            "x": 32.5,
+            "y": 66.7
+          },
+          {
+            "n": 2,
+            "x": 67,
+            "y": 63.7
+          },
+          {
+            "n": 3,
+            "x": 30.5,
+            "y": 49.3
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "링크가 있는 모든 사용자",
+          "body": "test.txt 에 걸린 일반 액세스입니다. 링크를 아는 사람은 누구나 열 수 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "뷰어",
+          "body": "보기만 가능한 권한입니다. 리허설에서 확인한 값은 type anyone, role reader 입니다."
+        },
+        {
+          "n": 3,
+          "head": "소유자는 나",
+          "body": "수강생 계정이 소유자로 남아 있습니다. 공유는 파일에만 걸렸고 폴더는 비공개입니다."
+        },
+        {
+          "n": "!",
+          "head": "공유 해제",
+          "body": "공유를 끝내려면 이 창에서 일반 액세스를 제한됨으로 바꾸거나 Claude 에게 공유 해제를 요청하세요."
+        }
+      ]
+    }
+  ]
+}

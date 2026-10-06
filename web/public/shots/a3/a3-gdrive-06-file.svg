@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" font-family="Pretendard, 'Malgun Gothic', sans-serif">
+<rect width="1200" height="760" fill="#1b1b1b"/>
+<rect width="1200" height="96" fill="#1b1b1b"/>
+<path d="M30 22 h34 l16 16 v44 a5 5 0 0 1 -5 5 h-45 a5 5 0 0 1 -5 -5 v-55 a5 5 0 0 1 5 -5z" fill="#4285f4"/>
+<path d="M64 22 l16 16 h-12 a4 4 0 0 1 -4 -4z" fill="#a8c7fa"/>
+<rect x="38" y="50" width="34" height="4" rx="2" fill="#fff"/><rect x="38" y="60" width="34" height="4" rx="2" fill="#fff"/><rect x="38" y="70" width="22" height="4" rx="2" fill="#fff"/>
+<text x="104" y="62" font-size="38" font-weight="500" fill="#e3e3e3">test.txt</text>
+<rect x="800" y="24" width="150" height="52" rx="26" fill="#0b57d0"/>
+<circle cx="838" cy="50" r="13" fill="none" stroke="#fff" stroke-width="2.5"/><ellipse cx="838" cy="50" rx="5" ry="13" fill="none" stroke="#fff" stroke-width="2"/><line x1="825" y1="50" x2="851" y2="50" stroke="#fff" stroke-width="2"/>
+<text x="866" y="58" font-size="24" font-weight="500" fill="#fff">공유</text>
+<line x1="916" y1="32" x2="916" y2="68" stroke="#6f9bd8" stroke-width="1.5"/><path d="M926 46 l8 9 l8 -9z" fill="#fff"/>
+<circle cx="1030" cy="50" r="28" fill="#0b8043" stroke="#a8c7fa" stroke-width="3"/><text x="1030" y="58" font-size="20" font-weight="600" fill="#fff" text-anchor="middle">수강</text>
+<g fill="none" stroke="#c4c7c5" stroke-width="3" stroke-linecap="round"><circle cx="1114" cy="46" r="3"/><circle cx="1114" cy="56" r="3"/><circle cx="1114" cy="36" r="3"/></g>
+<rect x="110" y="116" width="980" height="644" fill="#fff"/>
+<text x="160" y="226" font-size="88" font-family="'Courier New', Consolas, monospace" fill="#202124">gws test file</text>
+</svg>

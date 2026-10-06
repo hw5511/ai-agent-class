@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<rect width="1200" height="900" fill="#f0f4f9"/>
+<rect x="30" y="40" width="1140" height="820" rx="40" fill="#fff" stroke="#dadce0" stroke-width="2"/>
+<text x="90" y="210" font-size="110" font-weight="600" font-family="Arial, Helvetica, sans-serif" letter-spacing="-2"><tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">o</tspan><tspan fill="#FBBC05">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#34A853">l</tspan><tspan fill="#EA4335">e</tspan></text>
+<text x="90" y="360" font-size="78" fill="#202124">계정 선택</text>
+<text x="90" y="430" font-size="38" fill="#202124">gws-cli(으)로 이동</text>
+<line x1="560" y1="130" x2="1130" y2="130" stroke="#dadce0" stroke-width="2"/>
+<circle cx="636" cy="240" r="56" fill="#1a73e8"/><text x="636" y="263" font-size="60" font-weight="600" fill="#fff" text-anchor="middle">수</text>
+<text x="724" y="236" font-size="44" font-weight="500" fill="#202124">수강생</text><text x="724" y="288" font-size="34" fill="#5f6368">student@gmail.com</text>
+<line x1="560" y1="350" x2="1130" y2="350" stroke="#dadce0" stroke-width="2"/>
+<circle cx="636" cy="460" r="56" fill="none" stroke="#5f6368" stroke-width="4"/><circle cx="636" cy="442" r="17" fill="#5f6368"/><path d="M604 486 q32 -34 64 0 z" fill="#5f6368"/>
+<text x="724" y="474" font-size="44" font-weight="500" fill="#202124">다른 계정 사용</text>
+<line x1="560" y1="570" x2="1130" y2="570" stroke="#dadce0" stroke-width="2"/>
+<text x="90" y="810" font-size="26" fill="#5f6368">한국어</text><path d="M184 794 l9 10 l9 -10" fill="none" stroke="#5f6368" stroke-width="3"/>
+<g font-size="24" fill="#5f6368" text-anchor="end"><text x="800" y="810">도움말</text><text x="980" y="810">개인정보처리방침</text><text x="1130" y="810">약관</text></g>
+</svg>

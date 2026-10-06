@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 650" width="1600" height="650" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs><clipPath id="gf-top"><rect x="400" y="14" width="800" height="192" rx="10"/></clipPath></defs>
+<rect width="1600" height="650" fill="#f0ebf8"/>
+<!-- title card -->
+<rect x="400" y="14" width="800" height="192" rx="10" fill="#fff" stroke="#dadce0" stroke-width="1.5"/>
+<rect x="400" y="14" width="800" height="12" fill="#673ab7" clip-path="url(#gf-top)"/>
+<text x="428" y="74" font-size="38" fill="#202124">사내 AI 강연 사전 설문조사</text>
+<text x="428" y="106" font-size="17" fill="#202124">사내 AI 강연 기획을 위한 사전 설문입니다. 응답은 강연 주제와 일정 선정에만 활용되며, 소</text>
+<text x="428" y="130" font-size="17" fill="#202124">요 시간은 약 3분입니다. 협조 부탁드립니다.</text>
+<line x1="401" y1="144" x2="1199" y2="144" stroke="#dadce0" stroke-width="1.5"/>
+<text x="428" y="168" font-size="16" fill="#202124"><tspan fill="#1a0dab" text-decoration="underline">Google에 로그인</tspan>하여 진행상황을 저장하세요. <tspan fill="#1a0dab" text-decoration="underline">자세히 알아보기</tspan></text>
+<line x1="401" y1="180" x2="1199" y2="180" stroke="#dadce0" stroke-width="1.5"/>
+<text x="428" y="199" font-size="15" fill="#d93025">* 표시는 필수 질문임</text>
+<!-- q1 dropdown -->
+<rect x="400" y="218" width="800" height="96" rx="10" fill="#fff" stroke="#dadce0" stroke-width="1.5"/>
+<text x="428" y="252" font-size="20" fill="#202124">소속 부서를 선택해 주세요 <tspan fill="#d93025">*</tspan></text>
+<rect x="428" y="266" width="200" height="38" rx="5" fill="#fff" stroke="#dadce0" stroke-width="1.5"/>
+<text x="444" y="291" font-size="16" fill="#5f6368">선택</text>
+<path d="M594 281 l8 8 l8 -8 z" fill="#5f6368"/>
+<!-- q2 radios -->
+<rect x="400" y="326" width="800" height="170" rx="10" fill="#fff" stroke="#dadce0" stroke-width="1.5"/>
+<text x="428" y="360" font-size="20" fill="#202124">AI 도구(ChatGPT, Claude, Copilot 등)를 업무에 얼마나 사용하고 계신가요? <tspan fill="#d93025">*</tspan></text>
+<g fill="#fff" stroke="#5f6368" stroke-width="2.2">
+<circle cx="438" cy="390" r="9"/><circle cx="438" cy="420" r="9"/><circle cx="438" cy="450" r="9"/><circle cx="438" cy="480" r="9"/></g>
+<g font-size="17" fill="#202124">
+<text x="466" y="396">사용해 본 적 없음</text><text x="466" y="426">가끔 호기심으로 사용</text><text x="466" y="456">주 1~2회 업무에 사용</text><text x="466" y="486">거의 매일 업무에 사용</text></g>
+<!-- q3 scale -->
+<rect x="400" y="508" width="800" height="128" rx="10" fill="#fff" stroke="#dadce0" stroke-width="1.5"/>
+<text x="428" y="542" font-size="20" fill="#202124">AI에 대한 본인의 이해 수준은? <tspan fill="#d93025">*</tspan></text>
+<g font-size="15" fill="#202124" text-anchor="middle"><text x="647" y="574">1</text><text x="722" y="574">2</text><text x="797" y="574">3</text><text x="872" y="574">4</text><text x="947" y="574">5</text></g>
+<g fill="#fff" stroke="#5f6368" stroke-width="2.2"><circle cx="647" cy="596" r="9"/><circle cx="722" cy="596" r="9"/><circle cx="797" cy="596" r="9"/><circle cx="872" cy="596" r="9"/><circle cx="947" cy="596" r="9"/></g>
+<text x="600" y="602" font-size="16" fill="#202124" text-anchor="end">전혀 모름</text>
+<text x="990" y="602" font-size="16" fill="#202124">매우 잘 앎</text>
+</svg>

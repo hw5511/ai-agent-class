@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 660" width="1600" height="660" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<defs></defs>
+<rect width="1600" height="660" fill="#fff"/>
+<rect x="120" y="10" width="1360" height="700" rx="28" fill="#fff" stroke="#dadce0" stroke-width="2"/>
+<text x="176" y="80" font-size="42" font-weight="600" font-family="Arial, Helvetica, sans-serif" letter-spacing="-1"><tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">o</tspan><tspan fill="#FBBC05">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#34A853">l</tspan><tspan fill="#EA4335">e</tspan></text>
+<text x="176" y="152" font-size="32" fill="#202124">gws-cli에서 Google 계정에</text><text x="176" y="194" font-size="32" fill="#202124">대한 추가 액세스를 요청합니다</text>
+<rect x="176" y="222" width="320" height="46" rx="23" fill="#fff" stroke="#dadce0" stroke-width="2"/>
+<circle cx="202" cy="245" r="15" fill="#1a73e8"/><text x="202" y="250.4" font-size="15.75" font-weight="600" fill="#fff" text-anchor="middle">수</text>
+<text x="228" y="251" font-size="17" fill="#3c4043">student@gmail.com</text>
+<text x="640" y="60" font-size="21" fill="#202124">gws-cli이(가) 다음을 수행하도록 허용</text>
+<rect x="640" y="70" width="790" height="58" rx="10" fill="#fff" stroke="#202124" stroke-width="3"/>
+<rect x="662" y="84" width="30" height="30" rx="4" fill="#fff" stroke="#5f6368" stroke-width="3"/>
+<text x="716" y="107" font-size="22" font-weight="700" fill="#202124">모두 선택</text>
+<line x1="640" y1="142" x2="1430" y2="142" stroke="#e8eaed" stroke-width="2"/>
+<rect x="662" y="152" width="28" height="28" rx="4" fill="#fff" stroke="#5f6368" stroke-width="3"/>
+<text x="716" y="174" font-size="20" fill="#202124">Google Drive의 모든 파일 확인, 수정, 생성, 삭제</text>
+<line x1="640" y1="192" x2="1430" y2="192" stroke="#e8eaed" stroke-width="2"/>
+<rect x="662" y="202" width="28" height="28" rx="4" fill="#fff" stroke="#5f6368" stroke-width="3"/>
+<text x="716" y="224" font-size="20" fill="#202124">Gmail의 이메일 읽기, 작성, 전송, 영구 삭제</text>
+<line x1="640" y1="242" x2="1430" y2="242" stroke="#e8eaed" stroke-width="2"/>
+<rect x="662" y="252" width="28" height="28" rx="4" fill="#fff" stroke="#5f6368" stroke-width="3"/>
+<text x="716" y="274" font-size="20" fill="#202124">Google 캘린더의 모든 캘린더 확인, 수정, 공유, 영구 삭제</text>
+<line x1="640" y1="292" x2="1430" y2="292" stroke="#e8eaed" stroke-width="2"/>
+<rect x="662" y="302" width="28" height="28" rx="4" fill="#fff" stroke="#5f6368" stroke-width="3"/>
+<text x="716" y="324" font-size="20" fill="#202124">Google Docs 문서 확인, 수정, 생성, 삭제</text>
+<line x1="640" y1="342" x2="1430" y2="342" stroke="#e8eaed" stroke-width="2"/>
+<rect x="662" y="352" width="28" height="28" rx="4" fill="#fff" stroke="#5f6368" stroke-width="3"/>
+<text x="716" y="374" font-size="20" fill="#202124">Google Sheets 스프레드시트 확인, 수정, 생성, 삭제</text>
+<line x1="640" y1="392" x2="1430" y2="392" stroke="#e8eaed" stroke-width="2"/>
+<rect x="662" y="402" width="28" height="28" rx="4" fill="#fff" stroke="#5f6368" stroke-width="3"/>
+<text x="716" y="424" font-size="20" fill="#202124">Google Slides 프레젠테이션 확인, 수정, 생성, 삭제</text>
+<line x1="640" y1="442" x2="1430" y2="442" stroke="#e8eaed" stroke-width="2"/>
+<rect x="662" y="452" width="28" height="28" rx="4" fill="#fff" stroke="#5f6368" stroke-width="3"/>
+<text x="716" y="474" font-size="20" fill="#202124">Google Forms 양식 및 응답 확인, 수정, 생성</text>
+<line x1="640" y1="492" x2="1430" y2="492" stroke="#e8eaed" stroke-width="2"/>
+<rect x="662" y="502" width="28" height="28" rx="4" fill="#fff" stroke="#5f6368" stroke-width="3"/>
+<text x="716" y="524" font-size="20" fill="#202124">Google Tasks 할 일 확인, 수정, 생성, 삭제</text>
+<rect x="1120" y="568" width="130" height="52" rx="26" fill="#fff" stroke="#dadce0" stroke-width="2"/><text x="1185" y="601" font-size="20" font-weight="500" fill="#1a73e8" text-anchor="middle">취소</text>
+<rect x="1280" y="568" width="150" height="52" rx="26" fill="#1a73e8"/><text x="1355" y="601" font-size="20" font-weight="500" fill="#fff" text-anchor="middle">계속</text>
+</svg>

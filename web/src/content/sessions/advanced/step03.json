@@ -1,0 +1,25 @@
+{
+  "step": 3,
+  "title": "GWS CLI로 Google Workspace 자동화",
+  "hours": "2시간",
+  "goal": "구글 2단계 인증을 켜고 gcloud 와 gws CLI 를 한 단계씩 설치·인증한 뒤, 드라이브·캘린더·지메일·구글 폼마다 명령어 분석, /skill-creator 로 CLI 스킬 만들기, 실제 테스트를 거쳐 Claude 가 Google Workspace 를 직접 다루게 한다.",
+  "topics": [
+    "GWS CLI 란",
+    "구글 2단계 인증 켜기",
+    "GWS 통합 설치",
+    "구글 드라이브",
+    "구글 캘린더",
+    "지메일",
+    "구글 폼"
+  ],
+  "practice": "gcloud SDK 설치부터 OAuth 앱 프로덕션 게시, gws auth login 까지 단계별로 진행하고, 서비스마다 gdrive-cli · gcal-cli · gmail-cli · gform-cli 스킬을 만들어 폴더 공유, 일정 추가, HTML 안내메일 발송, 설문 폼 배포를 직접 실행한다.",
+  "parts": [
+    "a3-gws",
+    "a3-2sv",
+    "a3-install",
+    "a3-gdrive",
+    "a3-gcal",
+    "a3-gmail",
+    "a3-gform"
+  ]
+}

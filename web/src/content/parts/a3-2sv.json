@@ -1,0 +1,172 @@
+{
+  "id": "a3-2sv",
+  "title": "구글 2단계 인증 켜기",
+  "summary": "구글 계정에 2단계 인증이 꺼져 있으면 Google Cloud 콘솔에서 막히므로, 보안 페이지에서 전화번호로 2단계 인증을 켠다.",
+  "slides": [
+    {
+      "id": "a3-2sv-01",
+      "template": "illustration",
+      "title": "2단계 인증 없으면 콘솔 막힘",
+      "illustration": "/illustrations/a3-2sv-console-lock.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "2단계 인증 꺼짐",
+          "body": "Google Cloud 콘솔에서 먼저 설정하라는 안내가 뜨고 진입이 막힙니다."
+        },
+        {
+          "n": 2,
+          "head": "2단계 인증 켜짐",
+          "body": "콘솔에 바로 들어가 OAuth 클라이언트 등록과 앱 게시를 이어서 할 수 있습니다."
+        },
+        {
+          "n": "!",
+          "head": "개인 계정은 필수",
+          "body": "2025년 5월 12일부터 개인 구글 계정은 2단계 인증이 있어야 콘솔을 쓸 수 있습니다. 이 수업에서 콘솔 작업을 하므로 먼저 켜야 합니다."
+        }
+      ]
+    },
+    {
+      "id": "a3-2sv-02",
+      "template": "screen",
+      "title": "Google 계정 보안 페이지",
+      "screen": {
+        "kind": "web",
+        "url": "myaccount.google.com/security",
+        "tabs": [
+          {
+            "title": "보안 및 로그인 - Google 계정",
+            "icon": "google",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "image",
+          "src": "/shots/a3/a3-2sv-01-security.svg"
+        },
+        "pins": [
+          {
+            "n": 1,
+            "x": 15,
+            "y": 46.2
+          },
+          {
+            "n": 2,
+            "x": 65.6,
+            "y": 57.4
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "보안 및 로그인 메뉴",
+          "body": "왼쪽 메뉴에서 보안 및 로그인을 누릅니다."
+        },
+        {
+          "n": 2,
+          "head": "2단계 인증 사용 안함",
+          "body": "Google에 로그인하는 방법 카드에서 2단계 인증 줄이 사용 안함이면 꺼진 상태입니다. 이 줄을 누릅니다."
+        }
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://myaccount.google.com/security",
+            "text": "Google 계정 보안"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a3-2sv-03",
+      "template": "screen",
+      "title": "2단계 인증 사용 설정",
+      "screen": {
+        "kind": "web",
+        "url": "myaccount.google.com/signinoptions/twosv",
+        "tabs": [
+          {
+            "title": "2단계 인증 - Google 계정",
+            "icon": "google",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "image",
+          "src": "/shots/a3/a3-2sv-02-twosv-off.svg"
+        },
+        "pins": [
+          {
+            "n": 1,
+            "x": 45.9,
+            "y": 76
+          },
+          {
+            "n": 2,
+            "x": 93.1,
+            "y": 82.2
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "2단계 인증 사용 설정",
+          "body": "파란 버튼을 누르면 설정이 시작됩니다. 비밀번호를 한 번 더 물으면 입력합니다."
+        },
+        {
+          "n": 2,
+          "head": "전화번호 입력",
+          "body": "전화번호를 묻는 화면이 나오면 본인 번호를 넣고 계속을 누르세요. 문자로 받은 확인 코드를 입력하면 다음 단계로 넘어갑니다."
+        }
+      ]
+    },
+    {
+      "id": "a3-2sv-04",
+      "template": "screen",
+      "title": "2단계 인증 켜진 상태",
+      "screen": {
+        "kind": "web",
+        "url": "myaccount.google.com/signinoptions/twosv",
+        "tabs": [
+          {
+            "title": "2단계 인증 - Google 계정",
+            "icon": "google",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "image",
+          "src": "/shots/a3/a3-2sv-03-twosv-on.svg"
+        },
+        "pins": [
+          {
+            "n": 1,
+            "x": 43.1,
+            "y": 72.3
+          },
+          {
+            "n": 2,
+            "x": 90,
+            "y": 66.8
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "사용 설정됨 확인",
+          "body": "2단계 인증이 사용 설정됨과 사용 설정일이 보이면 완료입니다."
+        },
+        {
+          "n": 2,
+          "head": "전화번호 두 번째 단계",
+          "body": "목록에 전화번호가 등록되어 로그인할 때 확인 코드를 받습니다."
+        }
+      ]
+    }
+  ]
+}

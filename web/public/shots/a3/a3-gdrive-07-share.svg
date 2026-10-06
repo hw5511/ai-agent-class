@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Pretendard, 'Malgun Gothic', sans-serif">
+<rect width="1600" height="900" fill="#1b1b1b"/>
+<!-- dimmed viewer behind -->
+<path d="M26 24 h22 l12 12 v34 a4 4 0 0 1 -4 4 h-30 a4 4 0 0 1 -4 -4 v-42 a4 4 0 0 1 4 -4z" fill="#4285f4"/>
+<text x="76" y="48" font-size="24" fill="#e3e3e3">test.txt</text>
+<g font-size="15" fill="#e3e3e3"><text x="76" y="84">파일</text><text x="128" y="84">보기</text><text x="180" y="84">삽입</text><text x="232" y="84">도구</text><text x="284" y="84">도움말</text></g>
+<rect x="1270" y="30" width="116" height="44" rx="22" fill="#0b57d0"/><text x="1328" y="58" font-size="16" font-weight="500" fill="#fff" text-anchor="middle">공유</text>
+<rect x="16" y="108" width="198" height="46" rx="23" fill="#2d2e30"/><rect x="226" y="108" width="1270" height="46" rx="23" fill="#2d2e30"/>
+<rect x="230" y="176" width="1140" height="724" fill="#fff"/>
+<text x="250" y="208" font-size="15" font-family="'Courier New', Consolas, monospace" fill="#202124">gws test file</text>
+<rect width="1600" height="900" fill="#000" opacity="0.62"/>
+<!-- dialog -->
+<rect x="480" y="30" width="640" height="610" rx="28" fill="#fff"/>
+<text x="524" y="96" font-size="28" fill="#1f1f1f">‘test.txt’ 공유</text>
+<rect x="524" y="124" width="552" height="52" rx="6" fill="#fff" stroke="#747775" stroke-width="1.5"/>
+<text x="546" y="156" font-size="17" fill="#5f6368">사용자, 그룹, 일정 및 기기 추가</text>
+<text x="524" y="226" font-size="18" font-weight="600" fill="#1f1f1f">액세스 권한이 있는 사용자</text>
+<circle cx="560" cy="276" r="22" fill="#0b8043"/><text x="560" y="282" font-size="15" font-weight="600" fill="#fff" text-anchor="middle">수강</text>
+<text x="600" y="271" font-size="17" fill="#1f1f1f">수강생 (나)</text><text x="600" y="294" font-size="14" fill="#5f6368">student@gmail.com</text>
+<text x="1076" y="282" font-size="16" fill="#5f6368" text-anchor="end">소유자</text>
+<text x="524" y="360" font-size="18" font-weight="600" fill="#1f1f1f">일반 액세스</text>
+<circle cx="560" cy="416" r="22" fill="#e6f4ea"/>
+<circle cx="560" cy="416" r="11" fill="none" stroke="#137333" stroke-width="2"/><ellipse cx="560" cy="416" rx="4.5" ry="11" fill="none" stroke="#137333" stroke-width="1.6"/><line x1="549" y1="416" x2="571" y2="416" stroke="#137333" stroke-width="1.6"/>
+<text x="600" y="416" font-size="17" font-weight="500" fill="#1f1f1f">링크가 있는 모든 사용자</text><path d="M850 406 l6 7 l6 -7z" fill="#444746"/>
+<text x="600" y="446" font-size="14" fill="#5f6368">링크가 있는 인터넷상의 모든 사용자가 볼 수 있음</text>
+<rect x="940" y="394" width="136" height="44" rx="8" fill="#fff" stroke="#c4c7c5" stroke-width="1.5"/>
+<text x="972" y="423" font-size="17" fill="#1f1f1f">뷰어</text><path d="M1034 412 l6 7 l6 -7z" fill="#444746"/>
+<rect x="524" y="560" width="140" height="48" rx="24" fill="#fff" stroke="#747775" stroke-width="1.5"/>
+<g fill="none" stroke="#0b57d0" stroke-width="2.2" stroke-linecap="round"><path d="M548 584 h-4 a6 6 0 0 1 0 -12 h4 M560 572 h4 a6 6 0 0 1 0 12 h-4 M547 578 h14"/></g>
+<text x="586" y="590" font-size="16" font-weight="500" fill="#0b57d0">링크 복사</text>
+<rect x="980" y="560" width="96" height="48" rx="24" fill="#0b57d0"/><text x="1028" y="590" font-size="17" font-weight="500" fill="#fff" text-anchor="middle">완료</text>
+</svg>

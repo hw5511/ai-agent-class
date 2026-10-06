@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<rect width="1200" height="900" fill="#f0ebf8"/>
+<rect width="1200" height="190" fill="#fff"/>
+<line x1="0" y1="190" x2="1200" y2="190" stroke="#dadce0" stroke-width="2"/>
+<rect x="28" y="28" width="48" height="64" rx="8" fill="#673ab7"/>
+<rect x="40" y="42" width="24" height="6" rx="3" fill="#fff"/><rect x="40" y="56" width="24" height="6" rx="3" fill="#fff"/><rect x="40" y="70" width="16" height="6" rx="3" fill="#fff"/>
+<text x="98" y="72" font-size="30" fill="#202124">사내 AI 강연 사전 설문조사</text>
+<g transform="translate(590,64) scale(1.6) translate(-409,-50)"><path d="M394 38 h12 l4 5 h14 v20 h-30 z" fill="none" stroke="#5f6368" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="translate(660,64) scale(1.6) translate(-458,-50)"><path d="M458 38 l4 9 l10 1 l-8 6 l3 10 l-9 -6 l-9 6 l3 -10 l-8 -6 l10 -1 z" fill="none" stroke="#5f6368" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="translate(740,64) scale(1.6) translate(-672,-52)"><g fill="none" stroke="#5f6368" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="672" cy="52" r="13"/><circle cx="666" cy="48" r="2"/><circle cx="674" cy="44" r="2"/><circle cx="679" cy="52" r="2"/></g></g><g transform="translate(810,64) scale(1.6) translate(-733,-52)"><g fill="none" stroke="#5f6368" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M722 52 q10 -14 22 0 q-12 14 -22 0 z"/><circle cx="733" cy="52" r="3.5"/></g></g>
+<rect x="880" y="30" width="190" height="66" rx="8" fill="#fff" stroke="#673ab7" stroke-width="3"/>
+<text x="975" y="73" font-size="28" font-weight="600" fill="#673ab7" text-anchor="middle">게시됨</text>
+<g fill="#5f6368"><circle cx="1108" cy="49" r="4"/><circle cx="1108" cy="63" r="4"/><circle cx="1108" cy="77" r="4"/></g>
+<circle cx="1158" cy="63" r="28" fill="#1a73e8"/><text x="1158" y="73" font-size="26" font-weight="600" fill="#fff" text-anchor="middle">수</text>
+<g font-size="32" fill="#5f6368" text-anchor="middle"><text x="360" y="160" fill="#673ab7" font-weight="600">질문</text><text x="540" y="160">응답</text><text x="720" y="160">설정</text></g>
+<rect x="300" y="182" width="120" height="8" rx="4" fill="#673ab7"/>
+<rect x="60" y="228" width="1000" height="330" rx="14" fill="#fff" stroke="#dadce0" stroke-width="2"/>
+<rect x="60" y="228" width="14" height="330" rx="7" fill="#4285f4"/>
+<rect x="60" y="228" width="1000" height="16" rx="8" fill="#673ab7"/>
+<text x="110" y="334" font-size="56" fill="#202124">사내 AI 강연 사전 설문조사</text>
+<line x1="110" y1="358" x2="1030" y2="358" stroke="#673ab7" stroke-width="3"/>
+<text x="110" y="426" font-size="26" fill="#202124">사내 AI 강연 기획을 위한 사전 설문입니다. 응답은 강연 주제와 일정</text>
+<text x="110" y="466" font-size="26" fill="#202124">선정에만 활용되며, 소요 시간은 약 3분입니다.</text>
+<text x="110" y="506" font-size="26" fill="#202124">협조 부탁드립니다.</text>
+<rect x="60" y="590" width="1000" height="400" rx="14" fill="#fff" stroke="#dadce0" stroke-width="2"/>
+<rect x="60" y="590" width="14" height="400" rx="7" fill="#4285f4"/>
+<text x="110" y="660" font-size="32" fill="#202124">소속 부서를 선택해 주세요 <tspan fill="#d93025">*</tspan></text>
+<g font-size="28" fill="#202124"><text x="110" y="730" fill="#5f6368" font-size="24">1</text><text x="150" y="730">경영/인사</text>
+<text x="110" y="800" fill="#5f6368" font-size="24">2</text><text x="150" y="800">영업/마케팅</text>
+<text x="110" y="870" fill="#5f6368" font-size="24">3</text><text x="150" y="870">개발/IT</text></g>
+<rect x="1090" y="228" width="84" height="300" rx="12" fill="#fff" stroke="#dadce0" stroke-width="2"/>
+<g fill="none" stroke="#5f6368" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="1132" cy="280" r="16"/><path d="M1132 272 v16 M1124 280 h16"/>
+<path d="M1120 340 h16 l8 8 v18 h-24 z"/>
+<path d="M1120 410 h26 M1132 410 v20"/>
+<rect x="1118" y="460" width="28" height="22" rx="3"/></g>
+</svg>

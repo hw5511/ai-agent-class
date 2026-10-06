@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- A3-gws/2 웹 커넥터 vs GWS CLI (tools/illus/a3_gws_vs_connector.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+
+<rect x="40" y="130" width="780" height="660" rx="44" fill="#fff6f0"/>
+<rect x="850" y="130" width="902" height="660" rx="44" fill="#eaf3fb"/>
+<text x="90" y="206" font-size="46" font-weight="900" fill="#101113" text-anchor="start">웹 커넥터</text>
+<text x="900" y="206" font-size="46" font-weight="900" fill="#0d5c9e" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">gws CLI</text>
+<rect x="220" y="264" width="140" height="34" rx="16" fill="none" stroke="#aeb3ba" stroke-width="8"/>
+<rect x="90" y="290" width="400" height="400" rx="24" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#sh)"/>
+<rect x="90" y="290" width="400" height="64" rx="24" fill="#5aa0dc"/>
+<rect x="90" y="326" width="400" height="28" fill="#5aa0dc"/>
+<text x="290.0" y="334" font-size="30" font-weight="900" fill="#fff" text-anchor="middle">준비된 도구 상자</text>
+<rect x="118" y="386" width="344" height="88" rx="16" fill="#cfe3f5" stroke="#1273c4" stroke-width="3" filter="url(#shs)"/>
+<text x="290.0" y="443" font-size="34" font-weight="800" fill="#0d5c9e" text-anchor="middle">일정 조회</text>
+<rect x="118" y="490" width="344" height="88" rx="16" fill="#cfe3f5" stroke="#1273c4" stroke-width="3" filter="url(#shs)"/>
+<text x="290.0" y="547" font-size="34" font-weight="800" fill="#0d5c9e" text-anchor="middle">일정 만들기</text>
+<rect x="118" y="594" width="344" height="88" rx="16" fill="#cfe3f5" stroke="#1273c4" stroke-width="3" filter="url(#shs)"/>
+<text x="290.0" y="651" font-size="34" font-weight="800" fill="#0d5c9e" text-anchor="middle">메일 검색</text>
+<circle cx="484" cy="284" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="484" y="294.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<g transform="translate(420 554) scale(1.2)"><path d="M0 0L0 34L8 26L14 40L20 37L14 23L26 23Z" fill="#101113" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></g>
+<rect x="890" y="238" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="953.0" y="271.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">drive.files</text>
+<rect x="1025" y="238" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1088.0" y="271.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">drive.about</text>
+<rect x="1160" y="238" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1223.0" y="271.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">gmail.send</text>
+<rect x="1295" y="238" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1358.0" y="271.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">gmail.labels</text>
+<rect x="1430" y="238" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1493.0" y="271.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">calendar.get</text>
+<rect x="1565" y="238" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1628.0" y="271.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">calendar.acl</text>
+<rect x="890" y="300" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="953.0" y="333.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">sheets.get</text>
+<rect x="1025" y="300" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1088.0" y="333.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">sheets.add</text>
+<rect x="1160" y="300" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1223.0" y="333.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">docs.get</text>
+<rect x="1295" y="300" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1358.0" y="333.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">docs.update</text>
+<rect x="1430" y="300" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1493.0" y="333.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">slides.get</text>
+<rect x="1565" y="300" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1628.0" y="333.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">slides.pages</text>
+<rect x="890" y="362" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="953.0" y="395.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">forms.create</text>
+<rect x="1025" y="362" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1088.0" y="395.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">forms.get</text>
+<rect x="1160" y="362" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1223.0" y="395.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">drive.copy</text>
+<rect x="1295" y="362" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1358.0" y="395.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">drive.export</text>
+<rect x="1430" y="362" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1493.0" y="395.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">gmail.drafts</text>
+<rect x="1565" y="362" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1628.0" y="395.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">gmail.threads</text>
+<rect x="890" y="424" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="953.0" y="457.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">calendar.list</text>
+<rect x="1025" y="424" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1088.0" y="457.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">cal.watch</text>
+<rect x="1160" y="424" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1223.0" y="457.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">sheets.clear</text>
+<rect x="1295" y="424" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1358.0" y="457.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">docs.create</text>
+<rect x="1430" y="424" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1493.0" y="457.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">drive.trash</text>
+<rect x="1565" y="424" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1628.0" y="457.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">drive.changes</text>
+<rect x="890" y="486" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="953.0" y="519.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">drive.watch</text>
+<rect x="1021" y="482" width="134" height="62" rx="14" fill="#1273c4" stroke="#fff" stroke-width="3" filter="url(#sh)"/>
+<text x="1088.0" y="522.0" font-size="26" font-weight="900" fill="#fff" text-anchor="middle">공유 권한</text>
+<rect x="1156" y="482" width="134" height="62" rx="14" fill="#1273c4" stroke="#fff" stroke-width="3" filter="url(#sh)"/>
+<text x="1223.0" y="522.0" font-size="26" font-weight="900" fill="#fff" text-anchor="middle">반복 일정</text>
+<rect x="1291" y="482" width="134" height="62" rx="14" fill="#1273c4" stroke="#fff" stroke-width="3" filter="url(#sh)"/>
+<text x="1358.0" y="522.0" font-size="26" font-weight="900" fill="#fff" text-anchor="middle">폼 게시</text>
+<rect x="1430" y="486" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1493.0" y="519.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">docs.batch</text>
+<rect x="1565" y="486" width="126" height="54" rx="12" fill="#fff" stroke="#c9ccd1" stroke-width="2"/>
+<text x="1628.0" y="519.0" font-size="16" font-weight="600" fill="#5b6570" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">slides.batch</text>
+<circle cx="1746" cy="136" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1746" y="146.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<circle cx="1451" cy="562" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1451" y="572.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<g transform="translate(1252 520) scale(1.2)"><path d="M0 0L0 34L8 26L14 40L20 37L14 23L26 23Z" fill="#101113" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></g>
+<rect x="60" y="690" width="740" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="76" y="714" width="708" height="66" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<path transform="translate(520 547) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<rect x="880" y="690" width="840" height="26" rx="10" fill="#b9bec5" filter="url(#shs)"/>
+<rect x="896" y="714" width="808" height="66" rx="10" fill="#d7dbe0" stroke="#aeb3ba" stroke-width="2"/>
+<path transform="translate(1500 547) scale(1.0)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<text x="430" y="762" font-size="30" font-weight="900" fill="#101113" text-anchor="middle">Claude</text>
+<text x="1300" y="762" font-size="30" font-weight="900" fill="#101113" text-anchor="middle">Claude</text>
+</svg>

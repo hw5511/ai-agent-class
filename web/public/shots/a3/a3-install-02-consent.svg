@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', Roboto, sans-serif">
+<rect width="1200" height="900" fill="#f0f4f9"/>
+<!-- card -->
+<rect x="50" y="90" width="1100" height="660" rx="36" fill="#ffffff"/>
+<!-- left column -->
+<text x="110" y="190" font-size="40" font-weight="500" fill="#5f6368" font-family="Roboto, Arial, sans-serif"><tspan fill="#4285f4">G</tspan><tspan fill="#ea4335">o</tspan><tspan fill="#fbbc04">o</tspan><tspan fill="#4285f4">g</tspan><tspan fill="#34a853">l</tspan><tspan fill="#ea4335">e</tspan></text>
+<text x="110" y="270" font-size="38" fill="#202124">Google Cloud SDK에서</text>
+<text x="110" y="322" font-size="38" fill="#202124">Google 계정에 액세스</text>
+<text x="110" y="374" font-size="38" fill="#202124">하려고 합니다</text>
+<!-- account pill -->
+<rect x="104" y="414" width="360" height="64" rx="32" fill="#ffffff" stroke="#dadce0" stroke-width="2"/>
+<circle cx="140" cy="446" r="20" fill="#8e44ad"/><text x="140" y="454" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">수</text>
+<text x="176" y="454" font-size="21" fill="#3c4043">student@gmail.com</text>
+<path d="M434 440 l9 10 l9 -10" fill="none" stroke="#5f6368" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- right column -->
+<text x="560" y="200" font-size="26" font-weight="500" fill="#202124">Google Cloud SDK이(가) 다음을</text>
+<text x="560" y="236" font-size="26" font-weight="500" fill="#202124">수행하도록 허용하시겠습니까?</text>
+<rect x="568" y="290" width="28" height="28" rx="4" fill="#1a73e8"/><rect x="568" y="360" width="28" height="28" rx="4" fill="#1a73e8"/>
+<path d="M574 304 l6 7 l11 -13 M574 374 l6 7 l11 -13" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="618" y="312" font-size="22" fill="#202124">Google Cloud 데이터 확인, 수정,</text>
+<text x="618" y="342" font-size="22" fill="#202124">구성 및 삭제</text>
+<text x="618" y="382" font-size="22" fill="#202124">Google 계정 이메일 주소 확인</text>
+<rect x="560" y="418" width="540" height="2" fill="#dadce0"/>
+<text x="560" y="462" font-size="20" fill="#5f6368">Google Cloud SDK을(를) 신뢰하는지</text>
+<text x="560" y="492" font-size="20" fill="#5f6368">확인하세요. 계정 정보가 앱에 공유됩니다.</text>
+<!-- buttons -->
+<rect x="754" y="610" width="150" height="58" rx="29" fill="#ffffff" stroke="#dadce0" stroke-width="2"/>
+<text x="829" y="647" font-size="22" font-weight="700" fill="#1a73e8" text-anchor="middle">취소</text>
+<rect x="926" y="610" width="150" height="58" rx="29" fill="#0b57d0"/>
+<text x="1001" y="647" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">허용</text>
+<!-- footer -->
+<text x="50" y="810" font-size="19" fill="#5f6368">한국어</text>
+<path d="M118 800 l7 8 l7 -8" fill="none" stroke="#5f6368" stroke-width="2.5"/>
+<text x="1150" y="810" font-size="19" fill="#5f6368" text-anchor="end">도움말    개인정보처리방침    약관</text>
+</svg>
