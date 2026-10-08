@@ -36,7 +36,12 @@ function readHash(): Pos {
   const [c, s, n] = location.hash.replace(/^#/, "").split("/")
   const course = (site.courses.find((x) => x.id === c)?.id ?? "basic") as CourseId
   const num = (v: string | undefined, d: number) => (v !== undefined && v !== "" && Number.isFinite(Number(v)) ? Number(v) : d)
-  return { course, step: num(s, 1), slide: num(n, 1) }
+  // "#basic/3/s3-skill" opens that part's first slide — the lesson site (woohee.me) links each video to its
+  // part by id, so the link survives slides being added or removed before it.
+  const step = num(s, 1)
+  const session = site.courses.find((x) => x.id === course)?.sessions.find((x) => x.step === step)
+  const at = n && session ? flatSlides(session).findIndex((x) => x.part.id === n) : -1
+  return { course, step, slide: at >= 0 ? at + 1 : num(n, 1) }
 }
 
 export default function App() {
