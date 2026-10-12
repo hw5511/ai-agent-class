@@ -9,7 +9,10 @@ import { cn } from "@/lib/utils"
 /** A badge anchored to a corner of its `relative` parent, counter-scaled to stay full size. */
 export function PhoneBadge({ n, scale, className }: { n: number; scale: number; className?: string }) {
   return (
-    <span className={cn("absolute z-40 rounded-full ring-2 ring-white", className)} style={{ transform: `scale(${scale > 0 ? 1 / scale : 1})` }}>
+    <span
+      className={cn("absolute z-40 rounded-full ring-2 ring-white", className)}
+      style={{ transform: `scale(${scale > 0 ? 1 / scale : 1})`, transformOrigin: `${/(^|\s)-?right-/.test(className ?? "") ? "right" : "left"} top` }}
+    >
       <NumberBadge n={n} size="sm" />
     </span>
   )
