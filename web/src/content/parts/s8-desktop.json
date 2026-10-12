@@ -1436,7 +1436,7 @@
           ],
           "terminal": {
             "vendor": "claude",
-            "cwd": "C:\u0007gent1",
+            "cwd": "C:\\agent1",
             "turns": [
               {
                 "role": "user",
