@@ -1,12 +1,12 @@
-"""8/56 phone side: open Code in the Claude phone app (hamburger -> 프로젝트 -> Code -> my computer's session)."""
+"""8/56 phone side: open Code in the Claude phone app (hamburger -> Code, the 2nd menu item under 프로젝트 -> my computer's session)."""
 import os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from illuskit import *
 
-PW, PH = 270, 540
-PY = 150
+PW, PH = 300, 600
+PY = 125
 SW, SH = PW - 16, PH - 40
-XS = [80, 534, 988, 1442]
+XS = [186, 746, 1306]
 
 
 def monitor(x, y, s=1.0):
@@ -36,28 +36,18 @@ def main_screen():
     return s
 
 
-def menu_screen(hi):
-    """hi = the item that is highlighted: the word 프로젝트 or Code."""
+def menu_screen():
+    """Slide-out menu: 프로젝트 is the first item at the very top (plain), Code the second (highlighted)."""
     s = f'<rect x="0" y="0" width="{SW}" height="{SH}" rx="30" fill="{SCREEN}"/>'
     s += f'<rect x="0" y="0" width="{SW}" height="{SH}" rx="30" fill="#101113" opacity="0.25"/>'
-    mw = 206
+    mw = 226
     s += f'<path d="M0 0H{mw}V{SH}H30A30 30 0 0 1 0 {SH - 30}Z" fill="#fff"/>'
     s += f'<rect x="{mw}" y="0" width="1.5" height="{SH}" fill="{LINE}"/>'
-    s += bar(20, 26, 110, 14, PAPER_LINE) + bar(20, 62, 80, 10, "#e4e6e9")
-
-    def item(y, label, on):
-        if on:
-            return (f'<rect x="10" y="{y}" width="{mw - 20}" height="58" rx="14" fill="{ACCENT_ZONE}" stroke="{ACCENT}" stroke-width="4"/>'
-                    + text(28, y + 38, label, 28, 800, INK, anchor="start"))
-        if label:
-            return text(28, y + 38, label, 28, 700, INK2, anchor="start")
-        return bar(28, y + 24, 100)
-
-    s += item(100, "", False)
-    s += item(168, "프로젝트", hi == "프로젝트")
-    s += item(236, "Code", True) if hi == "Code" else item(236, "", False)
-    for i, yy in enumerate((304, 372, 440)):
-        s += bar(28, yy + 24, 110 - i * 14)
+    s += text(30, 62, "프로젝트", 28, 700, INK2, anchor="start")
+    s += (f'<rect x="10" y="94" width="{mw - 20}" height="58" rx="14" fill="{ACCENT_ZONE}" stroke="{ACCENT}" stroke-width="4"/>'
+          + text(30, 132, "Code", 28, 800, INK, anchor="start"))
+    for i, yy in enumerate((178, 238, 298, 358, 418)):
+        s += bar(30, yy + 24, 120 - i * 10)
     return s
 
 
@@ -66,21 +56,21 @@ def code_screen():
     s += bar(18, 34, 100, 14)
     s += (f'<rect x="10" y="78" width="{SW - 20}" height="112" rx="16" fill="{ACCENT_ZONE}" stroke="{ACCENT}" stroke-width="4"/>'
           + monitor(28, 110, 1.0) + bar(100, 112, 110, 10, "#8a929b") + bar(100, 138, 76, 9, LINE2))
-    for i, yy in enumerate((206, 298, 390)):
+    for i, yy in enumerate((206, 306, 406)):
         s += (f'<rect x="10" y="{yy}" width="{SW - 20}" height="84" rx="16" fill="#fff" stroke="{LINE}" stroke-width="2"/>'
               f'<rect x="28" y="{yy + 26}" width="46" height="32" rx="6" fill="{PAPER_LINE}"/>'
               + bar(100, yy + 24, 110 - i * 16) + bar(100, yy + 48, 70 + i * 10, 9, "#e4e6e9"))
     return s
 
 
-screens = [main_screen(), menu_screen("프로젝트"), menu_screen("Code"), code_screen()]
-labels = ["왼쪽 위 햄버거 메뉴", "프로젝트", "Code", "내 컴퓨터 세션"]
+screens = [main_screen(), menu_screen(), code_screen()]
+labels = ["왼쪽 위 햄버거 메뉴", "위에서 두 번째 Code", "내 컴퓨터 세션"]
 
 b = [panel()]
 for i, (x, scr, lab) in enumerate(zip(XS, screens, labels)):
-    b += [phone(x, PY, PW, scr), text(x + PW / 2, 752, lab, 38, 900, INK)]
-    if i < 3:
+    b += [phone(x, PY, PW, scr), text(x + PW / 2, 775, lab, 38, 900, INK)]
+    if i < 2:
         b += [badge(x + PW - 6, PY + 6, i + 1)]
-        b += [path(f"M{x + PW + 26} 420C{x + PW + 60} 420 {x + PW + 100} 420 {XS[i + 1] - 38} 420")]
+        b += [path(f"M{x + PW + 26} {PY + PH // 2}C{x + PW + 70} {PY + PH // 2} {x + PW + 120} {PY + PH // 2} {XS[i + 1] - 38} {PY + PH // 2}")]
 
 print(save("s8-app-code-path.svg", b, "8/56 phone side: open Code in the Claude app (tools/illus/s8_app_code_path.py)"))
