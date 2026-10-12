@@ -18,7 +18,7 @@ export function PhoneMock({ v }: { v: PhoneView }) {
   useLayoutEffect(() => {
     const el = screenRef.current
     if (!el) return
-    const fit = () => setScale(el.clientHeight / DESIGN_H)
+    const fit = () => setScale(Math.min(el.clientWidth / DESIGN_W, el.clientHeight / DESIGN_H))
     fit()
     const ro = new ResizeObserver(fit)
     ro.observe(el)
@@ -35,7 +35,7 @@ export function PhoneMock({ v }: { v: PhoneView }) {
         {/* screen */}
         <div ref={screenRef} className="absolute inset-[13px] overflow-hidden rounded-[36px] bg-white">
           {scale > 0 && (
-            <div className="absolute top-0 left-0 origin-top-left" style={{ width: DESIGN_W, height: DESIGN_H, transform: `scale(${scale})` }}>
+            <div className="absolute top-0 left-1/2 origin-top-left" style={{ width: DESIGN_W, height: DESIGN_H, transform: `translateX(${-DESIGN_W / 2}px) scale(${scale})`, transformOrigin: "50% 0" }}>
               {v.screen === "home" && <PhoneHome v={v} scale={scale} />}
               {v.screen === "sidebar" && <PhoneSidebar v={v} scale={scale} />}
               {v.screen === "session" && <PhoneSession v={v} scale={scale} />}

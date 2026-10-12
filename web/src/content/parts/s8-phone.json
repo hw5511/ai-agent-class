@@ -148,36 +148,9 @@
     },
     {
       "id": "s8-phone-008",
-      "template": "cards",
+      "template": "illustration",
       "title": "폰에서 연결하는 세 가지 방법",
-      "cards": [
-        {
-          "label": "QR 코드",
-          "tags": [
-            "/rc 상태 패널",
-            "Claude 앱으로 바로"
-          ],
-          "badge": 1
-        },
-        {
-          "label": "세션 주소",
-          "tags": [
-            "아무 브라우저",
-            "claude.ai/code"
-          ],
-          "badge": 2
-        },
-        {
-          "label": "세션 목록",
-          "logo": "/logos/claude.svg",
-          "tags": [
-            "Code 메뉴",
-            "컴퓨터 아이콘 · 초록 점"
-          ],
-          "badge": 3,
-          "highlight": true
-        }
-      ],
+      "illustration": "/illustrations/s8-rc-connect.svg",
       "notes": [
         {
           "n": 1,
@@ -192,7 +165,7 @@
         {
           "n": 3,
           "head": "세션 목록에서 찾기",
-          "body": "Claude 앱에서 Code 를 누르면 세션 목록이 나옵니다. 컴퓨터 아이콘에 초록 점이 붙은 세션이 지금 켜져 있는 내 컴퓨터 세션입니다."
+          "body": "Claude 앱의 Code 화면에서 컴퓨터 아이콘에 초록 점이 붙은 세션을 고르세요. 지금 켜져 있는 내 컴퓨터 세션입니다."
         },
         {
           "n": "!",
@@ -217,9 +190,37 @@
       }
     },
     {
+      "id": "s8-phone-009",
+      "template": "illustration",
+      "title": "Claude 앱에서 Code 열기",
+      "illustration": "/illustrations/s8-app-code-path.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "왼쪽 위 햄버거 메뉴",
+          "body": "Claude 앱을 열고 왼쪽 위의 햄버거 메뉴를 누르세요."
+        },
+        {
+          "n": 2,
+          "head": "프로젝트",
+          "body": "메뉴 위쪽에 있는 프로젝트를 누르세요."
+        },
+        {
+          "n": 3,
+          "head": "Code",
+          "body": "프로젝트 아래의 Code 를 누르면 세션 목록이 나옵니다. 컴퓨터 아이콘에 초록 점이 붙은 세션이 /rc 로 연결한 내 컴퓨터 세션입니다."
+        },
+        {
+          "n": "!",
+          "head": "앱과 모바일 웹은 다름",
+          "body": "폰 브라우저에서 여는 claude.ai/code 는 화면 구성이 조금 다릅니다."
+        }
+      ]
+    },
+    {
       "id": "s8-phone-01",
       "template": "screen",
-      "title": "Claude Code 모바일 홈",
+      "title": "모바일 웹 · claude.ai/code 홈",
       "screen": {
         "kind": "phone",
         "view": {
@@ -239,15 +240,15 @@
         },
         {
           "n": "!",
-          "head": "같은 화면",
-          "body": "폰 브라우저에서 claude.ai/code 를 열어도 컴퓨터에서 보던 것과 같은 화면이 나타납니다."
+          "head": "폰 브라우저 화면",
+          "body": "폰 브라우저에서 claude.ai/code 를 연 화면입니다. Claude 앱은 햄버거 메뉴, 프로젝트, Code 순서로 들어갑니다."
         }
       ]
     },
     {
       "id": "s8-phone-02",
       "template": "screen",
-      "title": "모바일 사이드바",
+      "title": "모바일 웹 사이드바",
       "screen": {
         "kind": "phone",
         "view": {
@@ -266,7 +267,7 @@
         {
           "n": 2,
           "head": "최근 항목",
-          "body": "최근 항목에서 클라우드 세션은 폰에서도 그대로 이어서 확인할 수 있습니다."
+          "body": "모바일 웹에서는 최근 항목이 세션 목록입니다. /rc 로 연결한 내 컴퓨터 세션도 여기서 이름으로 찾을 수 있습니다."
         },
         {
           "n": "!",
