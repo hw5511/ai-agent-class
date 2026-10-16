@@ -10,7 +10,7 @@
 // defaultProps.slideNames — see SlideRoot.tsx) — this script keeps no hand-written name list, so a part
 // worker adding/renaming slides in their own step02-<part>.tsx never has to touch this file.
 //
-// Output folder: C:/woohee_industries/30-프로젝트/ai-agent-class/_drafts/step02_<part>/, except
+// Output folder: C:/wi/projects/lectures/ai-agent-class/_drafts/step02_<part>/, except
 // "claudemd" which keeps its original folder step02_claudemd_v1 (existing renders/reviews live there).
 //
 // Bundles src/slides/index.ts once, then renders each requested slide sequentially with a single

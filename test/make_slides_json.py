@@ -14,7 +14,7 @@ import json
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-BASE = Path("C:/woohee_industries/40-학원/44-에이전트강의/44.02-consultation/lecture/assets")
+BASE = Path("C:/wi/40-학원/44-에이전트강의/44.02-consultation/lecture/assets")
 SVG_NS = 'http://www.w3.org/2000/svg'
 DRY_RUN = '--dry' in sys.argv
 

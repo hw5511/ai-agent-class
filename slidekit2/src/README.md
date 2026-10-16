@@ -10,7 +10,7 @@ claudemd, read, write, bash) — the only shared file; once your part's stub is 
 2. Push `{ index, name, title, render }` onto your `STEP02_<PART>` array (`name` = plan file base name,
    becomes the output PNG name).
 3. Render: `node render_slides.mjs <part> [indices...]` (from this dir; omit indices for all). Output ->
-   `C:/woohee_industries/30-프로젝트/ai-agent-class/_drafts/step02_<part>/` (claudemd keeps
+   `C:/wi/projects/lectures/ai-agent-class/_drafts/step02_<part>/` (claudemd keeps
    `step02_claudemd_v1`), plus `contact_sheet.png` there.
 
 ## Components
