@@ -96,7 +96,7 @@
         {
           "n": 1,
           "head": "계정 유형 확인",
-          "body": "Claude Pro, Team, Console 중 본인 계정 유형을 확인합니다."
+          "body": "앞에서 Pro 이상 플랜을 확인했으니 1번 Claude account with subscription 이 해당됩니다."
         },
         {
           "n": 2,

@@ -1,0 +1,159 @@
+{
+  "id": "s1-claude-plan",
+  "title": "Claude 플랜 확인과 결제",
+  "summary": "claude.ai 에서 지금 플랜을 확인하고, 무료 플랜이면 웹에서 월간 Pro 로 올린 뒤 Pro 표시를 확인한다.",
+  "slides": [
+    {
+      "id": "s1-claude-plan-01",
+      "template": "compare",
+      "title": "현재 플랜 확인",
+      "left": {
+        "label": "claude.ai 첫 화면",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/claude_플랜_확인.png"
+        }
+      },
+      "right": {
+        "label": "왼쪽 아래 확대",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/claude_플랜_확인_확대.png"
+        }
+      },
+      "ratio": [
+        3,
+        2
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "claude.ai 첫 화면",
+          "body": "claude.ai 에 로그인하면 이 화면이 열립니다. 지금 플랜은 왼쪽 아래 계정 줄에 표시됩니다."
+        },
+        {
+          "n": 2,
+          "head": "이름 옆 플랜 표시",
+          "body": "계정 이름 옆에 Free, Pro, Max 같은 지금 플랜이 보입니다. 이 화면은 Max 계정입니다."
+        },
+        {
+          "n": "!",
+          "head": "Pro 이상이면 결제 생략",
+          "body": "Pro, Max, Team 플랜이면 결제할 필요가 없습니다. Free 일 때만 Pro 로 올립니다."
+        }
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://claude.ai",
+            "text": "claude.ai"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s1-claude-plan-02",
+      "template": "screen",
+      "title": "웹에서 월간 Pro 결제",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/claude_플랜_업그레이드.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 25.9,
+            "y": 42.0
+          },
+          {
+            "n": 2,
+            "x": 5.5,
+            "y": 88.0
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "매월 선택",
+          "body": "Pro 카드 오른쪽 위에서 매월을 고릅니다. 연간은 1년치를 한 번에 결제하므로 수업에서는 매월로 시작합니다."
+        },
+        {
+          "n": 2,
+          "head": "Pro 버튼 누르고 카드 결제",
+          "body": "Pro 카드의 검은 버튼을 누르고 신용카드나 체크카드 정보를 입력해 결제합니다. 이 화면은 Max 계정이라 다운그레이드로 보이고, 무료 플랜에서는 같은 자리에 Pro 로 올리는 버튼이 보입니다."
+        },
+        {
+          "n": "!",
+          "head": "앱 말고 PC 브라우저에서",
+          "body": "휴대폰 앱에서 결제하면 가격과 환불 방법이 달라질 수 있으니 PC 브라우저에서 결제합니다."
+        }
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://claude.ai/upgrade",
+            "text": "Claude 요금제"
+          }
+        ]
+      }
+    },
+    {
+      "id": "s1-claude-plan-03",
+      "template": "screen",
+      "title": "Pro 플랜 표시 확인",
+      "screen": {
+        "kind": "web",
+        "url": "claude.ai/code",
+        "tabs": [
+          {
+            "title": "Claude Code",
+            "icon": "claude",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "claude",
+          "screen": "home",
+          "sidebar": {
+            "account": "수강생 · Pro"
+          },
+          "home": {
+            "greeting": "수강생님, 다음 일정은 무엇인가요?"
+          },
+          "input": {
+            "placeholder": "작업을 설명하거나 질문하세요"
+          },
+          "bottomBar": {
+            "mode": "자동",
+            "model": "Opus 5.5",
+            "effort": "중간"
+          }
+        },
+        "zoom": 1.5,
+        "pins": [
+          {
+            "n": 1,
+            "x": 15.5,
+            "y": 95
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "왼쪽 아래 Pro 표시",
+          "body": "결제가 끝나면 왼쪽 아래 계정 표시가 Pro 로 바뀝니다. 그대로면 페이지를 새로고침해보세요."
+        },
+        {
+          "n": "!",
+          "head": "같은 브라우저로 claude 로그인",
+          "body": "claude 를 처음 실행하면 기본 브라우저가 열립니다. 방금 로그인한 브라우저가 기본 브라우저여야 바로 연결됩니다."
+        }
+      ]
+    }
+  ]
+}
