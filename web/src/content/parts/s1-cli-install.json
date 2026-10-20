@@ -236,8 +236,40 @@
             },
             {
               "role": "assistant",
-              "text": "Codex CLI installed (Programs\\OpenAI\\Codex\\bin)\n( codex 는 이 터미널에서 아직 안 됨 )",
+              "text": "==> Installing Codex CLI"
+            },
+            {
+              "role": "assistant",
+              "text": "==> Detected platform: Windows (x64)"
+            },
+            {
+              "role": "assistant",
+              "text": "==> Resolved version: 0.154.0"
+            },
+            {
+              "role": "assistant",
+              "text": "==> Downloading Codex CLI"
+            },
+            {
+              "role": "assistant",
+              "text": "==> PATH updated for future PowerShell sessions."
+            },
+            {
+              "role": "assistant",
+              "text": "==> Current PowerShell session: codex"
+            },
+            {
+              "role": "assistant",
+              "text": "==> Future PowerShell windows: open a new PowerShell window and run: codex"
+            },
+            {
+              "role": "assistant",
+              "text": "Codex CLI 0.154.0 installed successfully.",
               "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "Start Codex now? [y/N]:"
             }
           ]
         }
@@ -251,7 +283,7 @@
         {
           "n": 2,
           "head": "설치 완료, 아직 인식 안 됨",
-          "body": "설치는 끝났지만 codex 도 아직 이 터미널에서 인식되지 않고, 잠시 뒤 한 번에 등록합니다."
+          "body": "installed successfully 가 나오면 설치는 끝났습니다. 화면에 Current PowerShell session: codex 가 보여도 이 터미널에서는 아직 codex 가 인식되지 않고, 잠시 뒤 한 번에 등록합니다."
         }
       ],
       "action": {
@@ -339,7 +371,7 @@
     {
       "id": "s1-cli-install-03b",
       "template": "stack",
-      "title": "macOS — Codex 설치 화면의 Run 줄 붙여넣기",
+      "title": "macOS — 지금 터미널에 PATH 반영",
       "items": [
         {
           "grow": true,
@@ -355,23 +387,52 @@
                 },
                 {
                   "role": "assistant",
-                  "text": "Codex installed to /Users/student/.local/bin/codex"
+                  "text": "==> Installing Codex CLI"
                 },
                 {
                   "role": "assistant",
-                  "text": "Note: this folder is not in your PATH yet."
+                  "text": "==> Detected platform: macOS (Apple Silicon)"
+                },
+                {
+                  "role": "assistant",
+                  "text": "==> Resolved version: 0.154.0"
+                },
+                {
+                  "role": "assistant",
+                  "text": "==> Downloading Codex CLI"
+                },
+                {
+                  "role": "assistant",
+                  "text": "==> Installing standalone package to /Users/student/.codex/packages/standalone/releases/0.154.0-aarch64-apple-darwin"
                 },
                 {
                   "role": "tool",
-                  "text": "Run: echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc",
+                  "text": "==> Current terminal: export PATH=\"/Users/student/.local/bin:$PATH\" && codex",
                   "badge": 1
+                },
+                {
+                  "role": "assistant",
+                  "text": "==> Future terminals: open a new terminal and run: codex"
+                },
+                {
+                  "role": "assistant",
+                  "text": "==> PATH was added to /Users/student/.zprofile"
+                },
+                {
+                  "role": "assistant",
+                  "text": "Codex CLI 0.154.0 installed successfully."
+                },
+                {
+                  "role": "assistant",
+                  "text": "Start Codex now? [y/N] n"
                 }
-              ]
+              ],
+              "fit": true
             }
           }
         },
         {
-          "grow": true,
+          "grow": false,
           "screen": {
             "kind": "terminal",
             "terminal": {
@@ -380,7 +441,7 @@
               "turns": [
                 {
                   "role": "user",
-                  "text": "echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc",
+                  "text": "export PATH=\"$HOME/.local/bin:$PATH\"",
                   "badge": 2
                 },
                 {
@@ -399,13 +460,13 @@
       "notes": [
         {
           "n": 1,
-          "head": "Run: 줄 복사",
-          "body": "설치가 끝나면 화면 맨 아래 Run: 뒤에 나온 echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc 명령을 복사합니다."
+          "head": "Current terminal: 줄 확인",
+          "body": "설치가 끝나면 Current terminal: 뒤에 지금 터미널에서 쓸 PATH 명령이 나옵니다. 새 터미널용 PATH 는 설치 프로그램이 ~/.zprofile 에 이미 넣어 두었습니다."
         },
         {
           "n": 2,
-          "head": "붙여넣고 Enter",
-          "body": "복사한 명령을 아래 터미널에 붙여넣고 Enter 를 누르면 codex --version 에서 버전이 나타납니다."
+          "head": "&& codex 는 빼고 붙여넣기",
+          "body": "export PATH=\"$HOME/.local/bin:$PATH\" 만 붙여넣고 Enter 를 누른 뒤 codex --version 으로 버전을 확인합니다. Codex 는 나중에 codex --yolo 로 직접 실행합니다."
         }
       ],
       "action": {
@@ -413,8 +474,8 @@
         "items": [
           {
             "kind": "copy",
-            "value": "echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc",
-            "desc": "PATH 등록"
+            "value": "export PATH=\"$HOME/.local/bin:$PATH\"",
+            "desc": "PATH 반영"
           },
           {
             "kind": "copy",
