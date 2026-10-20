@@ -26,7 +26,7 @@
             },
             {
               "role": "user",
-              "text": "codex",
+              "text": "codex --yolo",
               "badge": 2
             },
             {
@@ -44,8 +44,13 @@
         },
         {
           "n": 2,
-          "head": "codex 실행",
-          "body": "codex 를 입력하면 대화할 수 있는 화면이 열립니다."
+          "head": "YOLO 모드로 실행",
+          "body": "codex --yolo 로 실행하면 승인 질문도 샌드박스도 없이 파일 수정과 명령 실행이 바로 이어집니다."
+        },
+        {
+          "n": "!",
+          "head": "실습 폴더에서만 사용",
+          "body": "모든 명령이 묻지 않고 바로 실행되니 에이전트1 같은 실습 폴더에서만 쓰세요."
         }
       ],
       "action": {
@@ -58,7 +63,7 @@
           },
           {
             "kind": "copy",
-            "value": "codex",
+            "value": "codex --yolo",
             "desc": "실행"
           }
         ]
