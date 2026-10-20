@@ -8,8 +8,8 @@
     "VS Code 환경 설정 및 터미널 기초",
     "Antigravity CLI 설치 · VS Code 재실행 · 로그인",
     "agy 에게 Codex · Claude Code 설치와 PATH 등록 맡기기",
-    "Claude 플랜 확인 · 무료 플랜이면 월간 Pro 결제",
     "Codex CLI 로그인 및 실습",
+    "Claude 플랜 확인 · 무료 플랜이면 월간 Pro 결제",
     "Claude Code 로그인 및 실습",
     "3대 에이전트 실습 결과 비교"
   ],
@@ -22,8 +22,8 @@
     "s1-agy-setup",
     "s1-agy-practice",
     "s1-cli-install",
-    "s1-claude-plan",
     "s1-codex",
+    "s1-claude-plan",
     "s1-claude-login",
     "s1-claude-practice"
   ]
