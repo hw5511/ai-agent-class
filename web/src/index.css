@@ -132,4 +132,10 @@
   html {
     @apply font-sans;
     }
+  /* Terminal and code text shows every character as typed: the D2Coding ligature font otherwise draws
+     "--" as one dash, "&&" as one "&" and "==>" as an arrow, and students copy commands by eye. */
+  .font-term, .font-mono, .font-num, code, pre, kbd, samp {
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "calt" 0;
+    }
 }

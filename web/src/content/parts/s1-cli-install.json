@@ -119,7 +119,7 @@
     {
       "id": "s1-cli-install-02b",
       "template": "stack",
-      "title": "macOS — Claude Code 설치 화면의 Run 줄 붙여넣기",
+      "title": "macOS — Claude Code 설치 화면의 echo 줄 붙여넣기",
       "items": [
         {
           "grow": true,
@@ -135,23 +135,48 @@
                 },
                 {
                   "role": "assistant",
-                  "text": "Claude Code installed to /Users/student/.local/bin/claude"
+                  "text": "Setting up Claude Code..."
                 },
                 {
                   "role": "assistant",
-                  "text": "Note: this folder is not in your PATH yet."
+                  "text": "Claude Code successfully installed!"
+                },
+                {
+                  "role": "assistant",
+                  "text": "Version: 2.1.273"
+                },
+                {
+                  "role": "assistant",
+                  "text": "Location: ~/.local/bin/claude"
+                },
+                {
+                  "role": "assistant",
+                  "text": "Next: Run claude --help to get started"
+                },
+                {
+                  "role": "assistant",
+                  "text": "Setup notes:"
+                },
+                {
+                  "role": "assistant",
+                  "text": "Native installation exists but ~/.local/bin is not in your PATH. Run:"
                 },
                 {
                   "role": "tool",
-                  "text": "Run: echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc",
+                  "text": "echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc",
                   "badge": 1
+                },
+                {
+                  "role": "assistant",
+                  "text": "✅ Installation complete!"
                 }
-              ]
+              ],
+              "fit": true
             }
           }
         },
         {
-          "grow": true,
+          "grow": false,
           "screen": {
             "kind": "terminal",
             "terminal": {
@@ -179,8 +204,8 @@
       "notes": [
         {
           "n": 1,
-          "head": "Run: 줄 복사",
-          "body": "설치가 끝나면 화면 맨 아래 Run: 뒤에 나온 echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc 명령을 복사합니다."
+          "head": "Setup notes 의 echo 줄 복사",
+          "body": "설치가 끝나면 Setup notes 아래 Run: 다음 줄에 나온 echo 'export PATH=\"$HOME/.local/bin:$PATH\"' >> ~/.zshrc && source ~/.zshrc 명령을 복사합니다."
         },
         {
           "n": 2,
