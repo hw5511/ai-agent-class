@@ -875,17 +875,17 @@
     "label": "경비-신청 스레드",
     "screen": {
      "kind": "shot",
-     "src": "/shots/au1s/s3_reply_thread.png",
+     "src": "/shots/au1s/s3_reply_thread_crop.png",
      "badges": [
       {
        "n": 1,
-       "x": 86,
-       "y": 32
+       "x": 60.3,
+       "y": 39.5
       },
       {
        "n": 2,
-       "x": 89,
-       "y": 51
+       "x": 96.2,
+       "y": 73.7
       }
      ]
     }
@@ -952,17 +952,17 @@
     "label": "자금 담당 DM",
     "screen": {
      "kind": "shot",
-     "src": "/shots/au1s/s3_bank_files.png",
+     "src": "/shots/au1s/s3_bank_files_crop.png",
      "badges": [
       {
        "n": 1,
-       "x": 36,
-       "y": 41
+       "x": 55.3,
+       "y": 39.3
       },
       {
        "n": 2,
-       "x": 38,
-       "y": 60
+       "x": 66.7,
+       "y": 93.2
       }
      ]
     }
@@ -996,17 +996,17 @@
    "title": "재무팀장 DM",
    "screen": {
     "kind": "shot",
-    "src": "/shots/au1s/s3_finance_dm.png",
+    "src": "/shots/au1s/s3_finance_dm_crop.png",
     "badges": [
      {
       "n": 1,
-      "x": 31,
-      "y": 58
+      "x": 21.5,
+      "y": 37.0
      },
      {
       "n": 2,
-      "x": 47,
-      "y": 70
+      "x": 31.9,
+      "y": 66.7
      }
     ]
    },
@@ -1091,17 +1091,17 @@
     "label": "재무팀장 답장",
     "screen": {
      "kind": "shot",
-     "src": "/shots/au1s/sim3_final.png",
+     "src": "/shots/au1s/sim3_final_crop.png",
      "badges": [
       {
        "n": 1,
-       "x": 60,
-       "y": 83
+       "x": 97.3,
+       "y": 93.8
       },
       {
        "n": 3,
-       "x": 60,
-       "y": 69
+       "x": 72.9,
+       "y": 72.8
       }
      ]
     }
