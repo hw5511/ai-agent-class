@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- AR2/1 chat run vs program (tools/illus/ar2_bridge_why.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+<rect x="76" y="170" width="800" height="610" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<rect x="916" y="170" width="800" height="610" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<text x="476.0" y="216" font-size="34" font-weight="800" fill="#101113" text-anchor="middle">대화로 실행</text>
+<text x="476.0" y="254" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">실행할 때마다 답이 조금씩 달라짐</text>
+<text x="1316.0" y="216" font-size="34" font-weight="800" fill="#101113" text-anchor="middle">프로그램으로 실행</text>
+<text x="1316.0" y="254" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">같은 입력이면 같은 결과와 근거</text>
+<rect x="116" y="290" width="720" height="70" rx="16" fill="#f7f8fa" stroke="#c9ccd1" stroke-width="3"/>
+<text x="476.0" y="333.84" font-size="26" font-weight="700" fill="#101113" text-anchor="middle">입력 · 식대 영수증 1건 (한도 초과)</text>
+<rect x="116" y="402" width="300" height="80" rx="28" fill="#fff" stroke="#aeb3ba" stroke-width="3" filter="url(#shs)"/><path d="M170 481L202 481L186 504Z" fill="#fff" stroke="#aeb3ba" stroke-width="3"/><rect x="170" y="478" width="32" height="6" fill="#fff"/><text x="266.0" y="451.52" font-size="28" font-weight="900" fill="#5b6570" text-anchor="middle">1회 실행</text>
+<path d="M436 442C466 442 486 442 516 442" fill="none" stroke="#e3e8ee" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M436 442C466 442 486 442 516 442" fill="none" stroke="#aeb3ba" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M526.8 442.0L496.8 461.2L496.8 422.8Z" fill="#aeb3ba" stroke="#aeb3ba" stroke-width="7" stroke-linejoin="round"/>
+<rect x="556" y="402" width="280" height="80" rx="16" fill="#fff" stroke="#aeb3ba" stroke-width="3"/>
+<text x="696.0" y="452.2" font-size="30" font-weight="800" fill="#101113" text-anchor="middle">일부 인정</text>
+<rect x="116" y="532" width="300" height="80" rx="28" fill="#fff" stroke="#aeb3ba" stroke-width="3" filter="url(#shs)"/><path d="M170 611L202 611L186 634Z" fill="#fff" stroke="#aeb3ba" stroke-width="3"/><rect x="170" y="608" width="32" height="6" fill="#fff"/><text x="266.0" y="581.52" font-size="28" font-weight="900" fill="#5b6570" text-anchor="middle">2회 실행</text>
+<path d="M436 572C466 572 486 572 516 572" fill="none" stroke="#e3e8ee" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M436 572C466 572 486 572 516 572" fill="none" stroke="#aeb3ba" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M526.8 572.0L496.8 591.2L496.8 552.8Z" fill="#aeb3ba" stroke="#aeb3ba" stroke-width="7" stroke-linejoin="round"/>
+<rect x="556" y="532" width="280" height="80" rx="16" fill="#fff" stroke="#aeb3ba" stroke-width="3"/>
+<text x="696.0" y="582.2" font-size="30" font-weight="800" fill="#101113" text-anchor="middle">승인</text>
+<circle cx="846" cy="392" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="846" y="402.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<circle cx="146" cy="718" r="22" fill="#d64545"/><path d="M138.08 710.08L153.92 725.92M153.92 710.08L138.08 725.92" stroke="#fff" stroke-width="4.4" stroke-linecap="round"/>
+<text x="188" y="728" font-size="28" font-weight="800" fill="#101113" text-anchor="start">근거 조항 없음, 확인하기 어려움</text>
+<rect x="956" y="290" width="720" height="70" rx="16" fill="#f7f8fa" stroke="#c9ccd1" stroke-width="3"/>
+<text x="1316.0" y="333.84" font-size="26" font-weight="700" fill="#101113" text-anchor="middle">입력 · 식대 영수증 1건 (한도 초과)</text>
+<g filter="url(#sh)"><rect x="956" y="402" width="400" height="160" rx="16" fill="#1e1f22" stroke="#3a3d42" stroke-width="2"/></g>
+<path d="M957 454V418a15 15 0 0 1 15-15h368a15 15 0 0 1 15 15V454z" fill="#2b2d31"/>
+<circle cx="982" cy="428" r="7" fill="#ff5f57"/><circle cx="1004" cy="428" r="7" fill="#febc2e"/><circle cx="1026" cy="428" r="7" fill="#28c840"/>
+<text x="1156.0" y="436" font-size="20" font-weight="700" fill="#c9ccd1" text-anchor="middle">judge.py</text>
+<g transform="translate(956 454)"><text x="20" y="34" font-size="20" font-weight="700" fill="#5aa0dc" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">judge(item, rules)</text><text x="20" y="64" font-size="20" font-weight="700" fill="#e7e9ec" text-anchor="start">-&gt; 일부 인정</text><text x="20" y="94" font-size="20" font-weight="700" fill="#e7e9ec" text-anchor="start">근거: 여비규정 한도표</text></g>
+<rect x="1436" y="402" width="240" height="46" rx="16" fill="#eaf3fb" stroke="#1273c4" stroke-width="3"/>
+<text x="1556.0" y="432.48" font-size="22" font-weight="800" fill="#101113" text-anchor="middle">1회 · 일부 인정</text>
+<rect x="1436" y="458" width="240" height="46" rx="16" fill="#eaf3fb" stroke="#1273c4" stroke-width="3"/>
+<text x="1556.0" y="488.48" font-size="22" font-weight="800" fill="#101113" text-anchor="middle">2회 · 일부 인정</text>
+<rect x="1436" y="514" width="240" height="46" rx="16" fill="#eaf3fb" stroke="#1273c4" stroke-width="3"/>
+<text x="1556.0" y="544.48" font-size="22" font-weight="800" fill="#101113" text-anchor="middle">3회 · 일부 인정</text>
+<path d="M1386 482C1401 482 1411 482 1424 482" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1386 482C1401 482 1411 482 1424 482" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1434.8 482.0L1404.8 501.2L1404.8 462.8Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<circle cx="1686" cy="392" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1686" y="402.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<circle cx="986" cy="718" r="22" fill="#12a150"/><path d="M976.76 718.44l6.6 6.6 12.32-13.2" fill="none" stroke="#fff" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1028" y="728" font-size="28" font-weight="800" fill="#101113" text-anchor="start">근거 조항이 결과에 함께 남음</text>
+</svg>

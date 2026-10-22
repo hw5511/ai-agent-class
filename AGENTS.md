@@ -7,8 +7,10 @@ AI 에이전트 강의 수업자료.
 
 **hw5511.github.io/ai-agent-class 는 `web/` 을 빌드한 사이트다.** 예전 `viewer.template.html` +
 `build.py` 로 만든 `index.html` 뷰어는 더 이상 배포되지 않는다(`build.py` 는 설명회용
-`overview/index.html` 만 계속 만든다). 공개 과정은 **basic · advanced** 두 개뿐이다
-(automation 은 `courses/automation/` 에 데이터만 남기고 사이트에서 숨김 — `web/src/content/load.ts` 의 `COURSE_ORDER`).
+`overview/index.html` 만 계속 만든다). 공개 과정은 **basic · advanced · automation** 이다 (`web/src/content/load.ts` 의 `COURSE_ORDER`).
+automation 은 2026-10-23 부터 새 슬라이드만 쓴다(4회차 x 4시간, 1회차 = 경비 환급 정산 + 연습용 메신저 도란 https://lab.woohee.me/doran).
+`courses/automation/` 의 옛 8단계 데이터는 설명회 `overview` 에만 쓰인다. 실습 자료 생성기는 `tools/automation/reimburse/`,
+정답지·메신저 시드·완성본은 공개 저장소에 올리지 않는다(.gitignore).
 
 **슬라이드는 데이터다.** 두 종류가 한 뷰어에 섞여 나온다:
 

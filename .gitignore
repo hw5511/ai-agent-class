@@ -15,3 +15,21 @@ __pycache__/
 
 # 슬라이드 제작용 임시 초안 — 저장소에 올리지 않는다 (2026-09-20)
 _drafts/
+
+# automation session 1 (경비 환급): instructor-only or generated, never in the public repo
+tools/automation/reimburse/_build/
+tools/automation/reimburse/_cache/
+tools/automation/reimburse/assets/
+tools/automation/reimburse/answer_key.json
+tools/automation/reimburse/dataset.json
+tools/automation/reimburse/docs/RULE_DECISIONS.md
+tools/automation/reimburse/messenger_app/
+tools/automation/reimburse/__pycache__/
+assets/automation/step01/messenger_seed/
+assets/automation/step01/student_kit_base/
+assets/automation/step01/reimburse_kit/
+assets/automation/step01/*완성본*.zip
+assets/automation/step01/경비환급_실습키트.zip
+
+# 경비 환급 실습 생성기: 함정과 정답을 담고 있어 공개 저장소에 두지 않는다 (로컬 브랜치 automation-s1-expense)
+tools/automation/reimburse/

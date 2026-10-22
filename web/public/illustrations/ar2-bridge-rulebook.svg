@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- AR2/4 rulebook to program (tools/illus/ar2_bridge_rulebook.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+<text x="300" y="222" font-size="30" font-weight="900" fill="#101113" text-anchor="middle">해외출장경비처리지침</text>
+<rect x="76" y="252" width="448" height="230" rx="14" fill="#fff" stroke="#aeb3ba" stroke-width="3"/>
+<text x="100" y="292" font-size="22" font-weight="800" fill="#0d5c9e" text-anchor="start">별표 · 항목별 계정과목 분류표</text>
+<rect x="100" y="312" width="400" height="42" fill="#f7f8fa" stroke="#d5d8dc" stroke-width="1.5"/>
+<text x="116" y="340" font-size="21" font-weight="700" fill="#2b2f35" text-anchor="start">택시, 지하철</text>
+<text x="340" y="340" font-size="21" font-weight="700" fill="#2b2f35" text-anchor="start">교통비</text>
+<rect x="100" y="362" width="400" height="42" fill="#f7f8fa" stroke="#d5d8dc" stroke-width="1.5"/>
+<text x="116" y="390" font-size="21" font-weight="700" fill="#2b2f35" text-anchor="start">호텔</text>
+<text x="340" y="390" font-size="21" font-weight="700" fill="#2b2f35" text-anchor="start">숙박비</text>
+<rect x="100" y="412" width="400" height="42" fill="#f7f8fa" stroke="#d5d8dc" stroke-width="1.5"/>
+<text x="116" y="440" font-size="21" font-weight="700" fill="#2b2f35" text-anchor="start">식당, 카페</text>
+<text x="340" y="440" font-size="21" font-weight="700" fill="#2b2f35" text-anchor="start">식대</text>
+<rect x="76" y="516" width="448" height="260" rx="14" fill="#fff" stroke="#aeb3ba" stroke-width="3"/>
+<text x="100" y="556" font-size="22" font-weight="800" fill="#0d5c9e" text-anchor="start">본문 조항</text>
+<rect x="100" y="576" width="400" height="48" rx="8" fill="#f7f8fa" stroke="#d5d8dc" stroke-width="1.5"/>
+<text x="116" y="608" font-size="22" font-weight="700" fill="#2b2f35" text-anchor="start">혼합 영수증 분리</text>
+<rect x="100" y="638" width="400" height="48" rx="8" fill="#f7f8fa" stroke="#d5d8dc" stroke-width="1.5"/>
+<text x="116" y="670" font-size="22" font-weight="700" fill="#2b2f35" text-anchor="start">선물 vs 기념품</text>
+<rect x="100" y="700" width="400" height="48" rx="8" fill="#f7f8fa" stroke="#d5d8dc" stroke-width="1.5"/>
+<text x="116" y="732" font-size="22" font-weight="700" fill="#2b2f35" text-anchor="start">공항 결제</text>
+<path d="M544 367C580 367 610 367 650 367" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M544 367C580 367 610 367 650 367" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M660.8 367.0L630.8 386.2L630.8 347.8Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<path d="M544 646C580 646 610 646 650 646" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M544 646C580 646 610 646 650 646" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M660.8 646.0L630.8 665.2L630.8 626.8Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<g filter="url(#sh)"><rect x="690" y="262" width="520" height="190" rx="16" fill="#1e1f22" stroke="#3a3d42" stroke-width="2"/></g>
+<path d="M691 314V278a15 15 0 0 1 15-15h488a15 15 0 0 1 15 15V314z" fill="#2b2d31"/>
+<circle cx="716" cy="288" r="7" fill="#ff5f57"/><circle cx="738" cy="288" r="7" fill="#febc2e"/><circle cx="760" cy="288" r="7" fill="#28c840"/>
+<text x="950.0" y="296" font-size="20" font-weight="700" fill="#c9ccd1" text-anchor="middle">classify_table.py</text>
+<g transform="translate(690 314)"><text x="20" y="34" font-size="20" font-weight="700" fill="#5aa0dc" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">KEYWORDS = {</text><text x="20" y="64" font-size="20" font-weight="700" fill="#e7e9ec" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">  "택시": "교통비",</text><text x="20" y="94" font-size="20" font-weight="700" fill="#e7e9ec" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">  "호텔": "숙박비",</text><text x="20" y="124" font-size="20" font-weight="700" fill="#5aa0dc" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">}</text></g>
+<circle cx="1200" cy="244" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1200" y="254.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<text x="1250" y="340" font-size="32" font-weight="900" fill="#101113" text-anchor="start">표는 코드로</text>
+<text x="1250" y="380" font-size="23" font-weight="600" fill="#5b6570" text-anchor="start">같은 키워드면 같은 계정</text>
+<rect x="690" y="536" width="520" height="240" rx="18" fill="#eaf3fb" stroke="#1273c4" stroke-width="3"/>
+<text x="716" y="580" font-size="28" font-weight="900" fill="#101113" text-anchor="start">유형 분류 모듈</text>
+<text x="1184" y="580" font-size="22" font-weight="700" fill="#0d5c9e" text-anchor="end" font-family="'D2Coding', Consolas, 'Courier New', monospace">haiku</text>
+<rect x="716" y="604" width="250" height="60" rx="16" fill="#fff" stroke="#1273c4" stroke-width="3"/>
+<text x="841.0" y="641.48" font-size="22" font-weight="700" fill="#101113" text-anchor="middle">지침 본문 (매뉴얼)</text>
+<text x="1090" y="640" font-size="22" font-weight="700" fill="#2b2f35" text-anchor="middle">조항을 인용하고</text>
+<text x="1090" y="668" font-size="22" font-weight="700" fill="#2b2f35" text-anchor="middle">모르면 표시</text>
+<rect x="716" y="694" width="200" height="56" rx="28" fill="#1273c4" stroke="#1273c4" stroke-width="3"/>
+<text x="816.0" y="730.16" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">지침 3.4</text>
+<rect x="960" y="694" width="200" height="56" rx="28" fill="#fff" stroke="#d64545" stroke-width="3"/>
+<text x="1060.0" y="730.16" font-size="24" font-weight="800" fill="#d64545" text-anchor="middle">확인필요</text>
+<circle cx="1200" cy="518" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1200" y="528.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<text x="1250" y="640" font-size="32" font-weight="900" fill="#101113" text-anchor="start">문장은 AI 모듈로</text>
+<text x="1250" y="680" font-size="23" font-weight="600" fill="#5b6570" text-anchor="start">AI 모듈도 규칙집이 필요</text>
+<circle cx="1268" cy="733" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1268" y="743.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+</svg>

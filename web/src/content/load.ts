@@ -31,8 +31,14 @@ const partById = (id: string): Part => {
 }
 const resolveSession = (s: NativeSession): Session => ({ ...s, parts: s.parts.map((p) => (typeof p === "string" ? partById(p) : p)) })
 
-// automation is hidden from the site (CEO 2026-09-22: basic + advanced only); its JSON stays in courses/.
-const COURSE_ORDER: CourseId[] = ["basic", "advanced"]
+// automation is public again from 2026-10-23 (CEO): session 1 = 경비 환급 정산 with the 도란 practice messenger.
+const COURSE_ORDER: CourseId[] = ["basic", "advanced", "automation"]
+
+// automation is rebuilt as 4 sessions x 4 h, native sessions only (CEO 2026-10-22). The old 8-step outline in
+// courses/automation/ still feeds the public overview page (build.py), so the viewer skips it instead of editing it.
+const NATIVE_ONLY: Partial<Record<CourseId, { label: string; title: string }>> = {
+  automation: { label: "Automation · 4 Sessions", title: "AI 에이전트 업무 자동화 과정" },
+}
 
 function normaliseAction(a: LegacyAction | null | undefined): ActionBox | undefined {
   if (!a) return undefined
@@ -63,9 +69,9 @@ function adaptLegacy(course: CourseId, s: LegacySession): Session {
 
 export function loadSite(): Site {
   const courses: Course[] = COURSE_ORDER.map((id) => {
-    const meta = Object.entries(metas).find(([p]) => p.includes(`/courses/${id}/`))?.[1]
+    const meta = NATIVE_ONLY[id] ?? Object.entries(metas).find(([p]) => p.includes(`/courses/${id}/`))?.[1]
     const sessions = Object.entries(legacy)
-      .filter(([p]) => p.includes(`/courses/${id}/`))
+      .filter(([p]) => !NATIVE_ONLY[id] && p.includes(`/courses/${id}/`))
       .map(([, s]) => adaptLegacy(id, s))
     for (const [p, raw] of Object.entries(native)) {
       if (!p.includes(`/sessions/${id}/`)) continue

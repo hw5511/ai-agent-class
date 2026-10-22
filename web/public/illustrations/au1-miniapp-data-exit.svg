@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- AU1/5 데이터 층과 오피스 출구 (tools/illus/au1_miniapp_data_exit.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+<rect x="76" y="210" width="760" height="540" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<rect x="956" y="210" width="760" height="540" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<text x="456.0" y="274" font-size="40" font-weight="900" fill="#101113" text-anchor="middle">데이터 층</text>
+<text x="456.0" y="314" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">중간 데이터는 가벼운 파일로</text>
+<text x="1336.0" y="274" font-size="40" font-weight="900" fill="#101113" text-anchor="middle">출구</text>
+<text x="1336.0" y="314" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">오피스 파일은 여기서만</text>
+<circle cx="800" cy="210" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="800" y="220.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<circle cx="1680" cy="210" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1680" y="220.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<rect x="116" y="350" width="300" height="130" rx="16" fill="#eaf3fb" stroke="#1273c4" stroke-width="3"/>
+<text x="266" y="412" font-size="40" font-weight="900" fill="#0d5c9e" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">md</text>
+<text x="266" y="452" font-size="22" font-weight="600" fill="#5b6570" text-anchor="middle">글</text>
+<rect x="496" y="350" width="300" height="130" rx="16" fill="#eaf3fb" stroke="#1273c4" stroke-width="3"/>
+<text x="646" y="412" font-size="40" font-weight="900" fill="#0d5c9e" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">json</text>
+<text x="646" y="452" font-size="22" font-weight="600" fill="#5b6570" text-anchor="middle">구조가 있는 값</text>
+<rect x="116" y="520" width="300" height="130" rx="16" fill="#eaf3fb" stroke="#1273c4" stroke-width="3"/>
+<text x="266" y="582" font-size="40" font-weight="900" fill="#0d5c9e" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">csv</text>
+<text x="266" y="622" font-size="22" font-weight="600" fill="#5b6570" text-anchor="middle">표</text>
+<rect x="496" y="520" width="300" height="130" rx="16" fill="#eaf3fb" stroke="#1273c4" stroke-width="3"/>
+<text x="646" y="582" font-size="40" font-weight="900" fill="#0d5c9e" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">db</text>
+<text x="646" y="622" font-size="22" font-weight="600" fill="#5b6570" text-anchor="middle">계속 쌓이는 기록</text>
+<path d="M850 480C870 480 890 480 914 480" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M850 480C870 480 890 480 914 480" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M924.8 480.0L894.8 499.2L894.8 460.8Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<g transform="translate(1000 430) rotate(0.0 48.0 60.0) scale(1.5)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<text x="1048" y="582" font-size="24" font-weight="800" fill="#101113" text-anchor="middle">템플릿</text>
+<circle cx="1098" cy="416" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1098" y="426.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<g transform="translate(1440 350) rotate(0.0 40.0 50.0) scale(1.25)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#12a150"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<text x="1544" y="394" font-size="30" font-weight="900" fill="#101113" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">xlsx</text>
+<text x="1544" y="426" font-size="22" font-weight="600" fill="#5b6570" text-anchor="start">엑셀</text>
+<path d="M1112 490C1230 490 1260 400 1396 400" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1112 490C1230 490 1260 400 1396 400" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1406.8 400.0L1376.8 419.2L1376.8 380.8Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<g transform="translate(1440 490) rotate(0.0 40.0 50.0) scale(1.25)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<text x="1544" y="534" font-size="30" font-weight="900" fill="#101113" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">docx</text>
+<text x="1544" y="566" font-size="22" font-weight="600" fill="#5b6570" text-anchor="start">워드</text>
+<path d="M1112 490C1230 490 1260 540 1396 540" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1112 490C1230 490 1260 540 1396 540" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1406.8 540.0L1376.8 559.2L1376.8 520.8Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<g transform="translate(1440 630) rotate(0.0 40.0 50.0) scale(1.25)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#d97757"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<text x="1544" y="674" font-size="30" font-weight="900" fill="#101113" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">hwpx</text>
+<text x="1544" y="706" font-size="22" font-weight="600" fill="#5b6570" text-anchor="start">한글</text>
+<path d="M1112 490C1230 490 1260 680 1396 680" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1112 490C1230 490 1260 680 1396 680" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1406.8 680.0L1376.8 699.2L1376.8 660.8Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+</svg>

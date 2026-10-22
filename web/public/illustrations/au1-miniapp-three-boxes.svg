@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- AU1/4 추출 변환 적재 오늘의 파일 (tools/illus/au1_miniapp_three_boxes.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+<rect x="76" y="210" width="480" height="540" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<text x="316.0" y="274" font-size="44" font-weight="900" fill="#101113" text-anchor="middle">추출</text>
+<text x="316.0" y="308" font-size="20" font-weight="700" fill="#1273c4" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">Extract</text>
+<text x="316.0" y="350" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">파일 읽기, API 호출</text>
+<circle cx="520" cy="210" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="520" y="220.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<rect x="656" y="210" width="480" height="540" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<text x="896.0" y="274" font-size="44" font-weight="900" fill="#101113" text-anchor="middle">변환</text>
+<text x="896.0" y="308" font-size="20" font-weight="700" fill="#1273c4" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">Transform</text>
+<text x="896.0" y="350" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">환율 적용, 한도 판정</text>
+<circle cx="1100" cy="210" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1100" y="220.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<rect x="1236" y="210" width="480" height="540" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<text x="1476.0" y="274" font-size="44" font-weight="900" fill="#101113" text-anchor="middle">적재</text>
+<text x="1476.0" y="308" font-size="20" font-weight="700" fill="#1273c4" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">Load</text>
+<text x="1476.0" y="350" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">결과를 파일로 내기</text>
+<circle cx="1680" cy="210" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1680" y="220.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<g transform="translate(124 400) rotate(0.0 45.0 56.25) scale(1.40625)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<text x="169" y="542.5" font-size="20" font-weight="800" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">expenses.csv</text>
+<rect x="300" y="410" width="230" height="90" rx="16" fill="#eaf3fb" stroke="#1273c4" stroke-width="3"/>
+<text x="415.0" y="463.84" font-size="26" font-weight="800" fill="#101113" text-anchor="middle">한국은행 API</text>
+<g filter="url(#sh)"><rect x="672" y="420" width="272" height="150" rx="16" fill="#1e1f22" stroke="#3a3d42" stroke-width="2"/></g>
+<path d="M673 472V436a15 15 0 0 1 15-15h240a15 15 0 0 1 15 15V472z" fill="#2b2d31"/>
+<circle cx="698" cy="446" r="7" fill="#ff5f57"/><circle cx="720" cy="446" r="7" fill="#febc2e"/><circle cx="742" cy="446" r="7" fill="#28c840"/>
+<text x="808.0" y="454" font-size="20" font-weight="700" fill="#c9ccd1" text-anchor="middle">process.py</text>
+<g transform="translate(672 472)"><text x="18" y="34" font-size="20" font-weight="700" fill="#5aa0dc" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">to_krw(rates)</text><text x="18" y="64" font-size="20" font-weight="700" fill="#e7e9ec" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">check(limits)</text><text x="18" y="94" font-size="20" font-weight="700" fill="#e7e9ec" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">save(result)</text></g>
+<path d="M952 510C962 510 968 505 976 505" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M952 510C962 510 968 505 976 505" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M986.8 505.0L956.8 524.2L956.8 485.8Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<g transform="translate(996 440) rotate(0.0 45.0 56.25) scale(1.40625)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<text x="1041" y="582.5" font-size="20" font-weight="800" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">result.json</text>
+<g transform="translate(1268 430) rotate(0.0 38.0 47.5) scale(1.1875)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#12a150"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<text x="1306" y="555" font-size="20" font-weight="800" fill="#101113" text-anchor="middle">정산서 엑셀</text>
+<g transform="translate(1438 430) rotate(0.0 38.0 47.5) scale(1.1875)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<text x="1476" y="555" font-size="19" font-weight="800" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">정산요약.md</text>
+<g transform="translate(1608 430) rotate(0.0 38.0 47.5) scale(1.1875)" filter="url(#shs)"><path d="M6 2h36l20 20v52a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" fill="#fff" stroke="#c9ccd1" stroke-width="2.5"/><path d="M42 2v16a4 4 0 0 0 4 4h16" fill="#eef1f4" stroke="#c9ccd1" stroke-width="2.5"/><rect x="12" y="36" width="38" height="4" rx="2" fill="#1273c4"/><rect x="12" y="48" width="30" height="4" rx="2" fill="#d5d8dc"/><rect x="12" y="60" width="36" height="4" rx="2" fill="#d5d8dc"/></g>
+<text x="1646" y="555" font-size="19" font-weight="800" fill="#101113" text-anchor="middle" font-family="'D2Coding', Consolas, 'Courier New', monospace">확인필요.csv</text>
+<path d="M572 480C590 480 604 480 622 480" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M572 480C590 480 604 480 622 480" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M632.8 480.0L602.8 499.2L602.8 460.8Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<path d="M1152 480C1170 480 1184 480 1202 480" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1152 480C1170 480 1184 480 1202 480" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M1212.8 480.0L1182.8 499.2L1182.8 460.8Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+</svg>
