@@ -289,7 +289,6 @@
       "id": "ar1-mission-05",
       "template": "screen",
       "title": "Claude Code 에 연결",
-      "replaceWithCapture": "real terminal after connect",
       "screen": {
         "kind": "terminal",
         "terminal": {
@@ -299,6 +298,10 @@
               "role": "user",
               "text": "도란에 연결해 줘. 연결 코드: ABC-123",
               "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "도란에 연결했어요. 누리마루산업 주식회사 재무팀 대리 시뮬3 님 이름으로 들어가 있고, 연결 상태 확인도 정상으로 나왔어요.\n다음 단계로 안 읽은 대화부터 확인해 볼까요?"
             }
           ],
           "input": {
