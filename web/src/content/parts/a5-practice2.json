@@ -1,0 +1,587 @@
+{
+  "id": "a5-practice2",
+  "title": "DB 실습 2",
+  "summary": "복사한 업무 템플릿에 연결하고 tasks 스킬을 새 DB 구조에 맞춰 바꿔 실습합니다.",
+  "slides": [
+    {
+      "id": "a5-practice2-01",
+      "template": "screen",
+      "title": "To Do List 템플릿",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a5/a5-p2-01-template-public.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 90.6,
+            "y": 7.1
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "이 템플릿으로 시작",
+          "body": "링크로 템플릿을 열고 이 템플릿으로 시작 버튼을 누릅니다. 내 워크스페이스에 복사해 실습합니다."
+        }
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://angry-thrill-642.notion.site/To-Do-List-2ce347ebc60a802891dacf55a24eba68",
+            "text": "To Do List 템플릿"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a5-practice2-02",
+      "template": "screen",
+      "title": "추가할 위치",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a5/a5-p2-02-duplicate-dialog.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 55.9,
+            "y": 46.3
+          },
+          {
+            "n": 2,
+            "x": 55.9,
+            "y": 68.8
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "워크스페이스 선택",
+          "body": "추가할 위치에서 실습에 사용할 워크스페이스를 선택하세요."
+        },
+        {
+          "n": 2,
+          "head": "개인 페이지에 추가",
+          "body": "개인 페이지에 추가를 눌러 템플릿을 복사합니다."
+        }
+      ]
+    },
+    {
+      "id": "a5-practice2-03",
+      "template": "screen",
+      "title": "업무 To Do List",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a5/a5-p2-03-work-copy.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 29.7,
+            "y": 47.4
+          },
+          {
+            "n": 2,
+            "x": 39.8,
+            "y": 56.0
+          },
+          {
+            "n": 3,
+            "x": 88.7,
+            "y": 56.0
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "업무 To Do List",
+          "body": "복제한 템플릿을 업무용으로 바꿔 둔 페이지입니다. 태그는 보고서, 회의, 마감, 기획이고 장소는 사무실, 재택, 외근입니다."
+        },
+        {
+          "n": 2,
+          "head": "오늘 할 일",
+          "body": "날짜가 오늘인 업무만 보여 주는 표 뷰입니다. 내일 탭을 누르면 내일 업무가 나옵니다."
+        },
+        {
+          "n": 3,
+          "head": "캘린더",
+          "body": "같은 DB 의 업무를 날짜 칸에 보여 줍니다. 완료 체크박스도 카드마다 함께 보입니다."
+        }
+      ]
+    },
+    {
+      "id": "a5-practice2-04",
+      "template": "screen",
+      "title": "... 메뉴 · 연결 · claude",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a5/a5-p2-04-connect.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 93.5,
+            "y": 3.1
+          },
+          {
+            "n": 2,
+            "x": 89.4,
+            "y": 74.2
+          },
+          {
+            "n": 3,
+            "x": 58.1,
+            "y": 80.6
+          },
+          {
+            "n": 4,
+            "x": 16.8,
+            "y": 84.3
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "... 버튼",
+          "body": "복사한 페이지 오른쪽 위의 ... 버튼을 누릅니다."
+        },
+        {
+          "n": 2,
+          "head": "더 보기",
+          "body": "메뉴 아래쪽의 더 보기에 마우스를 올립니다."
+        },
+        {
+          "n": 3,
+          "head": "연결",
+          "body": "옆으로 열린 메뉴에서 연결을 고릅니다."
+        },
+        {
+          "n": 4,
+          "head": "claude",
+          "body": "목록에서 claude 를 선택한 뒤 확인 창에서 페이지에 추가를 누르세요. 테스트 페이지에서 했던 것과 같은 방법입니다."
+        }
+      ]
+    },
+    {
+      "id": "a5-practice2-05",
+      "template": "screen",
+      "title": "연결 확인 · tasks 스킬 수정 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "notion-class",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\notion-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "아래의 페이지에 api 키 연결상태 확인하고, 해당 페이지의 db id를 추출해서 기존 tasks 스킬의 db id를 바꾸고 해당 db의 구조로 tasks 스킬을 수정해줘 https://app.notion.com/p/508ea273b9268342bd830126ac69368c",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "PowerShell(ntn api v1/pages/$pg … ntn api v1/blocks/$pg/children …)",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "PowerShell(Walk '508ea273…' 0 …)"
+            },
+            {
+              "role": "tool",
+              "text": "PowerShell(ntn api v1/databases/$db …)"
+            },
+            {
+              "role": "tool",
+              "text": "PowerShell(ntn api v1/data_sources/af5ea273…/query -d '{}' …)"
+            },
+            {
+              "role": "tool",
+              "text": "PowerShell(Set-Content .claude/skills/.env -Encoding utf8 …)",
+              "badge": 3
+            },
+            {
+              "role": "tool",
+              "text": "Write(.claude/skills/tasks/SKILL.md)",
+              "badge": 4
+            },
+            {
+              "role": "tool",
+              "text": "PowerShell(ntn api v1/data_sources/$ds/query -d $q …)"
+            },
+            {
+              "role": "assistant",
+              "text": "API 키는 해당 페이지에 정상 연결되어 있고, `tasks` 스킬을 그 페이지의 DB에 맞게 바꿨습니다."
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "페이지 링크와 수정 요청",
+          "body": "프롬프트 다음 줄에 복사한 템플릿 페이지의 링크를 붙여넣으세요. 연결 확인과 DB ID 교체, 새 DB 구조에 맞춘 스킬 수정을 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "페이지와 하위 DB 조회",
+          "body": "API 키로 페이지가 읽히는지 확인한 뒤 하위 블록에서 DB 를 찾습니다. 접근 가능한 DB 의 속성과 기존 행도 조회합니다."
+        },
+        {
+          "n": 3,
+          "head": ".env 의 DB ID 교체",
+          "body": "기존 할일 DB 의 두 ID 를 업무 투두리스트의 DB ID 와 데이터 소스 ID 로 교체합니다."
+        },
+        {
+          "n": 4,
+          "head": "tasks 스킬 다시 작성",
+          "body": "새 DB 의 속성에 맞춰 tasks/SKILL.md 를 다시 씁니다. 수정한 조회 명령도 실행해서 결과를 확인합니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "아래의 페이지에 api 키 연결상태 확인하고, 해당 페이지의 db id를 추출해서 기존 tasks 스킬의 db id를 바꾸고 해당 db의 구조로 tasks 스킬을 수정해줘",
+            "desc": "다음 줄에 템플릿 페이지 링크를 붙여넣기"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a5-practice2-06",
+      "template": "screen",
+      "title": "tasks 스킬 수정 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "notion-class",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\notion-class",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "API 키는 해당 페이지에 정상 연결되어 있고, `tasks` 스킬을 그 페이지의 DB에 맞게 바꿨습니다.",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "\"Untitled\": 오늘/내일 뷰가 있는 연결 뷰입니다. 원본 데이터 소스에 이 통합이 접근할 수 없어서 쓸 수 없습니다.",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "\"업무 투두리스트\": 접근 가능하고, 이번에 연결한 DB입니다."
+            },
+            {
+              "role": "assistant",
+              "text": "`NOTION_TASKS_DB_ID`: `edaea273-b926-824e-95e6-8169bad86e78`",
+              "badge": 3
+            },
+            {
+              "role": "assistant",
+              "text": "할 일 · 제목 · 자유 텍스트",
+              "badge": 4
+            },
+            {
+              "role": "assistant",
+              "text": "완료 · 체크박스 · 체크/해제"
+            },
+            {
+              "role": "assistant",
+              "text": "장소 · 선택 · 사무실, 재택, 외근"
+            },
+            {
+              "role": "assistant",
+              "text": "태그 · 선택 · 보고서, 회의, 마감, 기획"
+            },
+            {
+              "role": "assistant",
+              "text": "뷰는 캘린더 하나뿐이고, 상태 컬럼이 없습니다. \"완료\"는 체크박스로 표시합니다."
+            },
+            {
+              "role": "assistant",
+              "text": "`SKILL.md`의 스키마와 생성·조회·수정·삭제 예시를 새 구조에 맞게 다시 썼습니다."
+            },
+            {
+              "role": "assistant",
+              "text": "조회 스니펫을 실행해 보니 완료되지 않은 6건이 날짜순으로 나왔습니다."
+            },
+            {
+              "role": "assistant",
+              "text": "생성·수정·삭제는 이번에 실행하지 않았습니다."
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "페이지 연결 확인",
+          "body": "API 키로 페이지와 하위 블록, DB 를 조회할 수 있었습니다. tasks 스킬도 이 페이지의 DB 에 맞춰 바꿨습니다."
+        },
+        {
+          "n": 2,
+          "head": "접근 가능한 업무 투두리스트",
+          "body": "Untitled 는 원본 데이터 소스에 접근할 수 없는 연결 뷰였습니다. 접근 가능한 업무 투두리스트를 작업 대상으로 골랐습니다."
+        },
+        {
+          "n": 3,
+          "head": "교체된 두 ID",
+          "body": ".env 의 DB ID 와 데이터 소스 ID 가 새 값으로 바뀌었습니다. 이제 tasks 는 업무 투두리스트에 연결돼 있습니다."
+        },
+        {
+          "n": 4,
+          "head": "할 일 · 날짜 · 완료 · 장소 · 태그",
+          "body": "새 DB 는 상태 대신 완료 체크박스를 씁니다. 수정한 스킬로 미완료 6건을 날짜순으로 조회했고 생성과 수정, 삭제는 이 실행에서 테스트하지 않았습니다."
+        }
+      ]
+    },
+    {
+      "id": "a5-practice2-07",
+      "template": "screen",
+      "title": "업무 샘플데이터 채우기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "notion-class",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\notion-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "tasks 스킬로 이번 주 업무 샘플데이터 5개를 채워줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "PowerShell(ntn api v1/pages -d $b … ntn api v1/data_sources/$ds/query …)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "이번 주(10/26~10/30) 업무 샘플 5건을 \"업무 투두리스트\"에 추가했습니다. 추가한 행은 전체 조회로 확인했습니다."
+            },
+            {
+              "role": "assistant",
+              "text": "할 일 · 날짜 · 장소 · 태그",
+              "badge": 3
+            },
+            {
+              "role": "assistant",
+              "text": "월간 예산 검토 · 10/26 · 사무실 · 보고서"
+            },
+            {
+              "role": "assistant",
+              "text": "고객사 온보딩 미팅 · 10/27 · 외근 · 회의"
+            },
+            {
+              "role": "assistant",
+              "text": "마케팅 캠페인 아이디어 정리 · 10/28 · 재택 · 기획"
+            },
+            {
+              "role": "assistant",
+              "text": "계약서 최종 검토 · 10/29 · 사무실 · 마감"
+            },
+            {
+              "role": "assistant",
+              "text": "주간 회고 및 다음 주 계획 · 10/30 · 재택 · 기획"
+            },
+            {
+              "role": "assistant",
+              "text": "새 행의 완료 체크박스는 모두 해제 상태입니다. 기존 6건과 합쳐 DB는 총 11건이고, 모두 이번 주 날짜입니다.",
+              "badge": 4
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "이번 주 업무 5개 요청",
+          "body": "tasks 스킬로 이번 주 업무 샘플데이터 5개를 채워 달라고 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "생성 후 전체 조회",
+          "body": "새 DB 의 속성에 맞춰 행을 만들고 전체 목록을 조회해서 추가된 내용을 확인합니다."
+        },
+        {
+          "n": 3,
+          "head": "10/26부터 10/30까지",
+          "body": "월간 예산 검토부터 주간 회고 및 다음 주 계획까지 5개가 추가됐습니다. 날짜와 장소, 태그도 함께 들어 있습니다."
+        },
+        {
+          "n": 4,
+          "head": "미완료 상태 · 전체 11건",
+          "body": "새 행의 완료 체크박스는 모두 해제 상태입니다. 기존 6건과 합쳐 전체 11건이 됐습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "tasks 스킬로 이번 주 업무 샘플데이터 5개를 채워줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a5-practice2-08",
+      "template": "screen",
+      "title": "상태 변경 테스트",
+      "screen": {
+        "kind": "vscode",
+        "folder": "notion-class",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\notion-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "'팀 주간 회의'를 완료로 바꿔줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "PowerShell(ntn api v1/data_sources/$ds/query -d $f … ntn api v1/pages/$($m[0].id) -X PATCH -d '{\"properties\":{\"완료\":{\"checkbox\":true}}}' …)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "'팀 주간 회의'(10/26, 사무실, 회의)의 완료 체크박스를 체크했습니다. 일치하는 행은 하나뿐이었고, 수정 후 응답에서 완료가 true로 나온 것까지 확인했습니다.",
+              "badge": 3
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "팀 주간 회의 완료 요청",
+          "body": "팀 주간 회의를 완료로 바꿔 달라고 요청합니다."
+        },
+        {
+          "n": 2,
+          "head": "완료 체크박스 수정",
+          "body": "제목으로 찾은 행이 하나인지 확인한 다음 완료 체크박스를 true 로 바꿉니다."
+        },
+        {
+          "n": 3,
+          "head": "수정 응답 확인",
+          "body": "10/26 의 팀 주간 회의에 완료 체크를 했습니다. 수정 응답에서도 완료 값이 true 인지 확인했습니다."
+        },
+        {
+          "n": "!",
+          "head": "6.3초 · 도구 1회",
+          "body": "리허설에서는 도구를 1번 호출했고 6.3초가 걸렸습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "'팀 주간 회의'를 완료로 바꿔줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a5-practice2-09",
+      "template": "screen",
+      "title": "캘린더 뷰에서 확인",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a5/a5-p2-09-calendar.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 11.6,
+            "y": 82.1
+          },
+          {
+            "n": 2,
+            "x": 91.7,
+            "y": 73.4
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "완료 체크된 팀 주간 회의",
+          "body": "캘린더에서 팀 주간 회의의 완료 체크를 확인하세요."
+        },
+        {
+          "n": 2,
+          "head": "날짜별 업무 샘플",
+          "body": "추가한 업무 샘플데이터가 각 날짜에 표시됩니다. 날짜와 제목을 터미널의 결과와 비교하세요."
+        }
+      ]
+    },
+    {
+      "id": "a5-practice2-10",
+      "template": "illustration",
+      "title": "뷰는 사람을 위한 화면",
+      "illustration": "/illustrations/a5-views-for-people.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "같은 DB, 여러 뷰",
+          "body": "캘린더뷰, 타임라인뷰, 칸반뷰는 같은 DB 를 사람이 보기 편한 모양으로 보여 주는 화면입니다."
+        },
+        {
+          "n": 2,
+          "head": "Claude 는 CLI 로 조회",
+          "body": "뷰가 몇 개든 Claude 는 tasks 스킬의 CLI 로 DB 를 쿼리해 필요한 정보를 꺼냅니다."
+        }
+      ]
+    },
+    {
+      "id": "a5-practice2-11",
+      "template": "illustration",
+      "title": "왜 CRUD CLI 스킬인가",
+      "illustration": "/illustrations/a5-crud-skill-anydb.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "노션 DB 가 아니라 스킬",
+          "body": "중요한 것은 노션 DB 가 아닙니다. DB 에 연결해서 CRUD 와 쿼리를 하는 CLI 스킬이라면 로컬 DB 나 다른 DB 에도 같은 방식으로 쓸 수 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "노션 DB",
+          "body": "오늘 만든 tasks 스킬은 노션 DB 에 연결합니다. 스킬에 적은 명령으로 그 안의 행을 다룹니다."
+        },
+        {
+          "n": 3,
+          "head": "로컬 DB",
+          "body": "같은 방식으로 내 컴퓨터의 DB 파일에도 연결할 수 있습니다. 해당 DB 에 맞는 CLI 명령을 스킬에 적습니다."
+        },
+        {
+          "n": 4,
+          "head": "다른 DB",
+          "body": "다른 서비스의 DB 에도 같은 스킬 구조를 사용할 수 있습니다. 연결 방법과 명령은 그 DB 에 맞게 바꿉니다."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "step": 5,
+  "title": "Notion DB + API 연결",
+  "hours": "2시간",
+  "goal": "DB 가 표로 정보를 저장하는 방식을 이해하고, 노션 API 연결과 노션 공식 CLI 로 Claude 가 노션 DB 를 만들고 CRUD 와 쿼리를 하는 tasks 스킬을 만든다.",
+  "topics": [
+    "DB란?",
+    "노션 DB 만들기",
+    "노션 DB 실습",
+    "DB 실습 2"
+  ],
+  "practice": "노션에서 claude 연결을 만들어 API 토큰을 받고 테스트 페이지에 연결한 뒤, Claude 로 노션 CLI 설치, 할일 DB 와 뷰 만들기, tasks 스킬 만들기를 하고, 업무용 할일 템플릿에 같은 스킬을 연결해 상태 변화를 확인한다.",
+  "parts": [
+    "a5-db",
+    "a5-setup",
+    "a5-practice",
+    "a5-practice2"
+  ]
+}
