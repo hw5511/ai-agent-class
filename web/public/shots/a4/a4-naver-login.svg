@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+  <rect width="1200" height="900" fill="#f5f6f7"/>
+  <rect width="1200" height="100" fill="#fff"/>
+  <path d="M0 100 H1200" stroke="#e9ebed"/>
+  <g fill="#222">
+    <rect x="64" y="32" width="35" height="35"/>
+    <circle cx="119" cy="49.5" r="18"/>
+    <text x="148" y="47" font-size="21" font-weight="900" font-family="Arial Black, Arial, sans-serif">NAVER</text>
+    <text x="148" y="68" font-size="17" font-weight="700" font-family="Arial, Helvetica, sans-serif">CLOUD PLATFORM</text>
+  </g>
+  <rect x="190" y="125" width="820" height="710" rx="24" fill="#fff"/>
+  <text x="844" y="187" font-size="20" fill="#111">Languages</text>
+  <path d="M956 176 l6 6 6 -6" fill="none" stroke="#222" stroke-width="2"/>
+  <text x="260" y="224" font-size="36" font-weight="700" fill="#222">로그인</text>
+  <rect x="260" y="272" width="333" height="62" rx="8" fill="#dcedfe"/>
+  <rect x="607" y="272" width="333" height="62" rx="8" fill="#f0f0f0"/>
+  <circle cx="374" cy="303" r="10" fill="#1685ff"/>
+  <path d="M369 303 l3 3 6 -6" fill="none" stroke="#fff" stroke-width="1.7"/>
+  <text x="393" y="311" font-size="22" fill="#1685ff">메인 계정</text>
+  <circle cx="721" cy="303" r="10" fill="#929292"/>
+  <path d="M716 303 l3 3 6 -6" fill="none" stroke="#fff" stroke-width="1.7"/>
+  <text x="740" y="311" font-size="22" fill="#8b8d91">서브 계정</text>
+  <rect id="id-field" x="260" y="350" width="680" height="68" rx="8" fill="#fff" stroke="#dedede" stroke-width="1.5"/>
+  <text x="287" y="393" font-size="23" fill="#7d8187">아이디(이메일)를 입력해 주십시오.</text>
+  <rect id="password-field" x="260" y="430" width="680" height="68" rx="8" fill="#fff" stroke="#dedede" stroke-width="1.5"/>
+  <text x="287" y="473" font-size="23" fill="#7d8187">비밀번호를 입력해 주십시오.</text>
+  <rect x="260" y="516" width="23" height="23" rx="5" fill="#fff" stroke="#aaa" stroke-width="1.5"/>
+  <text x="295" y="535" font-size="21" fill="#222">아이디 저장</text>
+  <rect id="login-button" x="260" y="575" width="680" height="68" rx="8" fill="#117cee"/>
+  <text x="600" y="618" font-size="26" font-weight="700" fill="#fff" text-anchor="middle">로그인</text>
+  <path d="M260 665 H940" stroke="#e9ebed"/>
+  <rect x="260" y="687" width="680" height="68" rx="8" fill="#00c73c"/>
+  <path d="M296 710 h9 l10 15 v-15 h9 v26 h-9 l-10 -15 v15 h-9 Z" fill="#fff"/>
+  <text x="600" y="730" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">네이버로 간편 로그인</text>
+  <text x="260" y="797" font-size="21" fill="#1685ff">회원 가입</text>
+  <text x="667" y="797" font-size="21" fill="#222">아이디 찾기</text>
+  <text x="805" y="797" font-size="21" fill="#222">비밀번호 찾기</text>
+  <text x="600" y="879" font-size="18" fill="#222" text-anchor="middle">© NAVER Cloud Corp. All Rights Reserved.</text>
+</svg>

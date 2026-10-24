@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<rect x="0" y="0" width="1200" height="900" rx="0" fill="#f0f0f0" />
+<rect x="0" y="0" width="1200" height="104" rx="0" fill="#171c24" />
+<rect x="28" y="20" width="23" height="23" rx="0" fill="#fff" />
+<circle cx="67" cy="31.5" r="12" fill="#fff"/>
+<text x="88" y="30" font-size="13" fill="#fff" font-weight="800" >NAVER</text>
+<text x="88" y="44" font-size="11" fill="#fff" font-weight="700" >CLOUD PLATFORM</text>
+<rect x="325" y="13" width="460" height="42" rx="23" fill="#242b34" />
+<text x="346" y="40" font-size="17" fill="#c0c9d4" >검색어를 입력하세요.</text>
+<circle cx="758" cy="32" r="6" fill="none" stroke="#fff"/>
+<line x1="763" y1="37" x2="768" y2="42" stroke="#fff" stroke-width="2"/>
+<circle cx="849" cy="31" r="7" fill="#fff"/>
+<text x="863" y="38" font-size="16" fill="#fff" >한국</text>
+<rect x="908" y="21" width="42" height="22" rx="11" fill="none" stroke="#fff" />
+<text x="929" y="37" font-size="14" fill="#fff" text-anchor="middle" >VPC</text>
+<circle cx="979" cy="32" r="8" fill="none" stroke="#fff"/>
+<line x1="971" y1="32" x2="987" y2="32" stroke="#fff" stroke-width="1"/>
+<path d="M979 24 q-8 8 0 16 q8 -8 0 -16" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1007 37 h16 l-3 -5 v-5 q-5 -8 -10 0 v5 z" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1015" cy="41" r="2" fill="#fff"/>
+<circle cx="1049" cy="32" r="7" fill="none" stroke="#fff"/>
+<text x="1049" y="37" font-size="13" fill="#fff" font-weight="600" text-anchor="middle" >?</text>
+<rect x="1074" y="23" width="13" height="17" rx="1" fill="none" stroke="#fff" />
+<line x1="1077" y1="28" x2="1084" y2="28" stroke="#fff" stroke-width="1"/>
+<line x1="1077" y1="33" x2="1084" y2="33" stroke="#fff" stroke-width="1"/>
+<circle cx="1112" cy="32" r="11" fill="#168bdd"/>
+<text x="1112" y="37" font-size="13" fill="#fff" font-weight="600" text-anchor="middle" >수</text>
+<text x="1130" y="38" font-size="16" fill="#fff" >수강생</text>
+<path d="M30 73 h14 M30 78 h14 M30 83 h14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="49" y="85" font-size="16" fill="#fff" font-weight="700" >Menu</text>
+<circle cx="119" cy="78" r="6" fill="none" stroke="#a9c6df"/>
+<path d="M119 74 v5 l3 2" fill="none" stroke="#a9c6df" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="132" y="85" font-size="16" fill="#b7c8db" >Recently Viewed</text>
+<line x1="275" y1="65" x2="275" y2="90" stroke="#333a44" stroke-width="1"/>
+<rect x="0" y="104" width="260" height="796" rx="0" fill="#fbfbfc" />
+<line x1="260" y1="104" x2="260" y2="900" stroke="#e8e9eb" stroke-width="1"/>
+<text x="26" y="143" font-size="22" fill="#142536" font-weight="700" >NAVER API HUB</text>
+<line x1="0" y1="164" x2="260" y2="164" stroke="#dedfe2" stroke-width="1"/>
+<text x="26" y="205" font-size="19" fill="#0089ff" font-weight="600" >Application</text>
+<text x="26" y="257" font-size="19" fill="#142536" >Usage Statistics</text>
+<text x="26" y="309" font-size="19" fill="#142536" >Subscription</text>
+<rect x="260" y="104" width="940" height="103" rx="0" fill="#fff" />
+<rect x="288" y="124" width="34" height="20" rx="3" fill="#ededed" />
+<text x="305" y="139" font-size="13" fill="#8a939d" text-anchor="middle" >VPC</text>
+<text x="330" y="139" font-size="16" fill="#8a939d" >NAVER API HUB</text>
+<path d="M461 127 l5 5 l-5 5" fill="none" stroke="#637384" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="481" y="139" font-size="16" fill="#142536" >Application</text>
+<rect x="288" y="157" width="33" height="33" rx="0" fill="#fff" stroke="#829db8" />
+<path d="M307 167 l-6 6 l6 6" fill="none" stroke="#507595" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="334" y="184" font-size="28" fill="#142536" font-weight="700" >Application 등록</text>
+<circle cx="525" cy="246" r="12" fill="#168be0"/>
+<text x="525" y="252" font-size="15" fill="#fff" font-weight="600" text-anchor="middle" >1</text>
+<text x="545" y="253" font-size="17" fill="#0089ff" font-weight="600" >API 선택</text>
+<line x1="513" y1="270" x2="800" y2="270" stroke="#0089ff" stroke-width="2"/>
+<circle cx="812" cy="246" r="12" fill="#ddd"/>
+<text x="812" y="252" font-size="15" fill="#142536" text-anchor="middle" >2</text>
+<text x="832" y="253" font-size="17" fill="#142536" font-weight="600" >Application 정보 입력</text>
+<line x1="800" y1="270" x2="1167" y2="270" stroke="#d9d9d9" stroke-width="2"/>
+<text x="288" y="307" font-size="16" fill="#142536" font-weight="600" >NAVER API HUB는 네이버가 사업을 주관하고 네이버 클라우드 플랫폼이 중개 운영하는 API 플랫폼입니다.</text>
+<rect x="847" y="324" width="90" height="30" rx="2" fill="#fff" stroke="#d8dade" />
+<text x="892.0" y="344.25" font-size="15" fill="#142536" text-anchor="middle" >전체</text>
+<path d="M913 337 l5 5 l5 -5" fill="none" stroke="#35536b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="937" y="324" width="231" height="30" rx="2" fill="#fff" stroke="#d8dade" />
+<text x="949" y="345" font-size="15" fill="#bdc2c7" >API 검색</text>
+<circle cx="1148" cy="337" r="5" fill="none" stroke="#142536"/>
+<line x1="1152" y1="341" x2="1157" y2="346" stroke="#142536" stroke-width="1"/>
+<rect x="288" y="372" width="286" height="192" rx="6" fill="#f5fafc" stroke="#0089ff" />
+<rect x="538.0" y="393.0" width="18" height="18" rx="1" fill="#10b5df" />
+<path d="M541.6 402 l3.6 3.96 l7.2 -7.92" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="309" y="396" width="31" height="31" rx="13" fill="#fff" stroke="#d9dfe2" />
+<circle cx="323" cy="410" r="6" fill="none" stroke="#00c65a"/>
+<line x1="328" y1="415" x2="333" y2="420" stroke="#00c65a" stroke-width="1.5"/>
+<text x="309" y="462" font-size="20" fill="#142536" font-weight="700" >쇼핑인사이트</text>
+<rect x="438" y="444" width="70" height="23" rx="12" fill="#00c65a" />
+<text x="473.0" y="460" font-size="13" fill="#fff" font-weight="700" text-anchor="middle" >Data Lab</text>
+<text x="309" y="494" font-size="16" fill="#142536" >Data Lab Shopping Insight API</text>
+<rect x="309" y="517" width="105" height="30" rx="2" fill="#fff" stroke="#d8dade" />
+<text x="318" y="538" font-size="15" fill="#142536" >요금 안내</text>
+<rect x="421" y="517" width="130" height="30" rx="2" fill="#fff" stroke="#d8dade" />
+<text x="434" y="538" font-size="15" fill="#142536" >개발 가이드</text>
+<path d="M401 527 h-7 v10 h10 v-7 M399 525 h7 v7 M399 532 l7 -7" fill="none" stroke="#142536" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M533 527 h-7 v10 h10 v-7 M531 525 h7 v7 M531 532 l7 -7" fill="none" stroke="#142536" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="586" y="372" width="286" height="192" rx="6" fill="#f5fafc" stroke="#0089ff" />
+<rect x="836.0" y="393.0" width="18" height="18" rx="1" fill="#10b5df" />
+<path d="M839.6 402 l3.6 3.96 l7.2 -7.92" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="607" y="396" width="31" height="31" rx="13" fill="#fff" stroke="#d9dfe2" />
+<circle cx="621" cy="410" r="6" fill="none" stroke="#00c65a"/>
+<line x1="626" y1="415" x2="631" y2="420" stroke="#00c65a" stroke-width="1.5"/>
+<text x="607" y="462" font-size="20" fill="#142536" font-weight="700" >검색어트렌드</text>
+<rect x="736" y="444" width="70" height="23" rx="12" fill="#00c65a" />
+<text x="771.0" y="460" font-size="13" fill="#fff" font-weight="700" text-anchor="middle" >Data Lab</text>
+<text x="607" y="494" font-size="16" fill="#142536" >Data Lab Search Trend API</text>
+<rect x="607" y="517" width="105" height="30" rx="2" fill="#fff" stroke="#d8dade" />
+<text x="616" y="538" font-size="15" fill="#142536" >요금 안내</text>
+<rect x="719" y="517" width="130" height="30" rx="2" fill="#fff" stroke="#d8dade" />
+<text x="732" y="538" font-size="15" fill="#142536" >개발 가이드</text>
+<path d="M699 527 h-7 v10 h10 v-7 M697 525 h7 v7 M697 532 l7 -7" fill="none" stroke="#142536" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M831 527 h-7 v10 h10 v-7 M829 525 h7 v7 M829 532 l7 -7" fill="none" stroke="#142536" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="884" y="372" width="286" height="192" rx="6" fill="#fff" />
+<rect x="1134.0" y="393.0" width="18" height="18" rx="1" fill="#fff" stroke="#d8dade" />
+<rect x="905" y="396" width="31" height="31" rx="13" fill="#fff" stroke="#d9dfe2" />
+<circle cx="919" cy="410" r="6" fill="none" stroke="#00c65a"/>
+<line x1="924" y1="415" x2="929" y2="420" stroke="#00c65a" stroke-width="1.5"/>
+<text x="905" y="462" font-size="20" fill="#142536" font-weight="700" >뉴스</text>
+<rect x="982" y="444" width="94" height="23" rx="12" fill="#00c65a" />
+<text x="1029.0" y="460" font-size="13" fill="#fff" font-weight="700" text-anchor="middle" >NAVER 검색</text>
+<text x="905" y="494" font-size="16" fill="#142536" >NAVER Search News API</text>
+<rect x="905" y="517" width="105" height="30" rx="2" fill="#fff" stroke="#d8dade" />
+<text x="914" y="538" font-size="15" fill="#142536" >요금 안내</text>
+<rect x="1017" y="517" width="130" height="30" rx="2" fill="#fff" stroke="#d8dade" />
+<text x="1030" y="538" font-size="15" fill="#142536" >개발 가이드</text>
+<path d="M997 527 h-7 v10 h10 v-7 M995 525 h7 v7 M995 532 l7 -7" fill="none" stroke="#142536" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1129 527 h-7 v10 h10 v-7 M1127 525 h7 v7 M1127 532 l7 -7" fill="none" stroke="#142536" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="288" y="577" width="286" height="192" rx="6" fill="#fff" />
+<rect x="538.0" y="598.0" width="18" height="18" rx="1" fill="#fff" stroke="#d8dade" />
+<rect x="309" y="601" width="31" height="31" rx="13" fill="#fff" stroke="#d9dfe2" />
+<text x="324" y="624" font-size="24" fill="#00c65a" font-weight="700" text-anchor="middle" >b</text>
+<text x="309" y="667" font-size="20" fill="#142536" font-weight="700" >블로그</text>
+<rect x="386" y="649" width="94" height="23" rx="12" fill="#00c65a" />
+<text x="433.0" y="665" font-size="13" fill="#fff" font-weight="700" text-anchor="middle" >NAVER 검색</text>
+<text x="309" y="699" font-size="16" fill="#142536" >NAVER Search Blog API</text>
+<rect x="309" y="722" width="105" height="30" rx="2" fill="#fff" stroke="#d8dade" />
+<text x="318" y="743" font-size="15" fill="#142536" >요금 안내</text>
+<rect x="421" y="722" width="130" height="30" rx="2" fill="#fff" stroke="#d8dade" />
+<text x="434" y="743" font-size="15" fill="#142536" >개발 가이드</text>
+<path d="M401 732 h-7 v10 h10 v-7 M399 730 h7 v7 M399 737 l7 -7" fill="none" stroke="#142536" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M533 732 h-7 v10 h10 v-7 M531 730 h7 v7 M531 737 l7 -7" fill="none" stroke="#142536" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="586" y="577" width="286" height="192" rx="6" fill="#fff" />
+<rect x="836.0" y="598.0" width="18" height="18" rx="1" fill="#fff" stroke="#d8dade" />
+<rect x="607" y="601" width="31" height="31" rx="13" fill="#fff" stroke="#d9dfe2" />
+<circle cx="621" cy="615" r="6" fill="none" stroke="#00c65a"/>
+<line x1="626" y1="620" x2="631" y2="625" stroke="#00c65a" stroke-width="1.5"/>
+<text x="607" y="667" font-size="20" fill="#142536" font-weight="700" >지역</text>
+<rect x="684" y="649" width="94" height="23" rx="12" fill="#00c65a" />
+<text x="731.0" y="665" font-size="13" fill="#fff" font-weight="700" text-anchor="middle" >NAVER 검색</text>
+<text x="607" y="699" font-size="16" fill="#142536" >NAVER Search Local API</text>
+<rect x="607" y="722" width="105" height="30" rx="2" fill="#fff" stroke="#d8dade" />
+<text x="616" y="743" font-size="15" fill="#142536" >요금 안내</text>
+<rect x="719" y="722" width="130" height="30" rx="2" fill="#fff" stroke="#d8dade" />
+<text x="732" y="743" font-size="15" fill="#142536" >개발 가이드</text>
+<path d="M699 732 h-7 v10 h10 v-7 M697 730 h7 v7 M697 737 l7 -7" fill="none" stroke="#142536" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M831 732 h-7 v10 h10 v-7 M829 730 h7 v7 M829 737 l7 -7" fill="none" stroke="#142536" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="884" y="577" width="286" height="192" rx="6" fill="#fff" />
+<rect x="1134.0" y="598.0" width="18" height="18" rx="1" fill="#fff" stroke="#d8dade" />
+<rect x="905" y="601" width="31" height="31" rx="13" fill="#fff" stroke="#d9dfe2" />
+<path d="M911 611 l10 -6 l10 6 l-10 6 z" fill="#00c65a" stroke="#00c65a" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M915 615 v9 l6 4 l6 -4 v-9" fill="#00b3f0" stroke="#00b3f0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="905" y="667" font-size="20" fill="#142536" font-weight="700" >지식iN</text>
+<rect x="982" y="649" width="94" height="23" rx="12" fill="#00c65a" />
+<text x="1029.0" y="665" font-size="13" fill="#fff" font-weight="700" text-anchor="middle" >NAVER 검색</text>
+<text x="905" y="699" font-size="16" fill="#142536" >NAVER Search Kin API</text>
+<rect x="905" y="722" width="105" height="30" rx="2" fill="#fff" stroke="#d8dade" />
+<text x="914" y="743" font-size="15" fill="#142536" >요금 안내</text>
+<rect x="1017" y="722" width="130" height="30" rx="2" fill="#fff" stroke="#d8dade" />
+<text x="1030" y="743" font-size="15" fill="#142536" >개발 가이드</text>
+<path d="M997 732 h-7 v10 h10 v-7 M995 730 h7 v7 M995 737 l7 -7" fill="none" stroke="#142536" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1129 732 h-7 v10 h10 v-7 M1127 730 h7 v7 M1127 737 l7 -7" fill="none" stroke="#142536" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1190" y="117" width="4" height="656" rx="2" fill="#c9c9c9" />
+<rect x="676" y="825" width="100" height="43" rx="2" fill="#168be0" stroke="#168be0" />
+<text x="726.0" y="853.5" font-size="20" fill="#fff" font-weight="600" text-anchor="middle" >다음</text>
+<path d="M756 841 l6 6 l-6 6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

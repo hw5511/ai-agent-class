@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- A4 API 키의 여러 이름 (tools/illus/a4_key_names.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+
+<rect x="1269.5" y="150" width="340" height="590" rx="18" fill="#2b2f35" filter="url(#sh)"/>
+<rect x="1293.5" y="178.0" width="292" height="52.8" rx="6" fill="#2f333a"/>
+<circle cx="1559.5" cy="204.4" r="8" fill="#12a150"/>
+<rect x="1313.5" y="201.4" width="122" height="6" rx="3" fill="#43474e"/>
+<rect x="1293.5" y="244.8" width="292" height="52.8" rx="6" fill="#2f333a"/>
+<circle cx="1559.5" cy="271.1" r="8" fill="#12a150"/>
+<rect x="1313.5" y="268.1" width="122" height="6" rx="3" fill="#43474e"/>
+<rect x="1293.5" y="311.5" width="292" height="52.8" rx="6" fill="#2f333a"/>
+<circle cx="1559.5" cy="337.9" r="8" fill="#12a150"/>
+<rect x="1313.5" y="334.9" width="122" height="6" rx="3" fill="#43474e"/>
+<rect x="1293.5" y="378.2" width="292" height="52.8" rx="6" fill="#2f333a"/>
+<circle cx="1559.5" cy="404.6" r="8" fill="#12a150"/>
+<rect x="1313.5" y="401.6" width="122" height="6" rx="3" fill="#43474e"/>
+<rect x="1293.5" y="445.0" width="292" height="52.8" rx="6" fill="#2f333a"/>
+<circle cx="1559.5" cy="471.4" r="8" fill="#12a150"/>
+<rect x="1313.5" y="468.4" width="122" height="6" rx="3" fill="#43474e"/>
+<rect x="1293.5" y="511.8" width="292" height="52.8" rx="6" fill="#2f333a"/>
+<circle cx="1559.5" cy="538.1" r="8" fill="#12a150"/>
+<rect x="1313.5" y="535.1" width="122" height="6" rx="3" fill="#43474e"/>
+<rect x="1293.5" y="578.5" width="292" height="52.8" rx="6" fill="#2f333a"/>
+<circle cx="1559.5" cy="604.9" r="8" fill="#12a150"/>
+<rect x="1313.5" y="601.9" width="122" height="6" rx="3" fill="#43474e"/>
+<rect x="1293.5" y="645.2" width="292" height="52.8" rx="6" fill="#2f333a"/>
+<circle cx="1559.5" cy="671.6" r="8" fill="#12a150"/>
+<rect x="1313.5" y="668.6" width="122" height="6" rx="3" fill="#43474e"/>
+<text x="1439.5" y="790" font-size="36" font-weight="900" fill="#101113" text-anchor="middle">서버</text>
+<circle cx="515" cy="357.85" r="58" fill="none" stroke="#8d949c" stroke-width="10"/>
+<g transform="translate(515 272) scale(1.55)" filter="url(#shs)"><path d="M-70 0a70 70 0 1 0 140 0a70 70 0 1 0 -140 0zM-27 0a27 27 0 1 1 54 0a27 27 0 1 1 -54 0z" fill="#1273c4" fill-rule="evenodd"/><rect x="58" y="-27" width="38" height="54" rx="10" fill="#1273c4"/><rect x="90" y="-16" width="380" height="32" rx="10" fill="#1273c4"/><path d="M340 10H470v26h-14v22h-26v-14h-22v30h-28v-20h-20v12h-20z" fill="#1273c4" stroke="#1273c4" stroke-width="6" stroke-linejoin="round"/><rect x="104" y="-6" width="220" height="5" rx="2.5" fill="#fff" opacity="0.35"/></g>
+<path d="M457 357.85a58 58 0 0 0 116 0" fill="none" stroke="#8d949c" stroke-width="10" stroke-linecap="round"/>
+<path d="M515 415.85L435 481.85" stroke="#5b6570" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M515 415.85L591 547.85" stroke="#5b6570" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M515 415.85L443 613.85" stroke="#5b6570" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M515 415.85L563 679.85" stroke="#5b6570" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M515 415.85L475 745.85" stroke="#5b6570" stroke-width="3" fill="none" stroke-linecap="round"/>
+<g transform="translate(435 481.85) rotate(-5)"><g transform="scale(-1 1)"><path d="M-10 -31.0H228a12 12 0 0 1 12 12V19.0a12 12 0 0 1 -12 12H-10L-30 11.0V-11.0z" fill="#fff" stroke="#aeb3ba" stroke-width="2.5" filter="url(#shs)"/></g><circle cx="0" cy="0" r="12" fill="#fff" stroke="#cfe3f5" stroke-width="5"/><circle cx="0" cy="0" r="6" fill="#c9ccd1"/><text x="-117.0" y="11" font-size="31" font-weight="800" fill="#101113" text-anchor="middle">API Key</text></g>
+<g transform="translate(591 547.85) rotate(5)"><g><path d="M-10 -31.0H228a12 12 0 0 1 12 12V19.0a12 12 0 0 1 -12 12H-10L-30 11.0V-11.0z" fill="#fff" stroke="#aeb3ba" stroke-width="2.5" filter="url(#shs)"/></g><circle cx="0" cy="0" r="12" fill="#fff" stroke="#cfe3f5" stroke-width="5"/><circle cx="0" cy="0" r="6" fill="#c9ccd1"/><text x="117.0" y="11" font-size="31" font-weight="800" fill="#101113" text-anchor="middle">Secret</text></g>
+<g transform="translate(443 613.85) rotate(-5)"><g transform="scale(-1 1)"><path d="M-10 -31.0H228a12 12 0 0 1 12 12V19.0a12 12 0 0 1 -12 12H-10L-30 11.0V-11.0z" fill="#fff" stroke="#aeb3ba" stroke-width="2.5" filter="url(#shs)"/></g><circle cx="0" cy="0" r="12" fill="#fff" stroke="#cfe3f5" stroke-width="5"/><circle cx="0" cy="0" r="6" fill="#c9ccd1"/><text x="-117.0" y="11" font-size="31" font-weight="800" fill="#101113" text-anchor="middle">Token</text></g>
+<g transform="translate(563 679.85) rotate(5)"><g><path d="M-10 -31.0H228a12 12 0 0 1 12 12V19.0a12 12 0 0 1 -12 12H-10L-30 11.0V-11.0z" fill="#fff" stroke="#aeb3ba" stroke-width="2.5" filter="url(#shs)"/></g><circle cx="0" cy="0" r="12" fill="#fff" stroke="#cfe3f5" stroke-width="5"/><circle cx="0" cy="0" r="6" fill="#c9ccd1"/><text x="117.0" y="11" font-size="31" font-weight="800" fill="#101113" text-anchor="middle">Client ID</text></g>
+<g transform="translate(475 745.85) rotate(-5)"><g transform="scale(-1 1)"><path d="M-10 -31.0H228a12 12 0 0 1 12 12V19.0a12 12 0 0 1 -12 12H-10L-30 11.0V-11.0z" fill="#fff" stroke="#aeb3ba" stroke-width="2.5" filter="url(#shs)"/></g><circle cx="0" cy="0" r="12" fill="#fff" stroke="#cfe3f5" stroke-width="5"/><circle cx="0" cy="0" r="6" fill="#c9ccd1"/><text x="-117.0" y="11" font-size="31" font-weight="800" fill="#101113" text-anchor="middle">인증키</text></g>
+<circle cx="515" cy="415.85" r="7" fill="#8d949c"/>
+<rect x="1213.5" y="192.0" width="112" height="160" rx="18" fill="#e3e6ea" stroke="#aeb3ba" stroke-width="3" filter="url(#shs)"/>
+<circle cx="1269.5" cy="250" r="16" fill="#2b2f35"/>
+<path d="M1259.5 256h20l8 42h-36z" fill="#2b2f35"/>
+<circle cx="1269.5" cy="330.0" r="8" fill="#12a150"/>
+<circle cx="515" cy="117.5" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="515" y="128.1" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<circle cx="889" cy="561.85" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="889" y="572.45" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<circle cx="1269.5" cy="148.0" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1269.5" y="158.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+</svg>

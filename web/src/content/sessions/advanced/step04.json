@@ -1,0 +1,23 @@
+{
+  "step": 4,
+  "title": "외부 API로 AI 기능 확장하기",
+  "hours": "2시간",
+  "goal": "API 가 무엇이고 왜 알아야 하는지 이해하고, 네이버 클라우드에 가입해 결제 수단을 등록한 뒤 Playwright MCP 로 클로드가 네이버 데이터랩 · 쇼핑인사이트 API 키를 발급해 .env 에 저장하게 한다.",
+  "topics": [
+    "API 란",
+    "API 를 알아야 하는 이유",
+    "API 키 발급",
+    "네이버 데이터랩 API 발급",
+    "타입캐스트 TTS API",
+    "public-apis-4Kr"
+  ],
+  "practice": "네이버 클라우드에 가입하고 결제 수단을 등록한 뒤, Playwright MCP 로 클로드에게 네이버 콘솔을 열게 하고 직접 로그인한 다음, 데이터랩과 쇼핑인사이트 API 키 발급과 .claude/skills/.env 저장을 맡긴다.",
+  "parts": [
+    "a4-api",
+    "a4-why",
+    "a4-key",
+    "a4-naver",
+    "a4-legacy-typecast",
+    "a4-legacy-public-apis"
+  ]
+}

@@ -93,16 +93,27 @@ function checkScreen(where, s) {
   if (s.kind === "vscode" && (!s.folder || !Array.isArray(s.files))) err(where, "vscode needs folder + files[]")
 }
 
+// Legacy tail (2026-10-25): advanced 4 was rebuilt natively up to the NAVER key part, but keeps its old
+// Typecast and public-apis-4Kr image slides until the native Typecast part (10-18 plan) is rebuilt after the
+// owner's confirmation. Only the parts listed here may hold `image` slides, only in the named session, and only
+// after every native part of it. Remove an entry when its native replacement ships.
+const LEGACY_IMAGE_PARTS = { "a4-legacy-typecast": "advanced/step04.json", "a4-legacy-public-apis": "advanced/step04.json" }
+
 // Owner rule (2026-09-26, repeated): no 정리 / 마무리 (wrap-up) part in any session. A session may not list one.
 const sessionsDir = join(root, "src", "content", "sessions")
 for (const course of readdirSync(sessionsDir)) {
   for (const sf of readdirSync(join(sessionsDir, course)).filter((f) => f.endsWith(".json"))) {
     const sess = JSON.parse(readFileSync(join(sessionsDir, course, sf), "utf8"))
+    let legacySeen = false
     for (const pid of sess.parts ?? []) {
       const id = typeof pid === "string" ? pid : pid.id
       const pf = join(partsDir, `${id}.json`)
       const title = typeof pid === "string" ? (existsSync(pf) ? JSON.parse(readFileSync(pf, "utf8")).title : "") : pid.title
       if (/^(정리|마무리)/.test(title ?? "")) err(`${course}/${sf}`, `part "${title}" is a wrap-up part; the owner rule is no 정리 part in any step`)
+      if (LEGACY_IMAGE_PARTS[id]) {
+        if (LEGACY_IMAGE_PARTS[id] !== `${course}/${sf}`) err(`${course}/${sf}`, `legacy image part ${id} belongs to ${LEGACY_IMAGE_PARTS[id]} only`)
+        legacySeen = true
+      } else if (legacySeen) err(`${course}/${sf}`, `native part ${id} comes after a legacy image part; legacy parts are a tail only`)
     }
   }
 }
@@ -121,7 +132,10 @@ for (const f of files) {
     const w = `${f}#${s.id}`
     if (ids.has(s.id)) err(w, "duplicate id")
     ids.add(s.id)
-    if (!TEMPLATES.has(s.template)) err(w, `template ${s.template} not allowed`)
+    const legacyImage = s.template === "image" && LEGACY_IMAGE_PARTS[f.replace(/\.json$/, "")]
+    if (!TEMPLATES.has(s.template) && !legacyImage) err(w, `template ${s.template} not allowed`)
+    // legacy images live in the repo-root assets/ (copied next to the build by CI), not in web/public
+    if (legacyImage && !existsSync(join(root, "..", s.src ?? ""))) err(w, `missing legacy image ${s.src}`)
     if (!s.title) err(w, "title missing")
     if (/(다|요)\.?$/.test(s.title ?? "")) err(w, `title reads like a sentence: ${s.title}`)
     const badges = []

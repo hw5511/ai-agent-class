@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+  <rect width="1200" height="900" fill="#f7f7f7"/>
+  <rect width="1200" height="116" fill="#171b22"/>
+  <g fill="#fff">
+    <rect x="26" y="25" width="28" height="28"/>
+    <circle cx="70" cy="39" r="15"/>
+    <text x="96" y="37" font-size="16" font-weight="900" font-family="Arial Black, Arial, sans-serif">NAVER</text>
+    <text x="96" y="54" font-size="13" font-weight="700" font-family="Arial, Helvetica, sans-serif">CLOUD PLATFORM</text>
+  </g>
+  <rect x="280" y="16" width="462" height="46" rx="23" fill="#252a32"/>
+  <text x="302" y="46" font-size="18" fill="#b6c4d0">검색어를 입력하세요.</text>
+  <circle cx="712" cy="36" r="7" fill="none" stroke="#fff" stroke-width="2"/>
+  <path d="M718 42 l6 6" stroke="#fff" stroke-width="2"/>
+  <circle cx="786" cy="38" r="8" fill="#fff"/>
+  <path d="M781 38 q5 -9 10 0 q-5 9 -10 0" fill="#d84753"/>
+  <text x="803" y="45" font-size="18" fill="#fff">한국</text>
+  <rect x="854" y="26" width="48" height="25" rx="12.5" fill="none" stroke="#fff"/>
+  <text x="878" y="45" font-size="17" fill="#fff" text-anchor="middle">VPC</text>
+  <g fill="none" stroke="#fff" stroke-width="1.7">
+    <circle cx="930" cy="38" r="8"/><ellipse cx="930" cy="38" rx="3.5" ry="8"/><path d="M922 38 h16"/>
+    <path d="M958 42 h14 l-2 -4 v-5 a5 5 0 0 0 -10 0 v5 Z M964 46 h3"/>
+    <circle cx="992" cy="38" r="8"/>
+    <path d="M989 35 q4 -4 6 0 q0 2 -3 3 v2 M992 43 v1"/>
+    <rect x="1017" y="30" width="11" height="16"/><path d="M1020 34 h5 M1020 38 h5"/>
+  </g>
+  <rect x="1043" y="16" width="133" height="46" rx="23" fill="#292f38"/>
+  <circle cx="1065" cy="39" r="16" fill="#1684d9"/>
+  <text x="1065" y="47" font-size="21" font-weight="700" fill="#fff" text-anchor="middle">수</text>
+  <text id="student-name" data-badge-x="1121" data-badge-y="39" x="1121" y="47" font-size="20" font-weight="600" fill="#fff" text-anchor="middle">수강생</text>
+  <path d="M1160 35 l5 5 5 -5" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <g fill="none" stroke="#fff" stroke-width="2"><path d="M28 83 h16 M28 88 h16 M28 93 h16"/><circle cx="126" cy="88" r="7"/><path d="M126 83 v5 l4 2"/></g>
+  <text x="51" y="95" font-size="18" font-weight="600" fill="#fff">Menu</text>
+  <text x="141" y="95" font-size="18" fill="#c6cbd1">Recently Viewed</text>
+  <path d="M297 77 v23" stroke="#343942"/>
+  <text x="28" y="174" font-size="30" font-weight="700" fill="#222">Dashboard</text>
+  <!-- Dashboard context is reduced to the captured cards, without account metrics or amounts. -->
+  <rect x="28" y="212" width="365" height="309" rx="14" fill="#fff"/>
+  <text x="52" y="251" font-size="21" font-weight="600" fill="#222">Daily Event</text>
+  <path d="M70 385 A61 61 0 0 1 192 385 M228 385 A61 61 0 0 1 350 385" fill="none" stroke="#f0f0f0" stroke-width="11" stroke-linecap="round"/>
+  <text x="131" y="424" font-size="18" fill="#444" text-anchor="middle">유효한 이벤트:</text>
+  <text x="289" y="424" font-size="18" fill="#444" text-anchor="middle">종료된 이벤트:</text>
+  <g fill="#fff" stroke="#c9cccf"><rect x="79" y="454" width="104" height="36" rx="3"/><rect x="237" y="454" width="104" height="36" rx="3"/></g>
+  <g font-size="18" fill="#222" text-anchor="middle"><text x="131" y="479">자세히 보기</text><text x="289" y="479">자세히 보기</text></g>
+  <rect x="413" y="212" width="361" height="309" rx="14" fill="#fff"/>
+  <rect x="566" y="230" width="120" height="36" rx="4" fill="#fff" stroke="#c9cccf"/>
+  <text x="582" y="255" font-size="18" fill="#222">CPU</text>
+  <path d="M663 245 l5 6 5 -6" fill="#444"/>
+  <text x="593" y="404" font-size="18" fill="#92979c" text-anchor="middle">해당 정보가 없습니다.</text>
+  <rect x="794" y="212" width="378" height="309" rx="14" fill="#fff"/>
+  <path d="M826 470 H1142" stroke="#d7dce1"/>
+  <rect x="28" y="545" width="365" height="325" rx="14" fill="#fff"/>
+  <text x="52" y="585" font-size="21" font-weight="600" fill="#222">서비스 이용 현황</text>
+  <text x="52" y="638" font-size="18" fill="#222">이용 서비스</text>
+  <text x="267" y="638" font-size="18" fill="#222">보유 계약 수</text>
+  <path d="M52 655 H370 M52 704 H370 M52 753 H370" stroke="#dedede"/>
+  <g fill="#222" font-size="18"><text x="52" y="688">API Gateway</text><text x="52" y="737">CLOVA OCR</text><text x="52" y="786">NAVER API HUB</text></g>
+  <rect x="413" y="545" width="361" height="325" rx="14" fill="#fff"/>
+  <text x="437" y="585" font-size="21" font-weight="600" fill="#222">네트워크 이용내역</text>
+  <text x="593" y="740" font-size="18" fill="#92979c" text-anchor="middle">해당 정보가 없습니다.</text>
+  <rect x="794" y="545" width="378" height="325" rx="14" fill="#fff"/>
+  <text x="818" y="585" font-size="21" font-weight="600" fill="#222">결제 정보</text>
+  <text x="983" y="740" font-size="18" fill="#92979c" text-anchor="middle">결제 내역이 없습니다.</text>
+  <!-- Enlarged account popover; all six menu labels retain the captured spacing. -->
+  <rect x="718" y="72" width="458" height="460" rx="16" fill="#fff" stroke="#dedfe2" stroke-width="1.5"/>
+  <text x="748" y="120" font-size="25" font-weight="700" fill="#222">수강생</text>
+  <text x="748" y="153" font-size="21" fill="#777">student@gmail.com</text>
+  <path d="M718 180 H1176" stroke="#e9e9e9"/>
+  <rect id="billing-menu-item" x="718" y="241" width="458" height="47" fill="#fff"/>
+  <g fill="none" stroke="#45494d" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="749" y="211" width="15" height="13" rx="2"/><path d="M752 211 v-3 a4.5 4.5 0 0 1 9 0 v3 M756.5 216 v4"/>
+    <rect x="748" y="258" width="17" height="12" rx="1"/><path d="M748 262 h17 M754 266 h5"/>
+    <rect x="748" y="303" width="17" height="13" rx="1"/><path d="M751 312 l3 -4 4 3 4 -5 M756.5 316 v4 M752 320 h9"/>
+    <circle cx="756.5" cy="352" r="3"/><circle cx="749.5" cy="354" r="2.5"/><circle cx="763.5" cy="354" r="2.5"/><path d="M752 365 v-4 q4.5 -5 9 0 v4 Z M745 363 v-3 q2 -3 5 -2 M768 363 v-3 q-2 -3 -5 -2"/>
+    <path d="M749 399 l7.5 -5 7.5 5 v9 l-7.5 5 -7.5 -5 Z"/><circle cx="756.5" cy="402" r="2"/><path d="M756.5 404 v5"/>
+  </g>
+  <g fill="#333" font-size="23">
+    <text x="786" y="225">계정 및 보안 관리</text>
+    <text x="786" y="272">과금 정보 및 비용 관리</text>
+    <text x="786" y="319">한도 관리</text>
+    <text x="786" y="366">조직 관리</text>
+    <text x="786" y="413">권한 관리</text>
+  </g>
+  <path d="M718 447 H1176" stroke="#e0e0e0"/>
+  <g fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M912 483 h-7 v16 h7 M914 487 l5 4 -5 4 M909 491 h10"/></g>
+  <text x="934" y="499" font-size="23" font-weight="600" fill="#333">로그아웃</text>
+</svg>

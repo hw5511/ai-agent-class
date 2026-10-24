@@ -12,7 +12,7 @@
   "practice": "네이버 데이터랩 API와 타입캐스트 TTS API를 Claude가 Skill로 제작하고, public-apis-4Kr에서 원하는 API를 직접 선택해 연결한다.",
   "slides": [
     {
-      "imagePath": "assets/advanced/step04/외부_API로_AI_기능_확장하기.svg",
+      "imagePath": "assets/advanced/step04/_archive/외부_API로_AI_기능_확장하기.svg",
       "goal": "ADV 4 목표와 API 키 발급 중심 접근 방식을 안내한다.",
       "topics": [
         "API 키 발급 = AI 활용의 첫 번째 실전 스킬",
@@ -23,7 +23,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step04/API_키_발급,_두려워하지_마세요.svg",
+      "imagePath": "assets/advanced/step04/_archive/API_키_발급,_두려워하지_마세요.svg",
       "goal": "API 키 발급이 두렵지 않은 이유와 중요성을 이해한다.",
       "topics": [
         "MCP/CLI가 아직 적은 서비스가 대부분 — API 키가 유일한 연결 수단",
@@ -35,7 +35,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step04/네이버_오픈_API.svg",
+      "imagePath": "assets/advanced/step04/_archive/네이버_오픈_API.svg",
       "goal": "네이버 오픈 API의 특징과 이번 강의에서 사용할 API를 파악한다.",
       "topics": [
         "무료 쿼터 · 카드 불필요 · 한국어 강점",
@@ -46,7 +46,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step04/네이버_오픈_API_종류.svg",
+      "imagePath": "assets/advanced/step04/_archive/네이버_오픈_API_종류.svg",
       "goal": "네이버 오픈 API 7개 카테고리와 30개 이상의 API 종류를 파악한다.",
       "topics": [
         "인증 / AI·번역(Papago·Clova) / 지도·위치",
@@ -57,7 +57,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step04/네이버_API_앱_등록_1단계.svg",
+      "imagePath": "assets/advanced/step04/_archive/네이버_API_앱_등록_1단계.svg",
       "goal": "네이버 개발자 센터에서 애플리케이션을 등록하고 API를 선택한다.",
       "topics": [
         "developers.naver.com/apps/#/list 접속",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "imagePath": "assets/advanced/step04/네이버_API_앱_등록_2단계.svg",
+      "imagePath": "assets/advanced/step04/_archive/네이버_API_앱_등록_2단계.svg",
       "goal": "환경 설정 완료 후 클라이언트 ID와 Secret을 복사한다.",
       "topics": [
         "환경: Web 선택 → URL: http://localhost:3000",
@@ -83,7 +83,7 @@
       "action": null
     },
     {
-      "imagePath": "assets/advanced/step04/Claude에게_데이터랩_Skill_개발_요청.svg",
+      "imagePath": "assets/advanced/step04/_archive/Claude에게_데이터랩_Skill_개발_요청.svg",
       "goal": "API 문서를 Claude에게 읽히고 데이터랩 CLI Skill을 제작한다.",
       "topics": [
         "curl로 API 문서 2개 읽기 (검색어트렌드·쇼핑인사이트)",

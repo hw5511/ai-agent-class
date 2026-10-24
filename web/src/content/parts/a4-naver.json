@@ -1,0 +1,427 @@
+{
+  "id": "a4-naver",
+  "title": "네이버 데이터랩 API 발급",
+  "summary": "네이버 클라우드 가입과 결제 수단 등록은 직접 하고, API 키 발급과 저장은 클로드에게 맡기기",
+  "slides": [
+    {
+      "id": "a4-naver-01",
+      "template": "screen",
+      "title": "네이버 클라우드 접속",
+      "screen": {
+        "kind": "web",
+        "url": "www.ncloud.com",
+        "tabs": [
+          {
+            "title": "NAVER CLOUD PLATFORM",
+            "icon": "globe",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "image",
+          "src": "/shots/a4/a4-naver-home.svg"
+        },
+        "pins": [
+          {
+            "n": 1,
+            "x": 78.8,
+            "y": 24.2
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "회원 가입",
+          "body": "링크로 네이버 클라우드 첫 화면을 열고 오른쪽 위의 회원 가입을 누르세요."
+        }
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://www.ncloud.com/",
+            "text": "네이버 클라우드"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-naver-02",
+      "template": "compare",
+      "title": "회원 가입",
+      "ratio": [
+        3,
+        2
+      ],
+      "left": {
+        "label": "PC · 회원 가입",
+        "screen": {
+          "kind": "web",
+          "url": "auth.ncloud.com/join?from=ncp_home",
+          "tabs": [
+            {
+              "title": "NAVER CLOUD PLATFORM",
+              "icon": "globe",
+              "active": true
+            }
+          ],
+          "page": {
+            "type": "image",
+            "src": "/shots/a4/a4-naver-signup.svg"
+          },
+          "pins": [
+            {
+              "n": 1,
+              "x": 83.4,
+              "y": 75.7
+            }
+          ]
+        }
+      },
+      "right": {
+        "label": "스마트폰 · Wi-Fi 끄고 가입",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a4/a4-naver-signup-phone.svg",
+          "badges": [
+            {
+              "n": 2,
+              "x": 76,
+              "y": 10
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "이메일로 가입하기",
+          "body": "이메일 주소를 넣고 이메일로 가입하기를 누른 뒤, 안내에 따라 가입을 마치세요."
+        },
+        {
+          "n": "!",
+          "head": "강의실에서는 같은 IP",
+          "body": "강의실 컴퓨터들은 같은 IP 로 보여서 가입이 막힐 수 있어요. 그럴 때는 오른쪽처럼 스마트폰으로 가입합니다."
+        },
+        {
+          "n": 2,
+          "head": "스마트폰으로 가입",
+          "body": "스마트폰 Wi-Fi 를 끄고 모바일 데이터로 https://www.ncloud.com/ 에 접속해 가입하세요. 가입을 마치면 다시 컴퓨터에서 로그인하면 됩니다."
+        }
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://www.ncloud.com/",
+            "text": "네이버 클라우드",
+            "desc": "스마트폰에서도 같은 주소"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-naver-03",
+      "template": "compare",
+      "title": "결제 정보 관리 찾아가기",
+      "left": {
+        "label": "콘솔 · 내 이름 메뉴",
+        "screen": {
+          "kind": "web",
+          "url": "console.ncloud.com/dashboard",
+          "tabs": [
+            {
+              "title": "Console - NAVER CLOUD PLATFORM",
+              "icon": "globe",
+              "active": true
+            }
+          ],
+          "page": {
+            "type": "image",
+            "src": "/shots/a4/a4-naver-name-menu.svg"
+          },
+          "pins": [
+            {
+              "n": 1,
+              "x": 89.8,
+              "y": 38.9
+            }
+          ]
+        }
+      },
+      "right": {
+        "label": "과금 정보 및 비용 관리",
+        "screen": {
+          "kind": "web",
+          "url": "console.ncloud.com/billing/billing",
+          "tabs": [
+            {
+              "title": "Console - NAVER CLOUD PLATFORM",
+              "icon": "globe",
+              "active": true
+            }
+          ],
+          "page": {
+            "type": "image",
+            "src": "/shots/a4/a4-naver-billing-side.svg"
+          },
+          "pins": [
+            {
+              "n": 2,
+              "x": 20.2,
+              "y": 41.6
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "내 이름 · 과금 정보 및 비용 관리",
+          "body": "로그인한 뒤 오른쪽 위의 콘솔을 누르세요. 콘솔 화면 오른쪽 위의 내 이름을 누르고, 펼쳐진 메뉴에서 과금 정보 및 비용 관리를 누릅니다."
+        },
+        {
+          "n": 2,
+          "head": "결제 정보 관리",
+          "body": "왼쪽 메뉴에서 결제 정보 관리를 누르세요. 액션박스 링크를 누르면 이 화면이 바로 열립니다."
+        }
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://console.ncloud.com/billing/paymentInformationManagement",
+            "text": "결제 정보 관리",
+            "desc": "로그인한 상태에서 열기"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-naver-04",
+      "template": "compare",
+      "title": "결제 수단 등록",
+      "ratio": [
+        3,
+        2
+      ],
+      "left": {
+        "label": "결제 정보 관리",
+        "screen": {
+          "kind": "web",
+          "url": "console.ncloud.com/billing/paymentInformationManagement",
+          "tabs": [
+            {
+              "title": "Console - NAVER CLOUD PLATFORM",
+              "icon": "globe",
+              "active": true
+            }
+          ],
+          "page": {
+            "type": "image",
+            "src": "/shots/a4/a4-naver-billing.svg"
+          },
+          "pins": [
+            {
+              "n": 1,
+              "x": 59.5,
+              "y": 49.8
+            }
+          ]
+        }
+      },
+      "right": {
+        "label": "정기결제 등록하기",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a4/a4-naver-payment-popup.svg",
+          "badges": [
+            {
+              "n": 2,
+              "x": 88,
+              "y": 54.3
+            },
+            {
+              "n": 3,
+              "x": 88,
+              "y": 90.3
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "결제 수단 등록",
+          "body": "결제 정보 관리 화면의 결제 수단 등록을 누르면 정기결제 등록 창이 새로 열립니다."
+        },
+        {
+          "n": 2,
+          "head": "휴대폰 인증하기",
+          "body": "신용/체크카드와 개인카드를 고르고 휴대폰 인증하기를 누르세요. 카드 주인 명의의 휴대폰으로만 인증됩니다."
+        },
+        {
+          "n": 3,
+          "head": "등록하기",
+          "body": "카드 정보를 넣고 정기결제 진행에 동의한 뒤 등록하기를 누르면 끝입니다."
+        },
+        {
+          "n": "!",
+          "head": "데이터랩 요금",
+          "body": "검색어트렌드와 쇼핑인사이트는 각각 한 달 30,000건까지 기본 무료이고, 지금은 50,000건까지 한시적으로 무료예요."
+        }
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://console.ncloud.com/billing/paymentInformationManagement",
+            "text": "결제 정보 관리"
+          }
+        ]
+      },
+      "replaceWithCapture": "The billing page of an account with no card yet: the 결제 수단 등록 button label is drawn from the CEO's step text, not from a capture (the captured account already had a card and showed 결제 수단 변경)."
+    },
+    {
+      "id": "a4-naver-05",
+      "template": "compare",
+      "title": "API 관리 화면 열기",
+      "left": {
+        "label": "클로드 터미널",
+        "screen": {
+          "kind": "vscode",
+          "folder": "api-class",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\api-class",
+            "turns": [
+              {
+                "role": "user",
+                "text": "playwright mcp로 https://console.ncloud.com/naver-service/application 접속해줘 로그인해줄게",
+                "badge": 1
+              },
+              {
+                "role": "tool",
+                "text": "ToolSearch(playwright browser navigate)"
+              },
+              {
+                "role": "tool",
+                "text": "browser_navigate(https://console.ncloud.com/naver-service/application)"
+              }
+            ],
+            "fit": true
+          }
+        }
+      },
+      "right": {
+        "label": "Playwright 브라우저 · 로그인",
+        "screen": {
+          "kind": "web",
+          "url": "auth.ncloud.com/login",
+          "tabs": [
+            {
+              "title": "NAVER CLOUD PLATFORM",
+              "icon": "globe",
+              "active": true
+            }
+          ],
+          "page": {
+            "type": "image",
+            "src": "/shots/a4/a4-naver-login.svg"
+          },
+          "pins": [
+            {
+              "n": 2,
+              "x": 81.1,
+              "y": 54.1
+            },
+            {
+              "n": 3,
+              "x": 81.1,
+              "y": 72.0
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Playwright MCP 로 접속 요청",
+          "body": "VS Code 에서 클로드를 실행하고 프롬프트를 보내세요. 클로드가 Playwright 브라우저를 열어 네이버 클라우드 콘솔 주소로 이동합니다."
+        },
+        {
+          "n": 2,
+          "head": "아이디 · 비밀번호",
+          "body": "로그인하지 않은 브라우저라서 로그인 화면이 먼저 뜹니다. 가입한 이메일과 비밀번호를 직접 넣으세요."
+        },
+        {
+          "n": 3,
+          "head": "로그인",
+          "body": "로그인 버튼을 눌러 로그인을 마칩니다. 로그인은 클로드에게 맡기지 않고 내가 합니다."
+        },
+        {
+          "n": "!",
+          "head": "본인 인증 문자",
+          "body": "새 브라우저에서 처음 로그인하면 휴대폰 본인 인증 창이 뜰 수 있어요. 인증번호 전송을 누르고 문자로 받은 번호를 넣으세요."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "playwright mcp로 https://console.ncloud.com/naver-service/application 접속해줘 로그인해줄게"
+          }
+        ]
+      },
+      "replaceWithCapture": "Claude's reply for a logged-out student. The 2026-10-25 rehearsal (Sonnet, -p) ran with an ncloud login state, so only its two tool lines are shown. Open question to the CEO: this URL opens AI·NAVER API, while Data Lab keys live in NAVER API HUB at https://console.ncloud.com/naver-api-hub/application (read 2026-10-25); prompt kept word for word until he decides."
+    },
+    {
+      "id": "a4-naver-06",
+      "template": "screen",
+      "title": "데이터랩 · 쇼핑인사이트 키 발급",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "네이버 데이터랩과 쇼핑인사이트 api키 발급해서 현재폴더의 .claude/skills/.env 만들어서 저장해줘",
+              "badge": 1
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "키 발급 · .env 저장 요청",
+          "body": "로그인을 마쳤으면 프롬프트를 보내세요. 데이터랩 검색어트렌드와 쇼핑인사이트 두 API 의 키 발급과 .claude/skills/.env 저장을 클로드에게 맡기는 요청입니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "네이버 데이터랩과 쇼핑인사이트 api키 발급해서 현재폴더의 .claude/skills/.env 만들어서 저장해줘"
+          }
+        ]
+      },
+      "replaceWithCapture": "Claude's run for this prompt. In the 2026-10-25 rehearsal Sonnet went to developers.naver.com instead of NAVER API HUB; waiting for the CEO's wording decision, then rerun and add the API selection, 인증 정보 and .env result slides (shots a4-naver-api-select.svg, a4-naver-auth-keys.svg)."
+    }
+  ]
+}

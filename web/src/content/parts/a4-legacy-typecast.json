@@ -1,0 +1,51 @@
+{
+  "id": "a4-legacy-typecast",
+  "title": "타입캐스트 TTS API",
+  "summary": "AI 음성 합성 API 키를 발급하고 TTS 스킬 만들기",
+  "slides": [
+    {
+      "id": "a4-legacy-typecast-01",
+      "template": "image",
+      "title": "타입캐스트 — AI 음성 합성 API",
+      "src": "/assets/advanced/step04/타입캐스트_—_AI_음성_합성_API.svg"
+    },
+    {
+      "id": "a4-legacy-typecast-02",
+      "template": "image",
+      "title": "타입캐스트 API 키 발급",
+      "src": "/assets/advanced/step04/타입캐스트_API_키_발급.svg",
+      "action": {
+        "label": "타입캐스트 API 페이지",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://typecast.ai/developers/api",
+            "text": "타입캐스트 API 페이지"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-legacy-typecast-03",
+      "template": "image",
+      "title": "타입캐스트 캐릭터 선택 — voice id 복사",
+      "src": "/assets/advanced/step04/타입캐스트_캐릭터_선택_—_voice_id_복사.svg"
+    },
+    {
+      "id": "a4-legacy-typecast-04",
+      "template": "image",
+      "title": "Claude에게 타입캐스트 Skill 제작 요청",
+      "src": "/assets/advanced/step04/Claude에게_타입캐스트_Skill_제작_요청.svg",
+      "action": {
+        "label": "타입캐스트 API 문서",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://typecast.ai/docs/overview",
+            "text": "타입캐스트 API 문서"
+          }
+        ]
+      }
+    }
+  ]
+}
