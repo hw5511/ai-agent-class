@@ -1,0 +1,725 @@
+{
+  "id": "a4-typecast",
+  "title": "타입캐스트 TTS API",
+  "summary": "로그인 후 클로드에게 키 저장을 맡기고, typecast-tts 스킬로 필재 음성과 하단 자막 쇼츠 제작",
+  "sections": [
+    {
+      "title": "API 키 · 로그인 · 저장",
+      "count": 7
+    },
+    {
+      "title": "대화 비우기 · CLI 스킬",
+      "count": 3
+    },
+    {
+      "title": "필재 · 타임스탬프 · 쇼츠",
+      "count": 3
+    }
+  ],
+  "slides": [
+    {
+      "id": "a4-typecast-01",
+      "template": "cards",
+      "title": "타입캐스트 TTS API",
+      "cards": [
+        {
+          "label": "Typecast",
+          "image": "/shots/a4/a4-typecast-home.svg",
+          "tags": [
+            "AI 음성",
+            "타임스탬프"
+          ],
+          "badge": 1
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "텍스트로 음성 생성",
+          "body": "대본을 목소리로 변환 · 자막용 타임스탬프 지원"
+        },
+        {
+          "n": "!",
+          "head": "무료 플랜",
+          "body": "월 15,000 크레딧 · 상업 이용 불가 · 출처 표기 필수"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://typecast.ai/kr/pricing/api/",
+            "text": "API 요금 · 무료 이용 조건"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-typecast-02",
+      "template": "screen",
+      "title": "무료로 API 시작하기",
+      "screen": {
+        "kind": "web",
+        "url": "typecast.ai/kr/developers/api/",
+        "tabs": [
+          {
+            "title": "Typecast API",
+            "icon": "globe",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "image",
+          "src": "/shots/a4/a4-typecast-home.svg"
+        },
+        "pins": [
+          {
+            "n": 1,
+            "x": 7,
+            "y": 94.5
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "무료로 API 시작하기",
+          "body": "개발자 페이지에서 API 콘솔로 이동"
+        },
+        {
+          "n": "!",
+          "head": "결제수단 등록 불필요",
+          "body": "무료 플랜으로 시작 · 계정별 API 플랜 확인"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://typecast.ai/kr/developers/api/",
+            "text": "타입캐스트 API"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-typecast-03",
+      "template": "screen",
+      "title": "브라우저 접속 · 구글 로그인",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "playwright mcp로 https://studio.typecast.ai/developers/api 접속해줘 구글로 로그인해줄게",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "ToolSearch(playwright navigate)"
+            },
+            {
+              "role": "tool",
+              "text": "browser_navigate(https://studio.typecast.ai/developers/api)"
+            },
+            {
+              "role": "assistant",
+              "text": "페이지에 접속했습니다. 구글 로그인을 진행해 주세요. 로그인을 마치면 알려주세요."
+            }
+          ],
+          "fit": true
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "로그인은 내가",
+          "body": "Playwright 브라우저에서 Google 로그인 · 로그인 상태면 API 화면 바로 표시"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "playwright mcp로 https://studio.typecast.ai/developers/api 접속해줘 구글로 로그인해줄게"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-typecast-04",
+      "template": "screen",
+      "title": "API 키 확인 · 저장 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "지금 열린 타입캐스트에서 API 키를 확인해서 현재폴더의 .claude/skills/.env에 저장해줘. 계정 설정 변경이나 결제는 하지 마.",
+              "badge": 1
+            }
+          ],
+          "fit": true
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "API 키를 클로드에게",
+          "body": "로그인 후 키 확인과 .claude/skills/.env 저장 요청"
+        },
+        {
+          "n": "!",
+          "head": "클립보드 권한",
+          "body": "브라우저에서 읽기 권한을 요청하면 허용"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "지금 열린 타입캐스트에서 API 키를 확인해서 현재폴더의 .claude/skills/.env에 저장해줘. 계정 설정 변경이나 결제는 하지 마."
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-typecast-05",
+      "template": "screen",
+      "title": "API 키 확인 결과",
+      "screen": {
+        "kind": "web",
+        "url": "studio.typecast.ai/developers/api/api-key",
+        "tabs": [
+          {
+            "title": "Typecast API",
+            "icon": "globe",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "image",
+          "src": "/shots/a4/a4-typecast-api-key.svg"
+        },
+        "pins": [
+          {
+            "n": 1,
+            "x": 35,
+            "y": 27
+          },
+          {
+            "n": 2,
+            "x": 78.5,
+            "y": 49.5
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "API 키 메뉴",
+          "body": "로그인한 계정의 기존 API 키"
+        },
+        {
+          "n": 2,
+          "head": "클로드가 복사",
+          "body": "복사 버튼으로 키 확인 · 실제 키는 가림"
+        }
+      ]
+    },
+    {
+      "id": "a4-typecast-05-env",
+      "template": "screen",
+      "title": "타입캐스트 .env 저장 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [
+          {
+            "name": ".claude",
+            "folder": true
+          },
+          {
+            "name": "skills",
+            "depth": 1,
+            "folder": true
+          },
+          {
+            "name": ".env",
+            "depth": 2,
+            "active": true,
+            "badge": 1
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "tool",
+              "text": "PowerShell(.claude/skills/.env 저장)"
+            },
+            {
+              "role": "assistant",
+              "text": "API 키를 .claude/skills/.env에 저장했습니다.",
+              "badge": 2
+            }
+          ],
+          "fit": true
+        },
+        "editor": {
+          "file": ".claude/skills/.env",
+          "lines": [
+            "TYPECAST_API_KEY=••••••••"
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": ".claude/skills/.env",
+          "body": "TYPECAST_API_KEY 저장"
+        },
+        {
+          "n": 2,
+          "head": "키 확인 · 저장 결과",
+          "body": "Playwright MCP로 기존 키 복사 후 파일 생성"
+        },
+        {
+          "n": "!",
+          "head": "키 파일",
+          "body": "화면 공유 · GitHub에서 제외"
+        }
+      ]
+    },
+    {
+      "id": "a4-typecast-06",
+      "template": "screen",
+      "title": "가이드 · API 문서",
+      "screen": {
+        "kind": "web",
+        "url": "studio.typecast.ai/developers/api",
+        "tabs": [
+          {
+            "title": "Typecast API",
+            "icon": "globe",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "image",
+          "src": "/shots/a4/a4-typecast-guide.svg"
+        },
+        "pins": [
+          {
+            "n": 1,
+            "x": 27,
+            "y": 27
+          },
+          {
+            "n": 2,
+            "x": 27,
+            "y": 46.5
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "가이드",
+          "body": "API 사용 방법과 연동 자료"
+        },
+        {
+          "n": 2,
+          "head": "API 문서 보기",
+          "body": "개발자 문서 열기 · AI용 문서 llms.txt"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://typecast.ai/docs/llms.txt",
+            "text": "AI용 API 문서"
+          },
+          {
+            "kind": "link",
+            "href": "https://typecast.ai/docs/ko/integrations/claude-skills",
+            "text": "Claude 스킬 가이드"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-typecast-07",
+      "template": "screen",
+      "title": "대화 비우기",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/clear",
+              "badge": 1
+            }
+          ],
+          "fit": true
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "/clear",
+          "body": "이전 대화 비우기 · 저장된 .env와 파일 유지"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/clear"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-typecast-08",
+      "template": "screen",
+      "title": "typecast-tts 스킬 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "https://typecast.ai/docs/llms.txt를 참고해서 아래의 api키를 현재폴더의 .claude/skills/.env에 저장하고, 타입캐스트 api키를 테스트해줘. /skill-creator 그다음  모든 기능을 구현한 cli스킬을 https://typecast.ai/docs/ko/integrations/claude-skills 이거 참고해서 typecast-tts 라는 스킬로 만들어줘.",
+              "badge": 1
+            }
+          ],
+          "fit": true
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "문서 · 키 테스트 · CLI 스킬",
+          "body": "저장된 .env의 키 테스트 · 전체 기능 CLI 스킬 요청"
+        },
+        {
+          "n": "!",
+          "head": "skill-creator",
+          "body": "플러그인이 없을 때만 설치"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "https://typecast.ai/docs/llms.txt를 참고해서 아래의 api키를 현재폴더의 .claude/skills/.env에 저장하고, 타입캐스트 api키를 테스트해줘. /skill-creator 그다음  모든 기능을 구현한 cli스킬을 https://typecast.ai/docs/ko/integrations/claude-skills 이거 참고해서 typecast-tts 라는 스킬로 만들어줘."
+          },
+          {
+            "kind": "copy",
+            "value": "/plugin install skill-creator@claude-plugins-official",
+            "desc": "skill-creator가 없을 때만"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-typecast-09",
+      "template": "screen",
+      "title": "스킬 생성 · 키 테스트 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [
+          {
+            "name": ".claude",
+            "folder": true
+          },
+          {
+            "name": "skills",
+            "depth": 1,
+            "folder": true
+          },
+          {
+            "name": ".env",
+            "depth": 2
+          },
+          {
+            "name": "typecast-tts",
+            "depth": 2,
+            "folder": true,
+            "badge": 2
+          },
+          {
+            "name": "SKILL.md",
+            "depth": 3
+          },
+          {
+            "name": "scripts",
+            "depth": 3,
+            "folder": true
+          },
+          {
+            "name": "typecast.py",
+            "depth": 4
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "tool",
+              "text": "Skill(skill-creator:skill-creator)"
+            },
+            {
+              "role": "tool",
+              "text": "Write(.claude/skills/typecast-tts/scripts/typecast.py)"
+            },
+            {
+              "role": "tool",
+              "text": "Write(.claude/skills/typecast-tts/SKILL.md)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python .claude/skills/typecast-tts/scripts/typecast.py subscription)"
+            },
+            {
+              "role": "assistant",
+              "text": "typecast-tts 스킬은 만들었지만, .env 저장은 못 했습니다. 메시지에 API 키가 없었기 때문입니다.",
+              "badge": 1
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "키 누락 안내",
+          "body": "새 대화에서 키를 다시 요청한 응답 · 실제 .env는 그대로 유지"
+        },
+        {
+          "n": 2,
+          "head": "typecast-tts 생성",
+          "body": "SKILL.md · scripts/typecast.py · subscription 호출 성공"
+        },
+        {
+          "n": "!",
+          "head": "같은 안내가 나오면",
+          "body": "키를 다시 붙여넣는 대신 저장 경로 전달"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "API 키는 .claude/skills/.env에 이미 저장돼 있어. 그 파일의 키로 테스트해줘.",
+            "desc": "키를 다시 요청할 때만"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-typecast-10",
+      "template": "screen",
+      "title": "필재 쇼츠 목업 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "타입캐스트 tts로 '필재'캐릭터를 찾은다음 1분내외의 '흥미로운 역사적,과학적 사실'을 기반으로 처음 후킹멘트와 전개, 반전, 마무리 교훈 구조로 대본을 짜서 음성을 타임스탬프 방식으로 생성한다음, 그걸 사용해서 우선 검은화면에 자막만 하단쪽에 타이밍 맞게 나오는 쇼츠 영상 목업을 만들어줘",
+              "badge": 1
+            }
+          ],
+          "fit": true
+        },
+        "noSidebar": true
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "대본 · 음성 · 하단 자막",
+          "body": "후킹 · 전개 · 반전 · 교훈 구조의 쇼츠 목업 요청"
+        },
+        {
+          "n": "!",
+          "head": "필재 이름표",
+          "body": "Piljae · llms.txt에 없는 한글 이름표는 llms-full.txt에서 확인"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "타입캐스트 tts로 '필재'캐릭터를 찾은다음 1분내외의 '흥미로운 역사적,과학적 사실'을 기반으로 처음 후킹멘트와 전개, 반전, 마무리 교훈 구조로 대본을 짜서 음성을 타임스탬프 방식으로 생성한다음, 그걸 사용해서 우선 검은화면에 자막만 하단쪽에 타이밍 맞게 나오는 쇼츠 영상 목업을 만들어줘"
+          },
+          {
+            "kind": "link",
+            "href": "https://typecast.ai/docs/llms-full.txt",
+            "text": "전체 문서 · 필재 이름표"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-typecast-11",
+      "template": "screen",
+      "title": "필재 · 음성 · 타임스탬프",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [
+          {
+            "name": "work",
+            "folder": true
+          },
+          {
+            "name": "script.txt",
+            "depth": 1
+          },
+          {
+            "name": "narration.mp3",
+            "depth": 1
+          },
+          {
+            "name": "narration.json",
+            "depth": 1,
+            "active": true
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "tool",
+              "text": "Bash(typecast.py voices --model ssfm-v30)"
+            },
+            {
+              "role": "assistant",
+              "text": "Piljae · 필재 · ssfm-v30",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Write(work/script.txt)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(typecast.py tts --timestamps word -o narration.mp3)"
+            },
+            {
+              "role": "assistant",
+              "text": "로마 콘크리트의 자가 치유 · 음성 46.942초",
+              "badge": 2
+            }
+          ],
+          "fit": true
+        },
+        "editor": {
+          "file": "work/narration.json",
+          "lines": [
+            "\"audio_duration\": 46.942,",
+            "\"words\": [",
+            "  {\"text\": \"2천\",",
+            "   \"start\": 0.3, \"end\": 0.56},",
+            "  {\"text\": \"년\",",
+            "   \"start\": 0.62, \"end\": 0.74}",
+            "  ...",
+            "]"
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "필재 검색 결과",
+          "body": "GET /v3/voices · Piljae · ssfm-v30"
+        },
+        {
+          "n": 2,
+          "head": "음성 · 단어별 시간",
+          "body": "대본 380자 · narration.mp3 · narration.json"
+        },
+        {
+          "n": "!",
+          "head": "첫 결과 후 보정",
+          "body": "기존 음성 재사용 · Pretendard 자막과 Typecast 출처 추가"
+        }
+      ]
+    },
+    {
+      "id": "a4-typecast-12",
+      "template": "screen",
+      "title": "검은 화면 · 하단 자막 쇼츠",
+      "screen": {
+        "kind": "video",
+        "src": "/video/a4-typecast-shorts.mp4",
+        "poster": "/shots/a4/a4-typecast-shorts-poster.png"
+      },
+      "notes": [
+        {
+          "n": "!",
+          "head": "리허설 결과",
+          "body": "1080×1920 · 약 47초 · 필재 음성과 단어별 자막"
+        },
+        {
+          "n": "!",
+          "head": "무료 플랜 이용 조건",
+          "body": "월 15,000 크레딧 · 비상업 이용 · 출처 표기 필수"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "download",
+            "href": "/video/a4-typecast-shorts.mp4",
+            "text": "리허설 쇼츠 목업"
+          }
+        ]
+      }
+    }
+  ]
+}

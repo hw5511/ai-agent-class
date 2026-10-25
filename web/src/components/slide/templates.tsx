@@ -41,7 +41,7 @@ function ImageT({ s }: { s: ImageSlide }) {
 }
 
 function ScreenT({ s }: { s: ScreenSlide }) {
-  return <div className="h-full min-h-0"><ScreenView screen={s.screen} /></div>
+  return <div className="h-full min-h-0"><ScreenView key={s.id} screen={s.screen} /></div>
 }
 
 function CompareT({ s }: { s: CompareSlide }) {
@@ -53,7 +53,7 @@ function CompareT({ s }: { s: CompareSlide }) {
             {s.notes?.length ? <NumberBadge n={i + 1} /> : null}
             <span className="font-display text-[32px] font-bold text-[#101113]">{side.label}</span>
           </div>
-          <div className="min-h-0 flex-1"><ScreenView screen={side.screen} /></div>
+          <div className="min-h-0 flex-1"><ScreenView key={`${s.id}-${i}`} screen={side.screen} /></div>
         </div>
       ))}
     </div>

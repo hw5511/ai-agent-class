@@ -304,16 +304,16 @@
             "turns": [
               {
                 "role": "user",
-                "text": "playwright mcp로 https://console.ncloud.com/naver-service/application 접속해줘 로그인해줄게",
+                "text": "playwright mcp로 https://console.ncloud.com/naver-api-hub/application 접속해줘 로그인해줄게",
                 "badge": 1
               },
               {
                 "role": "tool",
-                "text": "ToolSearch(playwright browser navigate)"
+                "text": "ToolSearch(playwright navigate)"
               },
               {
                 "role": "tool",
-                "text": "browser_navigate(https://console.ncloud.com/naver-service/application)"
+                "text": "browser_navigate(https://console.ncloud.com/naver-api-hub/application)"
               }
             ],
             "fit": true
@@ -321,7 +321,7 @@
         }
       },
       "right": {
-        "label": "Playwright 브라우저 · 로그인",
+        "label": "로그인이 안 된 경우",
         "screen": {
           "kind": "web",
           "url": "auth.ncloud.com/login",
@@ -340,12 +340,7 @@
             {
               "n": 2,
               "x": 81.1,
-              "y": 54.1
-            },
-            {
-              "n": 3,
-              "x": 81.1,
-              "y": 72.0
+              "y": 80.1
             }
           ]
         }
@@ -353,23 +348,18 @@
       "notes": [
         {
           "n": 1,
-          "head": "Playwright MCP 로 접속 요청",
-          "body": "VS Code 에서 클로드를 실행하고 프롬프트를 보내세요. 클로드가 Playwright 브라우저를 열어 네이버 클라우드 콘솔 주소로 이동합니다."
+          "head": "NAVER API HUB 접속",
+          "body": "Playwright MCP 브라우저로 API HUB 열기"
         },
         {
           "n": 2,
-          "head": "아이디 · 비밀번호",
-          "body": "로그인하지 않은 브라우저라서 로그인 화면이 먼저 뜹니다. 가입한 이메일과 비밀번호를 직접 넣으세요."
-        },
-        {
-          "n": 3,
-          "head": "로그인",
-          "body": "로그인 버튼을 눌러 로그인을 마칩니다. 로그인은 클로드에게 맡기지 않고 내가 합니다."
+          "head": "네이버로 간편 로그인",
+          "body": "가입한 본인 계정으로 직접 로그인"
         },
         {
           "n": "!",
-          "head": "본인 인증 문자",
-          "body": "새 브라우저에서 처음 로그인하면 휴대폰 본인 인증 창이 뜰 수 있어요. 인증번호 전송을 누르고 문자로 받은 번호를 넣으세요."
+          "head": "휴대폰 인증",
+          "body": "추가 인증 화면이 뜨면 본인 휴대폰으로 진행"
         }
       ],
       "action": {
@@ -377,11 +367,10 @@
         "items": [
           {
             "kind": "copy",
-            "value": "playwright mcp로 https://console.ncloud.com/naver-service/application 접속해줘 로그인해줄게"
+            "value": "playwright mcp로 https://console.ncloud.com/naver-api-hub/application 접속해줘 로그인해줄게"
           }
         ]
-      },
-      "replaceWithCapture": "Claude's reply for a logged-out student. The 2026-10-25 rehearsal (Sonnet, -p) ran with an ncloud login state, so only its two tool lines are shown. Open question to the CEO: this URL opens AI·NAVER API, while Data Lab keys live in NAVER API HUB at https://console.ncloud.com/naver-api-hub/application (read 2026-10-25); prompt kept word for word until he decides."
+      }
     },
     {
       "id": "a4-naver-06",
@@ -398,7 +387,7 @@
           "turns": [
             {
               "role": "user",
-              "text": "네이버 데이터랩과 쇼핑인사이트 api키 발급해서 현재폴더의 .claude/skills/.env 만들어서 저장해줘",
+              "text": "지금 열린 NAVER API HUB에서 네이버 데이터랩과 쇼핑인사이트 api키 발급해서 현재폴더의 .claude/skills/.env 만들어서 저장해줘",
               "badge": 1
             }
           ],
@@ -408,8 +397,8 @@
       "notes": [
         {
           "n": 1,
-          "head": "키 발급 · .env 저장 요청",
-          "body": "로그인을 마쳤으면 프롬프트를 보내세요. 데이터랩 검색어트렌드와 쇼핑인사이트 두 API 의 키 발급과 .claude/skills/.env 저장을 클로드에게 맡기는 요청입니다."
+          "head": "발급 · 저장 요청",
+          "body": "현재 열린 API HUB에서 Data Lab 두 API 키와 .env 저장 요청"
         }
       ],
       "action": {
@@ -417,11 +406,152 @@
         "items": [
           {
             "kind": "copy",
-            "value": "네이버 데이터랩과 쇼핑인사이트 api키 발급해서 현재폴더의 .claude/skills/.env 만들어서 저장해줘"
+            "value": "지금 열린 NAVER API HUB에서 네이버 데이터랩과 쇼핑인사이트 api키 발급해서 현재폴더의 .claude/skills/.env 만들어서 저장해줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-naver-07",
+      "template": "screen",
+      "title": "Data Lab API 선택",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a4/a4-naver-api-select.svg",
+        "badges": [
+          {
+            "n": 1,
+            "x": 4,
+            "y": 11
+          },
+          {
+            "n": 2,
+            "x": 54,
+            "y": 11
           }
         ]
       },
-      "replaceWithCapture": "Claude's run for this prompt. In the 2026-10-25 rehearsal Sonnet went to developers.naver.com instead of NAVER API HUB; waiting for the CEO's wording decision, then rerun and add the API selection, 인증 정보 and .env result slides (shots a4-naver-api-select.svg, a4-naver-auth-keys.svg)."
+      "notes": [
+        {
+          "n": 1,
+          "head": "쇼핑인사이트",
+          "body": "Data Lab Shopping Insight API"
+        },
+        {
+          "n": 2,
+          "head": "검색어트렌드",
+          "body": "Data Lab Search Trend API"
+        },
+        {
+          "n": "!",
+          "head": "신규 발급 화면",
+          "body": "Application 등록에서 선택할 두 API · 이번 실행은 기존 claude 등록 확인 후 키 재사용"
+        }
+      ]
+    },
+    {
+      "id": "a4-naver-08",
+      "template": "screen",
+      "title": "인증 정보",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a4/a4-naver-auth-keys.svg",
+        "badges": [
+          {
+            "n": 1,
+            "x": 95,
+            "y": 48
+          },
+          {
+            "n": 2,
+            "x": 77,
+            "y": 63
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Client ID",
+          "body": "X-NCP-APIGW-API-KEY-ID"
+        },
+        {
+          "n": 2,
+          "head": "Client Secret",
+          "body": "X-NCP-APIGW-API-KEY"
+        },
+        {
+          "n": "!",
+          "head": "두 API · 키 한 쌍",
+          "body": "클로드가 인증 정보에서 기존 키 확인 · 실제 키는 화면에서 가림"
+        }
+      ]
+    },
+    {
+      "id": "a4-naver-09",
+      "template": "screen",
+      "title": ".env 저장 결과",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [
+          {
+            "name": ".claude",
+            "folder": true
+          },
+          {
+            "name": "skills",
+            "depth": 1,
+            "folder": true
+          },
+          {
+            "name": ".env",
+            "depth": 2,
+            "active": true,
+            "badge": 1
+          }
+        ],
+        "editor": {
+          "file": ".claude/skills/.env",
+          "lines": [
+            "NAVER_CLIENT_ID=••••••••",
+            "NAVER_CLIENT_SECRET=••••••••"
+          ]
+        },
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "tool",
+              "text": "Bash(mkdir -p .claude/skills · .env 저장)"
+            },
+            {
+              "role": "assistant",
+              "text": ".claude/skills/.env를 만들어 저장했습니다.\n새로 발급하지 않고, 이미 있던 Application claude의 키를 그대로 썼습니다.",
+              "badge": 2
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": ".claude/skills/.env",
+          "body": "NAVER_CLIENT_ID · NAVER_CLIENT_SECRET 저장"
+        },
+        {
+          "n": 2,
+          "head": "기존 키 재사용",
+          "body": "검색어트렌드 · 쇼핑인사이트 등록 확인 · 두 번째 요청 12.8초"
+        },
+        {
+          "n": "!",
+          "head": "키 파일 보관",
+          "body": "GitHub · 화면 공유에서 제외"
+        }
+      ]
     }
   ]
 }
