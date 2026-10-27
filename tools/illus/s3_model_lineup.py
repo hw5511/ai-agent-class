@@ -7,7 +7,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from illuskit import *
 
 # ---- costumes, drawn in the mascot's own local grid (0..240 x, 0..142.5 y; head spans x 30..210,
-# y 0..57) so a costume lines up with mascot(x, y, s) at the same (x, y, s). ----
+# y 0..57) so a costume lines up with mascot(x, y, s) at the same (x, y, s). Clothes sit on the torso
+# (y 57..114, below the eye row) - never over the face (CEO 2026-10-27: collar/tie/blazer covered the eyes). ----
 KINDER_HAT = "#f5c518"
 KINDER_HAT_DARK = "#dba812"
 KINDER_BAG = "#e2574c"
@@ -39,17 +40,17 @@ def costume_kinder(x, y, s) -> str:
              f'<ellipse cx="120" cy="{dome_cy}" rx="92" ry="11" fill="{KINDER_HAT}"/>'
              f'<ellipse cx="120" cy="{dome_cy}" rx="92" ry="11" fill="none" stroke="{KINDER_HAT_DARK}" stroke-width="3"/>'
              f'<circle cx="120" cy="{dome_cy - dome_r}" r="6" fill="#fff"/>'
-             f'<path d="M150 20L206 78" stroke="{KINDER_BAG}" stroke-width="9" stroke-linecap="round"/>'
+             f'<path d="M146 62L208 92" stroke="{KINDER_BAG}" stroke-width="9" stroke-linecap="round"/>'
              f'{_backpack(KINDER_BAG)}')
     return _costume(x, y, s, inner)
 
 
 def costume_middle(x, y, s) -> str:
     """A short, wide necktie over a white collar, and a navy backpack with a visible strap."""
-    inner = (f'<path d="M90 0L120 0L102 16Z" fill="#fff"/>'
-             f'<path d="M150 0L120 0L138 16Z" fill="#fff"/>'
-             f'<path d="M105 0L135 0L120 40Z" fill="{MID_TIE}"/>'
-             f'<path d="M150 20L206 78" stroke="{MID_BAG}" stroke-width="9" stroke-linecap="round"/>'
+    inner = (f'<path d="M90 57L120 57L102 73Z" fill="#fff"/>'
+             f'<path d="M150 57L120 57L138 73Z" fill="#fff"/>'
+             f'<path d="M107 57L133 57L120 99Z" fill="{MID_TIE}"/>'
+             f'<path d="M146 62L208 92" stroke="{MID_BAG}" stroke-width="9" stroke-linecap="round"/>'
              f'{_backpack(MID_BAG)}')
     return _costume(x, y, s, inner)
 
@@ -58,12 +59,12 @@ def costume_high(x, y, s) -> str:
     """A navy blazer whose panels run down both sides of the torso (open lapels cut near the collar,
     not a thin V wedge) over a white shirt V and a blue tie, with a small badge on the chest - reads
     clearly dressier/older than middle school."""
-    inner = (f'<path d="M30 0L100 0L78 26L64 118L30 118Z" fill="{HIGH_BLAZER}"/>'
-             f'<path d="M210 0L140 0L162 26L176 118L210 118Z" fill="{HIGH_BLAZER}"/>'
-             f'<path d="M100 0L140 0L162 26L120 60L78 26Z" fill="#fff"/>'
-             f'<path d="M106 6L134 6L120 62Z" fill="{HIGH_TIE}"/>'
-             f'<circle cx="52" cy="50" r="9" fill="{GRAD_TASSEL}"/>'
-             f'<circle cx="52" cy="50" r="9" fill="none" stroke="{INK}" stroke-width="2"/>')
+    inner = (f'<path d="M30 57L98 57L84 74L74 114.4L30 114.4Z" fill="{HIGH_BLAZER}"/>'
+             f'<path d="M210 57L142 57L156 74L166 114.4L210 114.4Z" fill="{HIGH_BLAZER}"/>'
+             f'<path d="M98 57L142 57L156 74L120 108L84 74Z" fill="#fff"/>'
+             f'<path d="M108 60L132 60L120 104Z" fill="{HIGH_TIE}"/>'
+             f'<circle cx="52" cy="86" r="8" fill="{GRAD_TASSEL}"/>'
+             f'<circle cx="52" cy="86" r="8" fill="none" stroke="{INK}" stroke-width="2"/>')
     return _costume(x, y, s, inner)
 
 
