@@ -1,0 +1,873 @@
+{
+  "id": "a4-datalab",
+  "title": "데이터랩 · 쇼핑인사이트 스킬",
+  "summary": "저장한 API HUB 키로 naver-datalab · naver-shopping CLI 스킬을 만들고, 검색 트렌드와 쇼핑 통계를 그래프로 보기",
+  "sections": [
+    {
+      "title": "스킬 요청 · 데이터랩 · CLI 인자",
+      "count": 3
+    },
+    {
+      "title": "API 테스트 · 스킬 2종 완성",
+      "count": 4
+    },
+    {
+      "title": "스킬 테스트 · 그래프",
+      "count": 5
+    }
+  ],
+  "slides": [
+    {
+      "id": "a4-datalab-01",
+      "template": "screen",
+      "title": "데이터랩 · 쇼핑인사이트 스킬 요청",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [
+          {
+            "name": ".claude",
+            "folder": true
+          },
+          {
+            "name": "skills",
+            "depth": 1,
+            "folder": true
+          },
+          {
+            "name": ".env",
+            "depth": 2,
+            "badge": 2
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "/skill-creator  https://guide.ncloud-docs.com/docs/apihub-overview 를 참고해서 아래의 api키를  현재폴더의 .claude/skills폴더에 .env 에 저장하고 데이터랩 api들을 테스트해줘. 그다음 api들이 다 통과가 되면 각각 naver-datalab,naver-shopping 이라는 2가지 cli스킬을 만들어줘. 데이터랩과쇼핑인사이트스킬은 키워드 비교의 경우 우선 여러가지 경우의 그래프 이미지를 생성할 수 있어야하고, 5가지 이상의키워드 비교를 위해서 1개의 키워드를 앵커로 삼아 4-1-4방식으로 키워드 비교해서 5가지 이상의 키워드 비교까지 가능한 형태로 스킬을 만들어줘. 데이터랩과 쇼핑인사이트에서 키워드 비교할때는 하위 주제어를 적절하게 채워야하는 규칙도 적어놔줘. 내 api키:",
+              "badge": 1
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "스킬 2종 요청",
+          "body": "Data Lab API 테스트 후 naver-datalab · naver-shopping 생성"
+        },
+        {
+          "n": 2,
+          "head": "이미 저장한 키",
+          "body": "앞에서 만든 .claude/skills/.env · 내 api키 뒤는 빈칸으로 진행"
+        },
+        {
+          "n": "!",
+          "head": "skill-creator",
+          "body": "플러그인이 없을 때만 설치"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "/clear",
+            "desc": "이전 대화 비우기"
+          },
+          {
+            "kind": "copy",
+            "value": "/skill-creator  https://guide.ncloud-docs.com/docs/apihub-overview 를 참고해서 아래의 api키를  현재폴더의 .claude/skills폴더에 .env 에 저장하고 데이터랩 api들을 테스트해줘. 그다음 api들이 다 통과가 되면 각각 naver-datalab,naver-shopping 이라는 2가지 cli스킬을 만들어줘. 데이터랩과쇼핑인사이트스킬은 키워드 비교의 경우 우선 여러가지 경우의 그래프 이미지를 생성할 수 있어야하고, 5가지 이상의키워드 비교를 위해서 1개의 키워드를 앵커로 삼아 4-1-4방식으로 키워드 비교해서 5가지 이상의 키워드 비교까지 가능한 형태로 스킬을 만들어줘. 데이터랩과 쇼핑인사이트에서 키워드 비교할때는 하위 주제어를 적절하게 채워야하는 규칙도 적어놔줘. 내 api키:"
+          },
+          {
+            "kind": "copy",
+            "value": "/plugin install skill-creator@claude-plugins-official",
+            "desc": "skill-creator가 없을 때만"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-datalab-02",
+      "template": "screen",
+      "title": "네이버 데이터랩",
+      "screen": {
+        "kind": "web",
+        "url": "datalab.naver.com",
+        "tabs": [
+          {
+            "title": "네이버 데이터랩",
+            "icon": "globe",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "image",
+          "src": "/shots/a4/a4-datalab-home.png"
+        },
+        "pins": [
+          {
+            "n": 1,
+            "x": 21,
+            "y": 20
+          },
+          {
+            "n": 2,
+            "x": 28.2,
+            "y": 20
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "검색어트렌드",
+          "body": "네이버 통합검색에서 검색된 양의 추이"
+        },
+        {
+          "n": 2,
+          "head": "쇼핑인사이트",
+          "body": "네이버쇼핑 분야별 · 키워드별 클릭 추이"
+        },
+        {
+          "n": "!",
+          "head": "스킬이 만들어지는 동안",
+          "body": "두 메뉴가 오늘 만드는 두 스킬"
+        }
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://datalab.naver.com/",
+            "text": "네이버 데이터랩"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-datalab-03",
+      "template": "compare",
+      "title": "조건 = CLI 인자",
+      "ratio": [
+        2,
+        1
+      ],
+      "left": {
+        "label": "검색어트렌드 조건",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a4/a4-datalab-trend.png"
+        }
+      },
+      "right": {
+        "label": "naver-datalab 스킬 인자",
+        "screen": {
+          "kind": "file",
+          "name": "naver-datalab/SKILL.md",
+          "lines": [
+            "-g \"그룹명:하위1,하위2,...\"",
+            "--start 2025-01-01",
+            "--end 2025-12-31",
+            "--unit date|week|month",
+            "--device pc|mo",
+            "--gender m|f",
+            "--ages 3,4"
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "검색어트렌드 조건",
+          "body": "주제어 · 하위 주제어 · 기간 · 범위 · 성별 · 연령"
+        },
+        {
+          "n": 2,
+          "head": "같은 조건 = CLI 인자",
+          "body": "-g · --start · --end · --unit · --device · --gender · --ages"
+        },
+        {
+          "n": "!",
+          "head": "네이버 검색 데이터 조회",
+          "body": "이 조건들의 결과 요청 · 스킬은 같은 요청을 API로 전송"
+        }
+      ],
+      "action": {
+        "label": "링크 열기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://datalab.naver.com/keyword/trendSearch.naver",
+            "text": "검색어트렌드"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-datalab-04",
+      "template": "screen",
+      "title": "첫 테스트 · 401 인증 실패",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "tool",
+              "text": "Bash(ls -la .claude/skills)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(cat > test/test_apis.py · python test/test_apis.py .claude/skills/.env)"
+            },
+            {
+              "role": "assistant",
+              "text": "⎿ FAIL search 401 {\"errorMessage\":\"NID AUTH Result Invalid (1000) : Authentication failed. (인증에 실패했습니다.)\",\"errorCode\":\"024\"}",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "API 테스트를 통과시키지 못해서 스킬 제작은 시작하지 않았습니다. 데이터랩 API 9개 전부 401 인증 실패(NID AUTH Result Invalid)가 나왔습니다."
+            },
+            {
+              "role": "assistant",
+              "text": "3. 참고하라고 하신 ncloud API Hub 문서의 키를 쓰시는 거라면 알려 주세요. 이 경우 헤더(X-NCP-APIGW-API-KEY-ID/X-NCP-APIGW-API-KEY)와 엔드포인트가 달라서 테스트 스크립트를 수정해야 합니다.",
+              "badge": 2
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "9개 모두 401",
+          "body": "옛 네이버 개발자센터 주소로 호출 · 키 문제 아님"
+        },
+        {
+          "n": 2,
+          "head": "API HUB 키인지 질문",
+          "body": "헤더와 주소가 다른 API HUB 방식 확인 요청"
+        },
+        {
+          "n": "!",
+          "head": "리허설 첫 실행 결과",
+          "body": "Sonnet · 24초 · .env의 키는 그대로 사용"
+        }
+      ]
+    },
+    {
+      "id": "a4-datalab-05",
+      "template": "screen",
+      "title": "API HUB 방식 재테스트",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "NAVER API HUB에서 발급한 키야. https://guide.ncloud-docs.com/docs/apihub-overview 문서를 읽고 API HUB 방식으로 다시 테스트해줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Fetch(https://guide.ncloud-docs.com/docs/apihub-overview)"
+            },
+            {
+              "role": "tool",
+              "text": "Fetch(https://api.ncloud-docs.com/docs/naver-api-hub-search-trend)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python test/test_apis.py .claude/skills/.env)"
+            },
+            {
+              "role": "assistant",
+              "text": "⎿ PASS search results: 2 points: 12",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "⎿ PASS shopping/categories results: 2 points: 12"
+            },
+            {
+              "role": "assistant",
+              "text": "⎿ PASS shopping/category/keyword/age results: 1 points: 72"
+            },
+            {
+              "role": "assistant",
+              "text": "API HUB 방식으로 다시 테스트했고, 9개 API가 모두 통과했습니다."
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "API HUB 문서로 재테스트",
+          "body": "개발 가이드 주소를 다시 전달"
+        },
+        {
+          "n": 2,
+          "head": "9개 API 통과",
+          "body": "naverapihub.apigw.ntruss.com · X-NCP-APIGW-API-KEY 헤더"
+        },
+        {
+          "n": "!",
+          "head": "재테스트부터 스킬 완성까지",
+          "body": "3분 3초 · 문서 확인 · 테스트 · 스크립트 · SKILL.md"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "NAVER API HUB에서 발급한 키야. https://guide.ncloud-docs.com/docs/apihub-overview 문서를 읽고 API HUB 방식으로 다시 테스트해줘",
+            "desc": "401 인증 실패가 나올 때만"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-datalab-06",
+      "template": "screen",
+      "title": "스킬 2종 완성",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [
+          {
+            "name": ".claude",
+            "folder": true
+          },
+          {
+            "name": "skills",
+            "depth": 1,
+            "folder": true
+          },
+          {
+            "name": ".env",
+            "depth": 2
+          },
+          {
+            "name": "naver-datalab",
+            "depth": 2,
+            "folder": true,
+            "badge": 1
+          },
+          {
+            "name": "scripts",
+            "depth": 3,
+            "folder": true
+          },
+          {
+            "name": "common.py",
+            "depth": 4
+          },
+          {
+            "name": "datalab.py",
+            "depth": 4
+          },
+          {
+            "name": "SKILL.md",
+            "depth": 3
+          },
+          {
+            "name": "naver-shopping",
+            "depth": 2,
+            "folder": true,
+            "badge": 2
+          },
+          {
+            "name": "scripts",
+            "depth": 3,
+            "folder": true
+          },
+          {
+            "name": "common.py",
+            "depth": 4
+          },
+          {
+            "name": "shopping.py",
+            "depth": 4
+          },
+          {
+            "name": "SKILL.md",
+            "depth": 3
+          },
+          {
+            "name": "out",
+            "folder": true
+          },
+          {
+            "name": "test",
+            "folder": true
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "tool",
+              "text": "Write(.claude/skills/naver-datalab/scripts/datalab.py)"
+            },
+            {
+              "role": "tool",
+              "text": "Write(.claude/skills/naver-shopping/scripts/shopping.py)"
+            },
+            {
+              "role": "tool",
+              "text": "Read(out/dl9/chart_line.png)"
+            },
+            {
+              "role": "tool",
+              "text": "Write(.claude/skills/naver-datalab/SKILL.md)"
+            },
+            {
+              "role": "tool",
+              "text": "Write(.claude/skills/naver-shopping/SKILL.md)"
+            },
+            {
+              "role": "assistant",
+              "text": "그래프: 선·누적영역·평균막대·순위·파이·히트맵·작은 다중 그래프 7종을 PNG로 만들고, CSV와 JSON도 저장합니다. 한글 폰트도 정상 출력됩니다.",
+              "badge": 3
+            },
+            {
+              "role": "assistant",
+              "text": "그래서 naver-datalab과 naver-shopping 스킬을 만들었습니다."
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "naver-datalab",
+          "body": "검색어트렌드 · datalab.py compare"
+        },
+        {
+          "n": 2,
+          "head": "naver-shopping",
+          "body": "쇼핑인사이트 · 분야 · 키워드 · 기기 · 성별 · 연령"
+        },
+        {
+          "n": 3,
+          "head": "그래프 7종",
+          "body": "PNG 그래프와 CSV · JSON 원본 수치"
+        }
+      ]
+    },
+    {
+      "id": "a4-datalab-07",
+      "template": "screen",
+      "title": "4-1-4 앵커 · 하위 주제어 규칙",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [
+          {
+            "name": ".claude",
+            "folder": true
+          },
+          {
+            "name": "skills",
+            "depth": 1,
+            "folder": true
+          },
+          {
+            "name": "naver-datalab",
+            "depth": 2,
+            "folder": true
+          },
+          {
+            "name": "SKILL.md",
+            "depth": 3,
+            "active": true
+          }
+        ],
+        "editor": {
+          "file": ".claude/skills/naver-datalab/SKILL.md",
+          "lines": [
+            "## 5개 초과 비교: 앵커 4-1-4 방식",
+            "",
+            "API는 호출 1회당 그룹 5개까지이고, 값은 호출마다",
+            "자기 최댓값=100으로 정규화되어 호출 간 직접 비교가 불가능하다.",
+            "그래서 앵커 1개를 모든 호출에 넣고, 앵커 합계의 비율로",
+            "나머지 호출을 환산한다.",
+            "`4(키워드) + 앵커 + 4(키워드)` = 9개.",
+            "",
+            "## 키워드 비교 시 하위 주제어 규칙",
+            "",
+            "1. 모든 그룹에 비슷한 수준의 범위로 채운다.",
+            "2. 채울 것: 한글/영문 표기, 약어·줄임말, 띄어쓰기 변형,",
+            "   대표 모델·제품명·세부 라인업, 흔한 오탈자.",
+            "3. 그룹 간 중복 금지"
+          ],
+          "badge": 1
+        },
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "assistant",
+              "text": "4-1-4 앵커 비교: 한도를 넘으면 자동으로 적용됩니다. 앵커를 모든 호출에 넣고 앵커 합계 비율로 호출 간 값을 환산합니다.",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "하위 주제어 규칙: 두 SKILL.md에 각각 적었습니다."
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "SKILL.md에 적힌 규칙",
+          "body": "호출당 5그룹 한도 · 호출마다 최댓값 100"
+        },
+        {
+          "n": 2,
+          "head": "앵커 1개로 환산",
+          "body": "모든 호출에 같은 앵커 · 9개 이상도 한 그래프"
+        },
+        {
+          "n": "!",
+          "head": "쇼핑인사이트 규칙",
+          "body": "키워드당 검색어 1개 · 같은 분야 · 같은 층위끼리 비교"
+        }
+      ]
+    },
+    {
+      "id": "a4-datalab-08",
+      "template": "screen",
+      "title": "클로드 · GPT · 제미나이 5년",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "네이버 데이터랩 스킬로 '클로드,gpt,gemini'를 최근 5년간의 결과를 그래프로 만들어줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Skill(naver-datalab)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python .claude/skills/naver-datalab/scripts/datalab.py compare -g \"클로드:클로드 AI,클로드AI,claude ai,클로드 코드,앤트로픽\" -g \"GPT:챗GPT,chatgpt,챗지피티,GPT,오픈AI\" -g \"제미나이:제미나이,gemini,구글 제미나이,제미니\" --start 2021-10-01 --end 2026-10-27 --unit month --charts line,area,rank,pie --out out/ai5y)",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "Read(out/ai5y/chart_line.png)"
+            },
+            {
+              "role": "assistant",
+              "text": "최근 5년(2021-10 ~ 2026-10, 월 단위) 네이버 검색 트렌드 그래프를 만들었습니다.",
+              "badge": 3
+            },
+            {
+              "role": "assistant",
+              "text": "기간 평균 비율: GPT 31.06 · 제미나이 6.78 · 클로드 0.35"
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "5년 그래프 요청",
+          "body": "naver-datalab 스킬 자동 실행"
+        },
+        {
+          "n": 2,
+          "head": "하위 주제어 자동 채움",
+          "body": "그룹마다 한글 · 영문 · 약어 4~5개 · 월 단위"
+        },
+        {
+          "n": 3,
+          "head": "그래프 4종 · 16.6초",
+          "body": "out/ai5y · 선 · 누적 · 순위 · 파이"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "네이버 데이터랩 스킬로 '클로드,gpt,gemini'를 최근 5년간의 결과를 그래프로 만들어줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-datalab-09",
+      "template": "screen",
+      "title": "5년 검색 트렌드 그래프",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a4/a4-datalab-ai-5y.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 67.8,
+            "y": 17
+          },
+          {
+            "n": 2,
+            "x": 87.6,
+            "y": 45
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "2025년 봄 GPT 급등",
+          "body": "2025-03 47.9 · 2025-04 76.3"
+        },
+        {
+          "n": 2,
+          "head": "제미나이 상승",
+          "body": "2025년 중반부터 · 2026-05 약 44로 정점"
+        },
+        {
+          "n": "!",
+          "head": "상대값",
+          "body": "전체 최댓값 100 기준 · 실제 검색 수 아님"
+        }
+      ]
+    },
+    {
+      "id": "a4-datalab-10",
+      "template": "compare",
+      "title": "2025년 GPT 스파이크",
+      "left": {
+        "label": "스파이크 질문",
+        "screen": {
+          "kind": "vscode",
+          "folder": "api-class",
+          "files": [],
+          "noSidebar": true,
+          "terminal": {
+            "vendor": "claude",
+            "cwd": "C:\\api-class",
+            "turns": [
+              {
+                "role": "user",
+                "text": "2025년 지피티가 스파이크가 튄 이유가 뭐야?"
+              },
+              {
+                "role": "tool",
+                "text": "Bash(datalab.py compare -g \"챗GPT:챗GPT,챗지피티,chatgpt\" … -g \"지브리:지브리,ghibli,지브리 프로필\" --unit week)"
+              },
+              {
+                "role": "tool",
+                "text": "Web Search(ChatGPT 지브리 스타일 이미지 생성 열풍 2025년 3월 GPT-4o 이미지 생성)"
+              },
+              {
+                "role": "assistant",
+                "text": "2025년 3월 말~4월 초에 GPT 검색이 튄 이유는 GPT-4o 이미지 생성 기능이 출시되면서 \"지브리 스타일 프로필\" 열풍이 불었기 때문으로 보입니다.",
+                "badge": 1
+              }
+            ],
+            "fit": true
+          }
+        }
+      },
+      "right": {
+        "label": "주 단위 · 챗GPT와 지브리",
+        "screen": {
+          "kind": "shot",
+          "src": "/shots/a4/a4-datalab-gpt-spike.png",
+          "badges": [
+            {
+              "n": 2,
+              "x": 65.5,
+              "y": 11
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "지브리 스타일 프로필",
+          "body": "3월 25일 GPT-4o 이미지 생성 출시 · 뉴스 검색으로 원인 확인"
+        },
+        {
+          "n": 2,
+          "head": "주 단위로 다시 조회",
+          "body": "3월 31일 주 챗GPT 100 · 지브리 11.2"
+        },
+        {
+          "n": "!",
+          "head": "그래프 보고 바로 질문",
+          "body": "같은 대화에서 급등 구간 이유 묻기"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "2025년 지피티가 스파이크가 튄 이유가 뭐야?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-datalab-11",
+      "template": "screen",
+      "title": "겨울 상품 9개 · 쇼핑인사이트",
+      "screen": {
+        "kind": "vscode",
+        "folder": "api-class",
+        "files": [],
+        "noSidebar": true,
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\api-class",
+          "turns": [
+            {
+              "role": "user",
+              "text": "겨울철 판매할 상품 기획중인데 제품 9개정도 쇼핑인사이트 스킬로 최근 3년간의 통계 그래프 이미지로 만들어줘",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Skill(naver-shopping)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(python .claude/skills/naver-shopping/scripts/shopping.py keywords --category 50000000 -k 패딩 -k 코트 -k 니트 -k 후리스 -k 목폴라 -k 무스탕 -k 기모바지 -k 내복 -k 롱패딩 --anchor 코트 --start 2023-11-01 --end 2026-10-27 --unit month)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "⎿ call 1: anchor + ['패딩', '니트', '후리스', '목폴라'] (scale x1.000)"
+            },
+            {
+              "role": "assistant",
+              "text": "⎿ call 2: anchor + ['무스탕', '기모바지', '내복', '롱패딩'] (scale x0.981)"
+            },
+            {
+              "role": "assistant",
+              "text": "앵커는 코트로, 4-1-4 방식으로 두 번에 나눠 호출했습니다. 환산 계수는 ×0.981이라 병합 오차는 작습니다.",
+              "badge": 3
+            }
+          ],
+          "fit": true
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "겨울 상품 9개 요청",
+          "body": "naver-shopping 스킬 · 최근 3년"
+        },
+        {
+          "n": 2,
+          "head": "패션의류 키워드 9개",
+          "body": "패딩 · 롱패딩 · 코트 · 무스탕 · 니트 · 후리스 · 기모바지 · 목폴라 · 내복"
+        },
+        {
+          "n": 3,
+          "head": "4-1-4 두 번 호출",
+          "body": "앵커 코트 + 4개씩 · 환산 계수 ×0.981"
+        },
+        {
+          "n": "!",
+          "head": "한 분야 안에서만 비교",
+          "body": "핫팩 · 전기장판 같은 다른 분야는 따로 실행"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "겨울철 판매할 상품 기획중인데 제품 9개정도 쇼핑인사이트 스킬로 최근 3년간의 통계 그래프 이미지로 만들어줘"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4-datalab-12",
+      "template": "screen",
+      "title": "3년 쇼핑 통계 · 계절 물결",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/a4/a4-datalab-winter-3y.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 14.5,
+            "y": 10
+          },
+          {
+            "n": 1,
+            "x": 42,
+            "y": 39
+          },
+          {
+            "n": 1,
+            "x": 68.6,
+            "y": 60
+          },
+          {
+            "n": 2,
+            "x": 54,
+            "y": 76
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "11~1월 정점",
+          "body": "9개 모두 겨울에 오르고 여름에 0 근처"
+        },
+        {
+          "n": 2,
+          "head": "해마다 반복되는 물결",
+          "body": "계절 상품의 파동 모양 · 출시 시점 잡기"
+        },
+        {
+          "n": "!",
+          "head": "상대값 주의",
+          "body": "해마다 낮아지는 정점은 다른 자료로 교차 확인"
+        }
+      ]
+    }
+  ]
+}

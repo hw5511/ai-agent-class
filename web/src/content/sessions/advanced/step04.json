@@ -2,22 +2,24 @@
   "step": 4,
   "title": "외부 API로 AI 기능 확장하기",
   "hours": "2시간",
-  "goal": "API와 API 키를 이해하고, Playwright MCP로 네이버 데이터랩과 타입캐스트 키를 저장한 뒤 CLI 스킬로 음성과 자막 쇼츠 제작",
+  "goal": "API와 API 키를 이해하고, Playwright MCP로 네이버 데이터랩과 타입캐스트 키를 저장한 뒤 CLI 스킬로 그래프와 쇼츠를 만들고, 공공데이터포털 · OpenDART 키로 사업자번호 조회 웹서비스 제작",
   "topics": [
     "API 란",
     "API 를 알아야 하는 이유",
     "API 키 발급",
     "네이버 데이터랩 API 발급",
+    "데이터랩 · 쇼핑인사이트 스킬",
     "타입캐스트 TTS API",
-    "public-apis-4Kr"
+    "사업자번호 조회 사이트"
   ],
-  "practice": "네이버 데이터랩과 쇼핑인사이트 키를 .claude/skills/.env에 저장하고, 타입캐스트 키로 typecast-tts 스킬과 필재 쇼츠 목업 제작",
+  "practice": "네이버 데이터랩과 쇼핑인사이트 키를 .claude/skills/.env에 저장해 naver-datalab · naver-shopping 스킬로 트렌드 그래프를 만들고, 타입캐스트 키로 typecast-tts 스킬과 필재 쇼츠 목업 제작, 공공데이터포털 · OpenDART 키로 사업자번호 조회 사이트 제작",
   "parts": [
     "a4-api",
     "a4-why",
     "a4-key",
     "a4-naver",
+    "a4-datalab",
     "a4-typecast",
-    "a4-legacy-public-apis"
+    "a4-direct"
   ]
 }
