@@ -1,0 +1,236 @@
+{
+  "id": "au2-http",
+  "title": "서버 통신 프로토콜",
+  "summary": "브라우저와 서버가 요청과 응답으로 말을 주고받는 방식을 비품 신청 예제로 보고, 메서드와 상태 코드의 뜻을 익힌다.",
+  "slides": [
+    {
+      "id": "au2-http-01",
+      "template": "illustration",
+      "title": "요청과 응답",
+      "illustration": "/illustrations/au2-http-reqres.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "요청 보내기",
+          "body": "신청 버튼을 누르면 브라우저가 서버 주소로 POST 요청을 보냅니다. 이름, 품목, 수량이 JSON 이라는 형식의 본문에 담겨 함께 갑니다."
+        },
+        {
+          "n": 2,
+          "head": "서버가 처리",
+          "body": "Cloudflare 에 올려 둔 Worker, supply-api 가 요청을 받아 내용을 읽고 신청을 저장합니다. 이 서버는 요청이 올 때만 일합니다."
+        },
+        {
+          "n": 3,
+          "head": "응답 돌려주기",
+          "body": "서버는 201 Created 와 방금 만든 신청 번호가 담긴 JSON 을 돌려줍니다. 페이지는 이 응답을 받고 나서 목록을 새로 그립니다."
+        },
+        {
+          "n": "!",
+          "head": "요청 한 번에 응답 한 번",
+          "body": "브라우저가 먼저 말을 걸어야 서버가 답합니다. 서버가 먼저 브라우저에 말을 거는 일은 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "au2-http-02",
+      "template": "illustration",
+      "title": "요청과 응답의 구성",
+      "illustration": "/illustrations/au2-http-anatomy.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "메서드와 주소",
+          "body": "첫 줄에는 무엇을 하려는지(POST)와 어디에 하려는지(/api/requests)가 적힙니다. 뒤의 HTTP/1.1 은 쓰는 규격의 버전입니다."
+        },
+        {
+          "n": 2,
+          "head": "헤더",
+          "body": "요청과 응답에 붙는 부가 정보입니다. Host 는 어느 서버로 가는 요청인지, Content-Type 은 본문이 JSON 이라는 것을 알려 줍니다."
+        },
+        {
+          "n": 3,
+          "head": "본문",
+          "body": "실제로 주고받는 내용입니다. 요청에는 신청할 이름, 품목, 수량이 들어 있고, 응답에는 저장된 신청이 번호 12 와 함께 돌아옵니다."
+        },
+        {
+          "n": 4,
+          "head": "상태 코드",
+          "body": "응답 첫 줄의 숫자가 요청이 어떻게 됐는지 알려 줍니다. 201 은 새로 만들어졌다는 뜻이고, 앞자리가 2 면 성공, 4 면 요청 쪽 문제, 5 면 서버 쪽 문제입니다."
+        }
+      ]
+    },
+    {
+      "id": "au2-http-03",
+      "template": "table",
+      "title": "메서드",
+      "columns": [
+        "메서드",
+        "하는 일",
+        "비품 신청 예",
+        "DB 작업"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "GET",
+            "조회",
+            "GET /api/requests",
+            "SELECT"
+          ]
+        },
+        {
+          "cells": [
+            "POST",
+            "등록",
+            "POST /api/requests",
+            "INSERT"
+          ],
+          "highlight": true
+        },
+        {
+          "cells": [
+            "PATCH",
+            "수정",
+            "PATCH /api/requests/12",
+            "UPDATE"
+          ]
+        },
+        {
+          "cells": [
+            "DELETE",
+            "삭제",
+            "DELETE /api/requests/12",
+            "DELETE"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": "!",
+          "head": "메서드는 하려는 일",
+          "body": "주소가 같아도 GET 은 목록을 가져오고 POST 는 새 신청을 넣습니다. 서버는 메서드를 보고 할 일을 정합니다."
+        },
+        {
+          "n": "!",
+          "head": "DB 작업과 짝",
+          "body": "서버 안에서는 메서드가 DB 작업으로 이어집니다. 조회는 SELECT, 등록은 INSERT, 수정은 UPDATE, 삭제는 DELETE 입니다."
+        },
+        {
+          "n": "!",
+          "head": "끝에 붙는 번호",
+          "body": "PATCH 와 DELETE 는 /api/requests/12 처럼 주소 끝에 신청 번호를 붙입니다. 어느 신청인지 가리키는 번호입니다."
+        }
+      ]
+    },
+    {
+      "id": "au2-http-04",
+      "template": "cards",
+      "title": "상태 코드",
+      "cards": [
+        {
+          "label": "200 · 201",
+          "tags": [
+            "OK, Created",
+            "성공"
+          ],
+          "badge": 1,
+          "highlight": true
+        },
+        {
+          "label": "400",
+          "tags": [
+            "Bad Request",
+            "요청이 잘못됨"
+          ],
+          "badge": 2
+        },
+        {
+          "label": "404",
+          "tags": [
+            "Not Found",
+            "주소 없음"
+          ],
+          "badge": 3
+        },
+        {
+          "label": "500",
+          "tags": [
+            "Internal Server Error",
+            "서버 오류"
+          ],
+          "badge": 4
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "200, 201 성공",
+          "body": "페이지를 열어 목록을 불러올 때는 200, 신청 버튼으로 새 건을 넣을 때는 201 이 돌아옵니다. 둘 다 정상이라 화면에는 따로 나타나지 않습니다."
+        },
+        {
+          "n": 2,
+          "head": "400 요청이 잘못됨",
+          "body": "이름이나 품목을 비워 둔 채 신청을 누르면 서버가 400 으로 돌려보냅니다. 빈 칸을 채워 다시 누르면 됩니다."
+        },
+        {
+          "n": 3,
+          "head": "404 주소 없음",
+          "body": "주소를 잘못 적었을 때 나옵니다. /api/request 처럼 s 를 빠뜨렸거나, 이미 지운 신청 번호를 다시 고치려 할 때 만납니다."
+        },
+        {
+          "n": 4,
+          "head": "500 서버 오류",
+          "body": "요청은 맞는데 서버가 처리하다 실패한 경우입니다. 고칠 곳은 브라우저가 아니라 Worker 코드나 DB 연결입니다."
+        }
+      ]
+    },
+    {
+      "id": "au2-http-05",
+      "template": "compare",
+      "title": "JSON API 와 화면",
+      "left": {
+        "label": "서버가 주는 JSON",
+        "screen": {
+          "kind": "browser",
+          "url": "https://supply-api.student01.workers.dev/api/requests",
+          "page": {
+            "heading": "",
+            "lines": [
+              "[",
+              "{\"id\":12,\"name\":\"김누리\",\"item\":\"A4 용지\",\"qty\":2},",
+              "{\"id\":11,\"name\":\"최유진\",\"item\":\"토너\",\"qty\":1}",
+              "]"
+            ]
+          }
+        }
+      },
+      "right": {
+        "label": "페이지가 그린 화면",
+        "screen": {
+          "kind": "browser",
+          "url": "https://student01.github.io/supply-board/",
+          "page": {
+            "heading": "비품 신청",
+            "lines": [
+              "12 · 김누리 · A4 용지 · 2",
+              "11 · 최유진 · 토너 · 1"
+            ],
+            "button": "신청"
+          }
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "주소창에 열면 JSON 글자",
+          "body": "API 주소를 브라우저 주소창에 직접 열면 꾸밈 없는 JSON 글자만 보입니다. 프로그램이 읽기 좋은 모양입니다."
+        },
+        {
+          "n": 2,
+          "head": "페이지가 행으로 그림",
+          "body": "비품 신청 페이지는 같은 JSON 을 받아서 행으로 그려 줍니다. 같은 데이터가 두 가지 모습으로 보이는 것입니다."
+        }
+      ]
+    }
+  ]
+}

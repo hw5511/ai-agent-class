@@ -1,0 +1,222 @@
+{
+  "id": "au2-db",
+  "title": "서버와 DB 연결",
+  "summary": "Worker 가 바인딩으로 D1 데이터베이스에 연결되는 모습과 SQL 로 신청을 저장하고 꺼내는 흐름을 비품 신청 예제로 익힌다.",
+  "slides": [
+    {
+      "id": "au2-db-01",
+      "template": "illustration",
+      "title": "Worker 와 D1 바인딩",
+      "illustration": "/illustrations/au2-db-binding.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "바인딩 설정",
+          "body": "wrangler.jsonc 파일에 DB 라는 이름을 supply-db 데이터베이스에 연결해 둡니다. 이 설정을 올리면 Worker 가 그 데이터베이스를 쓸 수 있게 됩니다."
+        },
+        {
+          "n": 2,
+          "head": "코드의 env.DB",
+          "body": "Worker 코드에서는 env.DB 라는 이름으로 데이터베이스를 부릅니다. 접속 주소나 비밀번호 없이 이 이름만 쓰면 됩니다."
+        },
+        {
+          "n": 3,
+          "head": "SQL 과 결과 행",
+          "body": "코드가 SQL 문장을 env.DB 로 보내면 D1 이 실행하고, 조건에 맞는 행을 돌려줍니다. 신청 목록은 SELECT, 새 신청은 INSERT 로 처리합니다."
+        },
+        {
+          "n": "!",
+          "head": "코드에 DB 비밀번호가 없음",
+          "body": "바인딩이 Worker 와 데이터베이스를 이어 주기 때문에 접속 정보를 코드에 적지 않습니다. 코드를 올려도 접속 정보가 새어 나갈 일이 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "au2-db-02",
+      "template": "table",
+      "title": "requests 테이블",
+      "columns": [
+        "id",
+        "name",
+        "item",
+        "qty",
+        "status",
+        "created_at"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "9",
+            "박서연",
+            "볼펜",
+            "10",
+            "승인",
+            "2026-10-28 14:20:11"
+          ]
+        },
+        {
+          "cells": [
+            "10",
+            "이도윤",
+            "모니터 받침대",
+            "1",
+            "신청",
+            "2026-10-29 09:05:43"
+          ]
+        },
+        {
+          "cells": [
+            "11",
+            "최유진",
+            "토너",
+            "1",
+            "승인",
+            "2026-10-29 16:42:08"
+          ]
+        },
+        {
+          "cells": [
+            "12",
+            "김누리",
+            "A4 용지",
+            "2",
+            "신청",
+            "2026-10-30 10:15:32"
+          ],
+          "highlight": true
+        }
+      ],
+      "notes": [
+        {
+          "n": "!",
+          "head": "열은 항목",
+          "body": "세로 칸이 항목입니다. id, name, item, qty, status, created_at 여섯 가지를 적어 둡니다."
+        },
+        {
+          "n": "!",
+          "head": "행은 신청 한 건",
+          "body": "가로 한 줄이 신청 한 건입니다. 표시된 12번 줄이 방금 김누리 님이 넣은 신청입니다."
+        },
+        {
+          "n": "!",
+          "head": "번호와 시각은 DB 가 채움",
+          "body": "INSERT 문에는 name, item, qty 만 적습니다. 번호와 접수 시각, 처음 상태는 DB 가 알아서 넣습니다."
+        }
+      ]
+    },
+    {
+      "id": "au2-db-03",
+      "template": "flow",
+      "title": "신청 한 건의 길",
+      "steps": [
+        {
+          "label": "신청 버튼",
+          "sub": "브라우저 페이지"
+        },
+        {
+          "label": "POST 요청",
+          "sub": "주소와 JSON 본문",
+          "badge": 1
+        },
+        {
+          "label": "Worker",
+          "sub": "supply-api",
+          "badge": 2
+        },
+        {
+          "label": "INSERT",
+          "sub": "D1 supply-db",
+          "badge": 3
+        },
+        {
+          "label": "201 응답",
+          "sub": "새 신청 번호",
+          "badge": 4
+        },
+        {
+          "label": "다시 그리기",
+          "sub": "GET 으로 새 목록"
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "POST 요청 전송",
+          "body": "신청 버튼을 누르면 브라우저가 /api/requests 로 POST 요청을 보냅니다. 입력한 이름, 품목, 수량이 JSON 본문에 담깁니다."
+        },
+        {
+          "n": 2,
+          "head": "Worker 가 받음",
+          "body": "supply-api Worker 가 요청을 받아 본문을 읽고, 빈 칸이 없는지 확인합니다."
+        },
+        {
+          "n": 3,
+          "head": "INSERT 로 저장",
+          "body": "env.DB 로 supply-db 의 requests 표에 한 행을 넣습니다. 번호와 접수 시각은 DB 가 채웁니다."
+        },
+        {
+          "n": 4,
+          "head": "201 응답",
+          "body": "저장이 끝나면 201 Created 와 새 신청 번호가 담긴 JSON 이 돌아옵니다. 이 응답을 받은 페이지가 목록을 다시 불러와 그립니다."
+        }
+      ]
+    },
+    {
+      "id": "au2-db-04",
+      "template": "screen",
+      "title": "Claude 에게 DB 묻기",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\auto02\\supply-api",
+          "turns": [
+            {
+              "role": "user",
+              "text": "supply-db 에 들어온 신청을 품목별로 몇 건인지 보여 줘.",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(npx wrangler d1 execute supply-db --remote --command \"SELECT item, COUNT(*) AS n FROM requests GROUP BY item\")",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "품목별 신청 건수입니다.\n- A4 용지 5건\n- 볼펜 3건\n- 토너 2건\n- 모니터 받침대 2건\n모두 12건이 들어와 있습니다.",
+              "badge": 3,
+              "pre": true
+            }
+          ]
+        }
+      },
+      "replaceWithCapture": "실제 wrangler d1 execute 실행 결과 캡처 (품목별 건수)",
+      "notes": [
+        {
+          "n": 1,
+          "head": "DB 에 묻는 프롬프트",
+          "body": "평소 말하듯 물으면 됩니다. 품목별 건수처럼 DB 에서 세어 와야 하는 질문이라는 것을 Claude 가 알아듣습니다."
+        },
+        {
+          "n": 2,
+          "head": "SQL 을 만들어 실행",
+          "body": "Claude 가 SELECT 문을 직접 만들어 wrangler 명령으로 실행합니다. 끝의 --remote 는 내 컴퓨터가 아니라 Cloudflare 에 있는 진짜 DB 에 묻는다는 뜻입니다."
+        },
+        {
+          "n": 3,
+          "head": "결과를 말로 정리",
+          "body": "DB 가 돌려준 행을 Claude 가 읽기 쉽게 정리해 알려 줍니다. 숫자가 의심스러우면 같은 명령을 다시 실행해 확인할 수 있습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "supply-db 에 들어온 신청을 품목별로 몇 건인지 보여 줘."
+          }
+        ]
+      }
+    }
+  ]
+}

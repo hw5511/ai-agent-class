@@ -140,7 +140,7 @@ function TerminalBody({ t, className, convRef, listRef, spacerRef }: { t: Termin
                     )}>
                       {own && !cont ? <span className="shrink-0">{/^\s*●/.test(turn.text) ? "●" : ""}</span> : null}
                       {!own ? <span className="shrink-0">{turn.role === "user" ? ">" : "●"}</span> : null}
-                      <span className={cn("break-keep [overflow-wrap:anywhere]", turn.role === "tool" && "font-bold", own && /^\s*[✻✶※]/.test(turn.text) && "text-[#767c81]")}><Marked text={text} mark={turn.mark} /></span>
+                      <span className={cn("break-keep [overflow-wrap:anywhere]", turn.pre && "whitespace-pre-line", turn.role === "tool" && "font-bold", own && /^\s*[✻✶※]/.test(turn.text) && "text-[#767c81]")}><Marked text={text} mark={turn.mark} /></span>
                     </span>
                   )
                 })()

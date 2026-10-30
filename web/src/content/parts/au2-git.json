@@ -1,0 +1,515 @@
+{
+  "id": "au2-git",
+  "title": "GitHub 버전 관리",
+  "summary": "폴더의 변경을 커밋으로 저장해 GitHub 에 올리고, 히스토리에서 이전 상태로 되돌리는 흐름을 익힌다. git 명령은 Claude Code 에게 부탁해서 실행한다.",
+  "slides": [
+    {
+      "id": "au2-git-01",
+      "template": "illustration",
+      "title": "버전 관리",
+      "illustration": "/illustrations/au2-git-savepoints.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "커밋은 폴더의 저장 지점",
+          "body": "커밋은 폴더의 지금 모습에 이름을 붙여 저장해 두는 일입니다. 나중에 그 시점의 파일을 다시 꺼내 볼 수 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "푸시는 GitHub 로 올리기",
+          "body": "푸시는 저장해 둔 커밋을 인터넷의 GitHub 저장소로 올리는 일입니다. 내 컴퓨터에 문제가 생겨도 GitHub 에는 그대로 남습니다."
+        },
+        {
+          "n": 3,
+          "head": "히스토리는 커밋 목록",
+          "body": "커밋이 쌓인 목록이 히스토리입니다. 고친 것이 마음에 들지 않으면 이 목록에서 고르는 것만으로 이전 상태로 돌아갈 수 있습니다."
+        },
+        {
+          "n": "!",
+          "head": "명령은 Claude 에게 부탁",
+          "body": "git 명령을 직접 외울 필요는 없습니다. 지금까지처럼 한국어로 부탁하면 Claude Code 가 대신 실행합니다."
+        }
+      ]
+    },
+    {
+      "id": "au2-git-02",
+      "template": "screen",
+      "title": "gh CLI 설치와 로그인",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\auto02\\supply-board",
+          "turns": [
+            {
+              "role": "user",
+              "text": "GitHub CLI(gh) 가 깔려 있는지 확인하고, 없으면 설치한 다음 gh auth login 으로 GitHub 로그인까지 도와줘.",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(gh --version)"
+            },
+            {
+              "role": "assistant",
+              "text": "gh 가 아직 없어서 설치합니다."
+            },
+            {
+              "role": "tool",
+              "text": "Bash(winget install --id GitHub.cli)",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "Bash(gh auth login --hostname github.com --git-protocol https --web)"
+            },
+            {
+              "role": "assistant",
+              "text": "브라우저에서 github.com/login/device 가 열렸습니다.\n화면의 입력칸에 코드 A1B2-C3D4 를 넣고 승인해 주세요.",
+              "badge": 3,
+              "pre": true
+            },
+            {
+              "role": "user",
+              "text": "승인했어"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(gh auth status)"
+            },
+            {
+              "role": "assistant",
+              "text": "로그인이 끝났습니다.\n✓ Logged in to github.com account student01",
+              "badge": 4,
+              "pre": true
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "확인, 설치, 로그인을 함께 부탁",
+          "body": "gh 가 이미 있으면 설치는 건너뛰고 로그인만 합니다. 로그인에는 GitHub 계정이 필요하니, 없다면 github.com 에서 먼저 가입해 두세요."
+        },
+        {
+          "n": 2,
+          "head": "gh 가 없으면 winget 으로 설치",
+          "body": "Claude 가 gh 가 있는지 확인하고, 없으면 윈도우의 설치 도구인 winget 으로 설치합니다. 설치 중 허용 여부를 물으면 허용해 주세요."
+        },
+        {
+          "n": 3,
+          "head": "코드는 브라우저에서 직접 입력",
+          "body": "나오는 8자리 코드를 열린 브라우저 창에 직접 입력하고 승인하는 단계만은 내가 해야 합니다. 승인한 뒤 Claude 에게 승인했다고 알려 주세요."
+        },
+        {
+          "n": 4,
+          "head": "Logged in 문구 확인",
+          "body": "Logged in to github.com account 뒤에 내 GitHub 아이디가 보이면 로그인이 끝난 것입니다. 이 로그인은 한 번만 하면 됩니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "GitHub CLI(gh) 가 깔려 있는지 확인하고, 없으면 설치한 다음 gh auth login 으로 GitHub 로그인까지 도와줘."
+          }
+        ]
+      }
+    },
+    {
+      "id": "au2-git-03",
+      "template": "screen",
+      "title": "비품 신청 페이지 만들기",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\auto02\\supply-board",
+          "turns": [
+            {
+              "role": "user",
+              "text": "C:\\auto02\\supply-board 폴더에 비품 신청 페이지를 index.html 로 만들어 줘. 이름, 품목, 수량을 적는 입력칸과 신청 버튼이 있고, 그 아래에 신청 목록 표가 있어야 해. 아직 서버는 없으니 화면만 만들어 줘.",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Write(index.html)",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "index.html 을 만들었습니다.\n- 이름, 품목, 수량 입력칸과 신청 버튼\n- 그 아래 신청 목록 표 (지금은 비어 있음)\n서버가 없어서 버튼을 눌러도 저장되지는 않는 화면만 만든 상태입니다.",
+              "badge": 3,
+              "pre": true
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "필요한 칸을 구체적으로 말하기",
+          "body": "입력칸 이름과 버튼, 표가 어디에 놓일지를 말해 두면 원하는 모양에 가깝게 나옵니다. 서버가 아직 없다는 말도 함께 적어 두세요."
+        },
+        {
+          "n": 2,
+          "head": "Write 로 파일 생성",
+          "body": "Claude 가 작업 폴더에 index.html 파일을 새로 만듭니다. 폴더를 열어 보면 파일이 하나 생겨 있습니다."
+        },
+        {
+          "n": 3,
+          "head": "화면만 만든 상태",
+          "body": "이 단계에서는 신청 내용이 저장되지 않습니다. 탐색기에서 index.html 을 더블클릭하면 브라우저에서 바로 열어 볼 수 있습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "C:\\auto02\\supply-board 폴더에 비품 신청 페이지를 index.html 로 만들어 줘. 이름, 품목, 수량을 적는 입력칸과 신청 버튼이 있고, 그 아래에 신청 목록 표가 있어야 해. 아직 서버는 없으니 화면만 만들어 줘."
+          }
+        ]
+      }
+    },
+    {
+      "id": "au2-git-04",
+      "template": "screen",
+      "title": "저장소 만들기와 첫 커밋",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\auto02\\supply-board",
+          "turns": [
+            {
+              "role": "user",
+              "text": "이 폴더를 git 저장소로 만들고, README.md 에 이 페이지 설명을 간단히 적어서 첫 커밋을 한 다음, GitHub 에 supply-board 공개 저장소를 만들어서 올려 줘.",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Write(README.md)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(git init)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(git add .)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(git commit -m \"비품 신청 페이지 첫 버전\")",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "Bash(gh repo create supply-board --public --source=. --push)",
+              "badge": 3
+            },
+            {
+              "role": "assistant",
+              "text": "첫 커밋을 하고 GitHub 에 올렸습니다.\nhttps://github.com/student01/supply-board",
+              "badge": 4,
+              "pre": true
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "저장소 만들기부터 업로드까지 한 번에",
+          "body": "폴더를 저장소로 만들고, 첫 커밋을 하고, GitHub 에 올리는 일을 하나의 부탁으로 끝냅니다. README.md 는 저장소 첫 화면에 보이는 설명 파일이고, 공개 저장소라고 말해 두어야 누구나 볼 수 있게 만들어집니다."
+        },
+        {
+          "n": 2,
+          "head": "커밋 메시지는 따옴표 안의 문장",
+          "body": "git commit 뒤 따옴표 안의 문장이 이 저장 지점의 이름입니다. 나중에 히스토리에서 이 문장으로 어떤 버전인지 알아봅니다."
+        },
+        {
+          "n": 3,
+          "head": "저장소를 만들고 곧바로 푸시",
+          "body": "gh 가 student01 계정 아래에 supply-board 저장소를 만들고 방금 커밋한 내용을 올립니다. 로그인이 되어 있어야 이 단계가 됩니다."
+        },
+        {
+          "n": 4,
+          "head": "저장소 주소 확인",
+          "body": "마지막 줄의 github.com/student01/supply-board 가 내 저장소 주소입니다. 이 주소를 브라우저에 붙여 넣으면 열립니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "이 폴더를 git 저장소로 만들고, README.md 에 이 페이지 설명을 간단히 적어서 첫 커밋을 한 다음, GitHub 에 supply-board 공개 저장소를 만들어서 올려 줘."
+          }
+        ]
+      }
+    },
+    {
+      "id": "au2-git-05",
+      "template": "screen",
+      "title": "GitHub 저장소 화면",
+      "screen": {
+        "kind": "web",
+        "url": "github.com/student01/supply-board",
+        "tabs": [
+          {
+            "title": "student01/supply-board",
+            "icon": "github",
+            "active": true
+          }
+        ],
+        "page": {
+          "type": "github-repo",
+          "loggedIn": true,
+          "owner": "student01",
+          "name": "supply-board",
+          "nameBadge": 1,
+          "forks": "0",
+          "stars": "0",
+          "tabs": [
+            {
+              "label": "Code",
+              "active": true
+            },
+            {
+              "label": "Issues"
+            },
+            {
+              "label": "Pull requests"
+            },
+            {
+              "label": "Actions"
+            },
+            {
+              "label": "Projects"
+            },
+            {
+              "label": "Security"
+            },
+            {
+              "label": "Insights"
+            },
+            {
+              "label": "Settings"
+            }
+          ],
+          "branch": "main",
+          "branchesCount": 1,
+          "tagsCount": 0,
+          "lastCommit": {
+            "author": "student01",
+            "message": "비품 신청 페이지 첫 버전",
+            "sha": "3f9a1d2",
+            "when": "now",
+            "badge": 2
+          },
+          "files": [
+            {
+              "name": "index.html",
+              "message": "비품 신청 페이지 첫 버전",
+              "when": "now",
+              "badge": 3
+            },
+            {
+              "name": "README.md",
+              "message": "비품 신청 페이지 첫 버전",
+              "when": "now"
+            }
+          ],
+          "about": {
+            "topics": [],
+            "stars": "0",
+            "watching": "1",
+            "forks": "0"
+          },
+          "readme": {
+            "heading": "supply-board",
+            "lines": [
+              "팀 비품 신청 페이지",
+              "이름, 품목, 수량을 적어 신청하고 아래 표에서 신청 목록을 봅니다."
+            ]
+          },
+          "zoom": 1.2
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "student01 / supply-board",
+          "body": "주소와 같은 이름의 저장소가 내 계정 아래에 새로 생겼습니다. 앞의 student01 자리에는 수강생 각자의 GitHub 아이디가 보입니다."
+        },
+        {
+          "n": 2,
+          "head": "마지막 커밋",
+          "body": "방금 남긴 커밋 메시지와 짧은 커밋 번호가 가장 위에 보입니다. 커밋을 새로 올릴 때마다 이 줄이 바뀝니다."
+        },
+        {
+          "n": 3,
+          "head": "올라온 파일 index.html",
+          "body": "내 컴퓨터의 작업 폴더에 있던 index.html 이 그대로 올라와 있습니다. 파일 옆에는 그 파일을 마지막으로 바꾼 커밋 메시지가 함께 나옵니다."
+        }
+      ]
+    },
+    {
+      "id": "au2-git-06",
+      "template": "screen",
+      "title": "고치고 다시 올리기",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\auto02\\supply-board",
+          "turns": [
+            {
+              "role": "user",
+              "text": "신청 버튼 색을 초록색으로 바꾸고, 무엇을 바꿨는지 알 수 있는 메시지로 커밋한 다음 GitHub 에 올려 줘.",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Edit(index.html)",
+              "badge": 2
+            },
+            {
+              "role": "tool",
+              "text": "Bash(git add index.html)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(git commit -m \"신청 버튼을 초록색으로 변경\")",
+              "badge": 3
+            },
+            {
+              "role": "tool",
+              "text": "Bash(git push)",
+              "badge": 4
+            },
+            {
+              "role": "assistant",
+              "text": "신청 버튼을 초록색으로 바꾸고 GitHub 에 올렸습니다.\n커밋 b82f4c7 신청 버튼을 초록색으로 변경",
+              "pre": true
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "바꿀 것과 메시지 기준 말하기",
+          "body": "무엇을 바꿀지와 함께 어떤 메시지로 커밋할지도 부탁합니다. 메시지에 바꾼 내용이 들어 있어야 나중에 히스토리에서 알아볼 수 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "Edit 로 파일의 일부만 수정",
+          "body": "Claude 가 index.html 에서 버튼 색에 해당하는 부분만 고칩니다. 파일을 처음부터 다시 쓰지 않습니다."
+        },
+        {
+          "n": 3,
+          "head": "무엇을 바꿨는지 적은 커밋",
+          "body": "'신청 버튼을 초록색으로 변경'처럼 바뀐 내용을 그대로 적은 메시지가 남습니다. 수정할 때마다 커밋을 하나씩 남기는 것이 버전 관리의 기본입니다."
+        },
+        {
+          "n": 4,
+          "head": "푸시해야 GitHub 에 반영",
+          "body": "커밋만 하면 내 컴퓨터에만 저장됩니다. git push 까지 해야 GitHub 저장소에도 같은 내용이 올라갑니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "신청 버튼 색을 초록색으로 바꾸고, 무엇을 바꿨는지 알 수 있는 메시지로 커밋한 다음 GitHub 에 올려 줘."
+          }
+        ]
+      }
+    },
+    {
+      "id": "au2-git-07",
+      "template": "screen",
+      "title": "히스토리와 되돌리기",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\auto02\\supply-board",
+          "turns": [
+            {
+              "role": "user",
+              "text": "커밋 히스토리를 보여 주고, 방금 바꾼 신청 버튼 색을 되돌려 줘. 되돌린 뒤에는 히스토리를 다시 보여 줘.",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(git log --oneline)"
+            },
+            {
+              "role": "assistant",
+              "text": "지금까지 커밋은 두 개입니다.\nb82f4c7 신청 버튼을 초록색으로 변경\n3f9a1d2 비품 신청 페이지 첫 버전\n위의 b82f4c7 이 버튼 색을 바꾼 커밋이라서 이것을 되돌리겠습니다.",
+              "badge": 2,
+              "pre": true
+            },
+            {
+              "role": "tool",
+              "text": "Bash(git revert --no-edit b82f4c7)",
+              "badge": 3
+            },
+            {
+              "role": "tool",
+              "text": "Bash(git push)"
+            },
+            {
+              "role": "tool",
+              "text": "Bash(git log --oneline)"
+            },
+            {
+              "role": "assistant",
+              "text": "버튼 색을 되돌려서 GitHub 에도 올렸습니다.\n5d1c9ae Revert \"신청 버튼을 초록색으로 변경\"\nb82f4c7 신청 버튼을 초록색으로 변경\n3f9a1d2 비품 신청 페이지 첫 버전\n기록을 지운 것이 아니라 되돌리는 커밋이 하나 더 생겼습니다.",
+              "badge": 4,
+              "pre": true
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "히스토리 보기와 되돌리기를 말로 부탁",
+          "body": "어느 커밋을 되돌릴지 몰라도 괜찮습니다. 방금 바꾼 것이라고만 말하면 Claude 가 히스토리를 보고 해당 커밋을 찾습니다."
+        },
+        {
+          "n": 2,
+          "head": "한 줄이 커밋 하나",
+          "body": "git log 는 커밋을 최신순으로 한 줄씩 보여 줍니다. 앞의 7자리 b82f4c7 이 그 커밋의 번호이고, 뒤는 커밋 메시지입니다."
+        },
+        {
+          "n": 3,
+          "head": "revert 는 그 커밋만 거꾸로",
+          "body": "git revert 는 지정한 커밋에서 바뀐 내용만 반대로 돌려놓습니다. 되돌린 결과도 git push 로 올려야 GitHub 에 반영됩니다."
+        },
+        {
+          "n": 4,
+          "head": "되돌리기도 새 커밋",
+          "body": "맨 위의 Revert 커밋이 새로 생기고 이전 커밋 두 개는 그대로 남습니다. 기록을 지우지 않기 때문에 마음이 바뀌면 되돌린 것을 다시 되돌릴 수도 있습니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "커밋 히스토리를 보여 주고, 방금 바꾼 신청 버튼 색을 되돌려 줘. 되돌린 뒤에는 히스토리를 다시 보여 줘."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "id": "au2-pages",
+  "title": "프론트 페이지 배포",
+  "summary": "GitHub Pages 로 비품 신청 페이지를 인터넷 주소에 올리고, 고친 뒤 다시 배포하는 흐름을 익힌다.",
+  "slides": [
+    {
+      "id": "au2-pages-01",
+      "template": "flow",
+      "title": "GitHub Pages 배포",
+      "steps": [
+        {
+          "label": "내 폴더",
+          "sub": "index.html"
+        },
+        {
+          "label": "푸시",
+          "sub": "git push",
+          "badge": 1
+        },
+        {
+          "label": "GitHub 저장소",
+          "sub": "supply-board",
+          "logo": "/logos/github.svg",
+          "badge": 2
+        },
+        {
+          "label": "Pages",
+          "sub": "사이트로 게시",
+          "badge": 3
+        },
+        {
+          "label": "인터넷 주소",
+          "sub": "github.io",
+          "badge": 4
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "내 폴더에서 저장소로",
+          "body": "Claude 에게 올려 달라고 부탁하면 내 폴더의 파일이 GitHub 저장소로 올라갑니다. 앞에서 한 푸시와 같은 동작입니다."
+        },
+        {
+          "n": 2,
+          "head": "저장소의 index.html 이 원본",
+          "body": "저장소에 올라와 있는 index.html 이 웹사이트의 원본이 됩니다. 파일을 고쳐서 다시 올리면 사이트도 따라서 바뀝니다."
+        },
+        {
+          "n": 3,
+          "head": "Pages 를 켜면 사이트로 게시",
+          "body": "GitHub Pages 는 저장소의 파일을 웹사이트로 내어 주는 GitHub 의 기능입니다. 공개 저장소에서는 무료로 쓸 수 있습니다."
+        },
+        {
+          "n": 4,
+          "head": "계정 이름과 저장소 이름이 주소",
+          "body": "https://student01.github.io/supply-board/ 처럼 계정 이름과 저장소 이름이 주소가 됩니다. 이 주소를 아는 사람은 누구나 열어 볼 수 있습니다."
+        }
+      ]
+    },
+    {
+      "id": "au2-pages-02",
+      "template": "screen",
+      "title": "gh 로 Pages 켜기",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\auto02\\supply-board",
+          "turns": [
+            {
+              "role": "user",
+              "text": "supply-board 저장소에 GitHub Pages 를 main 브랜치로 켜고, 주소가 열릴 때까지 확인해서 알려 줘.",
+              "badge": 1
+            },
+            {
+              "role": "tool",
+              "text": "Bash(gh api -X POST repos/student01/supply-board/pages -f \"source[branch]=main\" -f \"source[path]=/\")",
+              "badge": 2
+            },
+            {
+              "role": "assistant",
+              "text": "Pages 를 켰습니다. 처음에는 1~2분 걸려서 상태를 확인합니다."
+            },
+            {
+              "role": "tool",
+              "text": "Bash(gh api repos/student01/supply-board/pages --jq .status)",
+              "badge": 3
+            },
+            {
+              "role": "assistant",
+              "text": "아직 building 입니다. 잠시 뒤 다시 확인합니다."
+            },
+            {
+              "role": "tool",
+              "text": "Bash(gh api repos/student01/supply-board/pages --jq .status)"
+            },
+            {
+              "role": "assistant",
+              "text": "배포가 끝났습니다. 상태는 built 입니다.\nhttps://student01.github.io/supply-board/",
+              "badge": 4,
+              "pre": true
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "켜기와 확인을 함께 부탁",
+          "body": "저장소 이름과 브랜치를 말해 주고, 주소가 열릴 때까지 확인해서 알려 달라고 부탁합니다. 브랜치는 지금까지 올린 main 입니다."
+        },
+        {
+          "n": 2,
+          "head": "main 브랜치의 맨 위 폴더를 게시",
+          "body": "gh api 로 GitHub 에 Pages 를 켜 달라고 요청합니다. main 브랜치의 맨 위 폴더에 있는 index.html 이 사이트가 됩니다."
+        },
+        {
+          "n": 3,
+          "head": "상태가 built 가 될 때까지 확인",
+          "body": "처음에는 building 으로 나오다가 만들기가 끝나면 built 로 바뀝니다. Claude 가 몇 번 다시 확인하니 기다리면 됩니다."
+        },
+        {
+          "n": 4,
+          "head": "완성된 주소",
+          "body": "built 가 나오면 마지막 줄에 내 페이지 주소가 알려집니다. 이 주소를 브라우저에 붙여 넣어 열어 봅니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "supply-board 저장소에 GitHub Pages 를 main 브랜치로 켜고, 주소가 열릴 때까지 확인해서 알려 줘."
+          }
+        ]
+      }
+    },
+    {
+      "id": "au2-pages-03",
+      "template": "screen",
+      "title": "배포된 페이지",
+      "screen": {
+        "kind": "browser",
+        "url": "https://student01.github.io/supply-board/",
+        "page": {
+          "heading": "비품 신청",
+          "lines": [
+            "이름 · 품목 · 수량"
+          ],
+          "button": "신청"
+        }
+      },
+      "notes": [
+        {
+          "n": "!",
+          "head": "주소는 계정과 저장소 이름으로 정해짐",
+          "body": "주소의 형태는 https://계정이름.github.io/저장소이름/ 입니다. 계정 이름이 사람마다 달라서 주소도 수강생마다 다릅니다."
+        },
+        {
+          "n": "!",
+          "head": "처음 열었을 때 안 보이면 새로고침",
+          "body": "Pages 를 켠 직후에는 페이지를 찾을 수 없다고 나올 수 있습니다. 1~2분 뒤에 새로고침하면 내 폴더의 index.html 과 같은 화면이 열립니다."
+        }
+      ]
+    },
+    {
+      "id": "au2-pages-04",
+      "template": "flow",
+      "title": "고치면 다시 배포",
+      "loop": true,
+      "steps": [
+        {
+          "label": "고치기",
+          "sub": "말로 부탁하기",
+          "badge": 1
+        },
+        {
+          "label": "커밋",
+          "sub": "저장 지점 남기기"
+        },
+        {
+          "label": "푸시",
+          "sub": "GitHub 로 올리기",
+          "badge": 2
+        },
+        {
+          "label": "자동 배포",
+          "sub": "1~2분",
+          "badge": 3
+        },
+        {
+          "label": "새로고침",
+          "sub": "바뀐 모습 확인"
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "Claude 에게 고칠 내용 말하기",
+          "body": "바꾸고 싶은 것을 한국어로 말하면 Claude 가 index.html 을 고칩니다. 커밋과 푸시까지 함께 부탁해 두면 한 번에 끝납니다."
+        },
+        {
+          "n": 2,
+          "head": "푸시하면 배포가 시작됨",
+          "body": "새 커밋이 GitHub 저장소에 올라가면 Pages 가 알아서 사이트를 다시 만듭니다. 따로 배포 버튼을 누를 일은 없습니다."
+        },
+        {
+          "n": 3,
+          "head": "1~2분 뒤 새로고침",
+          "body": "다시 만드는 데 1~2분쯤 걸립니다. 그 뒤에 내 페이지 주소에서 새로고침하면 바뀐 모습이 보입니다."
+        },
+        {
+          "n": "!",
+          "head": "공개 페이지에는 비밀번호 금지",
+          "body": "공개 저장소와 Pages 주소는 누구나 볼 수 있습니다. 비밀번호나 키를 index.html 에 적으면 그대로 공개되니 넣지 마세요."
+        }
+      ]
+    }
+  ]
+}

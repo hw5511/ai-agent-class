@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- AU2 why first: feature first vs reason first (tools/illus/au2_why_first.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+<rect x="76" y="170" width="800" height="610" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<rect x="916" y="170" width="800" height="610" rx="20" fill="#fff" stroke="#e5e5e5" stroke-width="3"/>
+<text x="476.0" y="216" font-size="34" font-weight="800" fill="#101113" text-anchor="middle">기능부터</text>
+<text x="476.0" y="254" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">무엇을 만들지부터 정함</text>
+<text x="1316.0" y="216" font-size="34" font-weight="800" fill="#101113" text-anchor="middle">이유부터</text>
+<text x="1316.0" y="254" font-size="24" font-weight="600" fill="#5b6570" text-anchor="middle">왜 만드는지부터 정함</text>
+<rect x="186" y="298" width="580" height="170" rx="14" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#shs)"/>
+<text x="476.0" y="396.0" font-size="38" font-weight="800" fill="#101113" text-anchor="middle">주간 보고 자동화 프로그램</text>
+<circle cx="766" cy="298" r="26" fill="#d64545"/><path d="M756.64 288.64L775.36 307.36M775.36 288.64L756.64 307.36" stroke="#fff" stroke-width="5.2" stroke-linecap="round"/>
+<circle cx="186" cy="298" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="186" y="308.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<path transform="translate(166 578) scale(0.6)" d="M0 57.0h15.4v28.9h-15.4zM15 57.0h15.4v28.9h-15.4zM30 0.0h15.4v28.9h-15.4zM30 28.5h15.4v28.9h-15.4zM30 57.0h15.4v28.9h-15.4zM30 85.5h15.4v28.9h-15.4zM45 0.0h15.4v28.9h-15.4zM45 28.5h15.4v28.9h-15.4zM45 57.0h15.4v28.9h-15.4zM45 85.5h15.4v28.9h-15.4zM45 114.0h15.4v28.9h-15.4zM60 0.0h15.4v28.9h-15.4zM60 57.0h15.4v28.9h-15.4zM60 85.5h15.4v28.9h-15.4zM75 0.0h15.4v28.9h-15.4zM75 28.5h15.4v28.9h-15.4zM75 57.0h15.4v28.9h-15.4zM75 85.5h15.4v28.9h-15.4zM75 114.0h15.4v28.9h-15.4zM90 0.0h15.4v28.9h-15.4zM90 28.5h15.4v28.9h-15.4zM90 57.0h15.4v28.9h-15.4zM90 85.5h15.4v28.9h-15.4zM105 0.0h15.4v28.9h-15.4zM105 28.5h15.4v28.9h-15.4zM105 57.0h15.4v28.9h-15.4zM105 85.5h15.4v28.9h-15.4zM120 0.0h15.4v28.9h-15.4zM120 28.5h15.4v28.9h-15.4zM120 57.0h15.4v28.9h-15.4zM120 85.5h15.4v28.9h-15.4zM135 0.0h15.4v28.9h-15.4zM135 28.5h15.4v28.9h-15.4zM135 57.0h15.4v28.9h-15.4zM135 85.5h15.4v28.9h-15.4zM150 0.0h15.4v28.9h-15.4zM150 28.5h15.4v28.9h-15.4zM150 57.0h15.4v28.9h-15.4zM150 85.5h15.4v28.9h-15.4zM150 114.0h15.4v28.9h-15.4zM165 0.0h15.4v28.9h-15.4zM165 57.0h15.4v28.9h-15.4zM165 85.5h15.4v28.9h-15.4zM180 0.0h15.4v28.9h-15.4zM180 28.5h15.4v28.9h-15.4zM180 57.0h15.4v28.9h-15.4zM180 85.5h15.4v28.9h-15.4zM180 114.0h15.4v28.9h-15.4zM195 0.0h15.4v28.9h-15.4zM195 28.5h15.4v28.9h-15.4zM195 57.0h15.4v28.9h-15.4zM195 85.5h15.4v28.9h-15.4zM210 57.0h15.4v28.9h-15.4zM225 57.0h15.4v28.9h-15.4z" fill="#d97757" shape-rendering="crispEdges"/>
+<text x="242" y="558" font-size="64" font-weight="800" fill="#5b6570" text-anchor="middle">?</text>
+<text x="296" y="542" font-size="44" font-weight="800" fill="#aeb3ba" text-anchor="middle">?</text>
+<rect x="476" y="496" width="330" height="50" rx="12" fill="#fff" stroke="#aeb3ba" stroke-width="3"/>
+<text x="641.0" y="529.16" font-size="24" font-weight="700" fill="#5b6570" text-anchor="middle">누가 쓰는지?</text>
+<rect x="476" y="558" width="330" height="50" rx="12" fill="#fff" stroke="#aeb3ba" stroke-width="3"/>
+<text x="641.0" y="591.16" font-size="24" font-weight="700" fill="#5b6570" text-anchor="middle">얼마나 걸리는지?</text>
+<rect x="476" y="620" width="330" height="50" rx="12" fill="#fff" stroke="#aeb3ba" stroke-width="3"/>
+<text x="641.0" y="653.16" font-size="24" font-weight="700" fill="#5b6570" text-anchor="middle">언제 끝인지?</text>
+<circle cx="146" cy="718" r="22" fill="#d64545"/><path d="M138.08 710.08L153.92 725.92M153.92 710.08L138.08 725.92" stroke="#fff" stroke-width="4.4" stroke-linecap="round"/>
+<text x="188" y="728" font-size="28" font-weight="800" fill="#101113" text-anchor="start">무엇을, 어디까지, 언제까지 알 수 없음</text>
+<rect x="1026" y="298" width="580" height="170" rx="14" fill="#fff" stroke="#aeb3ba" stroke-width="2" filter="url(#shs)"/>
+<text x="1316.0" y="370" font-size="34" font-weight="800" fill="#101113" text-anchor="middle">팀장이 매주 월요일 2시간 쓰는</text>
+<text x="1316.0" y="422" font-size="38" font-weight="800" fill="#101113" text-anchor="middle">보고 취합을 10분으로</text>
+<circle cx="1606" cy="298" r="26" fill="#12a150"/><path d="M1595.08 298.52l7.8 7.8 14.560000000000002-15.6" fill="none" stroke="#fff" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1026" cy="298" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1026" y="308.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<rect x="958" y="496" width="228" height="176" rx="14" fill="#fff" stroke="#aeb3ba" stroke-width="3"/>
+<text x="1072.0" y="542" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">만들 것</text>
+<text x="1072.0" y="588" font-size="22" font-weight="700" fill="#2b2f35" text-anchor="middle">메일 모으기</text>
+<text x="1072.0" y="622" font-size="22" font-weight="700" fill="#2b2f35" text-anchor="middle">항목 나누기</text>
+<text x="1072.0" y="656" font-size="22" font-weight="700" fill="#2b2f35" text-anchor="middle">보고서 채우기</text>
+<rect x="1202" y="496" width="228" height="176" rx="14" fill="#fff" stroke="#aeb3ba" stroke-width="3"/>
+<text x="1316.0" y="542" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">뺄 것</text>
+<text x="1316.0" y="588" font-size="22" font-weight="700" fill="#2b2f35" text-anchor="middle">양식 꾸미기</text>
+<text x="1316.0" y="622" font-size="22" font-weight="700" fill="#2b2f35" text-anchor="middle">예쁜 차트</text>
+<rect x="1446" y="496" width="228" height="176" rx="14" fill="#fff" stroke="#aeb3ba" stroke-width="3"/>
+<text x="1560.0" y="542" font-size="28" font-weight="800" fill="#101113" text-anchor="middle">끝난 기준</text>
+<text x="1560.0" y="588" font-size="22" font-weight="700" fill="#2b2f35" text-anchor="middle">10분 안에 완성</text>
+<text x="1560.0" y="622" font-size="22" font-weight="700" fill="#2b2f35" text-anchor="middle">이슈가 맨 위</text>
+<circle cx="1674" cy="496" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="1674" y="506.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<circle cx="986" cy="718" r="22" fill="#12a150"/><path d="M976.76 718.44l6.6 6.6 12.32-13.2" fill="none" stroke="#fff" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1028" y="728" font-size="28" font-weight="800" fill="#101113" text-anchor="start">만들 것, 뺄 것, 끝날 때가 정해짐</text>
+</svg>

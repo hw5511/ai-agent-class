@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 840" width="1792" height="840" font-family="Pretendard, 'Pretendard Variable', 'Malgun Gothic', sans-serif">
+<!-- AU2 HTTP anatomy of request and response (tools/illus/au2_http_anatomy.py) -->
+<defs>
+  <filter id="sh" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101113" flood-opacity="0.12"/></filter>
+  <filter id="shs" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#101113" flood-opacity="0.14"/></filter>
+  <marker id="ab" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1273c4"/></marker>
+  <marker id="ak" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#101113"/></marker>
+  <marker id="ag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#12a150"/></marker>
+</defs>
+
+<text x="72" y="112" font-size="52" font-weight="900" fill="#101113" text-anchor="start">요청</text>
+<text x="194" y="112" font-size="26" font-weight="800" fill="#1273c4" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">Request</text>
+<text x="1004" y="112" font-size="52" font-weight="900" fill="#101113" text-anchor="start">응답</text>
+<text x="1126" y="112" font-size="26" font-weight="800" fill="#12a150" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">Response</text>
+<text x="72" y="156" font-size="26" font-weight="700" fill="#5b6570" text-anchor="start">브라우저가 서버에 보내는 편지</text>
+<text x="1004" y="156" font-size="26" font-weight="700" fill="#5b6570" text-anchor="start">서버가 브라우저에 돌려주는 편지</text>
+<path d="M74 200H736L800 264V746a14 14 0 0 1-14 14H74a14 14 0 0 1-14-14V214a14 14 0 0 1 14-14z" fill="#fff" stroke="#aeb3ba" stroke-width="2.5" filter="url(#shs)"/>
+<path d="M736 200v50a14 14 0 0 0 14 14h50" fill="#eef1f4" stroke="#aeb3ba" stroke-width="2.5"/>
+<text x="100" y="252" font-size="24" font-weight="800" fill="#5b6570" text-anchor="start">메서드와 주소</text>
+<circle cx="64" cy="242" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="64" y="252.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">1</text>
+<text x="100" y="294" font-size="29" font-weight="700" fill="#0d5c9e" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">POST /api/requests HTTP/1.1</text>
+<line x1="90" y1="324" x2="770" y2="324" stroke="#d5d8dc" stroke-width="2"/>
+<text x="100" y="366" font-size="24" font-weight="800" fill="#5b6570" text-anchor="start">헤더</text>
+<circle cx="64" cy="356" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="64" y="366.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<text x="100" y="408" font-size="29" font-weight="700" fill="#101113" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">Host: supply-api.student01.workers.dev</text>
+<text x="100" y="448" font-size="29" font-weight="700" fill="#101113" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">Content-Type: application/json</text>
+<line x1="90" y1="478" x2="770" y2="478" stroke="#d5d8dc" stroke-width="2"/>
+<text x="100" y="520" font-size="24" font-weight="800" fill="#5b6570" text-anchor="start">본문</text>
+<circle cx="64" cy="510" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="64" y="520.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<text x="100" y="562" font-size="29" font-weight="700" fill="#101113" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">{</text>
+<text x="122" y="602" font-size="29" font-weight="700" fill="#101113" text-anchor="start">"name": "김누리",</text>
+<text x="122" y="642" font-size="29" font-weight="700" fill="#101113" text-anchor="start">"item": "A4 용지",</text>
+<text x="122" y="682" font-size="29" font-weight="700" fill="#101113" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">"qty": 2</text>
+<text x="100" y="722" font-size="29" font-weight="700" fill="#101113" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">}</text>
+<path d="M1006 200H1668L1732 264V746a14 14 0 0 1-14 14H1006a14 14 0 0 1-14-14V214a14 14 0 0 1 14-14z" fill="#fff" stroke="#aeb3ba" stroke-width="2.5" filter="url(#shs)"/>
+<path d="M1668 200v50a14 14 0 0 0 14 14h50" fill="#eef1f4" stroke="#aeb3ba" stroke-width="2.5"/>
+<text x="1032" y="252" font-size="24" font-weight="800" fill="#5b6570" text-anchor="start">상태 코드</text>
+<circle cx="996" cy="242" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="996" y="252.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">4</text>
+<text x="1032" y="294" font-size="29" font-weight="700" fill="#12a150" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">HTTP/1.1 201 Created</text>
+<line x1="1022" y1="324" x2="1702" y2="324" stroke="#d5d8dc" stroke-width="2"/>
+<text x="1032" y="366" font-size="24" font-weight="800" fill="#5b6570" text-anchor="start">헤더</text>
+<circle cx="996" cy="356" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="996" y="366.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">2</text>
+<text x="1032" y="408" font-size="29" font-weight="700" fill="#101113" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">Content-Type: application/json</text>
+<line x1="1022" y1="438" x2="1702" y2="438" stroke="#d5d8dc" stroke-width="2"/>
+<text x="1032" y="480" font-size="24" font-weight="800" fill="#5b6570" text-anchor="start">본문</text>
+<circle cx="996" cy="470" r="28" fill="#1273c4" stroke="#fff" stroke-width="4"/><text x="996" y="480.6" font-size="29" font-weight="800" fill="#fff" text-anchor="middle">3</text>
+<text x="1032" y="522" font-size="29" font-weight="700" fill="#101113" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">{</text>
+<text x="1054" y="562" font-size="29" font-weight="700" fill="#101113" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">"id": 12,</text>
+<text x="1054" y="602" font-size="29" font-weight="700" fill="#101113" text-anchor="start">"name": "김누리",</text>
+<text x="1054" y="642" font-size="29" font-weight="700" fill="#101113" text-anchor="start">"item": "A4 용지",</text>
+<text x="1054" y="682" font-size="29" font-weight="700" fill="#101113" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">"qty": 2</text>
+<text x="1032" y="722" font-size="29" font-weight="700" fill="#101113" text-anchor="start" font-family="'D2Coding', Consolas, 'Courier New', monospace">}</text>
+<path d="M832 400L946 400" fill="none" stroke="#cfe3f5" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M832 400L946 400" fill="none" stroke="#1273c4" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M960.0 400.0L932.5 418.7L932.5 381.3Z" fill="#1273c4" stroke="#1273c4" stroke-width="7" stroke-linejoin="round"/>
+<text x="896.0" y="360" font-size="30" font-weight="900" fill="#1273c4" text-anchor="middle">요청</text>
+<path d="M960 560L846 560" fill="none" stroke="#cdeedb" stroke-width="24.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M960 560L846 560" fill="none" stroke="#12a150" stroke-width="12.0" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M832.0 560.0L859.5 541.3L859.5 578.7Z" fill="#12a150" stroke="#12a150" stroke-width="7" stroke-linejoin="round"/>
+<text x="896.0" y="620" font-size="30" font-weight="900" fill="#12a150" text-anchor="middle">응답</text>
+</svg>

@@ -1,17 +1,18 @@
 {
   "step": 2,
-  "title": "내 업무 자동화 기획",
+  "title": "GitHub 와 서버 배포, 내 자동화 아이디어",
   "hours": "4시간",
-  "goal": "내가 자동화하고 싶은 업무를 AI 없이 먼저 글로 쓰고, 입력에서 출력까지 모듈 그림으로 그린다. 강사와 1:1 상담으로 범위를 정한 뒤, 모듈을 하나씩 Claude Code 로 PoC 한다.",
+  "goal": "Claude Code 와 함께 GitHub 로 버전을 관리하고, gh CLI 로 프론트 페이지를, wrangler CLI 로 DB 와 백엔드가 있는 서버를 배포한다. 브라우저와 서버가 주고받는 방식과 서버가 DB 에 연결되는 방식을 익힌 뒤, '이걸 왜 만드는가'에서 출발해 내 자동화 아이디어를 한 장의 시트로 정리해 클래스 월에 올린다.",
   "topics": [
-    "기획, 모듈 그림, 1:1 상담, 모듈별 PoC 의 순서",
-    "AI 를 가장 마지막에 쓰는 이유",
-    "업무 자동화 기획서 작성",
-    "입력 → 모듈 → 출력 모듈 그림",
-    "판단이 필요한 자리와 AI 슬롯 후보",
-    "거래처 검증기를 채운 기획서 예시",
-    "Claude Code 로 모듈 하나씩 PoC"
+    "GitHub 버전 관리: 저장소, 커밋, 푸시, 히스토리",
+    "gh CLI 로 프론트 페이지 배포 (GitHub Pages)",
+    "wrangler CLI 로 Workers 서버와 D1 DB 배포",
+    "서버 통신 프로토콜: 요청과 응답, 메서드, 상태 코드, JSON",
+    "서버와 DB 연결: 바인딩과 SQL",
+    "이걸 왜 만드는가",
+    "아이디어 정리 4단계: 자연어 정리, 모듈 나누기, 구현 방법 논의와 PoC, 연결하기",
+    "아이디어 시트 만들어 클래스 월에 올리기"
   ],
-  "practice": "기획서 양식을 VS Code 에서 열어 내 업무로 채우고, 모듈 그림을 그린 뒤 강사와 1:1 상담을 한다. 상담에서 정한 첫 모듈을 입력 예시와 기대 출력으로 PoC 한다.",
-  "parts": ["au-s2-order", "au-s2-sheet", "au-s2-poc"]
+  "practice": "1부(약 2시간)는 비품 신청 페이지를 GitHub 에 올려 Pages 로 배포하고, wrangler 로 Workers 서버와 D1 DB 를 붙인다. wrangler 설치와 로그인, Cloudflare 사이트 설정은 Claude 와 Playwright MCP 로 함께 한다. 2부(약 2시간)는 Claude 와 아이디어를 정리해 시트 이미지로 만들고 클래스 월(https://wall.woohee.me)에 올려 강사 피드백을 받는다.",
+  "parts": ["au2-git", "au2-pages", "au2-worker", "au2-http", "au2-db", "au2-why", "au2-idea", "au2-submit"]
 }

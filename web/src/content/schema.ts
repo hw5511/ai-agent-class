@@ -418,7 +418,7 @@ export interface Terminal {
   cwd?: string
   prompt?: string // shell only: replaces the "PS <cwd>>" prompt, e.g. "student@MacBook ~ %" on macOS
   /** conversation, oldest first; `badge` pins a numbered badge next to that line */
-  turns: { role: "user" | "assistant" | "tool"; text: string; badge?: number; mark?: string }[] // mark = substring drawn as drag-selected text
+  turns: { role: "user" | "assistant" | "tool"; text: string; badge?: number; mark?: string; pre?: boolean }[] // mark = substring drawn as drag-selected text; pre = keep the line breaks in text (multi-line answers and command output)
   usage?: { label: string; pct: number; resets: string; badge?: number }[] // /usage bar gauges after the turns
   // a slash-command panel drawn under a rule line (e.g. /chrome); each row is segments with an optional colour
   panel?: { title: string; tone?: "danger"; rows: { seg: { t: string; c?: "green" | "dim" | "accent" | "bold" | "tab" | "red" }[]; badge?: number }[] }

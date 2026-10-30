@@ -1,0 +1,282 @@
+{
+  "id": "au2-submit",
+  "title": "아이디어 제출",
+  "summary": "Claude 와 이야기해 아이디어를 시트 한 장 이미지로 만들고, 클래스 월에 올린다.",
+  "slides": [
+    {
+      "id": "au2-submit-01",
+      "template": "illustration",
+      "title": "제출 양식",
+      "illustration": "/illustrations/au2-submit-template.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "제목과 간단한 설명",
+          "body": "제목은 무엇을 자동화하는지 이름처럼 적고, 설명은 누가 무엇을 어떻게 바꾸는지 짧게 적습니다."
+        },
+        {
+          "n": 2,
+          "head": "아이디어 계기",
+          "body": "이 아이디어를 떠올린 실제 장면을 적습니다. 언제, 누가, 무엇 때문에 불편했는지가 들어가면 좋습니다."
+        },
+        {
+          "n": 3,
+          "head": "왜 필요한가",
+          "body": "지금 겪는 불편과 없을 때의 곤란을 적습니다. 걸리는 시간 같은 숫자가 있으면 같이 적습니다."
+        },
+        {
+          "n": 4,
+          "head": "다이어그램 구조도",
+          "body": "아이디어 정리에서 나눈 모듈을 상자로 그리고 화살표로 순서를 잇습니다. 모듈마다 상자 하나입니다."
+        }
+      ]
+    },
+    {
+      "id": "au2-submit-02",
+      "template": "screen",
+      "title": "예시 시트",
+      "notes": [
+        {
+          "n": "!",
+          "head": "이유는 숫자로",
+          "body": "'매주 2시간' 처럼 숫자가 들어가면 읽는 사람이 필요한 일인지 바로 판단합니다. 숫자를 모르면 Claude 에게 어림해 보자고 물어보세요."
+        },
+        {
+          "n": "!",
+          "head": "계기는 본 장면으로",
+          "body": "'매주 월요일 오전에 팀장이 메일을 하나씩 열어 붙이는 모습' 처럼 직접 본 장면을 적습니다. 일반적인 말보다 읽는 사람 기억에 남습니다."
+        },
+        {
+          "n": "!",
+          "head": "구조도는 모듈 순서대로",
+          "body": "아이디어 정리에서 나눈 모듈을 순서대로 상자에 넣고 화살표로 잇습니다. 4개 안팎이면 한 장에 읽기 좋습니다."
+        },
+        {
+          "n": "!",
+          "head": "글은 짧게",
+          "body": "칸마다 짧게 적어서 1600x1000 한 장에 모두 들어가게 합니다."
+        }
+      ],
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/au2/idea-sheet-example.png"
+      }
+    },
+    {
+      "id": "au2-submit-03",
+      "template": "screen",
+      "title": "Claude 와 시트 만들기",
+      "screen": {
+        "kind": "terminal",
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\auto02\\idea",
+          "turns": [
+            {
+              "role": "user",
+              "text": "아이디어 시트를 만들고 싶어. 먼저 아이디어 제목, 간단한 설명, 아이디어 계기, 왜 필요한가, 다이어그램 구조도 다섯 가지를 한 번에 하나씩 물어봐 줘. 내 답이 모호하면 다시 물어보고, 항상 왜 그런지도 물어봐 줘. 다 모이면 한 장짜리 idea-sheet.html 을 만들어 줘. 크기는 1600x1000, 흰 바탕, 글꼴은 Pretendard 나 시스템 한글 글꼴, 배치는 단순하게, 다이어그램은 상자와 화살표로 그려 줘. 그다음 Playwright MCP 로 그 파일을 열어서 화면을 캡처하고 같은 폴더에 idea-sheet.png 로 저장해 줘.",
+              "badge": 1
+            },
+            {
+              "role": "assistant",
+              "text": "좋아요. 다섯 가지를 하나씩 물어볼게요. 첫 번째는 아이디어 제목입니다.\n어떤 일을 자동화하고 싶으세요? 지금 누가 하고 있고, 왜 그 일을 줄이고 싶은지도 알려 주세요.",
+              "badge": 2,
+              "pre": true
+            },
+            {
+              "role": "user",
+              "text": "팀장이 매주 월요일에 팀원 8명의 주간 보고를 합치는 일이야. 2시간이나 걸려서 줄이고 싶어."
+            },
+            {
+              "role": "assistant",
+              "text": "다섯 가지 답이 모두 모였습니다. 한 장짜리 시트를 만들겠습니다."
+            },
+            {
+              "role": "tool",
+              "text": "Write(idea-sheet.html)",
+              "badge": 3
+            },
+            {
+              "role": "tool",
+              "text": "playwright - Navigate to a URL (MCP)(url: \"file:///C:/auto02/idea/idea-sheet.html\")"
+            },
+            {
+              "role": "tool",
+              "text": "playwright - Take a screenshot (MCP)(filename: \"idea-sheet.png\", type: \"png\")",
+              "badge": 4
+            },
+            {
+              "role": "assistant",
+              "text": "idea-sheet.png 를 idea 폴더에 저장했습니다. 열어 보고 고칠 곳이 있으면 말씀해 주세요."
+            }
+          ]
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "시트 만들기 요청",
+          "body": "다섯 가지 항목을 하나씩 물어보게 하고, 다 모이면 idea-sheet.html 과 idea-sheet.png 까지 만들게 하는 요청입니다. 복사해서 그대로 붙여 넣으면 됩니다."
+        },
+        {
+          "n": 2,
+          "head": "하나씩 묻고 되묻기",
+          "body": "Claude 가 항목을 하나씩 묻습니다. 대답이 모호하면 다시 묻고 왜 그런지도 묻습니다. 이 화면은 중간 질문을 줄여서 보여 줍니다."
+        },
+        {
+          "n": 3,
+          "head": "idea-sheet.html 작성",
+          "body": "다섯 가지 답이 모이면 Write 줄과 함께 한 장짜리 HTML 파일이 만들어집니다. 크기는 1600x1000이고 흰 바탕입니다."
+        },
+        {
+          "n": 4,
+          "head": "Playwright 로 캡처",
+          "body": "Claude 가 브라우저 도구로 HTML 을 열고 화면을 캡처합니다. 같은 폴더에 idea-sheet.png 가 저장되면 완성입니다."
+        }
+      ],
+      "action": {
+        "label": "프롬프트 복사",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "아이디어 시트를 만들고 싶어. 먼저 아이디어 제목, 간단한 설명, 아이디어 계기, 왜 필요한가, 다이어그램 구조도 다섯 가지를 한 번에 하나씩 물어봐 줘. 내 답이 모호하면 다시 물어보고, 항상 왜 그런지도 물어봐 줘. 다 모이면 한 장짜리 idea-sheet.html 을 만들어 줘. 크기는 1600x1000, 흰 바탕, 글꼴은 Pretendard 나 시스템 한글 글꼴, 배치는 단순하게, 다이어그램은 상자와 화살표로 그려 줘. 그다음 Playwright MCP 로 그 파일을 열어서 화면을 캡처하고 같은 폴더에 idea-sheet.png 로 저장해 줘."
+          }
+        ]
+      },
+      "replaceWithCapture": "real terminal of the idea sheet prompt (interview, Write, Playwright screenshot)"
+    },
+    {
+      "id": "au2-submit-04",
+      "template": "screen",
+      "title": "완성된 시트 이미지",
+      "screen": {
+        "kind": "vscode",
+        "folder": "idea",
+        "files": [
+          {
+            "name": "idea.md"
+          },
+          {
+            "name": "idea-sheet.html"
+          },
+          {
+            "name": "idea-sheet.png",
+            "active": true,
+            "badge": 1
+          }
+        ],
+        "terminal": {
+          "vendor": "claude",
+          "cwd": "C:\\auto02\\idea",
+          "turns": []
+        },
+        "noTerminal": true,
+        "imageEditor": {
+          "file": "idea-sheet.png",
+          "src": "/shots/au2/idea-sheet-example.png",
+          "meta": "1600 x 1000 · 71KB",
+          "badge": 2
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "폴더에 생긴 idea-sheet.png",
+          "body": "Claude 가 저장한 이미지가 idea 폴더에 보입니다. 파일을 누르면 VS Code 안에서 바로 열립니다."
+        },
+        {
+          "n": 2,
+          "head": "시트 내용 점검",
+          "body": "제목, 설명, 계기, 이유, 구조도 다섯 가지가 모두 들어 있는지 봅니다. 글자가 잘리거나 겹친 곳이 있으면 Claude 에게 고쳐 달라고 말합니다."
+        },
+        {
+          "n": "!",
+          "head": "이유 칸이 비지 않았는지",
+          "body": "'왜 필요한가' 칸에 숫자나 구체적인 곤란이 들어 있는지 마지막으로 봅니다. 기능 설명만 있으면 다시 물어봐 달라고 하세요."
+        }
+      ]
+    },
+    {
+      "id": "au2-submit-05",
+      "template": "screen",
+      "title": "클래스 월 입장",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/au2/wall-join.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 86,
+            "y": 64
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "이름 입력",
+          "body": "방에 들어가면 이름을 적고 입장을 누릅니다. 올린 시트 옆에 이 이름이 함께 보입니다."
+        },
+        {
+          "n": "!",
+          "head": "강사가 보여 주는 방",
+          "body": "강사가 화면에 띄운 QR 을 찍거나 방 주소로 들어갑니다. 주소 끝의 4자리가 방 코드입니다."
+        }
+      ],
+      "action": {
+        "label": "클래스 월 열기",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://wall.woohee.me",
+            "text": "클래스 월",
+            "desc": "방 주소는 강사가 알려 줍니다"
+          }
+        ]
+      }
+    },
+    {
+      "id": "au2-submit-06",
+      "template": "screen",
+      "title": "시트 올리기",
+      "screen": {
+        "kind": "shot",
+        "src": "/shots/au2/wall-room.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 69.7,
+            "y": 14
+          },
+          {
+            "n": 2,
+            "x": 93,
+            "y": 14
+          },
+          {
+            "n": 3,
+            "x": 24,
+            "y": 56
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "한 줄 설명에 제목",
+          "body": "설명 칸에 아이디어 제목을 적어 두면 벽에서 누구의 어떤 아이디어인지 바로 알 수 있습니다."
+        },
+        {
+          "n": 2,
+          "head": "올리기로 idea-sheet.png 선택",
+          "body": "올리기를 눌러 idea-sheet.png 한 장을 고릅니다. 아래 줄에 완료가 뜨면 올라간 것입니다."
+        },
+        {
+          "n": 3,
+          "head": "벽에 올라온 시트",
+          "body": "내 이름 아래에 시트가 보이면 끝입니다. 강사가 이 벽을 보며 한 사람씩 피드백합니다."
+        }
+      ]
+    }
+  ]
+}
