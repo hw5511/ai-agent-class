@@ -23,25 +23,21 @@
             },
             {
               "role": "tool",
-              "text": "PowerShell(ntn api v1/search -d '{\"query\":\"테스트\"}' …)"
+              "text": "PowerShell('{\"query\":\"테스트\",\"page_size\":10}' | ntn api v1/search …)"
             },
             {
               "role": "tool",
-              "text": "PowerShell(ntn api v1/databases -d $db …)",
+              "text": "PowerShell($body = '{… \"is_inline\":true …}' … $body | ntn api v1/databases …)",
               "badge": 2
             },
             {
               "role": "tool",
-              "text": "PowerShell(ntn api v1/data_sources/$ds …)"
-            },
-            {
-              "role": "tool",
-              "text": "PowerShell(ntn api v1/data_sources/$ds -X PATCH -d $u … ntn api v1/pages -d $p …)",
+              "text": "PowerShell(foreach ($i in $items) { … $b | ntn api v1/pages … })",
               "badge": 3
             },
             {
               "role": "assistant",
-              "text": "\"테스트 페이지\"에 `할일` 데이터베이스를 만들고 샘플 5개를 추가했습니다. 추가한 행은 API 응답으로만 확인했고, Notion 화면에서 직접 열어 보지는 않았습니다."
+              "text": "\"테스트 페이지\" 안에 인라인 데이터베이스 \"할 일\"을 만들고 샘플 데이터 5개를 넣었습니다. 5개 모두 생성 성공으로 응답받았고, 노션 화면에서 직접 열어 확인하지는 않았습니다."
             }
           ],
           "fit": true
@@ -55,18 +51,18 @@
         },
         {
           "n": 2,
-          "head": "테스트 페이지에 DB 생성",
-          "body": "Claude 가 검색으로 테스트 페이지를 찾고 그 안에 할일 DB 를 만듭니다."
+          "head": "테스트 페이지에 인라인 DB 생성",
+          "body": "Claude 가 검색으로 테스트 페이지를 찾고 is_inline 값을 true 로 넣어 그 안에 할 일 DB 를 만듭니다."
         },
         {
           "n": 3,
-          "head": "속성 보완 후 행 추가",
-          "body": "DB 를 만들 때 지정한 속성이 처음에는 적용되지 않았습니다. 데이터 소스에 이름, 상태, 마감일 속성을 따로 추가한 뒤 샘플 행을 넣었습니다."
+          "head": "속성 지정과 샘플 5개",
+          "body": "DB 를 만들 때 이름, 상태, 마감일, 우선순위 속성을 함께 지정했고 바로 샘플 행 5개를 넣었습니다."
         },
         {
           "n": "!",
-          "head": "35.6초 · 도구 6회",
-          "body": "리허설에서는 도구를 6번 호출했고 35.6초가 걸렸습니다."
+          "head": "29.8초 · 도구 3회",
+          "body": "리허설에서는 도구를 3번 호출했고 29.8초가 걸렸습니다."
         }
       ],
       "action": {
@@ -94,42 +90,42 @@
           "turns": [
             {
               "role": "assistant",
-              "text": "\"테스트 페이지\"에 `할일` 데이터베이스를 만들고 샘플 5개를 추가했습니다. 추가한 행은 API 응답으로만 확인했고, Notion 화면에서 직접 열어 보지는 않았습니다.",
+              "text": "\"테스트 페이지\" 안에 인라인 데이터베이스 \"할 일\"을 만들고 샘플 데이터 5개를 넣었습니다. 5개 모두 생성 성공으로 응답받았고, 노션 화면에서 직접 열어 확인하지는 않았습니다.",
               "badge": 1
             },
             {
               "role": "assistant",
-              "text": "속성: 이름(제목), 상태(할일/진행중/완료), 마감일(날짜) 세 가지입니다.",
+              "text": "속성은 이름(제목), 상태, 마감일, 우선순위(높음/보통/낮음) 네 가지입니다.",
               "badge": 2
             },
             {
               "role": "assistant",
-              "text": "이름 · 상태 · 마감일",
+              "text": "이름 · 상태 · 마감일 · 우선순위",
               "badge": 3
             },
             {
               "role": "assistant",
-              "text": "장보기 · 할일 · 2026-10-27"
+              "text": "주간 보고서 작성 · Not started · 11-04 · 높음"
             },
             {
               "role": "assistant",
-              "text": "보고서 작성 · 진행중 · 2026-10-28"
+              "text": "디자인 시안 검토 · In progress · 11-05 · 보통"
             },
             {
               "role": "assistant",
-              "text": "운동하기 · 완료 · 2026-10-24"
+              "text": "고객 미팅 일정 잡기 · Not started · 11-06 · 보통"
             },
             {
               "role": "assistant",
-              "text": "팀 미팅 준비 · 할일 · 2026-10-29"
+              "text": "서버 백업 확인 · Done · 11-02 · 낮음"
             },
             {
               "role": "assistant",
-              "text": "책 읽기 · 진행중 · 2026-10-31"
+              "text": "블로그 글 초안 작성 · In progress · 11-08 · 높음"
             },
             {
               "role": "assistant",
-              "text": "DB를 만들 때 지정한 속성이 처음에는 적용되지 않았습니다. 그래서 데이터 소스(`dc526729-1b0e-4a34-99c2-438c6f30ef00`)에 속성을 따로 추가한 뒤 행을 넣었습니다.",
+              "text": "상태 이름은 노션 기본값(Not started, In progress, Done)입니다. 한글로 바꾸고 싶으면 말씀해 주세요.",
               "badge": 4
             }
           ],
@@ -139,23 +135,23 @@
       "notes": [
         {
           "n": 1,
-          "head": "할일 DB 와 샘플 5개",
-          "body": "테스트 페이지에 할일 DB 를 만들고 샘플 5개를 추가했습니다. 이 답변은 API 응답으로 확인한 결과입니다."
+          "head": "인라인 할일 DB 와 샘플 5개",
+          "body": "테스트 페이지 안에 인라인 DB 를 만들고 샘플 5개를 넣었습니다. 이 답변은 API 응답으로 확인한 결과입니다."
         },
         {
           "n": 2,
-          "head": "이름 · 상태 · 마감일",
-          "body": "이름은 제목, 상태는 선택, 마감일은 날짜 속성입니다. 상태 값은 할일, 진행중, 완료 세 가지입니다."
+          "head": "이름 · 상태 · 마감일 · 우선순위",
+          "body": "이름은 제목, 마감일은 날짜, 우선순위는 선택 속성이고 상태는 노션의 상태 속성입니다. 우선순위 값은 높음, 보통, 낮음 세 가지입니다."
         },
         {
           "n": 3,
           "head": "샘플 행 5개",
-          "body": "장보기, 보고서 작성, 운동하기, 팀 미팅 준비, 책 읽기가 들어 있습니다. 각 행의 상태와 마감일을 확인하세요."
+          "body": "주간 보고서 작성, 디자인 시안 검토, 고객 미팅 일정 잡기, 서버 백업 확인, 블로그 글 초안 작성이 들어 있습니다. 각 행의 상태와 마감일을 확인하세요."
         },
         {
           "n": 4,
-          "head": "데이터 소스에 속성 추가",
-          "body": "행을 넣기 전에 데이터 소스에 속성을 따로 추가했습니다. DB ID 와 데이터 소스 ID 는 구분해서 사용합니다."
+          "head": "노션 기본 상태 값",
+          "body": "상태 값은 노션 기본값인 Not started, In progress, Done 입니다. 한글로 바꾸고 싶으면 Claude 에게 요청하세요."
         }
       ]
     },
@@ -169,26 +165,26 @@
         "badges": [
           {
             "n": 1,
-            "x": 14.1,
-            "y": 22.8
+            "x": 8.6,
+            "y": 27.6
           },
           {
             "n": 2,
-            "x": 6.9,
-            "y": 51.2
+            "x": 94.8,
+            "y": 57.1
           }
         ]
       },
       "notes": [
         {
           "n": 1,
-          "head": "테스트 페이지 / 할일",
-          "body": "위쪽 경로에 테스트 페이지와 할일이 보입니다. 테스트 페이지 안에 만든 DB 인지 확인하세요."
+          "head": "테스트 페이지 안의 할 일",
+          "body": "테스트 페이지 제목 바로 아래에 할 일 표가 보입니다. 표가 다른 페이지로 나뉘지 않고 페이지 안에 들어 있는지 확인하세요."
         },
         {
           "n": 2,
-          "head": "이름 · 마감일 · 상태",
-          "body": "노션 표에 샘플 행 5개가 들어 있습니다. 이름, 마감일, 상태 값을 터미널의 결과와 비교하세요."
+          "head": "이름 · 마감일 · 상태 · 우선순위",
+          "body": "표에 샘플 행 5개가 들어 있습니다. 네 속성의 값을 터미널의 결과와 비교하세요."
         }
       ]
     },
@@ -212,42 +208,46 @@
             },
             {
               "role": "tool",
-              "text": "PowerShell(ntn api \"v1/views?database_id=f47437a6…\" …)"
+              "text": "PowerShell(ntn api v1/views?database_id=ff9941d7… … ntn api v1/views/01580976… …)"
             },
             {
               "role": "tool",
-              "text": "PowerShell(ntn api v1/views/f87d6e30… …)"
+              "text": "PowerShell(ntn api v1/views --spec -X POST … ntn api v1/views --docs -X POST …)"
             },
             {
               "role": "tool",
-              "text": "PowerShell(ntn api v1/views/f87d6e30… -X PATCH -d '{\"name\":\"테이블\"}' … ntn api v1/views -d $c …)"
+              "text": "PowerShell($board | ntn api v1/views …)"
             },
             {
               "role": "tool",
-              "text": "PowerShell(ntn api v1/views -d $b …)"
+              "text": "PowerShell($cal | ntn api v1/views … ntn api \"v1/views?database_id=$db\" …)"
             },
             {
               "role": "assistant",
-              "text": "`할일` DB에 이제 뷰가 3개 있습니다. API로 뷰 목록을 다시 조회해서 이름과 종류를 확인했습니다."
+              "text": "\"할 일\" 데이터베이스에 칸반보드 뷰와 캘린더 뷰를 추가했습니다. 뷰 목록 조회에서 3개가 확인됐습니다. 노션 화면에서 직접 열어 보지는 않았습니다."
             },
             {
               "role": "assistant",
-              "text": "뷰 · 종류 · 설정"
+              "text": "순서 · 뷰 · 설정"
             },
             {
               "role": "assistant",
-              "text": "테이블 · table · 기본 뷰입니다. 원래 있던 \"Default view\"의 이름만 \"테이블\"로 바꿨습니다.",
+              "text": "1 · 테이블 · 기본 뷰입니다. 원래 첫 번째 테이블 뷰였고 이름은 \"Default view\"입니다.",
               "badge": 2
             },
             {
               "role": "assistant",
-              "text": "칸반 · board · `상태` 속성별로 묶습니다.",
+              "text": "2 · 칸반보드 · 상태 값(Not started, In progress, Done) 기준으로 열을 나눕니다.",
               "badge": 3
             },
             {
               "role": "assistant",
-              "text": "캘린더 · calendar · `마감일` 속성 기준으로 표시합니다.",
+              "text": "3 · 캘린더 · 마감일 기준으로 월 단위로 보여 줍니다.",
               "badge": 4
+            },
+            {
+              "role": "assistant",
+              "text": "기본 뷰: 테이블 뷰가 이미 첫 번째라 따로 바꿀 것은 없었습니다. 뷰 이름은 \"테이블\"로 바꾸지 않았습니다. 필요하면 바꿔 드리겠습니다."
             }
           ],
           "fit": true
@@ -257,22 +257,22 @@
         {
           "n": 1,
           "head": "기본 테이블과 뷰 2개",
-          "body": "테이블을 기본 뷰로 두고 칸반보드와 캘린더를 추가해 달라고 요청합니다."
+          "body": "테이블을 기본 뷰로 두고 칸반보드와 캘린더를 추가해 달라고 요청합니다. 리허설에서는 도구를 7번 호출했고 46.2초가 걸렸습니다."
         },
         {
           "n": 2,
           "head": "기본 뷰 테이블",
-          "body": "원래 있던 Default view 의 이름을 테이블로 바꿨습니다. 가장 먼저 만들어진 뷰가 기본 뷰로 남아 있습니다."
+          "body": "테이블 뷰가 이미 첫 번째라 따로 바꾸지 않았습니다. 이름은 Default view 그대로입니다."
         },
         {
           "n": 3,
-          "head": "상태별 칸반",
-          "body": "칸반은 상태 속성별로 행을 묶습니다. 할일, 진행중, 완료를 나눠 볼 수 있습니다."
+          "head": "상태별 칸반보드",
+          "body": "칸반보드는 상태 값별로 열을 나눕니다. Not started, In progress, Done 을 나눠 볼 수 있습니다."
         },
         {
           "n": 4,
           "head": "마감일 기준 캘린더",
-          "body": "캘린더는 마감일 속성을 기준으로 행을 표시합니다. 노션 화면의 탭 순서는 API 조회 순서와 다를 수 있습니다."
+          "body": "캘린더는 마감일 속성을 기준으로 월 단위로 행을 표시합니다."
         }
       ],
       "action": {
@@ -295,8 +295,13 @@
         "badges": [
           {
             "n": 1,
-            "x": 61.2,
-            "y": 51.0
+            "x": 26.4,
+            "y": 53.1
+          },
+          {
+            "n": 2,
+            "x": 38.8,
+            "y": 40.2
           }
         ]
       },
@@ -305,6 +310,11 @@
           "n": 1,
           "head": "상태별 칸반",
           "body": "같은 DB 의 행을 상태별로 묶어 보여 줍니다. 각 할 일이 어느 상태에 있는지 확인하세요."
+        },
+        {
+          "n": 2,
+          "head": "1개 더 보기",
+          "body": "리허설 화면에서는 캘린더 탭이 1개 더 보기 안에 있었습니다. 여기를 눌러 캘린더 뷰로 이동하세요."
         }
       ]
     },
@@ -318,8 +328,8 @@
         "badges": [
           {
             "n": 1,
-            "x": 82.6,
-            "y": 53.0
+            "x": 31.5,
+            "y": 43.4
           }
         ]
       },
@@ -351,26 +361,26 @@
             },
             {
               "role": "tool",
-              "text": "PowerShell(Add-Content .claude/skills/.env …)",
+              "text": "PowerShell(python --version … Add-Content -Path .claude/skills/.env …)",
               "badge": 2
             },
             {
               "role": "tool",
-              "text": "Write(.claude/skills/tasks/SKILL.md)",
+              "text": "Write(.claude/skills/tasks/scripts/tasks.py)",
               "badge": 3
             },
             {
               "role": "tool",
-              "text": "Edit(.claude/skills/tasks/SKILL.md)"
+              "text": "Write(.claude/skills/tasks/SKILL.md)"
             },
             {
               "role": "tool",
-              "text": "PowerShell(ntn api v1/data_sources/$ds/query -d '{}' …)",
+              "text": "PowerShell(python $s list --priority 높음 … python $s add \"CRUD 테스트\" … python $s delete $id …)",
               "badge": 4
             },
             {
               "role": "assistant",
-              "text": "`tasks` 스킬을 만들었고, DB ID는 `.env`에 저장했습니다. 평가 반복(eval) 루프는 돌리지 않고 명령어를 직접 실행해서 확인했습니다."
+              "text": "`tasks` 스킬을 만들었고, DB ID는 `.env`에 저장했습니다. 직접 실행해서 생성, 조회, 수정, 검색, 삭제까지 한 바퀴 돌려 봤고 모두 정상 동작했습니다."
             }
           ],
           "fit": true
@@ -385,17 +395,17 @@
         {
           "n": 2,
           "head": "DB ID 와 데이터 소스 ID",
-          "body": ".env 에 NOTION_TASKS_DB_ID 와 NOTION_TASKS_DS_ID 를 추가합니다. 뷰 작업과 행 작업에 쓰는 ID 를 각각 저장합니다."
+          "body": ".env 에 NOTION_TASKS_DB_ID 와 NOTION_TASKS_DS_ID 를 추가합니다. 쿼리는 데이터 소스 ID 로 하기 때문에 둘 다 저장합니다."
         },
         {
           "n": 3,
-          "head": "SKILL.md 작성과 수정",
-          "body": "Claude 가 .claude/skills/tasks/SKILL.md 를 만들고 환경변수를 불러오는 부분을 수정합니다."
+          "head": "tasks.py 와 SKILL.md 작성",
+          "body": "Claude 가 ntn api 를 감싼 파이썬 CLI 인 scripts/tasks.py 를 만들고, 사용법을 적은 SKILL.md 를 씁니다."
         },
         {
           "n": 4,
-          "head": "작성한 명령 실행",
-          "body": "스킬에 적은 방법으로 전체 목록을 조회해 5건이 나오는지 확인합니다. 임시 행의 생성, 상태 수정, 휴지통 이동도 실행했습니다."
+          "head": "작성한 CLI 실행",
+          "body": "우선순위 높음으로 조회하고, 임시 할 일 CRUD 테스트로 추가, 수정, 검색, 읽기, 삭제를 실행해 확인합니다."
         }
       ],
       "action": {
@@ -441,6 +451,15 @@
             "active": true
           },
           {
+            "name": "scripts",
+            "folder": true,
+            "depth": 3
+          },
+          {
+            "name": "tasks.py",
+            "depth": 4
+          },
+          {
             "name": "SKILL.md",
             "depth": 3,
             "active": true,
@@ -458,24 +477,24 @@
           "turns": [
             {
               "role": "assistant",
-              "text": "`NOTION_TASKS_DB_ID`는 데이터베이스 ID입니다. 뷰 작업에 씁니다."
+              "text": "`NOTION_TASKS_DB_ID`(데이터베이스 ID)와 `NOTION_TASKS_DS_ID`(데이터소스 ID)를 추가했습니다. 쿼리는 데이터소스 ID로 하기 때문에 둘 다 저장했습니다."
             },
             {
               "role": "assistant",
-              "text": "`NOTION_TASKS_DS_ID`는 데이터 소스 ID입니다. 행을 조회·생성할 때 씁니다."
+              "text": "스크립트는 `ntn api`를 감싼 파이썬 CLI이고, 결과를 JSON으로 출력합니다."
             },
             {
               "role": "assistant",
-              "text": "상태가 \"할일\"인 행을 마감일순으로 조회하자 장보기와 팀 미팅 준비가 나왔습니다.",
+              "text": "우선순위 \"높음\" 필터 조회 결과는 2건이었습니다.",
               "badge": 4
             },
             {
               "role": "assistant",
-              "text": "임시 행 하나를 만들어 상태를 \"완료\"로 바꾼 뒤 휴지통으로 보내는 흐름이 모두 성공했습니다."
+              "text": "임시 할 일 \"CRUD 테스트\"를 추가하고, 상태 Done으로 수정하고, 검색하고, 읽고, 삭제했습니다."
             },
             {
               "role": "assistant",
-              "text": "SKILL.md에 적힌 환경변수 로드 스니펫으로 전체 조회도 했고, 5건이 나왔습니다."
+              "text": "삭제 뒤에는 검색 결과가 0건이라 샘플 데이터 5개는 그대로입니다."
             }
           ],
           "fit": true
@@ -486,20 +505,18 @@
           "lines": [
             "---",
             "name: tasks",
-            "description: Create, read, update, delete and query items in the Notion \"할일\" (to-do) database using the ntn CLI. Use this skill whenever the user mentions tasks, to-dos, 할일, adding or finishing a task, listing tasks by status or due date, or anything about the 테스트 페이지 task DB, even if they do not say \"Notion\".",
+            "description: Create, read, update, delete and query tasks (할 일) in the Notion \"할 일\" inline database through a bundled CLI script built on the official ntn CLI. Use this skill whenever the user wants to add a todo, list or search tasks, filter by status, due date or priority, mark something done, change a due date, or delete a task, even if they just say \"할 일 추가\", \"오늘 마감 뭐 있어\", \"이거 완료 처리해줘\", or \"tasks\".",
             "---",
             "",
-            "# Tasks (Notion 할일 DB)",
+            "# tasks",
             "",
-            "Operates on the 할일 database through `ntn api` (see the `notion-cli` skill for install and key checks).",
+            "Manage the Notion todo database with `scripts/tasks.py`. It wraps `ntn api`, reads the token and database id from `.claude/skills/.env`, and prints JSON, so results are easy to relay or chain.",
             "",
-            "## Setup",
+            "Requires `ntn` (installed globally) and Python 3. Run from the project root:",
             "",
-            "Load config from `.claude/skills/.env` into the environment first. `ntn` reads `NOTION_API_TOKEN`, not the `.env` file:",
-            "",
-            "```powershell",
-            "Get-Content .claude/skills/.env | % { $k,$v = $_.Split('=',2); Set-Item \"env:$k\" $v }",
-            "$env:NOTION_API_TOKEN = $env:NOTION_API_KEY"
+            "```",
+            "python .claude/skills/tasks/scripts/tasks.py <command> [options]",
+            "```"
           ],
           "badge": 2
         }
@@ -507,23 +524,23 @@
       "notes": [
         {
           "n": 1,
-          "head": "tasks/SKILL.md",
-          "body": ".claude/skills 폴더에 notion-cli 와 tasks 가 함께 있습니다. tasks 폴더의 SKILL.md 에 할일 DB 를 다루는 명령을 적었습니다."
+          "head": "tasks 폴더",
+          "body": ".claude/skills 폴더에 notion-cli 와 tasks 가 함께 있습니다. tasks 폴더에는 사용법을 적은 SKILL.md 와 실행 파일 scripts/tasks.py 가 있습니다."
         },
         {
           "n": 2,
-          "head": "환경변수 불러오기",
-          "body": "스킬 앞부분에는 이름과 사용 조건, .env 를 불러오는 명령이 있습니다. ntn 이 읽는 NOTION_API_TOKEN 에 API 키를 넘깁니다."
+          "head": "사용 조건과 tasks.py",
+          "body": "SKILL.md 앞부분에는 이름과 사용 조건이 있습니다. tasks.py 는 ntn api 를 감싸고 .env 에서 토큰과 DB ID 를 읽습니다."
         },
         {
           "n": 3,
           "head": ".env 의 두 가지 ID",
-          "body": "NOTION_TASKS_DB_ID 는 뷰 작업에, NOTION_TASKS_DS_ID 는 행 조회와 생성에 씁니다. 두 값은 같은 .env 파일에 저장했습니다."
+          "body": "NOTION_TASKS_DB_ID 는 데이터베이스 ID, NOTION_TASKS_DS_ID 는 쿼리에 쓰는 데이터 소스 ID 입니다. 두 값은 같은 .env 파일에 저장했습니다."
         },
         {
           "n": 4,
           "head": "조회와 변경 검증",
-          "body": "할일 상태로 조회하면 장보기와 팀 미팅 준비가 나왔습니다. 임시 행의 생성, 수정, 휴지통 이동이 성공했고 전체 조회는 5건이었습니다."
+          "body": "우선순위 높음으로 조회하면 2건이 나왔습니다. 임시 행의 추가, 수정, 검색, 읽기, 삭제가 성공했고 삭제 뒤 샘플 5개는 그대로입니다."
         }
       ]
     },
@@ -575,50 +592,46 @@
             },
             {
               "role": "tool",
-              "text": "Skill(tasks)",
+              "text": "PowerShell(python $s add \"주간 회의 자료 준비\" --status \"Not started\" … python $s list --status $st …)",
               "badge": 2
             },
             {
-              "role": "tool",
-              "text": "PowerShell(ntn api v1/pages -d $b … ntn api v1/data_sources/$ds/query -d $q …)",
+              "role": "assistant",
+              "text": "\"주간 회의 자료 준비\"를 상태 Not started로 추가했습니다. 완료(Done)가 아닌 할 일은 아래 5건입니다."
+            },
+            {
+              "role": "assistant",
+              "text": "이름 · 상태 · 마감일 · 우선순위"
+            },
+            {
+              "role": "assistant",
+              "text": "주간 보고서 작성 · Not started · 11-04 · 높음"
+            },
+            {
+              "role": "assistant",
+              "text": "디자인 시안 검토 · In progress · 11-05 · 보통"
+            },
+            {
+              "role": "assistant",
+              "text": "고객 미팅 일정 잡기 · Not started · 11-06 · 보통"
+            },
+            {
+              "role": "assistant",
+              "text": "블로그 글 초안 작성 · In progress · 11-08 · 높음"
+            },
+            {
+              "role": "assistant",
+              "text": "주간 회의 자료 준비 · Not started · - · -",
               "badge": 3
             },
             {
               "role": "assistant",
-              "text": "'주간 회의 자료 준비'를 추가했습니다. 상태는 \"할일\"이고, 마감일은 말씀이 없어서 비워 뒀습니다."
+              "text": "새 할 일은 마감일과 우선순위를 지정하지 않았습니다. \"서버 백업 확인\"은 Done이라 목록에서 뺐습니다."
             },
             {
               "role": "assistant",
-              "text": "완료되지 않은 할일은 5건입니다. 마감일순으로 정렬했습니다."
-            },
-            {
-              "role": "assistant",
-              "text": "이름 · 상태 · 마감일"
-            },
-            {
-              "role": "assistant",
-              "text": "장보기 · 할일 · 2026-10-27"
-            },
-            {
-              "role": "assistant",
-              "text": "보고서 작성 · 진행중 · 2026-10-28"
-            },
-            {
-              "role": "assistant",
-              "text": "팀 미팅 준비 · 할일 · 2026-10-29"
-            },
-            {
-              "role": "assistant",
-              "text": "책 읽기 · 진행중 · 2026-10-31"
-            },
-            {
-              "role": "assistant",
-              "text": "주간 회의 자료 준비 · 할일 · (없음)",
+              "text": "`tasks.py`의 `--status`는 값 하나만 받습니다. 그래서 Not started와 In progress를 따로 조회해 합쳤습니다. 원하면 \"Done 제외\" 옵션(`--not-status`)을 스크립트에 추가해 두겠습니다.",
               "badge": 4
-            },
-            {
-              "role": "assistant",
-              "text": "\"운동하기\"는 완료 상태라 목록에서 뺐습니다. 마감일을 정하려면 알려 주세요."
             }
           ],
           "fit": true
@@ -632,18 +645,18 @@
         },
         {
           "n": 2,
-          "head": "tasks 스킬 호출",
-          "body": "터미널에 Skill(tasks) 가 보이면 방금 만든 tasks 스킬을 불러온 것입니다. 그다음 스킬에 적힌 명령을 실행합니다."
+          "head": "tasks.py 로 추가와 조회",
+          "body": "리허설에서는 Skill(tasks) 호출 없이 scripts/tasks.py 를 바로 실행했습니다. 행을 추가한 뒤 미완료 상태를 조회합니다."
         },
         {
           "n": 3,
-          "head": "추가 후 미완료 조회",
-          "body": "행을 추가한 다음 상태가 완료가 아닌 행만 마감일순으로 조회합니다. 완료 상태인 운동하기는 목록에서 빠집니다."
+          "head": "마감일 없는 새 할 일",
+          "body": "주간 회의 자료 준비가 Not started 로 추가됐습니다. 마감일과 우선순위는 비어 있고 미완료 목록은 5건입니다."
         },
         {
           "n": 4,
-          "head": "마감일 없는 새 할 일",
-          "body": "주간 회의 자료 준비가 할일 상태로 추가됐습니다. 마감일을 지정하지 않아 비어 있고 미완료 목록은 5건입니다."
+          "head": "--status 값 하나",
+          "body": "--status 는 값 하나만 받아서 두 상태를 따로 조회해 합쳤습니다."
         }
       ],
       "action": {
@@ -676,46 +689,46 @@
             },
             {
               "role": "tool",
-              "text": "PowerShell(ntn api v1/data_sources/$ds/query -d $f … ntn api v1/pages/$($m[0].id) -X PATCH …)",
+              "text": "PowerShell(python $s list --search \"주간 회의 자료 준비\" … python $s update $m[0].id --status Done … python $s list …)",
               "badge": 2
             },
             {
               "role": "assistant",
-              "text": "'주간 회의 자료 준비'의 상태를 \"완료\"로 바꿨습니다. 전체 목록(6건)은 다음과 같습니다.",
+              "text": "\"주간 회의 자료 준비\"를 Done(완료)으로 바꿨습니다. 전체 목록은 아래 6건입니다.",
               "badge": 3
             },
             {
               "role": "assistant",
-              "text": "이름 · 상태 · 마감일"
+              "text": "이름 · 상태 · 마감일 · 우선순위"
             },
             {
               "role": "assistant",
-              "text": "운동하기 · 완료 · 2026-10-24"
+              "text": "서버 백업 확인 · Done · 11-02 · 낮음"
             },
             {
               "role": "assistant",
-              "text": "장보기 · 할일 · 2026-10-27"
+              "text": "주간 보고서 작성 · Not started · 11-04 · 높음"
             },
             {
               "role": "assistant",
-              "text": "보고서 작성 · 진행중 · 2026-10-28"
+              "text": "디자인 시안 검토 · In progress · 11-05 · 보통"
             },
             {
               "role": "assistant",
-              "text": "팀 미팅 준비 · 할일 · 2026-10-29"
+              "text": "고객 미팅 일정 잡기 · Not started · 11-06 · 보통"
             },
             {
               "role": "assistant",
-              "text": "책 읽기 · 진행중 · 2026-10-31"
+              "text": "블로그 글 초안 작성 · In progress · 11-08 · 높음"
             },
             {
               "role": "assistant",
-              "text": "주간 회의 자료 준비 · 완료 · (없음)",
+              "text": "주간 회의 자료 준비 · Done · - · -",
               "badge": 4
             },
             {
               "role": "assistant",
-              "text": "마감일이 없는 행은 마감일순 정렬에서 맨 아래로 갑니다."
+              "text": "완료 2건, 진행 중 2건, 시작 전 2건입니다."
             }
           ],
           "fit": true
@@ -730,17 +743,17 @@
         {
           "n": 2,
           "head": "제목 조회 후 상태 수정",
-          "body": "이름으로 행을 찾고 일치하는 행이 하나일 때 그 행의 상태를 완료로 바꿉니다."
+          "body": "이름으로 행을 찾고 일치하는 행이 하나일 때 그 행의 상태를 Done 으로 바꿉니다."
         },
         {
           "n": 3,
           "head": "전체 목록 6건",
-          "body": "완료된 행까지 포함해 전체 6건이 나옵니다. 앞서 제외됐던 운동하기도 목록에 보입니다."
+          "body": "완료된 행까지 포함해 전체 6건이 나옵니다. 앞서 제외됐던 서버 백업 확인도 목록에 보입니다."
         },
         {
           "n": 4,
           "head": "변경된 완료 상태",
-          "body": "주간 회의 자료 준비의 상태가 완료로 바뀌었습니다. 마감일이 없는 행은 정렬 결과 맨 아래에 나옵니다."
+          "body": "주간 회의 자료 준비의 상태가 Done 으로 바뀌었습니다. 전체는 완료 2건, 진행 중 2건, 시작 전 2건입니다."
         }
       ],
       "action": {
